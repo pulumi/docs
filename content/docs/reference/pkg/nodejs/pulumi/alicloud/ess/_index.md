@@ -3,7 +3,7 @@ title: "Module ess"
 title_tag: "Module ess | Package @pulumi/alicloud | Node.js SDK"
 linktitle: "ess"
 meta_desc: "Explore members of the ess module in the @pulumi/alicloud package."
-git_sha: "efc8f79eae1d74742dbcdd61936b88e0f33166b4"
+git_sha: "84d761bea49f23fb37c890ced8154c67c2c45089"
 block_external_search_index: true
 ---
 
@@ -81,7 +81,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Alarm" data-link-title="Alarm">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/alarm.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/alarm.ts#L16">
         Resource <strong>Alarm</strong>
     </a>
 </h3>
@@ -97,7 +97,7 @@ Ess alarm can be imported using the id, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="Alarm-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/alarm.ts#L103"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/alarm.ts#L103"> <b>constructor</b></a>
 </h4>
 
 
@@ -111,7 +111,7 @@ Create a Alarm resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Alarm-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/alarm.ts#L26">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/alarm.ts#L26">method <b>get</b></a>
 </h4>
 
 
@@ -122,14 +122,14 @@ Get an existing Alarm resource's state with the given name, ID, and optional ext
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Alarm-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/alarm.ts#L16">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/alarm.ts#L16">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Alarm-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/alarm.ts#L37">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/alarm.ts#L37">method <b>isInstance</b></a>
 </h4>
 
 
@@ -140,7 +140,7 @@ Returns true if the given object is an instance of Alarm.  This is designed to w
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Alarm-alarmActions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/alarm.ts#L47">property <b>alarmActions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/alarm.ts#L47">property <b>alarmActions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>alarmActions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -148,7 +148,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The list of actions to execute when this alarm transition into an ALARM state. Each action is specified as ess scaling rule ari.
 
 <h4 class="pdoc-member-header" id="Alarm-cloudMonitorGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/alarm.ts#L51">property <b>cloudMonitorGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/alarm.ts#L51">property <b>cloudMonitorGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>cloudMonitorGroupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -156,7 +156,7 @@ The list of actions to execute when this alarm transition into an ALARM state. E
 Defines the application group id defined by CMS which is assigned when you upload custom metric to CMS, only available for custom metirc.
 
 <h4 class="pdoc-member-header" id="Alarm-comparisonOperator">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/alarm.ts#L55">property <b>comparisonOperator</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/alarm.ts#L55">property <b>comparisonOperator</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>comparisonOperator: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -164,7 +164,7 @@ Defines the application group id defined by CMS which is assigned when you uploa
 The arithmetic operation to use when comparing the specified Statistic and Threshold. The specified Statistic value is used as the first operand. Supported value: >=, <=, >, <. Defaults to >=.
 
 <h4 class="pdoc-member-header" id="Alarm-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/alarm.ts#L59">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/alarm.ts#L59">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -172,7 +172,7 @@ The arithmetic operation to use when comparing the specified Statistic and Thres
 The description for the alarm.
 
 <h4 class="pdoc-member-header" id="Alarm-dimensions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/alarm.ts#L63">property <b>dimensions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/alarm.ts#L63">property <b>dimensions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dimensions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -180,7 +180,7 @@ The description for the alarm.
 The dimension map for the alarm's associated metric (documented below). For all metrics, you can not set the dimension key as "scalingGroup" or "userId", which is set by default, the second dimension for metric, such as "device" for "PackagesNetIn", need to be set by users.
 
 <h4 class="pdoc-member-header" id="Alarm-enable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/alarm.ts#L67">property <b>enable</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/alarm.ts#L67">property <b>enable</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enable: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -188,7 +188,7 @@ The dimension map for the alarm's associated metric (documented below). For all 
 Whether to enable specific ess alarm. Default to true.
 
 <h4 class="pdoc-member-header" id="Alarm-evaluationCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/alarm.ts#L71">property <b>evaluationCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/alarm.ts#L71">property <b>evaluationCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>evaluationCount: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -196,7 +196,7 @@ Whether to enable specific ess alarm. Default to true.
 The number of times that needs to satisfies comparison condition before transition into ALARM state. Defaults to 3.
 
 <h4 class="pdoc-member-header" id="Alarm-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/alarm.ts#L16">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/alarm.ts#L16">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -205,7 +205,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Alarm-metricName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/alarm.ts#L75">property <b>metricName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/alarm.ts#L75">property <b>metricName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>metricName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -213,7 +213,7 @@ deployments and may be missing (undefined) during planning phases.
 The name for the alarm's associated metric. See Block_metricNames_and_dimensions below for details.
 
 <h4 class="pdoc-member-header" id="Alarm-metricType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/alarm.ts#L79">property <b>metricType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/alarm.ts#L79">property <b>metricType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>metricType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -221,7 +221,7 @@ The name for the alarm's associated metric. See Block_metricNames_and_dimensions
 The type for the alarm's associated metric. Supported value: system, custom. "system" means the metric data is collected by Aliyun Cloud Monitor Service(CMS), "custom" means the metric data is upload to CMS by users. Defaults to system.
 
 <h4 class="pdoc-member-header" id="Alarm-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/alarm.ts#L83">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/alarm.ts#L83">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -229,7 +229,7 @@ The type for the alarm's associated metric. Supported value: system, custom. "sy
 The name for ess alarm.
 
 <h4 class="pdoc-member-header" id="Alarm-period">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/alarm.ts#L87">property <b>period</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/alarm.ts#L87">property <b>period</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>period: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -237,7 +237,7 @@ The name for ess alarm.
 The period in seconds over which the specified statistic is applied. Supported value: 60, 120, 300, 900. Defaults to 300.
 
 <h4 class="pdoc-member-header" id="Alarm-scalingGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/alarm.ts#L91">property <b>scalingGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/alarm.ts#L91">property <b>scalingGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>scalingGroupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -245,7 +245,7 @@ The period in seconds over which the specified statistic is applied. Supported v
 The scaling group associated with this alarm, the 'ForceNew' attribute is available in 1.56.0+.
 
 <h4 class="pdoc-member-header" id="Alarm-state">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/alarm.ts#L95">property <b>state</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/alarm.ts#L95">property <b>state</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>state: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -253,7 +253,7 @@ The scaling group associated with this alarm, the 'ForceNew' attribute is availa
 The state of specified alarm.
 
 <h4 class="pdoc-member-header" id="Alarm-statistics">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/alarm.ts#L99">property <b>statistics</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/alarm.ts#L99">property <b>statistics</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>statistics: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -261,7 +261,7 @@ The state of specified alarm.
 The statistic to apply to the alarm's associated metric. Supported value: Average, Minimum, Maximum. Defaults to Average.
 
 <h4 class="pdoc-member-header" id="Alarm-threshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/alarm.ts#L103">property <b>threshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/alarm.ts#L103">property <b>threshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>threshold: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -269,7 +269,7 @@ The statistic to apply to the alarm's associated metric. Supported value: Averag
 The value against which the specified statistics is compared.
 
 <h4 class="pdoc-member-header" id="Alarm-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/alarm.ts#L16">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/alarm.ts#L16">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -278,7 +278,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Attachment" data-link-title="Attachment">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/attachment.ts#L104">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/attachment.ts#L104">
         Resource <strong>Attachment</strong>
     </a>
 </h3>
@@ -382,7 +382,7 @@ ESS attachment can be imported using the id or scaling group id, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="Attachment-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/attachment.ts#L143"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/attachment.ts#L143"> <b>constructor</b></a>
 </h4>
 
 
@@ -396,7 +396,7 @@ Create a Attachment resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Attachment-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/attachment.ts#L114">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/attachment.ts#L114">method <b>get</b></a>
 </h4>
 
 
@@ -407,14 +407,14 @@ Get an existing Attachment resource's state with the given name, ID, and optiona
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Attachment-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/attachment.ts#L104">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/attachment.ts#L104">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Attachment-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/attachment.ts#L125">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/attachment.ts#L125">method <b>isInstance</b></a>
 </h4>
 
 
@@ -425,7 +425,7 @@ Returns true if the given object is an instance of Attachment.  This is designed
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Attachment-force">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/attachment.ts#L135">property <b>force</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/attachment.ts#L135">property <b>force</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>force: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -433,7 +433,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Whether to remove forcibly "AutoCreated" ECS instances in order to release scaling group capacity "MaxSize" for attaching ECS instances. Default to false.
 
 <h4 class="pdoc-member-header" id="Attachment-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/attachment.ts#L104">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/attachment.ts#L104">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -442,7 +442,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Attachment-instanceIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/attachment.ts#L139">property <b>instanceIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/attachment.ts#L139">property <b>instanceIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>instanceIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -450,7 +450,7 @@ deployments and may be missing (undefined) during planning phases.
 ID of the ECS instance to be attached to the scaling group. You can input up to 20 IDs.
 
 <h4 class="pdoc-member-header" id="Attachment-scalingGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/attachment.ts#L143">property <b>scalingGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/attachment.ts#L143">property <b>scalingGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>scalingGroupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -458,7 +458,7 @@ ID of the ECS instance to be attached to the scaling group. You can input up to 
 ID of the scaling group of a scaling configuration.
 
 <h4 class="pdoc-member-header" id="Attachment-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/attachment.ts#L104">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/attachment.ts#L104">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -467,7 +467,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="LifecycleHook" data-link-title="LifecycleHook">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/lifecycleHook.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/lifecycleHook.ts#L16">
         Resource <strong>LifecycleHook</strong>
     </a>
 </h3>
@@ -483,7 +483,7 @@ Ess lifecycle hook can be imported using the id, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="LifecycleHook-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/lifecycleHook.ts#L71"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/lifecycleHook.ts#L71"> <b>constructor</b></a>
 </h4>
 
 
@@ -497,7 +497,7 @@ Create a LifecycleHook resource with the given unique name, arguments, and optio
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="LifecycleHook-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/lifecycleHook.ts#L26">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/lifecycleHook.ts#L26">method <b>get</b></a>
 </h4>
 
 
@@ -508,14 +508,14 @@ Get an existing LifecycleHook resource's state with the given name, ID, and opti
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="LifecycleHook-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/lifecycleHook.ts#L16">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/lifecycleHook.ts#L16">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="LifecycleHook-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/lifecycleHook.ts#L37">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/lifecycleHook.ts#L37">method <b>isInstance</b></a>
 </h4>
 
 
@@ -526,7 +526,7 @@ Returns true if the given object is an instance of LifecycleHook.  This is desig
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="LifecycleHook-defaultResult">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/lifecycleHook.ts#L47">property <b>defaultResult</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/lifecycleHook.ts#L47">property <b>defaultResult</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>defaultResult: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -534,7 +534,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Defines the action the Auto Scaling group should take when the lifecycle hook timeout elapses. Applicable value: CONTINUE, ABANDON, default value: CONTINUE.
 
 <h4 class="pdoc-member-header" id="LifecycleHook-heartbeatTimeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/lifecycleHook.ts#L51">property <b>heartbeatTimeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/lifecycleHook.ts#L51">property <b>heartbeatTimeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>heartbeatTimeout: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -542,7 +542,7 @@ Defines the action the Auto Scaling group should take when the lifecycle hook ti
 Defines the amount of time, in seconds, that can elapse before the lifecycle hook times out. When the lifecycle hook times out, Auto Scaling performs the action defined in the defaultResult parameter. Default value: 600.
 
 <h4 class="pdoc-member-header" id="LifecycleHook-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/lifecycleHook.ts#L16">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/lifecycleHook.ts#L16">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -551,7 +551,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="LifecycleHook-lifecycleTransition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/lifecycleHook.ts#L55">property <b>lifecycleTransition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/lifecycleHook.ts#L55">property <b>lifecycleTransition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>lifecycleTransition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -559,7 +559,7 @@ deployments and may be missing (undefined) during planning phases.
 Type of Scaling activity attached to lifecycle hook. Supported value: SCALE_OUT, SCALE_IN.
 
 <h4 class="pdoc-member-header" id="LifecycleHook-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/lifecycleHook.ts#L59">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/lifecycleHook.ts#L59">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -567,7 +567,7 @@ Type of Scaling activity attached to lifecycle hook. Supported value: SCALE_OUT,
 The name of the lifecycle hook, which must contain 2-64 characters (English or Chinese), starting with numbers, English letters or Chinese characters, and can contain number, underscores `_`, hypens `-`, and decimal point `.`. If this parameter value is not specified, the default value is lifecycle hook id.
 
 <h4 class="pdoc-member-header" id="LifecycleHook-notificationArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/lifecycleHook.ts#L63">property <b>notificationArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/lifecycleHook.ts#L63">property <b>notificationArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>notificationArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -575,7 +575,7 @@ The name of the lifecycle hook, which must contain 2-64 characters (English or C
 The Arn of notification target.
 
 <h4 class="pdoc-member-header" id="LifecycleHook-notificationMetadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/lifecycleHook.ts#L67">property <b>notificationMetadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/lifecycleHook.ts#L67">property <b>notificationMetadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>notificationMetadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -583,7 +583,7 @@ The Arn of notification target.
 Additional information that you want to include when Auto Scaling sends a message to the notification target.
 
 <h4 class="pdoc-member-header" id="LifecycleHook-scalingGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/lifecycleHook.ts#L71">property <b>scalingGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/lifecycleHook.ts#L71">property <b>scalingGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>scalingGroupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -591,7 +591,7 @@ Additional information that you want to include when Auto Scaling sends a messag
 The ID of the Auto Scaling group to which you want to assign the lifecycle hook.
 
 <h4 class="pdoc-member-header" id="LifecycleHook-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/lifecycleHook.ts#L16">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/lifecycleHook.ts#L16">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -600,7 +600,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Notification" data-link-title="Notification">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/notification.ts#L63">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/notification.ts#L63">
         Resource <strong>Notification</strong>
     </a>
 </h3>
@@ -663,7 +663,7 @@ Ess notification can be imported using the id, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="Notification-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/notification.ts#L105"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/notification.ts#L105"> <b>constructor</b></a>
 </h4>
 
 
@@ -677,7 +677,7 @@ Create a Notification resource with the given unique name, arguments, and option
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Notification-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/notification.ts#L73">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/notification.ts#L73">method <b>get</b></a>
 </h4>
 
 
@@ -688,14 +688,14 @@ Get an existing Notification resource's state with the given name, ID, and optio
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Notification-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/notification.ts#L63">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/notification.ts#L63">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Notification-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/notification.ts#L84">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/notification.ts#L84">method <b>isInstance</b></a>
 </h4>
 
 
@@ -706,7 +706,7 @@ Returns true if the given object is an instance of Notification.  This is design
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Notification-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/notification.ts#L63">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/notification.ts#L63">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -715,7 +715,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Notification-notificationArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/notification.ts#L97">property <b>notificationArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/notification.ts#L97">property <b>notificationArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>notificationArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -726,7 +726,7 @@ The Alibaba Cloud Resource Name (ARN) of the notification object, The value must
 * resource-relative-id: the notification method. Valid values : `cloudmonitor`, MNS queue: `queue/{queuename}`, Replace the queuename with the specific MNS queue name, MNS topic: `topic/{topicname}`, Replace the topicname with the specific MNS topic name.
 
 <h4 class="pdoc-member-header" id="Notification-notificationTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/notification.ts#L101">property <b>notificationTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/notification.ts#L101">property <b>notificationTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>notificationTypes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -734,7 +734,7 @@ The Alibaba Cloud Resource Name (ARN) of the notification object, The value must
 The notification types of Auto Scaling events and resource changes. Supported notification types: 'AUTOSCALING:SCALE_OUT_SUCCESS', 'AUTOSCALING:SCALE_IN_SUCCESS', 'AUTOSCALING:SCALE_OUT_ERROR', 'AUTOSCALING:SCALE_IN_ERROR', 'AUTOSCALING:SCALE_REJECT', 'AUTOSCALING:SCALE_OUT_START', 'AUTOSCALING:SCALE_IN_START', 'AUTOSCALING:SCHEDULE_TASK_EXPIRING'.
 
 <h4 class="pdoc-member-header" id="Notification-scalingGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/notification.ts#L105">property <b>scalingGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/notification.ts#L105">property <b>scalingGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>scalingGroupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -742,7 +742,7 @@ The notification types of Auto Scaling events and resource changes. Supported no
 The ID of the Auto Scaling group.
 
 <h4 class="pdoc-member-header" id="Notification-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/notification.ts#L63">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/notification.ts#L63">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -751,7 +751,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="ScalingConfiguration" data-link-title="ScalingConfiguration">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L17">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L17">
         Resource <strong>ScalingConfiguration</strong>
     </a>
 </h3>
@@ -767,7 +767,7 @@ ESS scaling configuration can be imported using the id, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="ScalingConfiguration-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L190"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L190"> <b>constructor</b></a>
 </h4>
 
 
@@ -781,7 +781,7 @@ Create a ScalingConfiguration resource with the given unique name, arguments, an
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ScalingConfiguration-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L27">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L27">method <b>get</b></a>
 </h4>
 
 
@@ -792,14 +792,14 @@ Get an existing ScalingConfiguration resource's state with the given name, ID, a
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ScalingConfiguration-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L17">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L17">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ScalingConfiguration-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L38">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L38">method <b>isInstance</b></a>
 </h4>
 
 
@@ -810,7 +810,7 @@ Returns true if the given object is an instance of ScalingConfiguration.  This i
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ScalingConfiguration-active">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L48">property <b>active</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L48">property <b>active</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>active: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -818,7 +818,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Whether active current scaling configuration in the specified scaling group. Default to `false`.
 
 <h4 class="pdoc-member-header" id="ScalingConfiguration-creditSpecification">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L52">property <b>creditSpecification</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L52">property <b>creditSpecification</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>creditSpecification: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -826,7 +826,7 @@ Whether active current scaling configuration in the specified scaling group. Def
 Performance mode of the t5 burstable instance. Valid values: 'Standard', 'Unlimited'.
 
 <h4 class="pdoc-member-header" id="ScalingConfiguration-dataDisks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L56">property <b>dataDisks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L56">property <b>dataDisks</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dataDisks: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#ScalingConfigurationDataDisk'>ScalingConfigurationDataDisk</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -834,7 +834,7 @@ Performance mode of the t5 burstable instance. Valid values: 'Standard', 'Unlimi
 DataDisk mappings to attach to ecs instance. See Block datadisk below for details.
 
 <h4 class="pdoc-member-header" id="ScalingConfiguration-enable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L60">property <b>enable</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L60">property <b>enable</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enable: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -842,7 +842,7 @@ DataDisk mappings to attach to ecs instance. See Block datadisk below for detail
 Whether enable the specified scaling group(make it active) to which the current scaling configuration belongs.
 
 <h4 class="pdoc-member-header" id="ScalingConfiguration-forceDelete">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L64">property <b>forceDelete</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L64">property <b>forceDelete</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>forceDelete: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -850,7 +850,7 @@ Whether enable the specified scaling group(make it active) to which the current 
 The last scaling configuration will be deleted forcibly with deleting its scaling group. Default to false.
 
 <h4 class="pdoc-member-header" id="ScalingConfiguration-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L17">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L17">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -859,7 +859,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ScalingConfiguration-imageId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L68">property <b>imageId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L68">property <b>imageId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>imageId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -867,7 +867,7 @@ deployments and may be missing (undefined) during planning phases.
 ID of an image file, indicating the image resource selected when an instance is enabled.
 
 <h4 class="pdoc-member-header" id="ScalingConfiguration-imageName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L72">property <b>imageName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L72">property <b>imageName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>imageName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -875,7 +875,7 @@ ID of an image file, indicating the image resource selected when an instance is 
 Name of an image file, indicating the image resource selected when an instance is enabled.
 
 <h4 class="pdoc-member-header" id="ScalingConfiguration-instanceIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L78">property <b>instanceIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L78">property <b>instanceIds</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -887,7 +887,7 @@ Field &#39;instance_ids&#39; has been deprecated from provider version 1.6.0. Ne
 It has been deprecated from version 1.6.0. New resource `alicloud.ess.Attachment` replaces it.
 
 <h4 class="pdoc-member-header" id="ScalingConfiguration-instanceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L82">property <b>instanceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L82">property <b>instanceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>instanceName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -895,7 +895,7 @@ It has been deprecated from version 1.6.0. New resource `alicloud.ess.Attachment
 Name of an ECS instance. Default to "ESS-Instance". It is valid from version 1.7.1.
 
 <h4 class="pdoc-member-header" id="ScalingConfiguration-instanceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L86">property <b>instanceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L86">property <b>instanceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>instanceType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -903,7 +903,7 @@ Name of an ECS instance. Default to "ESS-Instance". It is valid from version 1.7
 Resource type of an ECS instance.
 
 <h4 class="pdoc-member-header" id="ScalingConfiguration-instanceTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L90">property <b>instanceTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L90">property <b>instanceTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>instanceTypes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -911,7 +911,7 @@ Resource type of an ECS instance.
 Resource types of an ECS instance.
 
 <h4 class="pdoc-member-header" id="ScalingConfiguration-internetChargeType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L94">property <b>internetChargeType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L94">property <b>internetChargeType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>internetChargeType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -919,7 +919,7 @@ Resource types of an ECS instance.
 Network billing type, Values: PayByBandwidth or PayByTraffic. Default to `PayByBandwidth`.
 
 <h4 class="pdoc-member-header" id="ScalingConfiguration-internetMaxBandwidthIn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L98">property <b>internetMaxBandwidthIn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L98">property <b>internetMaxBandwidthIn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>internetMaxBandwidthIn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -927,7 +927,7 @@ Network billing type, Values: PayByBandwidth or PayByTraffic. Default to `PayByB
 Maximum incoming bandwidth from the public network, measured in Mbps (Mega bit per second). The value range is [1,200].
 
 <h4 class="pdoc-member-header" id="ScalingConfiguration-internetMaxBandwidthOut">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L102">property <b>internetMaxBandwidthOut</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L102">property <b>internetMaxBandwidthOut</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>internetMaxBandwidthOut: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -935,7 +935,7 @@ Maximum incoming bandwidth from the public network, measured in Mbps (Mega bit p
 Maximum outgoing bandwidth from the public network, measured in Mbps (Mega bit per second). The value range for PayByBandwidth is [0,100].
 
 <h4 class="pdoc-member-header" id="ScalingConfiguration-ioOptimized">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L108">property <b>ioOptimized</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L108">property <b>ioOptimized</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -947,7 +947,7 @@ Attribute io_optimized has been deprecated on instance resource. All the launche
 It has been deprecated on instance resource. All the launched alicloud instances will be I/O optimized.
 
 <h4 class="pdoc-member-header" id="ScalingConfiguration-isOutdated">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L112">property <b>isOutdated</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L112">property <b>isOutdated</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>isOutdated: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -955,7 +955,7 @@ It has been deprecated on instance resource. All the launched alicloud instances
 Whether to use outdated instance type. Default to false.
 
 <h4 class="pdoc-member-header" id="ScalingConfiguration-keyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L116">property <b>keyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L116">property <b>keyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>keyName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -963,7 +963,7 @@ Whether to use outdated instance type. Default to false.
 The name of key pair that can login ECS instance successfully without password. If it is specified, the password would be invalid.
 
 <h4 class="pdoc-member-header" id="ScalingConfiguration-kmsEncryptedPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L120">property <b>kmsEncryptedPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L120">property <b>kmsEncryptedPassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kmsEncryptedPassword: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -971,7 +971,7 @@ The name of key pair that can login ECS instance successfully without password. 
 An KMS encrypts password used to a db account. If the `password` is filled in, this field will be ignored.
 
 <h4 class="pdoc-member-header" id="ScalingConfiguration-kmsEncryptionContext">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L124">property <b>kmsEncryptionContext</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L124">property <b>kmsEncryptionContext</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kmsEncryptionContext: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -979,7 +979,7 @@ An KMS encrypts password used to a db account. If the `password` is filled in, t
 An KMS encryption context used to decrypt `kmsEncryptedPassword` before creating or updating a db account with `kmsEncryptedPassword`. See [Encryption Context](https://www.alibabacloud.com/help/doc-detail/42975.htm). It is valid when `kmsEncryptedPassword` is set.
 
 <h4 class="pdoc-member-header" id="ScalingConfiguration-override">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L128">property <b>override</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L128">property <b>override</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>override: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -987,7 +987,7 @@ An KMS encryption context used to decrypt `kmsEncryptedPassword` before creating
 Indicates whether to overwrite the existing data. Default to false.
 
 <h4 class="pdoc-member-header" id="ScalingConfiguration-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L132">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L132">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>password: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -995,7 +995,7 @@ Indicates whether to overwrite the existing data. Default to false.
 The password of the ECS instance. The password must be 8 to 30 characters in length. It must contains at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Special characters include `() ~!@#$%^&*-_+=\|{}[]:;'<>,.?/`, The password of Windows-based instances cannot start with a forward slash (/).
 
 <h4 class="pdoc-member-header" id="ScalingConfiguration-passwordInherit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L136">property <b>passwordInherit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L136">property <b>passwordInherit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>passwordInherit: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1003,7 +1003,7 @@ The password of the ECS instance. The password must be 8 to 30 characters in len
 Specifies whether to use the password that is predefined in the image. If the PasswordInherit parameter is set to true, the `password` and `kmsEncryptedPassword` will be ignored. You must ensure that the selected image has a password configured.
 
 <h4 class="pdoc-member-header" id="ScalingConfiguration-roleName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L140">property <b>roleName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L140">property <b>roleName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>roleName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1011,7 +1011,7 @@ Specifies whether to use the password that is predefined in the image. If the Pa
 Instance RAM role name. The name is provided and maintained by RAM. You can use `alicloud.ram.Role` to create a new one.
 
 <h4 class="pdoc-member-header" id="ScalingConfiguration-scalingConfigurationName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L144">property <b>scalingConfigurationName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L144">property <b>scalingConfigurationName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>scalingConfigurationName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1019,7 +1019,7 @@ Instance RAM role name. The name is provided and maintained by RAM. You can use 
 Name shown for the scheduled task. which must contain 2-64 characters (English or Chinese), starting with numbers, English letters or Chinese characters, and can contain number, underscores `_`, hypens `-`, and decimal point `.`. If this parameter value is not specified, the default value is ScalingConfigurationId.
 
 <h4 class="pdoc-member-header" id="ScalingConfiguration-scalingGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L148">property <b>scalingGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L148">property <b>scalingGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>scalingGroupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1027,7 +1027,7 @@ Name shown for the scheduled task. which must contain 2-64 characters (English o
 ID of the scaling group of a scaling configuration.
 
 <h4 class="pdoc-member-header" id="ScalingConfiguration-securityGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L152">property <b>securityGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L152">property <b>securityGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>securityGroupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1035,7 +1035,7 @@ ID of the scaling group of a scaling configuration.
 ID of the security group used to create new instance. It is conflict with `securityGroupIds`.
 
 <h4 class="pdoc-member-header" id="ScalingConfiguration-securityGroupIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L156">property <b>securityGroupIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L156">property <b>securityGroupIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>securityGroupIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1043,7 +1043,7 @@ ID of the security group used to create new instance. It is conflict with `secur
 List IDs of the security group used to create new instances. It is conflict with `securityGroupId`.
 
 <h4 class="pdoc-member-header" id="ScalingConfiguration-substitute">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L160">property <b>substitute</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L160">property <b>substitute</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>substitute: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1051,7 +1051,7 @@ List IDs of the security group used to create new instances. It is conflict with
 The another scaling configuration which will be active automatically and replace current configuration when setting `active` to 'false'. It is invalid when `active` is 'true'.
 
 <h4 class="pdoc-member-header" id="ScalingConfiguration-systemDiskAutoSnapshotPolicyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L164">property <b>systemDiskAutoSnapshotPolicyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L164">property <b>systemDiskAutoSnapshotPolicyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>systemDiskAutoSnapshotPolicyId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1059,7 +1059,7 @@ The another scaling configuration which will be active automatically and replace
 The id of auto snapshot policy for system disk.
 
 <h4 class="pdoc-member-header" id="ScalingConfiguration-systemDiskCategory">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L168">property <b>systemDiskCategory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L168">property <b>systemDiskCategory</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>systemDiskCategory: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1067,7 +1067,7 @@ The id of auto snapshot policy for system disk.
 Category of the system disk. The parameter value options are `ephemeralSsd`, `cloudEfficiency`, `cloudSsd`, `cloudEssd` and `cloud`. `cloud` only is used to some no I/O optimized instance. Default to `cloudEfficiency`.
 
 <h4 class="pdoc-member-header" id="ScalingConfiguration-systemDiskDescription">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L172">property <b>systemDiskDescription</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L172">property <b>systemDiskDescription</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>systemDiskDescription: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1075,7 +1075,7 @@ Category of the system disk. The parameter value options are `ephemeralSsd`, `cl
 The description of the system disk. The description must be 2 to 256 characters in length and cannot start with http:// or https://.
 
 <h4 class="pdoc-member-header" id="ScalingConfiguration-systemDiskName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L176">property <b>systemDiskName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L176">property <b>systemDiskName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>systemDiskName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1083,7 +1083,7 @@ The description of the system disk. The description must be 2 to 256 characters 
 The name of the system disk. It must be 2 to 128 characters in length. It must start with a letter and cannot start with http:// or https://. It can contain letters, digits, colons (:), underscores (_), and hyphens (-). Default value: null.
 
 <h4 class="pdoc-member-header" id="ScalingConfiguration-systemDiskSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L180">property <b>systemDiskSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L180">property <b>systemDiskSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>systemDiskSize: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1091,7 +1091,7 @@ The name of the system disk. It must be 2 to 128 characters in length. It must s
 Size of system disk, in GiB. Optional values: cloud: 20-500, cloud_efficiency: 20-500, cloud_ssd: 20-500, ephemeral_ssd: 20-500 The default value is max{40, ImageSize}. If this parameter is set, the system disk size must be greater than or equal to max{40, ImageSize}.
 
 <h4 class="pdoc-member-header" id="ScalingConfiguration-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L186">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L186">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1101,7 +1101,7 @@ A mapping of tags to assign to the resource. It will be applied for ECS instance
 - Value: It can be up to 128 characters in length. It cannot begin with "aliyun", "http://", or "https://" It can be a null string.
 
 <h4 class="pdoc-member-header" id="ScalingConfiguration-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L17">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1110,7 +1110,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="ScalingConfiguration-userData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L190">property <b>userData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L190">property <b>userData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>userData: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1118,7 +1118,7 @@ deployments.
 User-defined data to customize the startup behaviors of the ECS instance and to pass data into the ECS instance.
 
 <h3 class="pdoc-module-header" id="ScalingGroup" data-link-title="ScalingGroup">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingGroup.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingGroup.ts#L16">
         Resource <strong>ScalingGroup</strong>
     </a>
 </h3>
@@ -1134,7 +1134,7 @@ ESS scaling group can be imported using the id, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="ScalingGroup-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingGroup.ts#L120"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingGroup.ts#L120"> <b>constructor</b></a>
 </h4>
 
 
@@ -1148,7 +1148,7 @@ Create a ScalingGroup resource with the given unique name, arguments, and option
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ScalingGroup-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingGroup.ts#L26">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingGroup.ts#L26">method <b>get</b></a>
 </h4>
 
 
@@ -1159,14 +1159,14 @@ Get an existing ScalingGroup resource's state with the given name, ID, and optio
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ScalingGroup-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingGroup.ts#L16">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingGroup.ts#L16">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ScalingGroup-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingGroup.ts#L37">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingGroup.ts#L37">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1177,7 +1177,7 @@ Returns true if the given object is an instance of ScalingGroup.  This is design
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ScalingGroup-dbInstanceIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingGroup.ts#L49">property <b>dbInstanceIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingGroup.ts#L49">property <b>dbInstanceIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dbInstanceIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1187,7 +1187,7 @@ If an RDS instance is specified in the scaling group, the scaling group automati
 - The specified RDS instance’s whitelist must have room for more IP addresses.
 
 <h4 class="pdoc-member-header" id="ScalingGroup-defaultCooldown">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingGroup.ts#L53">property <b>defaultCooldown</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingGroup.ts#L53">property <b>defaultCooldown</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>defaultCooldown: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1195,7 +1195,7 @@ If an RDS instance is specified in the scaling group, the scaling group automati
 Default cool-down time (in seconds) of the scaling group. Value range: [0, 86400]. The default value is 300s.
 
 <h4 class="pdoc-member-header" id="ScalingGroup-desiredCapacity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingGroup.ts#L57">property <b>desiredCapacity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingGroup.ts#L57">property <b>desiredCapacity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>desiredCapacity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1203,7 +1203,7 @@ Default cool-down time (in seconds) of the scaling group. Value range: [0, 86400
 Expected number of ECS instances in the scaling group. Value range: [min_size, maxSize].
 
 <h4 class="pdoc-member-header" id="ScalingGroup-groupDeletionProtection">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingGroup.ts#L61">property <b>groupDeletionProtection</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingGroup.ts#L61">property <b>groupDeletionProtection</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>groupDeletionProtection: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1211,7 +1211,7 @@ Expected number of ECS instances in the scaling group. Value range: [min_size, m
 Specifies whether the scaling group deletion protection is enabled. `true` or `false`, Default value: `false`.
 
 <h4 class="pdoc-member-header" id="ScalingGroup-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingGroup.ts#L16">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingGroup.ts#L16">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1220,7 +1220,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ScalingGroup-loadbalancerIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingGroup.ts#L70">property <b>loadbalancerIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingGroup.ts#L70">property <b>loadbalancerIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>loadbalancerIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1233,7 +1233,7 @@ targeting your `alicloud.slb.Listener` in order to make sure the listener with i
 - The default weight of an ECS instance attached to the Server Load Balancer instance is 50.
 
 <h4 class="pdoc-member-header" id="ScalingGroup-maxSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingGroup.ts#L74">property <b>maxSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingGroup.ts#L74">property <b>maxSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>maxSize: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1241,7 +1241,7 @@ targeting your `alicloud.slb.Listener` in order to make sure the listener with i
 Maximum number of ECS instances in the scaling group. Value range: [0, 1000].
 
 <h4 class="pdoc-member-header" id="ScalingGroup-minSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingGroup.ts#L78">property <b>minSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingGroup.ts#L78">property <b>minSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>minSize: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1249,7 +1249,7 @@ Maximum number of ECS instances in the scaling group. Value range: [0, 1000].
 Minimum number of ECS instances in the scaling group. Value range: [0, 1000].
 
 <h4 class="pdoc-member-header" id="ScalingGroup-multiAzPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingGroup.ts#L82">property <b>multiAzPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingGroup.ts#L82">property <b>multiAzPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>multiAzPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1257,7 +1257,7 @@ Minimum number of ECS instances in the scaling group. Value range: [0, 1000].
 Multi-AZ scaling group ECS instance expansion and contraction strategy. PRIORITY, BALANCE or COST_OPTIMIZED(Available in 1.54.0+).
 
 <h4 class="pdoc-member-header" id="ScalingGroup-onDemandBaseCapacity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingGroup.ts#L86">property <b>onDemandBaseCapacity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingGroup.ts#L86">property <b>onDemandBaseCapacity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>onDemandBaseCapacity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1265,7 +1265,7 @@ Multi-AZ scaling group ECS instance expansion and contraction strategy. PRIORITY
 The minimum amount of the Auto Scaling group's capacity that must be fulfilled by On-Demand Instances. This base portion is provisioned first as your group scales.
 
 <h4 class="pdoc-member-header" id="ScalingGroup-onDemandPercentageAboveBaseCapacity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingGroup.ts#L90">property <b>onDemandPercentageAboveBaseCapacity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingGroup.ts#L90">property <b>onDemandPercentageAboveBaseCapacity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>onDemandPercentageAboveBaseCapacity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1273,7 +1273,7 @@ The minimum amount of the Auto Scaling group's capacity that must be fulfilled b
 Controls the percentages of On-Demand Instances and Spot Instances for your additional capacity beyond OnDemandBaseCapacity.
 
 <h4 class="pdoc-member-header" id="ScalingGroup-removalPolicies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingGroup.ts#L98">property <b>removalPolicies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingGroup.ts#L98">property <b>removalPolicies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>removalPolicies: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -1285,7 +1285,7 @@ RemovalPolicy is used to select the ECS instances you want to remove from the sc
 - Default values: Default value of RemovalPolicy.1: OldestScalingConfiguration. Default value of RemovalPolicy.2: OldestInstance.
 
 <h4 class="pdoc-member-header" id="ScalingGroup-scalingGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingGroup.ts#L102">property <b>scalingGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingGroup.ts#L102">property <b>scalingGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>scalingGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1293,7 +1293,7 @@ RemovalPolicy is used to select the ECS instances you want to remove from the sc
 Name shown for the scaling group, which must contain 2-64 characters (English or Chinese), starting with numbers, English letters or Chinese characters, and can contain numbers, underscores `_`, hyphens `-`, and decimal points `.`. If this parameter is not specified, the default value is ScalingGroupId.
 
 <h4 class="pdoc-member-header" id="ScalingGroup-spotInstancePools">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingGroup.ts#L106">property <b>spotInstancePools</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingGroup.ts#L106">property <b>spotInstancePools</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>spotInstancePools: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1301,7 +1301,7 @@ Name shown for the scaling group, which must contain 2-64 characters (English or
 The number of Spot pools to use to allocate your Spot capacity. The Spot pools is composed of instance types of lowest price.
 
 <h4 class="pdoc-member-header" id="ScalingGroup-spotInstanceRemedy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingGroup.ts#L110">property <b>spotInstanceRemedy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingGroup.ts#L110">property <b>spotInstanceRemedy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>spotInstanceRemedy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1309,7 +1309,7 @@ The number of Spot pools to use to allocate your Spot capacity. The Spot pools i
 Whether to replace spot instances with newly created spot/onDemand instance when receive a spot recycling message.
 
 <h4 class="pdoc-member-header" id="ScalingGroup-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingGroup.ts#L16">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingGroup.ts#L16">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1318,7 +1318,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="ScalingGroup-vswitchId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingGroup.ts#L116">property <b>vswitchId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingGroup.ts#L116">property <b>vswitchId</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -1330,7 +1330,7 @@ Field &#39;vswitch_id&#39; has been deprecated from provider version 1.7.1, and 
 It has been deprecated from version 1.7.1 and new field 'vswitch_ids' replaces it.
 
 <h4 class="pdoc-member-header" id="ScalingGroup-vswitchIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingGroup.ts#L120">property <b>vswitchIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingGroup.ts#L120">property <b>vswitchIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>vswitchIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1338,7 +1338,7 @@ It has been deprecated from version 1.7.1 and new field 'vswitch_ids' replaces i
 List of virtual switch IDs in which the ecs instances to be launched.
 
 <h3 class="pdoc-module-header" id="ScalingGroupVServerGroups" data-link-title="ScalingGroupVServerGroups">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingGroupVServerGroups.ts#L99">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingGroupVServerGroups.ts#L99">
         Resource <strong>ScalingGroupVServerGroups</strong>
     </a>
 </h3>
@@ -1436,7 +1436,7 @@ ESS vserver groups can be imported using the id, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="ScalingGroupVServerGroups-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingGroupVServerGroups.ts#L138"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingGroupVServerGroups.ts#L138"> <b>constructor</b></a>
 </h4>
 
 
@@ -1450,7 +1450,7 @@ Create a ScalingGroupVServerGroups resource with the given unique name, argument
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ScalingGroupVServerGroups-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingGroupVServerGroups.ts#L109">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingGroupVServerGroups.ts#L109">method <b>get</b></a>
 </h4>
 
 
@@ -1461,14 +1461,14 @@ Get an existing ScalingGroupVServerGroups resource's state with the given name, 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ScalingGroupVServerGroups-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingGroupVServerGroups.ts#L99">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingGroupVServerGroups.ts#L99">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ScalingGroupVServerGroups-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingGroupVServerGroups.ts#L120">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingGroupVServerGroups.ts#L120">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1479,7 +1479,7 @@ Returns true if the given object is an instance of ScalingGroupVServerGroups.  T
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ScalingGroupVServerGroups-force">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingGroupVServerGroups.ts#L130">property <b>force</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingGroupVServerGroups.ts#L130">property <b>force</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>force: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1487,7 +1487,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 If instances of scaling group are attached/removed from slb backend server when attach/detach vserver group from scaling group. Default to true.
 
 <h4 class="pdoc-member-header" id="ScalingGroupVServerGroups-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingGroupVServerGroups.ts#L99">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingGroupVServerGroups.ts#L99">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1496,7 +1496,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ScalingGroupVServerGroups-scalingGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingGroupVServerGroups.ts#L134">property <b>scalingGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingGroupVServerGroups.ts#L134">property <b>scalingGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>scalingGroupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1504,7 +1504,7 @@ deployments and may be missing (undefined) during planning phases.
 ID of the scaling group.
 
 <h4 class="pdoc-member-header" id="ScalingGroupVServerGroups-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingGroupVServerGroups.ts#L99">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingGroupVServerGroups.ts#L99">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1513,7 +1513,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="ScalingGroupVServerGroups-vserverGroups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingGroupVServerGroups.ts#L138">property <b>vserverGroups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingGroupVServerGroups.ts#L138">property <b>vserverGroups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>vserverGroups: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#ScalingGroupVServerGroupsVserverGroup'>ScalingGroupVServerGroupsVserverGroup</a>[]&gt;;</code></pre>
@@ -1521,7 +1521,7 @@ deployments.
 A list of vserver groups attached on scaling group. See Block vserverGroup below for details.
 
 <h3 class="pdoc-module-header" id="ScalingRule" data-link-title="ScalingRule">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingRule.ts#L17">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingRule.ts#L17">
         Resource <strong>ScalingRule</strong>
     </a>
 </h3>
@@ -1537,7 +1537,7 @@ ESS scaling rule can be imported using the id, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="ScalingRule-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingRule.ts#L95"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingRule.ts#L95"> <b>constructor</b></a>
 </h4>
 
 
@@ -1551,7 +1551,7 @@ Create a ScalingRule resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ScalingRule-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingRule.ts#L27">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingRule.ts#L27">method <b>get</b></a>
 </h4>
 
 
@@ -1562,14 +1562,14 @@ Get an existing ScalingRule resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ScalingRule-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingRule.ts#L17">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingRule.ts#L17">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ScalingRule-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingRule.ts#L38">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingRule.ts#L38">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1580,7 +1580,7 @@ Returns true if the given object is an instance of ScalingRule.  This is designe
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ScalingRule-adjustmentType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingRule.ts#L51">property <b>adjustmentType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingRule.ts#L51">property <b>adjustmentType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>adjustmentType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1591,7 +1591,7 @@ Adjustment mode of a scaling rule. Optional values:
 - TotalCapacity: It is used to adjust the quantity of ECS instances in the current scaling group to a specified value.
 
 <h4 class="pdoc-member-header" id="ScalingRule-adjustmentValue">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingRule.ts#L58">property <b>adjustmentValue</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingRule.ts#L58">property <b>adjustmentValue</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>adjustmentValue: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1602,12 +1602,12 @@ The number of ECS instances to be adjusted in the scaling rule. This parameter i
 - TotalCapacity：[0, 1000]
 
 <h4 class="pdoc-member-header" id="ScalingRule-ari">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingRule.ts#L59">property <b>ari</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingRule.ts#L59">property <b>ari</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ari: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ScalingRule-cooldown">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingRule.ts#L63">property <b>cooldown</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingRule.ts#L63">property <b>cooldown</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>cooldown: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1615,7 +1615,7 @@ The number of ECS instances to be adjusted in the scaling rule. This parameter i
 The cooldown time of the scaling rule. This parameter is applicable only to simple scaling rules. Value range: [0, 86,400], in seconds. The default value is empty，if not set, the return value will be 0, which is the default value of integer.
 
 <h4 class="pdoc-member-header" id="ScalingRule-disableScaleIn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingRule.ts#L67">property <b>disableScaleIn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingRule.ts#L67">property <b>disableScaleIn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>disableScaleIn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1623,7 +1623,7 @@ The cooldown time of the scaling rule. This parameter is applicable only to simp
 Indicates whether scale in by the target tracking policy is disabled. Default to false.
 
 <h4 class="pdoc-member-header" id="ScalingRule-estimatedInstanceWarmup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingRule.ts#L71">property <b>estimatedInstanceWarmup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingRule.ts#L71">property <b>estimatedInstanceWarmup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>estimatedInstanceWarmup: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1631,7 +1631,7 @@ Indicates whether scale in by the target tracking policy is disabled. Default to
 The estimated time, in seconds, until a newly launched instance will contribute CloudMonitor metrics. Default to 300.
 
 <h4 class="pdoc-member-header" id="ScalingRule-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingRule.ts#L17">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingRule.ts#L17">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1640,7 +1640,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ScalingRule-metricName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingRule.ts#L75">property <b>metricName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingRule.ts#L75">property <b>metricName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>metricName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1648,7 +1648,7 @@ deployments and may be missing (undefined) during planning phases.
 A CloudMonitor metric name.
 
 <h4 class="pdoc-member-header" id="ScalingRule-scalingGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingRule.ts#L79">property <b>scalingGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingRule.ts#L79">property <b>scalingGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>scalingGroupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1656,7 +1656,7 @@ A CloudMonitor metric name.
 ID of the scaling group of a scaling rule.
 
 <h4 class="pdoc-member-header" id="ScalingRule-scalingRuleName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingRule.ts#L83">property <b>scalingRuleName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingRule.ts#L83">property <b>scalingRuleName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>scalingRuleName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1664,7 +1664,7 @@ ID of the scaling group of a scaling rule.
 Name shown for the scaling rule, which must contain 2-64 characters (English or Chinese), starting with numbers, English letters or Chinese characters, and can contain number, underscores `_`, hypens `-`, and decimal point `.`. If this parameter value is not specified, the default value is scaling rule id.
 
 <h4 class="pdoc-member-header" id="ScalingRule-scalingRuleType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingRule.ts#L87">property <b>scalingRuleType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingRule.ts#L87">property <b>scalingRuleType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>scalingRuleType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1672,7 +1672,7 @@ Name shown for the scaling rule, which must contain 2-64 characters (English or 
 The scaling rule type, either "SimpleScalingRule", "TargetTrackingScalingRule", "StepScalingRule". Default to "SimpleScalingRule".
 
 <h4 class="pdoc-member-header" id="ScalingRule-stepAdjustments">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingRule.ts#L91">property <b>stepAdjustments</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingRule.ts#L91">property <b>stepAdjustments</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>stepAdjustments: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#ScalingRuleStepAdjustment'>ScalingRuleStepAdjustment</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1680,7 +1680,7 @@ The scaling rule type, either "SimpleScalingRule", "TargetTrackingScalingRule", 
 Steps for StepScalingRule. See Block stepAdjustment below for details.
 
 <h4 class="pdoc-member-header" id="ScalingRule-targetValue">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingRule.ts#L95">property <b>targetValue</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingRule.ts#L95">property <b>targetValue</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>targetValue: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1688,7 +1688,7 @@ Steps for StepScalingRule. See Block stepAdjustment below for details.
 The target value for the metric.
 
 <h4 class="pdoc-member-header" id="ScalingRule-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingRule.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingRule.ts#L17">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1697,14 +1697,14 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Schedule" data-link-title="Schedule">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/schedule.ts#L7">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/schedule.ts#L7">
         Resource <strong>Schedule</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>Schedule</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
 <h4 class="pdoc-member-header" id="Schedule-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/schedule.ts#L47"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/schedule.ts#L47"> <b>constructor</b></a>
 </h4>
 
 
@@ -1718,7 +1718,7 @@ Create a Schedule resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Schedule-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/schedule.ts#L17">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/schedule.ts#L17">method <b>get</b></a>
 </h4>
 
 
@@ -1729,14 +1729,14 @@ Get an existing Schedule resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Schedule-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/schedule.ts#L7">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/schedule.ts#L7">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Schedule-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/schedule.ts#L28">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/schedule.ts#L28">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1747,17 +1747,17 @@ Returns true if the given object is an instance of Schedule.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Schedule-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/schedule.ts#L35">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/schedule.ts#L35">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Schedule-desiredCapacity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/schedule.ts#L36">property <b>desiredCapacity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/schedule.ts#L36">property <b>desiredCapacity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>desiredCapacity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Schedule-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/schedule.ts#L7">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/schedule.ts#L7">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1766,62 +1766,62 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Schedule-launchExpirationTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/schedule.ts#L37">property <b>launchExpirationTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/schedule.ts#L37">property <b>launchExpirationTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>launchExpirationTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Schedule-launchTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/schedule.ts#L38">property <b>launchTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/schedule.ts#L38">property <b>launchTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>launchTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Schedule-maxValue">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/schedule.ts#L39">property <b>maxValue</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/schedule.ts#L39">property <b>maxValue</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>maxValue: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Schedule-minValue">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/schedule.ts#L40">property <b>minValue</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/schedule.ts#L40">property <b>minValue</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>minValue: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Schedule-recurrenceEndTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/schedule.ts#L41">property <b>recurrenceEndTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/schedule.ts#L41">property <b>recurrenceEndTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>recurrenceEndTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Schedule-recurrenceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/schedule.ts#L42">property <b>recurrenceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/schedule.ts#L42">property <b>recurrenceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>recurrenceType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Schedule-recurrenceValue">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/schedule.ts#L43">property <b>recurrenceValue</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/schedule.ts#L43">property <b>recurrenceValue</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>recurrenceValue: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Schedule-scalingGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/schedule.ts#L44">property <b>scalingGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/schedule.ts#L44">property <b>scalingGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>scalingGroupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Schedule-scheduledAction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/schedule.ts#L45">property <b>scheduledAction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/schedule.ts#L45">property <b>scheduledAction</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>scheduledAction: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Schedule-scheduledTaskName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/schedule.ts#L46">property <b>scheduledTaskName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/schedule.ts#L46">property <b>scheduledTaskName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>scheduledTaskName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Schedule-taskEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/schedule.ts#L47">property <b>taskEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/schedule.ts#L47">property <b>taskEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>taskEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Schedule-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/schedule.ts#L7">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/schedule.ts#L7">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1830,7 +1830,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="ScheduledTask" data-link-title="ScheduledTask">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scheduledTask.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scheduledTask.ts#L16">
         Resource <strong>ScheduledTask</strong>
     </a>
 </h3>
@@ -1846,7 +1846,7 @@ ESS schedule task can be imported using the id, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="ScheduledTask-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scheduledTask.ts#L107"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scheduledTask.ts#L107"> <b>constructor</b></a>
 </h4>
 
 
@@ -1860,7 +1860,7 @@ Create a ScheduledTask resource with the given unique name, arguments, and optio
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ScheduledTask-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scheduledTask.ts#L26">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scheduledTask.ts#L26">method <b>get</b></a>
 </h4>
 
 
@@ -1871,14 +1871,14 @@ Get an existing ScheduledTask resource's state with the given name, ID, and opti
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ScheduledTask-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scheduledTask.ts#L16">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scheduledTask.ts#L16">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ScheduledTask-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scheduledTask.ts#L37">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scheduledTask.ts#L37">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1889,7 +1889,7 @@ Returns true if the given object is an instance of ScheduledTask.  This is desig
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ScheduledTask-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scheduledTask.ts#L47">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scheduledTask.ts#L47">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1897,7 +1897,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Description of the scheduled task, which is 2-200 characters (English or Chinese) long.
 
 <h4 class="pdoc-member-header" id="ScheduledTask-desiredCapacity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scheduledTask.ts#L51">property <b>desiredCapacity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scheduledTask.ts#L51">property <b>desiredCapacity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>desiredCapacity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1905,7 +1905,7 @@ Description of the scheduled task, which is 2-200 characters (English or Chinese
 The expected number of instances in a scaling group when the scaling method of the scheduled task is to specify the number of instances in a scaling group. **NOTE:** You must specify the `DesiredCapacity` parameter when you create the scaling group.
 
 <h4 class="pdoc-member-header" id="ScheduledTask-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scheduledTask.ts#L16">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scheduledTask.ts#L16">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1914,7 +1914,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ScheduledTask-launchExpirationTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scheduledTask.ts#L55">property <b>launchExpirationTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scheduledTask.ts#L55">property <b>launchExpirationTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>launchExpirationTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1922,7 +1922,7 @@ deployments and may be missing (undefined) during planning phases.
 The time period during which a failed scheduled task is retried. Unit: seconds. Valid values: 0 to 21600. Default value: 600
 
 <h4 class="pdoc-member-header" id="ScheduledTask-launchTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scheduledTask.ts#L62">property <b>launchTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scheduledTask.ts#L62">property <b>launchTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>launchTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1933,7 +1933,7 @@ If the `recurrenceType` parameter is specified, the task is executed repeatedly 
 Otherwise, the task is only executed once at the date and time specified by LaunchTime.
 
 <h4 class="pdoc-member-header" id="ScheduledTask-maxValue">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scheduledTask.ts#L66">property <b>maxValue</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scheduledTask.ts#L66">property <b>maxValue</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>maxValue: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1941,7 +1941,7 @@ Otherwise, the task is only executed once at the date and time specified by Laun
 The maximum number of instances in a scaling group when the scaling method of the scheduled task is to specify the number of instances in a scaling group.
 
 <h4 class="pdoc-member-header" id="ScheduledTask-minValue">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scheduledTask.ts#L70">property <b>minValue</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scheduledTask.ts#L70">property <b>minValue</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>minValue: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1949,7 +1949,7 @@ The maximum number of instances in a scaling group when the scaling method of th
 The minimum number of instances in a scaling group when the scaling method of the scheduled task is to specify the number of instances in a scaling group.
 
 <h4 class="pdoc-member-header" id="ScheduledTask-recurrenceEndTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scheduledTask.ts#L75">property <b>recurrenceEndTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scheduledTask.ts#L75">property <b>recurrenceEndTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>recurrenceEndTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1958,7 +1958,7 @@ Specifies the end time after which the scheduled task is no longer repeated. Spe
 The time must be in UTC. You cannot enter a time point later than 365 days from the date of scheduled task creation. **NOTE:** You must specify `RecurrenceType`, `RecurrenceValue`, and `RecurrenceEndTime` at the same time.
 
 <h4 class="pdoc-member-header" id="ScheduledTask-recurrenceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scheduledTask.ts#L83">property <b>recurrenceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scheduledTask.ts#L83">property <b>recurrenceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>recurrenceType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1970,7 +1970,7 @@ Specifies the recurrence type of the scheduled task. **NOTE:** You must specify 
 - Cron: (Available in 1.60.0+) The scheduled task is executed based on the specified cron expression.
 
 <h4 class="pdoc-member-header" id="ScheduledTask-recurrenceValue">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scheduledTask.ts#L91">property <b>recurrenceValue</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scheduledTask.ts#L91">property <b>recurrenceValue</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>recurrenceValue: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1982,7 +1982,7 @@ Specifies how often a scheduled task recurs. **NOTE:** You must specify `Recurre
 - Cron: You can enter a cron expression which is written in UTC and consists of five fields: minute, hour, day of month (date), month, and day of week. The expression can contain wildcard characters including commas (,), question marks (?), hyphens (-), asterisks (*), number signs (#), forward slashes (/), and the L and W letters.
 
 <h4 class="pdoc-member-header" id="ScheduledTask-scalingGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scheduledTask.ts#L95">property <b>scalingGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scheduledTask.ts#L95">property <b>scalingGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>scalingGroupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1990,7 +1990,7 @@ Specifies how often a scheduled task recurs. **NOTE:** You must specify `Recurre
 The ID of the scaling group where the number of instances is modified when the scheduled task is triggered. After the `ScalingGroupId` parameter is specified, the scaling method of the scheduled task is to specify the number of instances in a scaling group. You must specify at least one of the following parameters: `MinValue`, `MaxValue`, and `DesiredCapacity`. **NOTE:** You cannot specify `scheduledAction` and `scalingGroupId` at the same time.
 
 <h4 class="pdoc-member-header" id="ScheduledTask-scheduledAction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scheduledTask.ts#L99">property <b>scheduledAction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scheduledTask.ts#L99">property <b>scheduledAction</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>scheduledAction: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1998,7 +1998,7 @@ The ID of the scaling group where the number of instances is modified when the s
 The operation to be performed when a scheduled task is triggered. Enter the unique identifier of a scaling rule. **NOTE:** You cannot specify `scheduledAction` and `scalingGroupId` at the same time.
 
 <h4 class="pdoc-member-header" id="ScheduledTask-scheduledTaskName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scheduledTask.ts#L103">property <b>scheduledTaskName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scheduledTask.ts#L103">property <b>scheduledTaskName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>scheduledTaskName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2006,7 +2006,7 @@ The operation to be performed when a scheduled task is triggered. Enter the uniq
 Display name of the scheduled task, which must be 2-40 characters (English or Chinese) long.
 
 <h4 class="pdoc-member-header" id="ScheduledTask-taskEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scheduledTask.ts#L107">property <b>taskEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scheduledTask.ts#L107">property <b>taskEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>taskEnabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -2014,7 +2014,7 @@ Display name of the scheduled task, which must be 2-40 characters (English or Ch
 Specifies whether to start the scheduled task. Default to true.
 
 <h4 class="pdoc-member-header" id="ScheduledTask-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scheduledTask.ts#L16">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scheduledTask.ts#L16">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -2025,7 +2025,7 @@ deployments.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getAlarms" data-link-title="getAlarms">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/getAlarms.ts#L31">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/getAlarms.ts#L31">
         Function <strong>getAlarms</strong>
     </a>
 </h3>
@@ -2057,7 +2057,7 @@ export const firstScalingRule = alicloud_alarms_alarm_ds.configurations.0.id;
 ```
 
 <h3 class="pdoc-module-header" id="getLifecycleHooks" data-link-title="getLifecycleHooks">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/getLifecycleHooks.ts#L27">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/getLifecycleHooks.ts#L27">
         Function <strong>getLifecycleHooks</strong>
     </a>
 </h3>
@@ -2085,7 +2085,7 @@ export const firstLifecycleHook = ds.hooks[0].id;
 ```
 
 <h3 class="pdoc-module-header" id="getNotifications" data-link-title="getNotifications">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/getNotifications.ts#L26">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/getNotifications.ts#L26">
         Function <strong>getNotifications</strong>
     </a>
 </h3>
@@ -2112,7 +2112,7 @@ export const firstNotification = ds.notifications[0].id;
 ```
 
 <h3 class="pdoc-module-header" id="getScalingConfigurations" data-link-title="getScalingConfigurations">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/getScalingConfigurations.ts#L29">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/getScalingConfigurations.ts#L29">
         Function <strong>getScalingConfigurations</strong>
     </a>
 </h3>
@@ -2142,7 +2142,7 @@ export const firstScalingRule = scalingconfigurationsDs.configurations[0].id;
 ```
 
 <h3 class="pdoc-module-header" id="getScalingGroups" data-link-title="getScalingGroups">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/getScalingGroups.ts#L28">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/getScalingGroups.ts#L28">
         Function <strong>getScalingGroups</strong>
     </a>
 </h3>
@@ -2171,7 +2171,7 @@ export const firstScalingGroup = scalinggroupsDs.groups[0].id;
 ```
 
 <h3 class="pdoc-module-header" id="getScalingRules" data-link-title="getScalingRules">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/getScalingRules.ts#L29">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/getScalingRules.ts#L29">
         Function <strong>getScalingRules</strong>
     </a>
 </h3>
@@ -2201,7 +2201,7 @@ export const firstScalingRule = scalingrulesDs.rules[0].id;
 ```
 
 <h3 class="pdoc-module-header" id="getScheduledTasks" data-link-title="getScheduledTasks">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/getScheduledTasks.ts#L27">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/getScheduledTasks.ts#L27">
         Function <strong>getScheduledTasks</strong>
     </a>
 </h3>
@@ -2231,7 +2231,7 @@ export const firstScheduledTask = ds.tasks[0].id;
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="AlarmArgs" data-link-title="AlarmArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/alarm.ts#L242">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/alarm.ts#L242">
         interface <strong>AlarmArgs</strong>
     </a>
 </h3>
@@ -2241,7 +2241,7 @@ export const firstScheduledTask = ds.tasks[0].id;
 The set of arguments for constructing a Alarm resource.
 
 <h4 class="pdoc-member-header" id="AlarmArgs-alarmActions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/alarm.ts#L246">property <b>alarmActions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/alarm.ts#L246">property <b>alarmActions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>alarmActions: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2249,7 +2249,7 @@ The set of arguments for constructing a Alarm resource.
 The list of actions to execute when this alarm transition into an ALARM state. Each action is specified as ess scaling rule ari.
 
 <h4 class="pdoc-member-header" id="AlarmArgs-cloudMonitorGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/alarm.ts#L250">property <b>cloudMonitorGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/alarm.ts#L250">property <b>cloudMonitorGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cloudMonitorGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2257,7 +2257,7 @@ The list of actions to execute when this alarm transition into an ALARM state. E
 Defines the application group id defined by CMS which is assigned when you upload custom metric to CMS, only available for custom metirc.
 
 <h4 class="pdoc-member-header" id="AlarmArgs-comparisonOperator">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/alarm.ts#L254">property <b>comparisonOperator</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/alarm.ts#L254">property <b>comparisonOperator</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>comparisonOperator?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2265,7 +2265,7 @@ Defines the application group id defined by CMS which is assigned when you uploa
 The arithmetic operation to use when comparing the specified Statistic and Threshold. The specified Statistic value is used as the first operand. Supported value: >=, <=, >, <. Defaults to >=.
 
 <h4 class="pdoc-member-header" id="AlarmArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/alarm.ts#L258">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/alarm.ts#L258">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2273,7 +2273,7 @@ The arithmetic operation to use when comparing the specified Statistic and Thres
 The description for the alarm.
 
 <h4 class="pdoc-member-header" id="AlarmArgs-dimensions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/alarm.ts#L262">property <b>dimensions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/alarm.ts#L262">property <b>dimensions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dimensions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -2281,7 +2281,7 @@ The description for the alarm.
 The dimension map for the alarm's associated metric (documented below). For all metrics, you can not set the dimension key as "scalingGroup" or "userId", which is set by default, the second dimension for metric, such as "device" for "PackagesNetIn", need to be set by users.
 
 <h4 class="pdoc-member-header" id="AlarmArgs-enable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/alarm.ts#L266">property <b>enable</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/alarm.ts#L266">property <b>enable</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enable?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2289,7 +2289,7 @@ The dimension map for the alarm's associated metric (documented below). For all 
 Whether to enable specific ess alarm. Default to true.
 
 <h4 class="pdoc-member-header" id="AlarmArgs-evaluationCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/alarm.ts#L270">property <b>evaluationCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/alarm.ts#L270">property <b>evaluationCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>evaluationCount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2297,7 +2297,7 @@ Whether to enable specific ess alarm. Default to true.
 The number of times that needs to satisfies comparison condition before transition into ALARM state. Defaults to 3.
 
 <h4 class="pdoc-member-header" id="AlarmArgs-metricName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/alarm.ts#L274">property <b>metricName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/alarm.ts#L274">property <b>metricName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metricName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2305,7 +2305,7 @@ The number of times that needs to satisfies comparison condition before transiti
 The name for the alarm's associated metric. See Block_metricNames_and_dimensions below for details.
 
 <h4 class="pdoc-member-header" id="AlarmArgs-metricType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/alarm.ts#L278">property <b>metricType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/alarm.ts#L278">property <b>metricType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metricType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2313,7 +2313,7 @@ The name for the alarm's associated metric. See Block_metricNames_and_dimensions
 The type for the alarm's associated metric. Supported value: system, custom. "system" means the metric data is collected by Aliyun Cloud Monitor Service(CMS), "custom" means the metric data is upload to CMS by users. Defaults to system.
 
 <h4 class="pdoc-member-header" id="AlarmArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/alarm.ts#L282">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/alarm.ts#L282">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2321,7 +2321,7 @@ The type for the alarm's associated metric. Supported value: system, custom. "sy
 The name for ess alarm.
 
 <h4 class="pdoc-member-header" id="AlarmArgs-period">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/alarm.ts#L286">property <b>period</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/alarm.ts#L286">property <b>period</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>period?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2329,7 +2329,7 @@ The name for ess alarm.
 The period in seconds over which the specified statistic is applied. Supported value: 60, 120, 300, 900. Defaults to 300.
 
 <h4 class="pdoc-member-header" id="AlarmArgs-scalingGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/alarm.ts#L290">property <b>scalingGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/alarm.ts#L290">property <b>scalingGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scalingGroupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2337,7 +2337,7 @@ The period in seconds over which the specified statistic is applied. Supported v
 The scaling group associated with this alarm, the 'ForceNew' attribute is available in 1.56.0+.
 
 <h4 class="pdoc-member-header" id="AlarmArgs-statistics">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/alarm.ts#L294">property <b>statistics</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/alarm.ts#L294">property <b>statistics</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>statistics?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2345,7 +2345,7 @@ The scaling group associated with this alarm, the 'ForceNew' attribute is availa
 The statistic to apply to the alarm's associated metric. Supported value: Average, Minimum, Maximum. Defaults to Average.
 
 <h4 class="pdoc-member-header" id="AlarmArgs-threshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/alarm.ts#L298">property <b>threshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/alarm.ts#L298">property <b>threshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>threshold: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2353,7 +2353,7 @@ The statistic to apply to the alarm's associated metric. Supported value: Averag
 The value against which the specified statistics is compared.
 
 <h3 class="pdoc-module-header" id="AlarmState" data-link-title="AlarmState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/alarm.ts#L176">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/alarm.ts#L176">
         interface <strong>AlarmState</strong>
     </a>
 </h3>
@@ -2363,7 +2363,7 @@ The value against which the specified statistics is compared.
 Input properties used for looking up and filtering Alarm resources.
 
 <h4 class="pdoc-member-header" id="AlarmState-alarmActions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/alarm.ts#L180">property <b>alarmActions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/alarm.ts#L180">property <b>alarmActions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>alarmActions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2371,7 +2371,7 @@ Input properties used for looking up and filtering Alarm resources.
 The list of actions to execute when this alarm transition into an ALARM state. Each action is specified as ess scaling rule ari.
 
 <h4 class="pdoc-member-header" id="AlarmState-cloudMonitorGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/alarm.ts#L184">property <b>cloudMonitorGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/alarm.ts#L184">property <b>cloudMonitorGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cloudMonitorGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2379,7 +2379,7 @@ The list of actions to execute when this alarm transition into an ALARM state. E
 Defines the application group id defined by CMS which is assigned when you upload custom metric to CMS, only available for custom metirc.
 
 <h4 class="pdoc-member-header" id="AlarmState-comparisonOperator">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/alarm.ts#L188">property <b>comparisonOperator</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/alarm.ts#L188">property <b>comparisonOperator</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>comparisonOperator?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2387,7 +2387,7 @@ Defines the application group id defined by CMS which is assigned when you uploa
 The arithmetic operation to use when comparing the specified Statistic and Threshold. The specified Statistic value is used as the first operand. Supported value: >=, <=, >, <. Defaults to >=.
 
 <h4 class="pdoc-member-header" id="AlarmState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/alarm.ts#L192">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/alarm.ts#L192">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2395,7 +2395,7 @@ The arithmetic operation to use when comparing the specified Statistic and Thres
 The description for the alarm.
 
 <h4 class="pdoc-member-header" id="AlarmState-dimensions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/alarm.ts#L196">property <b>dimensions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/alarm.ts#L196">property <b>dimensions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dimensions?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -2403,7 +2403,7 @@ The description for the alarm.
 The dimension map for the alarm's associated metric (documented below). For all metrics, you can not set the dimension key as "scalingGroup" or "userId", which is set by default, the second dimension for metric, such as "device" for "PackagesNetIn", need to be set by users.
 
 <h4 class="pdoc-member-header" id="AlarmState-enable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/alarm.ts#L200">property <b>enable</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/alarm.ts#L200">property <b>enable</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enable?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2411,7 +2411,7 @@ The dimension map for the alarm's associated metric (documented below). For all 
 Whether to enable specific ess alarm. Default to true.
 
 <h4 class="pdoc-member-header" id="AlarmState-evaluationCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/alarm.ts#L204">property <b>evaluationCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/alarm.ts#L204">property <b>evaluationCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>evaluationCount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2419,7 +2419,7 @@ Whether to enable specific ess alarm. Default to true.
 The number of times that needs to satisfies comparison condition before transition into ALARM state. Defaults to 3.
 
 <h4 class="pdoc-member-header" id="AlarmState-metricName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/alarm.ts#L208">property <b>metricName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/alarm.ts#L208">property <b>metricName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metricName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2427,7 +2427,7 @@ The number of times that needs to satisfies comparison condition before transiti
 The name for the alarm's associated metric. See Block_metricNames_and_dimensions below for details.
 
 <h4 class="pdoc-member-header" id="AlarmState-metricType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/alarm.ts#L212">property <b>metricType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/alarm.ts#L212">property <b>metricType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metricType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2435,7 +2435,7 @@ The name for the alarm's associated metric. See Block_metricNames_and_dimensions
 The type for the alarm's associated metric. Supported value: system, custom. "system" means the metric data is collected by Aliyun Cloud Monitor Service(CMS), "custom" means the metric data is upload to CMS by users. Defaults to system.
 
 <h4 class="pdoc-member-header" id="AlarmState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/alarm.ts#L216">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/alarm.ts#L216">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2443,7 +2443,7 @@ The type for the alarm's associated metric. Supported value: system, custom. "sy
 The name for ess alarm.
 
 <h4 class="pdoc-member-header" id="AlarmState-period">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/alarm.ts#L220">property <b>period</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/alarm.ts#L220">property <b>period</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>period?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2451,7 +2451,7 @@ The name for ess alarm.
 The period in seconds over which the specified statistic is applied. Supported value: 60, 120, 300, 900. Defaults to 300.
 
 <h4 class="pdoc-member-header" id="AlarmState-scalingGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/alarm.ts#L224">property <b>scalingGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/alarm.ts#L224">property <b>scalingGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scalingGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2459,7 +2459,7 @@ The period in seconds over which the specified statistic is applied. Supported v
 The scaling group associated with this alarm, the 'ForceNew' attribute is available in 1.56.0+.
 
 <h4 class="pdoc-member-header" id="AlarmState-state">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/alarm.ts#L228">property <b>state</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/alarm.ts#L228">property <b>state</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>state?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2467,7 +2467,7 @@ The scaling group associated with this alarm, the 'ForceNew' attribute is availa
 The state of specified alarm.
 
 <h4 class="pdoc-member-header" id="AlarmState-statistics">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/alarm.ts#L232">property <b>statistics</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/alarm.ts#L232">property <b>statistics</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>statistics?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2475,7 +2475,7 @@ The state of specified alarm.
 The statistic to apply to the alarm's associated metric. Supported value: Average, Minimum, Maximum. Defaults to Average.
 
 <h4 class="pdoc-member-header" id="AlarmState-threshold">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/alarm.ts#L236">property <b>threshold</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/alarm.ts#L236">property <b>threshold</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>threshold?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2483,7 +2483,7 @@ The statistic to apply to the alarm's associated metric. Supported value: Averag
 The value against which the specified statistics is compared.
 
 <h3 class="pdoc-module-header" id="AttachmentArgs" data-link-title="AttachmentArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/attachment.ts#L204">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/attachment.ts#L204">
         interface <strong>AttachmentArgs</strong>
     </a>
 </h3>
@@ -2493,7 +2493,7 @@ The value against which the specified statistics is compared.
 The set of arguments for constructing a Attachment resource.
 
 <h4 class="pdoc-member-header" id="AttachmentArgs-force">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/attachment.ts#L208">property <b>force</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/attachment.ts#L208">property <b>force</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>force?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2501,7 +2501,7 @@ The set of arguments for constructing a Attachment resource.
 Whether to remove forcibly "AutoCreated" ECS instances in order to release scaling group capacity "MaxSize" for attaching ECS instances. Default to false.
 
 <h4 class="pdoc-member-header" id="AttachmentArgs-instanceIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/attachment.ts#L212">property <b>instanceIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/attachment.ts#L212">property <b>instanceIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2509,7 +2509,7 @@ Whether to remove forcibly "AutoCreated" ECS instances in order to release scali
 ID of the ECS instance to be attached to the scaling group. You can input up to 20 IDs.
 
 <h4 class="pdoc-member-header" id="AttachmentArgs-scalingGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/attachment.ts#L216">property <b>scalingGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/attachment.ts#L216">property <b>scalingGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scalingGroupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2517,7 +2517,7 @@ ID of the ECS instance to be attached to the scaling group. You can input up to 
 ID of the scaling group of a scaling configuration.
 
 <h3 class="pdoc-module-header" id="AttachmentState" data-link-title="AttachmentState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/attachment.ts#L186">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/attachment.ts#L186">
         interface <strong>AttachmentState</strong>
     </a>
 </h3>
@@ -2527,7 +2527,7 @@ ID of the scaling group of a scaling configuration.
 Input properties used for looking up and filtering Attachment resources.
 
 <h4 class="pdoc-member-header" id="AttachmentState-force">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/attachment.ts#L190">property <b>force</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/attachment.ts#L190">property <b>force</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>force?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2535,7 +2535,7 @@ Input properties used for looking up and filtering Attachment resources.
 Whether to remove forcibly "AutoCreated" ECS instances in order to release scaling group capacity "MaxSize" for attaching ECS instances. Default to false.
 
 <h4 class="pdoc-member-header" id="AttachmentState-instanceIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/attachment.ts#L194">property <b>instanceIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/attachment.ts#L194">property <b>instanceIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2543,7 +2543,7 @@ Whether to remove forcibly "AutoCreated" ECS instances in order to release scali
 ID of the ECS instance to be attached to the scaling group. You can input up to 20 IDs.
 
 <h4 class="pdoc-member-header" id="AttachmentState-scalingGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/attachment.ts#L198">property <b>scalingGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/attachment.ts#L198">property <b>scalingGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scalingGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2551,7 +2551,7 @@ ID of the ECS instance to be attached to the scaling group. You can input up to 
 ID of the scaling group of a scaling configuration.
 
 <h3 class="pdoc-module-header" id="GetAlarmsArgs" data-link-title="GetAlarmsArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/getAlarms.ts#L52">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/getAlarms.ts#L52">
         interface <strong>GetAlarmsArgs</strong>
     </a>
 </h3>
@@ -2561,7 +2561,7 @@ ID of the scaling group of a scaling configuration.
 A collection of arguments for invoking getAlarms.
 
 <h4 class="pdoc-member-header" id="GetAlarmsArgs-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/getAlarms.ts#L56">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/getAlarms.ts#L56">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -2569,7 +2569,7 @@ A collection of arguments for invoking getAlarms.
 A list of alarm IDs.
 
 <h4 class="pdoc-member-header" id="GetAlarmsArgs-metricType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/getAlarms.ts#L60">property <b>metricType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/getAlarms.ts#L60">property <b>metricType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metricType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2577,7 +2577,7 @@ A list of alarm IDs.
 The type for the alarm's associated metric. Supported value: system, custom. "system" means the metric data is collected by Aliyun Cloud Monitor Service(CMS), "custom" means the metric data is upload to CMS by users. Defaults to system.
 
 <h4 class="pdoc-member-header" id="GetAlarmsArgs-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/getAlarms.ts#L64">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/getAlarms.ts#L64">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2585,12 +2585,12 @@ The type for the alarm's associated metric. Supported value: system, custom. "sy
 A regex string to filter resulting alarms by name.
 
 <h4 class="pdoc-member-header" id="GetAlarmsArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/getAlarms.ts#L65">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/getAlarms.ts#L65">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAlarmsArgs-scalingGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/getAlarms.ts#L69">property <b>scalingGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/getAlarms.ts#L69">property <b>scalingGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scalingGroupId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2598,7 +2598,7 @@ A regex string to filter resulting alarms by name.
 Scaling group id the alarms belong to.
 
 <h3 class="pdoc-module-header" id="GetAlarmsResult" data-link-title="GetAlarmsResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/getAlarms.ts#L75">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/getAlarms.ts#L75">
         interface <strong>GetAlarmsResult</strong>
     </a>
 </h3>
@@ -2608,7 +2608,7 @@ Scaling group id the alarms belong to.
 A collection of values returned by getAlarms.
 
 <h4 class="pdoc-member-header" id="GetAlarmsResult-alarms">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/getAlarms.ts#L79">property <b>alarms</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/getAlarms.ts#L79">property <b>alarms</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>alarms: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetAlarmsAlarm'>GetAlarmsAlarm</a>[];</code></pre>
@@ -2616,7 +2616,7 @@ A collection of values returned by getAlarms.
 A list of alarms. Each element contains the following attributes:
 
 <h4 class="pdoc-member-header" id="GetAlarmsResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/getAlarms.ts#L83">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/getAlarms.ts#L83">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2624,7 +2624,7 @@ A list of alarms. Each element contains the following attributes:
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetAlarmsResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/getAlarms.ts#L87">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/getAlarms.ts#L87">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -2632,7 +2632,7 @@ The provider-assigned unique ID for this managed resource.
 A list of alarm ids.
 
 <h4 class="pdoc-member-header" id="GetAlarmsResult-metricType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/getAlarms.ts#L91">property <b>metricType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/getAlarms.ts#L91">property <b>metricType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metricType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2640,12 +2640,12 @@ A list of alarm ids.
 The type for the alarm's associated metric.
 
 <h4 class="pdoc-member-header" id="GetAlarmsResult-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/getAlarms.ts#L92">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/getAlarms.ts#L92">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAlarmsResult-names">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/getAlarms.ts#L96">property <b>names</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/getAlarms.ts#L96">property <b>names</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>names: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -2653,12 +2653,12 @@ The type for the alarm's associated metric.
 A list of alarm names.
 
 <h4 class="pdoc-member-header" id="GetAlarmsResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/getAlarms.ts#L97">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/getAlarms.ts#L97">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAlarmsResult-scalingGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/getAlarms.ts#L101">property <b>scalingGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/getAlarms.ts#L101">property <b>scalingGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scalingGroupId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2666,7 +2666,7 @@ A list of alarm names.
 The scaling group associated with this alarm.
 
 <h3 class="pdoc-module-header" id="GetLifecycleHooksArgs" data-link-title="GetLifecycleHooksArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/getLifecycleHooks.ts#L47">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/getLifecycleHooks.ts#L47">
         interface <strong>GetLifecycleHooksArgs</strong>
     </a>
 </h3>
@@ -2676,7 +2676,7 @@ The scaling group associated with this alarm.
 A collection of arguments for invoking getLifecycleHooks.
 
 <h4 class="pdoc-member-header" id="GetLifecycleHooksArgs-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/getLifecycleHooks.ts#L51">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/getLifecycleHooks.ts#L51">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -2684,7 +2684,7 @@ A collection of arguments for invoking getLifecycleHooks.
 A list of lifecycle hook IDs.
 
 <h4 class="pdoc-member-header" id="GetLifecycleHooksArgs-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/getLifecycleHooks.ts#L55">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/getLifecycleHooks.ts#L55">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2692,12 +2692,12 @@ A list of lifecycle hook IDs.
 A regex string to filter resulting lifecycle hook by name.
 
 <h4 class="pdoc-member-header" id="GetLifecycleHooksArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/getLifecycleHooks.ts#L56">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/getLifecycleHooks.ts#L56">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetLifecycleHooksArgs-scalingGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/getLifecycleHooks.ts#L60">property <b>scalingGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/getLifecycleHooks.ts#L60">property <b>scalingGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scalingGroupId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2705,7 +2705,7 @@ A regex string to filter resulting lifecycle hook by name.
 Scaling group id the lifecycle hooks belong to.
 
 <h3 class="pdoc-module-header" id="GetLifecycleHooksResult" data-link-title="GetLifecycleHooksResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/getLifecycleHooks.ts#L66">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/getLifecycleHooks.ts#L66">
         interface <strong>GetLifecycleHooksResult</strong>
     </a>
 </h3>
@@ -2715,7 +2715,7 @@ Scaling group id the lifecycle hooks belong to.
 A collection of values returned by getLifecycleHooks.
 
 <h4 class="pdoc-member-header" id="GetLifecycleHooksResult-hooks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/getLifecycleHooks.ts#L70">property <b>hooks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/getLifecycleHooks.ts#L70">property <b>hooks</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hooks: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetLifecycleHooksHook'>GetLifecycleHooksHook</a>[];</code></pre>
@@ -2723,7 +2723,7 @@ A collection of values returned by getLifecycleHooks.
 A list of lifecycle hooks. Each element contains the following attributes:
 
 <h4 class="pdoc-member-header" id="GetLifecycleHooksResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/getLifecycleHooks.ts#L74">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/getLifecycleHooks.ts#L74">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2731,7 +2731,7 @@ A list of lifecycle hooks. Each element contains the following attributes:
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetLifecycleHooksResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/getLifecycleHooks.ts#L78">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/getLifecycleHooks.ts#L78">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -2739,12 +2739,12 @@ The provider-assigned unique ID for this managed resource.
 A list of lifecycle hook ids.
 
 <h4 class="pdoc-member-header" id="GetLifecycleHooksResult-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/getLifecycleHooks.ts#L79">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/getLifecycleHooks.ts#L79">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetLifecycleHooksResult-names">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/getLifecycleHooks.ts#L83">property <b>names</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/getLifecycleHooks.ts#L83">property <b>names</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>names: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -2752,12 +2752,12 @@ A list of lifecycle hook ids.
 A list of lifecycle hook names.
 
 <h4 class="pdoc-member-header" id="GetLifecycleHooksResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/getLifecycleHooks.ts#L84">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/getLifecycleHooks.ts#L84">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetLifecycleHooksResult-scalingGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/getLifecycleHooks.ts#L88">property <b>scalingGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/getLifecycleHooks.ts#L88">property <b>scalingGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scalingGroupId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2765,7 +2765,7 @@ A list of lifecycle hook names.
 ID of the scaling group.
 
 <h3 class="pdoc-module-header" id="GetNotificationsArgs" data-link-title="GetNotificationsArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/getNotifications.ts#L44">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/getNotifications.ts#L44">
         interface <strong>GetNotificationsArgs</strong>
     </a>
 </h3>
@@ -2775,7 +2775,7 @@ ID of the scaling group.
 A collection of arguments for invoking getNotifications.
 
 <h4 class="pdoc-member-header" id="GetNotificationsArgs-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/getNotifications.ts#L48">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/getNotifications.ts#L48">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -2783,12 +2783,12 @@ A collection of arguments for invoking getNotifications.
 A list of notification ids.
 
 <h4 class="pdoc-member-header" id="GetNotificationsArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/getNotifications.ts#L49">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/getNotifications.ts#L49">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetNotificationsArgs-scalingGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/getNotifications.ts#L53">property <b>scalingGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/getNotifications.ts#L53">property <b>scalingGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scalingGroupId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2796,7 +2796,7 @@ A list of notification ids.
 Scaling group id the notifications belong to.
 
 <h3 class="pdoc-module-header" id="GetNotificationsResult" data-link-title="GetNotificationsResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/getNotifications.ts#L59">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/getNotifications.ts#L59">
         interface <strong>GetNotificationsResult</strong>
     </a>
 </h3>
@@ -2806,7 +2806,7 @@ Scaling group id the notifications belong to.
 A collection of values returned by getNotifications.
 
 <h4 class="pdoc-member-header" id="GetNotificationsResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/getNotifications.ts#L63">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/getNotifications.ts#L63">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2814,7 +2814,7 @@ A collection of values returned by getNotifications.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetNotificationsResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/getNotifications.ts#L67">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/getNotifications.ts#L67">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -2822,7 +2822,7 @@ The provider-assigned unique ID for this managed resource.
 A list of notification ids.
 
 <h4 class="pdoc-member-header" id="GetNotificationsResult-notifications">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/getNotifications.ts#L71">property <b>notifications</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/getNotifications.ts#L71">property <b>notifications</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>notifications: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetNotificationsNotification'>GetNotificationsNotification</a>[];</code></pre>
@@ -2830,12 +2830,12 @@ A list of notification ids.
 A list of notifications. Each element contains the following attributes:
 
 <h4 class="pdoc-member-header" id="GetNotificationsResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/getNotifications.ts#L72">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/getNotifications.ts#L72">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetNotificationsResult-scalingGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/getNotifications.ts#L76">property <b>scalingGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/getNotifications.ts#L76">property <b>scalingGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scalingGroupId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2843,7 +2843,7 @@ A list of notifications. Each element contains the following attributes:
 ID of the scaling group.
 
 <h3 class="pdoc-module-header" id="GetScalingConfigurationsArgs" data-link-title="GetScalingConfigurationsArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/getScalingConfigurations.ts#L49">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/getScalingConfigurations.ts#L49">
         interface <strong>GetScalingConfigurationsArgs</strong>
     </a>
 </h3>
@@ -2853,7 +2853,7 @@ ID of the scaling group.
 A collection of arguments for invoking getScalingConfigurations.
 
 <h4 class="pdoc-member-header" id="GetScalingConfigurationsArgs-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/getScalingConfigurations.ts#L53">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/getScalingConfigurations.ts#L53">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -2861,7 +2861,7 @@ A collection of arguments for invoking getScalingConfigurations.
 A list of scaling configuration IDs.
 
 <h4 class="pdoc-member-header" id="GetScalingConfigurationsArgs-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/getScalingConfigurations.ts#L57">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/getScalingConfigurations.ts#L57">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2869,12 +2869,12 @@ A list of scaling configuration IDs.
 A regex string to filter resulting scaling configurations by name.
 
 <h4 class="pdoc-member-header" id="GetScalingConfigurationsArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/getScalingConfigurations.ts#L58">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/getScalingConfigurations.ts#L58">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetScalingConfigurationsArgs-scalingGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/getScalingConfigurations.ts#L62">property <b>scalingGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/getScalingConfigurations.ts#L62">property <b>scalingGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scalingGroupId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2882,7 +2882,7 @@ A regex string to filter resulting scaling configurations by name.
 Scaling group id the scaling configurations belong to.
 
 <h3 class="pdoc-module-header" id="GetScalingConfigurationsResult" data-link-title="GetScalingConfigurationsResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/getScalingConfigurations.ts#L68">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/getScalingConfigurations.ts#L68">
         interface <strong>GetScalingConfigurationsResult</strong>
     </a>
 </h3>
@@ -2892,7 +2892,7 @@ Scaling group id the scaling configurations belong to.
 A collection of values returned by getScalingConfigurations.
 
 <h4 class="pdoc-member-header" id="GetScalingConfigurationsResult-configurations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/getScalingConfigurations.ts#L72">property <b>configurations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/getScalingConfigurations.ts#L72">property <b>configurations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>configurations: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetScalingConfigurationsConfiguration'>GetScalingConfigurationsConfiguration</a>[];</code></pre>
@@ -2900,7 +2900,7 @@ A collection of values returned by getScalingConfigurations.
 A list of scaling rules. Each element contains the following attributes:
 
 <h4 class="pdoc-member-header" id="GetScalingConfigurationsResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/getScalingConfigurations.ts#L76">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/getScalingConfigurations.ts#L76">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2908,7 +2908,7 @@ A list of scaling rules. Each element contains the following attributes:
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetScalingConfigurationsResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/getScalingConfigurations.ts#L80">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/getScalingConfigurations.ts#L80">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -2916,12 +2916,12 @@ The provider-assigned unique ID for this managed resource.
 A list of scaling configuration ids.
 
 <h4 class="pdoc-member-header" id="GetScalingConfigurationsResult-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/getScalingConfigurations.ts#L81">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/getScalingConfigurations.ts#L81">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetScalingConfigurationsResult-names">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/getScalingConfigurations.ts#L85">property <b>names</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/getScalingConfigurations.ts#L85">property <b>names</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>names: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -2929,12 +2929,12 @@ A list of scaling configuration ids.
 A list of scaling configuration names.
 
 <h4 class="pdoc-member-header" id="GetScalingConfigurationsResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/getScalingConfigurations.ts#L86">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/getScalingConfigurations.ts#L86">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetScalingConfigurationsResult-scalingGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/getScalingConfigurations.ts#L90">property <b>scalingGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/getScalingConfigurations.ts#L90">property <b>scalingGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scalingGroupId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2942,7 +2942,7 @@ A list of scaling configuration names.
 ID of the scaling group.
 
 <h3 class="pdoc-module-header" id="GetScalingGroupsArgs" data-link-title="GetScalingGroupsArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/getScalingGroups.ts#L47">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/getScalingGroups.ts#L47">
         interface <strong>GetScalingGroupsArgs</strong>
     </a>
 </h3>
@@ -2952,7 +2952,7 @@ ID of the scaling group.
 A collection of arguments for invoking getScalingGroups.
 
 <h4 class="pdoc-member-header" id="GetScalingGroupsArgs-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/getScalingGroups.ts#L51">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/getScalingGroups.ts#L51">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -2960,7 +2960,7 @@ A collection of arguments for invoking getScalingGroups.
 A list of scaling group IDs.
 
 <h4 class="pdoc-member-header" id="GetScalingGroupsArgs-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/getScalingGroups.ts#L55">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/getScalingGroups.ts#L55">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2968,12 +2968,12 @@ A list of scaling group IDs.
 A regex string to filter resulting scaling groups by name.
 
 <h4 class="pdoc-member-header" id="GetScalingGroupsArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/getScalingGroups.ts#L56">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/getScalingGroups.ts#L56">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetScalingGroupsResult" data-link-title="GetScalingGroupsResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/getScalingGroups.ts#L62">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/getScalingGroups.ts#L62">
         interface <strong>GetScalingGroupsResult</strong>
     </a>
 </h3>
@@ -2983,7 +2983,7 @@ A regex string to filter resulting scaling groups by name.
 A collection of values returned by getScalingGroups.
 
 <h4 class="pdoc-member-header" id="GetScalingGroupsResult-groups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/getScalingGroups.ts#L66">property <b>groups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/getScalingGroups.ts#L66">property <b>groups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groups: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetScalingGroupsGroup'>GetScalingGroupsGroup</a>[];</code></pre>
@@ -2991,7 +2991,7 @@ A collection of values returned by getScalingGroups.
 A list of scaling groups. Each element contains the following attributes:
 
 <h4 class="pdoc-member-header" id="GetScalingGroupsResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/getScalingGroups.ts#L70">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/getScalingGroups.ts#L70">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2999,7 +2999,7 @@ A list of scaling groups. Each element contains the following attributes:
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetScalingGroupsResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/getScalingGroups.ts#L74">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/getScalingGroups.ts#L74">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -3007,12 +3007,12 @@ The provider-assigned unique ID for this managed resource.
 A list of scaling group ids.
 
 <h4 class="pdoc-member-header" id="GetScalingGroupsResult-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/getScalingGroups.ts#L75">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/getScalingGroups.ts#L75">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetScalingGroupsResult-names">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/getScalingGroups.ts#L79">property <b>names</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/getScalingGroups.ts#L79">property <b>names</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>names: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -3020,12 +3020,12 @@ A list of scaling group ids.
 A list of scaling group names.
 
 <h4 class="pdoc-member-header" id="GetScalingGroupsResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/getScalingGroups.ts#L80">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/getScalingGroups.ts#L80">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetScalingRulesArgs" data-link-title="GetScalingRulesArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/getScalingRules.ts#L50">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/getScalingRules.ts#L50">
         interface <strong>GetScalingRulesArgs</strong>
     </a>
 </h3>
@@ -3035,7 +3035,7 @@ A list of scaling group names.
 A collection of arguments for invoking getScalingRules.
 
 <h4 class="pdoc-member-header" id="GetScalingRulesArgs-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/getScalingRules.ts#L54">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/getScalingRules.ts#L54">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -3043,7 +3043,7 @@ A collection of arguments for invoking getScalingRules.
 A list of scaling rule IDs.
 
 <h4 class="pdoc-member-header" id="GetScalingRulesArgs-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/getScalingRules.ts#L58">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/getScalingRules.ts#L58">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3051,12 +3051,12 @@ A list of scaling rule IDs.
 A regex string to filter resulting scaling rules by name.
 
 <h4 class="pdoc-member-header" id="GetScalingRulesArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/getScalingRules.ts#L59">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/getScalingRules.ts#L59">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetScalingRulesArgs-scalingGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/getScalingRules.ts#L63">property <b>scalingGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/getScalingRules.ts#L63">property <b>scalingGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scalingGroupId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3064,7 +3064,7 @@ A regex string to filter resulting scaling rules by name.
 Scaling group id the scaling rules belong to.
 
 <h4 class="pdoc-member-header" id="GetScalingRulesArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/getScalingRules.ts#L67">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/getScalingRules.ts#L67">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3072,7 +3072,7 @@ Scaling group id the scaling rules belong to.
 Type of scaling rule.
 
 <h3 class="pdoc-module-header" id="GetScalingRulesResult" data-link-title="GetScalingRulesResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/getScalingRules.ts#L73">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/getScalingRules.ts#L73">
         interface <strong>GetScalingRulesResult</strong>
     </a>
 </h3>
@@ -3082,7 +3082,7 @@ Type of scaling rule.
 A collection of values returned by getScalingRules.
 
 <h4 class="pdoc-member-header" id="GetScalingRulesResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/getScalingRules.ts#L77">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/getScalingRules.ts#L77">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3090,7 +3090,7 @@ A collection of values returned by getScalingRules.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetScalingRulesResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/getScalingRules.ts#L81">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/getScalingRules.ts#L81">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -3098,12 +3098,12 @@ The provider-assigned unique ID for this managed resource.
 A list of scaling rule ids.
 
 <h4 class="pdoc-member-header" id="GetScalingRulesResult-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/getScalingRules.ts#L82">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/getScalingRules.ts#L82">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetScalingRulesResult-names">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/getScalingRules.ts#L86">property <b>names</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/getScalingRules.ts#L86">property <b>names</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>names: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -3111,12 +3111,12 @@ A list of scaling rule ids.
 A list of scaling rule names.
 
 <h4 class="pdoc-member-header" id="GetScalingRulesResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/getScalingRules.ts#L87">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/getScalingRules.ts#L87">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetScalingRulesResult-rules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/getScalingRules.ts#L91">property <b>rules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/getScalingRules.ts#L91">property <b>rules</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rules: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetScalingRulesRule'>GetScalingRulesRule</a>[];</code></pre>
@@ -3124,7 +3124,7 @@ A list of scaling rule names.
 A list of scaling rules. Each element contains the following attributes:
 
 <h4 class="pdoc-member-header" id="GetScalingRulesResult-scalingGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/getScalingRules.ts#L95">property <b>scalingGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/getScalingRules.ts#L95">property <b>scalingGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scalingGroupId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3132,7 +3132,7 @@ A list of scaling rules. Each element contains the following attributes:
 ID of the scaling group.
 
 <h4 class="pdoc-member-header" id="GetScalingRulesResult-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/getScalingRules.ts#L99">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/getScalingRules.ts#L99">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3140,7 +3140,7 @@ ID of the scaling group.
 Type of the scaling rule.
 
 <h3 class="pdoc-module-header" id="GetScheduledTasksArgs" data-link-title="GetScheduledTasksArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/getScheduledTasks.ts#L48">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/getScheduledTasks.ts#L48">
         interface <strong>GetScheduledTasksArgs</strong>
     </a>
 </h3>
@@ -3150,7 +3150,7 @@ Type of the scaling rule.
 A collection of arguments for invoking getScheduledTasks.
 
 <h4 class="pdoc-member-header" id="GetScheduledTasksArgs-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/getScheduledTasks.ts#L52">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/getScheduledTasks.ts#L52">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -3158,7 +3158,7 @@ A collection of arguments for invoking getScheduledTasks.
 A list of scheduled task IDs.
 
 <h4 class="pdoc-member-header" id="GetScheduledTasksArgs-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/getScheduledTasks.ts#L56">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/getScheduledTasks.ts#L56">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3166,12 +3166,12 @@ A list of scheduled task IDs.
 A regex string to filter resulting scheduled tasks by name.
 
 <h4 class="pdoc-member-header" id="GetScheduledTasksArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/getScheduledTasks.ts#L57">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/getScheduledTasks.ts#L57">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetScheduledTasksArgs-scheduledAction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/getScheduledTasks.ts#L61">property <b>scheduledAction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/getScheduledTasks.ts#L61">property <b>scheduledAction</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scheduledAction?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3179,7 +3179,7 @@ A regex string to filter resulting scheduled tasks by name.
 The operation to be performed when a scheduled task is triggered.
 
 <h4 class="pdoc-member-header" id="GetScheduledTasksArgs-scheduledTaskId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/getScheduledTasks.ts#L65">property <b>scheduledTaskId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/getScheduledTasks.ts#L65">property <b>scheduledTaskId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scheduledTaskId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3187,7 +3187,7 @@ The operation to be performed when a scheduled task is triggered.
 The id of the scheduled task.
 
 <h3 class="pdoc-module-header" id="GetScheduledTasksResult" data-link-title="GetScheduledTasksResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/getScheduledTasks.ts#L71">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/getScheduledTasks.ts#L71">
         interface <strong>GetScheduledTasksResult</strong>
     </a>
 </h3>
@@ -3197,7 +3197,7 @@ The id of the scheduled task.
 A collection of values returned by getScheduledTasks.
 
 <h4 class="pdoc-member-header" id="GetScheduledTasksResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/getScheduledTasks.ts#L75">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/getScheduledTasks.ts#L75">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3205,7 +3205,7 @@ A collection of values returned by getScheduledTasks.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetScheduledTasksResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/getScheduledTasks.ts#L79">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/getScheduledTasks.ts#L79">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -3213,12 +3213,12 @@ The provider-assigned unique ID for this managed resource.
 A list of scheduled task ids.
 
 <h4 class="pdoc-member-header" id="GetScheduledTasksResult-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/getScheduledTasks.ts#L80">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/getScheduledTasks.ts#L80">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetScheduledTasksResult-names">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/getScheduledTasks.ts#L84">property <b>names</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/getScheduledTasks.ts#L84">property <b>names</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>names: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -3226,12 +3226,12 @@ A list of scheduled task ids.
 A list of scheduled task names.
 
 <h4 class="pdoc-member-header" id="GetScheduledTasksResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/getScheduledTasks.ts#L85">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/getScheduledTasks.ts#L85">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetScheduledTasksResult-scheduledAction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/getScheduledTasks.ts#L89">property <b>scheduledAction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/getScheduledTasks.ts#L89">property <b>scheduledAction</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scheduledAction?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -3239,12 +3239,12 @@ A list of scheduled task names.
 The operation to be performed when a scheduled task is triggered.
 
 <h4 class="pdoc-member-header" id="GetScheduledTasksResult-scheduledTaskId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/getScheduledTasks.ts#L90">property <b>scheduledTaskId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/getScheduledTasks.ts#L90">property <b>scheduledTaskId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scheduledTaskId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetScheduledTasksResult-tasks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/getScheduledTasks.ts#L94">property <b>tasks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/getScheduledTasks.ts#L94">property <b>tasks</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tasks: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetScheduledTasksTask'>GetScheduledTasksTask</a>[];</code></pre>
@@ -3252,7 +3252,7 @@ The operation to be performed when a scheduled task is triggered.
 A list of scheduled tasks. Each element contains the following attributes:
 
 <h3 class="pdoc-module-header" id="LifecycleHookArgs" data-link-title="LifecycleHookArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/lifecycleHook.ts#L156">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/lifecycleHook.ts#L156">
         interface <strong>LifecycleHookArgs</strong>
     </a>
 </h3>
@@ -3262,7 +3262,7 @@ A list of scheduled tasks. Each element contains the following attributes:
 The set of arguments for constructing a LifecycleHook resource.
 
 <h4 class="pdoc-member-header" id="LifecycleHookArgs-defaultResult">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/lifecycleHook.ts#L160">property <b>defaultResult</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/lifecycleHook.ts#L160">property <b>defaultResult</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultResult?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3270,7 +3270,7 @@ The set of arguments for constructing a LifecycleHook resource.
 Defines the action the Auto Scaling group should take when the lifecycle hook timeout elapses. Applicable value: CONTINUE, ABANDON, default value: CONTINUE.
 
 <h4 class="pdoc-member-header" id="LifecycleHookArgs-heartbeatTimeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/lifecycleHook.ts#L164">property <b>heartbeatTimeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/lifecycleHook.ts#L164">property <b>heartbeatTimeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>heartbeatTimeout?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3278,7 +3278,7 @@ Defines the action the Auto Scaling group should take when the lifecycle hook ti
 Defines the amount of time, in seconds, that can elapse before the lifecycle hook times out. When the lifecycle hook times out, Auto Scaling performs the action defined in the defaultResult parameter. Default value: 600.
 
 <h4 class="pdoc-member-header" id="LifecycleHookArgs-lifecycleTransition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/lifecycleHook.ts#L168">property <b>lifecycleTransition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/lifecycleHook.ts#L168">property <b>lifecycleTransition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lifecycleTransition: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3286,7 +3286,7 @@ Defines the amount of time, in seconds, that can elapse before the lifecycle hoo
 Type of Scaling activity attached to lifecycle hook. Supported value: SCALE_OUT, SCALE_IN.
 
 <h4 class="pdoc-member-header" id="LifecycleHookArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/lifecycleHook.ts#L172">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/lifecycleHook.ts#L172">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3294,7 +3294,7 @@ Type of Scaling activity attached to lifecycle hook. Supported value: SCALE_OUT,
 The name of the lifecycle hook, which must contain 2-64 characters (English or Chinese), starting with numbers, English letters or Chinese characters, and can contain number, underscores `_`, hypens `-`, and decimal point `.`. If this parameter value is not specified, the default value is lifecycle hook id.
 
 <h4 class="pdoc-member-header" id="LifecycleHookArgs-notificationArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/lifecycleHook.ts#L176">property <b>notificationArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/lifecycleHook.ts#L176">property <b>notificationArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>notificationArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3302,7 +3302,7 @@ The name of the lifecycle hook, which must contain 2-64 characters (English or C
 The Arn of notification target.
 
 <h4 class="pdoc-member-header" id="LifecycleHookArgs-notificationMetadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/lifecycleHook.ts#L180">property <b>notificationMetadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/lifecycleHook.ts#L180">property <b>notificationMetadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>notificationMetadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3310,7 +3310,7 @@ The Arn of notification target.
 Additional information that you want to include when Auto Scaling sends a message to the notification target.
 
 <h4 class="pdoc-member-header" id="LifecycleHookArgs-scalingGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/lifecycleHook.ts#L184">property <b>scalingGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/lifecycleHook.ts#L184">property <b>scalingGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scalingGroupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3318,7 +3318,7 @@ Additional information that you want to include when Auto Scaling sends a messag
 The ID of the Auto Scaling group to which you want to assign the lifecycle hook.
 
 <h3 class="pdoc-module-header" id="LifecycleHookState" data-link-title="LifecycleHookState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/lifecycleHook.ts#L122">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/lifecycleHook.ts#L122">
         interface <strong>LifecycleHookState</strong>
     </a>
 </h3>
@@ -3328,7 +3328,7 @@ The ID of the Auto Scaling group to which you want to assign the lifecycle hook.
 Input properties used for looking up and filtering LifecycleHook resources.
 
 <h4 class="pdoc-member-header" id="LifecycleHookState-defaultResult">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/lifecycleHook.ts#L126">property <b>defaultResult</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/lifecycleHook.ts#L126">property <b>defaultResult</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultResult?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3336,7 +3336,7 @@ Input properties used for looking up and filtering LifecycleHook resources.
 Defines the action the Auto Scaling group should take when the lifecycle hook timeout elapses. Applicable value: CONTINUE, ABANDON, default value: CONTINUE.
 
 <h4 class="pdoc-member-header" id="LifecycleHookState-heartbeatTimeout">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/lifecycleHook.ts#L130">property <b>heartbeatTimeout</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/lifecycleHook.ts#L130">property <b>heartbeatTimeout</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>heartbeatTimeout?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3344,7 +3344,7 @@ Defines the action the Auto Scaling group should take when the lifecycle hook ti
 Defines the amount of time, in seconds, that can elapse before the lifecycle hook times out. When the lifecycle hook times out, Auto Scaling performs the action defined in the defaultResult parameter. Default value: 600.
 
 <h4 class="pdoc-member-header" id="LifecycleHookState-lifecycleTransition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/lifecycleHook.ts#L134">property <b>lifecycleTransition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/lifecycleHook.ts#L134">property <b>lifecycleTransition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lifecycleTransition?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3352,7 +3352,7 @@ Defines the amount of time, in seconds, that can elapse before the lifecycle hoo
 Type of Scaling activity attached to lifecycle hook. Supported value: SCALE_OUT, SCALE_IN.
 
 <h4 class="pdoc-member-header" id="LifecycleHookState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/lifecycleHook.ts#L138">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/lifecycleHook.ts#L138">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3360,7 +3360,7 @@ Type of Scaling activity attached to lifecycle hook. Supported value: SCALE_OUT,
 The name of the lifecycle hook, which must contain 2-64 characters (English or Chinese), starting with numbers, English letters or Chinese characters, and can contain number, underscores `_`, hypens `-`, and decimal point `.`. If this parameter value is not specified, the default value is lifecycle hook id.
 
 <h4 class="pdoc-member-header" id="LifecycleHookState-notificationArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/lifecycleHook.ts#L142">property <b>notificationArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/lifecycleHook.ts#L142">property <b>notificationArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>notificationArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3368,7 +3368,7 @@ The name of the lifecycle hook, which must contain 2-64 characters (English or C
 The Arn of notification target.
 
 <h4 class="pdoc-member-header" id="LifecycleHookState-notificationMetadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/lifecycleHook.ts#L146">property <b>notificationMetadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/lifecycleHook.ts#L146">property <b>notificationMetadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>notificationMetadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3376,7 +3376,7 @@ The Arn of notification target.
 Additional information that you want to include when Auto Scaling sends a message to the notification target.
 
 <h4 class="pdoc-member-header" id="LifecycleHookState-scalingGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/lifecycleHook.ts#L150">property <b>scalingGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/lifecycleHook.ts#L150">property <b>scalingGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scalingGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3384,7 +3384,7 @@ Additional information that you want to include when Auto Scaling sends a messag
 The ID of the Auto Scaling group to which you want to assign the lifecycle hook.
 
 <h3 class="pdoc-module-header" id="NotificationArgs" data-link-title="NotificationArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/notification.ts#L172">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/notification.ts#L172">
         interface <strong>NotificationArgs</strong>
     </a>
 </h3>
@@ -3394,7 +3394,7 @@ The ID of the Auto Scaling group to which you want to assign the lifecycle hook.
 The set of arguments for constructing a Notification resource.
 
 <h4 class="pdoc-member-header" id="NotificationArgs-notificationArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/notification.ts#L179">property <b>notificationArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/notification.ts#L179">property <b>notificationArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>notificationArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3405,7 +3405,7 @@ The Alibaba Cloud Resource Name (ARN) of the notification object, The value must
 * resource-relative-id: the notification method. Valid values : `cloudmonitor`, MNS queue: `queue/{queuename}`, Replace the queuename with the specific MNS queue name, MNS topic: `topic/{topicname}`, Replace the topicname with the specific MNS topic name.
 
 <h4 class="pdoc-member-header" id="NotificationArgs-notificationTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/notification.ts#L183">property <b>notificationTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/notification.ts#L183">property <b>notificationTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>notificationTypes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3413,7 +3413,7 @@ The Alibaba Cloud Resource Name (ARN) of the notification object, The value must
 The notification types of Auto Scaling events and resource changes. Supported notification types: 'AUTOSCALING:SCALE_OUT_SUCCESS', 'AUTOSCALING:SCALE_IN_SUCCESS', 'AUTOSCALING:SCALE_OUT_ERROR', 'AUTOSCALING:SCALE_IN_ERROR', 'AUTOSCALING:SCALE_REJECT', 'AUTOSCALING:SCALE_OUT_START', 'AUTOSCALING:SCALE_IN_START', 'AUTOSCALING:SCHEDULE_TASK_EXPIRING'.
 
 <h4 class="pdoc-member-header" id="NotificationArgs-scalingGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/notification.ts#L187">property <b>scalingGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/notification.ts#L187">property <b>scalingGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scalingGroupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3421,7 +3421,7 @@ The notification types of Auto Scaling events and resource changes. Supported no
 The ID of the Auto Scaling group.
 
 <h3 class="pdoc-module-header" id="NotificationState" data-link-title="NotificationState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/notification.ts#L151">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/notification.ts#L151">
         interface <strong>NotificationState</strong>
     </a>
 </h3>
@@ -3431,7 +3431,7 @@ The ID of the Auto Scaling group.
 Input properties used for looking up and filtering Notification resources.
 
 <h4 class="pdoc-member-header" id="NotificationState-notificationArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/notification.ts#L158">property <b>notificationArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/notification.ts#L158">property <b>notificationArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>notificationArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3442,7 +3442,7 @@ The Alibaba Cloud Resource Name (ARN) of the notification object, The value must
 * resource-relative-id: the notification method. Valid values : `cloudmonitor`, MNS queue: `queue/{queuename}`, Replace the queuename with the specific MNS queue name, MNS topic: `topic/{topicname}`, Replace the topicname with the specific MNS topic name.
 
 <h4 class="pdoc-member-header" id="NotificationState-notificationTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/notification.ts#L162">property <b>notificationTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/notification.ts#L162">property <b>notificationTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>notificationTypes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3450,7 +3450,7 @@ The Alibaba Cloud Resource Name (ARN) of the notification object, The value must
 The notification types of Auto Scaling events and resource changes. Supported notification types: 'AUTOSCALING:SCALE_OUT_SUCCESS', 'AUTOSCALING:SCALE_IN_SUCCESS', 'AUTOSCALING:SCALE_OUT_ERROR', 'AUTOSCALING:SCALE_IN_ERROR', 'AUTOSCALING:SCALE_REJECT', 'AUTOSCALING:SCALE_OUT_START', 'AUTOSCALING:SCALE_IN_START', 'AUTOSCALING:SCHEDULE_TASK_EXPIRING'.
 
 <h4 class="pdoc-member-header" id="NotificationState-scalingGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/notification.ts#L166">property <b>scalingGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/notification.ts#L166">property <b>scalingGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scalingGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3458,7 +3458,7 @@ The notification types of Auto Scaling events and resource changes. Supported no
 The ID of the Auto Scaling group.
 
 <h3 class="pdoc-module-header" id="ScalingConfigurationArgs" data-link-title="ScalingConfigurationArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L446">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L446">
         interface <strong>ScalingConfigurationArgs</strong>
     </a>
 </h3>
@@ -3468,7 +3468,7 @@ The ID of the Auto Scaling group.
 The set of arguments for constructing a ScalingConfiguration resource.
 
 <h4 class="pdoc-member-header" id="ScalingConfigurationArgs-active">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L450">property <b>active</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L450">property <b>active</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>active?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3476,7 +3476,7 @@ The set of arguments for constructing a ScalingConfiguration resource.
 Whether active current scaling configuration in the specified scaling group. Default to `false`.
 
 <h4 class="pdoc-member-header" id="ScalingConfigurationArgs-creditSpecification">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L454">property <b>creditSpecification</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L454">property <b>creditSpecification</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>creditSpecification?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3484,7 +3484,7 @@ Whether active current scaling configuration in the specified scaling group. Def
 Performance mode of the t5 burstable instance. Valid values: 'Standard', 'Unlimited'.
 
 <h4 class="pdoc-member-header" id="ScalingConfigurationArgs-dataDisks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L458">property <b>dataDisks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L458">property <b>dataDisks</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataDisks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#ScalingConfigurationDataDisk'>ScalingConfigurationDataDisk</a>&gt;[]&gt;;</code></pre>
@@ -3492,7 +3492,7 @@ Performance mode of the t5 burstable instance. Valid values: 'Standard', 'Unlimi
 DataDisk mappings to attach to ecs instance. See Block datadisk below for details.
 
 <h4 class="pdoc-member-header" id="ScalingConfigurationArgs-enable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L462">property <b>enable</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L462">property <b>enable</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enable?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3500,7 +3500,7 @@ DataDisk mappings to attach to ecs instance. See Block datadisk below for detail
 Whether enable the specified scaling group(make it active) to which the current scaling configuration belongs.
 
 <h4 class="pdoc-member-header" id="ScalingConfigurationArgs-forceDelete">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L466">property <b>forceDelete</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L466">property <b>forceDelete</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>forceDelete?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3508,7 +3508,7 @@ Whether enable the specified scaling group(make it active) to which the current 
 The last scaling configuration will be deleted forcibly with deleting its scaling group. Default to false.
 
 <h4 class="pdoc-member-header" id="ScalingConfigurationArgs-imageId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L470">property <b>imageId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L470">property <b>imageId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>imageId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3516,7 +3516,7 @@ The last scaling configuration will be deleted forcibly with deleting its scalin
 ID of an image file, indicating the image resource selected when an instance is enabled.
 
 <h4 class="pdoc-member-header" id="ScalingConfigurationArgs-imageName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L474">property <b>imageName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L474">property <b>imageName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>imageName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3524,7 +3524,7 @@ ID of an image file, indicating the image resource selected when an instance is 
 Name of an image file, indicating the image resource selected when an instance is enabled.
 
 <h4 class="pdoc-member-header" id="ScalingConfigurationArgs-instanceIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L480">property <b>instanceIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L480">property <b>instanceIds</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -3536,7 +3536,7 @@ Field &#39;instance_ids&#39; has been deprecated from provider version 1.6.0. Ne
 It has been deprecated from version 1.6.0. New resource `alicloud.ess.Attachment` replaces it.
 
 <h4 class="pdoc-member-header" id="ScalingConfigurationArgs-instanceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L484">property <b>instanceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L484">property <b>instanceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3544,7 +3544,7 @@ It has been deprecated from version 1.6.0. New resource `alicloud.ess.Attachment
 Name of an ECS instance. Default to "ESS-Instance". It is valid from version 1.7.1.
 
 <h4 class="pdoc-member-header" id="ScalingConfigurationArgs-instanceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L488">property <b>instanceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L488">property <b>instanceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3552,7 +3552,7 @@ Name of an ECS instance. Default to "ESS-Instance". It is valid from version 1.7
 Resource type of an ECS instance.
 
 <h4 class="pdoc-member-header" id="ScalingConfigurationArgs-instanceTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L492">property <b>instanceTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L492">property <b>instanceTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceTypes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3560,7 +3560,7 @@ Resource type of an ECS instance.
 Resource types of an ECS instance.
 
 <h4 class="pdoc-member-header" id="ScalingConfigurationArgs-internetChargeType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L496">property <b>internetChargeType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L496">property <b>internetChargeType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>internetChargeType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3568,7 +3568,7 @@ Resource types of an ECS instance.
 Network billing type, Values: PayByBandwidth or PayByTraffic. Default to `PayByBandwidth`.
 
 <h4 class="pdoc-member-header" id="ScalingConfigurationArgs-internetMaxBandwidthIn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L500">property <b>internetMaxBandwidthIn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L500">property <b>internetMaxBandwidthIn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>internetMaxBandwidthIn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3576,7 +3576,7 @@ Network billing type, Values: PayByBandwidth or PayByTraffic. Default to `PayByB
 Maximum incoming bandwidth from the public network, measured in Mbps (Mega bit per second). The value range is [1,200].
 
 <h4 class="pdoc-member-header" id="ScalingConfigurationArgs-internetMaxBandwidthOut">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L504">property <b>internetMaxBandwidthOut</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L504">property <b>internetMaxBandwidthOut</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>internetMaxBandwidthOut?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3584,7 +3584,7 @@ Maximum incoming bandwidth from the public network, measured in Mbps (Mega bit p
 Maximum outgoing bandwidth from the public network, measured in Mbps (Mega bit per second). The value range for PayByBandwidth is [0,100].
 
 <h4 class="pdoc-member-header" id="ScalingConfigurationArgs-ioOptimized">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L510">property <b>ioOptimized</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L510">property <b>ioOptimized</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -3596,7 +3596,7 @@ Attribute io_optimized has been deprecated on instance resource. All the launche
 It has been deprecated on instance resource. All the launched alicloud instances will be I/O optimized.
 
 <h4 class="pdoc-member-header" id="ScalingConfigurationArgs-isOutdated">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L514">property <b>isOutdated</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L514">property <b>isOutdated</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>isOutdated?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3604,7 +3604,7 @@ It has been deprecated on instance resource. All the launched alicloud instances
 Whether to use outdated instance type. Default to false.
 
 <h4 class="pdoc-member-header" id="ScalingConfigurationArgs-keyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L518">property <b>keyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L518">property <b>keyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3612,7 +3612,7 @@ Whether to use outdated instance type. Default to false.
 The name of key pair that can login ECS instance successfully without password. If it is specified, the password would be invalid.
 
 <h4 class="pdoc-member-header" id="ScalingConfigurationArgs-kmsEncryptedPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L522">property <b>kmsEncryptedPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L522">property <b>kmsEncryptedPassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kmsEncryptedPassword?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3620,7 +3620,7 @@ The name of key pair that can login ECS instance successfully without password. 
 An KMS encrypts password used to a db account. If the `password` is filled in, this field will be ignored.
 
 <h4 class="pdoc-member-header" id="ScalingConfigurationArgs-kmsEncryptionContext">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L526">property <b>kmsEncryptionContext</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L526">property <b>kmsEncryptionContext</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kmsEncryptionContext?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -3628,7 +3628,7 @@ An KMS encrypts password used to a db account. If the `password` is filled in, t
 An KMS encryption context used to decrypt `kmsEncryptedPassword` before creating or updating a db account with `kmsEncryptedPassword`. See [Encryption Context](https://www.alibabacloud.com/help/doc-detail/42975.htm). It is valid when `kmsEncryptedPassword` is set.
 
 <h4 class="pdoc-member-header" id="ScalingConfigurationArgs-override">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L530">property <b>override</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L530">property <b>override</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>override?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3636,7 +3636,7 @@ An KMS encryption context used to decrypt `kmsEncryptedPassword` before creating
 Indicates whether to overwrite the existing data. Default to false.
 
 <h4 class="pdoc-member-header" id="ScalingConfigurationArgs-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L534">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L534">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>password?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3644,7 +3644,7 @@ Indicates whether to overwrite the existing data. Default to false.
 The password of the ECS instance. The password must be 8 to 30 characters in length. It must contains at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Special characters include `() ~!@#$%^&*-_+=\|{}[]:;'<>,.?/`, The password of Windows-based instances cannot start with a forward slash (/).
 
 <h4 class="pdoc-member-header" id="ScalingConfigurationArgs-passwordInherit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L538">property <b>passwordInherit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L538">property <b>passwordInherit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>passwordInherit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3652,7 +3652,7 @@ The password of the ECS instance. The password must be 8 to 30 characters in len
 Specifies whether to use the password that is predefined in the image. If the PasswordInherit parameter is set to true, the `password` and `kmsEncryptedPassword` will be ignored. You must ensure that the selected image has a password configured.
 
 <h4 class="pdoc-member-header" id="ScalingConfigurationArgs-roleName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L542">property <b>roleName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L542">property <b>roleName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>roleName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3660,7 +3660,7 @@ Specifies whether to use the password that is predefined in the image. If the Pa
 Instance RAM role name. The name is provided and maintained by RAM. You can use `alicloud.ram.Role` to create a new one.
 
 <h4 class="pdoc-member-header" id="ScalingConfigurationArgs-scalingConfigurationName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L546">property <b>scalingConfigurationName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L546">property <b>scalingConfigurationName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scalingConfigurationName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3668,7 +3668,7 @@ Instance RAM role name. The name is provided and maintained by RAM. You can use 
 Name shown for the scheduled task. which must contain 2-64 characters (English or Chinese), starting with numbers, English letters or Chinese characters, and can contain number, underscores `_`, hypens `-`, and decimal point `.`. If this parameter value is not specified, the default value is ScalingConfigurationId.
 
 <h4 class="pdoc-member-header" id="ScalingConfigurationArgs-scalingGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L550">property <b>scalingGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L550">property <b>scalingGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scalingGroupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3676,7 +3676,7 @@ Name shown for the scheduled task. which must contain 2-64 characters (English o
 ID of the scaling group of a scaling configuration.
 
 <h4 class="pdoc-member-header" id="ScalingConfigurationArgs-securityGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L554">property <b>securityGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L554">property <b>securityGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>securityGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3684,7 +3684,7 @@ ID of the scaling group of a scaling configuration.
 ID of the security group used to create new instance. It is conflict with `securityGroupIds`.
 
 <h4 class="pdoc-member-header" id="ScalingConfigurationArgs-securityGroupIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L558">property <b>securityGroupIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L558">property <b>securityGroupIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>securityGroupIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3692,7 +3692,7 @@ ID of the security group used to create new instance. It is conflict with `secur
 List IDs of the security group used to create new instances. It is conflict with `securityGroupId`.
 
 <h4 class="pdoc-member-header" id="ScalingConfigurationArgs-substitute">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L562">property <b>substitute</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L562">property <b>substitute</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>substitute?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3700,7 +3700,7 @@ List IDs of the security group used to create new instances. It is conflict with
 The another scaling configuration which will be active automatically and replace current configuration when setting `active` to 'false'. It is invalid when `active` is 'true'.
 
 <h4 class="pdoc-member-header" id="ScalingConfigurationArgs-systemDiskAutoSnapshotPolicyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L566">property <b>systemDiskAutoSnapshotPolicyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L566">property <b>systemDiskAutoSnapshotPolicyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>systemDiskAutoSnapshotPolicyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3708,7 +3708,7 @@ The another scaling configuration which will be active automatically and replace
 The id of auto snapshot policy for system disk.
 
 <h4 class="pdoc-member-header" id="ScalingConfigurationArgs-systemDiskCategory">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L570">property <b>systemDiskCategory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L570">property <b>systemDiskCategory</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>systemDiskCategory?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3716,7 +3716,7 @@ The id of auto snapshot policy for system disk.
 Category of the system disk. The parameter value options are `ephemeralSsd`, `cloudEfficiency`, `cloudSsd`, `cloudEssd` and `cloud`. `cloud` only is used to some no I/O optimized instance. Default to `cloudEfficiency`.
 
 <h4 class="pdoc-member-header" id="ScalingConfigurationArgs-systemDiskDescription">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L574">property <b>systemDiskDescription</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L574">property <b>systemDiskDescription</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>systemDiskDescription?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3724,7 +3724,7 @@ Category of the system disk. The parameter value options are `ephemeralSsd`, `cl
 The description of the system disk. The description must be 2 to 256 characters in length and cannot start with http:// or https://.
 
 <h4 class="pdoc-member-header" id="ScalingConfigurationArgs-systemDiskName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L578">property <b>systemDiskName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L578">property <b>systemDiskName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>systemDiskName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3732,7 +3732,7 @@ The description of the system disk. The description must be 2 to 256 characters 
 The name of the system disk. It must be 2 to 128 characters in length. It must start with a letter and cannot start with http:// or https://. It can contain letters, digits, colons (:), underscores (_), and hyphens (-). Default value: null.
 
 <h4 class="pdoc-member-header" id="ScalingConfigurationArgs-systemDiskSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L582">property <b>systemDiskSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L582">property <b>systemDiskSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>systemDiskSize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3740,7 +3740,7 @@ The name of the system disk. It must be 2 to 128 characters in length. It must s
 Size of system disk, in GiB. Optional values: cloud: 20-500, cloud_efficiency: 20-500, cloud_ssd: 20-500, ephemeral_ssd: 20-500 The default value is max{40, ImageSize}. If this parameter is set, the system disk size must be greater than or equal to max{40, ImageSize}.
 
 <h4 class="pdoc-member-header" id="ScalingConfigurationArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L588">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L588">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -3750,7 +3750,7 @@ A mapping of tags to assign to the resource. It will be applied for ECS instance
 - Value: It can be up to 128 characters in length. It cannot begin with "aliyun", "http://", or "https://" It can be a null string.
 
 <h4 class="pdoc-member-header" id="ScalingConfigurationArgs-userData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L592">property <b>userData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L592">property <b>userData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userData?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3758,7 +3758,7 @@ A mapping of tags to assign to the resource. It will be applied for ECS instance
 User-defined data to customize the startup behaviors of the ECS instance and to pass data into the ECS instance.
 
 <h3 class="pdoc-module-header" id="ScalingConfigurationState" data-link-title="ScalingConfigurationState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L294">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L294">
         interface <strong>ScalingConfigurationState</strong>
     </a>
 </h3>
@@ -3768,7 +3768,7 @@ User-defined data to customize the startup behaviors of the ECS instance and to 
 Input properties used for looking up and filtering ScalingConfiguration resources.
 
 <h4 class="pdoc-member-header" id="ScalingConfigurationState-active">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L298">property <b>active</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L298">property <b>active</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>active?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3776,7 +3776,7 @@ Input properties used for looking up and filtering ScalingConfiguration resource
 Whether active current scaling configuration in the specified scaling group. Default to `false`.
 
 <h4 class="pdoc-member-header" id="ScalingConfigurationState-creditSpecification">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L302">property <b>creditSpecification</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L302">property <b>creditSpecification</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>creditSpecification?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3784,7 +3784,7 @@ Whether active current scaling configuration in the specified scaling group. Def
 Performance mode of the t5 burstable instance. Valid values: 'Standard', 'Unlimited'.
 
 <h4 class="pdoc-member-header" id="ScalingConfigurationState-dataDisks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L306">property <b>dataDisks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L306">property <b>dataDisks</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataDisks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#ScalingConfigurationDataDisk'>ScalingConfigurationDataDisk</a>&gt;[]&gt;;</code></pre>
@@ -3792,7 +3792,7 @@ Performance mode of the t5 burstable instance. Valid values: 'Standard', 'Unlimi
 DataDisk mappings to attach to ecs instance. See Block datadisk below for details.
 
 <h4 class="pdoc-member-header" id="ScalingConfigurationState-enable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L310">property <b>enable</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L310">property <b>enable</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enable?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3800,7 +3800,7 @@ DataDisk mappings to attach to ecs instance. See Block datadisk below for detail
 Whether enable the specified scaling group(make it active) to which the current scaling configuration belongs.
 
 <h4 class="pdoc-member-header" id="ScalingConfigurationState-forceDelete">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L314">property <b>forceDelete</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L314">property <b>forceDelete</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>forceDelete?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3808,7 +3808,7 @@ Whether enable the specified scaling group(make it active) to which the current 
 The last scaling configuration will be deleted forcibly with deleting its scaling group. Default to false.
 
 <h4 class="pdoc-member-header" id="ScalingConfigurationState-imageId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L318">property <b>imageId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L318">property <b>imageId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>imageId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3816,7 +3816,7 @@ The last scaling configuration will be deleted forcibly with deleting its scalin
 ID of an image file, indicating the image resource selected when an instance is enabled.
 
 <h4 class="pdoc-member-header" id="ScalingConfigurationState-imageName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L322">property <b>imageName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L322">property <b>imageName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>imageName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3824,7 +3824,7 @@ ID of an image file, indicating the image resource selected when an instance is 
 Name of an image file, indicating the image resource selected when an instance is enabled.
 
 <h4 class="pdoc-member-header" id="ScalingConfigurationState-instanceIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L328">property <b>instanceIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L328">property <b>instanceIds</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -3836,7 +3836,7 @@ Field &#39;instance_ids&#39; has been deprecated from provider version 1.6.0. Ne
 It has been deprecated from version 1.6.0. New resource `alicloud.ess.Attachment` replaces it.
 
 <h4 class="pdoc-member-header" id="ScalingConfigurationState-instanceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L332">property <b>instanceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L332">property <b>instanceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3844,7 +3844,7 @@ It has been deprecated from version 1.6.0. New resource `alicloud.ess.Attachment
 Name of an ECS instance. Default to "ESS-Instance". It is valid from version 1.7.1.
 
 <h4 class="pdoc-member-header" id="ScalingConfigurationState-instanceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L336">property <b>instanceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L336">property <b>instanceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3852,7 +3852,7 @@ Name of an ECS instance. Default to "ESS-Instance". It is valid from version 1.7
 Resource type of an ECS instance.
 
 <h4 class="pdoc-member-header" id="ScalingConfigurationState-instanceTypes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L340">property <b>instanceTypes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L340">property <b>instanceTypes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceTypes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3860,7 +3860,7 @@ Resource type of an ECS instance.
 Resource types of an ECS instance.
 
 <h4 class="pdoc-member-header" id="ScalingConfigurationState-internetChargeType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L344">property <b>internetChargeType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L344">property <b>internetChargeType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>internetChargeType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3868,7 +3868,7 @@ Resource types of an ECS instance.
 Network billing type, Values: PayByBandwidth or PayByTraffic. Default to `PayByBandwidth`.
 
 <h4 class="pdoc-member-header" id="ScalingConfigurationState-internetMaxBandwidthIn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L348">property <b>internetMaxBandwidthIn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L348">property <b>internetMaxBandwidthIn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>internetMaxBandwidthIn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3876,7 +3876,7 @@ Network billing type, Values: PayByBandwidth or PayByTraffic. Default to `PayByB
 Maximum incoming bandwidth from the public network, measured in Mbps (Mega bit per second). The value range is [1,200].
 
 <h4 class="pdoc-member-header" id="ScalingConfigurationState-internetMaxBandwidthOut">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L352">property <b>internetMaxBandwidthOut</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L352">property <b>internetMaxBandwidthOut</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>internetMaxBandwidthOut?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -3884,7 +3884,7 @@ Maximum incoming bandwidth from the public network, measured in Mbps (Mega bit p
 Maximum outgoing bandwidth from the public network, measured in Mbps (Mega bit per second). The value range for PayByBandwidth is [0,100].
 
 <h4 class="pdoc-member-header" id="ScalingConfigurationState-ioOptimized">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L358">property <b>ioOptimized</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L358">property <b>ioOptimized</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -3896,7 +3896,7 @@ Attribute io_optimized has been deprecated on instance resource. All the launche
 It has been deprecated on instance resource. All the launched alicloud instances will be I/O optimized.
 
 <h4 class="pdoc-member-header" id="ScalingConfigurationState-isOutdated">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L362">property <b>isOutdated</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L362">property <b>isOutdated</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>isOutdated?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3904,7 +3904,7 @@ It has been deprecated on instance resource. All the launched alicloud instances
 Whether to use outdated instance type. Default to false.
 
 <h4 class="pdoc-member-header" id="ScalingConfigurationState-keyName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L366">property <b>keyName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L366">property <b>keyName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>keyName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3912,7 +3912,7 @@ Whether to use outdated instance type. Default to false.
 The name of key pair that can login ECS instance successfully without password. If it is specified, the password would be invalid.
 
 <h4 class="pdoc-member-header" id="ScalingConfigurationState-kmsEncryptedPassword">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L370">property <b>kmsEncryptedPassword</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L370">property <b>kmsEncryptedPassword</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kmsEncryptedPassword?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3920,7 +3920,7 @@ The name of key pair that can login ECS instance successfully without password. 
 An KMS encrypts password used to a db account. If the `password` is filled in, this field will be ignored.
 
 <h4 class="pdoc-member-header" id="ScalingConfigurationState-kmsEncryptionContext">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L374">property <b>kmsEncryptionContext</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L374">property <b>kmsEncryptionContext</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kmsEncryptionContext?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -3928,7 +3928,7 @@ An KMS encrypts password used to a db account. If the `password` is filled in, t
 An KMS encryption context used to decrypt `kmsEncryptedPassword` before creating or updating a db account with `kmsEncryptedPassword`. See [Encryption Context](https://www.alibabacloud.com/help/doc-detail/42975.htm). It is valid when `kmsEncryptedPassword` is set.
 
 <h4 class="pdoc-member-header" id="ScalingConfigurationState-override">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L378">property <b>override</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L378">property <b>override</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>override?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3936,7 +3936,7 @@ An KMS encryption context used to decrypt `kmsEncryptedPassword` before creating
 Indicates whether to overwrite the existing data. Default to false.
 
 <h4 class="pdoc-member-header" id="ScalingConfigurationState-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L382">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L382">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>password?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3944,7 +3944,7 @@ Indicates whether to overwrite the existing data. Default to false.
 The password of the ECS instance. The password must be 8 to 30 characters in length. It must contains at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters. Special characters include `() ~!@#$%^&*-_+=\|{}[]:;'<>,.?/`, The password of Windows-based instances cannot start with a forward slash (/).
 
 <h4 class="pdoc-member-header" id="ScalingConfigurationState-passwordInherit">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L386">property <b>passwordInherit</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L386">property <b>passwordInherit</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>passwordInherit?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -3952,7 +3952,7 @@ The password of the ECS instance. The password must be 8 to 30 characters in len
 Specifies whether to use the password that is predefined in the image. If the PasswordInherit parameter is set to true, the `password` and `kmsEncryptedPassword` will be ignored. You must ensure that the selected image has a password configured.
 
 <h4 class="pdoc-member-header" id="ScalingConfigurationState-roleName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L390">property <b>roleName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L390">property <b>roleName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>roleName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3960,7 +3960,7 @@ Specifies whether to use the password that is predefined in the image. If the Pa
 Instance RAM role name. The name is provided and maintained by RAM. You can use `alicloud.ram.Role` to create a new one.
 
 <h4 class="pdoc-member-header" id="ScalingConfigurationState-scalingConfigurationName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L394">property <b>scalingConfigurationName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L394">property <b>scalingConfigurationName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scalingConfigurationName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3968,7 +3968,7 @@ Instance RAM role name. The name is provided and maintained by RAM. You can use 
 Name shown for the scheduled task. which must contain 2-64 characters (English or Chinese), starting with numbers, English letters or Chinese characters, and can contain number, underscores `_`, hypens `-`, and decimal point `.`. If this parameter value is not specified, the default value is ScalingConfigurationId.
 
 <h4 class="pdoc-member-header" id="ScalingConfigurationState-scalingGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L398">property <b>scalingGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L398">property <b>scalingGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scalingGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3976,7 +3976,7 @@ Name shown for the scheduled task. which must contain 2-64 characters (English o
 ID of the scaling group of a scaling configuration.
 
 <h4 class="pdoc-member-header" id="ScalingConfigurationState-securityGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L402">property <b>securityGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L402">property <b>securityGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>securityGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -3984,7 +3984,7 @@ ID of the scaling group of a scaling configuration.
 ID of the security group used to create new instance. It is conflict with `securityGroupIds`.
 
 <h4 class="pdoc-member-header" id="ScalingConfigurationState-securityGroupIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L406">property <b>securityGroupIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L406">property <b>securityGroupIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>securityGroupIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -3992,7 +3992,7 @@ ID of the security group used to create new instance. It is conflict with `secur
 List IDs of the security group used to create new instances. It is conflict with `securityGroupId`.
 
 <h4 class="pdoc-member-header" id="ScalingConfigurationState-substitute">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L410">property <b>substitute</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L410">property <b>substitute</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>substitute?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4000,7 +4000,7 @@ List IDs of the security group used to create new instances. It is conflict with
 The another scaling configuration which will be active automatically and replace current configuration when setting `active` to 'false'. It is invalid when `active` is 'true'.
 
 <h4 class="pdoc-member-header" id="ScalingConfigurationState-systemDiskAutoSnapshotPolicyId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L414">property <b>systemDiskAutoSnapshotPolicyId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L414">property <b>systemDiskAutoSnapshotPolicyId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>systemDiskAutoSnapshotPolicyId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4008,7 +4008,7 @@ The another scaling configuration which will be active automatically and replace
 The id of auto snapshot policy for system disk.
 
 <h4 class="pdoc-member-header" id="ScalingConfigurationState-systemDiskCategory">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L418">property <b>systemDiskCategory</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L418">property <b>systemDiskCategory</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>systemDiskCategory?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4016,7 +4016,7 @@ The id of auto snapshot policy for system disk.
 Category of the system disk. The parameter value options are `ephemeralSsd`, `cloudEfficiency`, `cloudSsd`, `cloudEssd` and `cloud`. `cloud` only is used to some no I/O optimized instance. Default to `cloudEfficiency`.
 
 <h4 class="pdoc-member-header" id="ScalingConfigurationState-systemDiskDescription">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L422">property <b>systemDiskDescription</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L422">property <b>systemDiskDescription</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>systemDiskDescription?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4024,7 +4024,7 @@ Category of the system disk. The parameter value options are `ephemeralSsd`, `cl
 The description of the system disk. The description must be 2 to 256 characters in length and cannot start with http:// or https://.
 
 <h4 class="pdoc-member-header" id="ScalingConfigurationState-systemDiskName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L426">property <b>systemDiskName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L426">property <b>systemDiskName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>systemDiskName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4032,7 +4032,7 @@ The description of the system disk. The description must be 2 to 256 characters 
 The name of the system disk. It must be 2 to 128 characters in length. It must start with a letter and cannot start with http:// or https://. It can contain letters, digits, colons (:), underscores (_), and hyphens (-). Default value: null.
 
 <h4 class="pdoc-member-header" id="ScalingConfigurationState-systemDiskSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L430">property <b>systemDiskSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L430">property <b>systemDiskSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>systemDiskSize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4040,7 +4040,7 @@ The name of the system disk. It must be 2 to 128 characters in length. It must s
 Size of system disk, in GiB. Optional values: cloud: 20-500, cloud_efficiency: 20-500, cloud_ssd: 20-500, ephemeral_ssd: 20-500 The default value is max{40, ImageSize}. If this parameter is set, the system disk size must be greater than or equal to max{40, ImageSize}.
 
 <h4 class="pdoc-member-header" id="ScalingConfigurationState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L436">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L436">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -4050,7 +4050,7 @@ A mapping of tags to assign to the resource. It will be applied for ECS instance
 - Value: It can be up to 128 characters in length. It cannot begin with "aliyun", "http://", or "https://" It can be a null string.
 
 <h4 class="pdoc-member-header" id="ScalingConfigurationState-userData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingConfiguration.ts#L440">property <b>userData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingConfiguration.ts#L440">property <b>userData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userData?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4058,7 +4058,7 @@ A mapping of tags to assign to the resource. It will be applied for ECS instance
 User-defined data to customize the startup behaviors of the ECS instance and to pass data into the ECS instance.
 
 <h3 class="pdoc-module-header" id="ScalingGroupArgs" data-link-title="ScalingGroupArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingGroup.ts#L272">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingGroup.ts#L272">
         interface <strong>ScalingGroupArgs</strong>
     </a>
 </h3>
@@ -4068,7 +4068,7 @@ User-defined data to customize the startup behaviors of the ECS instance and to 
 The set of arguments for constructing a ScalingGroup resource.
 
 <h4 class="pdoc-member-header" id="ScalingGroupArgs-dbInstanceIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingGroup.ts#L278">property <b>dbInstanceIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingGroup.ts#L278">property <b>dbInstanceIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dbInstanceIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4078,7 +4078,7 @@ If an RDS instance is specified in the scaling group, the scaling group automati
 - The specified RDS instance’s whitelist must have room for more IP addresses.
 
 <h4 class="pdoc-member-header" id="ScalingGroupArgs-defaultCooldown">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingGroup.ts#L282">property <b>defaultCooldown</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingGroup.ts#L282">property <b>defaultCooldown</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultCooldown?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4086,7 +4086,7 @@ If an RDS instance is specified in the scaling group, the scaling group automati
 Default cool-down time (in seconds) of the scaling group. Value range: [0, 86400]. The default value is 300s.
 
 <h4 class="pdoc-member-header" id="ScalingGroupArgs-desiredCapacity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingGroup.ts#L286">property <b>desiredCapacity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingGroup.ts#L286">property <b>desiredCapacity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>desiredCapacity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4094,7 +4094,7 @@ Default cool-down time (in seconds) of the scaling group. Value range: [0, 86400
 Expected number of ECS instances in the scaling group. Value range: [min_size, maxSize].
 
 <h4 class="pdoc-member-header" id="ScalingGroupArgs-groupDeletionProtection">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingGroup.ts#L290">property <b>groupDeletionProtection</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingGroup.ts#L290">property <b>groupDeletionProtection</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupDeletionProtection?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4102,7 +4102,7 @@ Expected number of ECS instances in the scaling group. Value range: [min_size, m
 Specifies whether the scaling group deletion protection is enabled. `true` or `false`, Default value: `false`.
 
 <h4 class="pdoc-member-header" id="ScalingGroupArgs-loadbalancerIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingGroup.ts#L299">property <b>loadbalancerIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingGroup.ts#L299">property <b>loadbalancerIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loadbalancerIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4115,7 +4115,7 @@ targeting your `alicloud.slb.Listener` in order to make sure the listener with i
 - The default weight of an ECS instance attached to the Server Load Balancer instance is 50.
 
 <h4 class="pdoc-member-header" id="ScalingGroupArgs-maxSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingGroup.ts#L303">property <b>maxSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingGroup.ts#L303">property <b>maxSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxSize: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4123,7 +4123,7 @@ targeting your `alicloud.slb.Listener` in order to make sure the listener with i
 Maximum number of ECS instances in the scaling group. Value range: [0, 1000].
 
 <h4 class="pdoc-member-header" id="ScalingGroupArgs-minSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingGroup.ts#L307">property <b>minSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingGroup.ts#L307">property <b>minSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>minSize: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4131,7 +4131,7 @@ Maximum number of ECS instances in the scaling group. Value range: [0, 1000].
 Minimum number of ECS instances in the scaling group. Value range: [0, 1000].
 
 <h4 class="pdoc-member-header" id="ScalingGroupArgs-multiAzPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingGroup.ts#L311">property <b>multiAzPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingGroup.ts#L311">property <b>multiAzPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>multiAzPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4139,7 +4139,7 @@ Minimum number of ECS instances in the scaling group. Value range: [0, 1000].
 Multi-AZ scaling group ECS instance expansion and contraction strategy. PRIORITY, BALANCE or COST_OPTIMIZED(Available in 1.54.0+).
 
 <h4 class="pdoc-member-header" id="ScalingGroupArgs-onDemandBaseCapacity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingGroup.ts#L315">property <b>onDemandBaseCapacity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingGroup.ts#L315">property <b>onDemandBaseCapacity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>onDemandBaseCapacity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4147,7 +4147,7 @@ Multi-AZ scaling group ECS instance expansion and contraction strategy. PRIORITY
 The minimum amount of the Auto Scaling group's capacity that must be fulfilled by On-Demand Instances. This base portion is provisioned first as your group scales.
 
 <h4 class="pdoc-member-header" id="ScalingGroupArgs-onDemandPercentageAboveBaseCapacity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingGroup.ts#L319">property <b>onDemandPercentageAboveBaseCapacity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingGroup.ts#L319">property <b>onDemandPercentageAboveBaseCapacity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>onDemandPercentageAboveBaseCapacity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4155,7 +4155,7 @@ The minimum amount of the Auto Scaling group's capacity that must be fulfilled b
 Controls the percentages of On-Demand Instances and Spot Instances for your additional capacity beyond OnDemandBaseCapacity.
 
 <h4 class="pdoc-member-header" id="ScalingGroupArgs-removalPolicies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingGroup.ts#L327">property <b>removalPolicies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingGroup.ts#L327">property <b>removalPolicies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>removalPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4167,7 +4167,7 @@ RemovalPolicy is used to select the ECS instances you want to remove from the sc
 - Default values: Default value of RemovalPolicy.1: OldestScalingConfiguration. Default value of RemovalPolicy.2: OldestInstance.
 
 <h4 class="pdoc-member-header" id="ScalingGroupArgs-scalingGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingGroup.ts#L331">property <b>scalingGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingGroup.ts#L331">property <b>scalingGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scalingGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4175,7 +4175,7 @@ RemovalPolicy is used to select the ECS instances you want to remove from the sc
 Name shown for the scaling group, which must contain 2-64 characters (English or Chinese), starting with numbers, English letters or Chinese characters, and can contain numbers, underscores `_`, hyphens `-`, and decimal points `.`. If this parameter is not specified, the default value is ScalingGroupId.
 
 <h4 class="pdoc-member-header" id="ScalingGroupArgs-spotInstancePools">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingGroup.ts#L335">property <b>spotInstancePools</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingGroup.ts#L335">property <b>spotInstancePools</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>spotInstancePools?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4183,7 +4183,7 @@ Name shown for the scaling group, which must contain 2-64 characters (English or
 The number of Spot pools to use to allocate your Spot capacity. The Spot pools is composed of instance types of lowest price.
 
 <h4 class="pdoc-member-header" id="ScalingGroupArgs-spotInstanceRemedy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingGroup.ts#L339">property <b>spotInstanceRemedy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingGroup.ts#L339">property <b>spotInstanceRemedy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>spotInstanceRemedy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4191,7 +4191,7 @@ The number of Spot pools to use to allocate your Spot capacity. The Spot pools i
 Whether to replace spot instances with newly created spot/onDemand instance when receive a spot recycling message.
 
 <h4 class="pdoc-member-header" id="ScalingGroupArgs-vswitchId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingGroup.ts#L345">property <b>vswitchId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingGroup.ts#L345">property <b>vswitchId</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -4203,7 +4203,7 @@ Field &#39;vswitch_id&#39; has been deprecated from provider version 1.7.1, and 
 It has been deprecated from version 1.7.1 and new field 'vswitch_ids' replaces it.
 
 <h4 class="pdoc-member-header" id="ScalingGroupArgs-vswitchIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingGroup.ts#L349">property <b>vswitchIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingGroup.ts#L349">property <b>vswitchIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vswitchIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4211,7 +4211,7 @@ It has been deprecated from version 1.7.1 and new field 'vswitch_ids' replaces i
 List of virtual switch IDs in which the ecs instances to be launched.
 
 <h3 class="pdoc-module-header" id="ScalingGroupState" data-link-title="ScalingGroupState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingGroup.ts#L189">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingGroup.ts#L189">
         interface <strong>ScalingGroupState</strong>
     </a>
 </h3>
@@ -4221,7 +4221,7 @@ List of virtual switch IDs in which the ecs instances to be launched.
 Input properties used for looking up and filtering ScalingGroup resources.
 
 <h4 class="pdoc-member-header" id="ScalingGroupState-dbInstanceIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingGroup.ts#L195">property <b>dbInstanceIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingGroup.ts#L195">property <b>dbInstanceIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dbInstanceIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4231,7 +4231,7 @@ If an RDS instance is specified in the scaling group, the scaling group automati
 - The specified RDS instance’s whitelist must have room for more IP addresses.
 
 <h4 class="pdoc-member-header" id="ScalingGroupState-defaultCooldown">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingGroup.ts#L199">property <b>defaultCooldown</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingGroup.ts#L199">property <b>defaultCooldown</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultCooldown?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4239,7 +4239,7 @@ If an RDS instance is specified in the scaling group, the scaling group automati
 Default cool-down time (in seconds) of the scaling group. Value range: [0, 86400]. The default value is 300s.
 
 <h4 class="pdoc-member-header" id="ScalingGroupState-desiredCapacity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingGroup.ts#L203">property <b>desiredCapacity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingGroup.ts#L203">property <b>desiredCapacity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>desiredCapacity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4247,7 +4247,7 @@ Default cool-down time (in seconds) of the scaling group. Value range: [0, 86400
 Expected number of ECS instances in the scaling group. Value range: [min_size, maxSize].
 
 <h4 class="pdoc-member-header" id="ScalingGroupState-groupDeletionProtection">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingGroup.ts#L207">property <b>groupDeletionProtection</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingGroup.ts#L207">property <b>groupDeletionProtection</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupDeletionProtection?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4255,7 +4255,7 @@ Expected number of ECS instances in the scaling group. Value range: [min_size, m
 Specifies whether the scaling group deletion protection is enabled. `true` or `false`, Default value: `false`.
 
 <h4 class="pdoc-member-header" id="ScalingGroupState-loadbalancerIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingGroup.ts#L216">property <b>loadbalancerIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingGroup.ts#L216">property <b>loadbalancerIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loadbalancerIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4268,7 +4268,7 @@ targeting your `alicloud.slb.Listener` in order to make sure the listener with i
 - The default weight of an ECS instance attached to the Server Load Balancer instance is 50.
 
 <h4 class="pdoc-member-header" id="ScalingGroupState-maxSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingGroup.ts#L220">property <b>maxSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingGroup.ts#L220">property <b>maxSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxSize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4276,7 +4276,7 @@ targeting your `alicloud.slb.Listener` in order to make sure the listener with i
 Maximum number of ECS instances in the scaling group. Value range: [0, 1000].
 
 <h4 class="pdoc-member-header" id="ScalingGroupState-minSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingGroup.ts#L224">property <b>minSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingGroup.ts#L224">property <b>minSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>minSize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4284,7 +4284,7 @@ Maximum number of ECS instances in the scaling group. Value range: [0, 1000].
 Minimum number of ECS instances in the scaling group. Value range: [0, 1000].
 
 <h4 class="pdoc-member-header" id="ScalingGroupState-multiAzPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingGroup.ts#L228">property <b>multiAzPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingGroup.ts#L228">property <b>multiAzPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>multiAzPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4292,7 +4292,7 @@ Minimum number of ECS instances in the scaling group. Value range: [0, 1000].
 Multi-AZ scaling group ECS instance expansion and contraction strategy. PRIORITY, BALANCE or COST_OPTIMIZED(Available in 1.54.0+).
 
 <h4 class="pdoc-member-header" id="ScalingGroupState-onDemandBaseCapacity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingGroup.ts#L232">property <b>onDemandBaseCapacity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingGroup.ts#L232">property <b>onDemandBaseCapacity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>onDemandBaseCapacity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4300,7 +4300,7 @@ Multi-AZ scaling group ECS instance expansion and contraction strategy. PRIORITY
 The minimum amount of the Auto Scaling group's capacity that must be fulfilled by On-Demand Instances. This base portion is provisioned first as your group scales.
 
 <h4 class="pdoc-member-header" id="ScalingGroupState-onDemandPercentageAboveBaseCapacity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingGroup.ts#L236">property <b>onDemandPercentageAboveBaseCapacity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingGroup.ts#L236">property <b>onDemandPercentageAboveBaseCapacity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>onDemandPercentageAboveBaseCapacity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4308,7 +4308,7 @@ The minimum amount of the Auto Scaling group's capacity that must be fulfilled b
 Controls the percentages of On-Demand Instances and Spot Instances for your additional capacity beyond OnDemandBaseCapacity.
 
 <h4 class="pdoc-member-header" id="ScalingGroupState-removalPolicies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingGroup.ts#L244">property <b>removalPolicies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingGroup.ts#L244">property <b>removalPolicies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>removalPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4320,7 +4320,7 @@ RemovalPolicy is used to select the ECS instances you want to remove from the sc
 - Default values: Default value of RemovalPolicy.1: OldestScalingConfiguration. Default value of RemovalPolicy.2: OldestInstance.
 
 <h4 class="pdoc-member-header" id="ScalingGroupState-scalingGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingGroup.ts#L248">property <b>scalingGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingGroup.ts#L248">property <b>scalingGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scalingGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4328,7 +4328,7 @@ RemovalPolicy is used to select the ECS instances you want to remove from the sc
 Name shown for the scaling group, which must contain 2-64 characters (English or Chinese), starting with numbers, English letters or Chinese characters, and can contain numbers, underscores `_`, hyphens `-`, and decimal points `.`. If this parameter is not specified, the default value is ScalingGroupId.
 
 <h4 class="pdoc-member-header" id="ScalingGroupState-spotInstancePools">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingGroup.ts#L252">property <b>spotInstancePools</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingGroup.ts#L252">property <b>spotInstancePools</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>spotInstancePools?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4336,7 +4336,7 @@ Name shown for the scaling group, which must contain 2-64 characters (English or
 The number of Spot pools to use to allocate your Spot capacity. The Spot pools is composed of instance types of lowest price.
 
 <h4 class="pdoc-member-header" id="ScalingGroupState-spotInstanceRemedy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingGroup.ts#L256">property <b>spotInstanceRemedy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingGroup.ts#L256">property <b>spotInstanceRemedy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>spotInstanceRemedy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4344,7 +4344,7 @@ The number of Spot pools to use to allocate your Spot capacity. The Spot pools i
 Whether to replace spot instances with newly created spot/onDemand instance when receive a spot recycling message.
 
 <h4 class="pdoc-member-header" id="ScalingGroupState-vswitchId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingGroup.ts#L262">property <b>vswitchId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingGroup.ts#L262">property <b>vswitchId</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -4356,7 +4356,7 @@ Field &#39;vswitch_id&#39; has been deprecated from provider version 1.7.1, and 
 It has been deprecated from version 1.7.1 and new field 'vswitch_ids' replaces it.
 
 <h4 class="pdoc-member-header" id="ScalingGroupState-vswitchIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingGroup.ts#L266">property <b>vswitchIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingGroup.ts#L266">property <b>vswitchIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vswitchIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -4364,7 +4364,7 @@ It has been deprecated from version 1.7.1 and new field 'vswitch_ids' replaces i
 List of virtual switch IDs in which the ecs instances to be launched.
 
 <h3 class="pdoc-module-header" id="ScalingGroupVServerGroupsArgs" data-link-title="ScalingGroupVServerGroupsArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingGroupVServerGroups.ts#L199">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingGroupVServerGroups.ts#L199">
         interface <strong>ScalingGroupVServerGroupsArgs</strong>
     </a>
 </h3>
@@ -4374,7 +4374,7 @@ List of virtual switch IDs in which the ecs instances to be launched.
 The set of arguments for constructing a ScalingGroupVServerGroups resource.
 
 <h4 class="pdoc-member-header" id="ScalingGroupVServerGroupsArgs-force">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingGroupVServerGroups.ts#L203">property <b>force</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingGroupVServerGroups.ts#L203">property <b>force</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>force?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4382,7 +4382,7 @@ The set of arguments for constructing a ScalingGroupVServerGroups resource.
 If instances of scaling group are attached/removed from slb backend server when attach/detach vserver group from scaling group. Default to true.
 
 <h4 class="pdoc-member-header" id="ScalingGroupVServerGroupsArgs-scalingGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingGroupVServerGroups.ts#L207">property <b>scalingGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingGroupVServerGroups.ts#L207">property <b>scalingGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scalingGroupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4390,7 +4390,7 @@ If instances of scaling group are attached/removed from slb backend server when 
 ID of the scaling group.
 
 <h4 class="pdoc-member-header" id="ScalingGroupVServerGroupsArgs-vserverGroups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingGroupVServerGroups.ts#L211">property <b>vserverGroups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingGroupVServerGroups.ts#L211">property <b>vserverGroups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vserverGroups: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#ScalingGroupVServerGroupsVserverGroup'>ScalingGroupVServerGroupsVserverGroup</a>&gt;[]&gt;;</code></pre>
@@ -4398,7 +4398,7 @@ ID of the scaling group.
 A list of vserver groups attached on scaling group. See Block vserverGroup below for details.
 
 <h3 class="pdoc-module-header" id="ScalingGroupVServerGroupsState" data-link-title="ScalingGroupVServerGroupsState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingGroupVServerGroups.ts#L181">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingGroupVServerGroups.ts#L181">
         interface <strong>ScalingGroupVServerGroupsState</strong>
     </a>
 </h3>
@@ -4408,7 +4408,7 @@ A list of vserver groups attached on scaling group. See Block vserverGroup below
 Input properties used for looking up and filtering ScalingGroupVServerGroups resources.
 
 <h4 class="pdoc-member-header" id="ScalingGroupVServerGroupsState-force">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingGroupVServerGroups.ts#L185">property <b>force</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingGroupVServerGroups.ts#L185">property <b>force</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>force?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4416,7 +4416,7 @@ Input properties used for looking up and filtering ScalingGroupVServerGroups res
 If instances of scaling group are attached/removed from slb backend server when attach/detach vserver group from scaling group. Default to true.
 
 <h4 class="pdoc-member-header" id="ScalingGroupVServerGroupsState-scalingGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingGroupVServerGroups.ts#L189">property <b>scalingGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingGroupVServerGroups.ts#L189">property <b>scalingGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scalingGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4424,7 +4424,7 @@ If instances of scaling group are attached/removed from slb backend server when 
 ID of the scaling group.
 
 <h4 class="pdoc-member-header" id="ScalingGroupVServerGroupsState-vserverGroups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingGroupVServerGroups.ts#L193">property <b>vserverGroups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingGroupVServerGroups.ts#L193">property <b>vserverGroups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vserverGroups?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#ScalingGroupVServerGroupsVserverGroup'>ScalingGroupVServerGroupsVserverGroup</a>&gt;[]&gt;;</code></pre>
@@ -4432,7 +4432,7 @@ ID of the scaling group.
 A list of vserver groups attached on scaling group. See Block vserverGroup below for details.
 
 <h3 class="pdoc-module-header" id="ScalingRuleArgs" data-link-title="ScalingRuleArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingRule.ts#L210">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingRule.ts#L210">
         interface <strong>ScalingRuleArgs</strong>
     </a>
 </h3>
@@ -4442,7 +4442,7 @@ A list of vserver groups attached on scaling group. See Block vserverGroup below
 The set of arguments for constructing a ScalingRule resource.
 
 <h4 class="pdoc-member-header" id="ScalingRuleArgs-adjustmentType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingRule.ts#L217">property <b>adjustmentType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingRule.ts#L217">property <b>adjustmentType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>adjustmentType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4453,7 +4453,7 @@ Adjustment mode of a scaling rule. Optional values:
 - TotalCapacity: It is used to adjust the quantity of ECS instances in the current scaling group to a specified value.
 
 <h4 class="pdoc-member-header" id="ScalingRuleArgs-adjustmentValue">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingRule.ts#L224">property <b>adjustmentValue</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingRule.ts#L224">property <b>adjustmentValue</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>adjustmentValue?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4464,7 +4464,7 @@ The number of ECS instances to be adjusted in the scaling rule. This parameter i
 - TotalCapacity：[0, 1000]
 
 <h4 class="pdoc-member-header" id="ScalingRuleArgs-cooldown">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingRule.ts#L228">property <b>cooldown</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingRule.ts#L228">property <b>cooldown</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cooldown?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4472,7 +4472,7 @@ The number of ECS instances to be adjusted in the scaling rule. This parameter i
 The cooldown time of the scaling rule. This parameter is applicable only to simple scaling rules. Value range: [0, 86,400], in seconds. The default value is empty，if not set, the return value will be 0, which is the default value of integer.
 
 <h4 class="pdoc-member-header" id="ScalingRuleArgs-disableScaleIn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingRule.ts#L232">property <b>disableScaleIn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingRule.ts#L232">property <b>disableScaleIn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>disableScaleIn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4480,7 +4480,7 @@ The cooldown time of the scaling rule. This parameter is applicable only to simp
 Indicates whether scale in by the target tracking policy is disabled. Default to false.
 
 <h4 class="pdoc-member-header" id="ScalingRuleArgs-estimatedInstanceWarmup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingRule.ts#L236">property <b>estimatedInstanceWarmup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingRule.ts#L236">property <b>estimatedInstanceWarmup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>estimatedInstanceWarmup?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4488,7 +4488,7 @@ Indicates whether scale in by the target tracking policy is disabled. Default to
 The estimated time, in seconds, until a newly launched instance will contribute CloudMonitor metrics. Default to 300.
 
 <h4 class="pdoc-member-header" id="ScalingRuleArgs-metricName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingRule.ts#L240">property <b>metricName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingRule.ts#L240">property <b>metricName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metricName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4496,7 +4496,7 @@ The estimated time, in seconds, until a newly launched instance will contribute 
 A CloudMonitor metric name.
 
 <h4 class="pdoc-member-header" id="ScalingRuleArgs-scalingGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingRule.ts#L244">property <b>scalingGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingRule.ts#L244">property <b>scalingGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scalingGroupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4504,7 +4504,7 @@ A CloudMonitor metric name.
 ID of the scaling group of a scaling rule.
 
 <h4 class="pdoc-member-header" id="ScalingRuleArgs-scalingRuleName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingRule.ts#L248">property <b>scalingRuleName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingRule.ts#L248">property <b>scalingRuleName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scalingRuleName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4512,7 +4512,7 @@ ID of the scaling group of a scaling rule.
 Name shown for the scaling rule, which must contain 2-64 characters (English or Chinese), starting with numbers, English letters or Chinese characters, and can contain number, underscores `_`, hypens `-`, and decimal point `.`. If this parameter value is not specified, the default value is scaling rule id.
 
 <h4 class="pdoc-member-header" id="ScalingRuleArgs-scalingRuleType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingRule.ts#L252">property <b>scalingRuleType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingRule.ts#L252">property <b>scalingRuleType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scalingRuleType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4520,7 +4520,7 @@ Name shown for the scaling rule, which must contain 2-64 characters (English or 
 The scaling rule type, either "SimpleScalingRule", "TargetTrackingScalingRule", "StepScalingRule". Default to "SimpleScalingRule".
 
 <h4 class="pdoc-member-header" id="ScalingRuleArgs-stepAdjustments">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingRule.ts#L256">property <b>stepAdjustments</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingRule.ts#L256">property <b>stepAdjustments</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>stepAdjustments?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#ScalingRuleStepAdjustment'>ScalingRuleStepAdjustment</a>&gt;[]&gt;;</code></pre>
@@ -4528,7 +4528,7 @@ The scaling rule type, either "SimpleScalingRule", "TargetTrackingScalingRule", 
 Steps for StepScalingRule. See Block stepAdjustment below for details.
 
 <h4 class="pdoc-member-header" id="ScalingRuleArgs-targetValue">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingRule.ts#L260">property <b>targetValue</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingRule.ts#L260">property <b>targetValue</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetValue?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4536,7 +4536,7 @@ Steps for StepScalingRule. See Block stepAdjustment below for details.
 The target value for the metric.
 
 <h3 class="pdoc-module-header" id="ScalingRuleState" data-link-title="ScalingRuleState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingRule.ts#L153">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingRule.ts#L153">
         interface <strong>ScalingRuleState</strong>
     </a>
 </h3>
@@ -4546,7 +4546,7 @@ The target value for the metric.
 Input properties used for looking up and filtering ScalingRule resources.
 
 <h4 class="pdoc-member-header" id="ScalingRuleState-adjustmentType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingRule.ts#L160">property <b>adjustmentType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingRule.ts#L160">property <b>adjustmentType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>adjustmentType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4557,7 +4557,7 @@ Adjustment mode of a scaling rule. Optional values:
 - TotalCapacity: It is used to adjust the quantity of ECS instances in the current scaling group to a specified value.
 
 <h4 class="pdoc-member-header" id="ScalingRuleState-adjustmentValue">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingRule.ts#L167">property <b>adjustmentValue</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingRule.ts#L167">property <b>adjustmentValue</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>adjustmentValue?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4568,12 +4568,12 @@ The number of ECS instances to be adjusted in the scaling rule. This parameter i
 - TotalCapacity：[0, 1000]
 
 <h4 class="pdoc-member-header" id="ScalingRuleState-ari">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingRule.ts#L168">property <b>ari</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingRule.ts#L168">property <b>ari</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ari?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ScalingRuleState-cooldown">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingRule.ts#L172">property <b>cooldown</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingRule.ts#L172">property <b>cooldown</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cooldown?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4581,7 +4581,7 @@ The number of ECS instances to be adjusted in the scaling rule. This parameter i
 The cooldown time of the scaling rule. This parameter is applicable only to simple scaling rules. Value range: [0, 86,400], in seconds. The default value is empty，if not set, the return value will be 0, which is the default value of integer.
 
 <h4 class="pdoc-member-header" id="ScalingRuleState-disableScaleIn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingRule.ts#L176">property <b>disableScaleIn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingRule.ts#L176">property <b>disableScaleIn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>disableScaleIn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4589,7 +4589,7 @@ The cooldown time of the scaling rule. This parameter is applicable only to simp
 Indicates whether scale in by the target tracking policy is disabled. Default to false.
 
 <h4 class="pdoc-member-header" id="ScalingRuleState-estimatedInstanceWarmup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingRule.ts#L180">property <b>estimatedInstanceWarmup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingRule.ts#L180">property <b>estimatedInstanceWarmup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>estimatedInstanceWarmup?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4597,7 +4597,7 @@ Indicates whether scale in by the target tracking policy is disabled. Default to
 The estimated time, in seconds, until a newly launched instance will contribute CloudMonitor metrics. Default to 300.
 
 <h4 class="pdoc-member-header" id="ScalingRuleState-metricName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingRule.ts#L184">property <b>metricName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingRule.ts#L184">property <b>metricName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metricName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4605,7 +4605,7 @@ The estimated time, in seconds, until a newly launched instance will contribute 
 A CloudMonitor metric name.
 
 <h4 class="pdoc-member-header" id="ScalingRuleState-scalingGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingRule.ts#L188">property <b>scalingGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingRule.ts#L188">property <b>scalingGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scalingGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4613,7 +4613,7 @@ A CloudMonitor metric name.
 ID of the scaling group of a scaling rule.
 
 <h4 class="pdoc-member-header" id="ScalingRuleState-scalingRuleName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingRule.ts#L192">property <b>scalingRuleName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingRule.ts#L192">property <b>scalingRuleName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scalingRuleName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4621,7 +4621,7 @@ ID of the scaling group of a scaling rule.
 Name shown for the scaling rule, which must contain 2-64 characters (English or Chinese), starting with numbers, English letters or Chinese characters, and can contain number, underscores `_`, hypens `-`, and decimal point `.`. If this parameter value is not specified, the default value is scaling rule id.
 
 <h4 class="pdoc-member-header" id="ScalingRuleState-scalingRuleType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingRule.ts#L196">property <b>scalingRuleType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingRule.ts#L196">property <b>scalingRuleType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scalingRuleType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4629,7 +4629,7 @@ Name shown for the scaling rule, which must contain 2-64 characters (English or 
 The scaling rule type, either "SimpleScalingRule", "TargetTrackingScalingRule", "StepScalingRule". Default to "SimpleScalingRule".
 
 <h4 class="pdoc-member-header" id="ScalingRuleState-stepAdjustments">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingRule.ts#L200">property <b>stepAdjustments</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingRule.ts#L200">property <b>stepAdjustments</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>stepAdjustments?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#ScalingRuleStepAdjustment'>ScalingRuleStepAdjustment</a>&gt;[]&gt;;</code></pre>
@@ -4637,7 +4637,7 @@ The scaling rule type, either "SimpleScalingRule", "TargetTrackingScalingRule", 
 Steps for StepScalingRule. See Block stepAdjustment below for details.
 
 <h4 class="pdoc-member-header" id="ScalingRuleState-targetValue">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scalingRule.ts#L204">property <b>targetValue</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scalingRule.ts#L204">property <b>targetValue</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetValue?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4645,7 +4645,7 @@ Steps for StepScalingRule. See Block stepAdjustment below for details.
 The target value for the metric.
 
 <h3 class="pdoc-module-header" id="ScheduleArgs" data-link-title="ScheduleArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/schedule.ts#L123">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/schedule.ts#L123">
         interface <strong>ScheduleArgs</strong>
     </a>
 </h3>
@@ -4655,72 +4655,72 @@ The target value for the metric.
 The set of arguments for constructing a Schedule resource.
 
 <h4 class="pdoc-member-header" id="ScheduleArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/schedule.ts#L124">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/schedule.ts#L124">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ScheduleArgs-desiredCapacity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/schedule.ts#L125">property <b>desiredCapacity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/schedule.ts#L125">property <b>desiredCapacity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>desiredCapacity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ScheduleArgs-launchExpirationTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/schedule.ts#L126">property <b>launchExpirationTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/schedule.ts#L126">property <b>launchExpirationTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>launchExpirationTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ScheduleArgs-launchTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/schedule.ts#L127">property <b>launchTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/schedule.ts#L127">property <b>launchTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>launchTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ScheduleArgs-maxValue">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/schedule.ts#L128">property <b>maxValue</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/schedule.ts#L128">property <b>maxValue</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxValue?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ScheduleArgs-minValue">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/schedule.ts#L129">property <b>minValue</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/schedule.ts#L129">property <b>minValue</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>minValue?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ScheduleArgs-recurrenceEndTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/schedule.ts#L130">property <b>recurrenceEndTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/schedule.ts#L130">property <b>recurrenceEndTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recurrenceEndTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ScheduleArgs-recurrenceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/schedule.ts#L131">property <b>recurrenceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/schedule.ts#L131">property <b>recurrenceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recurrenceType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ScheduleArgs-recurrenceValue">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/schedule.ts#L132">property <b>recurrenceValue</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/schedule.ts#L132">property <b>recurrenceValue</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recurrenceValue?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ScheduleArgs-scalingGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/schedule.ts#L133">property <b>scalingGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/schedule.ts#L133">property <b>scalingGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scalingGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ScheduleArgs-scheduledAction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/schedule.ts#L134">property <b>scheduledAction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/schedule.ts#L134">property <b>scheduledAction</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scheduledAction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ScheduleArgs-scheduledTaskName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/schedule.ts#L135">property <b>scheduledTaskName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/schedule.ts#L135">property <b>scheduledTaskName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scheduledTaskName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ScheduleArgs-taskEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/schedule.ts#L136">property <b>taskEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/schedule.ts#L136">property <b>taskEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>taskEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ScheduledTaskArgs" data-link-title="ScheduledTaskArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scheduledTask.ts#L234">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scheduledTask.ts#L234">
         interface <strong>ScheduledTaskArgs</strong>
     </a>
 </h3>
@@ -4730,7 +4730,7 @@ The set of arguments for constructing a Schedule resource.
 The set of arguments for constructing a ScheduledTask resource.
 
 <h4 class="pdoc-member-header" id="ScheduledTaskArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scheduledTask.ts#L238">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scheduledTask.ts#L238">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4738,7 +4738,7 @@ The set of arguments for constructing a ScheduledTask resource.
 Description of the scheduled task, which is 2-200 characters (English or Chinese) long.
 
 <h4 class="pdoc-member-header" id="ScheduledTaskArgs-desiredCapacity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scheduledTask.ts#L242">property <b>desiredCapacity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scheduledTask.ts#L242">property <b>desiredCapacity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>desiredCapacity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4746,7 +4746,7 @@ Description of the scheduled task, which is 2-200 characters (English or Chinese
 The expected number of instances in a scaling group when the scaling method of the scheduled task is to specify the number of instances in a scaling group. **NOTE:** You must specify the `DesiredCapacity` parameter when you create the scaling group.
 
 <h4 class="pdoc-member-header" id="ScheduledTaskArgs-launchExpirationTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scheduledTask.ts#L246">property <b>launchExpirationTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scheduledTask.ts#L246">property <b>launchExpirationTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>launchExpirationTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4754,7 +4754,7 @@ The expected number of instances in a scaling group when the scaling method of t
 The time period during which a failed scheduled task is retried. Unit: seconds. Valid values: 0 to 21600. Default value: 600
 
 <h4 class="pdoc-member-header" id="ScheduledTaskArgs-launchTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scheduledTask.ts#L253">property <b>launchTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scheduledTask.ts#L253">property <b>launchTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>launchTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4765,7 +4765,7 @@ If the `recurrenceType` parameter is specified, the task is executed repeatedly 
 Otherwise, the task is only executed once at the date and time specified by LaunchTime.
 
 <h4 class="pdoc-member-header" id="ScheduledTaskArgs-maxValue">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scheduledTask.ts#L257">property <b>maxValue</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scheduledTask.ts#L257">property <b>maxValue</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxValue?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4773,7 +4773,7 @@ Otherwise, the task is only executed once at the date and time specified by Laun
 The maximum number of instances in a scaling group when the scaling method of the scheduled task is to specify the number of instances in a scaling group.
 
 <h4 class="pdoc-member-header" id="ScheduledTaskArgs-minValue">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scheduledTask.ts#L261">property <b>minValue</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scheduledTask.ts#L261">property <b>minValue</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>minValue?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4781,7 +4781,7 @@ The maximum number of instances in a scaling group when the scaling method of th
 The minimum number of instances in a scaling group when the scaling method of the scheduled task is to specify the number of instances in a scaling group.
 
 <h4 class="pdoc-member-header" id="ScheduledTaskArgs-recurrenceEndTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scheduledTask.ts#L266">property <b>recurrenceEndTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scheduledTask.ts#L266">property <b>recurrenceEndTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recurrenceEndTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4790,7 +4790,7 @@ Specifies the end time after which the scheduled task is no longer repeated. Spe
 The time must be in UTC. You cannot enter a time point later than 365 days from the date of scheduled task creation. **NOTE:** You must specify `RecurrenceType`, `RecurrenceValue`, and `RecurrenceEndTime` at the same time.
 
 <h4 class="pdoc-member-header" id="ScheduledTaskArgs-recurrenceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scheduledTask.ts#L274">property <b>recurrenceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scheduledTask.ts#L274">property <b>recurrenceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recurrenceType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4802,7 +4802,7 @@ Specifies the recurrence type of the scheduled task. **NOTE:** You must specify 
 - Cron: (Available in 1.60.0+) The scheduled task is executed based on the specified cron expression.
 
 <h4 class="pdoc-member-header" id="ScheduledTaskArgs-recurrenceValue">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scheduledTask.ts#L282">property <b>recurrenceValue</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scheduledTask.ts#L282">property <b>recurrenceValue</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recurrenceValue?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4814,7 +4814,7 @@ Specifies how often a scheduled task recurs. **NOTE:** You must specify `Recurre
 - Cron: You can enter a cron expression which is written in UTC and consists of five fields: minute, hour, day of month (date), month, and day of week. The expression can contain wildcard characters including commas (,), question marks (?), hyphens (-), asterisks (*), number signs (#), forward slashes (/), and the L and W letters.
 
 <h4 class="pdoc-member-header" id="ScheduledTaskArgs-scalingGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scheduledTask.ts#L286">property <b>scalingGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scheduledTask.ts#L286">property <b>scalingGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scalingGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4822,7 +4822,7 @@ Specifies how often a scheduled task recurs. **NOTE:** You must specify `Recurre
 The ID of the scaling group where the number of instances is modified when the scheduled task is triggered. After the `ScalingGroupId` parameter is specified, the scaling method of the scheduled task is to specify the number of instances in a scaling group. You must specify at least one of the following parameters: `MinValue`, `MaxValue`, and `DesiredCapacity`. **NOTE:** You cannot specify `scheduledAction` and `scalingGroupId` at the same time.
 
 <h4 class="pdoc-member-header" id="ScheduledTaskArgs-scheduledAction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scheduledTask.ts#L290">property <b>scheduledAction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scheduledTask.ts#L290">property <b>scheduledAction</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scheduledAction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4830,7 +4830,7 @@ The ID of the scaling group where the number of instances is modified when the s
 The operation to be performed when a scheduled task is triggered. Enter the unique identifier of a scaling rule. **NOTE:** You cannot specify `scheduledAction` and `scalingGroupId` at the same time.
 
 <h4 class="pdoc-member-header" id="ScheduledTaskArgs-scheduledTaskName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scheduledTask.ts#L294">property <b>scheduledTaskName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scheduledTask.ts#L294">property <b>scheduledTaskName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scheduledTaskName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4838,7 +4838,7 @@ The operation to be performed when a scheduled task is triggered. Enter the uniq
 Display name of the scheduled task, which must be 2-40 characters (English or Chinese) long.
 
 <h4 class="pdoc-member-header" id="ScheduledTaskArgs-taskEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scheduledTask.ts#L298">property <b>taskEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scheduledTask.ts#L298">property <b>taskEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>taskEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4846,7 +4846,7 @@ Display name of the scheduled task, which must be 2-40 characters (English or Ch
 Specifies whether to start the scheduled task. Default to true.
 
 <h3 class="pdoc-module-header" id="ScheduledTaskState" data-link-title="ScheduledTaskState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scheduledTask.ts#L164">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scheduledTask.ts#L164">
         interface <strong>ScheduledTaskState</strong>
     </a>
 </h3>
@@ -4856,7 +4856,7 @@ Specifies whether to start the scheduled task. Default to true.
 Input properties used for looking up and filtering ScheduledTask resources.
 
 <h4 class="pdoc-member-header" id="ScheduledTaskState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scheduledTask.ts#L168">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scheduledTask.ts#L168">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4864,7 +4864,7 @@ Input properties used for looking up and filtering ScheduledTask resources.
 Description of the scheduled task, which is 2-200 characters (English or Chinese) long.
 
 <h4 class="pdoc-member-header" id="ScheduledTaskState-desiredCapacity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scheduledTask.ts#L172">property <b>desiredCapacity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scheduledTask.ts#L172">property <b>desiredCapacity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>desiredCapacity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4872,7 +4872,7 @@ Description of the scheduled task, which is 2-200 characters (English or Chinese
 The expected number of instances in a scaling group when the scaling method of the scheduled task is to specify the number of instances in a scaling group. **NOTE:** You must specify the `DesiredCapacity` parameter when you create the scaling group.
 
 <h4 class="pdoc-member-header" id="ScheduledTaskState-launchExpirationTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scheduledTask.ts#L176">property <b>launchExpirationTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scheduledTask.ts#L176">property <b>launchExpirationTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>launchExpirationTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4880,7 +4880,7 @@ The expected number of instances in a scaling group when the scaling method of t
 The time period during which a failed scheduled task is retried. Unit: seconds. Valid values: 0 to 21600. Default value: 600
 
 <h4 class="pdoc-member-header" id="ScheduledTaskState-launchTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scheduledTask.ts#L183">property <b>launchTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scheduledTask.ts#L183">property <b>launchTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>launchTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4891,7 +4891,7 @@ If the `recurrenceType` parameter is specified, the task is executed repeatedly 
 Otherwise, the task is only executed once at the date and time specified by LaunchTime.
 
 <h4 class="pdoc-member-header" id="ScheduledTaskState-maxValue">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scheduledTask.ts#L187">property <b>maxValue</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scheduledTask.ts#L187">property <b>maxValue</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxValue?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4899,7 +4899,7 @@ Otherwise, the task is only executed once at the date and time specified by Laun
 The maximum number of instances in a scaling group when the scaling method of the scheduled task is to specify the number of instances in a scaling group.
 
 <h4 class="pdoc-member-header" id="ScheduledTaskState-minValue">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scheduledTask.ts#L191">property <b>minValue</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scheduledTask.ts#L191">property <b>minValue</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>minValue?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -4907,7 +4907,7 @@ The maximum number of instances in a scaling group when the scaling method of th
 The minimum number of instances in a scaling group when the scaling method of the scheduled task is to specify the number of instances in a scaling group.
 
 <h4 class="pdoc-member-header" id="ScheduledTaskState-recurrenceEndTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scheduledTask.ts#L196">property <b>recurrenceEndTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scheduledTask.ts#L196">property <b>recurrenceEndTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recurrenceEndTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4916,7 +4916,7 @@ Specifies the end time after which the scheduled task is no longer repeated. Spe
 The time must be in UTC. You cannot enter a time point later than 365 days from the date of scheduled task creation. **NOTE:** You must specify `RecurrenceType`, `RecurrenceValue`, and `RecurrenceEndTime` at the same time.
 
 <h4 class="pdoc-member-header" id="ScheduledTaskState-recurrenceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scheduledTask.ts#L204">property <b>recurrenceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scheduledTask.ts#L204">property <b>recurrenceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recurrenceType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4928,7 +4928,7 @@ Specifies the recurrence type of the scheduled task. **NOTE:** You must specify 
 - Cron: (Available in 1.60.0+) The scheduled task is executed based on the specified cron expression.
 
 <h4 class="pdoc-member-header" id="ScheduledTaskState-recurrenceValue">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scheduledTask.ts#L212">property <b>recurrenceValue</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scheduledTask.ts#L212">property <b>recurrenceValue</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recurrenceValue?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4940,7 +4940,7 @@ Specifies how often a scheduled task recurs. **NOTE:** You must specify `Recurre
 - Cron: You can enter a cron expression which is written in UTC and consists of five fields: minute, hour, day of month (date), month, and day of week. The expression can contain wildcard characters including commas (,), question marks (?), hyphens (-), asterisks (*), number signs (#), forward slashes (/), and the L and W letters.
 
 <h4 class="pdoc-member-header" id="ScheduledTaskState-scalingGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scheduledTask.ts#L216">property <b>scalingGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scheduledTask.ts#L216">property <b>scalingGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scalingGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4948,7 +4948,7 @@ Specifies how often a scheduled task recurs. **NOTE:** You must specify `Recurre
 The ID of the scaling group where the number of instances is modified when the scheduled task is triggered. After the `ScalingGroupId` parameter is specified, the scaling method of the scheduled task is to specify the number of instances in a scaling group. You must specify at least one of the following parameters: `MinValue`, `MaxValue`, and `DesiredCapacity`. **NOTE:** You cannot specify `scheduledAction` and `scalingGroupId` at the same time.
 
 <h4 class="pdoc-member-header" id="ScheduledTaskState-scheduledAction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scheduledTask.ts#L220">property <b>scheduledAction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scheduledTask.ts#L220">property <b>scheduledAction</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scheduledAction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4956,7 +4956,7 @@ The ID of the scaling group where the number of instances is modified when the s
 The operation to be performed when a scheduled task is triggered. Enter the unique identifier of a scaling rule. **NOTE:** You cannot specify `scheduledAction` and `scalingGroupId` at the same time.
 
 <h4 class="pdoc-member-header" id="ScheduledTaskState-scheduledTaskName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scheduledTask.ts#L224">property <b>scheduledTaskName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scheduledTask.ts#L224">property <b>scheduledTaskName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scheduledTaskName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -4964,7 +4964,7 @@ The operation to be performed when a scheduled task is triggered. Enter the uniq
 Display name of the scheduled task, which must be 2-40 characters (English or Chinese) long.
 
 <h4 class="pdoc-member-header" id="ScheduledTaskState-taskEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/scheduledTask.ts#L228">property <b>taskEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/scheduledTask.ts#L228">property <b>taskEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>taskEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -4972,7 +4972,7 @@ Display name of the scheduled task, which must be 2-40 characters (English or Ch
 Specifies whether to start the scheduled task. Default to true.
 
 <h3 class="pdoc-module-header" id="ScheduleState" data-link-title="ScheduleState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/schedule.ts#L104">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/schedule.ts#L104">
         interface <strong>ScheduleState</strong>
     </a>
 </h3>
@@ -4982,67 +4982,67 @@ Specifies whether to start the scheduled task. Default to true.
 Input properties used for looking up and filtering Schedule resources.
 
 <h4 class="pdoc-member-header" id="ScheduleState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/schedule.ts#L105">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/schedule.ts#L105">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ScheduleState-desiredCapacity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/schedule.ts#L106">property <b>desiredCapacity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/schedule.ts#L106">property <b>desiredCapacity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>desiredCapacity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ScheduleState-launchExpirationTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/schedule.ts#L107">property <b>launchExpirationTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/schedule.ts#L107">property <b>launchExpirationTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>launchExpirationTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ScheduleState-launchTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/schedule.ts#L108">property <b>launchTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/schedule.ts#L108">property <b>launchTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>launchTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ScheduleState-maxValue">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/schedule.ts#L109">property <b>maxValue</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/schedule.ts#L109">property <b>maxValue</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxValue?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ScheduleState-minValue">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/schedule.ts#L110">property <b>minValue</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/schedule.ts#L110">property <b>minValue</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>minValue?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ScheduleState-recurrenceEndTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/schedule.ts#L111">property <b>recurrenceEndTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/schedule.ts#L111">property <b>recurrenceEndTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recurrenceEndTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ScheduleState-recurrenceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/schedule.ts#L112">property <b>recurrenceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/schedule.ts#L112">property <b>recurrenceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recurrenceType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ScheduleState-recurrenceValue">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/schedule.ts#L113">property <b>recurrenceValue</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/schedule.ts#L113">property <b>recurrenceValue</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>recurrenceValue?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ScheduleState-scalingGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/schedule.ts#L114">property <b>scalingGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/schedule.ts#L114">property <b>scalingGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scalingGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ScheduleState-scheduledAction">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/schedule.ts#L115">property <b>scheduledAction</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/schedule.ts#L115">property <b>scheduledAction</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scheduledAction?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ScheduleState-scheduledTaskName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/schedule.ts#L116">property <b>scheduledTaskName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/schedule.ts#L116">property <b>scheduledTaskName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scheduledTaskName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ScheduleState-taskEnabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/efc8f79eae1d74742dbcdd61936b88e0f33166b4/sdk/nodejs/ess/schedule.ts#L117">property <b>taskEnabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ess/schedule.ts#L117">property <b>taskEnabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>taskEnabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>

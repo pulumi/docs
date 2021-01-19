@@ -13,7 +13,9 @@ Explore the resources and functions of the ga module in the AliCloud package.
 <ul class="api">
     <li><a href="accelerator" title="Accelerator"><span class="symbol resource"></span>Accelerator</a></li>
     <li><a href="bandwidthpackage" title="BandwidthPackage"><span class="symbol resource"></span>BandwidthPackage</a></li>
+    <li><a href="bandwidthpackageattachment" title="BandwidthPackageAttachment"><span class="symbol resource"></span>BandwidthPackageAttachment</a></li>
     <li><a href="endpointgroup" title="EndpointGroup"><span class="symbol resource"></span>EndpointGroup</a></li>
+    <li><a href="ipset" title="IpSet"><span class="symbol resource"></span>IpSet</a></li>
     <li><a href="listener" title="Listener"><span class="symbol resource"></span>Listener</a></li>
 </ul>
 
@@ -22,6 +24,7 @@ Explore the resources and functions of the ga module in the AliCloud package.
     <li><a href="getaccelerators" title="GetAccelerators"><span class="symbol function"></span>GetAccelerators</a></li>
     <li><a href="getbandwidthpackages" title="GetBandwidthPackages"><span class="symbol function"></span>GetBandwidthPackages</a></li>
     <li><a href="getendpointgroups" title="GetEndpointGroups"><span class="symbol function"></span>GetEndpointGroups</a></li>
+    <li><a href="getipsets" title="GetIpSets"><span class="symbol function"></span>GetIpSets</a></li>
     <li><a href="getlisteners" title="GetListeners"><span class="symbol function"></span>GetListeners</a></li>
 </ul>
 
@@ -34,7 +37,7 @@ Explore the resources and functions of the ga module in the AliCloud package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 	<dt>Version</dt>
-	<dd>2.31.1</dd>
+	<dd>2.32.0</dd>
 </dl>
 
 

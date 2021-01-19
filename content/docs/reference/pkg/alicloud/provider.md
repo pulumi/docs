@@ -1258,6 +1258,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="brainindustrial_csharp">
+<a href="#brainindustrial_csharp" style="color: inherit; text-decoration: inherit;">Brain<wbr>Industrial</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="bssopenapi_csharp">
 <a href="#bssopenapi_csharp" style="color: inherit; text-decoration: inherit;">Bssopenapi</a>
 </span>
@@ -1431,6 +1440,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="ecs_csharp">
 <a href="#ecs_csharp" style="color: inherit; text-decoration: inherit;">Ecs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="eipanycast_csharp">
+<a href="#eipanycast_csharp" style="color: inherit; text-decoration: inherit;">Eipanycast</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -1795,6 +1813,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="brainindustrial_go">
+<a href="#brainindustrial_go" style="color: inherit; text-decoration: inherit;">Brain<wbr>Industrial</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="bssopenapi_go">
 <a href="#bssopenapi_go" style="color: inherit; text-decoration: inherit;">Bssopenapi</a>
 </span>
@@ -1968,6 +1995,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="ecs_go">
 <a href="#ecs_go" style="color: inherit; text-decoration: inherit;">Ecs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="eipanycast_go">
+<a href="#eipanycast_go" style="color: inherit; text-decoration: inherit;">Eipanycast</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -2332,6 +2368,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="brainindustrial_nodejs">
+<a href="#brainindustrial_nodejs" style="color: inherit; text-decoration: inherit;">brain<wbr>Industrial</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="bssopenapi_nodejs">
 <a href="#bssopenapi_nodejs" style="color: inherit; text-decoration: inherit;">bssopenapi</a>
 </span>
@@ -2505,6 +2550,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="ecs_nodejs">
 <a href="#ecs_nodejs" style="color: inherit; text-decoration: inherit;">ecs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="eipanycast_nodejs">
+<a href="#eipanycast_nodejs" style="color: inherit; text-decoration: inherit;">eipanycast</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -2869,6 +2923,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="brain_industrial_python">
+<a href="#brain_industrial_python" style="color: inherit; text-decoration: inherit;">brain_<wbr>industrial</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="bssopenapi_python">
 <a href="#bssopenapi_python" style="color: inherit; text-decoration: inherit;">bssopenapi</a>
 </span>
@@ -3042,6 +3105,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
             title="Optional">
         <span id="ecs_python">
 <a href="#ecs_python" style="color: inherit; text-decoration: inherit;">ecs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="eipanycast_python">
+<a href="#eipanycast_python" style="color: inherit; text-decoration: inherit;">eipanycast</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
