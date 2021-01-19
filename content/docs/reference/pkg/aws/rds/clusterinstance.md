@@ -42,6 +42,7 @@ class MyStack : Stack
     {
         var @default = new Aws.Rds.Cluster("default", new Aws.Rds.ClusterArgs
         {
+            ClusterIdentifier = "aurora-cluster-demo",
             AvailabilityZones = 
             {
                 "us-west-2a",
@@ -86,6 +87,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := rds.NewCluster(ctx, "_default", &rds.ClusterArgs{
+			ClusterIdentifier: pulumi.String("aurora-cluster-demo"),
 			AvailabilityZones: pulumi.StringArray{
 				pulumi.String("us-west-2a"),
 				pulumi.String("us-west-2b"),
@@ -125,6 +127,7 @@ import pulumi
 import pulumi_aws as aws
 
 default = aws.rds.Cluster("default",
+    cluster_identifier="aurora-cluster-demo",
     availability_zones=[
         "us-west-2a",
         "us-west-2b",
@@ -152,6 +155,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
 const _default = new aws.rds.Cluster("default", {
+    clusterIdentifier: "aurora-cluster-demo",
     availabilityZones: [
         "us-west-2a",
         "us-west-2b",

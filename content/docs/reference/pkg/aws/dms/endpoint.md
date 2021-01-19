@@ -2995,6 +2995,16 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="datepartitionenabled_csharp">
+<a href="#datepartitionenabled_csharp" style="color: inherit; text-decoration: inherit;">Date<wbr>Partition<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Partition S3 bucket folders based on transaction commit dates. Defaults to `false`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="externaltabledefinition_csharp">
 <a href="#externaltabledefinition_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Table<wbr>Definition</a>
 </span>
@@ -3068,6 +3078,16 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Delimiter used to separate rows in the source files. Defaults to `\n`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="datepartitionenabled_go">
+<a href="#datepartitionenabled_go" style="color: inherit; text-decoration: inherit;">Date<wbr>Partition<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Partition S3 bucket folders based on transaction commit dates. Defaults to `false`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3147,6 +3167,16 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="datepartitionenabled_nodejs">
+<a href="#datepartitionenabled_nodejs" style="color: inherit; text-decoration: inherit;">date<wbr>Partition<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Partition S3 bucket folders based on transaction commit dates. Defaults to `false`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="externaltabledefinition_nodejs">
 <a href="#externaltabledefinition_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Table<wbr>Definition</a>
 </span>
@@ -3220,6 +3250,16 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Delimiter used to separate rows in the source files. Defaults to `\n`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="date_partition_enabled_python">
+<a href="#date_partition_enabled_python" style="color: inherit; text-decoration: inherit;">date_<wbr>partition_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Partition S3 bucket folders based on transaction commit dates. Defaults to `false`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">

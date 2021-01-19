@@ -36,7 +36,7 @@ class MyStack : Stack
             ResponseType = "UNAUTHORIZED",
             ResponseTemplates = 
             {
-                { "application/json", "{'message':$context.error.messageString}" },
+                { "application/json", "{\"message\":$context.error.messageString}" },
             },
             ResponseParameters = 
             {
@@ -72,7 +72,7 @@ func main() {
 			StatusCode:   pulumi.String("401"),
 			ResponseType: pulumi.String("UNAUTHORIZED"),
 			ResponseTemplates: pulumi.StringMap{
-				"application/json": pulumi.String(fmt.Sprintf("%v%v%v", "{'message':", "$", "context.error.messageString}")),
+				"application/json": pulumi.String(fmt.Sprintf("%v%v%v", "{\"message\":", "$", "context.error.messageString}")),
 			},
 			ResponseParameters: pulumi.StringMap{
 				"gatewayresponse.header.Authorization": pulumi.String("'Basic'"),
@@ -99,7 +99,7 @@ test = aws.apigateway.Response("test",
     status_code="401",
     response_type="UNAUTHORIZED",
     response_templates={
-        "application/json": "{'message':$context.error.messageString}",
+        "application/json": "{\"message\":$context.error.messageString}",
     },
     response_parameters={
         "gatewayresponse.header.Authorization": "'Basic'",
@@ -120,7 +120,7 @@ const test = new aws.apigateway.Response("test", {
     statusCode: "401",
     responseType: "UNAUTHORIZED",
     responseTemplates: {
-        "application/json": `{'message':$context.error.messageString}`,
+        "application/json": `{"message":$context.error.messageString}`,
     },
     responseParameters: {
         "gatewayresponse.header.Authorization": "'Basic'",

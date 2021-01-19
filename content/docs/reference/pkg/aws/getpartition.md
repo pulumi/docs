@@ -199,6 +199,16 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Identifier of the current partition (e.g. `aws` in AWS Commercial, `aws-cn` in AWS China).
 {{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="reversednsprefix_csharp">
+<a href="#reversednsprefix_csharp" style="color: inherit; text-decoration: inherit;">Reverse<wbr>Dns<wbr>Prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Prefix of service names (e.g. `com.amazonaws` in AWS Commercial, `cn.com.amazonaws` in AWS China).
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -234,6 +244,16 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Identifier of the current partition (e.g. `aws` in AWS Commercial, `aws-cn` in AWS China).
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="reversednsprefix_go">
+<a href="#reversednsprefix_go" style="color: inherit; text-decoration: inherit;">Reverse<wbr>Dns<wbr>Prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Prefix of service names (e.g. `com.amazonaws` in AWS Commercial, `cn.com.amazonaws` in AWS China).
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -271,6 +291,16 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Identifier of the current partition (e.g. `aws` in AWS Commercial, `aws-cn` in AWS China).
 {{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="reversednsprefix_nodejs">
+<a href="#reversednsprefix_nodejs" style="color: inherit; text-decoration: inherit;">reverse<wbr>Dns<wbr>Prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Prefix of service names (e.g. `com.amazonaws` in AWS Commercial, `cn.com.amazonaws` in AWS China).
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -306,6 +336,16 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identifier of the current partition (e.g. `aws` in AWS Commercial, `aws-cn` in AWS China).
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="reverse_dns_prefix_python">
+<a href="#reverse_dns_prefix_python" style="color: inherit; text-decoration: inherit;">reverse_<wbr>dns_<wbr>prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Prefix of service names (e.g. `com.amazonaws` in AWS Commercial, `cn.com.amazonaws` in AWS China).
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
