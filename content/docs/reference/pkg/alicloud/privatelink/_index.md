@@ -21,6 +21,7 @@ Explore the resources and functions of the privatelink module in the AliCloud pa
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
+    <li><a href="getservice" title="GetService"><span class="symbol function"></span>GetService</a></li>
     <li><a href="getvpcendpointconnections" title="GetVpcEndpointConnections"><span class="symbol function"></span>GetVpcEndpointConnections</a></li>
     <li><a href="getvpcendpointserviceresources" title="GetVpcEndpointServiceResources"><span class="symbol function"></span>GetVpcEndpointServiceResources</a></li>
     <li><a href="getvpcendpointserviceusers" title="GetVpcEndpointServiceUsers"><span class="symbol function"></span>GetVpcEndpointServiceUsers</a></li>
@@ -38,7 +39,7 @@ Explore the resources and functions of the privatelink module in the AliCloud pa
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 	<dt>Version</dt>
-	<dd>2.31.1</dd>
+	<dd>2.32.0</dd>
 </dl>
 
 
