@@ -1,7 +1,7 @@
 ---
 title: Easily Create and Manage AWS EKS Kubernetes Clusters
 h1: "Easily Create and Manage AWS EKS Kubernetes Clusters with Pulumi"
-date: "2019-01-24"
+date: "2021-01-21"
 meta_desc: "Use Pulumi to easily deploy new clusters, manage AWS resources, and deploy Kubernetes apps. See how to provision an EKS cluster with a single CLI command."
 meta_image: "pulumi_k8s.png"
 authors: 
@@ -22,7 +22,7 @@ package](https://github.com/pulumi/pulumi-eks). Let's see how.
 <!--more-->
 
 {{% notes type="info" %}}
-Updated December 2020 to include Python, .NET, and Go support.
+Updated January 2021 to include Python, .NET, and Go support.
 {{% /notes %}}
 
 To get started, download the free and open source
