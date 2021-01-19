@@ -3,7 +3,7 @@ title: "Module config"
 title_tag: "Module config | Package @pulumi/venafi | Node.js SDK"
 linktitle: "config"
 meta_desc: "Explore members of the config module in the @pulumi/venafi package."
-git_sha: "9800749d9f78f899f2523499f5f5f1bbffd20be1"
+git_sha: "509124eeffdab7dd4a8adf7eeea7a58a1e6d0d53"
 block_external_search_index: true
 ---
 
@@ -34,7 +34,7 @@ block_external_search_index: true
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="accessToken" data-link-title="accessToken">
-    <a href="https://github.com/pulumi/pulumi-venafi/blob/9800749d9f78f899f2523499f5f5f1bbffd20be1/sdk/nodejs/config/vars.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-venafi/blob/509124eeffdab7dd4a8adf7eeea7a58a1e6d0d53/sdk/nodejs/config/vars.ts#L12">
         let <strong>accessToken</strong>
     </a>
 </h3>
@@ -44,7 +44,7 @@ block_external_search_index: true
 Access token for TPP, user should use this for authentication
 
 <h3 class="pdoc-module-header" id="apiKey" data-link-title="apiKey">
-    <a href="https://github.com/pulumi/pulumi-venafi/blob/9800749d9f78f899f2523499f5f5f1bbffd20be1/sdk/nodejs/config/vars.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-venafi/blob/509124eeffdab7dd4a8adf7eeea7a58a1e6d0d53/sdk/nodejs/config/vars.ts#L16">
         let <strong>apiKey</strong>
     </a>
 </h3>
@@ -54,7 +54,7 @@ Access token for TPP, user should use this for authentication
 API key for Venafi Cloud. Example: 142231b7-cvb0-412e-886b-6aeght0bc93d
 
 <h3 class="pdoc-module-header" id="devMode" data-link-title="devMode">
-    <a href="https://github.com/pulumi/pulumi-venafi/blob/9800749d9f78f899f2523499f5f5f1bbffd20be1/sdk/nodejs/config/vars.ts#L21">
+    <a href="https://github.com/pulumi/pulumi-venafi/blob/509124eeffdab7dd4a8adf7eeea7a58a1e6d0d53/sdk/nodejs/config/vars.ts#L21">
         let <strong>devMode</strong>
     </a>
 </h3>
@@ -65,7 +65,7 @@ When set to true, the resulting certificate will be issued by an ephemeral, no t
 Venafi Cloud or Platform. Useful for development and testing.
 
 <h3 class="pdoc-module-header" id="tppPassword" data-link-title="tppPassword">
-    <a href="https://github.com/pulumi/pulumi-venafi/blob/9800749d9f78f899f2523499f5f5f1bbffd20be1/sdk/nodejs/config/vars.ts#L25">
+    <a href="https://github.com/pulumi/pulumi-venafi/blob/509124eeffdab7dd4a8adf7eeea7a58a1e6d0d53/sdk/nodejs/config/vars.ts#L25">
         let <strong>tppPassword</strong>
     </a>
 </h3>
@@ -75,7 +75,7 @@ Venafi Cloud or Platform. Useful for development and testing.
 Password for WebSDK user. Example: password
 
 <h3 class="pdoc-module-header" id="tppUsername" data-link-title="tppUsername">
-    <a href="https://github.com/pulumi/pulumi-venafi/blob/9800749d9f78f899f2523499f5f5f1bbffd20be1/sdk/nodejs/config/vars.ts#L29">
+    <a href="https://github.com/pulumi/pulumi-venafi/blob/509124eeffdab7dd4a8adf7eeea7a58a1e6d0d53/sdk/nodejs/config/vars.ts#L29">
         let <strong>tppUsername</strong>
     </a>
 </h3>
@@ -85,7 +85,7 @@ Password for WebSDK user. Example: password
 WebSDK user for Venafi Platform. Example: admin
 
 <h3 class="pdoc-module-header" id="trustBundle" data-link-title="trustBundle">
-    <a href="https://github.com/pulumi/pulumi-venafi/blob/9800749d9f78f899f2523499f5f5f1bbffd20be1/sdk/nodejs/config/vars.ts#L34">
+    <a href="https://github.com/pulumi/pulumi-venafi/blob/509124eeffdab7dd4a8adf7eeea7a58a1e6d0d53/sdk/nodejs/config/vars.ts#L34">
         let <strong>trustBundle</strong>
     </a>
 </h3>
@@ -96,7 +96,7 @@ Use to specify a PEM-formatted file that contains certificates to be trust ancho
 Venafi Web Service. Example: trust_bundle = "${file("chain.pem")}"
 
 <h3 class="pdoc-module-header" id="url" data-link-title="url">
-    <a href="https://github.com/pulumi/pulumi-venafi/blob/9800749d9f78f899f2523499f5f5f1bbffd20be1/sdk/nodejs/config/vars.ts#L38">
+    <a href="https://github.com/pulumi/pulumi-venafi/blob/509124eeffdab7dd4a8adf7eeea7a58a1e6d0d53/sdk/nodejs/config/vars.ts#L38">
         let <strong>url</strong>
     </a>
 </h3>
@@ -106,7 +106,7 @@ Venafi Web Service. Example: trust_bundle = "${file("chain.pem")}"
 The Venafi Web Service URL.. Example: https://tpp.venafi.example/vedsdk
 
 <h3 class="pdoc-module-header" id="zone" data-link-title="zone">
-    <a href="https://github.com/pulumi/pulumi-venafi/blob/9800749d9f78f899f2523499f5f5f1bbffd20be1/sdk/nodejs/config/vars.ts#L43">
+    <a href="https://github.com/pulumi/pulumi-venafi/blob/509124eeffdab7dd4a8adf7eeea7a58a1e6d0d53/sdk/nodejs/config/vars.ts#L43">
         let <strong>zone</strong>
     </a>
 </h3>
