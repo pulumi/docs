@@ -2323,6 +2323,131 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="py class">
+<dt id="pulumi_newrelic.OneDashboard">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_newrelic.</code><code class="sig-name descname">OneDashboard</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">account_id</span><span class="p">:</span> <span class="n">Union[int, Awaitable[int], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pages</span><span class="p">:</span> <span class="n">Union[Sequence[Union[OneDashboardPageArgs, Mapping[str, Any], Awaitable[Union[OneDashboardPageArgs, Mapping[str, Any]]], Output[T]]], Awaitable[Sequence[Union[OneDashboardPageArgs, Mapping[str, Any], Awaitable[Union[OneDashboardPageArgs, Mapping[str, Any]]], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">permissions</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_newrelic.OneDashboard" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>NOTE:</strong> This feature is currently in <strong>CLOSED BETA</strong>, and will <strong>NOT WORK</strong> for most New Relic customers and is subject to <strong>BREAKING CHANGES</strong>.</p>
+<p>Use this resource to create and manage New Relic One dashboards.</p>
+<p>New Relic dashboards can be imported using their GUID, e.g.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import newrelic:index/oneDashboard:OneDashboard my_dashboard &lt;Dashboard GUID&gt;
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>account_id</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Determines the New Relic account where the dashboard will be created. Defaults to the account associated with the API key used.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Brief text describing the dashboard.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The title of the dashboard.</p></li>
+<li><p><strong>pages</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'OneDashboardPageArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – A nested block that describes a page. See Nested page blocks below for details.</p></li>
+<li><p><strong>permissions</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Determines who can see the dashboard in an account. Valid values are <code class="docutils literal notranslate"><span class="pre">private</span></code>, <code class="docutils literal notranslate"><span class="pre">public_read_only</span></code>, or <code class="docutils literal notranslate"><span class="pre">public_read_write</span></code>.  Defaults to <code class="docutils literal notranslate"><span class="pre">public_read_only</span></code>.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="pulumi_newrelic.OneDashboard.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">account_id</span><span class="p">:</span> <span class="n">Union[int, Awaitable[int], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">guid</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pages</span><span class="p">:</span> <span class="n">Union[Sequence[Union[OneDashboardPageArgs, Mapping[str, Any], Awaitable[Union[OneDashboardPageArgs, Mapping[str, Any]]], Output[T]]], Awaitable[Sequence[Union[OneDashboardPageArgs, Mapping[str, Any], Awaitable[Union[OneDashboardPageArgs, Mapping[str, Any]]], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">permalink</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">permissions</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_newrelic.one_dashboard.OneDashboard<a class="headerlink" href="#pulumi_newrelic.OneDashboard.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing OneDashboard resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>account_id</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Determines the New Relic account where the dashboard will be created. Defaults to the account associated with the API key used.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Brief text describing the dashboard.</p></li>
+<li><p><strong>guid</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique entity identifier of the dashboard page in New Relic.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The title of the dashboard.</p></li>
+<li><p><strong>pages</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'OneDashboardPageArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – A nested block that describes a page. See Nested page blocks below for details.</p></li>
+<li><p><strong>permalink</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The URL for viewing the dashboard.</p></li>
+<li><p><strong>permissions</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Determines who can see the dashboard in an account. Valid values are <code class="docutils literal notranslate"><span class="pre">private</span></code>, <code class="docutils literal notranslate"><span class="pre">public_read_only</span></code>, or <code class="docutils literal notranslate"><span class="pre">public_read_write</span></code>.  Defaults to <code class="docutils literal notranslate"><span class="pre">public_read_only</span></code>.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_newrelic.OneDashboard.account_id">
+<em class="property">property </em><code class="sig-name descname">account_id</code><a class="headerlink" href="#pulumi_newrelic.OneDashboard.account_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determines the New Relic account where the dashboard will be created. Defaults to the account associated with the API key used.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_newrelic.OneDashboard.description">
+<em class="property">property </em><code class="sig-name descname">description</code><a class="headerlink" href="#pulumi_newrelic.OneDashboard.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>Brief text describing the dashboard.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_newrelic.OneDashboard.guid">
+<em class="property">property </em><code class="sig-name descname">guid</code><a class="headerlink" href="#pulumi_newrelic.OneDashboard.guid" title="Permalink to this definition">¶</a></dt>
+<dd><p>The unique entity identifier of the dashboard page in New Relic.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_newrelic.OneDashboard.name">
+<em class="property">property </em><code class="sig-name descname">name</code><a class="headerlink" href="#pulumi_newrelic.OneDashboard.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The title of the dashboard.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_newrelic.OneDashboard.pages">
+<em class="property">property </em><code class="sig-name descname">pages</code><a class="headerlink" href="#pulumi_newrelic.OneDashboard.pages" title="Permalink to this definition">¶</a></dt>
+<dd><p>A nested block that describes a page. See Nested page blocks below for details.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_newrelic.OneDashboard.permalink">
+<em class="property">property </em><code class="sig-name descname">permalink</code><a class="headerlink" href="#pulumi_newrelic.OneDashboard.permalink" title="Permalink to this definition">¶</a></dt>
+<dd><p>The URL for viewing the dashboard.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_newrelic.OneDashboard.permissions">
+<em class="property">property </em><code class="sig-name descname">permissions</code><a class="headerlink" href="#pulumi_newrelic.OneDashboard.permissions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determines who can see the dashboard in an account. Valid values are <code class="docutils literal notranslate"><span class="pre">private</span></code>, <code class="docutils literal notranslate"><span class="pre">public_read_only</span></code>, or <code class="docutils literal notranslate"><span class="pre">public_read_write</span></code>.  Defaults to <code class="docutils literal notranslate"><span class="pre">public_read_only</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_newrelic.OneDashboard.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_newrelic.OneDashboard.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_newrelic.OneDashboard.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_newrelic.OneDashboard.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_newrelic.Provider">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_newrelic.</code><code class="sig-name descname">Provider</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">account_id</span><span class="p">:</span> <span class="n">Union[int, Awaitable[int], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">admin_api_key</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">api_key</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">api_url</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">cacert_file</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">infrastructure_api_url</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">insecure_skip_verify</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">insights_insert_key</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">insights_insert_url</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">insights_query_url</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">nerdgraph_api_url</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">region</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">synthetics_api_url</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_newrelic.Provider" title="Permalink to this definition">¶</a></dt>
 <dd><p>The provider type for the newrelic package. By default, resources use package-wide configuration
