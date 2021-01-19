@@ -3,7 +3,7 @@ title: "Module types"
 title_tag: "Module types | Package @pulumi/openstack | Node.js SDK"
 linktitle: "types"
 meta_desc: "Explore members of the types module in the @pulumi/openstack package."
-git_sha: "ff8cf536b72bf7a24c09c8e6b512b042c3b177f3"
+git_sha: "d24d5450db2b9b67bf7e69c0c5715d7a04a180f3"
 block_external_search_index: true
 ---
 
