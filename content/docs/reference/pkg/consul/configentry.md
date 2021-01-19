@@ -542,6 +542,154 @@ const terminatingGateway = new consul.ConfigEntry("terminatingGateway", {
 
 {{% /example %}}
 
+### `service-intentions` config entry
+{{% example csharp %}}
+```csharp
+using System.Collections.Generic;
+using System.Text.Json;
+using Pulumi;
+using Consul = Pulumi.Consul;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var serviceIntentions = new Consul.ConfigEntry("serviceIntentions", new Consul.ConfigEntryArgs
+        {
+            Kind = "service-intentions",
+            ConfigJson = JsonSerializer.Serialize(new Dictionary<string, object?>
+            {
+                { "Sources", new[]
+                    {
+                        new Dictionary<string, object?>
+                        {
+                            { "Action", "allow" },
+                            { "Name", "frontend-webapp" },
+                            { "Precedence", 9 },
+                            { "Type", "consul" },
+                        },
+                        new Dictionary<string, object?>
+                        {
+                            { "Action", "allow" },
+                            { "Name", "nightly-cronjob" },
+                            { "Precedence", 9 },
+                            { "Type", "consul" },
+                        },
+                    }
+                 },
+            }),
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"encoding/json"
+
+	"github.com/pulumi/pulumi-consul/sdk/v2/go/consul"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		tmpJSON0, err := json.Marshal(map[string]interface{}{
+			"Sources": []map[string]interface{}{
+				map[string]interface{}{
+					"Action":     "allow",
+					"Name":       "frontend-webapp",
+					"Precedence": 9,
+					"Type":       "consul",
+				},
+				map[string]interface{}{
+					"Action":     "allow",
+					"Name":       "nightly-cronjob",
+					"Precedence": 9,
+					"Type":       "consul",
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		json0 := string(tmpJSON0)
+		_, err := consul.NewConfigEntry(ctx, "serviceIntentions", &consul.ConfigEntryArgs{
+			Kind:       pulumi.String("service-intentions"),
+			ConfigJson: pulumi.String(json0),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import json
+import pulumi_consul as consul
+
+service_intentions = consul.ConfigEntry("serviceIntentions",
+    kind="service-intentions",
+    config_json=json.dumps({
+        "Sources": [
+            {
+                "Action": "allow",
+                "Name": "frontend-webapp",
+                "Precedence": 9,
+                "Type": "consul",
+            },
+            {
+                "Action": "allow",
+                "Name": "nightly-cronjob",
+                "Precedence": 9,
+                "Type": "consul",
+            },
+        ],
+    }))
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as consul from "@pulumi/consul";
+
+const serviceIntentions = new consul.ConfigEntry("serviceIntentions", {
+    kind: "service-intentions",
+    configJson: JSON.stringify({
+        Sources: [
+            {
+                Action: "allow",
+                Name: "frontend-webapp",
+                Precedence: 9,
+                Type: "consul",
+            },
+            {
+                Action: "allow",
+                Name: "nightly-cronjob",
+                Precedence: 9,
+                Type: "consul",
+            },
+        ],
+    }),
+});
+```
+
+{{% /example %}}
+
 {{% /examples %}}
 
 
