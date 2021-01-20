@@ -11,58 +11,6 @@ meta_desc: "Documentation for the spotinst.aws.Beanstalk resource with examples,
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Provides a Spotinst AWS group resource using Elastic Beanstalk.
-## Scheduled Tasks
-
-Each `scheduled_task` supports the following:
-
-* `task_type` - (Required) The task type to run. Supported task types are: `"scale"`, `"backup_ami"`, `"roll"`, `"scaleUp"`, `"percentageScaleUp"`, `"scaleDown"`, `"percentageScaleDown"`, `"statefulUpdateCapacity"`.
-* `cron_expression` - (Optional; Required if not using `frequency`) A valid cron expression. The cron is running in UTC time zone and is in [Unix cron format](https://en.wikipedia.org/wiki/Cron).
-* `start_time` - (Optional; Format: ISO 8601) Set a start time for one time tasks.
-* `frequency` - (Optional; Required if not using `cron_expression`) The recurrence frequency to run this task. Supported values are `"hourly"`, `"daily"`, `"weekly"` and `"continuous"`.
-* `scale_target_capacity` - (Optional) The desired number of instances the group should have.
-* `scale_min_capacity` - (Optional) The minimum number of instances the group should have.
-* `scale_max_capacity` - (Optional) The maximum number of instances the group should have.
-* `is_enabled` - (Optional, Default: `true`) Setting the task to being enabled or disabled.
-* `target_capacity` - (Optional; Only valid for statefulUpdateCapacity) The desired number of instances the group should have.
-* `min_capacity` - (Optional; Only valid for statefulUpdateCapacity) The minimum number of instances the group should have.
-* `max_capacity` - (Optional; Only valid for statefulUpdateCapacity) The maximum number of instances the group should have.
-* `batch_size_percentage` - (Optional; Required when the `task_type` is `"roll"`.) The percentage size of each batch in the scheduled deployment roll.
-* `grace_period` - (Optional) The period of time (seconds) to wait before checking a batch's health after it's deployment.
-* `adjustment` - (Optional; Min 1) The number of instances to add or remove.
-* `adjustment_percentage` - (Optional; Min 1) The percentage of instances to add or remove.
-
-Usage:
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-```
-```python
-import pulumi
-```
-```csharp
-using Pulumi;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-    }
-
-}
-```
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		return nil
-	})
-}
-```
 
 
 {{% examples %}}
@@ -2292,7 +2240,8 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The task type to run. Supported task types are: `"scale"`, `"backup_ami"`, `"roll"`, `"scaleUp"`, `"percentageScaleUp"`, `"scaleDown"`, `"percentageScaleDown"`, `"statefulUpdateCapacity"`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="adjustment_csharp">
@@ -2301,7 +2250,8 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of instances to add or remove.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="adjustmentpercentage_csharp">
@@ -2310,7 +2260,8 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The percentage of instances to add or remove.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="batchsizepercentage_csharp">
@@ -2319,7 +2270,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Percent size of each batch
+    <dd>{{% md %}}The percentage size of each batch in the scheduled deployment roll.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2329,7 +2280,8 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A valid cron expression. The cron is running in UTC time zone and is in [Unix cron format](https://en.wikipedia.org/wiki/Cron).
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="frequency_csharp">
@@ -2338,7 +2290,8 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The recurrence frequency to run this task. Supported values are `"hourly"`, `"daily"`, `"weekly"` and `"continuous"`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="graceperiod_csharp">
@@ -2347,7 +2300,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Amount of time to wait between batches
+    <dd>{{% md %}}The period of time (seconds) to wait before checking a batch's health after it's deployment.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2357,7 +2310,8 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Setting the task to being enabled or disabled.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="maxcapacity_csharp">
@@ -2366,7 +2320,8 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The maximum number of instances the group should have.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="mincapacity_csharp">
@@ -2375,7 +2330,8 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The minimum number of instances the group should have.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="scalemaxcapacity_csharp">
@@ -2384,7 +2340,8 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The maximum number of instances the group should have.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="scalemincapacity_csharp">
@@ -2393,7 +2350,8 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The minimum number of instances the group should have.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="scaletargetcapacity_csharp">
@@ -2402,7 +2360,8 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The desired number of instances the group should have.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="starttime_csharp">
@@ -2411,7 +2370,8 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Set a start time for one time tasks.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="targetcapacity_csharp">
@@ -2420,7 +2380,8 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The desired number of instances the group should have.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -2435,7 +2396,8 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The task type to run. Supported task types are: `"scale"`, `"backup_ami"`, `"roll"`, `"scaleUp"`, `"percentageScaleUp"`, `"scaleDown"`, `"percentageScaleDown"`, `"statefulUpdateCapacity"`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="adjustment_go">
@@ -2444,7 +2406,8 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of instances to add or remove.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="adjustmentpercentage_go">
@@ -2453,7 +2416,8 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The percentage of instances to add or remove.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="batchsizepercentage_go">
@@ -2462,7 +2426,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Percent size of each batch
+    <dd>{{% md %}}The percentage size of each batch in the scheduled deployment roll.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2472,7 +2436,8 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A valid cron expression. The cron is running in UTC time zone and is in [Unix cron format](https://en.wikipedia.org/wiki/Cron).
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="frequency_go">
@@ -2481,7 +2446,8 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The recurrence frequency to run this task. Supported values are `"hourly"`, `"daily"`, `"weekly"` and `"continuous"`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="graceperiod_go">
@@ -2490,7 +2456,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Amount of time to wait between batches
+    <dd>{{% md %}}The period of time (seconds) to wait before checking a batch's health after it's deployment.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2500,7 +2466,8 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Setting the task to being enabled or disabled.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="maxcapacity_go">
@@ -2509,7 +2476,8 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The maximum number of instances the group should have.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="mincapacity_go">
@@ -2518,7 +2486,8 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The minimum number of instances the group should have.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="scalemaxcapacity_go">
@@ -2527,7 +2496,8 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The maximum number of instances the group should have.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="scalemincapacity_go">
@@ -2536,7 +2506,8 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The minimum number of instances the group should have.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="scaletargetcapacity_go">
@@ -2545,7 +2516,8 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The desired number of instances the group should have.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="starttime_go">
@@ -2554,7 +2526,8 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Set a start time for one time tasks.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="targetcapacity_go">
@@ -2563,7 +2536,8 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The desired number of instances the group should have.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -2578,7 +2552,8 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The task type to run. Supported task types are: `"scale"`, `"backup_ami"`, `"roll"`, `"scaleUp"`, `"percentageScaleUp"`, `"scaleDown"`, `"percentageScaleDown"`, `"statefulUpdateCapacity"`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="adjustment_nodejs">
@@ -2587,7 +2562,8 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of instances to add or remove.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="adjustmentpercentage_nodejs">
@@ -2596,7 +2572,8 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The percentage of instances to add or remove.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="batchsizepercentage_nodejs">
@@ -2605,7 +2582,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Percent size of each batch
+    <dd>{{% md %}}The percentage size of each batch in the scheduled deployment roll.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2615,7 +2592,8 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A valid cron expression. The cron is running in UTC time zone and is in [Unix cron format](https://en.wikipedia.org/wiki/Cron).
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="frequency_nodejs">
@@ -2624,7 +2602,8 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The recurrence frequency to run this task. Supported values are `"hourly"`, `"daily"`, `"weekly"` and `"continuous"`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="graceperiod_nodejs">
@@ -2633,7 +2612,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Amount of time to wait between batches
+    <dd>{{% md %}}The period of time (seconds) to wait before checking a batch's health after it's deployment.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2643,7 +2622,8 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Setting the task to being enabled or disabled.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="maxcapacity_nodejs">
@@ -2652,7 +2632,8 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The maximum number of instances the group should have.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="mincapacity_nodejs">
@@ -2661,7 +2642,8 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The minimum number of instances the group should have.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="scalemaxcapacity_nodejs">
@@ -2670,7 +2652,8 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The maximum number of instances the group should have.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="scalemincapacity_nodejs">
@@ -2679,7 +2662,8 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The minimum number of instances the group should have.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="scaletargetcapacity_nodejs">
@@ -2688,7 +2672,8 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The desired number of instances the group should have.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="starttime_nodejs">
@@ -2697,7 +2682,8 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Set a start time for one time tasks.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="targetcapacity_nodejs">
@@ -2706,7 +2692,8 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The desired number of instances the group should have.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -2721,7 +2708,8 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The task type to run. Supported task types are: `"scale"`, `"backup_ami"`, `"roll"`, `"scaleUp"`, `"percentageScaleUp"`, `"scaleDown"`, `"percentageScaleDown"`, `"statefulUpdateCapacity"`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="adjustment_python">
@@ -2730,7 +2718,8 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of instances to add or remove.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="adjustment_percentage_python">
@@ -2739,7 +2728,8 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The percentage of instances to add or remove.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="batch_size_percentage_python">
@@ -2748,7 +2738,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Percent size of each batch
+    <dd>{{% md %}}The percentage size of each batch in the scheduled deployment roll.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2758,7 +2748,8 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A valid cron expression. The cron is running in UTC time zone and is in [Unix cron format](https://en.wikipedia.org/wiki/Cron).
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="frequency_python">
@@ -2767,7 +2758,8 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The recurrence frequency to run this task. Supported values are `"hourly"`, `"daily"`, `"weekly"` and `"continuous"`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="grace_period_python">
@@ -2776,7 +2768,7 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Amount of time to wait between batches
+    <dd>{{% md %}}The period of time (seconds) to wait before checking a batch's health after it's deployment.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2786,7 +2778,8 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Setting the task to being enabled or disabled.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="max_capacity_python">
@@ -2795,7 +2788,8 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The maximum number of instances the group should have.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="min_capacity_python">
@@ -2804,7 +2798,8 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The minimum number of instances the group should have.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="scale_max_capacity_python">
@@ -2813,7 +2808,8 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The maximum number of instances the group should have.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="scale_min_capacity_python">
@@ -2822,7 +2818,8 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The minimum number of instances the group should have.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="scale_target_capacity_python">
@@ -2831,7 +2828,8 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The desired number of instances the group should have.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="start_time_python">
@@ -2840,7 +2838,8 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Set a start time for one time tasks.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="target_capacity_python">
@@ -2849,7 +2848,8 @@ For EC2 Classic instances:  `"Linux/UNIX (Amazon VPC)"`, `"SUSE Linux (Amazon VP
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The desired number of instances the group should have.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 

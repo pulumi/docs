@@ -11,103 +11,6 @@ meta_desc: "Documentation for the spotinst.gke.OceanImport resource with example
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Manages a Spotinst Ocean GKE resource.
-## scheduled task
-
-* `scheduled_task` - (Optional) Set scheduling object.
-    * `shutdown_hours` - (Optional) Set shutdown hours for cluster object.
-        * `is_enabled` - (Optional)  Flag to enable / disable the shutdown hours.
-                                     Example: True
-        * `time_windows` - (Required) Set time windows for shutdown hours. specify a list of 'timeWindows' with at least one time window Each string is in the format of - ddd:hh:mm-ddd:hh:mm ddd = day of week = Sun | Mon | Tue | Wed | Thu | Fri | Sat hh = hour 24 = 0 -23 mm = minute = 0 - 59. Time windows should not overlap. required on cluster.scheduling.isEnabled = True. API Times are in UTC
-                                      Example: Fri:15:30-Wed:14:30
-    * `tasks` - (Optional) The scheduling tasks for the cluster.
-        * `is_enabled` - (Required)  Describes whether the task is enabled. When true the task should run when false it should not run. Required for cluster.scheduling.tasks object.
-        * `cron_expression` - (Required) A valid cron expression. For example : " * * * * * ".The cron is running in UTC time zone and is in Unix cron format Cron Expression Validator Script. Only one of ‘frequency’ or ‘cronExpression’ should be used at a time. Required for cluster.scheduling.tasks object
-                                         Example: 0 1 * * *
-        * `task_type` - (Required) Valid values: "clusterRoll". Required for cluster.scheduling.tasks object.
-        * `batch_size_percentage` - (Optional)  Value in % to set size of batch in roll. Valid values are 0-100
-                                                Example: 20.
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-```
-```python
-import pulumi
-```
-```csharp
-using Pulumi;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-    }
-
-}
-```
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		return nil
-	})
-}
-```
-
-<a id="autoscaler"></a>
-## Autoscaler
-
-* `autoscaler` - (Optional) The Ocean Kubernetes Autoscaler object.
-* `is_enabled` - (Optional, Default: `true`) Enable the Ocean Kubernetes Autoscaler.
-* `is_auto_config` - (Optional, Default: `true`) Automatically configure and optimize headroom resources.
-* `auto_headroom_percentage` - Optionally set the auto headroom percentage, set a number between 0-200 to control the headroom % from the cluster. Relevant when isAutoConfig=true.
-* `cooldown` - (Optional, Default: `null`) Cooldown period between scaling actions.
-* `headroom` - (Optional) Spare resource capacity management enabling fast assignment of Pods without waiting for new resources to launch.
-* `cpu_per_unit` - (Optional) Optionally configure the number of CPUs to allocate the headroom. CPUs are denoted in millicores, where 1000 millicores = 1 vCPU.
-* `memory_per_unit` - (Optional) Optionally configure the amount of memory (MiB) to allocate the headroom.
-* `gpu_per_unit` - (Optional) How much GPU allocate for headroom unit.
-* `num_of_units` - (Optional) The number of units to retain as headroom, where each unit has the defined headroom CPU and memory.
-* `down` - (Optional) Auto Scaling scale down operations.
-* `evaluation_periods` - (Optional, Default: `null`) The number of evaluation periods that should accumulate before a scale down action takes place.
-* `max_scale_down_percentage` - (Optional) Would represent the maximum % to scale-down. Number between 1-100.
-* `resource_limits` - (Optional) Optionally set upper and lower bounds on the resource usage of the cluster.
-* `max_vcpu` - (Optional) The maximum cpu in vCpu units that can be allocated to the cluster.
-* `max_memory_gib` - (Optional) The maximum memory in GiB units that can be allocated to the cluster.
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-```
-```python
-import pulumi
-```
-```csharp
-using Pulumi;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-    }
-
-}
-```
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		return nil
-	})
-}
-```
 
 
 {{% examples %}}
@@ -488,7 +391,8 @@ The OceanImport resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanimportautoscaler">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Gke.<wbr>Inputs.<wbr>Ocean<wbr>Import<wbr>Autoscaler<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Ocean Kubernetes Autoscaler object.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="backendservices_csharp">
@@ -546,7 +450,8 @@ The OceanImport resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanimportscheduledtask">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Gke.<wbr>Inputs.<wbr>Ocean<wbr>Import<wbr>Scheduled<wbr>Task<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Set scheduling object.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="whitelists_csharp">
@@ -590,7 +495,8 @@ The OceanImport resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanimportautoscaler">Ocean<wbr>Import<wbr>Autoscaler</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Ocean Kubernetes Autoscaler object.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="backendservices_go">
@@ -648,7 +554,8 @@ The OceanImport resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanimportscheduledtask">[]Ocean<wbr>Import<wbr>Scheduled<wbr>Task</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Set scheduling object.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="whitelists_go">
@@ -692,7 +599,8 @@ The OceanImport resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanimportautoscaler">Ocean<wbr>Import<wbr>Autoscaler</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Ocean Kubernetes Autoscaler object.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="backendservices_nodejs">
@@ -750,7 +658,8 @@ The OceanImport resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanimportscheduledtask">Ocean<wbr>Import<wbr>Scheduled<wbr>Task[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Set scheduling object.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="whitelists_nodejs">
@@ -794,7 +703,8 @@ The OceanImport resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanimportautoscaler">Ocean<wbr>Import<wbr>Autoscaler<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Ocean Kubernetes Autoscaler object.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="backend_services_python">
@@ -852,7 +762,8 @@ The OceanImport resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanimportscheduledtask">Sequence[Ocean<wbr>Import<wbr>Scheduled<wbr>Task<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Set scheduling object.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="whitelists_python">
@@ -1102,7 +1013,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanimportautoscaler">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Gke.<wbr>Inputs.<wbr>Ocean<wbr>Import<wbr>Autoscaler<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Ocean Kubernetes Autoscaler object.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_backendservices_csharp">
@@ -1189,7 +1101,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanimportscheduledtask">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Gke.<wbr>Inputs.<wbr>Ocean<wbr>Import<wbr>Scheduled<wbr>Task<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Set scheduling object.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_whitelists_csharp">
@@ -1213,7 +1126,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanimportautoscaler">Ocean<wbr>Import<wbr>Autoscaler</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Ocean Kubernetes Autoscaler object.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_backendservices_go">
@@ -1300,7 +1214,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanimportscheduledtask">[]Ocean<wbr>Import<wbr>Scheduled<wbr>Task</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Set scheduling object.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_whitelists_go">
@@ -1324,7 +1239,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanimportautoscaler">Ocean<wbr>Import<wbr>Autoscaler</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Ocean Kubernetes Autoscaler object.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_backendservices_nodejs">
@@ -1411,7 +1327,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanimportscheduledtask">Ocean<wbr>Import<wbr>Scheduled<wbr>Task[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Set scheduling object.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_whitelists_nodejs">
@@ -1435,7 +1352,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanimportautoscaler">Ocean<wbr>Import<wbr>Autoscaler<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Ocean Kubernetes Autoscaler object.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_backend_services_python">
@@ -1522,7 +1440,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanimportscheduledtask">Sequence[Ocean<wbr>Import<wbr>Scheduled<wbr>Task<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Set scheduling object.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_whitelists_python">
@@ -1569,7 +1488,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Optionally set the auto headroom percentage, set a number between 0-200 to control the headroom % from the cluster. Relevant when isAutoConfig=true.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="cooldown_csharp">
@@ -1578,7 +1498,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Cooldown period between scaling actions.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="down_csharp">
@@ -1587,7 +1508,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanimportautoscalerdown">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Gke.<wbr>Inputs.<wbr>Ocean<wbr>Import<wbr>Autoscaler<wbr>Down<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Auto Scaling scale down operations.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="headroom_csharp">
@@ -1596,7 +1518,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanimportautoscalerheadroom">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Gke.<wbr>Inputs.<wbr>Ocean<wbr>Import<wbr>Autoscaler<wbr>Headroom<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Spare resource capacity management enabling fast assignment of Pods without waiting for new resources to launch.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="isautoconfig_csharp">
@@ -1605,7 +1528,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Automatically configure and optimize headroom resources.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="isenabled_csharp">
@@ -1614,7 +1538,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Enable the Ocean Kubernetes Autoscaler.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="resourcelimits_csharp">
@@ -1623,7 +1548,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanimportautoscalerresourcelimits">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Gke.<wbr>Inputs.<wbr>Ocean<wbr>Import<wbr>Autoscaler<wbr>Resource<wbr>Limits<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Optionally set upper and lower bounds on the resource usage of the cluster.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1638,7 +1564,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Optionally set the auto headroom percentage, set a number between 0-200 to control the headroom % from the cluster. Relevant when isAutoConfig=true.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="cooldown_go">
@@ -1647,7 +1574,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Cooldown period between scaling actions.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="down_go">
@@ -1656,7 +1584,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanimportautoscalerdown">Ocean<wbr>Import<wbr>Autoscaler<wbr>Down</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Auto Scaling scale down operations.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="headroom_go">
@@ -1665,7 +1594,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanimportautoscalerheadroom">Ocean<wbr>Import<wbr>Autoscaler<wbr>Headroom</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Spare resource capacity management enabling fast assignment of Pods without waiting for new resources to launch.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="isautoconfig_go">
@@ -1674,7 +1604,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Automatically configure and optimize headroom resources.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="isenabled_go">
@@ -1683,7 +1614,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Enable the Ocean Kubernetes Autoscaler.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="resourcelimits_go">
@@ -1692,7 +1624,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanimportautoscalerresourcelimits">Ocean<wbr>Import<wbr>Autoscaler<wbr>Resource<wbr>Limits</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Optionally set upper and lower bounds on the resource usage of the cluster.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1707,7 +1640,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Optionally set the auto headroom percentage, set a number between 0-200 to control the headroom % from the cluster. Relevant when isAutoConfig=true.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="cooldown_nodejs">
@@ -1716,7 +1650,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Cooldown period between scaling actions.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="down_nodejs">
@@ -1725,7 +1660,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanimportautoscalerdown">Ocean<wbr>Import<wbr>Autoscaler<wbr>Down</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Auto Scaling scale down operations.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="headroom_nodejs">
@@ -1734,7 +1670,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanimportautoscalerheadroom">Ocean<wbr>Import<wbr>Autoscaler<wbr>Headroom</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Spare resource capacity management enabling fast assignment of Pods without waiting for new resources to launch.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="isautoconfig_nodejs">
@@ -1743,7 +1680,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Automatically configure and optimize headroom resources.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="isenabled_nodejs">
@@ -1752,7 +1690,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Enable the Ocean Kubernetes Autoscaler.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="resourcelimits_nodejs">
@@ -1761,7 +1700,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanimportautoscalerresourcelimits">Ocean<wbr>Import<wbr>Autoscaler<wbr>Resource<wbr>Limits</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Optionally set upper and lower bounds on the resource usage of the cluster.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1776,7 +1716,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Optionally set the auto headroom percentage, set a number between 0-200 to control the headroom % from the cluster. Relevant when isAutoConfig=true.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="cooldown_python">
@@ -1785,7 +1726,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Cooldown period between scaling actions.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="down_python">
@@ -1794,7 +1736,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanimportautoscalerdown">Ocean<wbr>Import<wbr>Autoscaler<wbr>Down<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Auto Scaling scale down operations.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="headroom_python">
@@ -1803,7 +1746,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanimportautoscalerheadroom">Ocean<wbr>Import<wbr>Autoscaler<wbr>Headroom<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Spare resource capacity management enabling fast assignment of Pods without waiting for new resources to launch.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="is_auto_config_python">
@@ -1812,7 +1756,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Automatically configure and optimize headroom resources.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="is_enabled_python">
@@ -1821,7 +1766,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Enable the Ocean Kubernetes Autoscaler.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="resource_limits_python">
@@ -1830,7 +1776,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanimportautoscalerresourcelimits">Ocean<wbr>Import<wbr>Autoscaler<wbr>Resource<wbr>Limits<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Optionally set upper and lower bounds on the resource usage of the cluster.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1859,7 +1806,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of evaluation periods that should accumulate before a scale down action takes place.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="maxscaledownpercentage_csharp">
@@ -1868,7 +1816,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Would represent the maximum % to scale-down. Number between 1-100.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1883,7 +1832,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of evaluation periods that should accumulate before a scale down action takes place.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="maxscaledownpercentage_go">
@@ -1892,7 +1842,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Would represent the maximum % to scale-down. Number between 1-100.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1907,7 +1858,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of evaluation periods that should accumulate before a scale down action takes place.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="maxscaledownpercentage_nodejs">
@@ -1916,7 +1868,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Would represent the maximum % to scale-down. Number between 1-100.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1931,7 +1884,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of evaluation periods that should accumulate before a scale down action takes place.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="max_scale_down_percentage_python">
@@ -1940,7 +1894,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Would represent the maximum % to scale-down. Number between 1-100.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1969,7 +1924,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Optionally configure the number of CPUs to allocate the headroom. CPUs are denoted in millicores, where 1000 millicores = 1 vCPU.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="gpuperunit_csharp">
@@ -1978,7 +1934,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}How much GPU allocate for headroom unit.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="memoryperunit_csharp">
@@ -1987,7 +1944,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Optionally configure the amount of memory (MiB) to allocate the headroom.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="numofunits_csharp">
@@ -1996,7 +1954,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of units to retain as headroom, where each unit has the defined headroom CPU and memory.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -2011,7 +1970,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Optionally configure the number of CPUs to allocate the headroom. CPUs are denoted in millicores, where 1000 millicores = 1 vCPU.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="gpuperunit_go">
@@ -2020,7 +1980,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}How much GPU allocate for headroom unit.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="memoryperunit_go">
@@ -2029,7 +1990,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Optionally configure the amount of memory (MiB) to allocate the headroom.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="numofunits_go">
@@ -2038,7 +2000,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of units to retain as headroom, where each unit has the defined headroom CPU and memory.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -2053,7 +2016,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Optionally configure the number of CPUs to allocate the headroom. CPUs are denoted in millicores, where 1000 millicores = 1 vCPU.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="gpuperunit_nodejs">
@@ -2062,7 +2026,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}How much GPU allocate for headroom unit.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="memoryperunit_nodejs">
@@ -2071,7 +2036,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Optionally configure the amount of memory (MiB) to allocate the headroom.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="numofunits_nodejs">
@@ -2080,7 +2046,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of units to retain as headroom, where each unit has the defined headroom CPU and memory.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -2095,7 +2062,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Optionally configure the number of CPUs to allocate the headroom. CPUs are denoted in millicores, where 1000 millicores = 1 vCPU.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="gpu_per_unit_python">
@@ -2104,7 +2072,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}How much GPU allocate for headroom unit.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="memory_per_unit_python">
@@ -2113,7 +2082,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Optionally configure the amount of memory (MiB) to allocate the headroom.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="num_of_units_python">
@@ -2122,7 +2092,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of units to retain as headroom, where each unit has the defined headroom CPU and memory.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -2151,7 +2122,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The maximum memory in GiB units that can be allocated to the cluster.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="maxvcpu_csharp">
@@ -2160,7 +2132,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The maximum cpu in vCpu units that can be allocated to the cluster.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -2175,7 +2148,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The maximum memory in GiB units that can be allocated to the cluster.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="maxvcpu_go">
@@ -2184,7 +2158,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The maximum cpu in vCpu units that can be allocated to the cluster.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -2199,7 +2174,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The maximum memory in GiB units that can be allocated to the cluster.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="maxvcpu_nodejs">
@@ -2208,7 +2184,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The maximum cpu in vCpu units that can be allocated to the cluster.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -2223,7 +2200,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The maximum memory in GiB units that can be allocated to the cluster.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="max_vcpu_python">
@@ -2232,7 +2210,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The maximum cpu in vCpu units that can be allocated to the cluster.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -2569,7 +2548,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanimportscheduledtaskshutdownhours">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Gke.<wbr>Inputs.<wbr>Ocean<wbr>Import<wbr>Scheduled<wbr>Task<wbr>Shutdown<wbr>Hours<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Set shutdown hours for cluster object.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tasks_csharp">
@@ -2578,7 +2558,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanimportscheduledtasktask">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Gke.<wbr>Inputs.<wbr>Ocean<wbr>Import<wbr>Scheduled<wbr>Task<wbr>Task<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The scheduling tasks for the cluster.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -2593,7 +2574,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanimportscheduledtaskshutdownhours">Ocean<wbr>Import<wbr>Scheduled<wbr>Task<wbr>Shutdown<wbr>Hours</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Set shutdown hours for cluster object.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tasks_go">
@@ -2602,7 +2584,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanimportscheduledtasktask">[]Ocean<wbr>Import<wbr>Scheduled<wbr>Task<wbr>Task</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The scheduling tasks for the cluster.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -2617,7 +2600,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanimportscheduledtaskshutdownhours">Ocean<wbr>Import<wbr>Scheduled<wbr>Task<wbr>Shutdown<wbr>Hours</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Set shutdown hours for cluster object.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tasks_nodejs">
@@ -2626,7 +2610,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanimportscheduledtasktask">Ocean<wbr>Import<wbr>Scheduled<wbr>Task<wbr>Task[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The scheduling tasks for the cluster.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -2641,7 +2626,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanimportscheduledtaskshutdownhours">Ocean<wbr>Import<wbr>Scheduled<wbr>Task<wbr>Shutdown<wbr>Hours<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Set shutdown hours for cluster object.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tasks_python">
@@ -2650,7 +2636,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanimportscheduledtasktask">Sequence[Ocean<wbr>Import<wbr>Scheduled<wbr>Task<wbr>Task<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The scheduling tasks for the cluster.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -2679,7 +2666,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Set time windows for shutdown hours. specify a list of 'timeWindows' with at least one time window Each string is in the format of - ddd:hh:mm-ddd:hh:mm ddd = day of week = Sun | Mon | Tue | Wed | Thu | Fri | Sat hh = hour 24 = 0 -23 mm = minute = 0 - 59. Time windows should not overlap. required on cluster.scheduling.isEnabled = True. API Times are in UTC
+Example: Fri:15:30-Wed:14:30
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="isenabled_csharp">
@@ -2688,7 +2677,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Enable the Ocean Kubernetes Autoscaler.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -2703,7 +2693,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Set time windows for shutdown hours. specify a list of 'timeWindows' with at least one time window Each string is in the format of - ddd:hh:mm-ddd:hh:mm ddd = day of week = Sun | Mon | Tue | Wed | Thu | Fri | Sat hh = hour 24 = 0 -23 mm = minute = 0 - 59. Time windows should not overlap. required on cluster.scheduling.isEnabled = True. API Times are in UTC
+Example: Fri:15:30-Wed:14:30
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="isenabled_go">
@@ -2712,7 +2704,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Enable the Ocean Kubernetes Autoscaler.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -2727,7 +2720,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Set time windows for shutdown hours. specify a list of 'timeWindows' with at least one time window Each string is in the format of - ddd:hh:mm-ddd:hh:mm ddd = day of week = Sun | Mon | Tue | Wed | Thu | Fri | Sat hh = hour 24 = 0 -23 mm = minute = 0 - 59. Time windows should not overlap. required on cluster.scheduling.isEnabled = True. API Times are in UTC
+Example: Fri:15:30-Wed:14:30
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="isenabled_nodejs">
@@ -2736,7 +2731,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Enable the Ocean Kubernetes Autoscaler.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -2751,7 +2747,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Set time windows for shutdown hours. specify a list of 'timeWindows' with at least one time window Each string is in the format of - ddd:hh:mm-ddd:hh:mm ddd = day of week = Sun | Mon | Tue | Wed | Thu | Fri | Sat hh = hour 24 = 0 -23 mm = minute = 0 - 59. Time windows should not overlap. required on cluster.scheduling.isEnabled = True. API Times are in UTC
+Example: Fri:15:30-Wed:14:30
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="is_enabled_python">
@@ -2760,7 +2758,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Enable the Ocean Kubernetes Autoscaler.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -2789,7 +2788,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A valid cron expression. For example : " * * * * * ".The cron is running in UTC time zone and is in Unix cron format Cron Expression Validator Script. Only one of ‘frequency’ or ‘cronExpression’ should be used at a time. Required for cluster.scheduling.tasks object
+Example: 0 1 * * *
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="isenabled_csharp">
@@ -2798,7 +2799,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Enable the Ocean Kubernetes Autoscaler.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="tasktype_csharp">
@@ -2807,7 +2809,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Valid values: "clusterRoll". Required for cluster.scheduling.tasks object.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="batchsizepercentage_csharp">
@@ -2816,7 +2819,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Value in % to set size of batch in roll. Valid values are 0-100
+Example: 20.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -2831,7 +2836,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A valid cron expression. For example : " * * * * * ".The cron is running in UTC time zone and is in Unix cron format Cron Expression Validator Script. Only one of ‘frequency’ or ‘cronExpression’ should be used at a time. Required for cluster.scheduling.tasks object
+Example: 0 1 * * *
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="isenabled_go">
@@ -2840,7 +2847,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Enable the Ocean Kubernetes Autoscaler.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="tasktype_go">
@@ -2849,7 +2857,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Valid values: "clusterRoll". Required for cluster.scheduling.tasks object.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="batchsizepercentage_go">
@@ -2858,7 +2867,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Value in % to set size of batch in roll. Valid values are 0-100
+Example: 20.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -2873,7 +2884,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A valid cron expression. For example : " * * * * * ".The cron is running in UTC time zone and is in Unix cron format Cron Expression Validator Script. Only one of ‘frequency’ or ‘cronExpression’ should be used at a time. Required for cluster.scheduling.tasks object
+Example: 0 1 * * *
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="isenabled_nodejs">
@@ -2882,7 +2895,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Enable the Ocean Kubernetes Autoscaler.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="tasktype_nodejs">
@@ -2891,7 +2905,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Valid values: "clusterRoll". Required for cluster.scheduling.tasks object.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="batchsizepercentage_nodejs">
@@ -2900,7 +2915,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Value in % to set size of batch in roll. Valid values are 0-100
+Example: 20.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -2915,7 +2932,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A valid cron expression. For example : " * * * * * ".The cron is running in UTC time zone and is in Unix cron format Cron Expression Validator Script. Only one of ‘frequency’ or ‘cronExpression’ should be used at a time. Required for cluster.scheduling.tasks object
+Example: 0 1 * * *
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="is_enabled_python">
@@ -2924,7 +2943,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Enable the Ocean Kubernetes Autoscaler.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="task_type_python">
@@ -2933,7 +2953,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Valid values: "clusterRoll". Required for cluster.scheduling.tasks object.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="batch_size_percentage_python">
@@ -2942,7 +2963,9 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Value in % to set size of batch in roll. Valid values are 0-100
+Example: 20.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
