@@ -11,134 +11,6 @@ meta_desc: "Documentation for the spotinst.ecs.Ocean resource with examples, inp
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Manages a Spotinst Ocean ECS resource.
-## Auto Scaler
-
-* `autoscaler` - (Optional) Describes the Ocean ECS autoscaler.
-    * `is_enabled` - (Optional, Default: `true`) Enable the Ocean ECS autoscaler.
-    * `is_auto_config` - (Optional, Default: `true`) Automatically configure and optimize headroom resources.
-    * `cooldown` - (Optional, Default: `null`) Cooldown period between scaling actions.
-    * `headroom` - (Optional) Spare resource capacity management enabling fast assignment of tasks without waiting for new resources to launch.
-        * `cpu_per_unit` - (Optional) Optionally configure the number of CPUs to allocate the headroom. CPUs are denoted in millicores, where 1000 millicores = 1 vCPU.
-        * `memory_per_unit` - (Optional) Optionally configure the amount of memory (MB) to allocate the headroom.
-        * `num_of_units` - (Optional) The number of units to retain as headroom, where each unit has the defined headroom CPU and memory.
-    * `down` - (Optional) Auto Scaling scale down operations.
-        * `max_scale_down_percentage` - (Optional) Would represent the maximum % to scale-down. Number between 1-100.
-    * `resource_limits` - (Optional) Optionally set upper and lower bounds on the resource usage of the cluster.
-        * `max_vcpu` - (Optional) The maximum cpu in vCPU units that can be allocated to the cluster.
-        * `max_memory_gib` - (Optional) The maximum memory in GiB units that can be allocated to the cluster.
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-```
-```python
-import pulumi
-```
-```csharp
-using Pulumi;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-    }
-
-}
-```
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		return nil
-	})
-}
-```
-
-<a id="update-policy"></a>
-## Update Policy
-
-* `update_policy` - (Optional) While used, you can control whether the group should perform a deployment after an update to the configuration.
-    * `should_roll` - (Required) Enables the roll.
-    * `roll_config` - (Required)
-        * `batch_size_percentage` - (Required) Sets the percentage of the instances to deploy in each batch.
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-```
-```python
-import pulumi
-```
-```csharp
-using Pulumi;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-    }
-
-}
-```
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		return nil
-	})
-}
-```
-
-<a id="scheduled-task"></a>
-## scheduled task
-
-* `scheduled_task` - (Optional) While used, you can control whether the group should perform a deployment after an update to the configuration.
-    * `shutdown_hours` - (Optional) Set shutdown hours for cluster object.
-        * `is_enabled` - (Optional)  Flag to enable / disable the shutdown hours.
-        * `time_windows` - (Required) Set time windows for shutdown hours. Specify a list of `timeWindows` with at least one time window Each string is in the format of `ddd:hh:mm-ddd:hh:mm` (ddd = day of week = Sun | Mon | Tue | Wed | Thu | Fri | Sat hh = hour 24 = 0 -23 mm = minute = 0 - 59). Time windows should not overlap. Required when `cluster.scheduling.isEnabled` is true. API Times are in UTC. Example: `Fri:15:30-Wed:14:30`.
-    * `tasks` - (Optional) The scheduling tasks for the cluster.
-        * `is_enabled` - (Required) Describes whether the task is enabled. When true the task should run when false it should not run. Required for `cluster.scheduling.tasks` object.
-        * `cron_expression` - (Required) A valid cron expression. The cron is running in UTC time zone and is in Unix cron format Cron Expression Validator Script. Only one of `frequency` or `cronExpression` should be used at a time. Required for `cluster.scheduling.tasks` object. Example: `0 1 * * *`.
-        * `task_type` - (Required) Valid values: "clusterRoll". Required for `cluster.scheduling.tasks object`. Example: `clusterRoll`.
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-```
-```python
-import pulumi
-```
-```csharp
-using Pulumi;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-    }
-
-}
-```
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		return nil
-	})
-}
-```
 
 
 {{% examples %}}
@@ -179,7 +51,7 @@ class MyStack : Stack
                     },
                 },
             },
-            ClusterName = "terraform-ecs-cluster",
+            ClusterName = "sample-ecs-cluster",
             DesiredCapacity = 0,
             DrainingTimeout = 120,
             EbsOptimized = true,
@@ -260,7 +132,7 @@ func main() {
 					},
 				},
 			},
-			ClusterName:        pulumi.String("terraform-ecs-cluster"),
+			ClusterName:        pulumi.String("sample-ecs-cluster"),
 			DesiredCapacity:    pulumi.Int(0),
 			DrainingTimeout:    pulumi.Int(120),
 			EbsOptimized:       pulumi.Bool(true),
@@ -329,7 +201,7 @@ example = spotinst.ecs.Ocean("example",
             volume_type="gp2",
         ),
     )],
-    cluster_name="terraform-ecs-cluster",
+    cluster_name="sample-ecs-cluster",
     desired_capacity=0,
     draining_timeout=120,
     ebs_optimized=True,
@@ -384,7 +256,7 @@ const example = new spotinst.ecs.Ocean("example", {
             volumeType: "gp2",
         },
     }],
-    clusterName: "terraform-ecs-cluster",
+    clusterName: "sample-ecs-cluster",
     desiredCapacity: 0,
     drainingTimeout: 120,
     ebsOptimized: true,
@@ -658,7 +530,8 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanautoscaler">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Ecs.<wbr>Inputs.<wbr>Ocean<wbr>Autoscaler<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes the Ocean ECS autoscaler.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="blockdevicemappings_csharp">
@@ -787,7 +660,8 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanscheduledtask">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Ecs.<wbr>Inputs.<wbr>Ocean<wbr>Scheduled<wbr>Task<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}While used, you can control whether the group should perform a deployment after an update to the configuration.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
@@ -806,7 +680,8 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanupdatepolicy">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Ecs.<wbr>Inputs.<wbr>Ocean<wbr>Update<wbr>Policy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}While used, you can control whether the group should perform a deployment after an update to the configuration.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="userdata_csharp">
@@ -910,7 +785,8 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanautoscaler">Ocean<wbr>Autoscaler</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes the Ocean ECS autoscaler.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="blockdevicemappings_go">
@@ -1039,7 +915,8 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanscheduledtask">[]Ocean<wbr>Scheduled<wbr>Task</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}While used, you can control whether the group should perform a deployment after an update to the configuration.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tags_go">
@@ -1058,7 +935,8 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanupdatepolicy">Ocean<wbr>Update<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}While used, you can control whether the group should perform a deployment after an update to the configuration.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="userdata_go">
@@ -1162,7 +1040,8 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanautoscaler">Ocean<wbr>Autoscaler</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes the Ocean ECS autoscaler.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="blockdevicemappings_nodejs">
@@ -1291,7 +1170,8 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanscheduledtask">Ocean<wbr>Scheduled<wbr>Task[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}While used, you can control whether the group should perform a deployment after an update to the configuration.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
@@ -1310,7 +1190,8 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanupdatepolicy">Ocean<wbr>Update<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}While used, you can control whether the group should perform a deployment after an update to the configuration.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="userdata_nodejs">
@@ -1414,7 +1295,8 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanautoscaler">Ocean<wbr>Autoscaler<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes the Ocean ECS autoscaler.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="block_device_mappings_python">
@@ -1543,7 +1425,8 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanscheduledtask">Sequence[Ocean<wbr>Scheduled<wbr>Task<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}While used, you can control whether the group should perform a deployment after an update to the configuration.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tags_python">
@@ -1562,7 +1445,8 @@ The Ocean resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanupdatepolicy">Ocean<wbr>Update<wbr>Policy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}While used, you can control whether the group should perform a deployment after an update to the configuration.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="user_data_python">
@@ -1816,7 +1700,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanautoscaler">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Ecs.<wbr>Inputs.<wbr>Ocean<wbr>Autoscaler<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes the Ocean ECS autoscaler.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_blockdevicemappings_csharp">
@@ -1965,7 +1850,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanscheduledtask">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Ecs.<wbr>Inputs.<wbr>Ocean<wbr>Scheduled<wbr>Task<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}While used, you can control whether the group should perform a deployment after an update to the configuration.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_securitygroupids_csharp">
@@ -2004,7 +1890,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanupdatepolicy">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Ecs.<wbr>Inputs.<wbr>Ocean<wbr>Update<wbr>Policy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}While used, you can control whether the group should perform a deployment after an update to the configuration.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_userdata_csharp">
@@ -2068,7 +1955,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanautoscaler">Ocean<wbr>Autoscaler</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes the Ocean ECS autoscaler.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_blockdevicemappings_go">
@@ -2217,7 +2105,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanscheduledtask">[]Ocean<wbr>Scheduled<wbr>Task</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}While used, you can control whether the group should perform a deployment after an update to the configuration.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_securitygroupids_go">
@@ -2256,7 +2145,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanupdatepolicy">Ocean<wbr>Update<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}While used, you can control whether the group should perform a deployment after an update to the configuration.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_userdata_go">
@@ -2320,7 +2210,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanautoscaler">Ocean<wbr>Autoscaler</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes the Ocean ECS autoscaler.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_blockdevicemappings_nodejs">
@@ -2469,7 +2360,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanscheduledtask">Ocean<wbr>Scheduled<wbr>Task[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}While used, you can control whether the group should perform a deployment after an update to the configuration.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_securitygroupids_nodejs">
@@ -2508,7 +2400,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanupdatepolicy">Ocean<wbr>Update<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}While used, you can control whether the group should perform a deployment after an update to the configuration.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_userdata_nodejs">
@@ -2572,7 +2465,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanautoscaler">Ocean<wbr>Autoscaler<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes the Ocean ECS autoscaler.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_block_device_mappings_python">
@@ -2721,7 +2615,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanscheduledtask">Sequence[Ocean<wbr>Scheduled<wbr>Task<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}While used, you can control whether the group should perform a deployment after an update to the configuration.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_security_group_ids_python">
@@ -2760,7 +2655,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanupdatepolicy">Ocean<wbr>Update<wbr>Policy<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}While used, you can control whether the group should perform a deployment after an update to the configuration.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_user_data_python">
@@ -2837,7 +2733,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Cooldown period between scaling actions.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="down_csharp">
@@ -2846,7 +2743,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanautoscalerdown">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Ecs.<wbr>Inputs.<wbr>Ocean<wbr>Autoscaler<wbr>Down<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Auto Scaling scale down operations.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="headroom_csharp">
@@ -2855,7 +2753,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanautoscalerheadroom">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Ecs.<wbr>Inputs.<wbr>Ocean<wbr>Autoscaler<wbr>Headroom<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Spare resource capacity management enabling fast assignment of tasks without waiting for new resources to launch.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="isautoconfig_csharp">
@@ -2864,7 +2763,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Automatically configure and optimize headroom resources.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="isenabled_csharp">
@@ -2873,7 +2773,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes whether the task is enabled. When true the task should run when false it should not run. Required for `cluster.scheduling.tasks` object.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="resourcelimits_csharp">
@@ -2882,7 +2783,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanautoscalerresourcelimits">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Ecs.<wbr>Inputs.<wbr>Ocean<wbr>Autoscaler<wbr>Resource<wbr>Limits<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Optionally set upper and lower bounds on the resource usage of the cluster.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -2897,7 +2799,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Cooldown period between scaling actions.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="down_go">
@@ -2906,7 +2809,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanautoscalerdown">Ocean<wbr>Autoscaler<wbr>Down</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Auto Scaling scale down operations.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="headroom_go">
@@ -2915,7 +2819,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanautoscalerheadroom">Ocean<wbr>Autoscaler<wbr>Headroom</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Spare resource capacity management enabling fast assignment of tasks without waiting for new resources to launch.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="isautoconfig_go">
@@ -2924,7 +2829,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Automatically configure and optimize headroom resources.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="isenabled_go">
@@ -2933,7 +2839,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes whether the task is enabled. When true the task should run when false it should not run. Required for `cluster.scheduling.tasks` object.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="resourcelimits_go">
@@ -2942,7 +2849,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanautoscalerresourcelimits">Ocean<wbr>Autoscaler<wbr>Resource<wbr>Limits</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Optionally set upper and lower bounds on the resource usage of the cluster.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -2957,7 +2865,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Cooldown period between scaling actions.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="down_nodejs">
@@ -2966,7 +2875,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanautoscalerdown">Ocean<wbr>Autoscaler<wbr>Down</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Auto Scaling scale down operations.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="headroom_nodejs">
@@ -2975,7 +2885,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanautoscalerheadroom">Ocean<wbr>Autoscaler<wbr>Headroom</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Spare resource capacity management enabling fast assignment of tasks without waiting for new resources to launch.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="isautoconfig_nodejs">
@@ -2984,7 +2895,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Automatically configure and optimize headroom resources.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="isenabled_nodejs">
@@ -2993,7 +2905,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes whether the task is enabled. When true the task should run when false it should not run. Required for `cluster.scheduling.tasks` object.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="resourcelimits_nodejs">
@@ -3002,7 +2915,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanautoscalerresourcelimits">Ocean<wbr>Autoscaler<wbr>Resource<wbr>Limits</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Optionally set upper and lower bounds on the resource usage of the cluster.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -3017,7 +2931,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Cooldown period between scaling actions.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="down_python">
@@ -3026,7 +2941,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanautoscalerdown">Ocean<wbr>Autoscaler<wbr>Down<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Auto Scaling scale down operations.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="headroom_python">
@@ -3035,7 +2951,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanautoscalerheadroom">Ocean<wbr>Autoscaler<wbr>Headroom<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Spare resource capacity management enabling fast assignment of tasks without waiting for new resources to launch.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="is_auto_config_python">
@@ -3044,7 +2961,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Automatically configure and optimize headroom resources.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="is_enabled_python">
@@ -3053,7 +2971,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes whether the task is enabled. When true the task should run when false it should not run. Required for `cluster.scheduling.tasks` object.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="resource_limits_python">
@@ -3062,7 +2981,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanautoscalerresourcelimits">Ocean<wbr>Autoscaler<wbr>Resource<wbr>Limits<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Optionally set upper and lower bounds on the resource usage of the cluster.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -3091,7 +3011,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Would represent the maximum % to scale-down. Number between 1-100.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -3106,7 +3027,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Would represent the maximum % to scale-down. Number between 1-100.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -3121,7 +3043,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Would represent the maximum % to scale-down. Number between 1-100.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -3136,7 +3059,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Would represent the maximum % to scale-down. Number between 1-100.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -3165,7 +3089,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Optionally configure the number of CPUs to allocate the headroom. CPUs are denoted in millicores, where 1000 millicores = 1 vCPU.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="memoryperunit_csharp">
@@ -3174,7 +3099,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Optionally configure the amount of memory (MB) to allocate the headroom.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="numofunits_csharp">
@@ -3183,7 +3109,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of units to retain as headroom, where each unit has the defined headroom CPU and memory.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -3198,7 +3125,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Optionally configure the number of CPUs to allocate the headroom. CPUs are denoted in millicores, where 1000 millicores = 1 vCPU.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="memoryperunit_go">
@@ -3207,7 +3135,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Optionally configure the amount of memory (MB) to allocate the headroom.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="numofunits_go">
@@ -3216,7 +3145,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of units to retain as headroom, where each unit has the defined headroom CPU and memory.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -3231,7 +3161,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Optionally configure the number of CPUs to allocate the headroom. CPUs are denoted in millicores, where 1000 millicores = 1 vCPU.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="memoryperunit_nodejs">
@@ -3240,7 +3171,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Optionally configure the amount of memory (MB) to allocate the headroom.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="numofunits_nodejs">
@@ -3249,7 +3181,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of units to retain as headroom, where each unit has the defined headroom CPU and memory.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -3264,7 +3197,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Optionally configure the number of CPUs to allocate the headroom. CPUs are denoted in millicores, where 1000 millicores = 1 vCPU.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="memory_per_unit_python">
@@ -3273,7 +3207,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Optionally configure the amount of memory (MB) to allocate the headroom.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="num_of_units_python">
@@ -3282,7 +3217,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of units to retain as headroom, where each unit has the defined headroom CPU and memory.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -3311,7 +3247,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The maximum memory in GiB units that can be allocated to the cluster.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="maxvcpu_csharp">
@@ -3320,7 +3257,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The maximum cpu in vCPU units that can be allocated to the cluster.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -3335,7 +3273,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The maximum memory in GiB units that can be allocated to the cluster.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="maxvcpu_go">
@@ -3344,7 +3283,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The maximum cpu in vCPU units that can be allocated to the cluster.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -3359,7 +3299,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The maximum memory in GiB units that can be allocated to the cluster.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="maxvcpu_nodejs">
@@ -3368,7 +3309,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The maximum cpu in vCPU units that can be allocated to the cluster.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -3383,7 +3325,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The maximum memory in GiB units that can be allocated to the cluster.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="max_vcpu_python">
@@ -3392,7 +3335,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The maximum cpu in vCPU units that can be allocated to the cluster.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4191,7 +4135,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Array of strings. Set time windows for image update, at least one time window. Each string is in the format of ddd:hh:mm-ddd:hh:mm ddd. Time windows should not overlap.
+    <dd>{{% md %}}Set time windows for shutdown hours. Specify a list of `timeWindows` with at least one time window Each string is in the format of `ddd:hh:mm-ddd:hh:mm` (ddd = day of week = Sun | Mon | Tue | Wed | Thu | Fri | Sat hh = hour 24 = 0 -23 mm = minute = 0 - 59). Time windows should not overlap. Required when `cluster.scheduling.isEnabled` is true. API Times are in UTC. Example: `Fri:15:30-Wed:14:30`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -4227,7 +4171,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Array of strings. Set time windows for image update, at least one time window. Each string is in the format of ddd:hh:mm-ddd:hh:mm ddd. Time windows should not overlap.
+    <dd>{{% md %}}Set time windows for shutdown hours. Specify a list of `timeWindows` with at least one time window Each string is in the format of `ddd:hh:mm-ddd:hh:mm` (ddd = day of week = Sun | Mon | Tue | Wed | Thu | Fri | Sat hh = hour 24 = 0 -23 mm = minute = 0 - 59). Time windows should not overlap. Required when `cluster.scheduling.isEnabled` is true. API Times are in UTC. Example: `Fri:15:30-Wed:14:30`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -4263,7 +4207,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Array of strings. Set time windows for image update, at least one time window. Each string is in the format of ddd:hh:mm-ddd:hh:mm ddd. Time windows should not overlap.
+    <dd>{{% md %}}Set time windows for shutdown hours. Specify a list of `timeWindows` with at least one time window Each string is in the format of `ddd:hh:mm-ddd:hh:mm` (ddd = day of week = Sun | Mon | Tue | Wed | Thu | Fri | Sat hh = hour 24 = 0 -23 mm = minute = 0 - 59). Time windows should not overlap. Required when `cluster.scheduling.isEnabled` is true. API Times are in UTC. Example: `Fri:15:30-Wed:14:30`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -4299,7 +4243,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Array of strings. Set time windows for image update, at least one time window. Each string is in the format of ddd:hh:mm-ddd:hh:mm ddd. Time windows should not overlap.
+    <dd>{{% md %}}Set time windows for shutdown hours. Specify a list of `timeWindows` with at least one time window Each string is in the format of `ddd:hh:mm-ddd:hh:mm` (ddd = day of week = Sun | Mon | Tue | Wed | Thu | Fri | Sat hh = hour 24 = 0 -23 mm = minute = 0 - 59). Time windows should not overlap. Required when `cluster.scheduling.isEnabled` is true. API Times are in UTC. Example: `Fri:15:30-Wed:14:30`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -4329,7 +4273,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanscheduledtaskshutdownhours">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Ecs.<wbr>Inputs.<wbr>Ocean<wbr>Scheduled<wbr>Task<wbr>Shutdown<wbr>Hours<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Set shutdown hours for cluster object.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tasks_csharp">
@@ -4338,7 +4283,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanscheduledtasktask">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Ecs.<wbr>Inputs.<wbr>Ocean<wbr>Scheduled<wbr>Task<wbr>Task<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The scheduling tasks for the cluster.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4353,7 +4299,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanscheduledtaskshutdownhours">Ocean<wbr>Scheduled<wbr>Task<wbr>Shutdown<wbr>Hours</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Set shutdown hours for cluster object.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tasks_go">
@@ -4362,7 +4309,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanscheduledtasktask">[]Ocean<wbr>Scheduled<wbr>Task<wbr>Task</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The scheduling tasks for the cluster.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4377,7 +4325,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanscheduledtaskshutdownhours">Ocean<wbr>Scheduled<wbr>Task<wbr>Shutdown<wbr>Hours</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Set shutdown hours for cluster object.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tasks_nodejs">
@@ -4386,7 +4335,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanscheduledtasktask">Ocean<wbr>Scheduled<wbr>Task<wbr>Task[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The scheduling tasks for the cluster.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4401,7 +4351,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanscheduledtaskshutdownhours">Ocean<wbr>Scheduled<wbr>Task<wbr>Shutdown<wbr>Hours<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Set shutdown hours for cluster object.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tasks_python">
@@ -4410,7 +4361,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#oceanscheduledtasktask">Sequence[Ocean<wbr>Scheduled<wbr>Task<wbr>Task<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The scheduling tasks for the cluster.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4439,7 +4391,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}Array of strings. Set time windows for image update, at least one time window. Each string is in the format of ddd:hh:mm-ddd:hh:mm ddd. Time windows should not overlap.
+    <dd>{{% md %}}Set time windows for shutdown hours. Specify a list of `timeWindows` with at least one time window Each string is in the format of `ddd:hh:mm-ddd:hh:mm` (ddd = day of week = Sun | Mon | Tue | Wed | Thu | Fri | Sat hh = hour 24 = 0 -23 mm = minute = 0 - 59). Time windows should not overlap. Required when `cluster.scheduling.isEnabled` is true. API Times are in UTC. Example: `Fri:15:30-Wed:14:30`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4449,7 +4401,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes whether the task is enabled. When true the task should run when false it should not run. Required for `cluster.scheduling.tasks` object.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4464,7 +4417,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}Array of strings. Set time windows for image update, at least one time window. Each string is in the format of ddd:hh:mm-ddd:hh:mm ddd. Time windows should not overlap.
+    <dd>{{% md %}}Set time windows for shutdown hours. Specify a list of `timeWindows` with at least one time window Each string is in the format of `ddd:hh:mm-ddd:hh:mm` (ddd = day of week = Sun | Mon | Tue | Wed | Thu | Fri | Sat hh = hour 24 = 0 -23 mm = minute = 0 - 59). Time windows should not overlap. Required when `cluster.scheduling.isEnabled` is true. API Times are in UTC. Example: `Fri:15:30-Wed:14:30`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4474,7 +4427,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes whether the task is enabled. When true the task should run when false it should not run. Required for `cluster.scheduling.tasks` object.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4489,7 +4443,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}Array of strings. Set time windows for image update, at least one time window. Each string is in the format of ddd:hh:mm-ddd:hh:mm ddd. Time windows should not overlap.
+    <dd>{{% md %}}Set time windows for shutdown hours. Specify a list of `timeWindows` with at least one time window Each string is in the format of `ddd:hh:mm-ddd:hh:mm` (ddd = day of week = Sun | Mon | Tue | Wed | Thu | Fri | Sat hh = hour 24 = 0 -23 mm = minute = 0 - 59). Time windows should not overlap. Required when `cluster.scheduling.isEnabled` is true. API Times are in UTC. Example: `Fri:15:30-Wed:14:30`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4499,7 +4453,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes whether the task is enabled. When true the task should run when false it should not run. Required for `cluster.scheduling.tasks` object.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4514,7 +4469,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}Array of strings. Set time windows for image update, at least one time window. Each string is in the format of ddd:hh:mm-ddd:hh:mm ddd. Time windows should not overlap.
+    <dd>{{% md %}}Set time windows for shutdown hours. Specify a list of `timeWindows` with at least one time window Each string is in the format of `ddd:hh:mm-ddd:hh:mm` (ddd = day of week = Sun | Mon | Tue | Wed | Thu | Fri | Sat hh = hour 24 = 0 -23 mm = minute = 0 - 59). Time windows should not overlap. Required when `cluster.scheduling.isEnabled` is true. API Times are in UTC. Example: `Fri:15:30-Wed:14:30`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4524,7 +4479,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes whether the task is enabled. When true the task should run when false it should not run. Required for `cluster.scheduling.tasks` object.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4553,7 +4509,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A valid cron expression. The cron is running in UTC time zone and is in Unix cron format Cron Expression Validator Script. Only one of `frequency` or `cronExpression` should be used at a time. Required for `cluster.scheduling.tasks` object. Example: `0 1 * * *`.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="isenabled_csharp">
@@ -4562,7 +4519,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes whether the task is enabled. When true the task should run when false it should not run. Required for `cluster.scheduling.tasks` object.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="tasktype_csharp">
@@ -4571,7 +4529,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Valid values: "clusterRoll". Required for `cluster.scheduling.tasks object`. Example: `clusterRoll`.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4586,7 +4545,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A valid cron expression. The cron is running in UTC time zone and is in Unix cron format Cron Expression Validator Script. Only one of `frequency` or `cronExpression` should be used at a time. Required for `cluster.scheduling.tasks` object. Example: `0 1 * * *`.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="isenabled_go">
@@ -4595,7 +4555,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes whether the task is enabled. When true the task should run when false it should not run. Required for `cluster.scheduling.tasks` object.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="tasktype_go">
@@ -4604,7 +4565,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Valid values: "clusterRoll". Required for `cluster.scheduling.tasks object`. Example: `clusterRoll`.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4619,7 +4581,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A valid cron expression. The cron is running in UTC time zone and is in Unix cron format Cron Expression Validator Script. Only one of `frequency` or `cronExpression` should be used at a time. Required for `cluster.scheduling.tasks` object. Example: `0 1 * * *`.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="isenabled_nodejs">
@@ -4628,7 +4591,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes whether the task is enabled. When true the task should run when false it should not run. Required for `cluster.scheduling.tasks` object.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="tasktype_nodejs">
@@ -4637,7 +4601,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Valid values: "clusterRoll". Required for `cluster.scheduling.tasks object`. Example: `clusterRoll`.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4652,7 +4617,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A valid cron expression. The cron is running in UTC time zone and is in Unix cron format Cron Expression Validator Script. Only one of `frequency` or `cronExpression` should be used at a time. Required for `cluster.scheduling.tasks` object. Example: `0 1 * * *`.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="is_enabled_python">
@@ -4661,7 +4627,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes whether the task is enabled. When true the task should run when false it should not run. Required for `cluster.scheduling.tasks` object.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="task_type_python">
@@ -4670,7 +4637,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Valid values: "clusterRoll". Required for `cluster.scheduling.tasks object`. Example: `clusterRoll`.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4817,7 +4785,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Enables the roll.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="rollconfig_csharp">
@@ -4841,7 +4810,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Enables the roll.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="rollconfig_go">
@@ -4865,7 +4835,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Enables the roll.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="rollconfig_nodejs">
@@ -4889,7 +4860,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Enables the roll.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="roll_config_python">
@@ -4927,7 +4899,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Sets the percentage of the instances to deploy in each batch.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4942,7 +4915,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Sets the percentage of the instances to deploy in each batch.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4957,7 +4931,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Sets the percentage of the instances to deploy in each batch.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4972,7 +4947,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Sets the percentage of the instances to deploy in each batch.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 

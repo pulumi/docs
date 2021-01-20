@@ -11,187 +11,6 @@ meta_desc: "Documentation for the spotinst.aws.ManagedInstance resource with exa
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Provides a Spotinst AWS ManagedInstance resource.
-## Network Interface - (Optional) List of network interfaces in an EC2 instance.
-
-* `device_index` - (Optional) The position of the network interface in the attachment order. A primary network interface has a device index of 0. If you specify a network interface when launching an instance, you must specify the device index.
-* `associate_public_ip_address` - (Optional) Indicates whether to assign a public IPv4 address to an instance you launch in a VPC. The public IP address can only be assigned to a network interface for eth0, and can only be assigned to a new network interface, not an existing one. You cannot specify more than one network interface in the request. If launching into a default subnet, the default value is true.
-* `associate_ipv6_address` - (Optional) Indicates whether to assign an IPv6 address. Amazon EC2 chooses the IPv6 addresses from the range of the subnet.
-   Default: false
-
-Usage:
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-```
-```python
-import pulumi
-```
-```csharp
-using Pulumi;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-    }
-
-}
-```
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		return nil
-	})
-}
-```
-
-<a id="scheduled-task"></a>
-## Scheduled Tasks
-
-Each `scheduled_task` supports the following:
-
-* `is_enabled` - (Optional) Describes whether the task is enabled. When true the task should run when false it should not run.
-* `frequency` - (Optional) Set frequency for the task. Valid values: "hourly", "daily", "weekly", "continuous".
-* `start_time` - (Optional) DATETIME in ISO-8601 format. Sets a start time for scheduled actions. If "frequency" or "cronExpression" are not used - the task will run only once at the start time and will then be deleted from the instance configuration.
-   Example: 2019-05-23T10:55:09Z
-* `cron_expression` - (Optional) A valid cron expression. For example: " * * * * * ". The cron is running in UTC time zone and is in Unix cron format Cron Expression Validator Script. Only one of ‘frequency’ or ‘cronExpression’ should be used at a time.
-   Example: 0 1 * * *
-* `task_type`- (Required) The task type to run. Valid values: "pause", "resume", "recycle".
-
-Usage:
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-```
-```python
-import pulumi
-```
-```csharp
-using Pulumi;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-    }
-
-}
-```
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		return nil
-	})
-}
-```
-
-<a id="load-balancers"></a>
-## Load Balancers
-
-   * `loadBalancersConfig` - (Optional) Load Balancers integration object.
-     
-       * `load_balancers` - (Optional) List of load balancers configs.
-            * `name` - The AWS resource name. Required for Classic Load Balancer. Optional for Application Load Balancer.
-            * `arn` - The AWS resource ARN (Required only for ALB target groups).
-            * `balancer_id` - The Multai load balancer ID.
-                 Default: lb-123456
-            * `target_set_id` - The Multai load target set ID.
-                 Default: ts-123456
-            * `auto_weight` - "Auto Weight" will automatically provide a higher weight for instances that are larger as appropriate. For example, if you have configured your Elastigroup with m4.large and m4.xlarge instances the m4.large will have half the weight of an m4.xlarge. This ensures that larger instances receive a higher number of MLB requests.
-            * `zone_awareness` - "AZ Awareness" will ensure that instances within the same AZ are using the corresponding MLB runtime instance in the same AZ. This feature reduces multi-zone data transfer fees.
-            * `type` - The resource type. Valid Values: CLASSIC, TARGET_GROUP, MULTAI_TARGET_SET.
-
-Usage:
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-```
-```python
-import pulumi
-```
-```csharp
-using Pulumi;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-    }
-
-}
-```
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		return nil
-	})
-}
-```
-
-<a id="route53"></a>
-## route53
-
-   * `integration_route53` - (Optional) Describes the [Route53](https://aws.amazon.com/documentation/route53/?id=docs_gateway) integration.
-     
-       * `domains` - (Required) Route 53 Domain configurations.
-           * `hosted_zone_id` - (Required) The Route 53 Hosted Zone Id for the registered Domain.
-           * `spotinst_acct_id` - (Optional) The Spotinst account ID that is linked to the AWS account that holds the Route 53 hosted Zone Id. The default is the user Spotinst account provided as a URL parameter.
-           * `record_set_type` - (Optional, Default: `a`) The type of the record set. Valid values: `"a"`, `"cname"`.
-           * `record_sets` - (Required) List of record sets
-               * `name` - (Required) The record set name.
-               * `use_public_ip` - (Optional, Default: `false`) - Designates whether the IP address should be exposed to connections outside the VPC.
-               * `use_public_dns` - (Optional, Default: `false`) - Designates whether the DNS address should be exposed to connections outside the VPC.
-
-Usage:
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-```
-```python
-import pulumi
-```
-```csharp
-using Pulumi;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-    }
-
-}
-```
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		return nil
-	})
-}
-```
 
 
 {{% examples %}}
@@ -222,7 +41,7 @@ const default_managed_instance = new spotinst.aws.ManagedInstance("default-manag
     autoHealing: true,
     blockDevicesMode: "reattach",
     cpuCredits: "standard",
-    description: "created by Terraform",
+    description: "created by Pulumi",
     drainingTimeout: 120,
     ebsOptimized: true,
     elasticIp: "ip",
@@ -651,7 +470,8 @@ Default: `"EC2"`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedinstanceintegrationroute53">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Managed<wbr>Instance<wbr>Integration<wbr>Route53Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes the [Route53](https://aws.amazon.com/documentation/route53/?id=docs_gateway) integration.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="keypair_csharp">
@@ -681,7 +501,8 @@ Default `"spot"`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedinstanceloadbalancer">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Managed<wbr>Instance<wbr>Load<wbr>Balancer<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of load balancers configs.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
@@ -690,7 +511,7 @@ Default `"spot"`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ManagedInstance name.
+    <dd>{{% md %}}The record set name.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1059,7 +880,8 @@ Default: `"EC2"`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedinstanceintegrationroute53">Managed<wbr>Instance<wbr>Integration<wbr>Route53</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes the [Route53](https://aws.amazon.com/documentation/route53/?id=docs_gateway) integration.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="keypair_go">
@@ -1089,7 +911,8 @@ Default `"spot"`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedinstanceloadbalancer">[]Managed<wbr>Instance<wbr>Load<wbr>Balancer</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of load balancers configs.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
@@ -1098,7 +921,7 @@ Default `"spot"`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ManagedInstance name.
+    <dd>{{% md %}}The record set name.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1467,7 +1290,8 @@ Default: `"EC2"`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedinstanceintegrationroute53">Managed<wbr>Instance<wbr>Integration<wbr>Route53</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes the [Route53](https://aws.amazon.com/documentation/route53/?id=docs_gateway) integration.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="keypair_nodejs">
@@ -1497,7 +1321,8 @@ Default `"spot"`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedinstanceloadbalancer">Managed<wbr>Instance<wbr>Load<wbr>Balancer[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of load balancers configs.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
@@ -1506,7 +1331,7 @@ Default `"spot"`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ManagedInstance name.
+    <dd>{{% md %}}The record set name.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1875,7 +1700,8 @@ Default: `"EC2"`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedinstanceintegrationroute53">Managed<wbr>Instance<wbr>Integration<wbr>Route53Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes the [Route53](https://aws.amazon.com/documentation/route53/?id=docs_gateway) integration.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="key_pair_python">
@@ -1905,7 +1731,8 @@ Default `"spot"`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedinstanceloadbalancer">Sequence[Managed<wbr>Instance<wbr>Load<wbr>Balancer<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of load balancers configs.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
@@ -1914,7 +1741,7 @@ Default `"spot"`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ManagedInstance name.
+    <dd>{{% md %}}The record set name.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2434,7 +2261,8 @@ Default: `"EC2"`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedinstanceintegrationroute53">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Managed<wbr>Instance<wbr>Integration<wbr>Route53Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes the [Route53](https://aws.amazon.com/documentation/route53/?id=docs_gateway) integration.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_keypair_csharp">
@@ -2464,7 +2292,8 @@ Default `"spot"`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedinstanceloadbalancer">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Managed<wbr>Instance<wbr>Load<wbr>Balancer<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of load balancers configs.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
@@ -2473,7 +2302,7 @@ Default `"spot"`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ManagedInstance name.
+    <dd>{{% md %}}The record set name.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2842,7 +2671,8 @@ Default: `"EC2"`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedinstanceintegrationroute53">Managed<wbr>Instance<wbr>Integration<wbr>Route53</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes the [Route53](https://aws.amazon.com/documentation/route53/?id=docs_gateway) integration.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_keypair_go">
@@ -2872,7 +2702,8 @@ Default `"spot"`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedinstanceloadbalancer">[]Managed<wbr>Instance<wbr>Load<wbr>Balancer</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of load balancers configs.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
@@ -2881,7 +2712,7 @@ Default `"spot"`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ManagedInstance name.
+    <dd>{{% md %}}The record set name.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3250,7 +3081,8 @@ Default: `"EC2"`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedinstanceintegrationroute53">Managed<wbr>Instance<wbr>Integration<wbr>Route53</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes the [Route53](https://aws.amazon.com/documentation/route53/?id=docs_gateway) integration.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_keypair_nodejs">
@@ -3280,7 +3112,8 @@ Default `"spot"`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedinstanceloadbalancer">Managed<wbr>Instance<wbr>Load<wbr>Balancer[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of load balancers configs.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
@@ -3289,7 +3122,7 @@ Default `"spot"`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ManagedInstance name.
+    <dd>{{% md %}}The record set name.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3658,7 +3491,8 @@ Default: `"EC2"`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedinstanceintegrationroute53">Managed<wbr>Instance<wbr>Integration<wbr>Route53Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes the [Route53](https://aws.amazon.com/documentation/route53/?id=docs_gateway) integration.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_key_pair_python">
@@ -3688,7 +3522,8 @@ Default `"spot"`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedinstanceloadbalancer">Sequence[Managed<wbr>Instance<wbr>Load<wbr>Balancer<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of load balancers configs.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
@@ -3697,7 +3532,7 @@ Default `"spot"`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ManagedInstance name.
+    <dd>{{% md %}}The record set name.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3945,7 +3780,8 @@ Default: `"false"`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedinstanceintegrationroute53domain">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Managed<wbr>Instance<wbr>Integration<wbr>Route53Domain<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Route 53 Domain configurations.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -3960,7 +3796,8 @@ Default: `"false"`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedinstanceintegrationroute53domain">[]Managed<wbr>Instance<wbr>Integration<wbr>Route53Domain</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Route 53 Domain configurations.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -3975,7 +3812,8 @@ Default: `"false"`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedinstanceintegrationroute53domain">Managed<wbr>Instance<wbr>Integration<wbr>Route53Domain[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Route 53 Domain configurations.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -3990,7 +3828,8 @@ Default: `"false"`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedinstanceintegrationroute53domain">Sequence[Managed<wbr>Instance<wbr>Integration<wbr>Route53Domain<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Route 53 Domain configurations.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4019,7 +3858,8 @@ Default: `"false"`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Route 53 Hosted Zone Id for the registered Domain.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="recordsets_csharp">
@@ -4028,7 +3868,8 @@ Default: `"false"`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedinstanceintegrationroute53domainrecordset">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Managed<wbr>Instance<wbr>Integration<wbr>Route53Domain<wbr>Record<wbr>Set<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of record sets
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="recordsettype_csharp">
@@ -4037,7 +3878,8 @@ Default: `"false"`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the record set. Valid values: `"a"`, `"cname"`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="spotinstacctid_csharp">
@@ -4046,7 +3888,8 @@ Default: `"false"`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Spotinst account ID that is linked to the AWS account that holds the Route 53 hosted Zone Id. The default is the user Spotinst account provided as a URL parameter.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4061,7 +3904,8 @@ Default: `"false"`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Route 53 Hosted Zone Id for the registered Domain.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="recordsets_go">
@@ -4070,7 +3914,8 @@ Default: `"false"`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedinstanceintegrationroute53domainrecordset">[]Managed<wbr>Instance<wbr>Integration<wbr>Route53Domain<wbr>Record<wbr>Set</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of record sets
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="recordsettype_go">
@@ -4079,7 +3924,8 @@ Default: `"false"`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the record set. Valid values: `"a"`, `"cname"`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="spotinstacctid_go">
@@ -4088,7 +3934,8 @@ Default: `"false"`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Spotinst account ID that is linked to the AWS account that holds the Route 53 hosted Zone Id. The default is the user Spotinst account provided as a URL parameter.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4103,7 +3950,8 @@ Default: `"false"`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Route 53 Hosted Zone Id for the registered Domain.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="recordsets_nodejs">
@@ -4112,7 +3960,8 @@ Default: `"false"`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedinstanceintegrationroute53domainrecordset">Managed<wbr>Instance<wbr>Integration<wbr>Route53Domain<wbr>Record<wbr>Set[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of record sets
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="recordsettype_nodejs">
@@ -4121,7 +3970,8 @@ Default: `"false"`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the record set. Valid values: `"a"`, `"cname"`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="spotinstacctid_nodejs">
@@ -4130,7 +3980,8 @@ Default: `"false"`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Spotinst account ID that is linked to the AWS account that holds the Route 53 hosted Zone Id. The default is the user Spotinst account provided as a URL parameter.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4145,7 +3996,8 @@ Default: `"false"`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Route 53 Hosted Zone Id for the registered Domain.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="record_sets_python">
@@ -4154,7 +4006,8 @@ Default: `"false"`.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#managedinstanceintegrationroute53domainrecordset">Sequence[Managed<wbr>Instance<wbr>Integration<wbr>Route53Domain<wbr>Record<wbr>Set<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of record sets
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="record_set_type_python">
@@ -4163,7 +4016,8 @@ Default: `"false"`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the record set. Valid values: `"a"`, `"cname"`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="spotinst_acct_id_python">
@@ -4172,7 +4026,8 @@ Default: `"false"`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Spotinst account ID that is linked to the AWS account that holds the Route 53 hosted Zone Id. The default is the user Spotinst account provided as a URL parameter.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4201,7 +4056,7 @@ Default: `"false"`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ManagedInstance name.
+    <dd>{{% md %}}The record set name.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4211,7 +4066,8 @@ Default: `"false"`.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}- Designates whether the DNS address should be exposed to connections outside the VPC.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="usepublicip_csharp">
@@ -4220,7 +4076,8 @@ Default: `"false"`.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}- Designates whether the IP address should be exposed to connections outside the VPC.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4235,7 +4092,7 @@ Default: `"false"`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ManagedInstance name.
+    <dd>{{% md %}}The record set name.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4245,7 +4102,8 @@ Default: `"false"`.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}- Designates whether the DNS address should be exposed to connections outside the VPC.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="usepublicip_go">
@@ -4254,7 +4112,8 @@ Default: `"false"`.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}- Designates whether the IP address should be exposed to connections outside the VPC.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4269,7 +4128,7 @@ Default: `"false"`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ManagedInstance name.
+    <dd>{{% md %}}The record set name.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4279,7 +4138,8 @@ Default: `"false"`.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}- Designates whether the DNS address should be exposed to connections outside the VPC.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="usepublicip_nodejs">
@@ -4288,7 +4148,8 @@ Default: `"false"`.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}- Designates whether the IP address should be exposed to connections outside the VPC.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4303,7 +4164,7 @@ Default: `"false"`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ManagedInstance name.
+    <dd>{{% md %}}The record set name.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4313,7 +4174,8 @@ Default: `"false"`.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}- Designates whether the DNS address should be exposed to connections outside the VPC.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="use_public_ip_python">
@@ -4322,7 +4184,8 @@ Default: `"false"`.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}- Designates whether the IP address should be exposed to connections outside the VPC.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4351,7 +4214,8 @@ Default: `"false"`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The resource type. Valid Values: CLASSIC, TARGET_GROUP, MULTAI_TARGET_SET.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="arn_csharp">
@@ -4360,7 +4224,8 @@ Default: `"false"`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The AWS resource ARN (Required only for ALB target groups).
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="autoweight_csharp">
@@ -4369,7 +4234,8 @@ Default: `"false"`.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}"Auto Weight" will automatically provide a higher weight for instances that are larger as appropriate. For example, if you have configured your Elastigroup with m4.large and m4.xlarge instances the m4.large will have half the weight of an m4.xlarge. This ensures that larger instances receive a higher number of MLB requests.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="azawareness_csharp">
@@ -4387,7 +4253,9 @@ Default: `"false"`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Multai load balancer ID.
+Default: lb-123456
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
@@ -4396,7 +4264,7 @@ Default: `"false"`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ManagedInstance name.
+    <dd>{{% md %}}The record set name.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4406,7 +4274,9 @@ Default: `"false"`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Multai load target set ID.
+Default: ts-123456
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4421,7 +4291,8 @@ Default: `"false"`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The resource type. Valid Values: CLASSIC, TARGET_GROUP, MULTAI_TARGET_SET.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="arn_go">
@@ -4430,7 +4301,8 @@ Default: `"false"`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The AWS resource ARN (Required only for ALB target groups).
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="autoweight_go">
@@ -4439,7 +4311,8 @@ Default: `"false"`.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}"Auto Weight" will automatically provide a higher weight for instances that are larger as appropriate. For example, if you have configured your Elastigroup with m4.large and m4.xlarge instances the m4.large will have half the weight of an m4.xlarge. This ensures that larger instances receive a higher number of MLB requests.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="azawareness_go">
@@ -4457,7 +4330,9 @@ Default: `"false"`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Multai load balancer ID.
+Default: lb-123456
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
@@ -4466,7 +4341,7 @@ Default: `"false"`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ManagedInstance name.
+    <dd>{{% md %}}The record set name.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4476,7 +4351,9 @@ Default: `"false"`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Multai load target set ID.
+Default: ts-123456
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4491,7 +4368,8 @@ Default: `"false"`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The resource type. Valid Values: CLASSIC, TARGET_GROUP, MULTAI_TARGET_SET.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="arn_nodejs">
@@ -4500,7 +4378,8 @@ Default: `"false"`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The AWS resource ARN (Required only for ALB target groups).
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="autoweight_nodejs">
@@ -4509,7 +4388,8 @@ Default: `"false"`.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}"Auto Weight" will automatically provide a higher weight for instances that are larger as appropriate. For example, if you have configured your Elastigroup with m4.large and m4.xlarge instances the m4.large will have half the weight of an m4.xlarge. This ensures that larger instances receive a higher number of MLB requests.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="azawareness_nodejs">
@@ -4527,7 +4407,9 @@ Default: `"false"`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Multai load balancer ID.
+Default: lb-123456
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
@@ -4536,7 +4418,7 @@ Default: `"false"`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ManagedInstance name.
+    <dd>{{% md %}}The record set name.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4546,7 +4428,9 @@ Default: `"false"`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Multai load target set ID.
+Default: ts-123456
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4561,7 +4445,8 @@ Default: `"false"`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The resource type. Valid Values: CLASSIC, TARGET_GROUP, MULTAI_TARGET_SET.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="arn_python">
@@ -4570,7 +4455,8 @@ Default: `"false"`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The AWS resource ARN (Required only for ALB target groups).
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="auto_weight_python">
@@ -4579,7 +4465,8 @@ Default: `"false"`.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}"Auto Weight" will automatically provide a higher weight for instances that are larger as appropriate. For example, if you have configured your Elastigroup with m4.large and m4.xlarge instances the m4.large will have half the weight of an m4.xlarge. This ensures that larger instances receive a higher number of MLB requests.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="az_awareness_python">
@@ -4597,7 +4484,9 @@ Default: `"false"`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Multai load balancer ID.
+Default: lb-123456
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
@@ -4606,7 +4495,7 @@ Default: `"false"`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ManagedInstance name.
+    <dd>{{% md %}}The record set name.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4616,7 +4505,9 @@ Default: `"false"`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The Multai load target set ID.
+Default: ts-123456
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4645,7 +4536,8 @@ Default: `"false"`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The position of the network interface in the attachment order. A primary network interface has a device index of 0. If you specify a network interface when launching an instance, you must specify the device index.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="associateipv6address_csharp">
@@ -4654,7 +4546,9 @@ Default: `"false"`.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Indicates whether to assign an IPv6 address. Amazon EC2 chooses the IPv6 addresses from the range of the subnet.
+Default: false
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="associatepublicipaddress_csharp">
@@ -4663,7 +4557,8 @@ Default: `"false"`.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Indicates whether to assign a public IPv4 address to an instance you launch in a VPC. The public IP address can only be assigned to a network interface for eth0, and can only be assigned to a new network interface, not an existing one. You cannot specify more than one network interface in the request. If launching into a default subnet, the default value is true.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4678,7 +4573,8 @@ Default: `"false"`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The position of the network interface in the attachment order. A primary network interface has a device index of 0. If you specify a network interface when launching an instance, you must specify the device index.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="associateipv6address_go">
@@ -4687,7 +4583,9 @@ Default: `"false"`.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Indicates whether to assign an IPv6 address. Amazon EC2 chooses the IPv6 addresses from the range of the subnet.
+Default: false
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="associatepublicipaddress_go">
@@ -4696,7 +4594,8 @@ Default: `"false"`.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Indicates whether to assign a public IPv4 address to an instance you launch in a VPC. The public IP address can only be assigned to a network interface for eth0, and can only be assigned to a new network interface, not an existing one. You cannot specify more than one network interface in the request. If launching into a default subnet, the default value is true.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4711,7 +4610,8 @@ Default: `"false"`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The position of the network interface in the attachment order. A primary network interface has a device index of 0. If you specify a network interface when launching an instance, you must specify the device index.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="associateipv6address_nodejs">
@@ -4720,7 +4620,9 @@ Default: `"false"`.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Indicates whether to assign an IPv6 address. Amazon EC2 chooses the IPv6 addresses from the range of the subnet.
+Default: false
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="associatepublicipaddress_nodejs">
@@ -4729,7 +4631,8 @@ Default: `"false"`.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Indicates whether to assign a public IPv4 address to an instance you launch in a VPC. The public IP address can only be assigned to a network interface for eth0, and can only be assigned to a new network interface, not an existing one. You cannot specify more than one network interface in the request. If launching into a default subnet, the default value is true.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4744,7 +4647,8 @@ Default: `"false"`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The position of the network interface in the attachment order. A primary network interface has a device index of 0. If you specify a network interface when launching an instance, you must specify the device index.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="associate_ipv6_address_python">
@@ -4753,7 +4657,9 @@ Default: `"false"`.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Indicates whether to assign an IPv6 address. Amazon EC2 chooses the IPv6 addresses from the range of the subnet.
+Default: false
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="associate_public_ip_address_python">
@@ -4762,7 +4668,8 @@ Default: `"false"`.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Indicates whether to assign a public IPv4 address to an instance you launch in a VPC. The public IP address can only be assigned to a network interface for eth0, and can only be assigned to a new network interface, not an existing one. You cannot specify more than one network interface in the request. If launching into a default subnet, the default value is true.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4873,7 +4780,8 @@ Default `"never"`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The task type to run. Valid values: "pause", "resume", "recycle".
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="cronexpression_csharp">
@@ -4882,7 +4790,9 @@ Default `"never"`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A valid cron expression. For example: " * * * * * ". The cron is running in UTC time zone and is in Unix cron format Cron Expression Validator Script. Only one of ‘frequency’ or ‘cronExpression’ should be used at a time.
+Example: 0 1 * * *
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="frequency_csharp">
@@ -4891,7 +4801,8 @@ Default `"never"`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Set frequency for the task. Valid values: "hourly", "daily", "weekly", "continuous".
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="isenabled_csharp">
@@ -4900,7 +4811,8 @@ Default `"never"`.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes whether the task is enabled. When true the task should run when false it should not run.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="starttime_csharp">
@@ -4909,7 +4821,9 @@ Default `"never"`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}DATETIME in ISO-8601 format. Sets a start time for scheduled actions. If "frequency" or "cronExpression" are not used - the task will run only once at the start time and will then be deleted from the instance configuration.
+Example: 2019-05-23T10:55:09Z
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4924,7 +4838,8 @@ Default `"never"`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The task type to run. Valid values: "pause", "resume", "recycle".
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="cronexpression_go">
@@ -4933,7 +4848,9 @@ Default `"never"`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A valid cron expression. For example: " * * * * * ". The cron is running in UTC time zone and is in Unix cron format Cron Expression Validator Script. Only one of ‘frequency’ or ‘cronExpression’ should be used at a time.
+Example: 0 1 * * *
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="frequency_go">
@@ -4942,7 +4859,8 @@ Default `"never"`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Set frequency for the task. Valid values: "hourly", "daily", "weekly", "continuous".
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="isenabled_go">
@@ -4951,7 +4869,8 @@ Default `"never"`.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes whether the task is enabled. When true the task should run when false it should not run.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="starttime_go">
@@ -4960,7 +4879,9 @@ Default `"never"`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}DATETIME in ISO-8601 format. Sets a start time for scheduled actions. If "frequency" or "cronExpression" are not used - the task will run only once at the start time and will then be deleted from the instance configuration.
+Example: 2019-05-23T10:55:09Z
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4975,7 +4896,8 @@ Default `"never"`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The task type to run. Valid values: "pause", "resume", "recycle".
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="cronexpression_nodejs">
@@ -4984,7 +4906,9 @@ Default `"never"`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A valid cron expression. For example: " * * * * * ". The cron is running in UTC time zone and is in Unix cron format Cron Expression Validator Script. Only one of ‘frequency’ or ‘cronExpression’ should be used at a time.
+Example: 0 1 * * *
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="frequency_nodejs">
@@ -4993,7 +4917,8 @@ Default `"never"`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Set frequency for the task. Valid values: "hourly", "daily", "weekly", "continuous".
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="isenabled_nodejs">
@@ -5002,7 +4927,8 @@ Default `"never"`.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes whether the task is enabled. When true the task should run when false it should not run.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="starttime_nodejs">
@@ -5011,7 +4937,9 @@ Default `"never"`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}DATETIME in ISO-8601 format. Sets a start time for scheduled actions. If "frequency" or "cronExpression" are not used - the task will run only once at the start time and will then be deleted from the instance configuration.
+Example: 2019-05-23T10:55:09Z
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -5026,7 +4954,8 @@ Default `"never"`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The task type to run. Valid values: "pause", "resume", "recycle".
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="cron_expression_python">
@@ -5035,7 +4964,9 @@ Default `"never"`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A valid cron expression. For example: " * * * * * ". The cron is running in UTC time zone and is in Unix cron format Cron Expression Validator Script. Only one of ‘frequency’ or ‘cronExpression’ should be used at a time.
+Example: 0 1 * * *
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="frequency_python">
@@ -5044,7 +4975,8 @@ Default `"never"`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Set frequency for the task. Valid values: "hourly", "daily", "weekly", "continuous".
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="is_enabled_python">
@@ -5053,7 +4985,8 @@ Default `"never"`.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes whether the task is enabled. When true the task should run when false it should not run.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="start_time_python">
@@ -5062,7 +4995,9 @@ Default `"never"`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}DATETIME in ISO-8601 format. Sets a start time for scheduled actions. If "frequency" or "cronExpression" are not used - the task will run only once at the start time and will then be deleted from the instance configuration.
+Example: 2019-05-23T10:55:09Z
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 

@@ -11,89 +11,6 @@ meta_desc: "Documentation for the spotinst.gke.Elastigroup resource with example
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Provides a Spotinst Elastigroup GKE resource. Please see [Importing a GKE cluster](https://api.spotinst.com/elastigroup-for-google-cloud/tutorials/import-a-gke-cluster-as-an-elastigroup/) for detailed information.
-## Third-Party Integrations
-
-* `integration_gke` - (Required) Describes the GKE integration.
-  
-    * `location` - (Optional) The location of your GKE cluster.
-    * `cluster_id` - (Optional) The GKE cluster ID you wish to import.
-    * `autoscale_is_enabled` -  (Optional, Default: `false`) Specifies whether the auto scaling feature is enabled.
-    * `autoscale_is_autoconfig` - (Optional, Default: `false`) Enabling the automatic auto-scaler functionality. For more information please see: .
-    * `autoscale_cooldown` - (Optional, Default: `300`) The amount of time, in seconds, after a scaling activity completes before any further trigger-related scaling activities can start.
-  
-    * `autoscale_headroom` - (Optional) Headroom for the cluster.
-        * `cpu_per_unit` - (Optional, Default: `0`) Cpu units for compute.
-        * `memory_per_unit` - (Optional, Default: `0`) RAM units for compute.
-        * `num_of_units` - (Optional, Default: `0`) Amount of units for compute.
-  
-    * `autoscale_down` - (Optional) Enabling scale down.
-        * `evaluation_periods` - (Optional, Default: `5`) Amount of cooldown evaluation periods for scale down.
-  
-    * `autoscale_labels` - (Optional) Labels to assign to the resource.
-        * `key` - (Optional) The label name.
-        * `value` - (Optional) The label value.
-
-Usage:
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-```
-```python
-import pulumi
-```
-```csharp
-using Pulumi;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-    }
-
-}
-```
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		return nil
-	})
-}
-```
-
-<a id="diff-suppressed-parameters"></a>
-## Diff-suppressed Parameters
-
-The following parameters are created remotely and imported. The diffs have been suppressed in order to maintain plan legibility. You may update the values of these
-imported parameters by defining them in your template with your desired new value (including null values).
-
-* `backend_services`
-    * `service_name`
-    * `location_type`
-    * `scheme`
-    * `named_port`
-        * `port_name`
-        * `ports`
-* `labels`
-    * `key`
-    * `value`
-* `metadata`
-    * `key`
-    * `value`
-* `tags`
-    * `key`
-    * `value`
-* `service_account`
-* `ip_forwarding`
-* `fallback_to_od`
-* `subnets`
-    * `region`
-    * `subnet_name`
 
 
 {{% examples %}}
@@ -317,7 +234,7 @@ const example_gke_elastigroup = new spotinst.gke.Elastigroup("example-gke-elasti
         }],
         serviceName: "backend-service",
     }],
-    // cluster_id        = "terraform-acc-test-cluster" // deprecated
+    // cluster_id        = "sample-acc-test-cluster" // deprecated
     clusterZoneName: "us-central1-a",
     desiredCapacity: 3,
     // --- INSTANCE TYPES --------------------------------
@@ -575,7 +492,7 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the GKE cluster you wish to import.
+    <dd>{{% md %}}The GKE cluster ID you wish to import.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please define cluster_id under integration_gke{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
@@ -657,7 +574,8 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupintegrationgke">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Gke.<wbr>Inputs.<wbr>Elastigroup<wbr>Integration<wbr>Gke<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes the GKE integration.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="ipforwarding_csharp">
@@ -845,7 +763,7 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the GKE cluster you wish to import.
+    <dd>{{% md %}}The GKE cluster ID you wish to import.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please define cluster_id under integration_gke{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
@@ -927,7 +845,8 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupintegrationgke">Elastigroup<wbr>Integration<wbr>Gke</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes the GKE integration.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="ipforwarding_go">
@@ -1115,7 +1034,7 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the GKE cluster you wish to import.
+    <dd>{{% md %}}The GKE cluster ID you wish to import.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please define cluster_id under integration_gke{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
@@ -1197,7 +1116,8 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupintegrationgke">Elastigroup<wbr>Integration<wbr>Gke</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes the GKE integration.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="ipforwarding_nodejs">
@@ -1385,7 +1305,7 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the GKE cluster you wish to import.
+    <dd>{{% md %}}The GKE cluster ID you wish to import.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please define cluster_id under integration_gke{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
@@ -1467,7 +1387,8 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupintegrationgke">Elastigroup<wbr>Integration<wbr>Gke<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes the GKE integration.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="ip_forwarding_python">
@@ -1826,7 +1747,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the GKE cluster you wish to import.
+    <dd>{{% md %}}The GKE cluster ID you wish to import.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please define cluster_id under integration_gke{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
@@ -1927,7 +1848,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupintegrationgke">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Gke.<wbr>Inputs.<wbr>Elastigroup<wbr>Integration<wbr>Gke<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes the GKE integration.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_ipforwarding_csharp">
@@ -2096,7 +2018,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the GKE cluster you wish to import.
+    <dd>{{% md %}}The GKE cluster ID you wish to import.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please define cluster_id under integration_gke{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
@@ -2197,7 +2119,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupintegrationgke">Elastigroup<wbr>Integration<wbr>Gke</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes the GKE integration.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_ipforwarding_go">
@@ -2366,7 +2289,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the GKE cluster you wish to import.
+    <dd>{{% md %}}The GKE cluster ID you wish to import.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please define cluster_id under integration_gke{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
@@ -2467,7 +2390,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupintegrationgke">Elastigroup<wbr>Integration<wbr>Gke</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes the GKE integration.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_ipforwarding_nodejs">
@@ -2636,7 +2560,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the GKE cluster you wish to import.
+    <dd>{{% md %}}The GKE cluster ID you wish to import.
 {{% /md %}}<p class="property-message">Deprecated: {{% md %}}Please define cluster_id under integration_gke{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
@@ -2737,7 +2661,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupintegrationgke">Elastigroup<wbr>Integration<wbr>Gke<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes the GKE integration.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_ip_forwarding_python">
@@ -4023,7 +3948,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The amount of time, in seconds, after a scaling activity completes before any further trigger-related scaling activities can start.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="autoscaledown_csharp">
@@ -4032,7 +3958,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupintegrationgkeautoscaledown">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Gke.<wbr>Inputs.<wbr>Elastigroup<wbr>Integration<wbr>Gke<wbr>Autoscale<wbr>Down<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Enabling scale down.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="autoscaleheadroom_csharp">
@@ -4041,7 +3968,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupintegrationgkeautoscaleheadroom">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Gke.<wbr>Inputs.<wbr>Elastigroup<wbr>Integration<wbr>Gke<wbr>Autoscale<wbr>Headroom<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Headroom for the cluster.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="autoscaleisautoconfig_csharp">
@@ -4059,7 +3987,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies whether the auto scaling feature is enabled.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="autoscalelabels_csharp">
@@ -4068,7 +3997,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupintegrationgkeautoscalelabel">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Gke.<wbr>Inputs.<wbr>Elastigroup<wbr>Integration<wbr>Gke<wbr>Autoscale<wbr>Label<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Labels to assign to the resource.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="clusterid_csharp">
@@ -4077,7 +4007,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the GKE cluster you wish to import.
+    <dd>{{% md %}}The GKE cluster ID you wish to import.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4087,7 +4017,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The location of your GKE cluster.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4111,7 +4042,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The amount of time, in seconds, after a scaling activity completes before any further trigger-related scaling activities can start.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="autoscaledown_go">
@@ -4120,7 +4052,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupintegrationgkeautoscaledown">Elastigroup<wbr>Integration<wbr>Gke<wbr>Autoscale<wbr>Down</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Enabling scale down.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="autoscaleheadroom_go">
@@ -4129,7 +4062,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupintegrationgkeautoscaleheadroom">Elastigroup<wbr>Integration<wbr>Gke<wbr>Autoscale<wbr>Headroom</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Headroom for the cluster.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="autoscaleisautoconfig_go">
@@ -4147,7 +4081,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies whether the auto scaling feature is enabled.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="autoscalelabels_go">
@@ -4156,7 +4091,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupintegrationgkeautoscalelabel">[]Elastigroup<wbr>Integration<wbr>Gke<wbr>Autoscale<wbr>Label</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Labels to assign to the resource.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="clusterid_go">
@@ -4165,7 +4101,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the GKE cluster you wish to import.
+    <dd>{{% md %}}The GKE cluster ID you wish to import.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4175,7 +4111,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The location of your GKE cluster.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4199,7 +4136,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The amount of time, in seconds, after a scaling activity completes before any further trigger-related scaling activities can start.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="autoscaledown_nodejs">
@@ -4208,7 +4146,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupintegrationgkeautoscaledown">Elastigroup<wbr>Integration<wbr>Gke<wbr>Autoscale<wbr>Down</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Enabling scale down.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="autoscaleheadroom_nodejs">
@@ -4217,7 +4156,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupintegrationgkeautoscaleheadroom">Elastigroup<wbr>Integration<wbr>Gke<wbr>Autoscale<wbr>Headroom</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Headroom for the cluster.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="autoscaleisautoconfig_nodejs">
@@ -4235,7 +4175,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies whether the auto scaling feature is enabled.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="autoscalelabels_nodejs">
@@ -4244,7 +4185,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupintegrationgkeautoscalelabel">Elastigroup<wbr>Integration<wbr>Gke<wbr>Autoscale<wbr>Label[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Labels to assign to the resource.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="clusterid_nodejs">
@@ -4253,7 +4195,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the GKE cluster you wish to import.
+    <dd>{{% md %}}The GKE cluster ID you wish to import.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4263,7 +4205,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The location of your GKE cluster.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4287,7 +4230,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The amount of time, in seconds, after a scaling activity completes before any further trigger-related scaling activities can start.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="autoscale_down_python">
@@ -4296,7 +4240,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupintegrationgkeautoscaledown">Elastigroup<wbr>Integration<wbr>Gke<wbr>Autoscale<wbr>Down<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Enabling scale down.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="autoscale_headroom_python">
@@ -4305,7 +4250,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupintegrationgkeautoscaleheadroom">Elastigroup<wbr>Integration<wbr>Gke<wbr>Autoscale<wbr>Headroom<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Headroom for the cluster.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="autoscale_is_auto_config_python">
@@ -4323,7 +4269,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies whether the auto scaling feature is enabled.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="autoscale_labels_python">
@@ -4332,7 +4279,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupintegrationgkeautoscalelabel">Sequence[Elastigroup<wbr>Integration<wbr>Gke<wbr>Autoscale<wbr>Label<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Labels to assign to the resource.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="cluster_id_python">
@@ -4341,7 +4289,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the GKE cluster you wish to import.
+    <dd>{{% md %}}The GKE cluster ID you wish to import.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4351,7 +4299,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The location of your GKE cluster.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4380,7 +4329,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Amount of cooldown evaluation periods for scale down.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4395,7 +4345,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Amount of cooldown evaluation periods for scale down.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4410,7 +4361,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Amount of cooldown evaluation periods for scale down.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4425,7 +4377,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Amount of cooldown evaluation periods for scale down.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4454,7 +4407,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Cpu units for compute.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="memoryperunit_csharp">
@@ -4463,7 +4417,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}RAM units for compute.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="numofunits_csharp">
@@ -4472,7 +4427,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Amount of units for compute.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4487,7 +4443,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Cpu units for compute.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="memoryperunit_go">
@@ -4496,7 +4453,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}RAM units for compute.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="numofunits_go">
@@ -4505,7 +4463,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Amount of units for compute.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4520,7 +4479,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Cpu units for compute.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="memoryperunit_nodejs">
@@ -4529,7 +4489,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}RAM units for compute.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="numofunits_nodejs">
@@ -4538,7 +4499,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Amount of units for compute.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4553,7 +4515,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Cpu units for compute.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="memory_per_unit_python">
@@ -4562,7 +4525,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}RAM units for compute.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="num_of_units_python">
@@ -4571,7 +4535,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Amount of units for compute.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4600,7 +4565,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The label name.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="value_csharp">
@@ -4609,7 +4575,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The label value.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4624,7 +4591,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The label name.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="value_go">
@@ -4633,7 +4601,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The label value.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4648,7 +4617,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The label name.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="value_nodejs">
@@ -4657,7 +4627,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The label value.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4672,7 +4643,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The label name.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="value_python">
@@ -4681,7 +4653,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The label value.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4710,7 +4683,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The label name.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="value_csharp">
@@ -4719,7 +4693,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The label value.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4734,7 +4709,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The label name.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="value_go">
@@ -4743,7 +4719,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The label value.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4758,7 +4735,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The label name.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="value_nodejs">
@@ -4767,7 +4745,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The label value.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4782,7 +4761,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The label name.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="value_python">
@@ -4791,7 +4771,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The label value.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4820,7 +4801,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The label name.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="value_csharp">
@@ -4829,7 +4811,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The label value.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4844,7 +4827,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The label name.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="value_go">
@@ -4853,7 +4837,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The label value.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4868,7 +4853,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The label name.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="value_nodejs">
@@ -4877,7 +4863,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The label value.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4892,7 +4879,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The label name.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="value_python">
@@ -4901,7 +4889,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The label value.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -5377,7 +5366,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Amount of cooldown evaluation periods for scale down.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="operator_csharp">
@@ -5509,7 +5499,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Amount of cooldown evaluation periods for scale down.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="operator_go">
@@ -5641,7 +5632,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Amount of cooldown evaluation periods for scale down.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="operator_nodejs">
@@ -5773,7 +5765,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Amount of cooldown evaluation periods for scale down.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="operator_python">
@@ -5847,7 +5840,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The label value.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -5871,7 +5865,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The label value.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -5895,7 +5890,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The label value.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -5919,7 +5915,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The label value.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -6029,7 +6026,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Amount of cooldown evaluation periods for scale down.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="operator_csharp">
@@ -6161,7 +6159,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Amount of cooldown evaluation periods for scale down.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="operator_go">
@@ -6293,7 +6292,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Amount of cooldown evaluation periods for scale down.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="operator_nodejs">
@@ -6425,7 +6425,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Amount of cooldown evaluation periods for scale down.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="operator_python">
@@ -6499,7 +6500,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The label value.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -6523,7 +6525,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The label value.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -6547,7 +6550,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The label value.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -6571,7 +6575,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The label value.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
