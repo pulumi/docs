@@ -53,7 +53,7 @@ export class HubspotForm {
             // the form which is less then desirable. So we need to find the hidden
             // form fields and then hide the parent <fieldset> for it. We will also need
             // to populate those fields with the correct values.
-            waitForElementToExist(`${hsFormTargetId} form div[class="input"]`).then(() => {
+            waitForElementToExist(`${hsFormTargetId} form div[class="input"]`, 5000).then(() => {
                 const fieldSets = document.querySelectorAll(`${hsFormTargetId} form fieldset div[style*="display:none"]`);
                 fieldSets.forEach((fieldset: any) => {
                     fieldset.parentElement.style.display = "none";
@@ -80,6 +80,9 @@ export class HubspotForm {
                 if (utmMediumInput) {
                     utmMediumInput.value = utmMedium;
                 }
+            }).catch((err) => {
+                console.log("Unable to find form on the DOM.");
+                console.log(err);
             });
         }).catch((err) => {
             this.isLoading = false;
