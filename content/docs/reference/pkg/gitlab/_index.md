@@ -23,6 +23,7 @@ A Pulumi package for creating and managing GitLab resources.
     <li><a href="grouplabel" title="GroupLabel"><span class="symbol resource"></span>GroupLabel</a></li>
     <li><a href="groupldaplink" title="GroupLdapLink"><span class="symbol resource"></span>GroupLdapLink</a></li>
     <li><a href="groupmembership" title="GroupMembership"><span class="symbol resource"></span>GroupMembership</a></li>
+    <li><a href="groupsharegroup" title="GroupShareGroup"><span class="symbol resource"></span>GroupShareGroup</a></li>
     <li><a href="groupvariable" title="GroupVariable"><span class="symbol resource"></span>GroupVariable</a></li>
     <li><a href="instancecluster" title="InstanceCluster"><span class="symbol resource"></span>InstanceCluster</a></li>
     <li><a href="instancevariable" title="InstanceVariable"><span class="symbol resource"></span>InstanceVariable</a></li>
@@ -67,7 +68,7 @@ A Pulumi package for creating and managing GitLab resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`gitlab` Terraform Provider](https://github.com/gitlabhq/terraform-provider-gitlab).</dd>
 	<dt>Version</dt>
-	<dd>3.4.1</dd>
+	<dd>3.5.0</dd>
 </dl>
 
 
