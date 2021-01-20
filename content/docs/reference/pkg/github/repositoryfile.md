@@ -347,7 +347,7 @@ The RepositoryFile resource accepts the following [input]({{< relref "/docs/intr
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Git branch (defaults to `master`).
+    <dd>{{% md %}}Git branch (defaults to `main`).
 The branch must already exist, it will not be created if it does not already exist.
 {{% /md %}}</dd>
     <dt class="property-optional"
@@ -434,7 +434,7 @@ The branch must already exist, it will not be created if it does not already exi
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Git branch (defaults to `master`).
+    <dd>{{% md %}}Git branch (defaults to `main`).
 The branch must already exist, it will not be created if it does not already exist.
 {{% /md %}}</dd>
     <dt class="property-optional"
@@ -521,7 +521,7 @@ The branch must already exist, it will not be created if it does not already exi
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Git branch (defaults to `master`).
+    <dd>{{% md %}}Git branch (defaults to `main`).
 The branch must already exist, it will not be created if it does not already exist.
 {{% /md %}}</dd>
     <dt class="property-optional"
@@ -608,7 +608,7 @@ The branch must already exist, it will not be created if it does not already exi
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Git branch (defaults to `master`).
+    <dd>{{% md %}}Git branch (defaults to `main`).
 The branch must already exist, it will not be created if it does not already exist.
 {{% /md %}}</dd>
     <dt class="property-optional"
@@ -666,6 +666,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="commitsha_csharp">
+<a href="#commitsha_csharp" style="color: inherit; text-decoration: inherit;">Commit<wbr>Sha</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The SHA of the commit that modified the file.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -689,6 +699,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-"
+            title="">
+        <span id="commitsha_go">
+<a href="#commitsha_go" style="color: inherit; text-decoration: inherit;">Commit<wbr>Sha</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The SHA of the commit that modified the file.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="id_go">
@@ -716,6 +736,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="commitsha_nodejs">
+<a href="#commitsha_nodejs" style="color: inherit; text-decoration: inherit;">commit<wbr>Sha</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The SHA of the commit that modified the file.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
@@ -739,6 +769,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language python %}}
 <dl class="resources-properties">
 
+    <dt class="property-"
+            title="">
+        <span id="commit_sha_python">
+<a href="#commit_sha_python" style="color: inherit; text-decoration: inherit;">commit_<wbr>sha</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The SHA of the commit that modified the file.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="id_python">
@@ -774,7 +814,7 @@ Get an existing RepositoryFile resource's state with the given name, ID, and opt
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">branch</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">commit_author</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">commit_email</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">commit_message</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">content</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">overwrite_on_create</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">repository</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sha</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> RepositoryFile</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">branch</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">commit_author</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">commit_email</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">commit_message</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">commit_sha</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">content</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">file</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">overwrite_on_create</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">repository</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sha</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> RepositoryFile</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -895,7 +935,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Git branch (defaults to `master`).
+    <dd>{{% md %}}Git branch (defaults to `main`).
 The branch must already exist, it will not be created if it does not already exist.
 {{% /md %}}</dd>
     <dt class="property-optional"
@@ -927,6 +967,16 @@ The branch must already exist, it will not be created if it does not already exi
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Commit message when adding or updating the managed file.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_commitsha_csharp">
+<a href="#state_commitsha_csharp" style="color: inherit; text-decoration: inherit;">Commit<wbr>Sha</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The SHA of the commit that modified the file.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -992,7 +1042,7 @@ The branch must already exist, it will not be created if it does not already exi
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Git branch (defaults to `master`).
+    <dd>{{% md %}}Git branch (defaults to `main`).
 The branch must already exist, it will not be created if it does not already exist.
 {{% /md %}}</dd>
     <dt class="property-optional"
@@ -1024,6 +1074,16 @@ The branch must already exist, it will not be created if it does not already exi
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Commit message when adding or updating the managed file.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_commitsha_go">
+<a href="#state_commitsha_go" style="color: inherit; text-decoration: inherit;">Commit<wbr>Sha</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The SHA of the commit that modified the file.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1089,7 +1149,7 @@ The branch must already exist, it will not be created if it does not already exi
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Git branch (defaults to `master`).
+    <dd>{{% md %}}Git branch (defaults to `main`).
 The branch must already exist, it will not be created if it does not already exist.
 {{% /md %}}</dd>
     <dt class="property-optional"
@@ -1121,6 +1181,16 @@ The branch must already exist, it will not be created if it does not already exi
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Commit message when adding or updating the managed file.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_commitsha_nodejs">
+<a href="#state_commitsha_nodejs" style="color: inherit; text-decoration: inherit;">commit<wbr>Sha</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The SHA of the commit that modified the file.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1186,7 +1256,7 @@ The branch must already exist, it will not be created if it does not already exi
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Git branch (defaults to `master`).
+    <dd>{{% md %}}Git branch (defaults to `main`).
 The branch must already exist, it will not be created if it does not already exist.
 {{% /md %}}</dd>
     <dt class="property-optional"
@@ -1218,6 +1288,16 @@ The branch must already exist, it will not be created if it does not already exi
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Commit message when adding or updating the managed file.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_commit_sha_python">
+<a href="#state_commit_sha_python" style="color: inherit; text-decoration: inherit;">commit_<wbr>sha</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The SHA of the commit that modified the file.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1285,7 +1365,7 @@ Repository files can be imported using a combination of the `repo` and `file`, e
  $ pulumi import github:index/repositoryFile:RepositoryFile gitignore example/.gitignore
 ```
 
- To import a file from a branch other than master, append `:` and the branch name, e.g.
+ To import a file from a branch other than main, append `:` and the branch name, e.g.
 
 ```sh
  $ pulumi import github:index/repositoryFile:RepositoryFile gitignore example/.gitignore:dev

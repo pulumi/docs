@@ -364,7 +364,7 @@ The RepositoryWebhook resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#repositorywebhookconfiguration">Repository<wbr>Webhook<wbr>Configuration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}key/value pair of configuration for this webhook. Available keys are `url`, `content_type`, `secret` and `insecure_ssl`. `secret` is [the shared secret, see API documentation](https://developer.github.com/v3/repos/hooks/#create-a-hook).
+    <dd>{{% md %}}key/value pair of configuration for this webhook. Available keys are `url`, `content_type`, `secret` and `insecure_ssl`. `secret` is [the shared secret, see API documentation](https://developer.github.com/v3/repos/hooks/#create-a-hook). `content_type` may be either form or json.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -410,7 +410,7 @@ The RepositoryWebhook resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#repositorywebhookconfiguration">Repository<wbr>Webhook<wbr>Configuration</a></span>
     </dt>
-    <dd>{{% md %}}key/value pair of configuration for this webhook. Available keys are `url`, `content_type`, `secret` and `insecure_ssl`. `secret` is [the shared secret, see API documentation](https://developer.github.com/v3/repos/hooks/#create-a-hook).
+    <dd>{{% md %}}key/value pair of configuration for this webhook. Available keys are `url`, `content_type`, `secret` and `insecure_ssl`. `secret` is [the shared secret, see API documentation](https://developer.github.com/v3/repos/hooks/#create-a-hook). `content_type` may be either form or json.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -456,7 +456,7 @@ The RepositoryWebhook resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#repositorywebhookconfiguration">Repository<wbr>Webhook<wbr>Configuration</a></span>
     </dt>
-    <dd>{{% md %}}key/value pair of configuration for this webhook. Available keys are `url`, `content_type`, `secret` and `insecure_ssl`. `secret` is [the shared secret, see API documentation](https://developer.github.com/v3/repos/hooks/#create-a-hook).
+    <dd>{{% md %}}key/value pair of configuration for this webhook. Available keys are `url`, `content_type`, `secret` and `insecure_ssl`. `secret` is [the shared secret, see API documentation](https://developer.github.com/v3/repos/hooks/#create-a-hook). `content_type` may be either form or json.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -502,7 +502,7 @@ The RepositoryWebhook resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#repositorywebhookconfiguration">Repository<wbr>Webhook<wbr>Configuration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}key/value pair of configuration for this webhook. Available keys are `url`, `content_type`, `secret` and `insecure_ssl`. `secret` is [the shared secret, see API documentation](https://developer.github.com/v3/repos/hooks/#create-a-hook).
+    <dd>{{% md %}}key/value pair of configuration for this webhook. Available keys are `url`, `content_type`, `secret` and `insecure_ssl`. `secret` is [the shared secret, see API documentation](https://developer.github.com/v3/repos/hooks/#create-a-hook). `content_type` may be either form or json.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -794,7 +794,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#repositorywebhookconfiguration">Repository<wbr>Webhook<wbr>Configuration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}key/value pair of configuration for this webhook. Available keys are `url`, `content_type`, `secret` and `insecure_ssl`. `secret` is [the shared secret, see API documentation](https://developer.github.com/v3/repos/hooks/#create-a-hook).
+    <dd>{{% md %}}key/value pair of configuration for this webhook. Available keys are `url`, `content_type`, `secret` and `insecure_ssl`. `secret` is [the shared secret, see API documentation](https://developer.github.com/v3/repos/hooks/#create-a-hook). `content_type` may be either form or json.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -859,7 +859,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#repositorywebhookconfiguration">Repository<wbr>Webhook<wbr>Configuration</a></span>
     </dt>
-    <dd>{{% md %}}key/value pair of configuration for this webhook. Available keys are `url`, `content_type`, `secret` and `insecure_ssl`. `secret` is [the shared secret, see API documentation](https://developer.github.com/v3/repos/hooks/#create-a-hook).
+    <dd>{{% md %}}key/value pair of configuration for this webhook. Available keys are `url`, `content_type`, `secret` and `insecure_ssl`. `secret` is [the shared secret, see API documentation](https://developer.github.com/v3/repos/hooks/#create-a-hook). `content_type` may be either form or json.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -924,7 +924,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#repositorywebhookconfiguration">Repository<wbr>Webhook<wbr>Configuration</a></span>
     </dt>
-    <dd>{{% md %}}key/value pair of configuration for this webhook. Available keys are `url`, `content_type`, `secret` and `insecure_ssl`. `secret` is [the shared secret, see API documentation](https://developer.github.com/v3/repos/hooks/#create-a-hook).
+    <dd>{{% md %}}key/value pair of configuration for this webhook. Available keys are `url`, `content_type`, `secret` and `insecure_ssl`. `secret` is [the shared secret, see API documentation](https://developer.github.com/v3/repos/hooks/#create-a-hook). `content_type` may be either form or json.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -989,7 +989,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#repositorywebhookconfiguration">Repository<wbr>Webhook<wbr>Configuration<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}key/value pair of configuration for this webhook. Available keys are `url`, `content_type`, `secret` and `insecure_ssl`. `secret` is [the shared secret, see API documentation](https://developer.github.com/v3/repos/hooks/#create-a-hook).
+    <dd>{{% md %}}key/value pair of configuration for this webhook. Available keys are `url`, `content_type`, `secret` and `insecure_ssl`. `secret` is [the shared secret, see API documentation](https://developer.github.com/v3/repos/hooks/#create-a-hook). `content_type` may be either form or json.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
