@@ -13,3 +13,4 @@ This section includes all reference documentation for Pulumi.
 
 * [API Reference]({{< relref "/docs/reference/pkg" >}}): detailed package documentation for all cloud packages and APIs
 * [Pulumi CLI]({{< relref "cli" >}}): most commonly used commands, in addition to full command and flag documentation
+* [Pulumi SDK Helper Functions]({{< relref "/docs/reference/sdk-helper-functions" >}}): useful helper functions in the Pulumi SDK

@@ -1,17 +1,15 @@
 ---
-title: Pulumi Configuration Reference
-meta_desc: A list of common terms and their definitions relating to the Pulumi CLI and Cloud Services.
+title: Project Configuration Reference
+meta_desc: A list of configuration settings for the Pulumi project file.
 menu:
   reference:
-    name: Configuration Reference
-    weight: 2
+    name: Project Configuration Reference
+    weight: 3
 ---
 
-The `Pulumi.yaml` project file and `Pulumi.<stackname>.yaml` stack files specify metadata about your project and stacks, respectively. The project file specifies the project name, applicable runtime for your program, and other higher-level project information. The stack configuration files contain information specific to the environment of that stack, such as smaller VM instance sizes for testing versus production stacks, different database connection strings, and so on.
+The `Pulumi.yaml` project file specifies metadata about your project, such as the project name, applicable runtime for your program, and other higher-level information.
 
-## Project configuration
-
-A project YAML file contains the following attributes:
+It contains the following required and optional attributes:
 
 - `name`: (required) a name for your project.  This shows up in the Pulumi dashboard and is used to aggregate the
   associated stacks and their resources underneath the project, as a simple kind of hierarchy.  Project names may only contain alphanumeric characters, hyphens, underscores, or periods.
@@ -42,9 +40,3 @@ A project YAML file contains the following attributes:
         - `description`: (optional) a description for the config setting.
         - `default`: (optional) the default value of the config setting - which will be presented to the user as a default.
         - `secret`: (optional) if `true` indicates that this configration value should be marked as secret.
-
-## Stack configuration
-
-Each stack that is created in a project will have a file named `Pulumi.<stackname>.yaml.` Stack configuration metadata is user-defined and highly-dependant on your business needs and deployment environment.
-
-For information on how to populate your stack configuration files, see [Configuration]({{< relref "/docs/intro/concepts/config" >}}).

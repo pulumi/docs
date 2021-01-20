@@ -63,6 +63,6 @@ Check out [Pulumi: A Better Way to Kubernetes][better-way-to-k8s] for details!
 [pulumi-k8s]: https://github.com/pulumi/pulumi-kubernetes
 [better-way-to-k8s]: {{< relref "pulumi-a-better-way-to-kubernetes" >}}
 [create-before-replace]: {{< relref "/docs/intro/concepts/resources#autonaming" >}}
-[programming-model]: {{< relref "/docs/intro/concepts/programming-model" >}}
+[programming-model]: {{< relref "/docs/intro/concepts" >}}
 [cluster-management]: {{< relref "/docs/tutorials/kubernetes#clusters" >}}
 <!-- markdownlint-enable url -->

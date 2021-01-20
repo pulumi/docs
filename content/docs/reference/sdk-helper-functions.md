@@ -4,7 +4,8 @@ meta_desc: A quick look at runtime helper functions for Pulumi.
 menu:
   reference:
     name: Pulumi SDK Helper Functions
-    weight: 3
+    weight: 4
+
 ---
 
 The Pulumi SDK library includes a number of helper functions for the following actions:

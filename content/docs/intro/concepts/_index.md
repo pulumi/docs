@@ -21,34 +21,40 @@ This diagram illustrates the structure and major components of Pulumi.
 
 ![Pulumi programming model diagram.](/images/docs/pulumi-programming-model-diagram.svg)
 
-*Programs* use existing [programming languages]({{< relref "/docs/intro/languages" >}}) to define how your cloud infrastructure should be deployed. After writing a program, you run the [Pulumi CLI]({{< relref "/docs/reference/cli" >}}) command `pulumi up`, which executes the program and determines the desired infrastructure state for all resources declared.
+Pulumi *programs*, written in general-purpose [programming languages]({{< relref "/docs/intro/languages" >}}), define how your cloud infrastructure should be deployed. To declare new infrastructure in your program, you allocate *resource* objects whose properties correspond to the desired state of your infrastructure. These properties are also used between resources to handle any necessary dependencies and can be exported outside of the stack, if needed.
 
-*Resources* represent a type of infrastructure that you declare in your program. Resources have properties that correspond to the desired state of your infrastructure and can be used as *inputs and outputs* that represent dependencies between resources.
+Programs reside in a *project*, which is a directory that contains source code for the program and metadata on how to run the program. After writing your program, you run the [Pulumi CLI]({{< relref "/docs/reference/cli" >}}) command `pulumi up` from within your project directory. This command creates an isolated and configurable instance of your program, known as a *stack*. Stacks are similar to different deployment environments that you use when testing and rolling out application updates. For instance, you can have distinct development, staging, and production stacks that you create and test against.
 
-_Stacks_ are isolated, configurable instances of a Pulumi program. Because of their isolated nature, you can think of stacks are similar to deployment environments where your Pulumi program runs.
+### Example
 
-The program, stacks, and other metadata reside in a *Project* directory.
+To illustrate these concepts, the following program shows how to create an AWS EC2 security group named `web-sg` with a single ingress rule and a `t2.micro`-sized EC2 instance using that security group.
 
-To illustrate these concepts, the following program shows how to create an AWS EC2 security group and an EC2 instance that uses it:
+To use the security group, the EC2 resource requires the security group's ID. Pulumi enables this through the output property `name` on the security group resource. Pulumi understands dependencies between resources and uses the relationships between resources to maximize parallelism and ensures correct ordering when a stack is instantiated.
+
+Finally, the server's resulting IP address and DNS name are exported as stack outputs so that their values can be accessed through either a CLI command or by another stack.
 
 {{< chooser language "javascript,typescript,python,go,csharp" >}}
 
 {{% choosable language javascript %}}
 
 ```javascript
-let pulumi = require("@pulumi/pulumi");
-let aws = require("@pulumi/aws");
+"user strict";
+const pulumi = require("@pulumi/pulumi");
+const aws = require("@pulumi/aws");
 
-let group = new aws.ec2.SecurityGroup("web-sg", {
+const group = new aws.ec2.SecurityGroup("web-sg", {
     description: "Enable HTTP access",
     ingress: [{ protocol: "tcp", fromPort: 80, toPort: 80, cidrBlocks: ["0.0.0.0/0"] }],
 });
 
-let server = new aws.ec2.Instance("web-server", {
+const server = new aws.ec2.Instance("web-server", {
     ami: "ami-6869aa05",
     instanceType: "t2.micro",
-    securityGroups: [ group.name ], // reference the security group resource above
+    vpcSecurityGroupIds: [ group.name ], // reference the security group resource above
 });
+
+export const publicIp = server.publicIp;
+export const publicDns = server.publicDns;
 ```
 
 {{% /choosable %}}
@@ -58,16 +64,19 @@ let server = new aws.ec2.Instance("web-server", {
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 
-let group = new aws.ec2.SecurityGroup("web-sg", {
+const group = new aws.ec2.SecurityGroup("web-sg", {
     description: "Enable HTTP access",
     ingress: [{ protocol: "tcp", fromPort: 80, toPort: 80, cidrBlocks: ["0.0.0.0/0"] }],
 });
 
-let server = new aws.ec2.Instance("web-server", {
+const server = new aws.ec2.Instance("web-server", {
     ami: "ami-6869aa05",
     instanceType: "t2.micro",
-    securityGroups: [ group.name ], // reference the security group resource above
+    vpcSecurityGroupIds: [ group.name ], // reference the security group resource above
 });
+
+export const publicIp = server.publicIp;
+export const publicDns = server.publicDns;
 ```
 
 {{% /choosable %}}
@@ -86,7 +95,11 @@ group = aws.ec2.SecurityGroup('web-sg',
 server = aws.ec2.Instance('web-server',
     ami='ami-6869aa05',
     instance_type='t2.micro',
-    security_groups=[group.name]) # reference the security group resource above
+    vpc_security_group_ids=[group.name] # reference the security group resource above
+)
+
+pulumi.export('public_ip', server.public_ip)
+pulumi.export('public_dns', server.public_dns)
 ```
 
 {{% /choosable %}}
@@ -96,36 +109,39 @@ server = aws.ec2.Instance('web-server',
 package main
 
 import (
-    "github.com/pulumi/pulumi-aws/sdk/v4/go/aws/ec2"
-    "github.com/pulumi/pulumi/sdk/go/pulumi"
+	"github.com/pulumi/pulumi-aws/sdk/v3/go/aws/ec2"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
 func main() {
-    pulumi.Run(func(ctx *pulumi.Context) error {
-        group, err := ec2.NewSecurityGroup(ctx, "web-sg", &ec2.SecurityGroupArgs{
-            Description: pulumi.String("Enable HTTP access"),
-            Ingress: ec2.SecurityGroupIngressArray{
-                ec2.SecurityGroupIngressArgs{
-                    Protocol:   pulumi.String("tcp"),
-                    FromPort:   pulumi.Int(80),
-                    ToPort:     pulumi.Int(80),
-                    CidrBlocks: pulumi.StringArray{pulumi.String("0.0.0.0/0")},
-                },
-            },
-        })
-        if err != nil {
-            return err
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		group, err := ec2.NewSecurityGroup(ctx, "web-sg", &ec2.SecurityGroupArgs{
+			Description: pulumi.String("Enable HTTP access"),
+			Ingress: ec2.SecurityGroupIngressArray{
+				ec2.SecurityGroupIngressArgs{
+					Protocol:   pulumi.String("tcp"),
+					FromPort:   pulumi.Int(80),
+					ToPort:     pulumi.Int(80),
+					CidrBlocks: pulumi.StringArray{pulumi.String("0.0.0.0/0")},
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		server, err := ec2.NewInstance(ctx, "web-server", &ec2.InstanceArgs{
+			Ami:                 pulumi.String("ami-6869aa05"),
+			InstanceType:        pulumi.String("t2.micro"),
+			VpcSecurityGroupIds: pulumi.StringArray{group.Name},
+		})
+		if err != nil {
+			return err
         }
-        server, err := ec2.NewInstance(ctx, "web-server", &ec2.InstanceArgs{
-            Ami:            pulumi.String("ami-6869aa05"),
-            InstanceType:   pulumi.String("t2.micro"),
-            SecurityGroups: pulumi.StringArray{group.Name},
-        })
-        if err != nil {
-            return err
-        }
-        return nil
-    })
+
+		ctx.Export("publicIp", server.PublicIp)
+		ctx.Export("publicHostName", server.PublicDns)
+		return nil
+	})
 }
 ```
 
@@ -142,7 +158,6 @@ class Program
 {
     static Task<int> Main() => Deployment.RunAsync<MyStack>();
 }
-
 
 class MyStack : Stack
 {
@@ -162,75 +177,17 @@ class MyStack : Stack
         var server = new Instance("web-server", new InstanceArgs {
             Ami = "ami-6869aa05",
             InstanceType = "t2.micro",
-            SecurityGroups = { group.Name }
+            VpcSecurityGroupIds = { group.Name }
         });
-    }
-}
-```
-
-{{% /choosable %}}
-
-{{< /chooser >}}
-
-The two resource objects, and their properties, are used by Pulumi to perform the appropriate actions on your infrastructure. For example, Pulumi understands that you would like an EC2 security group named `web-sg`, with a single ingress rule and a `t2.micro`-sized EC2 instance running AMI `ami-8689aa05` using that security group. And because of the output properties, Pulumi also understands the dependencies between resources, which maximizes parallelism and ensures correct ordering.
-
-When you update your cloud project with Pulumi, Pulumi will compute the desired state, compare it to the current infrastructure you already have (if any), show you the delta, and let you confirm and carry out the changes.
-
-If needed, you can also export resulting infrastructure values to access outside your application. For example, adding the following code to the example above exports the server's resulting IP address and DNS name to either stdout or for use by another stack:
-
-{{< chooser language "javascript,typescript,python,go,csharp" >}}
-
-{{% choosable language javascript %}}
-
-```javascript
-// ...
-module.exports = {
-    publicIp: server.publicIp,
-    publicDns: server.publicDns,
-};
-```
-
-{{% /choosable %}}
-{{% choosable language typescript %}}
-
-```typescript
-// ...
-export let publicIp = server.publicIp;
-export let publicDns = server.publicDns;
-```
-
-{{% /choosable %}}
-{{% choosable language python %}}
-
-```python
-# ...
-pulumi.export('public_ip', server.public_ip)
-pulumi.export('public_dns', server.public_dns)
-```
-
-{{% /choosable %}}
-{{% choosable language go %}}
-
-```go
-// ...
-        ctx.Export("publicIp", server.PublicIp)
-        ctx.Export("publicHostName", server.PublicDns)
-        return nil
-    })
-}
-```
-
-{{% /choosable %}}
-{{% choosable language csharp %}}
-
-```csharp
-// ...
         this.PublicIp = server.PublicIp;
         this.PublicDns = server.PublicDns;
     }
 
-    [Output] Output<string> PublicIp { get; set; }
-    [Output] Output<string> PublicDns { get; set; }
+    [Output]
+    public Output<string> PublicIp { get; set; }
+
+    [Output]
+    public Output<string> PublicDns { get; set; }
 }
 ```
 

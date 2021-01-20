@@ -145,7 +145,7 @@ resources to check out:
   [Azure AKS](https://github.com/pulumi/examples/tree/master/azure-ts-aks-mean)
 - Tutorial: [Operate and deploy to a Kubernetes cluster]({{< relref "/docs/tutorials/kubernetes/exposed-deployment" >}})
 - Docs: [Pulumi docs]({{< relref "/docs/reference" >}}), including an
-  [overview of the programming model]({{< relref "/docs/intro/concepts/programming-model" >}})
+  [overview of the programming model]({{< relref "/docs/intro/concepts" >}})
 - Video: In February, we were honored to have Joe Beda
 [show where Pulumi fits in on his TGIK livestream](https://www.youtube.com/watch?v=ILMK65YVSKw),
 highlighting how to use your favorite language and consistent workflows to create,
