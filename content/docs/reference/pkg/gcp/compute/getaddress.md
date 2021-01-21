@@ -38,6 +38,7 @@ class MyStack : Stack
         });
         var frontend = new Gcp.Dns.RecordSet("frontend", new Gcp.Dns.RecordSetArgs
         {
+            Name = prod.DnsName.Apply(dnsName => $"frontend.{dnsName}"),
             Type = "A",
             Ttl = 300,
             ManagedZone = prod.Name,
@@ -58,6 +59,8 @@ class MyStack : Stack
 package main
 
 import (
+	"fmt"
+
 	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
 	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dns"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
@@ -78,6 +81,9 @@ func main() {
 			return err
 		}
 		_, err = dns.NewRecordSet(ctx, "frontend", &dns.RecordSetArgs{
+			Name: prod.DnsName.ApplyT(func(dnsName string) (string, error) {
+				return fmt.Sprintf("%v%v", "frontend.", dnsName), nil
+			}).(pulumi.StringOutput),
 			Type:        pulumi.String("A"),
 			Ttl:         pulumi.Int(300),
 			ManagedZone: prod.Name,
@@ -103,6 +109,7 @@ import pulumi_gcp as gcp
 my_address = gcp.compute.get_address(name="foobar")
 prod = gcp.dns.ManagedZone("prod", dns_name="prod.mydomain.com.")
 frontend = gcp.dns.RecordSet("frontend",
+    name=prod.dns_name.apply(lambda dns_name: f"frontend.{dns_name}"),
     type="A",
     ttl=300,
     managed_zone=prod.name,
@@ -122,6 +129,7 @@ const myAddress = gcp.compute.getAddress({
 });
 const prod = new gcp.dns.ManagedZone("prod", {dnsName: "prod.mydomain.com."});
 const frontend = new gcp.dns.RecordSet("frontend", {
+    name: pulumi.interpolate`frontend.${prod.dnsName}`,
     type: "A",
     ttl: 300,
     managedZone: prod.name,

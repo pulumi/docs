@@ -3,7 +3,7 @@ title: "Module config"
 title_tag: "Module config | Package @pulumi/gcp | Node.js SDK"
 linktitle: "config"
 meta_desc: "Explore members of the config module in the @pulumi/gcp package."
-git_sha: "190d8b0982043d566daf0a0e22d4f73afa046cc7"
+git_sha: "c4a9d5b17d1d84373b0b6970394e0a36707ba8de"
 block_external_search_index: true
 ---
 
@@ -24,6 +24,7 @@ block_external_search_index: true
     <li><a href="#accessToken"><span class="symbol api"></span>accessToken</a></li>
     <li><a href="#activeDirectoryCustomEndpoint"><span class="symbol api"></span>activeDirectoryCustomEndpoint</a></li>
     <li><a href="#apiGatewayCustomEndpoint"><span class="symbol api"></span>apiGatewayCustomEndpoint</a></li>
+    <li><a href="#apigeeCustomEndpoint"><span class="symbol api"></span>apigeeCustomEndpoint</a></li>
     <li><a href="#appEngineCustomEndpoint"><span class="symbol api"></span>appEngineCustomEndpoint</a></li>
     <li><a href="#artifactRegistryCustomEndpoint"><span class="symbol api"></span>artifactRegistryCustomEndpoint</a></li>
     <li><a href="#batching"><span class="symbol api"></span>batching</a></li>
@@ -85,13 +86,14 @@ block_external_search_index: true
     <li><a href="#osLoginCustomEndpoint"><span class="symbol api"></span>osLoginCustomEndpoint</a></li>
     <li><a href="#project"><span class="symbol api"></span>project</a></li>
     <li><a href="#pubsubCustomEndpoint"><span class="symbol api"></span>pubsubCustomEndpoint</a></li>
+    <li><a href="#pubsubLiteCustomEndpoint"><span class="symbol api"></span>pubsubLiteCustomEndpoint</a></li>
     <li><a href="#redisCustomEndpoint"><span class="symbol api"></span>redisCustomEndpoint</a></li>
     <li><a href="#region"><span class="symbol api"></span>region</a></li>
     <li><a href="#requestTimeout"><span class="symbol api"></span>requestTimeout</a></li>
     <li><a href="#resourceManagerCustomEndpoint"><span class="symbol api"></span>resourceManagerCustomEndpoint</a></li>
     <li><a href="#resourceManagerV2beta1CustomEndpoint"><span class="symbol api"></span>resourceManagerV2beta1CustomEndpoint</a></li>
-    <li><a href="#runtimeConfigCustomEndpoint"><span class="symbol api"></span>runtimeConfigCustomEndpoint</a></li>
     <li><a href="#runtimeconfigCustomEndpoint"><span class="symbol api"></span>runtimeconfigCustomEndpoint</a></li>
+    <li><a href="#runtimeConfigCustomEndpoint"><span class="symbol api"></span>runtimeConfigCustomEndpoint</a></li>
     <li><a href="#scopes"><span class="symbol api"></span>scopes</a></li>
     <li><a href="#secretManagerCustomEndpoint"><span class="symbol api"></span>secretManagerCustomEndpoint</a></li>
     <li><a href="#securityCenterCustomEndpoint"><span class="symbol api"></span>securityCenterCustomEndpoint</a></li>
@@ -116,630 +118,644 @@ block_external_search_index: true
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="accessApprovalCustomEndpoint" data-link-title="accessApprovalCustomEndpoint">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/config/vars.ts#L11">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/config/vars.ts#L10">
         let <strong>accessApprovalCustomEndpoint</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> accessApprovalCustomEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;accessApprovalCustomEndpoint&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="accessContextManagerCustomEndpoint" data-link-title="accessContextManagerCustomEndpoint">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/config/vars.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/config/vars.ts#L11">
         let <strong>accessContextManagerCustomEndpoint</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> accessContextManagerCustomEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;accessContextManagerCustomEndpoint&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="accessToken" data-link-title="accessToken">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/config/vars.ts#L13">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/config/vars.ts#L12">
         let <strong>accessToken</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> accessToken: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;accessToken&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="activeDirectoryCustomEndpoint" data-link-title="activeDirectoryCustomEndpoint">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/config/vars.ts#L14">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/config/vars.ts#L13">
         let <strong>activeDirectoryCustomEndpoint</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> activeDirectoryCustomEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;activeDirectoryCustomEndpoint&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="apiGatewayCustomEndpoint" data-link-title="apiGatewayCustomEndpoint">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/config/vars.ts#L15">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/config/vars.ts#L14">
         let <strong>apiGatewayCustomEndpoint</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> apiGatewayCustomEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;apiGatewayCustomEndpoint&#34;)</span>;</code></pre>
+<h3 class="pdoc-module-header" id="apigeeCustomEndpoint" data-link-title="apigeeCustomEndpoint">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/config/vars.ts#L15">
+        let <strong>apigeeCustomEndpoint</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kd'>let</span> apigeeCustomEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;apigeeCustomEndpoint&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="appEngineCustomEndpoint" data-link-title="appEngineCustomEndpoint">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/config/vars.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/config/vars.ts#L16">
         let <strong>appEngineCustomEndpoint</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> appEngineCustomEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;appEngineCustomEndpoint&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="artifactRegistryCustomEndpoint" data-link-title="artifactRegistryCustomEndpoint">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/config/vars.ts#L17">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/config/vars.ts#L17">
         let <strong>artifactRegistryCustomEndpoint</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> artifactRegistryCustomEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;artifactRegistryCustomEndpoint&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="batching" data-link-title="batching">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/config/vars.ts#L18">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/config/vars.ts#L18">
         let <strong>batching</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> batching: <a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#Batching'>Batching</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.getObject&lt;outputs.config.Batching&gt;(&#34;batching&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="bigqueryConnectionCustomEndpoint" data-link-title="bigqueryConnectionCustomEndpoint">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/config/vars.ts#L20">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/config/vars.ts#L20">
         let <strong>bigqueryConnectionCustomEndpoint</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> bigqueryConnectionCustomEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;bigqueryConnectionCustomEndpoint&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="bigQueryCustomEndpoint" data-link-title="bigQueryCustomEndpoint">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/config/vars.ts#L19">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/config/vars.ts#L19">
         let <strong>bigQueryCustomEndpoint</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> bigQueryCustomEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;bigQueryCustomEndpoint&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="bigqueryDataTransferCustomEndpoint" data-link-title="bigqueryDataTransferCustomEndpoint">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/config/vars.ts#L21">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/config/vars.ts#L21">
         let <strong>bigqueryDataTransferCustomEndpoint</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> bigqueryDataTransferCustomEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;bigqueryDataTransferCustomEndpoint&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="bigqueryReservationCustomEndpoint" data-link-title="bigqueryReservationCustomEndpoint">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/config/vars.ts#L22">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/config/vars.ts#L22">
         let <strong>bigqueryReservationCustomEndpoint</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> bigqueryReservationCustomEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;bigqueryReservationCustomEndpoint&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="bigtableCustomEndpoint" data-link-title="bigtableCustomEndpoint">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/config/vars.ts#L23">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/config/vars.ts#L23">
         let <strong>bigtableCustomEndpoint</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> bigtableCustomEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;bigtableCustomEndpoint&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="billingCustomEndpoint" data-link-title="billingCustomEndpoint">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/config/vars.ts#L24">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/config/vars.ts#L24">
         let <strong>billingCustomEndpoint</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> billingCustomEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;billingCustomEndpoint&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="billingProject" data-link-title="billingProject">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/config/vars.ts#L25">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/config/vars.ts#L25">
         let <strong>billingProject</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> billingProject: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;billingProject&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="binaryAuthorizationCustomEndpoint" data-link-title="binaryAuthorizationCustomEndpoint">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/config/vars.ts#L26">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/config/vars.ts#L26">
         let <strong>binaryAuthorizationCustomEndpoint</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> binaryAuthorizationCustomEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;binaryAuthorizationCustomEndpoint&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="cloudAssetCustomEndpoint" data-link-title="cloudAssetCustomEndpoint">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/config/vars.ts#L27">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/config/vars.ts#L27">
         let <strong>cloudAssetCustomEndpoint</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> cloudAssetCustomEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;cloudAssetCustomEndpoint&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="cloudBillingCustomEndpoint" data-link-title="cloudBillingCustomEndpoint">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/config/vars.ts#L28">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/config/vars.ts#L28">
         let <strong>cloudBillingCustomEndpoint</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> cloudBillingCustomEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;cloudBillingCustomEndpoint&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="cloudBuildCustomEndpoint" data-link-title="cloudBuildCustomEndpoint">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/config/vars.ts#L29">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/config/vars.ts#L29">
         let <strong>cloudBuildCustomEndpoint</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> cloudBuildCustomEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;cloudBuildCustomEndpoint&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="cloudFunctionsCustomEndpoint" data-link-title="cloudFunctionsCustomEndpoint">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/config/vars.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/config/vars.ts#L30">
         let <strong>cloudFunctionsCustomEndpoint</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> cloudFunctionsCustomEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;cloudFunctionsCustomEndpoint&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="cloudIdentityCustomEndpoint" data-link-title="cloudIdentityCustomEndpoint">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/config/vars.ts#L31">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/config/vars.ts#L31">
         let <strong>cloudIdentityCustomEndpoint</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> cloudIdentityCustomEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;cloudIdentityCustomEndpoint&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="cloudIotCustomEndpoint" data-link-title="cloudIotCustomEndpoint">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/config/vars.ts#L32">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/config/vars.ts#L32">
         let <strong>cloudIotCustomEndpoint</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> cloudIotCustomEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;cloudIotCustomEndpoint&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="cloudRunCustomEndpoint" data-link-title="cloudRunCustomEndpoint">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/config/vars.ts#L33">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/config/vars.ts#L33">
         let <strong>cloudRunCustomEndpoint</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> cloudRunCustomEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;cloudRunCustomEndpoint&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="cloudSchedulerCustomEndpoint" data-link-title="cloudSchedulerCustomEndpoint">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/config/vars.ts#L34">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/config/vars.ts#L34">
         let <strong>cloudSchedulerCustomEndpoint</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> cloudSchedulerCustomEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;cloudSchedulerCustomEndpoint&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="cloudTasksCustomEndpoint" data-link-title="cloudTasksCustomEndpoint">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/config/vars.ts#L35">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/config/vars.ts#L35">
         let <strong>cloudTasksCustomEndpoint</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> cloudTasksCustomEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;cloudTasksCustomEndpoint&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="composerCustomEndpoint" data-link-title="composerCustomEndpoint">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/config/vars.ts#L36">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/config/vars.ts#L36">
         let <strong>composerCustomEndpoint</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> composerCustomEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;composerCustomEndpoint&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="computeBetaCustomEndpoint" data-link-title="computeBetaCustomEndpoint">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/config/vars.ts#L37">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/config/vars.ts#L37">
         let <strong>computeBetaCustomEndpoint</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> computeBetaCustomEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;computeBetaCustomEndpoint&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="computeCustomEndpoint" data-link-title="computeCustomEndpoint">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/config/vars.ts#L38">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/config/vars.ts#L38">
         let <strong>computeCustomEndpoint</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> computeCustomEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;computeCustomEndpoint&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="containerAnalysisCustomEndpoint" data-link-title="containerAnalysisCustomEndpoint">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/config/vars.ts#L39">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/config/vars.ts#L39">
         let <strong>containerAnalysisCustomEndpoint</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> containerAnalysisCustomEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;containerAnalysisCustomEndpoint&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="containerBetaCustomEndpoint" data-link-title="containerBetaCustomEndpoint">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/config/vars.ts#L40">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/config/vars.ts#L40">
         let <strong>containerBetaCustomEndpoint</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> containerBetaCustomEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;containerBetaCustomEndpoint&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="containerCustomEndpoint" data-link-title="containerCustomEndpoint">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/config/vars.ts#L41">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/config/vars.ts#L41">
         let <strong>containerCustomEndpoint</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> containerCustomEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;containerCustomEndpoint&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="credentials" data-link-title="credentials">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/config/vars.ts#L42">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/config/vars.ts#L42">
         let <strong>credentials</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> credentials: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;credentials&#34;) || utilities.getEnv(&#34;GOOGLE_CREDENTIALS&#34;, &#34;GOOGLE_CLOUD_KEYFILE_JSON&#34;, &#34;GCLOUD_KEYFILE_JSON&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="dataCatalogCustomEndpoint" data-link-title="dataCatalogCustomEndpoint">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/config/vars.ts#L43">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/config/vars.ts#L43">
         let <strong>dataCatalogCustomEndpoint</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> dataCatalogCustomEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;dataCatalogCustomEndpoint&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="dataflowCustomEndpoint" data-link-title="dataflowCustomEndpoint">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/config/vars.ts#L46">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/config/vars.ts#L46">
         let <strong>dataflowCustomEndpoint</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> dataflowCustomEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;dataflowCustomEndpoint&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="dataFusionCustomEndpoint" data-link-title="dataFusionCustomEndpoint">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/config/vars.ts#L44">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/config/vars.ts#L44">
         let <strong>dataFusionCustomEndpoint</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> dataFusionCustomEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;dataFusionCustomEndpoint&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="dataLossPreventionCustomEndpoint" data-link-title="dataLossPreventionCustomEndpoint">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/config/vars.ts#L45">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/config/vars.ts#L45">
         let <strong>dataLossPreventionCustomEndpoint</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> dataLossPreventionCustomEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;dataLossPreventionCustomEndpoint&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="dataprocBetaCustomEndpoint" data-link-title="dataprocBetaCustomEndpoint">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/config/vars.ts#L47">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/config/vars.ts#L47">
         let <strong>dataprocBetaCustomEndpoint</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> dataprocBetaCustomEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;dataprocBetaCustomEndpoint&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="dataprocCustomEndpoint" data-link-title="dataprocCustomEndpoint">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/config/vars.ts#L48">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/config/vars.ts#L48">
         let <strong>dataprocCustomEndpoint</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> dataprocCustomEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;dataprocCustomEndpoint&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="datastoreCustomEndpoint" data-link-title="datastoreCustomEndpoint">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/config/vars.ts#L49">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/config/vars.ts#L49">
         let <strong>datastoreCustomEndpoint</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> datastoreCustomEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;datastoreCustomEndpoint&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="deploymentManagerCustomEndpoint" data-link-title="deploymentManagerCustomEndpoint">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/config/vars.ts#L50">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/config/vars.ts#L50">
         let <strong>deploymentManagerCustomEndpoint</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> deploymentManagerCustomEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;deploymentManagerCustomEndpoint&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="dialogflowCustomEndpoint" data-link-title="dialogflowCustomEndpoint">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/config/vars.ts#L51">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/config/vars.ts#L51">
         let <strong>dialogflowCustomEndpoint</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> dialogflowCustomEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;dialogflowCustomEndpoint&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="dnsBetaCustomEndpoint" data-link-title="dnsBetaCustomEndpoint">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/config/vars.ts#L52">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/config/vars.ts#L52">
         let <strong>dnsBetaCustomEndpoint</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> dnsBetaCustomEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;dnsBetaCustomEndpoint&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="dnsCustomEndpoint" data-link-title="dnsCustomEndpoint">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/config/vars.ts#L53">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/config/vars.ts#L53">
         let <strong>dnsCustomEndpoint</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> dnsCustomEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;dnsCustomEndpoint&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="filestoreCustomEndpoint" data-link-title="filestoreCustomEndpoint">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/config/vars.ts#L54">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/config/vars.ts#L54">
         let <strong>filestoreCustomEndpoint</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> filestoreCustomEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;filestoreCustomEndpoint&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="firebaseCustomEndpoint" data-link-title="firebaseCustomEndpoint">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/config/vars.ts#L55">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/config/vars.ts#L55">
         let <strong>firebaseCustomEndpoint</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> firebaseCustomEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;firebaseCustomEndpoint&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="firestoreCustomEndpoint" data-link-title="firestoreCustomEndpoint">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/config/vars.ts#L56">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/config/vars.ts#L56">
         let <strong>firestoreCustomEndpoint</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> firestoreCustomEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;firestoreCustomEndpoint&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="gameServicesCustomEndpoint" data-link-title="gameServicesCustomEndpoint">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/config/vars.ts#L57">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/config/vars.ts#L57">
         let <strong>gameServicesCustomEndpoint</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> gameServicesCustomEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;gameServicesCustomEndpoint&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="healthcareCustomEndpoint" data-link-title="healthcareCustomEndpoint">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/config/vars.ts#L58">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/config/vars.ts#L58">
         let <strong>healthcareCustomEndpoint</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> healthcareCustomEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;healthcareCustomEndpoint&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="iamBetaCustomEndpoint" data-link-title="iamBetaCustomEndpoint">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/config/vars.ts#L59">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/config/vars.ts#L59">
         let <strong>iamBetaCustomEndpoint</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> iamBetaCustomEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;iamBetaCustomEndpoint&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="iamCredentialsCustomEndpoint" data-link-title="iamCredentialsCustomEndpoint">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/config/vars.ts#L60">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/config/vars.ts#L60">
         let <strong>iamCredentialsCustomEndpoint</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> iamCredentialsCustomEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;iamCredentialsCustomEndpoint&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="iamCustomEndpoint" data-link-title="iamCustomEndpoint">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/config/vars.ts#L61">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/config/vars.ts#L61">
         let <strong>iamCustomEndpoint</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> iamCustomEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;iamCustomEndpoint&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="iapCustomEndpoint" data-link-title="iapCustomEndpoint">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/config/vars.ts#L62">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/config/vars.ts#L62">
         let <strong>iapCustomEndpoint</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> iapCustomEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;iapCustomEndpoint&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="identityPlatformCustomEndpoint" data-link-title="identityPlatformCustomEndpoint">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/config/vars.ts#L63">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/config/vars.ts#L63">
         let <strong>identityPlatformCustomEndpoint</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> identityPlatformCustomEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;identityPlatformCustomEndpoint&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="impersonateServiceAccount" data-link-title="impersonateServiceAccount">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/config/vars.ts#L64">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/config/vars.ts#L64">
         let <strong>impersonateServiceAccount</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> impersonateServiceAccount: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;impersonateServiceAccount&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="impersonateServiceAccountDelegates" data-link-title="impersonateServiceAccountDelegates">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/config/vars.ts#L65">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/config/vars.ts#L65">
         let <strong>impersonateServiceAccountDelegates</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> impersonateServiceAccountDelegates: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.getObject&lt;string[]&gt;(&#34;impersonateServiceAccountDelegates&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="kmsCustomEndpoint" data-link-title="kmsCustomEndpoint">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/config/vars.ts#L66">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/config/vars.ts#L66">
         let <strong>kmsCustomEndpoint</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> kmsCustomEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;kmsCustomEndpoint&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="loggingCustomEndpoint" data-link-title="loggingCustomEndpoint">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/config/vars.ts#L67">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/config/vars.ts#L67">
         let <strong>loggingCustomEndpoint</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> loggingCustomEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;loggingCustomEndpoint&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="memcacheCustomEndpoint" data-link-title="memcacheCustomEndpoint">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/config/vars.ts#L68">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/config/vars.ts#L68">
         let <strong>memcacheCustomEndpoint</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> memcacheCustomEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;memcacheCustomEndpoint&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="mlEngineCustomEndpoint" data-link-title="mlEngineCustomEndpoint">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/config/vars.ts#L69">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/config/vars.ts#L69">
         let <strong>mlEngineCustomEndpoint</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> mlEngineCustomEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;mlEngineCustomEndpoint&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="monitoringCustomEndpoint" data-link-title="monitoringCustomEndpoint">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/config/vars.ts#L70">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/config/vars.ts#L70">
         let <strong>monitoringCustomEndpoint</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> monitoringCustomEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;monitoringCustomEndpoint&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="networkManagementCustomEndpoint" data-link-title="networkManagementCustomEndpoint">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/config/vars.ts#L71">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/config/vars.ts#L71">
         let <strong>networkManagementCustomEndpoint</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> networkManagementCustomEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;networkManagementCustomEndpoint&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="notebooksCustomEndpoint" data-link-title="notebooksCustomEndpoint">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/config/vars.ts#L72">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/config/vars.ts#L72">
         let <strong>notebooksCustomEndpoint</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> notebooksCustomEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;notebooksCustomEndpoint&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="osConfigCustomEndpoint" data-link-title="osConfigCustomEndpoint">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/config/vars.ts#L73">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/config/vars.ts#L73">
         let <strong>osConfigCustomEndpoint</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> osConfigCustomEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;osConfigCustomEndpoint&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="osLoginCustomEndpoint" data-link-title="osLoginCustomEndpoint">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/config/vars.ts#L74">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/config/vars.ts#L74">
         let <strong>osLoginCustomEndpoint</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> osLoginCustomEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;osLoginCustomEndpoint&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="project" data-link-title="project">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/config/vars.ts#L75">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/config/vars.ts#L75">
         let <strong>project</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> project: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;project&#34;) || utilities.getEnv(&#34;GOOGLE_PROJECT&#34;, &#34;GOOGLE_CLOUD_PROJECT&#34;, &#34;GCLOUD_PROJECT&#34;, &#34;CLOUDSDK_CORE_PROJECT&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="pubsubCustomEndpoint" data-link-title="pubsubCustomEndpoint">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/config/vars.ts#L76">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/config/vars.ts#L76">
         let <strong>pubsubCustomEndpoint</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> pubsubCustomEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;pubsubCustomEndpoint&#34;)</span>;</code></pre>
+<h3 class="pdoc-module-header" id="pubsubLiteCustomEndpoint" data-link-title="pubsubLiteCustomEndpoint">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/config/vars.ts#L77">
+        let <strong>pubsubLiteCustomEndpoint</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kd'>let</span> pubsubLiteCustomEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;pubsubLiteCustomEndpoint&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="redisCustomEndpoint" data-link-title="redisCustomEndpoint">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/config/vars.ts#L77">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/config/vars.ts#L78">
         let <strong>redisCustomEndpoint</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> redisCustomEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;redisCustomEndpoint&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="region" data-link-title="region">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/config/vars.ts#L78">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/config/vars.ts#L79">
         let <strong>region</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> region: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;region&#34;) || utilities.getEnv(&#34;GOOGLE_REGION&#34;, &#34;GCLOUD_REGION&#34;, &#34;CLOUDSDK_COMPUTE_REGION&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="requestTimeout" data-link-title="requestTimeout">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/config/vars.ts#L79">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/config/vars.ts#L80">
         let <strong>requestTimeout</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> requestTimeout: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;requestTimeout&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="resourceManagerCustomEndpoint" data-link-title="resourceManagerCustomEndpoint">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/config/vars.ts#L80">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/config/vars.ts#L81">
         let <strong>resourceManagerCustomEndpoint</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> resourceManagerCustomEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;resourceManagerCustomEndpoint&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="resourceManagerV2beta1CustomEndpoint" data-link-title="resourceManagerV2beta1CustomEndpoint">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/config/vars.ts#L81">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/config/vars.ts#L82">
         let <strong>resourceManagerV2beta1CustomEndpoint</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> resourceManagerV2beta1CustomEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;resourceManagerV2beta1CustomEndpoint&#34;)</span>;</code></pre>
-<h3 class="pdoc-module-header" id="runtimeConfigCustomEndpoint" data-link-title="runtimeConfigCustomEndpoint">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/config/vars.ts#L82">
-        let <strong>runtimeConfigCustomEndpoint</strong>
-    </a>
-</h3>
-
-<pre class="highlight"><code><span class='kd'>let</span> runtimeConfigCustomEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;runtimeConfigCustomEndpoint&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="runtimeconfigCustomEndpoint" data-link-title="runtimeconfigCustomEndpoint">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/config/vars.ts#L83">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/config/vars.ts#L84">
         let <strong>runtimeconfigCustomEndpoint</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> runtimeconfigCustomEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;runtimeconfigCustomEndpoint&#34;)</span>;</code></pre>
+<h3 class="pdoc-module-header" id="runtimeConfigCustomEndpoint" data-link-title="runtimeConfigCustomEndpoint">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/config/vars.ts#L83">
+        let <strong>runtimeConfigCustomEndpoint</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kd'>let</span> runtimeConfigCustomEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;runtimeConfigCustomEndpoint&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="scopes" data-link-title="scopes">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/config/vars.ts#L84">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/config/vars.ts#L85">
         let <strong>scopes</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> scopes: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.getObject&lt;string[]&gt;(&#34;scopes&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="secretManagerCustomEndpoint" data-link-title="secretManagerCustomEndpoint">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/config/vars.ts#L85">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/config/vars.ts#L86">
         let <strong>secretManagerCustomEndpoint</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> secretManagerCustomEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;secretManagerCustomEndpoint&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="securityCenterCustomEndpoint" data-link-title="securityCenterCustomEndpoint">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/config/vars.ts#L86">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/config/vars.ts#L87">
         let <strong>securityCenterCustomEndpoint</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> securityCenterCustomEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;securityCenterCustomEndpoint&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="securityScannerCustomEndpoint" data-link-title="securityScannerCustomEndpoint">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/config/vars.ts#L87">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/config/vars.ts#L88">
         let <strong>securityScannerCustomEndpoint</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> securityScannerCustomEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;securityScannerCustomEndpoint&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="serviceDirectoryCustomEndpoint" data-link-title="serviceDirectoryCustomEndpoint">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/config/vars.ts#L88">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/config/vars.ts#L89">
         let <strong>serviceDirectoryCustomEndpoint</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> serviceDirectoryCustomEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;serviceDirectoryCustomEndpoint&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="serviceManagementCustomEndpoint" data-link-title="serviceManagementCustomEndpoint">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/config/vars.ts#L89">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/config/vars.ts#L90">
         let <strong>serviceManagementCustomEndpoint</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> serviceManagementCustomEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;serviceManagementCustomEndpoint&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="serviceNetworkingCustomEndpoint" data-link-title="serviceNetworkingCustomEndpoint">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/config/vars.ts#L90">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/config/vars.ts#L91">
         let <strong>serviceNetworkingCustomEndpoint</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> serviceNetworkingCustomEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;serviceNetworkingCustomEndpoint&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="serviceUsageCustomEndpoint" data-link-title="serviceUsageCustomEndpoint">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/config/vars.ts#L91">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/config/vars.ts#L92">
         let <strong>serviceUsageCustomEndpoint</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> serviceUsageCustomEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;serviceUsageCustomEndpoint&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="sourceRepoCustomEndpoint" data-link-title="sourceRepoCustomEndpoint">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/config/vars.ts#L92">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/config/vars.ts#L93">
         let <strong>sourceRepoCustomEndpoint</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> sourceRepoCustomEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;sourceRepoCustomEndpoint&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="spannerCustomEndpoint" data-link-title="spannerCustomEndpoint">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/config/vars.ts#L93">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/config/vars.ts#L94">
         let <strong>spannerCustomEndpoint</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> spannerCustomEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;spannerCustomEndpoint&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="sqlCustomEndpoint" data-link-title="sqlCustomEndpoint">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/config/vars.ts#L94">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/config/vars.ts#L95">
         let <strong>sqlCustomEndpoint</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> sqlCustomEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;sqlCustomEndpoint&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="storageCustomEndpoint" data-link-title="storageCustomEndpoint">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/config/vars.ts#L95">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/config/vars.ts#L96">
         let <strong>storageCustomEndpoint</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> storageCustomEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;storageCustomEndpoint&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="storageTransferCustomEndpoint" data-link-title="storageTransferCustomEndpoint">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/config/vars.ts#L96">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/config/vars.ts#L97">
         let <strong>storageTransferCustomEndpoint</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> storageTransferCustomEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;storageTransferCustomEndpoint&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="tpuCustomEndpoint" data-link-title="tpuCustomEndpoint">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/config/vars.ts#L97">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/config/vars.ts#L98">
         let <strong>tpuCustomEndpoint</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> tpuCustomEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;tpuCustomEndpoint&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="userProjectOverride" data-link-title="userProjectOverride">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/config/vars.ts#L98">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/config/vars.ts#L99">
         let <strong>userProjectOverride</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> userProjectOverride: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.getObject&lt;boolean&gt;(&#34;userProjectOverride&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="vpcAccessCustomEndpoint" data-link-title="vpcAccessCustomEndpoint">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/config/vars.ts#L99">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/config/vars.ts#L100">
         let <strong>vpcAccessCustomEndpoint</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> vpcAccessCustomEndpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;vpcAccessCustomEndpoint&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="zone" data-link-title="zone">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/config/vars.ts#L100">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/config/vars.ts#L101">
         let <strong>zone</strong>
     </a>
 </h3>

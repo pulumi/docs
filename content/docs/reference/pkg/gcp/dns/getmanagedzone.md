@@ -24,6 +24,7 @@ const envDnsZone = gcp.dns.getManagedZone({
     name: "qa-zone",
 });
 const dns = new gcp.dns.RecordSet("dns", {
+    name: envDnsZone.then(envDnsZone => `my-address.${envDnsZone.dnsName}`),
     type: "TXT",
     ttl: 300,
     managedZone: envDnsZone.then(envDnsZone => envDnsZone.name),
@@ -36,6 +37,7 @@ import pulumi_gcp as gcp
 
 env_dns_zone = gcp.dns.get_managed_zone(name="qa-zone")
 dns = gcp.dns.RecordSet("dns",
+    name=f"my-address.{env_dns_zone.dns_name}",
     type="TXT",
     ttl=300,
     managed_zone=env_dns_zone.name,
@@ -55,6 +57,7 @@ class MyStack : Stack
         }));
         var dns = new Gcp.Dns.RecordSet("dns", new Gcp.Dns.RecordSetArgs
         {
+            Name = envDnsZone.Apply(envDnsZone => $"my-address.{envDnsZone.DnsName}"),
             Type = "TXT",
             Ttl = 300,
             ManagedZone = envDnsZone.Apply(envDnsZone => envDnsZone.Name),
@@ -71,6 +74,8 @@ class MyStack : Stack
 package main
 
 import (
+	"fmt"
+
 	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dns"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
@@ -84,6 +89,7 @@ func main() {
 			return err
 		}
 		_, err = dns.NewRecordSet(ctx, "dns", &dns.RecordSetArgs{
+			Name:        pulumi.String(fmt.Sprintf("%v%v", "my-address.", envDnsZone.DnsName)),
 			Type:        pulumi.String("TXT"),
 			Ttl:         pulumi.Int(300),
 			ManagedZone: pulumi.String(envDnsZone.Name),

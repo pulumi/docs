@@ -313,16 +313,6 @@ The Node resource accepts the following [input]({{< relref "/docs/intro/concepts
     </dt>
     <dd>{{% md %}}The version of Tensorflow running in the Node.
 {{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="zone_csharp">
-<a href="#zone_csharp" style="color: inherit; text-decoration: inherit;">Zone</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The GCP location for the TPU.
-{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="cidrblock_csharp">
@@ -418,6 +408,16 @@ The VPC Peering should be set up before provisioning the node. If this field is 
 cidr_block field should not be specified. If the network that you want to peer the
 TPU Node to is a Shared VPC network, the node must be created with this this field enabled.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="zone_csharp">
+<a href="#zone_csharp" style="color: inherit; text-decoration: inherit;">Zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The GCP location for the TPU. If it is not provided, the provider zone is used.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -443,16 +443,6 @@ TPU Node to is a Shared VPC network, the node must be created with this this fie
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of Tensorflow running in the Node.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="zone_go">
-<a href="#zone_go" style="color: inherit; text-decoration: inherit;">Zone</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The GCP location for the TPU.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -549,6 +539,16 @@ The VPC Peering should be set up before provisioning the node. If this field is 
 cidr_block field should not be specified. If the network that you want to peer the
 TPU Node to is a Shared VPC network, the node must be created with this this field enabled.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="zone_go">
+<a href="#zone_go" style="color: inherit; text-decoration: inherit;">Zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The GCP location for the TPU. If it is not provided, the provider zone is used.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -574,16 +574,6 @@ TPU Node to is a Shared VPC network, the node must be created with this this fie
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The version of Tensorflow running in the Node.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="zone_nodejs">
-<a href="#zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The GCP location for the TPU.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -680,6 +670,16 @@ The VPC Peering should be set up before provisioning the node. If this field is 
 cidr_block field should not be specified. If the network that you want to peer the
 TPU Node to is a Shared VPC network, the node must be created with this this field enabled.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="zone_nodejs">
+<a href="#zone_nodejs" style="color: inherit; text-decoration: inherit;">zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The GCP location for the TPU. If it is not provided, the provider zone is used.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -705,16 +705,6 @@ TPU Node to is a Shared VPC network, the node must be created with this this fie
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The version of Tensorflow running in the Node.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="zone_python">
-<a href="#zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The GCP location for the TPU.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -810,6 +800,16 @@ Structure is documented below.
 The VPC Peering should be set up before provisioning the node. If this field is set,
 cidr_block field should not be specified. If the network that you want to peer the
 TPU Node to is a Shared VPC network, the node must be created with this this field enabled.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="zone_python">
+<a href="#zone_python" style="color: inherit; text-decoration: inherit;">zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The GCP location for the TPU. If it is not provided, the provider zone is used.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1240,7 +1240,7 @@ TPU Node to is a Shared VPC network, the node must be created with this this fie
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The GCP location for the TPU.
+    <dd>{{% md %}}The GCP location for the TPU. If it is not provided, the provider zone is used.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1393,7 +1393,7 @@ TPU Node to is a Shared VPC network, the node must be created with this this fie
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The GCP location for the TPU.
+    <dd>{{% md %}}The GCP location for the TPU. If it is not provided, the provider zone is used.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1546,7 +1546,7 @@ TPU Node to is a Shared VPC network, the node must be created with this this fie
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The GCP location for the TPU.
+    <dd>{{% md %}}The GCP location for the TPU. If it is not provided, the provider zone is used.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1699,7 +1699,7 @@ TPU Node to is a Shared VPC network, the node must be created with this this fie
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The GCP location for the TPU.
+    <dd>{{% md %}}The GCP location for the TPU. If it is not provided, the provider zone is used.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}

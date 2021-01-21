@@ -29,7 +29,7 @@ class MyStack : Stack
     {
         var qa = Output.Create(Gcp.Sql.GetDatabaseInstance.InvokeAsync(new Gcp.Sql.GetDatabaseInstanceArgs
         {
-            Name = google_sql_database_instance.Master.Name,
+            Name = "test-sql-instance",
         }));
     }
 
@@ -50,7 +50,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := sql.LookupDatabaseInstance(ctx, &sql.LookupDatabaseInstanceArgs{
-			Name: google_sql_database_instance.Master.Name,
+			Name: "test-sql-instance",
 		}, nil)
 		if err != nil {
 			return err
@@ -67,7 +67,7 @@ func main() {
 import pulumi
 import pulumi_gcp as gcp
 
-qa = gcp.sql.get_database_instance(name=google_sql_database_instance["master"]["name"])
+qa = gcp.sql.get_database_instance(name="test-sql-instance")
 ```
 
 {{% /example %}}
@@ -78,9 +78,9 @@ qa = gcp.sql.get_database_instance(name=google_sql_database_instance["master"]["
 import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
-const qa = gcp.sql.getDatabaseInstance({
-    name: google_sql_database_instance.master.name,
-});
+const qa = pulumi.output(gcp.sql.getDatabaseInstance({
+    name: "test-sql-instance",
+}, { async: true }));
 ```
 
 {{% /example %}}
@@ -369,6 +369,15 @@ configuration is detailed below.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="restorebackupcontexts_csharp">
+<a href="#restorebackupcontexts_csharp" style="color: inherit; text-decoration: inherit;">Restore<wbr>Backup<wbr>Contexts</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getdatabaseinstancerestorebackupcontext">List&lt;Get<wbr>Database<wbr>Instance<wbr>Restore<wbr>Backup<wbr>Context&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="rootpassword_csharp">
 <a href="#rootpassword_csharp" style="color: inherit; text-decoration: inherit;">Root<wbr>Password</a>
 </span>
@@ -561,6 +570,15 @@ the master in the replication setup.
     <dd>{{% md %}}The configuration for replication. The
 configuration is detailed below.
 {{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="restorebackupcontexts_go">
+<a href="#restorebackupcontexts_go" style="color: inherit; text-decoration: inherit;">Restore<wbr>Backup<wbr>Contexts</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getdatabaseinstancerestorebackupcontext">[]Get<wbr>Database<wbr>Instance<wbr>Restore<wbr>Backup<wbr>Context</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="rootpassword_go">
@@ -757,6 +775,15 @@ configuration is detailed below.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="restorebackupcontexts_nodejs">
+<a href="#restorebackupcontexts_nodejs" style="color: inherit; text-decoration: inherit;">restore<wbr>Backup<wbr>Contexts</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getdatabaseinstancerestorebackupcontext">Get<wbr>Database<wbr>Instance<wbr>Restore<wbr>Backup<wbr>Context[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="rootpassword_nodejs">
 <a href="#rootpassword_nodejs" style="color: inherit; text-decoration: inherit;">root<wbr>Password</a>
 </span>
@@ -949,6 +976,15 @@ the master in the replication setup.
     <dd>{{% md %}}The configuration for replication. The
 configuration is detailed below.
 {{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="restore_backup_contexts_python">
+<a href="#restore_backup_contexts_python" style="color: inherit; text-decoration: inherit;">restore_<wbr>backup_<wbr>contexts</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getdatabaseinstancerestorebackupcontext">Sequence[Get<wbr>Database<wbr>Instance<wbr>Restore<wbr>Backup<wbr>Context]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="root_password_python">
@@ -1633,6 +1669,156 @@ configuration is detailed below.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}True if the master's common name value is checked during the SSL handshake.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="getdatabaseinstancerestorebackupcontext">Get<wbr>Database<wbr>Instance<wbr>Restore<wbr>Backup<wbr>Context</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#GetDatabaseInstanceRestoreBackupContext">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/sql?tab=doc#GetDatabaseInstanceRestoreBackupContext">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Sql.Outputs.GetDatabaseInstanceRestoreBackupContext.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="backuprunid_csharp">
+<a href="#backuprunid_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Run<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="instanceid_csharp">
+<a href="#instanceid_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the project in which the resource belongs.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="backuprunid_go">
+<a href="#backuprunid_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Run<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="instanceid_go">
+<a href="#instanceid_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the project in which the resource belongs.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="backuprunid_nodejs">
+<a href="#backuprunid_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Run<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="instanceid_nodejs">
+<a href="#instanceid_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the project in which the resource belongs.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="backup_run_id_python">
+<a href="#backup_run_id_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>run_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="instance_id_python">
+<a href="#instance_id_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of the project in which the resource belongs.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}

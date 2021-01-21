@@ -130,6 +130,7 @@ class MyStack : Stack
         });
         var @set = new Gcp.Dns.RecordSet("set", new Gcp.Dns.RecordSetArgs
         {
+            Name = "sslcert.tf-test.club.",
             Type = "A",
             Ttl = 3600,
             ManagedZone = zone.Name,
@@ -238,6 +239,7 @@ func main() {
 			return err
 		}
 		_, err = dns.NewRecordSet(ctx, "set", &dns.RecordSetArgs{
+			Name:        pulumi.String("sslcert.tf-test.club."),
 			Type:        pulumi.String("A"),
 			Ttl:         pulumi.Int(3600),
 			ManagedZone: zone.Name,
@@ -295,6 +297,7 @@ default_global_forwarding_rule = gcp.compute.GlobalForwardingRule("defaultGlobal
     target=default_target_https_proxy.id,
     port_range="443")
 set = gcp.dns.RecordSet("set",
+    name="sslcert.tf-test.club.",
     type="A",
     ttl=3600,
     managed_zone=zone.name,
@@ -349,6 +352,7 @@ const defaultGlobalForwardingRule = new gcp.compute.GlobalForwardingRule("defaul
     portRange: 443,
 });
 const set = new gcp.dns.RecordSet("set", {
+    name: "sslcert.tf-test.club.",
     type: "A",
     ttl: 3600,
     managedZone: zone.name,

@@ -221,16 +221,6 @@ Structure is documented below.
     </dt>
     <dd>{{% md %}}Number of nodes in the memcache instance.
 {{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="region_csharp">
-<a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the Memcache region of the instance.
-{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="authorizednetwork_csharp">
@@ -310,6 +300,16 @@ If it is not provided, the provider project is used.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="region_csharp">
+<a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The region of the Memcache instance. If it is not provided, the provider region is used.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="zones_csharp">
 <a href="#zones_csharp" style="color: inherit; text-decoration: inherit;">Zones</a>
 </span>
@@ -345,16 +345,6 @@ Structure is documented below.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of nodes in the memcache instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="region_go">
-<a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the Memcache region of the instance.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -435,6 +425,16 @@ If it is not provided, the provider project is used.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="region_go">
+<a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The region of the Memcache instance. If it is not provided, the provider region is used.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="zones_go">
 <a href="#zones_go" style="color: inherit; text-decoration: inherit;">Zones</a>
 </span>
@@ -470,16 +470,6 @@ Structure is documented below.
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Number of nodes in the memcache instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="region_nodejs">
-<a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The name of the Memcache region of the instance.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -560,6 +550,16 @@ If it is not provided, the provider project is used.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="region_nodejs">
+<a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The region of the Memcache instance. If it is not provided, the provider region is used.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="zones_nodejs">
 <a href="#zones_nodejs" style="color: inherit; text-decoration: inherit;">zones</a>
 </span>
@@ -595,16 +595,6 @@ Structure is documented below.
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Number of nodes in the memcache instance.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="region_python">
-<a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The name of the Memcache region of the instance.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -682,6 +672,16 @@ Possible values are `MEMCACHE_1_5`.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="region_python">
+<a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The region of the Memcache instance. If it is not provided, the provider region is used.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1196,7 +1196,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Memcache region of the instance.
+    <dd>{{% md %}}The region of the Memcache instance. If it is not provided, the provider region is used.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1361,7 +1361,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Memcache region of the instance.
+    <dd>{{% md %}}The region of the Memcache instance. If it is not provided, the provider region is used.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1526,7 +1526,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the Memcache region of the instance.
+    <dd>{{% md %}}The region of the Memcache instance. If it is not provided, the provider region is used.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1691,7 +1691,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the Memcache region of the instance.
+    <dd>{{% md %}}The region of the Memcache instance. If it is not provided, the provider region is used.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">

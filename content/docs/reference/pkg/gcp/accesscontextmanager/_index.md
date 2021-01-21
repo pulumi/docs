@@ -15,6 +15,7 @@ Explore the resources and functions of the accesscontextmanager module in the GC
     <li><a href="accesslevelcondition" title="AccessLevelCondition"><span class="symbol resource"></span>AccessLevelCondition</a></li>
     <li><a href="accesslevels" title="AccessLevels"><span class="symbol resource"></span>AccessLevels</a></li>
     <li><a href="accesspolicy" title="AccessPolicy"><span class="symbol resource"></span>AccessPolicy</a></li>
+    <li><a href="gcpuseraccessbinding" title="GcpUserAccessBinding"><span class="symbol resource"></span>GcpUserAccessBinding</a></li>
     <li><a href="serviceperimeter" title="ServicePerimeter"><span class="symbol resource"></span>ServicePerimeter</a></li>
     <li><a href="serviceperimeterresource" title="ServicePerimeterResource"><span class="symbol resource"></span>ServicePerimeterResource</a></li>
     <li><a href="serviceperimeters" title="ServicePerimeters"><span class="symbol resource"></span>ServicePerimeters</a></li>
@@ -29,7 +30,7 @@ Explore the resources and functions of the accesscontextmanager module in the GC
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 	<dt>Version</dt>
-	<dd>4.7.0</dd>
+	<dd>4.8.0</dd>
 </dl>
 
 

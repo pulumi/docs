@@ -3,7 +3,7 @@ title: "Module memcache"
 title_tag: "Module memcache | Package @pulumi/gcp | Node.js SDK"
 linktitle: "memcache"
 meta_desc: "Explore members of the memcache module in the @pulumi/gcp package."
-git_sha: "190d8b0982043d566daf0a0e22d4f73afa046cc7"
+git_sha: "c4a9d5b17d1d84373b0b6970394e0a36707ba8de"
 block_external_search_index: true
 ---
 
@@ -30,7 +30,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Instance" data-link-title="Instance">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/memcache/instance.ts#L20">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/memcache/instance.ts#L39">
         Resource <strong>Instance</strong>
     </a>
 </h3>
@@ -47,8 +47,28 @@ To get more information about Instance, see:
 
 #### Example Usage
 
+#### Import
+
+Instance can be imported using any of these accepted formats
+
+```sh
+ $ pulumi import gcp:memcache/instance:Instance default projects/{{project}}/locations/{{region}}/instances/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:memcache/instance:Instance default {{project}}/{{region}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:memcache/instance:Instance default {{region}}/{{name}}
+```
+
+```sh
+ $ pulumi import gcp:memcache/instance:Instance default {{name}}
+```
+
 <h4 class="pdoc-member-header" id="Instance-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/memcache/instance.ts#L116"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/memcache/instance.ts#L135"> <b>constructor</b></a>
 </h4>
 
 
@@ -62,7 +82,7 @@ Create a Instance resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Instance-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/memcache/instance.ts#L30">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/memcache/instance.ts#L49">method <b>get</b></a>
 </h4>
 
 
@@ -73,14 +93,14 @@ Get an existing Instance resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Instance-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/memcache/instance.ts#L20">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/memcache/instance.ts#L39">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Instance-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/memcache/instance.ts#L41">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/memcache/instance.ts#L60">method <b>isInstance</b></a>
 </h4>
 
 
@@ -91,7 +111,7 @@ Returns true if the given object is an instance of Instance.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Instance-authorizedNetwork">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/memcache/instance.ts#L52">property <b>authorizedNetwork</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/memcache/instance.ts#L71">property <b>authorizedNetwork</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>authorizedNetwork: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -100,7 +120,7 @@ The full name of the GCE network to connect the instance to.  If not provided,
 'default' will be used.
 
 <h4 class="pdoc-member-header" id="Instance-createTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/memcache/instance.ts#L56">property <b>createTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/memcache/instance.ts#L75">property <b>createTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>createTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -108,7 +128,7 @@ The full name of the GCE network to connect the instance to.  If not provided,
 Creation timestamp in RFC3339 text format.
 
 <h4 class="pdoc-member-header" id="Instance-discoveryEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/memcache/instance.ts#L60">property <b>discoveryEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/memcache/instance.ts#L79">property <b>discoveryEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>discoveryEndpoint: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -116,7 +136,7 @@ Creation timestamp in RFC3339 text format.
 Endpoint for Discovery API
 
 <h4 class="pdoc-member-header" id="Instance-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/memcache/instance.ts#L64">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/memcache/instance.ts#L83">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>displayName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -124,7 +144,7 @@ Endpoint for Discovery API
 A user-visible name for the instance.
 
 <h4 class="pdoc-member-header" id="Instance-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/memcache/instance.ts#L20">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/memcache/instance.ts#L39">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -133,7 +153,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Instance-labels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/memcache/instance.ts#L68">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/memcache/instance.ts#L87">property <b>labels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>labels: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -141,7 +161,7 @@ deployments and may be missing (undefined) during planning phases.
 Resource labels to represent user-provided metadata.
 
 <h4 class="pdoc-member-header" id="Instance-memcacheFullVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/memcache/instance.ts#L72">property <b>memcacheFullVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/memcache/instance.ts#L91">property <b>memcacheFullVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>memcacheFullVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -149,7 +169,7 @@ Resource labels to represent user-provided metadata.
 The full version of memcached server running on this instance.
 
 <h4 class="pdoc-member-header" id="Instance-memcacheNodes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/memcache/instance.ts#L76">property <b>memcacheNodes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/memcache/instance.ts#L95">property <b>memcacheNodes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>memcacheNodes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceMemcacheNode'>InstanceMemcacheNode</a>[]&gt;;</code></pre>
@@ -157,7 +177,7 @@ The full version of memcached server running on this instance.
 Additional information about the instance state, if available.
 
 <h4 class="pdoc-member-header" id="Instance-memcacheParameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/memcache/instance.ts#L81">property <b>memcacheParameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/memcache/instance.ts#L100">property <b>memcacheParameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>memcacheParameters: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceMemcacheParameters'>InstanceMemcacheParameters</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -166,7 +186,7 @@ User-specified parameters for this memcache instance.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="Instance-memcacheVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/memcache/instance.ts#L89">property <b>memcacheVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/memcache/instance.ts#L108">property <b>memcacheVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>memcacheVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -178,7 +198,7 @@ Default value is `MEMCACHE_1_5`.
 Possible values are `MEMCACHE_1_5`.
 
 <h4 class="pdoc-member-header" id="Instance-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/memcache/instance.ts#L93">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/memcache/instance.ts#L112">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -186,7 +206,7 @@ Possible values are `MEMCACHE_1_5`.
 The resource name of the instance.
 
 <h4 class="pdoc-member-header" id="Instance-nodeConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/memcache/instance.ts#L98">property <b>nodeConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/memcache/instance.ts#L117">property <b>nodeConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>nodeConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#InstanceNodeConfig'>InstanceNodeConfig</a>&gt;;</code></pre>
@@ -195,7 +215,7 @@ Configuration for memcache nodes.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="Instance-nodeCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/memcache/instance.ts#L102">property <b>nodeCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/memcache/instance.ts#L121">property <b>nodeCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>nodeCount: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -203,7 +223,7 @@ Structure is documented below.
 Number of nodes in the memcache instance.
 
 <h4 class="pdoc-member-header" id="Instance-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/memcache/instance.ts#L107">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/memcache/instance.ts#L126">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>project: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -212,15 +232,15 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="Instance-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/memcache/instance.ts#L111">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/memcache/instance.ts#L130">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-The name of the Memcache region of the instance.
+The region of the Memcache instance. If it is not provided, the provider region is used.
 
 <h4 class="pdoc-member-header" id="Instance-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/memcache/instance.ts#L20">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/memcache/instance.ts#L39">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -229,7 +249,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Instance-zones">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/memcache/instance.ts#L116">property <b>zones</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/memcache/instance.ts#L135">property <b>zones</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>zones: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -241,7 +261,7 @@ provided, all zones will be used.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="InstanceArgs" data-link-title="InstanceArgs">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/memcache/instance.ts#L261">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/memcache/instance.ts#L277">
         interface <strong>InstanceArgs</strong>
     </a>
 </h3>
@@ -251,7 +271,7 @@ provided, all zones will be used.
 The set of arguments for constructing a Instance resource.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-authorizedNetwork">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/memcache/instance.ts#L266">property <b>authorizedNetwork</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/memcache/instance.ts#L282">property <b>authorizedNetwork</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authorizedNetwork?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -260,7 +280,7 @@ The full name of the GCE network to connect the instance to.  If not provided,
 'default' will be used.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/memcache/instance.ts#L270">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/memcache/instance.ts#L286">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -268,7 +288,7 @@ The full name of the GCE network to connect the instance to.  If not provided,
 A user-visible name for the instance.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-labels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/memcache/instance.ts#L274">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/memcache/instance.ts#L290">property <b>labels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>labels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -276,7 +296,7 @@ A user-visible name for the instance.
 Resource labels to represent user-provided metadata.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-memcacheParameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/memcache/instance.ts#L279">property <b>memcacheParameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/memcache/instance.ts#L295">property <b>memcacheParameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>memcacheParameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceMemcacheParameters'>InstanceMemcacheParameters</a>&gt;;</code></pre>
@@ -285,7 +305,7 @@ User-specified parameters for this memcache instance.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-memcacheVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/memcache/instance.ts#L287">property <b>memcacheVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/memcache/instance.ts#L303">property <b>memcacheVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>memcacheVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -297,7 +317,7 @@ Default value is `MEMCACHE_1_5`.
 Possible values are `MEMCACHE_1_5`.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/memcache/instance.ts#L291">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/memcache/instance.ts#L307">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -305,7 +325,7 @@ Possible values are `MEMCACHE_1_5`.
 The resource name of the instance.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-nodeConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/memcache/instance.ts#L296">property <b>nodeConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/memcache/instance.ts#L312">property <b>nodeConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodeConfig: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceNodeConfig'>InstanceNodeConfig</a>&gt;;</code></pre>
@@ -314,7 +334,7 @@ Configuration for memcache nodes.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-nodeCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/memcache/instance.ts#L300">property <b>nodeCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/memcache/instance.ts#L316">property <b>nodeCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodeCount: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -322,7 +342,7 @@ Structure is documented below.
 Number of nodes in the memcache instance.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/memcache/instance.ts#L305">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/memcache/instance.ts#L321">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -331,15 +351,15 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/memcache/instance.ts#L309">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/memcache/instance.ts#L325">property <b>region</b></a>
 </h4>
 
-<pre class="highlight"><code><span class='kd'></span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+<pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-The name of the Memcache region of the instance.
+The region of the Memcache instance. If it is not provided, the provider region is used.
 
 <h4 class="pdoc-member-header" id="InstanceArgs-zones">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/memcache/instance.ts#L314">property <b>zones</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/memcache/instance.ts#L330">property <b>zones</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zones?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -348,7 +368,7 @@ Zones where memcache nodes should be provisioned.  If not
 provided, all zones will be used.
 
 <h3 class="pdoc-module-header" id="InstanceState" data-link-title="InstanceState">
-    <a href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/memcache/instance.ts#L186">
+    <a href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/memcache/instance.ts#L202">
         interface <strong>InstanceState</strong>
     </a>
 </h3>
@@ -358,7 +378,7 @@ provided, all zones will be used.
 Input properties used for looking up and filtering Instance resources.
 
 <h4 class="pdoc-member-header" id="InstanceState-authorizedNetwork">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/memcache/instance.ts#L191">property <b>authorizedNetwork</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/memcache/instance.ts#L207">property <b>authorizedNetwork</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>authorizedNetwork?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -367,7 +387,7 @@ The full name of the GCE network to connect the instance to.  If not provided,
 'default' will be used.
 
 <h4 class="pdoc-member-header" id="InstanceState-createTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/memcache/instance.ts#L195">property <b>createTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/memcache/instance.ts#L211">property <b>createTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -375,7 +395,7 @@ The full name of the GCE network to connect the instance to.  If not provided,
 Creation timestamp in RFC3339 text format.
 
 <h4 class="pdoc-member-header" id="InstanceState-discoveryEndpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/memcache/instance.ts#L199">property <b>discoveryEndpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/memcache/instance.ts#L215">property <b>discoveryEndpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>discoveryEndpoint?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -383,7 +403,7 @@ Creation timestamp in RFC3339 text format.
 Endpoint for Discovery API
 
 <h4 class="pdoc-member-header" id="InstanceState-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/memcache/instance.ts#L203">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/memcache/instance.ts#L219">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -391,7 +411,7 @@ Endpoint for Discovery API
 A user-visible name for the instance.
 
 <h4 class="pdoc-member-header" id="InstanceState-labels">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/memcache/instance.ts#L207">property <b>labels</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/memcache/instance.ts#L223">property <b>labels</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>labels?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -399,7 +419,7 @@ A user-visible name for the instance.
 Resource labels to represent user-provided metadata.
 
 <h4 class="pdoc-member-header" id="InstanceState-memcacheFullVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/memcache/instance.ts#L211">property <b>memcacheFullVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/memcache/instance.ts#L227">property <b>memcacheFullVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>memcacheFullVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -407,7 +427,7 @@ Resource labels to represent user-provided metadata.
 The full version of memcached server running on this instance.
 
 <h4 class="pdoc-member-header" id="InstanceState-memcacheNodes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/memcache/instance.ts#L215">property <b>memcacheNodes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/memcache/instance.ts#L231">property <b>memcacheNodes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>memcacheNodes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceMemcacheNode'>InstanceMemcacheNode</a>&gt;[]&gt;;</code></pre>
@@ -415,7 +435,7 @@ The full version of memcached server running on this instance.
 Additional information about the instance state, if available.
 
 <h4 class="pdoc-member-header" id="InstanceState-memcacheParameters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/memcache/instance.ts#L220">property <b>memcacheParameters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/memcache/instance.ts#L236">property <b>memcacheParameters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>memcacheParameters?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceMemcacheParameters'>InstanceMemcacheParameters</a>&gt;;</code></pre>
@@ -424,7 +444,7 @@ User-specified parameters for this memcache instance.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="InstanceState-memcacheVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/memcache/instance.ts#L228">property <b>memcacheVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/memcache/instance.ts#L244">property <b>memcacheVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>memcacheVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -436,7 +456,7 @@ Default value is `MEMCACHE_1_5`.
 Possible values are `MEMCACHE_1_5`.
 
 <h4 class="pdoc-member-header" id="InstanceState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/memcache/instance.ts#L232">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/memcache/instance.ts#L248">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -444,7 +464,7 @@ Possible values are `MEMCACHE_1_5`.
 The resource name of the instance.
 
 <h4 class="pdoc-member-header" id="InstanceState-nodeConfig">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/memcache/instance.ts#L237">property <b>nodeConfig</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/memcache/instance.ts#L253">property <b>nodeConfig</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodeConfig?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#InstanceNodeConfig'>InstanceNodeConfig</a>&gt;;</code></pre>
@@ -453,7 +473,7 @@ Configuration for memcache nodes.
 Structure is documented below.
 
 <h4 class="pdoc-member-header" id="InstanceState-nodeCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/memcache/instance.ts#L241">property <b>nodeCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/memcache/instance.ts#L257">property <b>nodeCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nodeCount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -461,7 +481,7 @@ Structure is documented below.
 Number of nodes in the memcache instance.
 
 <h4 class="pdoc-member-header" id="InstanceState-project">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/memcache/instance.ts#L246">property <b>project</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/memcache/instance.ts#L262">property <b>project</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>project?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -470,15 +490,15 @@ The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 
 <h4 class="pdoc-member-header" id="InstanceState-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/memcache/instance.ts#L250">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/memcache/instance.ts#L266">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-The name of the Memcache region of the instance.
+The region of the Memcache instance. If it is not provided, the provider region is used.
 
 <h4 class="pdoc-member-header" id="InstanceState-zones">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/190d8b0982043d566daf0a0e22d4f73afa046cc7/sdk/nodejs/memcache/instance.ts#L255">property <b>zones</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-gcp/blob/c4a9d5b17d1d84373b0b6970394e0a36707ba8de/sdk/nodejs/memcache/instance.ts#L271">property <b>zones</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zones?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
