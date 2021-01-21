@@ -626,15 +626,15 @@ acceptance_test = datadog.ScreenBoard("acceptanceTest",
                             search=datadog.ScreenBoardWidgetTileDefRequestLogQuerySearchArgs(
                                 query="status:info",
                             ),
-                            group_bies=[datadog.ScreenBoardWidgetTileDefRequestLogQueryGroupByArgs(
-                                facet="host",
-                                limit=10,
-                                sort=datadog.ScreenBoardWidgetTileDefRequestLogQueryGroupBySortArgs(
-                                    aggregation="avg",
-                                    order="desc",
-                                    facet="@duration",
-                                ),
-                            )],
+                            group_bies=[{
+                                "facet": "host",
+                                "limit": 10,
+                                "sort": {
+                                    "aggregation": "avg",
+                                    "order": "desc",
+                                    "facet": "@duration",
+                                },
+                            }],
                         ),
                         type="area",
                     ),
@@ -649,15 +649,15 @@ acceptance_test = datadog.ScreenBoard("acceptanceTest",
                             search=datadog.ScreenBoardWidgetTileDefRequestApmQuerySearchArgs(
                                 query="type:web",
                             ),
-                            group_bies=[datadog.ScreenBoardWidgetTileDefRequestApmQueryGroupByArgs(
-                                facet="resource_name",
-                                limit=50,
-                                sort=datadog.ScreenBoardWidgetTileDefRequestApmQueryGroupBySortArgs(
-                                    aggregation="avg",
-                                    order="desc",
-                                    facet="@string_query.interval",
-                                ),
-                            )],
+                            group_bies=[{
+                                "facet": "resource_name",
+                                "limit": 50,
+                                "sort": {
+                                    "aggregation": "avg",
+                                    "order": "desc",
+                                    "facet": "@string_query.interval",
+                                },
+                            }],
                         ),
                         type="bars",
                     ),

@@ -216,9 +216,9 @@ The Provider resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The API Url. This can be also be set via the DD_HOST environment variable. Note that this URL must not end with the
-/api/ path. For example, https://api.datadoghq.com/ is a correct value, while https://api.datadoghq.com/api/ is not. And
-if you're working with "EU" version of Datadog, use https://api.datadoghq.eu/.
+    <dd>{{% md %}}The API Url. This can also be set via the DD_HOST environment variable. Note that this URL must not end with the /api/
+path. For example, https://api.datadoghq.com/ is a correct value, while https://api.datadoghq.com/api/ is not. And if
+you're working with "EU" version of Datadog, use https://api.datadoghq.eu/.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -239,7 +239,7 @@ if you're working with "EU" version of Datadog, use https://api.datadoghq.eu/.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables validation of the provided API and APP keys during provider initialization. Default is true. When false, api_key
-and app_keywon't be checked.
+and app_key won't be checked.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -265,9 +265,9 @@ and app_keywon't be checked.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The API Url. This can be also be set via the DD_HOST environment variable. Note that this URL must not end with the
-/api/ path. For example, https://api.datadoghq.com/ is a correct value, while https://api.datadoghq.com/api/ is not. And
-if you're working with "EU" version of Datadog, use https://api.datadoghq.eu/.
+    <dd>{{% md %}}The API Url. This can also be set via the DD_HOST environment variable. Note that this URL must not end with the /api/
+path. For example, https://api.datadoghq.com/ is a correct value, while https://api.datadoghq.com/api/ is not. And if
+you're working with "EU" version of Datadog, use https://api.datadoghq.eu/.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -288,7 +288,7 @@ if you're working with "EU" version of Datadog, use https://api.datadoghq.eu/.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables validation of the provided API and APP keys during provider initialization. Default is true. When false, api_key
-and app_keywon't be checked.
+and app_key won't be checked.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -314,9 +314,9 @@ and app_keywon't be checked.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The API Url. This can be also be set via the DD_HOST environment variable. Note that this URL must not end with the
-/api/ path. For example, https://api.datadoghq.com/ is a correct value, while https://api.datadoghq.com/api/ is not. And
-if you're working with "EU" version of Datadog, use https://api.datadoghq.eu/.
+    <dd>{{% md %}}The API Url. This can also be set via the DD_HOST environment variable. Note that this URL must not end with the /api/
+path. For example, https://api.datadoghq.com/ is a correct value, while https://api.datadoghq.com/api/ is not. And if
+you're working with "EU" version of Datadog, use https://api.datadoghq.eu/.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -337,7 +337,7 @@ if you're working with "EU" version of Datadog, use https://api.datadoghq.eu/.
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Enables validation of the provided API and APP keys during provider initialization. Default is true. When false, api_key
-and app_keywon't be checked.
+and app_key won't be checked.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -363,9 +363,9 @@ and app_keywon't be checked.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The API Url. This can be also be set via the DD_HOST environment variable. Note that this URL must not end with the
-/api/ path. For example, https://api.datadoghq.com/ is a correct value, while https://api.datadoghq.com/api/ is not. And
-if you're working with "EU" version of Datadog, use https://api.datadoghq.eu/.
+    <dd>{{% md %}}The API Url. This can also be set via the DD_HOST environment variable. Note that this URL must not end with the /api/
+path. For example, https://api.datadoghq.com/ is a correct value, while https://api.datadoghq.com/api/ is not. And if
+you're working with "EU" version of Datadog, use https://api.datadoghq.eu/.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -386,7 +386,7 @@ if you're working with "EU" version of Datadog, use https://api.datadoghq.eu/.
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enables validation of the provided API and APP keys during provider initialization. Default is true. When false, api_key
-and app_keywon't be checked.
+and app_key won't be checked.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
