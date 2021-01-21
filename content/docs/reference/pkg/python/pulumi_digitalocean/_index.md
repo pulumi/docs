@@ -971,8 +971,11 @@ Image documentation for <a class="reference external" href="https://www.digitalo
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An optional description for the image.</p></li>
+<li><p><strong>distribution</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An optional distribution name for the image. Valid values are documented <a class="reference external" href="https://developers.digitalocean.com/documentation/v2/#create-a-custom-image">here</a></p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A name for the Custom Image.</p></li>
-<li><p><strong>regions</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em><em>]</em>) – A list of regions. (Currently only one is supported)</p></li>
+<li><p><strong>regions</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em><em>]</em>) – A list of regions. (Currently only one is supported).</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em><em>]</em>) – A list of optional tags for the image.</p></li>
 <li><p><strong>url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A URL from which the custom Linux virtual machine image may be retrieved.</p></li>
 </ul>
 </dd>
@@ -988,12 +991,28 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – An optional description for the image.</p></li>
+<li><p><strong>distribution</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>An optional distribution name for the image. Valid values are documented <a class="reference external" href="https://developers.digitalocean.com/documentation/v2/#create-a-custom-image">here</a></p>
+</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A name for the Custom Image.</p></li>
-<li><p><strong>regions</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em><em>]</em>) – A list of regions. (Currently only one is supported)</p></li>
+<li><p><strong>regions</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em><em>]</em>) – A list of regions. (Currently only one is supported).</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em><em>]</em>) – A list of optional tags for the image.</p></li>
 <li><p><strong>url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A URL from which the custom Linux virtual machine image may be retrieved.</p></li>
 </ul>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_digitalocean.CustomImage.description">
+<em class="property">property </em><code class="sig-name descname">description</code><a class="headerlink" href="#pulumi_digitalocean.CustomImage.description" title="Permalink to this definition">¶</a></dt>
+<dd><p>An optional description for the image.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_digitalocean.CustomImage.distribution">
+<em class="property">property </em><code class="sig-name descname">distribution</code><a class="headerlink" href="#pulumi_digitalocean.CustomImage.distribution" title="Permalink to this definition">¶</a></dt>
+<dd><p>An optional distribution name for the image. Valid values are documented <a class="reference external" href="https://developers.digitalocean.com/documentation/v2/#create-a-custom-image">here</a></p>
 </dd></dl>
 
 <dl class="py method">
@@ -1005,7 +1024,13 @@ properties used to qualify the lookup.</p>
 <dl class="py method">
 <dt id="pulumi_digitalocean.CustomImage.regions">
 <em class="property">property </em><code class="sig-name descname">regions</code><a class="headerlink" href="#pulumi_digitalocean.CustomImage.regions" title="Permalink to this definition">¶</a></dt>
-<dd><p>A list of regions. (Currently only one is supported)</p>
+<dd><p>A list of regions. (Currently only one is supported).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_digitalocean.CustomImage.tags">
+<em class="property">property </em><code class="sig-name descname">tags</code><a class="headerlink" href="#pulumi_digitalocean.CustomImage.tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>A list of optional tags for the image.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -4592,7 +4617,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <span class="n">foo</span> <span class="o">=</span> <span class="n">digitalocean</span><span class="o">.</span><span class="n">KubernetesCluster</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
     <span class="n">region</span><span class="o">=</span><span class="s2">&quot;nyc1&quot;</span><span class="p">,</span>
-    <span class="n">version</span><span class="o">=</span><span class="s2">&quot;1.15.5-do.1&quot;</span><span class="p">,</span>
+    <span class="n">version</span><span class="o">=</span><span class="s2">&quot;1.19.3-do.3&quot;</span><span class="p">,</span>
     <span class="n">node_pool</span><span class="o">=</span><span class="n">digitalocean</span><span class="o">.</span><span class="n">KubernetesClusterNodePoolArgs</span><span class="p">(</span>
         <span class="n">name</span><span class="o">=</span><span class="s2">&quot;front-end-pool&quot;</span><span class="p">,</span>
         <span class="n">size</span><span class="o">=</span><span class="s2">&quot;s-2vcpu-2gb&quot;</span><span class="p">,</span>

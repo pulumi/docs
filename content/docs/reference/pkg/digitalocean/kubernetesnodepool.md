@@ -29,7 +29,7 @@ class MyStack : Stack
         var foo = new DigitalOcean.KubernetesCluster("foo", new DigitalOcean.KubernetesClusterArgs
         {
             Region = "nyc1",
-            Version = "1.15.5-do.1",
+            Version = "1.19.3-do.3",
             NodePool = new DigitalOcean.Inputs.KubernetesClusterNodePoolArgs
             {
                 Name = "front-end-pool",
@@ -72,7 +72,7 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		foo, err := digitalocean.NewKubernetesCluster(ctx, "foo", &digitalocean.KubernetesClusterArgs{
 			Region:  pulumi.String("nyc1"),
-			Version: pulumi.String("1.15.5-do.1"),
+			Version: pulumi.String("1.19.3-do.3"),
 			NodePool: &digitalocean.KubernetesClusterNodePoolArgs{
 				Name:      pulumi.String("front-end-pool"),
 				Size:      pulumi.String("s-2vcpu-2gb"),
@@ -111,7 +111,7 @@ import pulumi_digitalocean as digitalocean
 
 foo = digitalocean.KubernetesCluster("foo",
     region="nyc1",
-    version="1.15.5-do.1",
+    version="1.19.3-do.3",
     node_pool=digitalocean.KubernetesClusterNodePoolArgs(
         name="front-end-pool",
         size="s-2vcpu-2gb",
@@ -138,7 +138,7 @@ import * as digitalocean from "@pulumi/digitalocean";
 
 const foo = new digitalocean.KubernetesCluster("foo", {
     region: "nyc1",
-    version: "1.15.5-do.1",
+    version: "1.19.3-do.3",
     nodePool: {
         name: "front-end-pool",
         size: "s-2vcpu-2gb",

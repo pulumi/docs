@@ -328,7 +328,7 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}A list of regions. (Currently only one is supported)
+    <dd>{{% md %}}A list of regions. (Currently only one is supported).
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -348,7 +348,8 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}An optional description for the image.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="distribution_csharp">
@@ -357,7 +358,8 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}An optional distribution name for the image. Valid values are documented [here](https://developers.digitalocean.com/documentation/v2/#create-a-custom-image)
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
@@ -376,7 +378,8 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of optional tags for the image.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -391,7 +394,7 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}A list of regions. (Currently only one is supported)
+    <dd>{{% md %}}A list of regions. (Currently only one is supported).
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -411,7 +414,8 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}An optional description for the image.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="distribution_go">
@@ -420,7 +424,8 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}An optional distribution name for the image. Valid values are documented [here](https://developers.digitalocean.com/documentation/v2/#create-a-custom-image)
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
@@ -439,7 +444,8 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of optional tags for the image.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -454,7 +460,7 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}A list of regions. (Currently only one is supported)
+    <dd>{{% md %}}A list of regions. (Currently only one is supported).
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -474,7 +480,8 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}An optional description for the image.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="distribution_nodejs">
@@ -483,7 +490,8 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}An optional distribution name for the image. Valid values are documented [here](https://developers.digitalocean.com/documentation/v2/#create-a-custom-image)
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
@@ -502,7 +510,8 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of optional tags for the image.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -517,7 +526,7 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}A list of regions. (Currently only one is supported)
+    <dd>{{% md %}}A list of regions. (Currently only one is supported).
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -537,7 +546,8 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}An optional description for the image.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="distribution_python">
@@ -546,7 +556,8 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}An optional distribution name for the image. Valid values are documented [here](https://developers.digitalocean.com/documentation/v2/#create-a-custom-image)
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
@@ -565,7 +576,8 @@ The CustomImage resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of optional tags for the image.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1067,7 +1079,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}An optional description for the image.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_distribution_csharp">
@@ -1076,7 +1089,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}An optional distribution name for the image. Valid values are documented [here](https://developers.digitalocean.com/documentation/v2/#create-a-custom-image)
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_imageid_csharp">
@@ -1122,7 +1136,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}A list of regions. (Currently only one is supported)
+    <dd>{{% md %}}A list of regions. (Currently only one is supported).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1159,7 +1173,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of optional tags for the image.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_type_csharp">
@@ -1202,7 +1217,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}An optional description for the image.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_distribution_go">
@@ -1211,7 +1227,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}An optional distribution name for the image. Valid values are documented [here](https://developers.digitalocean.com/documentation/v2/#create-a-custom-image)
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_imageid_go">
@@ -1257,7 +1274,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}A list of regions. (Currently only one is supported)
+    <dd>{{% md %}}A list of regions. (Currently only one is supported).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1294,7 +1311,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of optional tags for the image.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_type_go">
@@ -1337,7 +1355,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}An optional description for the image.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_distribution_nodejs">
@@ -1346,7 +1365,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}An optional distribution name for the image. Valid values are documented [here](https://developers.digitalocean.com/documentation/v2/#create-a-custom-image)
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_imageid_nodejs">
@@ -1392,7 +1412,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}A list of regions. (Currently only one is supported)
+    <dd>{{% md %}}A list of regions. (Currently only one is supported).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1429,7 +1449,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of optional tags for the image.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_type_nodejs">
@@ -1472,7 +1493,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}An optional description for the image.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_distribution_python">
@@ -1481,7 +1503,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}An optional distribution name for the image. Valid values are documented [here](https://developers.digitalocean.com/documentation/v2/#create-a-custom-image)
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_image_id_python">
@@ -1527,7 +1550,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}A list of regions. (Currently only one is supported)
+    <dd>{{% md %}}A list of regions. (Currently only one is supported).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1564,7 +1587,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of optional tags for the image.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_type_python">
