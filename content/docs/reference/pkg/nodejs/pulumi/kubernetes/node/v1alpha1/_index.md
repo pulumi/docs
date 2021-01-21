@@ -3,7 +3,7 @@ title: "Module node/v1alpha1"
 title_tag: "Module node/v1alpha1 | Package @pulumi/kubernetes | Node.js SDK"
 linktitle: "v1alpha1"
 meta_desc: "Explore members of the v1alpha1 module in the @pulumi/kubernetes package."
-git_sha: "f01f284c88884e5d9c32cb08b9ee2a464af4a384"
+git_sha: "63f6322ca9e33d39a2e52afc00dc343f1f4f3369"
 block_external_search_index: true
 ---
 
@@ -31,7 +31,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="RuntimeClass" data-link-title="RuntimeClass">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/node/v1alpha1/runtimeClass.ts#L11">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/63f6322ca9e33d39a2e52afc00dc343f1f4f3369/sdk/nodejs/node/v1alpha1/runtimeClass.ts#L11">
         Resource <strong>RuntimeClass</strong>
     </a>
 </h3>
@@ -41,7 +41,7 @@ block_external_search_index: true
 RuntimeClass defines a class of container runtime supported in the cluster. The RuntimeClass is used to determine which container runtime is used to run all containers in a pod. RuntimeClasses are (currently) manually defined by a user or cluster provisioner, and referenced in the PodSpec. The Kubelet is responsible for resolving the RuntimeClassName reference before running the pod.  For more details, see https://git.k8s.io/enhancements/keps/sig-node/runtime-class.md
 
 <h4 class="pdoc-member-header" id="RuntimeClass-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/node/v1alpha1/runtimeClass.ts#L53"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/63f6322ca9e33d39a2e52afc00dc343f1f4f3369/sdk/nodejs/node/v1alpha1/runtimeClass.ts#L53"> <b>constructor</b></a>
 </h4>
 
 
@@ -55,7 +55,7 @@ Create a RuntimeClass resource with the given unique name, arguments, and option
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="RuntimeClass-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/node/v1alpha1/runtimeClass.ts#L20">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/63f6322ca9e33d39a2e52afc00dc343f1f4f3369/sdk/nodejs/node/v1alpha1/runtimeClass.ts#L20">method <b>get</b></a>
 </h4>
 
 
@@ -66,14 +66,14 @@ Get an existing RuntimeClass resource's state with the given name, ID, and optio
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="RuntimeClass-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/node/v1alpha1/runtimeClass.ts#L11">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/63f6322ca9e33d39a2e52afc00dc343f1f4f3369/sdk/nodejs/node/v1alpha1/runtimeClass.ts#L11">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="RuntimeClass-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/node/v1alpha1/runtimeClass.ts#L31">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/63f6322ca9e33d39a2e52afc00dc343f1f4f3369/sdk/nodejs/node/v1alpha1/runtimeClass.ts#L31">method <b>isInstance</b></a>
 </h4>
 
 
@@ -84,7 +84,7 @@ Returns true if the given object is an instance of RuntimeClass.  This is design
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="RuntimeClass-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/node/v1alpha1/runtimeClass.ts#L41">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/63f6322ca9e33d39a2e52afc00dc343f1f4f3369/sdk/nodejs/node/v1alpha1/runtimeClass.ts#L41">property <b>apiVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"node.k8s.io/v1alpha1"</span>&gt;;</code></pre>
@@ -92,7 +92,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 <h4 class="pdoc-member-header" id="RuntimeClass-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/node/v1alpha1/runtimeClass.ts#L11">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/63f6322ca9e33d39a2e52afc00dc343f1f4f3369/sdk/nodejs/node/v1alpha1/runtimeClass.ts#L11">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -101,7 +101,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="RuntimeClass-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/node/v1alpha1/runtimeClass.ts#L45">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/63f6322ca9e33d39a2e52afc00dc343f1f4f3369/sdk/nodejs/node/v1alpha1/runtimeClass.ts#L45">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"RuntimeClass"</span>&gt;;</code></pre>
@@ -109,7 +109,7 @@ deployments and may be missing (undefined) during planning phases.
 Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 <h4 class="pdoc-member-header" id="RuntimeClass-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/node/v1alpha1/runtimeClass.ts#L49">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/63f6322ca9e33d39a2e52afc00dc343f1f4f3369/sdk/nodejs/node/v1alpha1/runtimeClass.ts#L49">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ObjectMeta'>ObjectMeta</a>&gt;;</code></pre>
@@ -117,7 +117,7 @@ Kind is a string value representing the REST resource this object represents. Se
 More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
 
 <h4 class="pdoc-member-header" id="RuntimeClass-spec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/node/v1alpha1/runtimeClass.ts#L53">property <b>spec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/63f6322ca9e33d39a2e52afc00dc343f1f4f3369/sdk/nodejs/node/v1alpha1/runtimeClass.ts#L53">property <b>spec</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#RuntimeClassSpec'>RuntimeClassSpec</a>&gt;;</code></pre>
@@ -125,7 +125,7 @@ More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-
 Specification of the RuntimeClass More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
 
 <h4 class="pdoc-member-header" id="RuntimeClass-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/node/v1alpha1/runtimeClass.ts#L11">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/63f6322ca9e33d39a2e52afc00dc343f1f4f3369/sdk/nodejs/node/v1alpha1/runtimeClass.ts#L11">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -134,7 +134,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="RuntimeClassList" data-link-title="RuntimeClassList">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/node/v1alpha1/runtimeClassList.ts#L11">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/63f6322ca9e33d39a2e52afc00dc343f1f4f3369/sdk/nodejs/node/v1alpha1/runtimeClassList.ts#L11">
         Resource <strong>RuntimeClassList</strong>
     </a>
 </h3>
@@ -144,7 +144,7 @@ deployments.
 RuntimeClassList is a list of RuntimeClass objects.
 
 <h4 class="pdoc-member-header" id="RuntimeClassList-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/node/v1alpha1/runtimeClassList.ts#L53"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/63f6322ca9e33d39a2e52afc00dc343f1f4f3369/sdk/nodejs/node/v1alpha1/runtimeClassList.ts#L53"> <b>constructor</b></a>
 </h4>
 
 
@@ -158,7 +158,7 @@ Create a RuntimeClassList resource with the given unique name, arguments, and op
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="RuntimeClassList-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/node/v1alpha1/runtimeClassList.ts#L20">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/63f6322ca9e33d39a2e52afc00dc343f1f4f3369/sdk/nodejs/node/v1alpha1/runtimeClassList.ts#L20">method <b>get</b></a>
 </h4>
 
 
@@ -169,14 +169,14 @@ Get an existing RuntimeClassList resource's state with the given name, ID, and o
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="RuntimeClassList-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/node/v1alpha1/runtimeClassList.ts#L11">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/63f6322ca9e33d39a2e52afc00dc343f1f4f3369/sdk/nodejs/node/v1alpha1/runtimeClassList.ts#L11">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="RuntimeClassList-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/node/v1alpha1/runtimeClassList.ts#L31">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/63f6322ca9e33d39a2e52afc00dc343f1f4f3369/sdk/nodejs/node/v1alpha1/runtimeClassList.ts#L31">method <b>isInstance</b></a>
 </h4>
 
 
@@ -187,7 +187,7 @@ Returns true if the given object is an instance of RuntimeClassList.  This is de
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="RuntimeClassList-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/node/v1alpha1/runtimeClassList.ts#L41">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/63f6322ca9e33d39a2e52afc00dc343f1f4f3369/sdk/nodejs/node/v1alpha1/runtimeClassList.ts#L41">property <b>apiVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"node.k8s.io/v1alpha1"</span>&gt;;</code></pre>
@@ -195,7 +195,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 <h4 class="pdoc-member-header" id="RuntimeClassList-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/node/v1alpha1/runtimeClassList.ts#L11">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/63f6322ca9e33d39a2e52afc00dc343f1f4f3369/sdk/nodejs/node/v1alpha1/runtimeClassList.ts#L11">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -204,7 +204,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="RuntimeClassList-items">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/node/v1alpha1/runtimeClassList.ts#L45">property <b>items</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/63f6322ca9e33d39a2e52afc00dc343f1f4f3369/sdk/nodejs/node/v1alpha1/runtimeClassList.ts#L45">property <b>items</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#RuntimeClass'>RuntimeClass</a>[]&gt;;</code></pre>
@@ -212,7 +212,7 @@ deployments and may be missing (undefined) during planning phases.
 Items is a list of schema objects.
 
 <h4 class="pdoc-member-header" id="RuntimeClassList-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/node/v1alpha1/runtimeClassList.ts#L49">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/63f6322ca9e33d39a2e52afc00dc343f1f4f3369/sdk/nodejs/node/v1alpha1/runtimeClassList.ts#L49">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"RuntimeClassList"</span>&gt;;</code></pre>
@@ -220,7 +220,7 @@ Items is a list of schema objects.
 Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 <h4 class="pdoc-member-header" id="RuntimeClassList-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/node/v1alpha1/runtimeClassList.ts#L53">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/63f6322ca9e33d39a2e52afc00dc343f1f4f3369/sdk/nodejs/node/v1alpha1/runtimeClassList.ts#L53">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ListMeta'>ListMeta</a>&gt;;</code></pre>
@@ -228,7 +228,7 @@ Kind is a string value representing the REST resource this object represents. Se
 Standard list metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
 
 <h4 class="pdoc-member-header" id="RuntimeClassList-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/node/v1alpha1/runtimeClassList.ts#L11">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/63f6322ca9e33d39a2e52afc00dc343f1f4f3369/sdk/nodejs/node/v1alpha1/runtimeClassList.ts#L11">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -240,7 +240,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="RuntimeClassArgs" data-link-title="RuntimeClassArgs">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/node/v1alpha1/runtimeClass.ts#L94">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/63f6322ca9e33d39a2e52afc00dc343f1f4f3369/sdk/nodejs/node/v1alpha1/runtimeClass.ts#L94">
         interface <strong>RuntimeClassArgs</strong>
     </a>
 </h3>
@@ -250,7 +250,7 @@ deployments.
 The set of arguments for constructing a RuntimeClass resource.
 
 <h4 class="pdoc-member-header" id="RuntimeClassArgs-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/node/v1alpha1/runtimeClass.ts#L98">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/63f6322ca9e33d39a2e52afc00dc343f1f4f3369/sdk/nodejs/node/v1alpha1/runtimeClass.ts#L98">property <b>apiVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"node.k8s.io/v1alpha1"</span>&gt;;</code></pre>
@@ -258,7 +258,7 @@ The set of arguments for constructing a RuntimeClass resource.
 APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 <h4 class="pdoc-member-header" id="RuntimeClassArgs-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/node/v1alpha1/runtimeClass.ts#L102">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/63f6322ca9e33d39a2e52afc00dc343f1f4f3369/sdk/nodejs/node/v1alpha1/runtimeClass.ts#L102">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kind?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"RuntimeClass"</span>&gt;;</code></pre>
@@ -266,7 +266,7 @@ APIVersion defines the versioned schema of this representation of an object. Ser
 Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 <h4 class="pdoc-member-header" id="RuntimeClassArgs-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/node/v1alpha1/runtimeClass.ts#L106">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/63f6322ca9e33d39a2e52afc00dc343f1f4f3369/sdk/nodejs/node/v1alpha1/runtimeClass.ts#L106">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ObjectMeta'>ObjectMeta</a>&gt;;</code></pre>
@@ -274,7 +274,7 @@ Kind is a string value representing the REST resource this object represents. Se
 More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
 
 <h4 class="pdoc-member-header" id="RuntimeClassArgs-spec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/node/v1alpha1/runtimeClass.ts#L110">property <b>spec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/63f6322ca9e33d39a2e52afc00dc343f1f4f3369/sdk/nodejs/node/v1alpha1/runtimeClass.ts#L110">property <b>spec</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#RuntimeClassSpec'>RuntimeClassSpec</a>&gt;;</code></pre>
@@ -282,7 +282,7 @@ More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-
 Specification of the RuntimeClass More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#spec-and-status
 
 <h3 class="pdoc-module-header" id="RuntimeClassListArgs" data-link-title="RuntimeClassListArgs">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/node/v1alpha1/runtimeClassList.ts#L92">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/63f6322ca9e33d39a2e52afc00dc343f1f4f3369/sdk/nodejs/node/v1alpha1/runtimeClassList.ts#L92">
         interface <strong>RuntimeClassListArgs</strong>
     </a>
 </h3>
@@ -292,7 +292,7 @@ Specification of the RuntimeClass More info: https://git.k8s.io/community/contri
 The set of arguments for constructing a RuntimeClassList resource.
 
 <h4 class="pdoc-member-header" id="RuntimeClassListArgs-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/node/v1alpha1/runtimeClassList.ts#L96">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/63f6322ca9e33d39a2e52afc00dc343f1f4f3369/sdk/nodejs/node/v1alpha1/runtimeClassList.ts#L96">property <b>apiVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"node.k8s.io/v1alpha1"</span>&gt;;</code></pre>
@@ -300,7 +300,7 @@ The set of arguments for constructing a RuntimeClassList resource.
 APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 <h4 class="pdoc-member-header" id="RuntimeClassListArgs-items">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/node/v1alpha1/runtimeClassList.ts#L100">property <b>items</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/63f6322ca9e33d39a2e52afc00dc343f1f4f3369/sdk/nodejs/node/v1alpha1/runtimeClassList.ts#L100">property <b>items</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#RuntimeClass'>RuntimeClass</a>&gt;[]&gt;;</code></pre>
@@ -308,7 +308,7 @@ APIVersion defines the versioned schema of this representation of an object. Ser
 Items is a list of schema objects.
 
 <h4 class="pdoc-member-header" id="RuntimeClassListArgs-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/node/v1alpha1/runtimeClassList.ts#L104">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/63f6322ca9e33d39a2e52afc00dc343f1f4f3369/sdk/nodejs/node/v1alpha1/runtimeClassList.ts#L104">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kind?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"RuntimeClassList"</span>&gt;;</code></pre>
@@ -316,7 +316,7 @@ Items is a list of schema objects.
 Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 <h4 class="pdoc-member-header" id="RuntimeClassListArgs-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/node/v1alpha1/runtimeClassList.ts#L108">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/63f6322ca9e33d39a2e52afc00dc343f1f4f3369/sdk/nodejs/node/v1alpha1/runtimeClassList.ts#L108">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ListMeta'>ListMeta</a>&gt;;</code></pre>

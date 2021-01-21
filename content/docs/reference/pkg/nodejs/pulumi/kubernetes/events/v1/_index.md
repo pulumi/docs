@@ -3,7 +3,7 @@ title: "Module events/v1"
 title_tag: "Module events/v1 | Package @pulumi/kubernetes | Node.js SDK"
 linktitle: "v1"
 meta_desc: "Explore members of the v1 module in the @pulumi/kubernetes package."
-git_sha: "f01f284c88884e5d9c32cb08b9ee2a464af4a384"
+git_sha: "63f6322ca9e33d39a2e52afc00dc343f1f4f3369"
 block_external_search_index: true
 ---
 
@@ -31,7 +31,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Event" data-link-title="Event">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/events/v1/event.ts#L11">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/63f6322ca9e33d39a2e52afc00dc343f1f4f3369/sdk/nodejs/events/v1/event.ts#L11">
         Resource <strong>Event</strong>
     </a>
 </h3>
@@ -41,7 +41,7 @@ block_external_search_index: true
 Event is a report of an event somewhere in the cluster. It generally denotes some state change in the system. Events have a limited retention time and triggers and messages may evolve with time.  Event consumers should not rely on the timing of an event with a given Reason reflecting a consistent underlying trigger, or the continued existence of events with that Reason.  Events should be treated as informative, best-effort, supplemental data.
 
 <h4 class="pdoc-member-header" id="Event-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/events/v1/event.ts#L102"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/63f6322ca9e33d39a2e52afc00dc343f1f4f3369/sdk/nodejs/events/v1/event.ts#L102"> <b>constructor</b></a>
 </h4>
 
 
@@ -55,7 +55,7 @@ Create a Event resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Event-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/events/v1/event.ts#L20">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/63f6322ca9e33d39a2e52afc00dc343f1f4f3369/sdk/nodejs/events/v1/event.ts#L20">method <b>get</b></a>
 </h4>
 
 
@@ -66,14 +66,14 @@ Get an existing Event resource's state with the given name, ID, and optional ext
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Event-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/events/v1/event.ts#L11">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/63f6322ca9e33d39a2e52afc00dc343f1f4f3369/sdk/nodejs/events/v1/event.ts#L11">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Event-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/events/v1/event.ts#L31">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/63f6322ca9e33d39a2e52afc00dc343f1f4f3369/sdk/nodejs/events/v1/event.ts#L31">method <b>isInstance</b></a>
 </h4>
 
 
@@ -84,7 +84,7 @@ Returns true if the given object is an instance of Event.  This is designed to w
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Event-action">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/events/v1/event.ts#L41">property <b>action</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/63f6322ca9e33d39a2e52afc00dc343f1f4f3369/sdk/nodejs/events/v1/event.ts#L41">property <b>action</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>action: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -92,7 +92,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 action is what action was taken/failed regarding to the regarding object. It is machine-readable. This field cannot be empty for new Events and it can have at most 128 characters.
 
 <h4 class="pdoc-member-header" id="Event-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/events/v1/event.ts#L45">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/63f6322ca9e33d39a2e52afc00dc343f1f4f3369/sdk/nodejs/events/v1/event.ts#L45">property <b>apiVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"events.k8s.io/v1"</span>&gt;;</code></pre>
@@ -100,7 +100,7 @@ action is what action was taken/failed regarding to the regarding object. It is 
 APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 <h4 class="pdoc-member-header" id="Event-deprecatedCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/events/v1/event.ts#L49">property <b>deprecatedCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/63f6322ca9e33d39a2e52afc00dc343f1f4f3369/sdk/nodejs/events/v1/event.ts#L49">property <b>deprecatedCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>deprecatedCount: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -108,7 +108,7 @@ APIVersion defines the versioned schema of this representation of an object. Ser
 deprecatedCount is the deprecated field assuring backward compatibility with core.v1 Event type.
 
 <h4 class="pdoc-member-header" id="Event-deprecatedFirstTimestamp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/events/v1/event.ts#L53">property <b>deprecatedFirstTimestamp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/63f6322ca9e33d39a2e52afc00dc343f1f4f3369/sdk/nodejs/events/v1/event.ts#L53">property <b>deprecatedFirstTimestamp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>deprecatedFirstTimestamp: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -116,7 +116,7 @@ deprecatedCount is the deprecated field assuring backward compatibility with cor
 deprecatedFirstTimestamp is the deprecated field assuring backward compatibility with core.v1 Event type.
 
 <h4 class="pdoc-member-header" id="Event-deprecatedLastTimestamp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/events/v1/event.ts#L57">property <b>deprecatedLastTimestamp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/63f6322ca9e33d39a2e52afc00dc343f1f4f3369/sdk/nodejs/events/v1/event.ts#L57">property <b>deprecatedLastTimestamp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>deprecatedLastTimestamp: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -124,7 +124,7 @@ deprecatedFirstTimestamp is the deprecated field assuring backward compatibility
 deprecatedLastTimestamp is the deprecated field assuring backward compatibility with core.v1 Event type.
 
 <h4 class="pdoc-member-header" id="Event-deprecatedSource">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/events/v1/event.ts#L61">property <b>deprecatedSource</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/63f6322ca9e33d39a2e52afc00dc343f1f4f3369/sdk/nodejs/events/v1/event.ts#L61">property <b>deprecatedSource</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>deprecatedSource: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#EventSource'>EventSource</a>&gt;;</code></pre>
@@ -132,7 +132,7 @@ deprecatedLastTimestamp is the deprecated field assuring backward compatibility 
 deprecatedSource is the deprecated field assuring backward compatibility with core.v1 Event type.
 
 <h4 class="pdoc-member-header" id="Event-eventTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/events/v1/event.ts#L65">property <b>eventTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/63f6322ca9e33d39a2e52afc00dc343f1f4f3369/sdk/nodejs/events/v1/event.ts#L65">property <b>eventTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>eventTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -140,7 +140,7 @@ deprecatedSource is the deprecated field assuring backward compatibility with co
 eventTime is the time when this Event was first observed. It is required.
 
 <h4 class="pdoc-member-header" id="Event-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/events/v1/event.ts#L11">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/63f6322ca9e33d39a2e52afc00dc343f1f4f3369/sdk/nodejs/events/v1/event.ts#L11">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -149,7 +149,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Event-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/events/v1/event.ts#L69">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/63f6322ca9e33d39a2e52afc00dc343f1f4f3369/sdk/nodejs/events/v1/event.ts#L69">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"Event"</span>&gt;;</code></pre>
@@ -157,12 +157,12 @@ deployments and may be missing (undefined) during planning phases.
 Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 <h4 class="pdoc-member-header" id="Event-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/events/v1/event.ts#L70">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/63f6322ca9e33d39a2e52afc00dc343f1f4f3369/sdk/nodejs/events/v1/event.ts#L70">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ObjectMeta'>ObjectMeta</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Event-note">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/events/v1/event.ts#L74">property <b>note</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/63f6322ca9e33d39a2e52afc00dc343f1f4f3369/sdk/nodejs/events/v1/event.ts#L74">property <b>note</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>note: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -170,7 +170,7 @@ Kind is a string value representing the REST resource this object represents. Se
 note is a human-readable description of the status of this operation. Maximal length of the note is 1kB, but libraries should be prepared to handle values up to 64kB.
 
 <h4 class="pdoc-member-header" id="Event-reason">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/events/v1/event.ts#L78">property <b>reason</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/63f6322ca9e33d39a2e52afc00dc343f1f4f3369/sdk/nodejs/events/v1/event.ts#L78">property <b>reason</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>reason: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -178,7 +178,7 @@ note is a human-readable description of the status of this operation. Maximal le
 reason is why the action was taken. It is human-readable. This field cannot be empty for new Events and it can have at most 128 characters.
 
 <h4 class="pdoc-member-header" id="Event-regarding">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/events/v1/event.ts#L82">property <b>regarding</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/63f6322ca9e33d39a2e52afc00dc343f1f4f3369/sdk/nodejs/events/v1/event.ts#L82">property <b>regarding</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>regarding: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ObjectReference'>ObjectReference</a>&gt;;</code></pre>
@@ -186,7 +186,7 @@ reason is why the action was taken. It is human-readable. This field cannot be e
 regarding contains the object this Event is about. In most cases it's an Object reporting controller implements, e.g. ReplicaSetController implements ReplicaSets and this event is emitted because it acts on some changes in a ReplicaSet object.
 
 <h4 class="pdoc-member-header" id="Event-related">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/events/v1/event.ts#L86">property <b>related</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/63f6322ca9e33d39a2e52afc00dc343f1f4f3369/sdk/nodejs/events/v1/event.ts#L86">property <b>related</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>related: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ObjectReference'>ObjectReference</a>&gt;;</code></pre>
@@ -194,7 +194,7 @@ regarding contains the object this Event is about. In most cases it's an Object 
 related is the optional secondary object for more complex actions. E.g. when regarding object triggers a creation or deletion of related object.
 
 <h4 class="pdoc-member-header" id="Event-reportingController">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/events/v1/event.ts#L90">property <b>reportingController</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/63f6322ca9e33d39a2e52afc00dc343f1f4f3369/sdk/nodejs/events/v1/event.ts#L90">property <b>reportingController</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>reportingController: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -202,7 +202,7 @@ related is the optional secondary object for more complex actions. E.g. when reg
 reportingController is the name of the controller that emitted this Event, e.g. `kubernetes.io/kubelet`. This field cannot be empty for new Events.
 
 <h4 class="pdoc-member-header" id="Event-reportingInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/events/v1/event.ts#L94">property <b>reportingInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/63f6322ca9e33d39a2e52afc00dc343f1f4f3369/sdk/nodejs/events/v1/event.ts#L94">property <b>reportingInstance</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>reportingInstance: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -210,7 +210,7 @@ reportingController is the name of the controller that emitted this Event, e.g. 
 reportingInstance is the ID of the controller instance, e.g. `kubelet-xyzf`. This field cannot be empty for new Events and it can have at most 128 characters.
 
 <h4 class="pdoc-member-header" id="Event-series">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/events/v1/event.ts#L98">property <b>series</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/63f6322ca9e33d39a2e52afc00dc343f1f4f3369/sdk/nodejs/events/v1/event.ts#L98">property <b>series</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>series: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#EventSeries'>EventSeries</a>&gt;;</code></pre>
@@ -218,7 +218,7 @@ reportingInstance is the ID of the controller instance, e.g. `kubelet-xyzf`. Thi
 series is data about the Event series this event represents or nil if it's a singleton Event.
 
 <h4 class="pdoc-member-header" id="Event-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/events/v1/event.ts#L102">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/63f6322ca9e33d39a2e52afc00dc343f1f4f3369/sdk/nodejs/events/v1/event.ts#L102">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -226,7 +226,7 @@ series is data about the Event series this event represents or nil if it's a sin
 type is the type of this event (Normal, Warning), new types could be added in the future. It is machine-readable. This field cannot be empty for new Events.
 
 <h4 class="pdoc-member-header" id="Event-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/events/v1/event.ts#L11">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/63f6322ca9e33d39a2e52afc00dc343f1f4f3369/sdk/nodejs/events/v1/event.ts#L11">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -235,7 +235,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="EventList" data-link-title="EventList">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/events/v1/eventList.ts#L11">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/63f6322ca9e33d39a2e52afc00dc343f1f4f3369/sdk/nodejs/events/v1/eventList.ts#L11">
         Resource <strong>EventList</strong>
     </a>
 </h3>
@@ -245,7 +245,7 @@ deployments.
 EventList is a list of Event objects.
 
 <h4 class="pdoc-member-header" id="EventList-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/events/v1/eventList.ts#L53"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/63f6322ca9e33d39a2e52afc00dc343f1f4f3369/sdk/nodejs/events/v1/eventList.ts#L53"> <b>constructor</b></a>
 </h4>
 
 
@@ -259,7 +259,7 @@ Create a EventList resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="EventList-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/events/v1/eventList.ts#L20">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/63f6322ca9e33d39a2e52afc00dc343f1f4f3369/sdk/nodejs/events/v1/eventList.ts#L20">method <b>get</b></a>
 </h4>
 
 
@@ -270,14 +270,14 @@ Get an existing EventList resource's state with the given name, ID, and optional
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="EventList-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/events/v1/eventList.ts#L11">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/63f6322ca9e33d39a2e52afc00dc343f1f4f3369/sdk/nodejs/events/v1/eventList.ts#L11">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="EventList-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/events/v1/eventList.ts#L31">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/63f6322ca9e33d39a2e52afc00dc343f1f4f3369/sdk/nodejs/events/v1/eventList.ts#L31">method <b>isInstance</b></a>
 </h4>
 
 
@@ -288,7 +288,7 @@ Returns true if the given object is an instance of EventList.  This is designed 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="EventList-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/events/v1/eventList.ts#L41">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/63f6322ca9e33d39a2e52afc00dc343f1f4f3369/sdk/nodejs/events/v1/eventList.ts#L41">property <b>apiVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>apiVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"events.k8s.io/v1"</span>&gt;;</code></pre>
@@ -296,7 +296,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 <h4 class="pdoc-member-header" id="EventList-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/events/v1/eventList.ts#L11">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/63f6322ca9e33d39a2e52afc00dc343f1f4f3369/sdk/nodejs/events/v1/eventList.ts#L11">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -305,7 +305,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="EventList-items">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/events/v1/eventList.ts#L45">property <b>items</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/63f6322ca9e33d39a2e52afc00dc343f1f4f3369/sdk/nodejs/events/v1/eventList.ts#L45">property <b>items</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#Event'>Event</a>[]&gt;;</code></pre>
@@ -313,7 +313,7 @@ deployments and may be missing (undefined) during planning phases.
 items is a list of schema objects.
 
 <h4 class="pdoc-member-header" id="EventList-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/events/v1/eventList.ts#L49">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/63f6322ca9e33d39a2e52afc00dc343f1f4f3369/sdk/nodejs/events/v1/eventList.ts#L49">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kind: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='s2'>"EventList"</span>&gt;;</code></pre>
@@ -321,7 +321,7 @@ items is a list of schema objects.
 Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 <h4 class="pdoc-member-header" id="EventList-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/events/v1/eventList.ts#L53">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/63f6322ca9e33d39a2e52afc00dc343f1f4f3369/sdk/nodejs/events/v1/eventList.ts#L53">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/output/#ListMeta'>ListMeta</a>&gt;;</code></pre>
@@ -329,7 +329,7 @@ Kind is a string value representing the REST resource this object represents. Se
 Standard list metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
 
 <h4 class="pdoc-member-header" id="EventList-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/events/v1/eventList.ts#L11">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/63f6322ca9e33d39a2e52afc00dc343f1f4f3369/sdk/nodejs/events/v1/eventList.ts#L11">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -341,7 +341,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="EventArgs" data-link-title="EventArgs">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/events/v1/event.ts#L172">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/63f6322ca9e33d39a2e52afc00dc343f1f4f3369/sdk/nodejs/events/v1/event.ts#L172">
         interface <strong>EventArgs</strong>
     </a>
 </h3>
@@ -351,7 +351,7 @@ deployments.
 The set of arguments for constructing a Event resource.
 
 <h4 class="pdoc-member-header" id="EventArgs-action">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/events/v1/event.ts#L176">property <b>action</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/63f6322ca9e33d39a2e52afc00dc343f1f4f3369/sdk/nodejs/events/v1/event.ts#L176">property <b>action</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>action?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -359,7 +359,7 @@ The set of arguments for constructing a Event resource.
 action is what action was taken/failed regarding to the regarding object. It is machine-readable. This field cannot be empty for new Events and it can have at most 128 characters.
 
 <h4 class="pdoc-member-header" id="EventArgs-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/events/v1/event.ts#L180">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/63f6322ca9e33d39a2e52afc00dc343f1f4f3369/sdk/nodejs/events/v1/event.ts#L180">property <b>apiVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"events.k8s.io/v1"</span>&gt;;</code></pre>
@@ -367,7 +367,7 @@ action is what action was taken/failed regarding to the regarding object. It is 
 APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 <h4 class="pdoc-member-header" id="EventArgs-deprecatedCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/events/v1/event.ts#L184">property <b>deprecatedCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/63f6322ca9e33d39a2e52afc00dc343f1f4f3369/sdk/nodejs/events/v1/event.ts#L184">property <b>deprecatedCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deprecatedCount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -375,7 +375,7 @@ APIVersion defines the versioned schema of this representation of an object. Ser
 deprecatedCount is the deprecated field assuring backward compatibility with core.v1 Event type.
 
 <h4 class="pdoc-member-header" id="EventArgs-deprecatedFirstTimestamp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/events/v1/event.ts#L188">property <b>deprecatedFirstTimestamp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/63f6322ca9e33d39a2e52afc00dc343f1f4f3369/sdk/nodejs/events/v1/event.ts#L188">property <b>deprecatedFirstTimestamp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deprecatedFirstTimestamp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -383,7 +383,7 @@ deprecatedCount is the deprecated field assuring backward compatibility with cor
 deprecatedFirstTimestamp is the deprecated field assuring backward compatibility with core.v1 Event type.
 
 <h4 class="pdoc-member-header" id="EventArgs-deprecatedLastTimestamp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/events/v1/event.ts#L192">property <b>deprecatedLastTimestamp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/63f6322ca9e33d39a2e52afc00dc343f1f4f3369/sdk/nodejs/events/v1/event.ts#L192">property <b>deprecatedLastTimestamp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deprecatedLastTimestamp?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -391,7 +391,7 @@ deprecatedFirstTimestamp is the deprecated field assuring backward compatibility
 deprecatedLastTimestamp is the deprecated field assuring backward compatibility with core.v1 Event type.
 
 <h4 class="pdoc-member-header" id="EventArgs-deprecatedSource">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/events/v1/event.ts#L196">property <b>deprecatedSource</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/63f6322ca9e33d39a2e52afc00dc343f1f4f3369/sdk/nodejs/events/v1/event.ts#L196">property <b>deprecatedSource</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deprecatedSource?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#EventSource'>EventSource</a>&gt;;</code></pre>
@@ -399,7 +399,7 @@ deprecatedLastTimestamp is the deprecated field assuring backward compatibility 
 deprecatedSource is the deprecated field assuring backward compatibility with core.v1 Event type.
 
 <h4 class="pdoc-member-header" id="EventArgs-eventTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/events/v1/event.ts#L200">property <b>eventTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/63f6322ca9e33d39a2e52afc00dc343f1f4f3369/sdk/nodejs/events/v1/event.ts#L200">property <b>eventTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eventTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -407,7 +407,7 @@ deprecatedSource is the deprecated field assuring backward compatibility with co
 eventTime is the time when this Event was first observed. It is required.
 
 <h4 class="pdoc-member-header" id="EventArgs-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/events/v1/event.ts#L204">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/63f6322ca9e33d39a2e52afc00dc343f1f4f3369/sdk/nodejs/events/v1/event.ts#L204">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kind?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"Event"</span>&gt;;</code></pre>
@@ -415,12 +415,12 @@ eventTime is the time when this Event was first observed. It is required.
 Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 <h4 class="pdoc-member-header" id="EventArgs-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/events/v1/event.ts#L205">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/63f6322ca9e33d39a2e52afc00dc343f1f4f3369/sdk/nodejs/events/v1/event.ts#L205">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metadata: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ObjectMeta'>ObjectMeta</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EventArgs-note">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/events/v1/event.ts#L209">property <b>note</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/63f6322ca9e33d39a2e52afc00dc343f1f4f3369/sdk/nodejs/events/v1/event.ts#L209">property <b>note</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>note?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -428,7 +428,7 @@ Kind is a string value representing the REST resource this object represents. Se
 note is a human-readable description of the status of this operation. Maximal length of the note is 1kB, but libraries should be prepared to handle values up to 64kB.
 
 <h4 class="pdoc-member-header" id="EventArgs-reason">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/events/v1/event.ts#L213">property <b>reason</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/63f6322ca9e33d39a2e52afc00dc343f1f4f3369/sdk/nodejs/events/v1/event.ts#L213">property <b>reason</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>reason?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -436,7 +436,7 @@ note is a human-readable description of the status of this operation. Maximal le
 reason is why the action was taken. It is human-readable. This field cannot be empty for new Events and it can have at most 128 characters.
 
 <h4 class="pdoc-member-header" id="EventArgs-regarding">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/events/v1/event.ts#L217">property <b>regarding</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/63f6322ca9e33d39a2e52afc00dc343f1f4f3369/sdk/nodejs/events/v1/event.ts#L217">property <b>regarding</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>regarding?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ObjectReference'>ObjectReference</a>&gt;;</code></pre>
@@ -444,7 +444,7 @@ reason is why the action was taken. It is human-readable. This field cannot be e
 regarding contains the object this Event is about. In most cases it's an Object reporting controller implements, e.g. ReplicaSetController implements ReplicaSets and this event is emitted because it acts on some changes in a ReplicaSet object.
 
 <h4 class="pdoc-member-header" id="EventArgs-related">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/events/v1/event.ts#L221">property <b>related</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/63f6322ca9e33d39a2e52afc00dc343f1f4f3369/sdk/nodejs/events/v1/event.ts#L221">property <b>related</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>related?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ObjectReference'>ObjectReference</a>&gt;;</code></pre>
@@ -452,7 +452,7 @@ regarding contains the object this Event is about. In most cases it's an Object 
 related is the optional secondary object for more complex actions. E.g. when regarding object triggers a creation or deletion of related object.
 
 <h4 class="pdoc-member-header" id="EventArgs-reportingController">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/events/v1/event.ts#L225">property <b>reportingController</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/63f6322ca9e33d39a2e52afc00dc343f1f4f3369/sdk/nodejs/events/v1/event.ts#L225">property <b>reportingController</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>reportingController?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -460,7 +460,7 @@ related is the optional secondary object for more complex actions. E.g. when reg
 reportingController is the name of the controller that emitted this Event, e.g. `kubernetes.io/kubelet`. This field cannot be empty for new Events.
 
 <h4 class="pdoc-member-header" id="EventArgs-reportingInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/events/v1/event.ts#L229">property <b>reportingInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/63f6322ca9e33d39a2e52afc00dc343f1f4f3369/sdk/nodejs/events/v1/event.ts#L229">property <b>reportingInstance</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>reportingInstance?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -468,7 +468,7 @@ reportingController is the name of the controller that emitted this Event, e.g. 
 reportingInstance is the ID of the controller instance, e.g. `kubelet-xyzf`. This field cannot be empty for new Events and it can have at most 128 characters.
 
 <h4 class="pdoc-member-header" id="EventArgs-series">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/events/v1/event.ts#L233">property <b>series</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/63f6322ca9e33d39a2e52afc00dc343f1f4f3369/sdk/nodejs/events/v1/event.ts#L233">property <b>series</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>series?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#EventSeries'>EventSeries</a>&gt;;</code></pre>
@@ -476,7 +476,7 @@ reportingInstance is the ID of the controller instance, e.g. `kubelet-xyzf`. Thi
 series is data about the Event series this event represents or nil if it's a singleton Event.
 
 <h4 class="pdoc-member-header" id="EventArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/events/v1/event.ts#L237">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/63f6322ca9e33d39a2e52afc00dc343f1f4f3369/sdk/nodejs/events/v1/event.ts#L237">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -484,7 +484,7 @@ series is data about the Event series this event represents or nil if it's a sin
 type is the type of this event (Normal, Warning), new types could be added in the future. It is machine-readable. This field cannot be empty for new Events.
 
 <h3 class="pdoc-module-header" id="EventListArgs" data-link-title="EventListArgs">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/events/v1/eventList.ts#L92">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/63f6322ca9e33d39a2e52afc00dc343f1f4f3369/sdk/nodejs/events/v1/eventList.ts#L92">
         interface <strong>EventListArgs</strong>
     </a>
 </h3>
@@ -494,7 +494,7 @@ type is the type of this event (Normal, Warning), new types could be added in th
 The set of arguments for constructing a EventList resource.
 
 <h4 class="pdoc-member-header" id="EventListArgs-apiVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/events/v1/eventList.ts#L96">property <b>apiVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/63f6322ca9e33d39a2e52afc00dc343f1f4f3369/sdk/nodejs/events/v1/eventList.ts#L96">property <b>apiVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>apiVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"events.k8s.io/v1"</span>&gt;;</code></pre>
@@ -502,7 +502,7 @@ The set of arguments for constructing a EventList resource.
 APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 
 <h4 class="pdoc-member-header" id="EventListArgs-items">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/events/v1/eventList.ts#L100">property <b>items</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/63f6322ca9e33d39a2e52afc00dc343f1f4f3369/sdk/nodejs/events/v1/eventList.ts#L100">property <b>items</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>items: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#Event'>Event</a>&gt;[]&gt;;</code></pre>
@@ -510,7 +510,7 @@ APIVersion defines the versioned schema of this representation of an object. Ser
 items is a list of schema objects.
 
 <h4 class="pdoc-member-header" id="EventListArgs-kind">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/events/v1/eventList.ts#L104">property <b>kind</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/63f6322ca9e33d39a2e52afc00dc343f1f4f3369/sdk/nodejs/events/v1/eventList.ts#L104">property <b>kind</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kind?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='s2'>"EventList"</span>&gt;;</code></pre>
@@ -518,7 +518,7 @@ items is a list of schema objects.
 Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 
 <h4 class="pdoc-member-header" id="EventListArgs-metadata">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/f01f284c88884e5d9c32cb08b9ee2a464af4a384/sdk/nodejs/events/v1/eventList.ts#L108">property <b>metadata</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-kubernetes/blob/63f6322ca9e33d39a2e52afc00dc343f1f4f3369/sdk/nodejs/events/v1/eventList.ts#L108">property <b>metadata</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>metadata?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/kubernetes/types/input/#ListMeta'>ListMeta</a>&gt;;</code></pre>
