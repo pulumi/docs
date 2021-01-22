@@ -46,7 +46,7 @@ class MyStack : Stack
         {
             ResourceGroupName = exampleResourceGroup.Name,
             DataFactoryName = exampleFactory.Name,
-            Url = exampleFunctionApp.Apply(exampleFunctionApp => exampleFunctionApp.DefaultHostname),
+            Url = exampleFunctionApp.Apply(exampleFunctionApp => $"https://{exampleFunctionApp.DefaultHostname}"),
             Key = "foo",
         });
     }
@@ -61,6 +61,8 @@ class MyStack : Stack
 package main
 
 import (
+	"fmt"
+
 	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/appservice"
 	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/core"
 	"github.com/pulumi/pulumi-azure/sdk/v3/go/azure/datafactory"
@@ -86,7 +88,7 @@ func main() {
 			ResourceGroupName: exampleResourceGroup.Name,
 			DataFactoryName:   exampleFactory.Name,
 			Url: exampleFunctionApp.ApplyT(func(exampleFunctionApp appservice.LookupFunctionAppResult) (string, error) {
-				return exampleFunctionApp.DefaultHostname, nil
+				return fmt.Sprintf("%v%v", "https://", exampleFunctionApp.DefaultHostname), nil
 			}).(pulumi.StringOutput),
 			Key: pulumi.String("foo"),
 		})
@@ -114,7 +116,7 @@ example_factory = azure.datafactory.Factory("exampleFactory",
 example_linked_service_azure_function = azure.datafactory.LinkedServiceAzureFunction("exampleLinkedServiceAzureFunction",
     resource_group_name=example_resource_group.name,
     data_factory_name=example_factory.name,
-    url=example_function_app.default_hostname,
+    url=example_function_app.apply(lambda example_function_app: f"https://{example_function_app.default_hostname}"),
     key="foo")
 ```
 
@@ -138,7 +140,7 @@ const exampleFactory = new azure.datafactory.Factory("exampleFactory", {
 const exampleLinkedServiceAzureFunction = new azure.datafactory.LinkedServiceAzureFunction("exampleLinkedServiceAzureFunction", {
     resourceGroupName: exampleResourceGroup.name,
     dataFactoryName: exampleFactory.name,
-    url: exampleFunctionApp.defaultHostname,
+    url: pulumi.interpolate`https://${exampleFunctionApp.defaultHostname}`,
     key: "foo",
 });
 ```

@@ -3,7 +3,7 @@ title: "Module dashboard"
 title_tag: "Module dashboard | Package @pulumi/azure | Node.js SDK"
 linktitle: "dashboard"
 meta_desc: "Explore members of the dashboard module in the @pulumi/azure package."
-git_sha: "389b9d2c106e6ab264d2820b1729d61ac832ff9a"
+git_sha: "fe5baac3cc5e17086011b8b3dedece23d90729ee"
 block_external_search_index: true
 ---
 
@@ -30,7 +30,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Dashboard" data-link-title="Dashboard">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/dashboard/dashboard.ts#L152">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/dashboard/dashboard.ts#L152">
         Resource <strong>Dashboard</strong>
     </a>
 </h3>
@@ -182,7 +182,7 @@ Dashboards can be imported using the `resource id`, e.g.
  Note the URI in the above sample can be found using the Resource Explorer tool in the Azure Portal.
 
 <h4 class="pdoc-member-header" id="Dashboard-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/dashboard/dashboard.ts#L200"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/dashboard/dashboard.ts#L200"> <b>constructor</b></a>
 </h4>
 
 
@@ -196,7 +196,7 @@ Create a Dashboard resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Dashboard-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/dashboard/dashboard.ts#L162">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/dashboard/dashboard.ts#L162">method <b>get</b></a>
 </h4>
 
 
@@ -207,14 +207,14 @@ Get an existing Dashboard resource's state with the given name, ID, and optional
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Dashboard-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/dashboard/dashboard.ts#L152">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/dashboard/dashboard.ts#L152">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Dashboard-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/dashboard/dashboard.ts#L173">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/dashboard/dashboard.ts#L173">method <b>isInstance</b></a>
 </h4>
 
 
@@ -225,7 +225,7 @@ Returns true if the given object is an instance of Dashboard.  This is designed 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Dashboard-dashboardProperties">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/dashboard/dashboard.ts#L183">property <b>dashboardProperties</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/dashboard/dashboard.ts#L183">property <b>dashboardProperties</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dashboardProperties: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -233,7 +233,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 JSON data representing dashboard body. See above for details on how to obtain this from the Portal.
 
 <h4 class="pdoc-member-header" id="Dashboard-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/dashboard/dashboard.ts#L152">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/dashboard/dashboard.ts#L152">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -242,7 +242,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Dashboard-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/dashboard/dashboard.ts#L187">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/dashboard/dashboard.ts#L187">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -250,7 +250,7 @@ deployments and may be missing (undefined) during planning phases.
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Dashboard-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/dashboard/dashboard.ts#L191">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/dashboard/dashboard.ts#L191">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -258,7 +258,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 Specifies the name of the Shared Dashboard. This should be be 64 chars max, only alphanumeric and hyphens (no spaces). For a more friendly display name, add the `hidden-title` tag.
 
 <h4 class="pdoc-member-header" id="Dashboard-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/dashboard/dashboard.ts#L196">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/dashboard/dashboard.ts#L196">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -267,7 +267,7 @@ The name of the resource group in which to
 create the dashboard.
 
 <h4 class="pdoc-member-header" id="Dashboard-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/dashboard/dashboard.ts#L200">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/dashboard/dashboard.ts#L200">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -275,7 +275,7 @@ create the dashboard.
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="Dashboard-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/dashboard/dashboard.ts#L152">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/dashboard/dashboard.ts#L152">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -287,7 +287,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="DashboardArgs" data-link-title="DashboardArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/dashboard/dashboard.ts#L271">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/dashboard/dashboard.ts#L271">
         interface <strong>DashboardArgs</strong>
     </a>
 </h3>
@@ -297,7 +297,7 @@ deployments.
 The set of arguments for constructing a Dashboard resource.
 
 <h4 class="pdoc-member-header" id="DashboardArgs-dashboardProperties">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/dashboard/dashboard.ts#L275">property <b>dashboardProperties</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/dashboard/dashboard.ts#L275">property <b>dashboardProperties</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dashboardProperties?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -305,7 +305,7 @@ The set of arguments for constructing a Dashboard resource.
 JSON data representing dashboard body. See above for details on how to obtain this from the Portal.
 
 <h4 class="pdoc-member-header" id="DashboardArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/dashboard/dashboard.ts#L279">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/dashboard/dashboard.ts#L279">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -313,7 +313,7 @@ JSON data representing dashboard body. See above for details on how to obtain th
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DashboardArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/dashboard/dashboard.ts#L283">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/dashboard/dashboard.ts#L283">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -321,7 +321,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 Specifies the name of the Shared Dashboard. This should be be 64 chars max, only alphanumeric and hyphens (no spaces). For a more friendly display name, add the `hidden-title` tag.
 
 <h4 class="pdoc-member-header" id="DashboardArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/dashboard/dashboard.ts#L288">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/dashboard/dashboard.ts#L288">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -330,7 +330,7 @@ The name of the resource group in which to
 create the dashboard.
 
 <h4 class="pdoc-member-header" id="DashboardArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/dashboard/dashboard.ts#L292">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/dashboard/dashboard.ts#L292">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -338,7 +338,7 @@ create the dashboard.
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="DashboardState" data-link-title="DashboardState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/dashboard/dashboard.ts#L244">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/dashboard/dashboard.ts#L244">
         interface <strong>DashboardState</strong>
     </a>
 </h3>
@@ -348,7 +348,7 @@ A mapping of tags to assign to the resource.
 Input properties used for looking up and filtering Dashboard resources.
 
 <h4 class="pdoc-member-header" id="DashboardState-dashboardProperties">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/dashboard/dashboard.ts#L248">property <b>dashboardProperties</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/dashboard/dashboard.ts#L248">property <b>dashboardProperties</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dashboardProperties?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -356,7 +356,7 @@ Input properties used for looking up and filtering Dashboard resources.
 JSON data representing dashboard body. See above for details on how to obtain this from the Portal.
 
 <h4 class="pdoc-member-header" id="DashboardState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/dashboard/dashboard.ts#L252">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/dashboard/dashboard.ts#L252">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -364,7 +364,7 @@ JSON data representing dashboard body. See above for details on how to obtain th
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="DashboardState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/dashboard/dashboard.ts#L256">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/dashboard/dashboard.ts#L256">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -372,7 +372,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 Specifies the name of the Shared Dashboard. This should be be 64 chars max, only alphanumeric and hyphens (no spaces). For a more friendly display name, add the `hidden-title` tag.
 
 <h4 class="pdoc-member-header" id="DashboardState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/dashboard/dashboard.ts#L261">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/dashboard/dashboard.ts#L261">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -381,7 +381,7 @@ The name of the resource group in which to
 create the dashboard.
 
 <h4 class="pdoc-member-header" id="DashboardState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/dashboard/dashboard.ts#L265">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/dashboard/dashboard.ts#L265">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>

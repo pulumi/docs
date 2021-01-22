@@ -3,7 +3,7 @@ title: "Module mediaservices"
 title_tag: "Module mediaservices | Package @pulumi/azure | Node.js SDK"
 linktitle: "mediaservices"
 meta_desc: "Explore members of the mediaservices module in the @pulumi/azure package."
-git_sha: "389b9d2c106e6ab264d2820b1729d61ac832ff9a"
+git_sha: "fe5baac3cc5e17086011b8b3dedece23d90729ee"
 block_external_search_index: true
 ---
 
@@ -30,7 +30,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Account" data-link-title="Account">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/mediaservices/account.ts#L44">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/mediaservices/account.ts#L44">
         Resource <strong>Account</strong>
     </a>
 </h3>
@@ -75,7 +75,7 @@ Media Services Accounts can be imported using the `resource id`, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="Account-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/mediaservices/account.ts#L102"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/mediaservices/account.ts#L102"> <b>constructor</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -90,7 +90,7 @@ azure.mediaservices.Account has been deprecated in favor of azure.media.ServiceA
 <pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> Account(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#AccountArgs'>AccountArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</code></pre>
 
 <h4 class="pdoc-member-header" id="Account-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/mediaservices/account.ts#L54">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/mediaservices/account.ts#L54">method <b>get</b></a>
 </h4>
 
 
@@ -101,14 +101,14 @@ Get an existing Account resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Account-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/mediaservices/account.ts#L44">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/mediaservices/account.ts#L44">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Account-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/mediaservices/account.ts#L66">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/mediaservices/account.ts#L66">method <b>isInstance</b></a>
 </h4>
 
 
@@ -119,7 +119,7 @@ Returns true if the given object is an instance of Account.  This is designed to
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Account-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/mediaservices/account.ts#L44">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/mediaservices/account.ts#L44">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -128,7 +128,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Account-identity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/mediaservices/account.ts#L76">property <b>identity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/mediaservices/account.ts#L76">property <b>identity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>identity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AccountIdentity'>AccountIdentity</a>&gt;;</code></pre>
@@ -136,7 +136,7 @@ deployments and may be missing (undefined) during planning phases.
 An `identity` block is documented below.
 
 <h4 class="pdoc-member-header" id="Account-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/mediaservices/account.ts#L80">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/mediaservices/account.ts#L80">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -144,7 +144,7 @@ An `identity` block is documented below.
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Account-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/mediaservices/account.ts#L84">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/mediaservices/account.ts#L84">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -152,7 +152,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 Specifies the name of the Media Services Account. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Account-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/mediaservices/account.ts#L88">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/mediaservices/account.ts#L88">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -160,7 +160,7 @@ Specifies the name of the Media Services Account. Changing this forces a new res
 The name of the resource group in which to create the Media Services Account. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Account-storageAccounts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/mediaservices/account.ts#L92">property <b>storageAccounts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/mediaservices/account.ts#L92">property <b>storageAccounts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>storageAccounts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AccountStorageAccount'>AccountStorageAccount</a>[]&gt;;</code></pre>
@@ -168,7 +168,7 @@ The name of the resource group in which to create the Media Services Account. Ch
 One or more `storageAccount` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="Account-storageAuthenticationType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/mediaservices/account.ts#L97">property <b>storageAuthenticationType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/mediaservices/account.ts#L97">property <b>storageAuthenticationType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>storageAuthenticationType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -177,7 +177,7 @@ Specifies the storage authentication type.
 Possible value is  `ManagedIdentity` or `System`.
 
 <h4 class="pdoc-member-header" id="Account-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/mediaservices/account.ts#L102">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/mediaservices/account.ts#L102">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -186,7 +186,7 @@ A mapping of tags assigned to the resource.
 ---
 
 <h4 class="pdoc-member-header" id="Account-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/mediaservices/account.ts#L44">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/mediaservices/account.ts#L44">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -198,7 +198,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="AccountArgs" data-link-title="AccountArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/mediaservices/account.ts#L192">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/mediaservices/account.ts#L192">
         interface <strong>AccountArgs</strong>
     </a>
 </h3>
@@ -208,7 +208,7 @@ deployments.
 The set of arguments for constructing a Account resource.
 
 <h4 class="pdoc-member-header" id="AccountArgs-identity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/mediaservices/account.ts#L196">property <b>identity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/mediaservices/account.ts#L196">property <b>identity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AccountIdentity'>AccountIdentity</a>&gt;;</code></pre>
@@ -216,7 +216,7 @@ The set of arguments for constructing a Account resource.
 An `identity` block is documented below.
 
 <h4 class="pdoc-member-header" id="AccountArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/mediaservices/account.ts#L200">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/mediaservices/account.ts#L200">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -224,7 +224,7 @@ An `identity` block is documented below.
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="AccountArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/mediaservices/account.ts#L204">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/mediaservices/account.ts#L204">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -232,7 +232,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 Specifies the name of the Media Services Account. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="AccountArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/mediaservices/account.ts#L208">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/mediaservices/account.ts#L208">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -240,7 +240,7 @@ Specifies the name of the Media Services Account. Changing this forces a new res
 The name of the resource group in which to create the Media Services Account. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="AccountArgs-storageAccounts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/mediaservices/account.ts#L212">property <b>storageAccounts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/mediaservices/account.ts#L212">property <b>storageAccounts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageAccounts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AccountStorageAccount'>AccountStorageAccount</a>&gt;[]&gt;;</code></pre>
@@ -248,7 +248,7 @@ The name of the resource group in which to create the Media Services Account. Ch
 One or more `storageAccount` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="AccountArgs-storageAuthenticationType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/mediaservices/account.ts#L217">property <b>storageAuthenticationType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/mediaservices/account.ts#L217">property <b>storageAuthenticationType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageAuthenticationType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -257,7 +257,7 @@ Specifies the storage authentication type.
 Possible value is  `ManagedIdentity` or `System`.
 
 <h4 class="pdoc-member-header" id="AccountArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/mediaservices/account.ts#L222">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/mediaservices/account.ts#L222">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -266,7 +266,7 @@ A mapping of tags assigned to the resource.
 ---
 
 <h3 class="pdoc-module-header" id="AccountState" data-link-title="AccountState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/mediaservices/account.ts#L156">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/mediaservices/account.ts#L156">
         interface <strong>AccountState</strong>
     </a>
 </h3>
@@ -276,7 +276,7 @@ A mapping of tags assigned to the resource.
 Input properties used for looking up and filtering Account resources.
 
 <h4 class="pdoc-member-header" id="AccountState-identity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/mediaservices/account.ts#L160">property <b>identity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/mediaservices/account.ts#L160">property <b>identity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>identity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AccountIdentity'>AccountIdentity</a>&gt;;</code></pre>
@@ -284,7 +284,7 @@ Input properties used for looking up and filtering Account resources.
 An `identity` block is documented below.
 
 <h4 class="pdoc-member-header" id="AccountState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/mediaservices/account.ts#L164">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/mediaservices/account.ts#L164">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -292,7 +292,7 @@ An `identity` block is documented below.
 Specifies the supported Azure location where the resource exists. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="AccountState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/mediaservices/account.ts#L168">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/mediaservices/account.ts#L168">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -300,7 +300,7 @@ Specifies the supported Azure location where the resource exists. Changing this 
 Specifies the name of the Media Services Account. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="AccountState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/mediaservices/account.ts#L172">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/mediaservices/account.ts#L172">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -308,7 +308,7 @@ Specifies the name of the Media Services Account. Changing this forces a new res
 The name of the resource group in which to create the Media Services Account. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="AccountState-storageAccounts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/mediaservices/account.ts#L176">property <b>storageAccounts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/mediaservices/account.ts#L176">property <b>storageAccounts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageAccounts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AccountStorageAccount'>AccountStorageAccount</a>&gt;[]&gt;;</code></pre>
@@ -316,7 +316,7 @@ The name of the resource group in which to create the Media Services Account. Ch
 One or more `storageAccount` blocks as defined below.
 
 <h4 class="pdoc-member-header" id="AccountState-storageAuthenticationType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/mediaservices/account.ts#L181">property <b>storageAuthenticationType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/mediaservices/account.ts#L181">property <b>storageAuthenticationType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>storageAuthenticationType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -325,7 +325,7 @@ Specifies the storage authentication type.
 Possible value is  `ManagedIdentity` or `System`.
 
 <h4 class="pdoc-member-header" id="AccountState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/mediaservices/account.ts#L186">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/mediaservices/account.ts#L186">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
