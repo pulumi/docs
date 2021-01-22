@@ -37,7 +37,6 @@ class MyStack : Stack
             ResourceGroupName = exampleResourceGroup.Name,
             TenantId = current.Apply(current => current.TenantId),
             SkuName = "standard",
-            SoftDeleteEnabled = true,
             SoftDeleteRetentionDays = 7,
             AccessPolicies = 
             {
@@ -190,7 +189,6 @@ func main() {
 			ResourceGroupName:       exampleResourceGroup.Name,
 			TenantId:                pulumi.String(current.TenantId),
 			SkuName:                 pulumi.String("standard"),
-			SoftDeleteEnabled:       pulumi.Bool(true),
 			SoftDeleteRetentionDays: pulumi.Int(7),
 			AccessPolicies: keyvault.KeyVaultAccessPolicyArray{
 				&keyvault.KeyVaultAccessPolicyArgs{
@@ -315,7 +313,6 @@ example_key_vault = azure.keyvault.KeyVault("exampleKeyVault",
     resource_group_name=example_resource_group.name,
     tenant_id=current.tenant_id,
     sku_name="standard",
-    soft_delete_enabled=True,
     soft_delete_retention_days=7,
     access_policies=[azure.keyvault.KeyVaultAccessPolicyArgs(
         tenant_id=current.tenant_id,
@@ -424,7 +421,6 @@ const exampleKeyVault = new azure.keyvault.KeyVault("exampleKeyVault", {
     resourceGroupName: exampleResourceGroup.name,
     tenantId: current.then(current => current.tenantId),
     skuName: "standard",
-    softDeleteEnabled: true,
     softDeleteRetentionDays: 7,
     accessPolicies: [{
         tenantId: current.then(current => current.tenantId),

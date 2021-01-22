@@ -64,6 +64,19 @@ class MyStack : Stack
                                 TimeAggregation = "Average",
                                 Operator = "GreaterThan",
                                 Threshold = 75,
+                                MetricNamespace = "microsoft.compute/virtualmachinescalesets",
+                                Dimensions = 
+                                {
+                                    new Azure.Monitoring.Inputs.AutoscaleSettingProfileRuleMetricTriggerDimensionArgs
+                                    {
+                                        Name = "AppName",
+                                        Operator = "Equals",
+                                        Values = 
+                                        {
+                                            "App1",
+                                        },
+                                    },
+                                },
                             },
                             ScaleAction = new Azure.Monitoring.Inputs.AutoscaleSettingProfileRuleScaleActionArgs
                             {
@@ -163,6 +176,16 @@ func main() {
 								TimeAggregation:  pulumi.String("Average"),
 								Operator:         pulumi.String("GreaterThan"),
 								Threshold:        pulumi.Float64(75),
+								MetricNamespace:  pulumi.String("microsoft.compute/virtualmachinescalesets"),
+								Dimensions: monitoring.AutoscaleSettingProfileRuleMetricTriggerDimensionArray{
+									&monitoring.AutoscaleSettingProfileRuleMetricTriggerDimensionArgs{
+										Name:     pulumi.String("AppName"),
+										Operator: pulumi.String("Equals"),
+										Values: pulumi.StringArray{
+											pulumi.String("App1"),
+										},
+									},
+								},
 							},
 							ScaleAction: &monitoring.AutoscaleSettingProfileRuleScaleActionArgs{
 								Direction: pulumi.String("Increase"),
@@ -242,6 +265,12 @@ example_autoscale_setting = azure.monitoring.AutoscaleSetting("exampleAutoscaleS
                     time_aggregation="Average",
                     operator="GreaterThan",
                     threshold=75,
+                    metric_namespace="microsoft.compute/virtualmachinescalesets",
+                    dimensions=[azure.monitoring.AutoscaleSettingProfileRuleMetricTriggerDimensionArgs(
+                        name="AppName",
+                        operator="Equals",
+                        values=["App1"],
+                    )],
                 ),
                 scale_action=azure.monitoring.AutoscaleSettingProfileRuleScaleActionArgs(
                     direction="Increase",
@@ -312,6 +341,12 @@ const exampleAutoscaleSetting = new azure.monitoring.AutoscaleSetting("exampleAu
                     timeAggregation: "Average",
                     operator: "GreaterThan",
                     threshold: 75,
+                    metricNamespace: "microsoft.compute/virtualmachinescalesets",
+                    dimensions: [{
+                        name: "AppName",
+                        operator: "Equals",
+                        values: ["App1"],
+                    }],
                 },
                 scaleAction: {
                     direction: "Increase",
@@ -3529,6 +3564,26 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Specifies the time range for which data is collected, which must be greater than the delay in metric collection (which varies from resource to resource). This value must be between 5 minutes and 12 hours and be formatted as an ISO 8601 string.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dimensions_csharp">
+<a href="#dimensions_csharp" style="color: inherit; text-decoration: inherit;">Dimensions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#autoscalesettingprofilerulemetrictriggerdimension">List&lt;Autoscale<wbr>Setting<wbr>Profile<wbr>Rule<wbr>Metric<wbr>Trigger<wbr>Dimension<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `dimensions` block as defined below.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="metricnamespace_csharp">
+<a href="#metricnamespace_csharp" style="color: inherit; text-decoration: inherit;">Metric<wbr>Namespace</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The namespace of the metric that defines what the rule monitors, such as `microsoft.compute/virtualmachinescalesets` for `Virtual Machine Scale Sets`.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -3614,6 +3669,26 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the time range for which data is collected, which must be greater than the delay in metric collection (which varies from resource to resource). This value must be between 5 minutes and 12 hours and be formatted as an ISO 8601 string.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dimensions_go">
+<a href="#dimensions_go" style="color: inherit; text-decoration: inherit;">Dimensions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#autoscalesettingprofilerulemetrictriggerdimension">[]Autoscale<wbr>Setting<wbr>Profile<wbr>Rule<wbr>Metric<wbr>Trigger<wbr>Dimension</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `dimensions` block as defined below.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="metricnamespace_go">
+<a href="#metricnamespace_go" style="color: inherit; text-decoration: inherit;">Metric<wbr>Namespace</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The namespace of the metric that defines what the rule monitors, such as `microsoft.compute/virtualmachinescalesets` for `Virtual Machine Scale Sets`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -3701,6 +3776,26 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Specifies the time range for which data is collected, which must be greater than the delay in metric collection (which varies from resource to resource). This value must be between 5 minutes and 12 hours and be formatted as an ISO 8601 string.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dimensions_nodejs">
+<a href="#dimensions_nodejs" style="color: inherit; text-decoration: inherit;">dimensions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#autoscalesettingprofilerulemetrictriggerdimension">Autoscale<wbr>Setting<wbr>Profile<wbr>Rule<wbr>Metric<wbr>Trigger<wbr>Dimension[]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `dimensions` block as defined below.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="metricnamespace_nodejs">
+<a href="#metricnamespace_nodejs" style="color: inherit; text-decoration: inherit;">metric<wbr>Namespace</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The namespace of the metric that defines what the rule monitors, such as `microsoft.compute/virtualmachinescalesets` for `Virtual Machine Scale Sets`.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -3786,6 +3881,184 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the time range for which data is collected, which must be greater than the delay in metric collection (which varies from resource to resource). This value must be between 5 minutes and 12 hours and be formatted as an ISO 8601 string.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dimensions_python">
+<a href="#dimensions_python" style="color: inherit; text-decoration: inherit;">dimensions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#autoscalesettingprofilerulemetrictriggerdimension">Sequence[Autoscale<wbr>Setting<wbr>Profile<wbr>Rule<wbr>Metric<wbr>Trigger<wbr>Dimension<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}One or more `dimensions` block as defined below.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="metric_namespace_python">
+<a href="#metric_namespace_python" style="color: inherit; text-decoration: inherit;">metric_<wbr>namespace</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The namespace of the metric that defines what the rule monitors, such as `microsoft.compute/virtualmachinescalesets` for `Virtual Machine Scale Sets`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="autoscalesettingprofilerulemetrictriggerdimension">Autoscale<wbr>Setting<wbr>Profile<wbr>Rule<wbr>Metric<wbr>Trigger<wbr>Dimension</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/input/#AutoscaleSettingProfileRuleMetricTriggerDimension">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/azure/types/output/#AutoscaleSettingProfileRuleMetricTriggerDimension">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring?tab=doc#AutoscaleSettingProfileRuleMetricTriggerDimensionArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-azure/sdk/v3/go/azure/monitoring?tab=doc#AutoscaleSettingProfileRuleMetricTriggerDimensionOutput">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Monitoring.Inputs.AutoscaleSettingProfileRuleMetricTriggerDimensionArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Azure/Pulumi.Azure.Monitoring.Outputs.AutoscaleSettingProfileRuleMetricTriggerDimension.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the dimension.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="operator_csharp">
+<a href="#operator_csharp" style="color: inherit; text-decoration: inherit;">Operator</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The dimension operator. Possible values are `Equals` and `NotEquals`. `Equals` means being equal to any of the values. `NotEquals` means being not equal to any of the values.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="values_csharp">
+<a href="#values_csharp" style="color: inherit; text-decoration: inherit;">Values</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A list of dimension values.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the dimension.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="operator_go">
+<a href="#operator_go" style="color: inherit; text-decoration: inherit;">Operator</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The dimension operator. Possible values are `Equals` and `NotEquals`. `Equals` means being equal to any of the values. `NotEquals` means being not equal to any of the values.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="values_go">
+<a href="#values_go" style="color: inherit; text-decoration: inherit;">Values</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}A list of dimension values.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the dimension.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="operator_nodejs">
+<a href="#operator_nodejs" style="color: inherit; text-decoration: inherit;">operator</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The dimension operator. Possible values are `Equals` and `NotEquals`. `Equals` means being equal to any of the values. `NotEquals` means being not equal to any of the values.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="values_nodejs">
+<a href="#values_nodejs" style="color: inherit; text-decoration: inherit;">values</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}A list of dimension values.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the dimension.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="operator_python">
+<a href="#operator_python" style="color: inherit; text-decoration: inherit;">operator</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The dimension operator. Possible values are `Equals` and `NotEquals`. `Equals` means being equal to any of the values. `NotEquals` means being not equal to any of the values.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="values_python">
+<a href="#values_python" style="color: inherit; text-decoration: inherit;">values</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}A list of dimension values.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}

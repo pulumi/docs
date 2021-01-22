@@ -2882,6 +2882,16 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The type of identity used for the managed cluster.
 {{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="userassignedidentityid_csharp">
+<a href="#userassignedidentityid_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identity<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the User Assigned Identity assigned to the Kubelets.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -2917,6 +2927,16 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of identity used for the managed cluster.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="userassignedidentityid_go">
+<a href="#userassignedidentityid_go" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identity<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the User Assigned Identity assigned to the Kubelets.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -2954,6 +2974,16 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The type of identity used for the managed cluster.
 {{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="userassignedidentityid_nodejs">
+<a href="#userassignedidentityid_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identity<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the User Assigned Identity assigned to the Kubelets.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -2989,6 +3019,16 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of identity used for the managed cluster.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="user_assigned_identity_id_python">
+<a href="#user_assigned_identity_id_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identity_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of the User Assigned Identity assigned to the Kubelets.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}

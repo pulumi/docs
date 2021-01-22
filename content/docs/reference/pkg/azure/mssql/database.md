@@ -234,7 +234,7 @@ const test = new azure.mssql.Database("test", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/mssql/#pulumi_azure.mssql.Database">Database</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_pause_delay_in_minutes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">collation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">create_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">creation_source_database_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">elastic_pool_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">extended_auditing_policy</span><span class="p">:</span> <span class="nx">Optional[DatabaseExtendedAuditingPolicyArgs]</span> = None<span class="p">, </span><span class="nx">license_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">long_term_retention_policy</span><span class="p">:</span> <span class="nx">Optional[DatabaseLongTermRetentionPolicyArgs]</span> = None<span class="p">, </span><span class="nx">max_size_gb</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">min_capacity</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">read_replica_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">read_scale</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">recover_database_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">restore_dropped_database_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">restore_point_in_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sample_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">short_term_retention_policy</span><span class="p">:</span> <span class="nx">Optional[DatabaseShortTermRetentionPolicyArgs]</span> = None<span class="p">, </span><span class="nx">sku_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">threat_detection_policy</span><span class="p">:</span> <span class="nx">Optional[DatabaseThreatDetectionPolicyArgs]</span> = None<span class="p">, </span><span class="nx">zone_redundant</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/mssql/#pulumi_azure.mssql.Database">Database</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_pause_delay_in_minutes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">collation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">create_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">creation_source_database_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">elastic_pool_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">extended_auditing_policy</span><span class="p">:</span> <span class="nx">Optional[DatabaseExtendedAuditingPolicyArgs]</span> = None<span class="p">, </span><span class="nx">license_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">long_term_retention_policy</span><span class="p">:</span> <span class="nx">Optional[DatabaseLongTermRetentionPolicyArgs]</span> = None<span class="p">, </span><span class="nx">max_size_gb</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">min_capacity</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">read_replica_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">read_scale</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">recover_database_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">restore_dropped_database_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">restore_point_in_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sample_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">short_term_retention_policy</span><span class="p">:</span> <span class="nx">Optional[DatabaseShortTermRetentionPolicyArgs]</span> = None<span class="p">, </span><span class="nx">sku_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_account_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">threat_detection_policy</span><span class="p">:</span> <span class="nx">Optional[DatabaseThreatDetectionPolicyArgs]</span> = None<span class="p">, </span><span class="nx">zone_redundant</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -607,6 +607,16 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="storageaccounttype_csharp">
+<a href="#storageaccounttype_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the storage account type used to store backups for this database. Changing this forces a new resource to be created.  Possible values are `GRS`, `LRS` and `ZRS`.  The default value is `GRS`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -840,6 +850,16 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the sku used by the database. Changing this forces a new resource to be created. For example, `GP_S_Gen5_2`,`HS_Gen4_1`,`BC_Gen5_2`, `ElasticPool`, `Basic`,`S0`, `P2` ,`DW100c`, `DS100`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="storageaccounttype_go">
+<a href="#storageaccounttype_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the storage account type used to store backups for this database. Changing this forces a new resource to be created.  Possible values are `GRS`, `LRS` and `ZRS`.  The default value is `GRS`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1079,6 +1099,16 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="storageaccounttype_nodejs">
+<a href="#storageaccounttype_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the storage account type used to store backups for this database. Changing this forces a new resource to be created.  Possible values are `GRS`, `LRS` and `ZRS`.  The default value is `GRS`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -1315,6 +1345,16 @@ The Database resource accepts the following [input]({{< relref "/docs/intro/conc
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="storage_account_type_python">
+<a href="#storage_account_type_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the storage account type used to store backups for this database. Changing this forces a new resource to be created.  Possible values are `GRS`, `LRS` and `ZRS`.  The default value is `GRS`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -1426,7 +1466,7 @@ Get an existing Database resource's state with the given name, ID, and optional 
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_pause_delay_in_minutes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">collation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">create_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">creation_source_database_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">elastic_pool_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">extended_auditing_policy</span><span class="p">:</span> <span class="nx">Optional[DatabaseExtendedAuditingPolicyArgs]</span> = None<span class="p">, </span><span class="nx">license_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">long_term_retention_policy</span><span class="p">:</span> <span class="nx">Optional[DatabaseLongTermRetentionPolicyArgs]</span> = None<span class="p">, </span><span class="nx">max_size_gb</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">min_capacity</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">read_replica_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">read_scale</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">recover_database_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">restore_dropped_database_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">restore_point_in_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sample_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">short_term_retention_policy</span><span class="p">:</span> <span class="nx">Optional[DatabaseShortTermRetentionPolicyArgs]</span> = None<span class="p">, </span><span class="nx">sku_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">threat_detection_policy</span><span class="p">:</span> <span class="nx">Optional[DatabaseThreatDetectionPolicyArgs]</span> = None<span class="p">, </span><span class="nx">zone_redundant</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> Database</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_pause_delay_in_minutes</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">collation</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">create_mode</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">creation_source_database_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">elastic_pool_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">extended_auditing_policy</span><span class="p">:</span> <span class="nx">Optional[DatabaseExtendedAuditingPolicyArgs]</span> = None<span class="p">, </span><span class="nx">license_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">long_term_retention_policy</span><span class="p">:</span> <span class="nx">Optional[DatabaseLongTermRetentionPolicyArgs]</span> = None<span class="p">, </span><span class="nx">max_size_gb</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">min_capacity</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">read_replica_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">read_scale</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">recover_database_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">restore_dropped_database_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">restore_point_in_time</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sample_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">short_term_retention_policy</span><span class="p">:</span> <span class="nx">Optional[DatabaseShortTermRetentionPolicyArgs]</span> = None<span class="p">, </span><span class="nx">sku_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_account_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">threat_detection_policy</span><span class="p">:</span> <span class="nx">Optional[DatabaseThreatDetectionPolicyArgs]</span> = None<span class="p">, </span><span class="nx">zone_redundant</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> Database</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1741,6 +1781,16 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_storageaccounttype_csharp">
+<a href="#state_storageaccounttype_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the storage account type used to store backups for this database. Changing this forces a new resource to be created.  Possible values are `GRS`, `LRS` and `ZRS`.  The default value is `GRS`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_tags_csharp">
 <a href="#state_tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -1974,6 +2024,16 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the sku used by the database. Changing this forces a new resource to be created. For example, `GP_S_Gen5_2`,`HS_Gen4_1`,`BC_Gen5_2`, `ElasticPool`, `Basic`,`S0`, `P2` ,`DW100c`, `DS100`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_storageaccounttype_go">
+<a href="#state_storageaccounttype_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Account<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the storage account type used to store backups for this database. Changing this forces a new resource to be created.  Possible values are `GRS`, `LRS` and `ZRS`.  The default value is `GRS`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2213,6 +2273,16 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_storageaccounttype_nodejs">
+<a href="#state_storageaccounttype_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Account<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the storage account type used to store backups for this database. Changing this forces a new resource to be created.  Possible values are `GRS`, `LRS` and `ZRS`.  The default value is `GRS`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_tags_nodejs">
 <a href="#state_tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -2446,6 +2516,16 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the name of the sku used by the database. Changing this forces a new resource to be created. For example, `GP_S_Gen5_2`,`HS_Gen4_1`,`BC_Gen5_2`, `ElasticPool`, `Basic`,`S0`, `P2` ,`DW100c`, `DS100`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_storage_account_type_python">
+<a href="#state_storage_account_type_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>account_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the storage account type used to store backups for this database. Changing this forces a new resource to be created.  Possible values are `GRS`, `LRS` and `ZRS`.  The default value is `GRS`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">

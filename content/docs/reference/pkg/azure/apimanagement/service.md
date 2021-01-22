@@ -5159,10 +5159,108 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Should TLS 1.1 be enabled on the frontend of the gateway? Defaults to `false`.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="enabletripledesciphers_csharp">
 <a href="#enabletripledesciphers_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Triple<wbr>Des<wbr>Ciphers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Should the `TLS_RSA_WITH_3DES_EDE_CBC_SHA` cipher be enabled for alL TLS versions (1.0, 1.1 and 1.2)? Defaults to `false`.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this has been renamed to the boolean attribute `triple_des_ciphers_enabled`.{{% /md %}}</p></dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tlsecdheecdsawithaes128cbcshaciphersenabled_csharp">
+<a href="#tlsecdheecdsawithaes128cbcshaciphersenabled_csharp" style="color: inherit; text-decoration: inherit;">Tls<wbr>Ecdhe<wbr>Ecdsa<wbr>With<wbr>Aes128Cbc<wbr>Sha<wbr>Ciphers<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Should the `TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA` cipher be enabled? Defaults to `false`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tlsecdheecdsawithaes256cbcshaciphersenabled_csharp">
+<a href="#tlsecdheecdsawithaes256cbcshaciphersenabled_csharp" style="color: inherit; text-decoration: inherit;">Tls<wbr>Ecdhe<wbr>Ecdsa<wbr>With<wbr>Aes256Cbc<wbr>Sha<wbr>Ciphers<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Should the `TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA` cipher be enabled? Defaults to `false`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tlsecdhersawithaes128cbcshaciphersenabled_csharp">
+<a href="#tlsecdhersawithaes128cbcshaciphersenabled_csharp" style="color: inherit; text-decoration: inherit;">Tls<wbr>Ecdhe<wbr>Rsa<wbr>With<wbr>Aes128Cbc<wbr>Sha<wbr>Ciphers<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tlsecdhersawithaes256cbcshaciphersenabled_csharp">
+<a href="#tlsecdhersawithaes256cbcshaciphersenabled_csharp" style="color: inherit; text-decoration: inherit;">Tls<wbr>Ecdhe<wbr>Rsa<wbr>With<wbr>Aes256Cbc<wbr>Sha<wbr>Ciphers<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tlsrsawithaes128cbcsha256ciphersenabled_csharp">
+<a href="#tlsrsawithaes128cbcsha256ciphersenabled_csharp" style="color: inherit; text-decoration: inherit;">Tls<wbr>Rsa<wbr>With<wbr>Aes128Cbc<wbr>Sha256Ciphers<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Should the `TLS_RSA_WITH_AES_128_CBC_SHA256` cipher be enabled? Defaults to `false`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tlsrsawithaes128cbcshaciphersenabled_csharp">
+<a href="#tlsrsawithaes128cbcshaciphersenabled_csharp" style="color: inherit; text-decoration: inherit;">Tls<wbr>Rsa<wbr>With<wbr>Aes128Cbc<wbr>Sha<wbr>Ciphers<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Should the `TLS_RSA_WITH_AES_128_CBC_SHA` cipher be enabled? Defaults to `false`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tlsrsawithaes128gcmsha256ciphersenabled_csharp">
+<a href="#tlsrsawithaes128gcmsha256ciphersenabled_csharp" style="color: inherit; text-decoration: inherit;">Tls<wbr>Rsa<wbr>With<wbr>Aes128Gcm<wbr>Sha256Ciphers<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Should the `TLS_RSA_WITH_AES_128_GCM_SHA256` cipher be enabled? Defaults to `false`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tlsrsawithaes256cbcsha256ciphersenabled_csharp">
+<a href="#tlsrsawithaes256cbcsha256ciphersenabled_csharp" style="color: inherit; text-decoration: inherit;">Tls<wbr>Rsa<wbr>With<wbr>Aes256Cbc<wbr>Sha256Ciphers<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Should the `TLS_RSA_WITH_AES_256_CBC_SHA256` cipher be enabled? Defaults to `false`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tlsrsawithaes256cbcshaciphersenabled_csharp">
+<a href="#tlsrsawithaes256cbcshaciphersenabled_csharp" style="color: inherit; text-decoration: inherit;">Tls<wbr>Rsa<wbr>With<wbr>Aes256Cbc<wbr>Sha<wbr>Ciphers<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Should the `TLS_RSA_WITH_AES_256_CBC_SHA` cipher be enabled? Defaults to `false`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tripledesciphersenabled_csharp">
+<a href="#tripledesciphersenabled_csharp" style="color: inherit; text-decoration: inherit;">Triple<wbr>Des<wbr>Ciphers<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
@@ -5235,10 +5333,108 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Should TLS 1.1 be enabled on the frontend of the gateway? Defaults to `false`.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="enabletripledesciphers_go">
 <a href="#enabletripledesciphers_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Triple<wbr>Des<wbr>Ciphers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Should the `TLS_RSA_WITH_3DES_EDE_CBC_SHA` cipher be enabled for alL TLS versions (1.0, 1.1 and 1.2)? Defaults to `false`.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this has been renamed to the boolean attribute `triple_des_ciphers_enabled`.{{% /md %}}</p></dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tlsecdheecdsawithaes128cbcshaciphersenabled_go">
+<a href="#tlsecdheecdsawithaes128cbcshaciphersenabled_go" style="color: inherit; text-decoration: inherit;">Tls<wbr>Ecdhe<wbr>Ecdsa<wbr>With<wbr>Aes128Cbc<wbr>Sha<wbr>Ciphers<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Should the `TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA` cipher be enabled? Defaults to `false`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tlsecdheecdsawithaes256cbcshaciphersenabled_go">
+<a href="#tlsecdheecdsawithaes256cbcshaciphersenabled_go" style="color: inherit; text-decoration: inherit;">Tls<wbr>Ecdhe<wbr>Ecdsa<wbr>With<wbr>Aes256Cbc<wbr>Sha<wbr>Ciphers<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Should the `TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA` cipher be enabled? Defaults to `false`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tlsecdhersawithaes128cbcshaciphersenabled_go">
+<a href="#tlsecdhersawithaes128cbcshaciphersenabled_go" style="color: inherit; text-decoration: inherit;">Tls<wbr>Ecdhe<wbr>Rsa<wbr>With<wbr>Aes128Cbc<wbr>Sha<wbr>Ciphers<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tlsecdhersawithaes256cbcshaciphersenabled_go">
+<a href="#tlsecdhersawithaes256cbcshaciphersenabled_go" style="color: inherit; text-decoration: inherit;">Tls<wbr>Ecdhe<wbr>Rsa<wbr>With<wbr>Aes256Cbc<wbr>Sha<wbr>Ciphers<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tlsrsawithaes128cbcsha256ciphersenabled_go">
+<a href="#tlsrsawithaes128cbcsha256ciphersenabled_go" style="color: inherit; text-decoration: inherit;">Tls<wbr>Rsa<wbr>With<wbr>Aes128Cbc<wbr>Sha256Ciphers<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Should the `TLS_RSA_WITH_AES_128_CBC_SHA256` cipher be enabled? Defaults to `false`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tlsrsawithaes128cbcshaciphersenabled_go">
+<a href="#tlsrsawithaes128cbcshaciphersenabled_go" style="color: inherit; text-decoration: inherit;">Tls<wbr>Rsa<wbr>With<wbr>Aes128Cbc<wbr>Sha<wbr>Ciphers<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Should the `TLS_RSA_WITH_AES_128_CBC_SHA` cipher be enabled? Defaults to `false`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tlsrsawithaes128gcmsha256ciphersenabled_go">
+<a href="#tlsrsawithaes128gcmsha256ciphersenabled_go" style="color: inherit; text-decoration: inherit;">Tls<wbr>Rsa<wbr>With<wbr>Aes128Gcm<wbr>Sha256Ciphers<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Should the `TLS_RSA_WITH_AES_128_GCM_SHA256` cipher be enabled? Defaults to `false`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tlsrsawithaes256cbcsha256ciphersenabled_go">
+<a href="#tlsrsawithaes256cbcsha256ciphersenabled_go" style="color: inherit; text-decoration: inherit;">Tls<wbr>Rsa<wbr>With<wbr>Aes256Cbc<wbr>Sha256Ciphers<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Should the `TLS_RSA_WITH_AES_256_CBC_SHA256` cipher be enabled? Defaults to `false`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tlsrsawithaes256cbcshaciphersenabled_go">
+<a href="#tlsrsawithaes256cbcshaciphersenabled_go" style="color: inherit; text-decoration: inherit;">Tls<wbr>Rsa<wbr>With<wbr>Aes256Cbc<wbr>Sha<wbr>Ciphers<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Should the `TLS_RSA_WITH_AES_256_CBC_SHA` cipher be enabled? Defaults to `false`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tripledesciphersenabled_go">
+<a href="#tripledesciphersenabled_go" style="color: inherit; text-decoration: inherit;">Triple<wbr>Des<wbr>Ciphers<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
@@ -5311,10 +5507,108 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Should TLS 1.1 be enabled on the frontend of the gateway? Defaults to `false`.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="enabletripledesciphers_nodejs">
 <a href="#enabletripledesciphers_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Triple<wbr>Des<wbr>Ciphers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Should the `TLS_RSA_WITH_3DES_EDE_CBC_SHA` cipher be enabled for alL TLS versions (1.0, 1.1 and 1.2)? Defaults to `false`.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this has been renamed to the boolean attribute `triple_des_ciphers_enabled`.{{% /md %}}</p></dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tlsecdheecdsawithaes128cbcshaciphersenabled_nodejs">
+<a href="#tlsecdheecdsawithaes128cbcshaciphersenabled_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Ecdhe<wbr>Ecdsa<wbr>With<wbr>Aes128Cbc<wbr>Sha<wbr>Ciphers<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Should the `TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA` cipher be enabled? Defaults to `false`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tlsecdheecdsawithaes256cbcshaciphersenabled_nodejs">
+<a href="#tlsecdheecdsawithaes256cbcshaciphersenabled_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Ecdhe<wbr>Ecdsa<wbr>With<wbr>Aes256Cbc<wbr>Sha<wbr>Ciphers<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Should the `TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA` cipher be enabled? Defaults to `false`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tlsecdhersawithaes128cbcshaciphersenabled_nodejs">
+<a href="#tlsecdhersawithaes128cbcshaciphersenabled_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Ecdhe<wbr>Rsa<wbr>With<wbr>Aes128Cbc<wbr>Sha<wbr>Ciphers<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tlsecdhersawithaes256cbcshaciphersenabled_nodejs">
+<a href="#tlsecdhersawithaes256cbcshaciphersenabled_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Ecdhe<wbr>Rsa<wbr>With<wbr>Aes256Cbc<wbr>Sha<wbr>Ciphers<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tlsrsawithaes128cbcsha256ciphersenabled_nodejs">
+<a href="#tlsrsawithaes128cbcsha256ciphersenabled_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Rsa<wbr>With<wbr>Aes128Cbc<wbr>Sha256Ciphers<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Should the `TLS_RSA_WITH_AES_128_CBC_SHA256` cipher be enabled? Defaults to `false`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tlsrsawithaes128cbcshaciphersenabled_nodejs">
+<a href="#tlsrsawithaes128cbcshaciphersenabled_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Rsa<wbr>With<wbr>Aes128Cbc<wbr>Sha<wbr>Ciphers<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Should the `TLS_RSA_WITH_AES_128_CBC_SHA` cipher be enabled? Defaults to `false`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tlsrsawithaes128gcmsha256ciphersenabled_nodejs">
+<a href="#tlsrsawithaes128gcmsha256ciphersenabled_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Rsa<wbr>With<wbr>Aes128Gcm<wbr>Sha256Ciphers<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Should the `TLS_RSA_WITH_AES_128_GCM_SHA256` cipher be enabled? Defaults to `false`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tlsrsawithaes256cbcsha256ciphersenabled_nodejs">
+<a href="#tlsrsawithaes256cbcsha256ciphersenabled_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Rsa<wbr>With<wbr>Aes256Cbc<wbr>Sha256Ciphers<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Should the `TLS_RSA_WITH_AES_256_CBC_SHA256` cipher be enabled? Defaults to `false`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tlsrsawithaes256cbcshaciphersenabled_nodejs">
+<a href="#tlsrsawithaes256cbcshaciphersenabled_nodejs" style="color: inherit; text-decoration: inherit;">tls<wbr>Rsa<wbr>With<wbr>Aes256Cbc<wbr>Sha<wbr>Ciphers<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Should the `TLS_RSA_WITH_AES_256_CBC_SHA` cipher be enabled? Defaults to `false`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tripledesciphersenabled_nodejs">
+<a href="#tripledesciphersenabled_nodejs" style="color: inherit; text-decoration: inherit;">triple<wbr>Des<wbr>Ciphers<wbr>Enabled</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
@@ -5387,10 +5681,108 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Should TLS 1.1 be enabled on the frontend of the gateway? Defaults to `false`.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="enable_triple_des_ciphers_python">
 <a href="#enable_triple_des_ciphers_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>triple_<wbr>des_<wbr>ciphers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Should the `TLS_RSA_WITH_3DES_EDE_CBC_SHA` cipher be enabled for alL TLS versions (1.0, 1.1 and 1.2)? Defaults to `false`.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}this has been renamed to the boolean attribute `triple_des_ciphers_enabled`.{{% /md %}}</p></dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tls_ecdhe_ecdsa_with_aes128_cbc_sha_ciphers_enabled_python">
+<a href="#tls_ecdhe_ecdsa_with_aes128_cbc_sha_ciphers_enabled_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>ecdhe_<wbr>ecdsa_<wbr>with_<wbr>aes128_<wbr>cbc_<wbr>sha_<wbr>ciphers_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Should the `TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA` cipher be enabled? Defaults to `false`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tls_ecdhe_ecdsa_with_aes256_cbc_sha_ciphers_enabled_python">
+<a href="#tls_ecdhe_ecdsa_with_aes256_cbc_sha_ciphers_enabled_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>ecdhe_<wbr>ecdsa_<wbr>with_<wbr>aes256_<wbr>cbc_<wbr>sha_<wbr>ciphers_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Should the `TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA` cipher be enabled? Defaults to `false`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tls_ecdhe_rsa_with_aes128_cbc_sha_ciphers_enabled_python">
+<a href="#tls_ecdhe_rsa_with_aes128_cbc_sha_ciphers_enabled_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>ecdhe_<wbr>rsa_<wbr>with_<wbr>aes128_<wbr>cbc_<wbr>sha_<wbr>ciphers_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tls_ecdhe_rsa_with_aes256_cbc_sha_ciphers_enabled_python">
+<a href="#tls_ecdhe_rsa_with_aes256_cbc_sha_ciphers_enabled_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>ecdhe_<wbr>rsa_<wbr>with_<wbr>aes256_<wbr>cbc_<wbr>sha_<wbr>ciphers_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tls_rsa_with_aes128_cbc_sha256_ciphers_enabled_python">
+<a href="#tls_rsa_with_aes128_cbc_sha256_ciphers_enabled_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>rsa_<wbr>with_<wbr>aes128_<wbr>cbc_<wbr>sha256_<wbr>ciphers_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Should the `TLS_RSA_WITH_AES_128_CBC_SHA256` cipher be enabled? Defaults to `false`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tls_rsa_with_aes128_cbc_sha_ciphers_enabled_python">
+<a href="#tls_rsa_with_aes128_cbc_sha_ciphers_enabled_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>rsa_<wbr>with_<wbr>aes128_<wbr>cbc_<wbr>sha_<wbr>ciphers_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Should the `TLS_RSA_WITH_AES_128_CBC_SHA` cipher be enabled? Defaults to `false`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tls_rsa_with_aes128_gcm_sha256_ciphers_enabled_python">
+<a href="#tls_rsa_with_aes128_gcm_sha256_ciphers_enabled_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>rsa_<wbr>with_<wbr>aes128_<wbr>gcm_<wbr>sha256_<wbr>ciphers_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Should the `TLS_RSA_WITH_AES_128_GCM_SHA256` cipher be enabled? Defaults to `false`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tls_rsa_with_aes256_cbc_sha256_ciphers_enabled_python">
+<a href="#tls_rsa_with_aes256_cbc_sha256_ciphers_enabled_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>rsa_<wbr>with_<wbr>aes256_<wbr>cbc_<wbr>sha256_<wbr>ciphers_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Should the `TLS_RSA_WITH_AES_256_CBC_SHA256` cipher be enabled? Defaults to `false`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tls_rsa_with_aes256_cbc_sha_ciphers_enabled_python">
+<a href="#tls_rsa_with_aes256_cbc_sha_ciphers_enabled_python" style="color: inherit; text-decoration: inherit;">tls_<wbr>rsa_<wbr>with_<wbr>aes256_<wbr>cbc_<wbr>sha_<wbr>ciphers_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Should the `TLS_RSA_WITH_AES_256_CBC_SHA` cipher be enabled? Defaults to `false`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="triple_des_ciphers_enabled_python">
+<a href="#triple_des_ciphers_enabled_python" style="color: inherit; text-decoration: inherit;">triple_<wbr>des_<wbr>ciphers_<wbr>enabled</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>

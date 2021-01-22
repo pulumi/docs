@@ -529,7 +529,7 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource. Changing this forces a new resource to be created.
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -675,7 +675,7 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource. Changing this forces a new resource to be created.
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -821,7 +821,7 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource. Changing this forces a new resource to be created.
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -967,7 +967,7 @@ The Group resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource. Changing this forces a new resource to be created.
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1403,7 +1403,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource. Changing this forces a new resource to be created.
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1569,7 +1569,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource. Changing this forces a new resource to be created.
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1735,7 +1735,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource. Changing this forces a new resource to be created.
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1901,7 +1901,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}A mapping of tags to assign to the resource. Changing this forces a new resource to be created.
+    <dd>{{% md %}}A mapping of tags to assign to the resource.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}

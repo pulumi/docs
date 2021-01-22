@@ -33,6 +33,7 @@ Explore the resources and functions of the iot module in the Azure package.
 <ul class="api">
     <li><a href="getdps" title="GetDps"><span class="symbol function"></span>GetDps</a></li>
     <li><a href="getdpssharedaccesspolicy" title="GetDpsSharedAccessPolicy"><span class="symbol function"></span>GetDpsSharedAccessPolicy</a></li>
+    <li><a href="getiothub" title="GetIotHub"><span class="symbol function"></span>GetIotHub</a></li>
     <li><a href="getsharedaccesspolicy" title="GetSharedAccessPolicy"><span class="symbol function"></span>GetSharedAccessPolicy</a></li>
 </ul>
 
@@ -45,7 +46,7 @@ Explore the resources and functions of the iot module in the Azure package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 	<dt>Version</dt>
-	<dd>3.43.0</dd>
+	<dd>3.44.0</dd>
 </dl>
 
 

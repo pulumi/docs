@@ -76,6 +76,7 @@ class MyStack : Stack
             ApiManagementName = exampleService.Name,
             ApiName = exampleApi.Name,
             ApiManagementLoggerId = exampleLogger.Id,
+            SamplingPercentage = 5,
             AlwaysLogErrors = true,
             LogClientIp = true,
             Verbosity = "Verbose",
@@ -197,6 +198,7 @@ func main() {
 			ApiManagementName:       exampleService.Name,
 			ApiName:                 exampleApi.Name,
 			ApiManagementLoggerId:   exampleLogger.ID(),
+			SamplingPercentage:      pulumi.Float64(5),
 			AlwaysLogErrors:         pulumi.Bool(true),
 			LogClientIp:             pulumi.Bool(true),
 			Verbosity:               pulumi.String("Verbose"),
@@ -282,6 +284,7 @@ example_api_diagnostic = azure.apimanagement.ApiDiagnostic("exampleApiDiagnostic
     api_management_name=example_service.name,
     api_name=example_api.name,
     api_management_logger_id=example_logger.id,
+    sampling_percentage=5,
     always_log_errors=True,
     log_client_ip=True,
     verbosity="Verbose",
@@ -365,6 +368,7 @@ const exampleApiDiagnostic = new azure.apimanagement.ApiDiagnostic("exampleApiDi
     apiManagementName: exampleService.name,
     apiName: exampleApi.name,
     apiManagementLoggerId: exampleLogger.id,
+    samplingPercentage: 5,
     alwaysLogErrors: true,
     logClientIp: true,
     verbosity: "Verbose",
@@ -418,7 +422,7 @@ const exampleApiDiagnostic = new azure.apimanagement.ApiDiagnostic("exampleApiDi
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/apimanagement/#pulumi_azure.apimanagement.ApiDiagnostic">ApiDiagnostic</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">always_log_errors</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">api_management_logger_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">api_management_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">api_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">backend_request</span><span class="p">:</span> <span class="nx">Optional[ApiDiagnosticBackendRequestArgs]</span> = None<span class="p">, </span><span class="nx">backend_response</span><span class="p">:</span> <span class="nx">Optional[ApiDiagnosticBackendResponseArgs]</span> = None<span class="p">, </span><span class="nx">frontend_request</span><span class="p">:</span> <span class="nx">Optional[ApiDiagnosticFrontendRequestArgs]</span> = None<span class="p">, </span><span class="nx">frontend_response</span><span class="p">:</span> <span class="nx">Optional[ApiDiagnosticFrontendResponseArgs]</span> = None<span class="p">, </span><span class="nx">http_correlation_protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identifier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">log_client_ip</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">verbosity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_azure/apimanagement/#pulumi_azure.apimanagement.ApiDiagnostic">ApiDiagnostic</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">always_log_errors</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">api_management_logger_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">api_management_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">api_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">backend_request</span><span class="p">:</span> <span class="nx">Optional[ApiDiagnosticBackendRequestArgs]</span> = None<span class="p">, </span><span class="nx">backend_response</span><span class="p">:</span> <span class="nx">Optional[ApiDiagnosticBackendResponseArgs]</span> = None<span class="p">, </span><span class="nx">frontend_request</span><span class="p">:</span> <span class="nx">Optional[ApiDiagnosticFrontendRequestArgs]</span> = None<span class="p">, </span><span class="nx">frontend_response</span><span class="p">:</span> <span class="nx">Optional[ApiDiagnosticFrontendResponseArgs]</span> = None<span class="p">, </span><span class="nx">http_correlation_protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identifier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">log_client_ip</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sampling_percentage</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">verbosity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -711,6 +715,16 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="samplingpercentage_csharp">
+<a href="#samplingpercentage_csharp" style="color: inherit; text-decoration: inherit;">Sampling<wbr>Percentage</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">double</span>
+    </dt>
+    <dd>{{% md %}}Sampling (%). For high traffic APIs, please read this [documentation](https://docs.microsoft.com/azure/api-management/api-management-howto-app-insights#performance-implications-and-log-sampling) to understand performance implications and log sampling. Valid values are between `0.0` and `100.0`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="verbosity_csharp">
 <a href="#verbosity_csharp" style="color: inherit; text-decoration: inherit;">Verbosity</a>
 </span>
@@ -844,6 +858,16 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Log client IP address.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="samplingpercentage_go">
+<a href="#samplingpercentage_go" style="color: inherit; text-decoration: inherit;">Sampling<wbr>Percentage</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float64</span>
+    </dt>
+    <dd>{{% md %}}Sampling (%). For high traffic APIs, please read this [documentation](https://docs.microsoft.com/azure/api-management/api-management-howto-app-insights#performance-implications-and-log-sampling) to understand performance implications and log sampling. Valid values are between `0.0` and `100.0`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -983,6 +1007,16 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="samplingpercentage_nodejs">
+<a href="#samplingpercentage_nodejs" style="color: inherit; text-decoration: inherit;">sampling<wbr>Percentage</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Sampling (%). For high traffic APIs, please read this [documentation](https://docs.microsoft.com/azure/api-management/api-management-howto-app-insights#performance-implications-and-log-sampling) to understand performance implications and log sampling. Valid values are between `0.0` and `100.0`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="verbosity_nodejs">
 <a href="#verbosity_nodejs" style="color: inherit; text-decoration: inherit;">verbosity</a>
 </span>
@@ -1119,6 +1153,16 @@ The ApiDiagnostic resource accepts the following [input]({{< relref "/docs/intro
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="sampling_percentage_python">
+<a href="#sampling_percentage_python" style="color: inherit; text-decoration: inherit;">sampling_<wbr>percentage</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}Sampling (%). For high traffic APIs, please read this [documentation](https://docs.microsoft.com/azure/api-management/api-management-howto-app-insights#performance-implications-and-log-sampling) to understand performance implications and log sampling. Valid values are between `0.0` and `100.0`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="verbosity_python">
 <a href="#verbosity_python" style="color: inherit; text-decoration: inherit;">verbosity</a>
 </span>
@@ -1210,7 +1254,7 @@ Get an existing ApiDiagnostic resource's state with the given name, ID, and opti
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">always_log_errors</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">api_management_logger_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">api_management_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">api_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">backend_request</span><span class="p">:</span> <span class="nx">Optional[ApiDiagnosticBackendRequestArgs]</span> = None<span class="p">, </span><span class="nx">backend_response</span><span class="p">:</span> <span class="nx">Optional[ApiDiagnosticBackendResponseArgs]</span> = None<span class="p">, </span><span class="nx">frontend_request</span><span class="p">:</span> <span class="nx">Optional[ApiDiagnosticFrontendRequestArgs]</span> = None<span class="p">, </span><span class="nx">frontend_response</span><span class="p">:</span> <span class="nx">Optional[ApiDiagnosticFrontendResponseArgs]</span> = None<span class="p">, </span><span class="nx">http_correlation_protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identifier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">log_client_ip</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">verbosity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> ApiDiagnostic</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">always_log_errors</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">api_management_logger_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">api_management_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">api_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">backend_request</span><span class="p">:</span> <span class="nx">Optional[ApiDiagnosticBackendRequestArgs]</span> = None<span class="p">, </span><span class="nx">backend_response</span><span class="p">:</span> <span class="nx">Optional[ApiDiagnosticBackendResponseArgs]</span> = None<span class="p">, </span><span class="nx">frontend_request</span><span class="p">:</span> <span class="nx">Optional[ApiDiagnosticFrontendRequestArgs]</span> = None<span class="p">, </span><span class="nx">frontend_response</span><span class="p">:</span> <span class="nx">Optional[ApiDiagnosticFrontendResponseArgs]</span> = None<span class="p">, </span><span class="nx">http_correlation_protocol</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identifier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">log_client_ip</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sampling_percentage</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">verbosity</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> ApiDiagnostic</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1445,6 +1489,16 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_samplingpercentage_csharp">
+<a href="#state_samplingpercentage_csharp" style="color: inherit; text-decoration: inherit;">Sampling<wbr>Percentage</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">double</span>
+    </dt>
+    <dd>{{% md %}}Sampling (%). For high traffic APIs, please read this [documentation](https://docs.microsoft.com/azure/api-management/api-management-howto-app-insights#performance-implications-and-log-sampling) to understand performance implications and log sampling. Valid values are between `0.0` and `100.0`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_verbosity_csharp">
 <a href="#state_verbosity_csharp" style="color: inherit; text-decoration: inherit;">Verbosity</a>
 </span>
@@ -1578,6 +1632,16 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the API Management Service API Diagnostics Logs should exist. Changing this forces a new API Management Service API Diagnostics Logs to be created.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_samplingpercentage_go">
+<a href="#state_samplingpercentage_go" style="color: inherit; text-decoration: inherit;">Sampling<wbr>Percentage</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float64</span>
+    </dt>
+    <dd>{{% md %}}Sampling (%). For high traffic APIs, please read this [documentation](https://docs.microsoft.com/azure/api-management/api-management-howto-app-insights#performance-implications-and-log-sampling) to understand performance implications and log sampling. Valid values are between `0.0` and `100.0`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1717,6 +1781,16 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_samplingpercentage_nodejs">
+<a href="#state_samplingpercentage_nodejs" style="color: inherit; text-decoration: inherit;">sampling<wbr>Percentage</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Sampling (%). For high traffic APIs, please read this [documentation](https://docs.microsoft.com/azure/api-management/api-management-howto-app-insights#performance-implications-and-log-sampling) to understand performance implications and log sampling. Valid values are between `0.0` and `100.0`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_verbosity_nodejs">
 <a href="#state_verbosity_nodejs" style="color: inherit; text-decoration: inherit;">verbosity</a>
 </span>
@@ -1850,6 +1924,16 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the Resource Group where the API Management Service API Diagnostics Logs should exist. Changing this forces a new API Management Service API Diagnostics Logs to be created.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_sampling_percentage_python">
+<a href="#state_sampling_percentage_python" style="color: inherit; text-decoration: inherit;">sampling_<wbr>percentage</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}Sampling (%). For high traffic APIs, please read this [documentation](https://docs.microsoft.com/azure/api-management/api-management-howto-app-insights#performance-implications-and-log-sampling) to understand performance implications and log sampling. Valid values are between `0.0` and `100.0`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">

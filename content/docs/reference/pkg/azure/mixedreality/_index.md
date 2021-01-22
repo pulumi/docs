@@ -23,7 +23,7 @@ Explore the resources and functions of the mixedreality module in the Azure pack
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`azurerm` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azurerm).</dd>
 	<dt>Version</dt>
-	<dd>3.43.0</dd>
+	<dd>3.44.0</dd>
 </dl>
 
 

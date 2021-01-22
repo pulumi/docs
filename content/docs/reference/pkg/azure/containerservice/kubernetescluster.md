@@ -437,7 +437,7 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusteridentity">Kubernetes<wbr>Cluster<wbr>Identity<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A `identity` block as defined below. Changing this forces a new resource to be created.
+    <dd>{{% md %}}An `identity` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -661,7 +661,7 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusteridentity">Kubernetes<wbr>Cluster<wbr>Identity</a></span>
     </dt>
-    <dd>{{% md %}}A `identity` block as defined below. Changing this forces a new resource to be created.
+    <dd>{{% md %}}An `identity` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -885,7 +885,7 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusteridentity">Kubernetes<wbr>Cluster<wbr>Identity</a></span>
     </dt>
-    <dd>{{% md %}}A `identity` block as defined below. Changing this forces a new resource to be created.
+    <dd>{{% md %}}An `identity` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1109,7 +1109,7 @@ The KubernetesCluster resource accepts the following [input]({{< relref "/docs/i
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusteridentity">Kubernetes<wbr>Cluster<wbr>Identity<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A `identity` block as defined below. Changing this forces a new resource to be created.
+    <dd>{{% md %}}An `identity` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1803,7 +1803,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusteridentity">Kubernetes<wbr>Cluster<wbr>Identity<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A `identity` block as defined below. Changing this forces a new resource to be created.
+    <dd>{{% md %}}An `identity` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2097,7 +2097,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusteridentity">Kubernetes<wbr>Cluster<wbr>Identity</a></span>
     </dt>
-    <dd>{{% md %}}A `identity` block as defined below. Changing this forces a new resource to be created.
+    <dd>{{% md %}}An `identity` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2391,7 +2391,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusteridentity">Kubernetes<wbr>Cluster<wbr>Identity</a></span>
     </dt>
-    <dd>{{% md %}}A `identity` block as defined below. Changing this forces a new resource to be created.
+    <dd>{{% md %}}An `identity` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2685,7 +2685,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#kubernetesclusteridentity">Kubernetes<wbr>Cluster<wbr>Identity<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A `identity` block as defined below. Changing this forces a new resource to be created.
+    <dd>{{% md %}}An `identity` block as defined below. Changing this forces a new resource to be created.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3731,7 +3731,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the User Assigned Identity used by the OMS Agents.
+    <dd>{{% md %}}The ID of a user assigned identity.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -3767,7 +3767,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the User Assigned Identity used by the OMS Agents.
+    <dd>{{% md %}}The ID of a user assigned identity.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -3803,7 +3803,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the User Assigned Identity used by the OMS Agents.
+    <dd>{{% md %}}The ID of a user assigned identity.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -3839,7 +3839,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ID of the User Assigned Identity used by the OMS Agents.
+    <dd>{{% md %}}The ID of a user assigned identity.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -3880,6 +3880,16 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Maximum number of seconds the cluster autoscaler waits for pod termination when trying to scale down a node. Defaults to `600`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="newpodscaleupdelay_csharp">
+<a href="#newpodscaleupdelay_csharp" style="color: inherit; text-decoration: inherit;">New<wbr>Pod<wbr>Scale<wbr>Up<wbr>Delay</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}For scenarios like burst/batch scale where you don't want CA to act before the kubernetes scheduler could schedule all the pods, you can tell CA to ignore unscheduled pods before they're a certain age. Defaults to `10s`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3979,6 +3989,16 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="newpodscaleupdelay_go">
+<a href="#newpodscaleupdelay_go" style="color: inherit; text-decoration: inherit;">New<wbr>Pod<wbr>Scale<wbr>Up<wbr>Delay</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}For scenarios like burst/batch scale where you don't want CA to act before the kubernetes scheduler could schedule all the pods, you can tell CA to ignore unscheduled pods before they're a certain age. Defaults to `10s`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="scaledowndelayafteradd_go">
 <a href="#scaledowndelayafteradd_go" style="color: inherit; text-decoration: inherit;">Scale<wbr>Down<wbr>Delay<wbr>After<wbr>Add</a>
 </span>
@@ -4075,6 +4095,16 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="newpodscaleupdelay_nodejs">
+<a href="#newpodscaleupdelay_nodejs" style="color: inherit; text-decoration: inherit;">new<wbr>Pod<wbr>Scale<wbr>Up<wbr>Delay</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}For scenarios like burst/batch scale where you don't want CA to act before the kubernetes scheduler could schedule all the pods, you can tell CA to ignore unscheduled pods before they're a certain age. Defaults to `10s`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="scaledowndelayafteradd_nodejs">
 <a href="#scaledowndelayafteradd_nodejs" style="color: inherit; text-decoration: inherit;">scale<wbr>Down<wbr>Delay<wbr>After<wbr>Add</a>
 </span>
@@ -4168,6 +4198,16 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Maximum number of seconds the cluster autoscaler waits for pod termination when trying to scale down a node. Defaults to `600`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="new_pod_scale_up_delay_python">
+<a href="#new_pod_scale_up_delay_python" style="color: inherit; text-decoration: inherit;">new_<wbr>pod_<wbr>scale_<wbr>up_<wbr>delay</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}For scenarios like burst/batch scale where you don't want CA to act before the kubernetes scheduler could schedule all the pods, you can tell CA to ignore unscheduled pods before they're a certain age. Defaults to `10s`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5017,7 +5057,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity used for the managed cluster. At this time the only supported value is `SystemAssigned`.
+    <dd>{{% md %}}The type of identity used for the managed cluster. Possible values are `SystemAssigned` and `UserAssigned`. If `UserAssigned` is set, a `user_assigned_identity_id` must be set as well.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5039,6 +5079,16 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The Tenant ID used for Azure Active Directory Application. If this isn't specified the Tenant ID of the current Subscription is used.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="userassignedidentityid_csharp">
+<a href="#userassignedidentityid_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identity<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of a user assigned identity.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -5053,7 +5103,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity used for the managed cluster. At this time the only supported value is `SystemAssigned`.
+    <dd>{{% md %}}The type of identity used for the managed cluster. Possible values are `SystemAssigned` and `UserAssigned`. If `UserAssigned` is set, a `user_assigned_identity_id` must be set as well.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5075,6 +5125,16 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The Tenant ID used for Azure Active Directory Application. If this isn't specified the Tenant ID of the current Subscription is used.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="userassignedidentityid_go">
+<a href="#userassignedidentityid_go" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identity<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of a user assigned identity.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -5089,7 +5149,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of identity used for the managed cluster. At this time the only supported value is `SystemAssigned`.
+    <dd>{{% md %}}The type of identity used for the managed cluster. Possible values are `SystemAssigned` and `UserAssigned`. If `UserAssigned` is set, a `user_assigned_identity_id` must be set as well.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5111,6 +5171,16 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The Tenant ID used for Azure Active Directory Application. If this isn't specified the Tenant ID of the current Subscription is used.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="userassignedidentityid_nodejs">
+<a href="#userassignedidentityid_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identity<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of a user assigned identity.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -5125,7 +5195,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of identity used for the managed cluster. At this time the only supported value is `SystemAssigned`.
+    <dd>{{% md %}}The type of identity used for the managed cluster. Possible values are `SystemAssigned` and `UserAssigned`. If `UserAssigned` is set, a `user_assigned_identity_id` must be set as well.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5146,6 +5216,16 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Tenant ID used for Azure Active Directory Application. If this isn't specified the Tenant ID of the current Subscription is used.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="user_assigned_identity_id_python">
+<a href="#user_assigned_identity_id_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identity_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of a user assigned identity.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -5751,7 +5831,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the User Assigned Identity used by the OMS Agents.
+    <dd>{{% md %}}The ID of a user assigned identity.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -5787,7 +5867,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the User Assigned Identity used by the OMS Agents.
+    <dd>{{% md %}}The ID of a user assigned identity.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -5823,7 +5903,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the User Assigned Identity used by the OMS Agents.
+    <dd>{{% md %}}The ID of a user assigned identity.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -5859,7 +5939,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ID of the User Assigned Identity used by the OMS Agents.
+    <dd>{{% md %}}The ID of a user assigned identity.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}

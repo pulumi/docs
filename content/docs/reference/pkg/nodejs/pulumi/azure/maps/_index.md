@@ -3,7 +3,7 @@ title: "Module maps"
 title_tag: "Module maps | Package @pulumi/azure | Node.js SDK"
 linktitle: "maps"
 meta_desc: "Explore members of the maps module in the @pulumi/azure package."
-git_sha: "389b9d2c106e6ab264d2820b1729d61ac832ff9a"
+git_sha: "fe5baac3cc5e17086011b8b3dedece23d90729ee"
 block_external_search_index: true
 ---
 
@@ -36,7 +36,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Account" data-link-title="Account">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/maps/account.ts#L34">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/maps/account.ts#L34">
         Resource <strong>Account</strong>
     </a>
 </h3>
@@ -70,7 +70,7 @@ A Maps Account can be imported using the `resource id`, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="Account-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/maps/account.ts#L89"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/maps/account.ts#L89"> <b>constructor</b></a>
 </h4>
 
 
@@ -84,7 +84,7 @@ Create a Account resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Account-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/maps/account.ts#L44">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/maps/account.ts#L44">method <b>get</b></a>
 </h4>
 
 
@@ -95,14 +95,14 @@ Get an existing Account resource's state with the given name, ID, and optional e
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Account-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/maps/account.ts#L34">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/maps/account.ts#L34">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Account-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/maps/account.ts#L55">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/maps/account.ts#L55">method <b>isInstance</b></a>
 </h4>
 
 
@@ -113,7 +113,7 @@ Returns true if the given object is an instance of Account.  This is designed to
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Account-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/maps/account.ts#L34">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/maps/account.ts#L34">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -122,7 +122,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Account-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/maps/account.ts#L65">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/maps/account.ts#L65">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -130,7 +130,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the Azure Maps Account. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Account-primaryAccessKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/maps/account.ts#L69">property <b>primaryAccessKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/maps/account.ts#L69">property <b>primaryAccessKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>primaryAccessKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -138,7 +138,7 @@ The name of the Azure Maps Account. Changing this forces a new resource to be cr
 The primary key used to authenticate and authorize access to the Maps REST APIs.
 
 <h4 class="pdoc-member-header" id="Account-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/maps/account.ts#L73">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/maps/account.ts#L73">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -146,7 +146,7 @@ The primary key used to authenticate and authorize access to the Maps REST APIs.
 The name of the Resource Group in which the Azure Maps Account should exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="Account-secondaryAccessKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/maps/account.ts#L77">property <b>secondaryAccessKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/maps/account.ts#L77">property <b>secondaryAccessKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>secondaryAccessKey: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -154,7 +154,7 @@ The name of the Resource Group in which the Azure Maps Account should exist. Cha
 The secondary key used to authenticate and authorize access to the Maps REST APIs.
 
 <h4 class="pdoc-member-header" id="Account-skuName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/maps/account.ts#L81">property <b>skuName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/maps/account.ts#L81">property <b>skuName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>skuName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -162,7 +162,7 @@ The secondary key used to authenticate and authorize access to the Maps REST API
 The sku of the Azure Maps Account. Possible values are `S0` and `S1`.
 
 <h4 class="pdoc-member-header" id="Account-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/maps/account.ts#L85">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/maps/account.ts#L85">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -170,7 +170,7 @@ The sku of the Azure Maps Account. Possible values are `S0` and `S1`.
 A mapping of tags to assign to the Azure Maps Account.
 
 <h4 class="pdoc-member-header" id="Account-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/maps/account.ts#L34">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/maps/account.ts#L34">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -179,7 +179,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Account-xMsClientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/maps/account.ts#L89">property <b>xMsClientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/maps/account.ts#L89">property <b>xMsClientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>xMsClientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -189,7 +189,7 @@ A unique identifier for the Maps Account.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getAccount" data-link-title="getAccount">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/maps/getAccount.ts#L24">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/maps/getAccount.ts#L24">
         Function <strong>getAccount</strong>
     </a>
 </h3>
@@ -216,7 +216,7 @@ export const mapsAccountId = example.then(example => example.id);
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="AccountArgs" data-link-title="AccountArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/maps/account.ts#L174">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/maps/account.ts#L174">
         interface <strong>AccountArgs</strong>
     </a>
 </h3>
@@ -226,7 +226,7 @@ export const mapsAccountId = example.then(example => example.id);
 The set of arguments for constructing a Account resource.
 
 <h4 class="pdoc-member-header" id="AccountArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/maps/account.ts#L178">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/maps/account.ts#L178">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -234,7 +234,7 @@ The set of arguments for constructing a Account resource.
 The name of the Azure Maps Account. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="AccountArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/maps/account.ts#L182">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/maps/account.ts#L182">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -242,7 +242,7 @@ The name of the Azure Maps Account. Changing this forces a new resource to be cr
 The name of the Resource Group in which the Azure Maps Account should exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="AccountArgs-skuName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/maps/account.ts#L186">property <b>skuName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/maps/account.ts#L186">property <b>skuName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>skuName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -250,7 +250,7 @@ The name of the Resource Group in which the Azure Maps Account should exist. Cha
 The sku of the Azure Maps Account. Possible values are `S0` and `S1`.
 
 <h4 class="pdoc-member-header" id="AccountArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/maps/account.ts#L190">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/maps/account.ts#L190">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -258,7 +258,7 @@ The sku of the Azure Maps Account. Possible values are `S0` and `S1`.
 A mapping of tags to assign to the Azure Maps Account.
 
 <h3 class="pdoc-module-header" id="AccountState" data-link-title="AccountState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/maps/account.ts#L140">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/maps/account.ts#L140">
         interface <strong>AccountState</strong>
     </a>
 </h3>
@@ -268,7 +268,7 @@ A mapping of tags to assign to the Azure Maps Account.
 Input properties used for looking up and filtering Account resources.
 
 <h4 class="pdoc-member-header" id="AccountState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/maps/account.ts#L144">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/maps/account.ts#L144">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -276,7 +276,7 @@ Input properties used for looking up and filtering Account resources.
 The name of the Azure Maps Account. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="AccountState-primaryAccessKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/maps/account.ts#L148">property <b>primaryAccessKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/maps/account.ts#L148">property <b>primaryAccessKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>primaryAccessKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -284,7 +284,7 @@ The name of the Azure Maps Account. Changing this forces a new resource to be cr
 The primary key used to authenticate and authorize access to the Maps REST APIs.
 
 <h4 class="pdoc-member-header" id="AccountState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/maps/account.ts#L152">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/maps/account.ts#L152">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -292,7 +292,7 @@ The primary key used to authenticate and authorize access to the Maps REST APIs.
 The name of the Resource Group in which the Azure Maps Account should exist. Changing this forces a new resource to be created.
 
 <h4 class="pdoc-member-header" id="AccountState-secondaryAccessKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/maps/account.ts#L156">property <b>secondaryAccessKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/maps/account.ts#L156">property <b>secondaryAccessKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secondaryAccessKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -300,7 +300,7 @@ The name of the Resource Group in which the Azure Maps Account should exist. Cha
 The secondary key used to authenticate and authorize access to the Maps REST APIs.
 
 <h4 class="pdoc-member-header" id="AccountState-skuName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/maps/account.ts#L160">property <b>skuName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/maps/account.ts#L160">property <b>skuName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>skuName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -308,7 +308,7 @@ The secondary key used to authenticate and authorize access to the Maps REST API
 The sku of the Azure Maps Account. Possible values are `S0` and `S1`.
 
 <h4 class="pdoc-member-header" id="AccountState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/maps/account.ts#L164">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/maps/account.ts#L164">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -316,7 +316,7 @@ The sku of the Azure Maps Account. Possible values are `S0` and `S1`.
 A mapping of tags to assign to the Azure Maps Account.
 
 <h4 class="pdoc-member-header" id="AccountState-xMsClientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/maps/account.ts#L168">property <b>xMsClientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/maps/account.ts#L168">property <b>xMsClientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>xMsClientId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -324,7 +324,7 @@ A mapping of tags to assign to the Azure Maps Account.
 A unique identifier for the Maps Account.
 
 <h3 class="pdoc-module-header" id="GetAccountArgs" data-link-title="GetAccountArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/maps/getAccount.ts#L42">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/maps/getAccount.ts#L42">
         interface <strong>GetAccountArgs</strong>
     </a>
 </h3>
@@ -334,7 +334,7 @@ A unique identifier for the Maps Account.
 A collection of arguments for invoking getAccount.
 
 <h4 class="pdoc-member-header" id="GetAccountArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/maps/getAccount.ts#L46">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/maps/getAccount.ts#L46">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -342,7 +342,7 @@ A collection of arguments for invoking getAccount.
 Specifies the name of the Maps Account.
 
 <h4 class="pdoc-member-header" id="GetAccountArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/maps/getAccount.ts#L50">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/maps/getAccount.ts#L50">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -350,12 +350,12 @@ Specifies the name of the Maps Account.
 Specifies the name of the Resource Group in which the Maps Account is located.
 
 <h4 class="pdoc-member-header" id="GetAccountArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/maps/getAccount.ts#L51">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/maps/getAccount.ts#L51">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
 <h3 class="pdoc-module-header" id="GetAccountResult" data-link-title="GetAccountResult">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/maps/getAccount.ts#L57">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/maps/getAccount.ts#L57">
         interface <strong>GetAccountResult</strong>
     </a>
 </h3>
@@ -365,7 +365,7 @@ Specifies the name of the Resource Group in which the Maps Account is located.
 A collection of values returned by getAccount.
 
 <h4 class="pdoc-member-header" id="GetAccountResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/maps/getAccount.ts#L61">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/maps/getAccount.ts#L61">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -373,12 +373,12 @@ A collection of values returned by getAccount.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetAccountResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/maps/getAccount.ts#L62">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/maps/getAccount.ts#L62">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAccountResult-primaryAccessKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/maps/getAccount.ts#L66">property <b>primaryAccessKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/maps/getAccount.ts#L66">property <b>primaryAccessKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>primaryAccessKey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -386,12 +386,12 @@ The provider-assigned unique ID for this managed resource.
 The primary key used to authenticate and authorize access to the Maps REST APIs.
 
 <h4 class="pdoc-member-header" id="GetAccountResult-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/maps/getAccount.ts#L67">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/maps/getAccount.ts#L67">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAccountResult-secondaryAccessKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/maps/getAccount.ts#L71">property <b>secondaryAccessKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/maps/getAccount.ts#L71">property <b>secondaryAccessKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secondaryAccessKey: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -399,7 +399,7 @@ The primary key used to authenticate and authorize access to the Maps REST APIs.
 The primary key used to authenticate and authorize access to the Maps REST APIs. The second key is given to provide seamless key regeneration.
 
 <h4 class="pdoc-member-header" id="GetAccountResult-skuName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/maps/getAccount.ts#L75">property <b>skuName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/maps/getAccount.ts#L75">property <b>skuName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>skuName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -407,12 +407,12 @@ The primary key used to authenticate and authorize access to the Maps REST APIs.
 The sku of the Azure Maps Account.
 
 <h4 class="pdoc-member-header" id="GetAccountResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/maps/getAccount.ts#L76">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/maps/getAccount.ts#L76">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
 <h4 class="pdoc-member-header" id="GetAccountResult-xMsClientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/maps/getAccount.ts#L80">property <b>xMsClientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/fe5baac3cc5e17086011b8b3dedece23d90729ee/sdk/nodejs/maps/getAccount.ts#L80">property <b>xMsClientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>xMsClientId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
