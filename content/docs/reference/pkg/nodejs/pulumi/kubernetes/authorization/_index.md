@@ -3,7 +3,7 @@ title: "Module authorization"
 title_tag: "Module authorization | Package @pulumi/kubernetes | Node.js SDK"
 linktitle: "authorization"
 meta_desc: "Explore members of the authorization module in the @pulumi/kubernetes package."
-git_sha: "f01f284c88884e5d9c32cb08b9ee2a464af4a384"
+git_sha: "63f6322ca9e33d39a2e52afc00dc343f1f4f3369"
 block_external_search_index: true
 ---
 

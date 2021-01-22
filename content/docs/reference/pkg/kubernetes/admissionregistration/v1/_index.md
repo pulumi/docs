@@ -24,7 +24,7 @@ Explore the resources and functions of the admissionregistration/v1 module in th
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>2.7.6</dd>
+	<dd>2.7.7</dd>
 </dl>
 
 
