@@ -80,6 +80,12 @@
       "terraform_provider_name": ""
     },
     {
+      "name": "Pulumi CloudInit",
+      "package_name": "pulumi_cloudinit",
+      "pulumi_provider_name": "cloudinit",
+      "terraform_provider_name": "cloudinit"
+    },
+    {
       "name": "Pulumi Consul",
       "package_name": "pulumi_consul",
       "pulumi_provider_name": "consul",
