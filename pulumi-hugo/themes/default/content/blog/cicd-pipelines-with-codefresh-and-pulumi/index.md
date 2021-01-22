@@ -67,4 +67,4 @@ Although this example is written in Python for AWS, there are similar examples i
 
 ## Putting it Together
 
-This article described how we could build both applications and infrastructure with CI/CD pipelines. To learn more about how CodeFresh and Pulumi can automate Kubernetes deployments join us for a [technical session](https://www.pulumi.com/resources/ci-cd-pipelines-for-kubernetes-apps-with-codefresh/) on January 21st.
+This article described how we could build both applications and infrastructure with CI/CD pipelines. To learn more about how Codefresh and Pulumi can automate Kubernetes deployments join us for a [technical session](https://www.pulumi.com/resources/ci-cd-pipelines-for-kubernetes-apps-with-codefresh/) on January 21st.
