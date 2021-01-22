@@ -61,6 +61,7 @@ class MyStack : Stack
         });
         var frontendRecordSet = new Gcp.Dns.RecordSet("frontendRecordSet", new Gcp.Dns.RecordSetArgs
         {
+            Name = prod.DnsName.Apply(dnsName => $"frontend.{dnsName}"),
             Type = "A",
             Ttl = 300,
             ManagedZone = prod.Name,
@@ -81,6 +82,8 @@ class MyStack : Stack
 package main
 
 import (
+	"fmt"
+
 	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/compute"
 	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dns"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
@@ -115,6 +118,9 @@ func main() {
 			return err
 		}
 		_, err = dns.NewRecordSet(ctx, "frontendRecordSet", &dns.RecordSetArgs{
+			Name: prod.DnsName.ApplyT(func(dnsName string) (string, error) {
+				return fmt.Sprintf("%v%v", "frontend.", dnsName), nil
+			}).(pulumi.StringOutput),
 			Type:        pulumi.String("A"),
 			Ttl:         pulumi.Int(300),
 			ManagedZone: prod.Name,
@@ -153,6 +159,7 @@ frontend_instance = gcp.compute.Instance("frontendInstance",
     )])
 prod = gcp.dns.ManagedZone("prod", dns_name="prod.mydomain.com.")
 frontend_record_set = gcp.dns.RecordSet("frontendRecordSet",
+    name=prod.dns_name.apply(lambda dns_name: f"frontend.{dns_name}"),
     type="A",
     ttl=300,
     managed_zone=prod.name,
@@ -182,6 +189,7 @@ const frontendInstance = new gcp.compute.Instance("frontendInstance", {
 });
 const prod = new gcp.dns.ManagedZone("prod", {dnsName: "prod.mydomain.com."});
 const frontendRecordSet = new gcp.dns.RecordSet("frontendRecordSet", {
+    name: pulumi.interpolate`frontend.${prod.dnsName}`,
     type: "A",
     ttl: 300,
     managedZone: prod.name,
@@ -207,6 +215,7 @@ class MyStack : Stack
         });
         var recordSet = new Gcp.Dns.RecordSet("recordSet", new Gcp.Dns.RecordSetArgs
         {
+            Name = prod.DnsName.Apply(dnsName => $"backend.{dnsName}"),
             ManagedZone = prod.Name,
             Type = "A",
             Ttl = 300,
@@ -227,6 +236,8 @@ class MyStack : Stack
 package main
 
 import (
+	"fmt"
+
 	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dns"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
@@ -240,6 +251,9 @@ func main() {
 			return err
 		}
 		_, err = dns.NewRecordSet(ctx, "recordSet", &dns.RecordSetArgs{
+			Name: prod.DnsName.ApplyT(func(dnsName string) (string, error) {
+				return fmt.Sprintf("%v%v", "backend.", dnsName), nil
+			}).(pulumi.StringOutput),
 			ManagedZone: prod.Name,
 			Type:        pulumi.String("A"),
 			Ttl:         pulumi.Int(300),
@@ -264,6 +278,7 @@ import pulumi_gcp as gcp
 
 prod = gcp.dns.ManagedZone("prod", dns_name="prod.mydomain.com.")
 record_set = gcp.dns.RecordSet("recordSet",
+    name=prod.dns_name.apply(lambda dns_name: f"backend.{dns_name}"),
     managed_zone=prod.name,
     type="A",
     ttl=300,
@@ -280,6 +295,7 @@ import * as gcp from "@pulumi/gcp";
 
 const prod = new gcp.dns.ManagedZone("prod", {dnsName: "prod.mydomain.com."});
 const recordSet = new gcp.dns.RecordSet("recordSet", {
+    name: pulumi.interpolate`backend.${prod.dnsName}`,
     managedZone: prod.name,
     type: "A",
     ttl: 300,
@@ -305,6 +321,7 @@ class MyStack : Stack
         });
         var mx = new Gcp.Dns.RecordSet("mx", new Gcp.Dns.RecordSetArgs
         {
+            Name = prod.DnsName,
             ManagedZone = prod.Name,
             Type = "MX",
             Ttl = 3600,
@@ -342,6 +359,7 @@ func main() {
 			return err
 		}
 		_, err = dns.NewRecordSet(ctx, "mx", &dns.RecordSetArgs{
+			Name:        prod.DnsName,
 			ManagedZone: prod.Name,
 			Type:        pulumi.String("MX"),
 			Ttl:         pulumi.Int(3600),
@@ -370,6 +388,7 @@ import pulumi_gcp as gcp
 
 prod = gcp.dns.ManagedZone("prod", dns_name="prod.mydomain.com.")
 mx = gcp.dns.RecordSet("mx",
+    name=prod.dns_name,
     managed_zone=prod.name,
     type="MX",
     ttl=3600,
@@ -392,6 +411,7 @@ import * as gcp from "@pulumi/gcp";
 
 const prod = new gcp.dns.ManagedZone("prod", {dnsName: "prod.mydomain.com."});
 const mx = new gcp.dns.RecordSet("mx", {
+    name: prod.dnsName,
     managedZone: prod.name,
     type: "MX",
     ttl: 3600,
@@ -423,6 +443,7 @@ class MyStack : Stack
         });
         var spf = new Gcp.Dns.RecordSet("spf", new Gcp.Dns.RecordSetArgs
         {
+            Name = prod.DnsName.Apply(dnsName => $"frontend.{dnsName}"),
             ManagedZone = prod.Name,
             Type = "TXT",
             Ttl = 300,
@@ -443,6 +464,8 @@ class MyStack : Stack
 package main
 
 import (
+	"fmt"
+
 	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dns"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
@@ -456,6 +479,9 @@ func main() {
 			return err
 		}
 		_, err = dns.NewRecordSet(ctx, "spf", &dns.RecordSetArgs{
+			Name: prod.DnsName.ApplyT(func(dnsName string) (string, error) {
+				return fmt.Sprintf("%v%v", "frontend.", dnsName), nil
+			}).(pulumi.StringOutput),
 			ManagedZone: prod.Name,
 			Type:        pulumi.String("TXT"),
 			Ttl:         pulumi.Int(300),
@@ -480,6 +506,7 @@ import pulumi_gcp as gcp
 
 prod = gcp.dns.ManagedZone("prod", dns_name="prod.mydomain.com.")
 spf = gcp.dns.RecordSet("spf",
+    name=prod.dns_name.apply(lambda dns_name: f"frontend.{dns_name}"),
     managed_zone=prod.name,
     type="TXT",
     ttl=300,
@@ -496,6 +523,7 @@ import * as gcp from "@pulumi/gcp";
 
 const prod = new gcp.dns.ManagedZone("prod", {dnsName: "prod.mydomain.com."});
 const spf = new gcp.dns.RecordSet("spf", {
+    name: pulumi.interpolate`frontend.${prod.dnsName}`,
     managedZone: prod.name,
     type: "TXT",
     ttl: 300,
@@ -521,6 +549,7 @@ class MyStack : Stack
         });
         var cname = new Gcp.Dns.RecordSet("cname", new Gcp.Dns.RecordSetArgs
         {
+            Name = prod.DnsName.Apply(dnsName => $"frontend.{dnsName}"),
             ManagedZone = prod.Name,
             Type = "CNAME",
             Ttl = 300,
@@ -541,6 +570,8 @@ class MyStack : Stack
 package main
 
 import (
+	"fmt"
+
 	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/dns"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
@@ -554,6 +585,9 @@ func main() {
 			return err
 		}
 		_, err = dns.NewRecordSet(ctx, "cname", &dns.RecordSetArgs{
+			Name: prod.DnsName.ApplyT(func(dnsName string) (string, error) {
+				return fmt.Sprintf("%v%v", "frontend.", dnsName), nil
+			}).(pulumi.StringOutput),
 			ManagedZone: prod.Name,
 			Type:        pulumi.String("CNAME"),
 			Ttl:         pulumi.Int(300),
@@ -578,6 +612,7 @@ import pulumi_gcp as gcp
 
 prod = gcp.dns.ManagedZone("prod", dns_name="prod.mydomain.com.")
 cname = gcp.dns.RecordSet("cname",
+    name=prod.dns_name.apply(lambda dns_name: f"frontend.{dns_name}"),
     managed_zone=prod.name,
     type="CNAME",
     ttl=300,
@@ -594,6 +629,7 @@ import * as gcp from "@pulumi/gcp";
 
 const prod = new gcp.dns.ManagedZone("prod", {dnsName: "prod.mydomain.com."});
 const cname = new gcp.dns.RecordSet("cname", {
+    name: pulumi.interpolate`frontend.${prod.dnsName}`,
     managedZone: prod.name,
     type: "CNAME",
     ttl: 300,
@@ -799,6 +835,16 @@ reside.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The DNS name this record set will apply to.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
         <span id="rrdatas_csharp">
 <a href="#rrdatas_csharp" style="color: inherit; text-decoration: inherit;">Rrdatas</a>
 </span>
@@ -830,16 +876,6 @@ whose meaning depends on the DNS type. For TXT record, if the string data contai
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The DNS name this record set will apply to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
@@ -865,6 +901,16 @@ is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The name of the zone in which this record set will
 reside.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The DNS name this record set will apply to.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -899,16 +945,6 @@ whose meaning depends on the DNS type. For TXT record, if the string data contai
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The DNS name this record set will apply to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
@@ -934,6 +970,16 @@ is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The name of the zone in which this record set will
 reside.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The DNS name this record set will apply to.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -968,16 +1014,6 @@ whose meaning depends on the DNS type. For TXT record, if the string data contai
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The DNS name this record set will apply to.
-{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
@@ -1003,6 +1039,16 @@ is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The name of the zone in which this record set will
 reside.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The DNS name this record set will apply to.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1034,16 +1080,6 @@ whose meaning depends on the DNS type. For TXT record, if the string data contai
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The DNS record set type.
-{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The DNS name this record set will apply to.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">

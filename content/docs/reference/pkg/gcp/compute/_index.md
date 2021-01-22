@@ -130,6 +130,7 @@ Explore the resources and functions of the compute module in the GCP package.
     <li><a href="getinstance" title="GetInstance"><span class="symbol function"></span>GetInstance</a></li>
     <li><a href="getinstancegroup" title="GetInstanceGroup"><span class="symbol function"></span>GetInstanceGroup</a></li>
     <li><a href="getinstanceserialport" title="GetInstanceSerialPort"><span class="symbol function"></span>GetInstanceSerialPort</a></li>
+    <li><a href="getinstancetemplate" title="GetInstanceTemplate"><span class="symbol function"></span>GetInstanceTemplate</a></li>
     <li><a href="getlbipranges" title="GetLBIPRanges"><span class="symbol function"></span>GetLBIPRanges</a></li>
     <li><a href="getnetblockipranges" title="GetNetblockIPRanges"><span class="symbol function"></span>GetNetblockIPRanges</a></li>
     <li><a href="getnetwork" title="GetNetwork"><span class="symbol function"></span>GetNetwork</a></li>
@@ -155,7 +156,7 @@ Explore the resources and functions of the compute module in the GCP package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`google-beta` Terraform Provider](https://github.com/hashicorp/terraform-provider-google-beta).</dd>
 	<dt>Version</dt>
-	<dd>4.7.0</dd>
+	<dd>4.8.0</dd>
 </dl>
 
 

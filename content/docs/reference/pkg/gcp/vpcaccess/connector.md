@@ -36,7 +36,6 @@ class MyStack : Stack
         {
             IpCidrRange = "10.8.0.0/28",
             Network = "default",
-            Region = "us-central1",
         });
     }
 
@@ -59,7 +58,6 @@ func main() {
 		_, err := vpcaccess.NewConnector(ctx, "connector", &vpcaccess.ConnectorArgs{
 			IpCidrRange: pulumi.String("10.8.0.0/28"),
 			Network:     pulumi.String("default"),
-			Region:      pulumi.String("us-central1"),
 		})
 		if err != nil {
 			return err
@@ -78,8 +76,7 @@ import pulumi_gcp as gcp
 
 connector = gcp.vpcaccess.Connector("connector",
     ip_cidr_range="10.8.0.0/28",
-    network="default",
-    region="us-central1")
+    network="default")
 ```
 
 {{% /example %}}
@@ -93,7 +90,6 @@ import * as gcp from "@pulumi/gcp";
 const connector = new gcp.vpcaccess.Connector("connector", {
     ipCidrRange: "10.8.0.0/28",
     network: "default",
-    region: "us-central1",
 });
 ```
 
@@ -302,16 +298,6 @@ The Connector resource accepts the following [input]({{< relref "/docs/intro/con
     </dt>
     <dd>{{% md %}}Name of a VPC network.
 {{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="region_csharp">
-<a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Region where the VPC Access connector resides
-{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="maxthroughput_csharp">
@@ -353,6 +339,16 @@ The Connector resource accepts the following [input]({{< relref "/docs/intro/con
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="region_csharp">
+<a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Region where the VPC Access connector resides. If it is not provided, the provider region is used.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -378,16 +374,6 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of a VPC network.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="region_go">
-<a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Region where the VPC Access connector resides
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -430,6 +416,16 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="region_go">
+<a href="#region_go" style="color: inherit; text-decoration: inherit;">Region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Region where the VPC Access connector resides. If it is not provided, the provider region is used.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -455,16 +451,6 @@ If it is not provided, the provider project is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of a VPC network.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="region_nodejs">
-<a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Region where the VPC Access connector resides
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -507,6 +493,16 @@ If it is not provided, the provider project is used.
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="region_nodejs">
+<a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Region where the VPC Access connector resides. If it is not provided, the provider region is used.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -532,16 +528,6 @@ If it is not provided, the provider project is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of a VPC network.
-{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="region_python">
-<a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Region where the VPC Access connector resides
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -583,6 +569,16 @@ If it is not provided, the provider project is used.
     </dt>
     <dd>{{% md %}}The ID of the project in which the resource belongs.
 If it is not provided, the provider project is used.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="region_python">
+<a href="#region_python" style="color: inherit; text-decoration: inherit;">region</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Region where the VPC Access connector resides. If it is not provided, the provider region is used.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -929,7 +925,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Region where the VPC Access connector resides
+    <dd>{{% md %}}Region where the VPC Access connector resides. If it is not provided, the provider region is used.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1026,7 +1022,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Region where the VPC Access connector resides
+    <dd>{{% md %}}Region where the VPC Access connector resides. If it is not provided, the provider region is used.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1123,7 +1119,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Region where the VPC Access connector resides
+    <dd>{{% md %}}Region where the VPC Access connector resides. If it is not provided, the provider region is used.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1220,7 +1216,7 @@ If it is not provided, the provider project is used.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Region where the VPC Access connector resides
+    <dd>{{% md %}}Region where the VPC Access connector resides. If it is not provided, the provider region is used.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">

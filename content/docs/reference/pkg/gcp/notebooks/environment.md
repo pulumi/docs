@@ -34,14 +34,11 @@ class MyStack : Stack
     {
         var environment = new Gcp.Notebooks.Environment("environment", new Gcp.Notebooks.EnvironmentArgs
         {
-            Location = "us-west1-a",
             ContainerImage = new Gcp.Notebooks.Inputs.EnvironmentContainerImageArgs
             {
                 Repository = "gcr.io/deeplearning-platform-release/base-cpu",
             },
-        }, new CustomResourceOptions
-        {
-            Provider = google_beta,
+            Location = "us-west1-a",
         });
     }
 
@@ -62,11 +59,11 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := notebooks.NewEnvironment(ctx, "environment", &notebooks.EnvironmentArgs{
-			Location: pulumi.String("us-west1-a"),
 			ContainerImage: &notebooks.EnvironmentContainerImageArgs{
 				Repository: pulumi.String("gcr.io/deeplearning-platform-release/base-cpu"),
 			},
-		}, pulumi.Provider(google_beta))
+			Location: pulumi.String("us-west1-a"),
+		})
 		if err != nil {
 			return err
 		}
@@ -83,11 +80,10 @@ import pulumi
 import pulumi_gcp as gcp
 
 environment = gcp.notebooks.Environment("environment",
-    location="us-west1-a",
     container_image=gcp.notebooks.EnvironmentContainerImageArgs(
         repository="gcr.io/deeplearning-platform-release/base-cpu",
     ),
-    opts=pulumi.ResourceOptions(provider=google_beta))
+    location="us-west1-a")
 ```
 
 {{% /example %}}
@@ -99,12 +95,10 @@ import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
 const environment = new gcp.notebooks.Environment("environment", {
-    location: "us-west1-a",
     containerImage: {
         repository: "gcr.io/deeplearning-platform-release/base-cpu",
     },
-}, {
-    provider: google_beta,
+    location: "us-west1-a",
 });
 ```
 

@@ -228,15 +228,16 @@ expanded as the set of supported services is expanded.
 a resource will be sent to all emails in the settings of ancestor resources of that resource. A maximum of 50 email
 addresses are allowed.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="project_csharp">
 <a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Deprecated in favor of 'project_id'
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of `project_id`{{% /md %}}</p></dd>
 </dl>
 {{% /choosable %}}
 
@@ -278,15 +279,16 @@ expanded as the set of supported services is expanded.
 a resource will be sent to all emails in the settings of ancestor resources of that resource. A maximum of 50 email
 addresses are allowed.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="project_go">
 <a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Deprecated in favor of 'project_id'
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of `project_id`{{% /md %}}</p></dd>
 </dl>
 {{% /choosable %}}
 
@@ -328,15 +330,16 @@ expanded as the set of supported services is expanded.
 a resource will be sent to all emails in the settings of ancestor resources of that resource. A maximum of 50 email
 addresses are allowed.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="project_nodejs">
 <a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Deprecated in favor of 'project_id'
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of `project_id`{{% /md %}}</p></dd>
 </dl>
 {{% /choosable %}}
 
@@ -378,15 +381,16 @@ expanded as the set of supported services is expanded.
 a resource will be sent to all emails in the settings of ancestor resources of that resource. A maximum of 50 email
 addresses are allowed.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="project_python">
 <a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Deprecated in favor of 'project_id'
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of `project_id`{{% /md %}}</p></dd>
 </dl>
 {{% /choosable %}}
 
@@ -428,7 +432,7 @@ of the Project.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource name of the settings. Format is "projects/{project_id/accessApprovalSettings"
+    <dd>{{% md %}}The resource name of the settings. Format is "projects/{project_id}/accessApprovalSettings"
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -464,7 +468,7 @@ of the Project.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource name of the settings. Format is "projects/{project_id/accessApprovalSettings"
+    <dd>{{% md %}}The resource name of the settings. Format is "projects/{project_id}/accessApprovalSettings"
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -500,7 +504,7 @@ of the Project.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource name of the settings. Format is "projects/{project_id/accessApprovalSettings"
+    <dd>{{% md %}}The resource name of the settings. Format is "projects/{project_id}/accessApprovalSettings"
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -536,7 +540,7 @@ of the Project.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource name of the settings. Format is "projects/{project_id/accessApprovalSettings"
+    <dd>{{% md %}}The resource name of the settings. Format is "projects/{project_id}/accessApprovalSettings"
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -699,7 +703,7 @@ expanded as the set of supported services is expanded.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource name of the settings. Format is "projects/{project_id/accessApprovalSettings"
+    <dd>{{% md %}}The resource name of the settings. Format is "projects/{project_id}/accessApprovalSettings"
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -713,15 +717,16 @@ expanded as the set of supported services is expanded.
 a resource will be sent to all emails in the settings of ancestor resources of that resource. A maximum of 50 email
 addresses are allowed.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_project_csharp">
 <a href="#state_project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Deprecated in favor of 'project_id'
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of `project_id`{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_projectid_csharp">
@@ -770,7 +775,7 @@ expanded as the set of supported services is expanded.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource name of the settings. Format is "projects/{project_id/accessApprovalSettings"
+    <dd>{{% md %}}The resource name of the settings. Format is "projects/{project_id}/accessApprovalSettings"
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -784,15 +789,16 @@ expanded as the set of supported services is expanded.
 a resource will be sent to all emails in the settings of ancestor resources of that resource. A maximum of 50 email
 addresses are allowed.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_project_go">
 <a href="#state_project_go" style="color: inherit; text-decoration: inherit;">Project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Deprecated in favor of 'project_id'
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of `project_id`{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_projectid_go">
@@ -841,7 +847,7 @@ expanded as the set of supported services is expanded.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The resource name of the settings. Format is "projects/{project_id/accessApprovalSettings"
+    <dd>{{% md %}}The resource name of the settings. Format is "projects/{project_id}/accessApprovalSettings"
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -855,15 +861,16 @@ expanded as the set of supported services is expanded.
 a resource will be sent to all emails in the settings of ancestor resources of that resource. A maximum of 50 email
 addresses are allowed.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_project_nodejs">
 <a href="#state_project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Deprecated in favor of 'project_id'
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of `project_id`{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_projectid_nodejs">
@@ -912,7 +919,7 @@ expanded as the set of supported services is expanded.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The resource name of the settings. Format is "projects/{project_id/accessApprovalSettings"
+    <dd>{{% md %}}The resource name of the settings. Format is "projects/{project_id}/accessApprovalSettings"
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -926,15 +933,16 @@ expanded as the set of supported services is expanded.
 a resource will be sent to all emails in the settings of ancestor resources of that resource. A maximum of 50 email
 addresses are allowed.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_project_python">
 <a href="#state_project_python" style="color: inherit; text-decoration: inherit;">project</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Deprecated in favor of 'project_id'
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Deprecated in favor of `project_id`{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_project_id_python">
