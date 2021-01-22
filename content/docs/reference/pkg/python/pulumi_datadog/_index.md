@@ -33,7 +33,7 @@ anything, please consult the source <a class="reference external" href="https://
 
 <dl class="py class">
 <dt id="pulumi_datadog.AwaitableGetMonitorResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_datadog.</code><code class="sig-name descname">AwaitableGetMonitorResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">enable_logs_sample</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">escalation_message</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">evaluation_delay</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">include_tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">locked</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">message</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">monitor_tags_filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_filter</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">new_host_delay</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">no_data_timeframe</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">notify_audit</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">notify_no_data</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">query</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">renotify_interval</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">require_full_window</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags_filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">threshold_windows</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">thresholds</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">timeout_h</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_datadog.AwaitableGetMonitorResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_datadog.</code><code class="sig-name descname">AwaitableGetMonitorResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">enable_logs_sample</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">escalation_message</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">evaluation_delay</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">include_tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">locked</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">message</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">monitor_tags_filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">monitor_threshold_windows</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">monitor_thresholds</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_filter</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">new_host_delay</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">no_data_timeframe</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">notify_audit</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">notify_no_data</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">query</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">renotify_interval</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">require_full_window</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags_filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">threshold_windows</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">thresholds</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">timeout_h</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_datadog.AwaitableGetMonitorResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py class">
@@ -1225,7 +1225,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_datadog.GetMonitorResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_datadog.</code><code class="sig-name descname">GetMonitorResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">enable_logs_sample</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">escalation_message</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">evaluation_delay</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">include_tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">locked</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">message</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">monitor_tags_filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_filter</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">new_host_delay</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">no_data_timeframe</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">notify_audit</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">notify_no_data</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">query</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">renotify_interval</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">require_full_window</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags_filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">threshold_windows</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">thresholds</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">timeout_h</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_datadog.GetMonitorResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_datadog.</code><code class="sig-name descname">GetMonitorResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">enable_logs_sample</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">escalation_message</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">evaluation_delay</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">include_tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">locked</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">message</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">monitor_tags_filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">monitor_threshold_windows</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">monitor_thresholds</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name_filter</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">new_host_delay</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">no_data_timeframe</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">notify_audit</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">notify_no_data</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">query</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">renotify_interval</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">require_full_window</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags_filters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">threshold_windows</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">thresholds</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">timeout_h</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_datadog.GetMonitorResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getMonitor.</p>
 <dl class="py method">
 <dt id="pulumi_datadog.GetMonitorResult.id">
@@ -1285,16 +1285,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_datadog.LogsArchive">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_datadog.</code><code class="sig-name descname">LogsArchive</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">azure</span><span class="p">:</span> <span class="n">Union[LogsArchiveAzureArgs, Mapping[str, Any], Awaitable[Union[LogsArchiveAzureArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">gcs</span><span class="p">:</span> <span class="n">Union[LogsArchiveGcsArgs, Mapping[str, Any], Awaitable[Union[LogsArchiveGcsArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">include_tags</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">query</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rehydration_tags</span><span class="p">:</span> <span class="n">Union[Sequence[Union[str, Awaitable[str], Output[T]]], Awaitable[Sequence[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">s3</span><span class="p">:</span> <span class="n">Union[LogsArchiveS3Args, Mapping[str, Any], Awaitable[Union[LogsArchiveS3Args, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_datadog.LogsArchive" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides a Datadog <a class="reference external" href="https://docs.datadoghq.com/api/v2/logs-archives/">Logs Archive API</a> resource, which is used to create and manage Datadog logs archives.</p>
-<p>Create a Datadog logs archive:</p>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_datadog.</code><code class="sig-name descname">LogsArchive</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">azure</span><span class="p">:</span> <span class="n">Union[LogsArchiveAzureArgs, Mapping[str, Any], Awaitable[Union[LogsArchiveAzureArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">azure_archive</span><span class="p">:</span> <span class="n">Union[LogsArchiveAzureArchiveArgs, Mapping[str, Any], Awaitable[Union[LogsArchiveAzureArchiveArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">gcs</span><span class="p">:</span> <span class="n">Union[LogsArchiveGcsArgs, Mapping[str, Any], Awaitable[Union[LogsArchiveGcsArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">gcs_archive</span><span class="p">:</span> <span class="n">Union[LogsArchiveGcsArchiveArgs, Mapping[str, Any], Awaitable[Union[LogsArchiveGcsArchiveArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">include_tags</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">query</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rehydration_tags</span><span class="p">:</span> <span class="n">Union[Sequence[Union[str, Awaitable[str], Output[T]]], Awaitable[Sequence[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">s3</span><span class="p">:</span> <span class="n">Union[LogsArchiveS3Args, Mapping[str, Any], Awaitable[Union[LogsArchiveS3Args, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">s3_archive</span><span class="p">:</span> <span class="n">Union[LogsArchiveS3ArchiveArgs, Mapping[str, Any], Awaitable[Union[LogsArchiveS3ArchiveArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_datadog.LogsArchive" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides a Datadog Logs Archive API resource, which is used to create and manage Datadog logs archives.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_datadog</span> <span class="k">as</span> <span class="nn">datadog</span>
 
 <span class="n">my_s3_archive</span> <span class="o">=</span> <span class="n">datadog</span><span class="o">.</span><span class="n">LogsArchive</span><span class="p">(</span><span class="s2">&quot;myS3Archive&quot;</span><span class="p">,</span>
     <span class="n">name</span><span class="o">=</span><span class="s2">&quot;my s3 archive&quot;</span><span class="p">,</span>
     <span class="n">query</span><span class="o">=</span><span class="s2">&quot;service:myservice&quot;</span><span class="p">,</span>
-    <span class="n">s3</span><span class="o">=</span><span class="n">datadog</span><span class="o">.</span><span class="n">LogsArchiveS3Args</span><span class="p">(</span>
+    <span class="n">s3_archive</span><span class="o">=</span><span class="n">datadog</span><span class="o">.</span><span class="n">LogsArchiveS3ArchiveArgs</span><span class="p">(</span>
         <span class="n">account_id</span><span class="o">=</span><span class="s2">&quot;001234567888&quot;</span><span class="p">,</span>
         <span class="n">bucket</span><span class="o">=</span><span class="s2">&quot;my-bucket&quot;</span><span class="p">,</span>
         <span class="n">path</span><span class="o">=</span><span class="s2">&quot;/path/foo&quot;</span><span class="p">,</span>
@@ -1302,7 +1301,50 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="p">))</span>
 </pre></div>
 </div>
-<p>Logs archives can be imported using their public string ID, e.g.</p>
+<ul class="simple">
+<li><p><strong>name</strong> (String, Required) Your archive name.</p></li>
+<li><p><strong>query</strong> (String, Required) The archive query/filter. Logs matching this query are included in the archive.</p></li>
+</ul>
+<ul class="simple">
+<li><p><strong>azure</strong> (Map of String, Optional, Deprecated) Definition of an azure archive.</p></li>
+<li><p><strong>azure_archive</strong> (Block List, Max: 1) Definition of an azure archive. (see below for nested schema)</p></li>
+<li><p><strong>gcs</strong> (Map of String, Optional, Deprecated) Definition of a GCS archive.</p></li>
+<li><p><strong>gcs_archive</strong> (Block List, Max: 1) Definition of a GCS archive. (see below for nested schema)</p></li>
+<li><p><strong>id</strong> (String, Optional) The ID of this resource.</p></li>
+<li><p><strong>include_tags</strong> (Boolean, Optional) To store the tags in the archive, set the value <code class="docutils literal notranslate"><span class="pre">true</span></code>. If it is set to <code class="docutils literal notranslate"><span class="pre">false</span></code>, the tags will be dropped when the logs are sent to the archive.</p></li>
+<li><p><strong>rehydration_tags</strong> (List of String, Optional) An array of tags to add to rehydrated logs from an archive.</p></li>
+<li><p><strong>s3</strong> (Map of String, Optional, Deprecated) Definition of an s3 archive.</p></li>
+<li><p><strong>s3_archive</strong> (Block List, Max: 1) Definition of an s3 archive. (see below for nested schema)</p></li>
+</ul>
+<p><span class="raw-html-m2r"><a id="nestedblock--azure_archive"></a></span></p>
+<p>Required:</p>
+<ul class="simple">
+<li><p><strong>client_id</strong> (String, Required) Your client id.</p></li>
+<li><p><strong>container</strong> (String, Required) The container where the archive will be stored.</p></li>
+<li><p><strong>storage_account</strong> (String, Required) The associated storage account.</p></li>
+<li><p><strong>tenant_id</strong> (String, Required) Your tenant id.</p></li>
+</ul>
+<p>Optional:</p>
+<ul class="simple">
+<li><p><strong>path</strong> (String, Optional) The path where the archive will be stored.</p></li>
+</ul>
+<p><span class="raw-html-m2r"><a id="nestedblock--gcs_archive"></a></span></p>
+<p>Required:</p>
+<ul class="simple">
+<li><p><strong>bucket</strong> (String, Required) Name of your GCS bucket.</p></li>
+<li><p><strong>client_email</strong> (String, Required) Your client email.</p></li>
+<li><p><strong>path</strong> (String, Required) Path where the archive will be stored.</p></li>
+<li><p><strong>project_id</strong> (String, Required) Your project id.</p></li>
+</ul>
+<p><span class="raw-html-m2r"><a id="nestedblock--s3_archive"></a></span></p>
+<p>Required:</p>
+<ul class="simple">
+<li><p><strong>account_id</strong> (String, Required) Your AWS account id.</p></li>
+<li><p><strong>bucket</strong> (String, Required) Name of your s3 bucket.</p></li>
+<li><p><strong>path</strong> (String, Required) Path where the archive will be stored.</p></li>
+<li><p><strong>role_name</strong> (String, Required) Your AWS role name</p></li>
+</ul>
+<p>Import is supported using the following syntax</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import datadog:index/logsArchive:LogsArchive my_s3_archive 1Aabc2_dfQPLnXy3HlfK4hi
 </pre></div>
 </div>
@@ -1312,19 +1354,22 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>azure</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'LogsArchiveAzureArgs'</em><em>]</em><em>]</em>) – Definition of an azure archive.</p></li>
+<li><p><strong>azure_archive</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'LogsArchiveAzureArchiveArgs'</em><em>]</em><em>]</em>) – Definition of an azure archive.</p></li>
 <li><p><strong>gcs</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'LogsArchiveGcsArgs'</em><em>]</em><em>]</em>) – Definition of a GCS archive.</p></li>
+<li><p><strong>gcs_archive</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'LogsArchiveGcsArchiveArgs'</em><em>]</em><em>]</em>) – Definition of a GCS archive.</p></li>
 <li><p><strong>include_tags</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – To store the tags in the archive, set the value <code class="docutils literal notranslate"><span class="pre">true</span></code>. If it is set to <code class="docutils literal notranslate"><span class="pre">false</span></code>, the tags will be dropped when the logs
 are sent to the archive.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Your archive name.</p></li>
 <li><p><strong>query</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The archive query/filter. Logs matching this query are included in the archive.</p></li>
 <li><p><strong>rehydration_tags</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em><em>]</em>) – An array of tags to add to rehydrated logs from an archive.</p></li>
 <li><p><strong>s3</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'LogsArchiveS3Args'</em><em>]</em><em>]</em>) – Definition of an s3 archive.</p></li>
+<li><p><strong>s3_archive</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'LogsArchiveS3ArchiveArgs'</em><em>]</em><em>]</em>) – Definition of an s3 archive.</p></li>
 </ul>
 </dd>
 </dl>
 <dl class="py method">
 <dt id="pulumi_datadog.LogsArchive.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">azure</span><span class="p">:</span> <span class="n">Union[LogsArchiveAzureArgs, Mapping[str, Any], Awaitable[Union[LogsArchiveAzureArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">gcs</span><span class="p">:</span> <span class="n">Union[LogsArchiveGcsArgs, Mapping[str, Any], Awaitable[Union[LogsArchiveGcsArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">include_tags</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">query</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rehydration_tags</span><span class="p">:</span> <span class="n">Union[Sequence[Union[str, Awaitable[str], Output[T]]], Awaitable[Sequence[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">s3</span><span class="p">:</span> <span class="n">Union[LogsArchiveS3Args, Mapping[str, Any], Awaitable[Union[LogsArchiveS3Args, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_datadog.logs_archive.LogsArchive<a class="headerlink" href="#pulumi_datadog.LogsArchive.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">azure</span><span class="p">:</span> <span class="n">Union[LogsArchiveAzureArgs, Mapping[str, Any], Awaitable[Union[LogsArchiveAzureArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">azure_archive</span><span class="p">:</span> <span class="n">Union[LogsArchiveAzureArchiveArgs, Mapping[str, Any], Awaitable[Union[LogsArchiveAzureArchiveArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">gcs</span><span class="p">:</span> <span class="n">Union[LogsArchiveGcsArgs, Mapping[str, Any], Awaitable[Union[LogsArchiveGcsArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">gcs_archive</span><span class="p">:</span> <span class="n">Union[LogsArchiveGcsArchiveArgs, Mapping[str, Any], Awaitable[Union[LogsArchiveGcsArchiveArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">include_tags</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">query</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">rehydration_tags</span><span class="p">:</span> <span class="n">Union[Sequence[Union[str, Awaitable[str], Output[T]]], Awaitable[Sequence[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">s3</span><span class="p">:</span> <span class="n">Union[LogsArchiveS3Args, Mapping[str, Any], Awaitable[Union[LogsArchiveS3Args, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">s3_archive</span><span class="p">:</span> <span class="n">Union[LogsArchiveS3ArchiveArgs, Mapping[str, Any], Awaitable[Union[LogsArchiveS3ArchiveArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_datadog.logs_archive.LogsArchive<a class="headerlink" href="#pulumi_datadog.LogsArchive.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing LogsArchive resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -1334,13 +1379,16 @@ properties used to qualify the lookup.</p>
 <li><p><strong>id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>azure</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'LogsArchiveAzureArgs'</em><em>]</em><em>]</em>) – Definition of an azure archive.</p></li>
+<li><p><strong>azure_archive</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'LogsArchiveAzureArchiveArgs'</em><em>]</em><em>]</em>) – Definition of an azure archive.</p></li>
 <li><p><strong>gcs</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'LogsArchiveGcsArgs'</em><em>]</em><em>]</em>) – Definition of a GCS archive.</p></li>
+<li><p><strong>gcs_archive</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'LogsArchiveGcsArchiveArgs'</em><em>]</em><em>]</em>) – Definition of a GCS archive.</p></li>
 <li><p><strong>include_tags</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – To store the tags in the archive, set the value <code class="docutils literal notranslate"><span class="pre">true</span></code>. If it is set to <code class="docutils literal notranslate"><span class="pre">false</span></code>, the tags will be dropped when the logs
 are sent to the archive.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Your archive name.</p></li>
 <li><p><strong>query</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The archive query/filter. Logs matching this query are included in the archive.</p></li>
 <li><p><strong>rehydration_tags</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em><em>]</em>) – An array of tags to add to rehydrated logs from an archive.</p></li>
 <li><p><strong>s3</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'LogsArchiveS3Args'</em><em>]</em><em>]</em>) – Definition of an s3 archive.</p></li>
+<li><p><strong>s3_archive</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'LogsArchiveS3ArchiveArgs'</em><em>]</em><em>]</em>) – Definition of an s3 archive.</p></li>
 </ul>
 </dd>
 </dl>
@@ -1353,8 +1401,20 @@ are sent to the archive.</p></li>
 </dd></dl>
 
 <dl class="py method">
+<dt id="pulumi_datadog.LogsArchive.azure_archive">
+<em class="property">property </em><code class="sig-name descname">azure_archive</code><a class="headerlink" href="#pulumi_datadog.LogsArchive.azure_archive" title="Permalink to this definition">¶</a></dt>
+<dd><p>Definition of an azure archive.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt id="pulumi_datadog.LogsArchive.gcs">
 <em class="property">property </em><code class="sig-name descname">gcs</code><a class="headerlink" href="#pulumi_datadog.LogsArchive.gcs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Definition of a GCS archive.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_datadog.LogsArchive.gcs_archive">
+<em class="property">property </em><code class="sig-name descname">gcs_archive</code><a class="headerlink" href="#pulumi_datadog.LogsArchive.gcs_archive" title="Permalink to this definition">¶</a></dt>
 <dd><p>Definition of a GCS archive.</p>
 </dd></dl>
 
@@ -1386,6 +1446,12 @@ are sent to the archive.</p>
 <dl class="py method">
 <dt id="pulumi_datadog.LogsArchive.s3">
 <em class="property">property </em><code class="sig-name descname">s3</code><a class="headerlink" href="#pulumi_datadog.LogsArchive.s3" title="Permalink to this definition">¶</a></dt>
+<dd><p>Definition of an s3 archive.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_datadog.LogsArchive.s3_archive">
+<em class="property">property </em><code class="sig-name descname">s3_archive</code><a class="headerlink" href="#pulumi_datadog.LogsArchive.s3_archive" title="Permalink to this definition">¶</a></dt>
 <dd><p>Definition of an s3 archive.</p>
 </dd></dl>
 
@@ -2033,6 +2099,155 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dd></dl>
 
 <dl class="py class">
+<dt id="pulumi_datadog.LogsMetric">
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_datadog.</code><code class="sig-name descname">LogsMetric</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">compute</span><span class="p">:</span> <span class="n">Union[LogsMetricComputeArgs, Mapping[str, Any], Awaitable[Union[LogsMetricComputeArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">filter</span><span class="p">:</span> <span class="n">Union[LogsMetricFilterArgs, Mapping[str, Any], Awaitable[Union[LogsMetricFilterArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">group_bies</span><span class="p">:</span> <span class="n">Union[Sequence[Union[LogsMetricGroupByArgs, Mapping[str, Any], Awaitable[Union[LogsMetricGroupByArgs, Mapping[str, Any]]], Output[T]]], Awaitable[Sequence[Union[LogsMetricGroupByArgs, Mapping[str, Any], Awaitable[Union[LogsMetricGroupByArgs, Mapping[str, Any]]], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_datadog.LogsMetric" title="Permalink to this definition">¶</a></dt>
+<dd><p>Resource for interacting with the logs_metric API</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">pulumi_datadog</span> <span class="k">as</span> <span class="nn">datadog</span>
+
+<span class="n">testing_logs_metric</span> <span class="o">=</span> <span class="n">datadog</span><span class="o">.</span><span class="n">LogsMetric</span><span class="p">(</span><span class="s2">&quot;testingLogsMetric&quot;</span><span class="p">,</span>
+    <span class="n">compute</span><span class="o">=</span><span class="n">datadog</span><span class="o">.</span><span class="n">LogsMetricComputeArgs</span><span class="p">(</span>
+        <span class="n">aggregation_type</span><span class="o">=</span><span class="s2">&quot;distribution&quot;</span><span class="p">,</span>
+        <span class="n">path</span><span class="o">=</span><span class="s2">&quot;@duration&quot;</span><span class="p">,</span>
+    <span class="p">),</span>
+    <span class="nb">filter</span><span class="o">=</span><span class="n">datadog</span><span class="o">.</span><span class="n">LogsMetricFilterArgs</span><span class="p">(</span>
+        <span class="n">query</span><span class="o">=</span><span class="s2">&quot;service:test&quot;</span><span class="p">,</span>
+    <span class="p">),</span>
+    <span class="n">group_bies</span><span class="o">=</span><span class="p">[</span><span class="n">datadog</span><span class="o">.</span><span class="n">LogsMetricGroupByArgs</span><span class="p">(</span>
+        <span class="n">path</span><span class="o">=</span><span class="s2">&quot;@status&quot;</span><span class="p">,</span>
+        <span class="n">tag_name</span><span class="o">=</span><span class="s2">&quot;status&quot;</span><span class="p">,</span>
+    <span class="p">)],</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;testing.logs.metric&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><strong>compute</strong> (Block List, Min: 1, Max: 1) The compute rule to compute the log-based metric. This field can’t be updated after creation. (see below for nested schema)</p></li>
+<li><p><strong>filter</strong> (Block List, Min: 1, Max: 1) The log-based metric filter. Logs matching this filter will be aggregated in this metric. (see below for nested schema)</p></li>
+<li><p><strong>name</strong> (String, Required) The name of the log-based metric. This field can’t be updated after creation.</p></li>
+</ul>
+<ul class="simple">
+<li><p><strong>group_by</strong> (Block List) The rules for the group by. (see below for nested schema)</p></li>
+<li><p><strong>id</strong> (String, Optional) The ID of this resource.</p></li>
+</ul>
+<p><span class="raw-html-m2r"><a id="nestedblock--compute"></a></span></p>
+<p>Required:</p>
+<ul class="simple">
+<li><p><strong>aggregation_type</strong> (String, Required) The type of aggregation to use. This field can’t be updated after creation.</p></li>
+</ul>
+<p>Optional:</p>
+<ul class="simple">
+<li><p><strong>path</strong> (String, Optional) The path to the value the log-based metric will aggregate on (only used if the aggregation type is a “distribution”). This field can’t be updated after creation.</p></li>
+</ul>
+<p><span class="raw-html-m2r"><a id="nestedblock--filter"></a></span></p>
+<p>Required:</p>
+<ul class="simple">
+<li><p><strong>query</strong> (String, Required) The search query - following the log search syntax.</p></li>
+</ul>
+<p><span class="raw-html-m2r"><a id="nestedblock--group_by"></a></span></p>
+<p>Required:</p>
+<ul class="simple">
+<li><p><strong>path</strong> (String, Required) The path to the value the log-based metric will be aggregated over.</p></li>
+<li><p><strong>tag_name</strong> (String, Required) Name of the tag that gets created.</p></li>
+</ul>
+<p>Import is supported using the following syntax</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import datadog:index/logsMetric:LogsMetric testing_logs_metric testing.logs.metric
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>compute</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'LogsMetricComputeArgs'</em><em>]</em><em>]</em>) – The compute rule to compute the log-based metric. This field can’t be updated after creation.</p></li>
+<li><p><strong>filter</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'LogsMetricFilterArgs'</em><em>]</em><em>]</em>) – The log-based metric filter. Logs matching this filter will be aggregated in this metric.</p></li>
+<li><p><strong>group_bies</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'LogsMetricGroupByArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – The rules for the group by.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the log-based metric. This field can’t be updated after creation.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="pulumi_datadog.LogsMetric.get">
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">compute</span><span class="p">:</span> <span class="n">Union[LogsMetricComputeArgs, Mapping[str, Any], Awaitable[Union[LogsMetricComputeArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">filter</span><span class="p">:</span> <span class="n">Union[LogsMetricFilterArgs, Mapping[str, Any], Awaitable[Union[LogsMetricFilterArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">group_bies</span><span class="p">:</span> <span class="n">Union[Sequence[Union[LogsMetricGroupByArgs, Mapping[str, Any], Awaitable[Union[LogsMetricGroupByArgs, Mapping[str, Any]]], Output[T]]], Awaitable[Sequence[Union[LogsMetricGroupByArgs, Mapping[str, Any], Awaitable[Union[LogsMetricGroupByArgs, Mapping[str, Any]]], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_datadog.logs_metric.LogsMetric<a class="headerlink" href="#pulumi_datadog.LogsMetric.get" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an existing LogsMetric resource’s state with the given name, id, and optional extra
+properties used to qualify the lookup.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
+<li><p><strong>id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique provider ID of the resource to lookup.</p></li>
+<li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
+<li><p><strong>compute</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'LogsMetricComputeArgs'</em><em>]</em><em>]</em>) – The compute rule to compute the log-based metric. This field can’t be updated after creation.</p></li>
+<li><p><strong>filter</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'LogsMetricFilterArgs'</em><em>]</em><em>]</em>) – The log-based metric filter. Logs matching this filter will be aggregated in this metric.</p></li>
+<li><p><strong>group_bies</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'LogsMetricGroupByArgs'</em><em>]</em><em>]</em><em>]</em><em>]</em>) – The rules for the group by.</p></li>
+<li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The name of the log-based metric. This field can’t be updated after creation.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_datadog.LogsMetric.compute">
+<em class="property">property </em><code class="sig-name descname">compute</code><a class="headerlink" href="#pulumi_datadog.LogsMetric.compute" title="Permalink to this definition">¶</a></dt>
+<dd><p>The compute rule to compute the log-based metric. This field can’t be updated after creation.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_datadog.LogsMetric.filter">
+<em class="property">property </em><code class="sig-name descname">filter</code><a class="headerlink" href="#pulumi_datadog.LogsMetric.filter" title="Permalink to this definition">¶</a></dt>
+<dd><p>The log-based metric filter. Logs matching this filter will be aggregated in this metric.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_datadog.LogsMetric.group_bies">
+<em class="property">property </em><code class="sig-name descname">group_bies</code><a class="headerlink" href="#pulumi_datadog.LogsMetric.group_bies" title="Permalink to this definition">¶</a></dt>
+<dd><p>The rules for the group by.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_datadog.LogsMetric.name">
+<em class="property">property </em><code class="sig-name descname">name</code><a class="headerlink" href="#pulumi_datadog.LogsMetric.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>The name of the log-based metric. This field can’t be updated after creation.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_datadog.LogsMetric.translate_output_property">
+<code class="sig-name descname">translate_output_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_datadog.LogsMetric.translate_output_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of output properties
+into a format of their choosing before writing those properties to the resource object.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_datadog.LogsMetric.translate_input_property">
+<code class="sig-name descname">translate_input_property</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prop</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_datadog.LogsMetric.translate_input_property" title="Permalink to this definition">¶</a></dt>
+<dd><p>Provides subclasses of Resource an opportunity to translate names of input properties into
+a format of their choosing before sending those properties to the Pulumi engine.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>prop</strong> (<em>str</em>) – A property name.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A potentially transformed property name.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
 <dt id="pulumi_datadog.LogsPipelineOrder">
 <em class="property">class </em><code class="sig-prename descclassname">pulumi_datadog.</code><code class="sig-name descname">LogsPipelineOrder</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">pipelines</span><span class="p">:</span> <span class="n">Union[Sequence[Union[str, Awaitable[str], Output[T]]], Awaitable[Sequence[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_datadog.LogsPipelineOrder" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Datadog <a class="reference external" href="https://docs.datadoghq.com/api/v1/logs-pipelines/">Logs Pipeline API</a> resource, which is used to manage Datadog log pipelines order.</p>
@@ -2277,58 +2492,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_datadog.Monitor">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_datadog.</code><code class="sig-name descname">Monitor</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_logs_sample</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">escalation_message</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">evaluation_delay</span><span class="p">:</span> <span class="n">Union[int, Awaitable[int], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">force_delete</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">include_tags</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">locked</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">message</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">new_host_delay</span><span class="p">:</span> <span class="n">Union[int, Awaitable[int], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">no_data_timeframe</span><span class="p">:</span> <span class="n">Union[int, Awaitable[int], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">notify_audit</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">notify_no_data</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">priority</span><span class="p">:</span> <span class="n">Union[int, Awaitable[int], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">query</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">renotify_interval</span><span class="p">:</span> <span class="n">Union[int, Awaitable[int], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">require_full_window</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">silenced</span><span class="p">:</span> <span class="n">Union[Mapping[str, Any], Awaitable[Mapping[str, Any]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="p">:</span> <span class="n">Union[Sequence[Union[str, Awaitable[str], Output[T]]], Awaitable[Sequence[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">threshold_windows</span><span class="p">:</span> <span class="n">Union[MonitorThresholdWindowsArgs, Mapping[str, Any], Awaitable[Union[MonitorThresholdWindowsArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">thresholds</span><span class="p">:</span> <span class="n">Union[MonitorThresholdsArgs, Mapping[str, Any], Awaitable[Union[MonitorThresholdsArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">timeout_h</span><span class="p">:</span> <span class="n">Union[int, Awaitable[int], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">validate</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_datadog.Monitor" title="Permalink to this definition">¶</a></dt>
-<dd><p>Provides a Datadog monitor resource. This can be used to create and manage Datadog monitors.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
-<span class="kn">import</span> <span class="nn">pulumi_datadog</span> <span class="k">as</span> <span class="nn">datadog</span>
-
-<span class="c1"># Create a new Datadog monitor</span>
-<span class="n">foo</span> <span class="o">=</span> <span class="n">datadog</span><span class="o">.</span><span class="n">Monitor</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span>
-    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Name for monitor foo&quot;</span><span class="p">,</span>
-    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;metric alert&quot;</span><span class="p">,</span>
-    <span class="n">message</span><span class="o">=</span><span class="s2">&quot;Monitor triggered. Notify: @hipchat-channel&quot;</span><span class="p">,</span>
-    <span class="n">escalation_message</span><span class="o">=</span><span class="s2">&quot;Escalation message @pagerduty&quot;</span><span class="p">,</span>
-    <span class="n">query</span><span class="o">=</span><span class="s2">&quot;avg(last_1h):avg:aws.ec2.cpu{environment:foo,host:foo} by </span><span class="si">{host}</span><span class="s2"> &gt; 4&quot;</span><span class="p">,</span>
-    <span class="n">thresholds</span><span class="o">=</span><span class="n">datadog</span><span class="o">.</span><span class="n">MonitorThresholdsArgs</span><span class="p">(</span>
-        <span class="n">warning</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
-        <span class="n">warning_recovery</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
-        <span class="n">critical</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span>
-        <span class="n">critical_recovery</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
-    <span class="p">),</span>
-    <span class="n">notify_no_data</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-    <span class="n">renotify_interval</span><span class="o">=</span><span class="mi">60</span><span class="p">,</span>
-    <span class="n">notify_audit</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-    <span class="n">timeout_h</span><span class="o">=</span><span class="mi">60</span><span class="p">,</span>
-    <span class="n">include_tags</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-    <span class="n">tags</span><span class="o">=</span><span class="p">[</span>
-        <span class="s2">&quot;foo:bar&quot;</span><span class="p">,</span>
-        <span class="s2">&quot;baz&quot;</span><span class="p">,</span>
-    <span class="p">])</span>
-</pre></div>
-</div>
-<p>There are two ways how to silence a single monitor:</p>
-<ul class="simple">
-<li><p>Mute it by hand</p></li>
-<li><p>Create a Downtime</p></li>
-</ul>
-<p>Both of these actions add a new value to the <code class="docutils literal notranslate"><span class="pre">silenced</span></code> map. This can be problematic if the <code class="docutils literal notranslate"><span class="pre">silenced</span></code> attribute doesn’t contain them in your application, as they would be removed on next <code class="docutils literal notranslate"><span class="pre">pulumi</span> <span class="pre">up</span></code> invocation. In order to prevent that from happening, you can add following to your monitor:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
-</pre></div>
-</div>
-<p>The above will make sure that any changes to the <code class="docutils literal notranslate"><span class="pre">silenced</span></code> attribute are ignored.</p>
-<p>This issue doesn’t apply to multi-monitor downtimes (those that don’t contain <code class="docutils literal notranslate"><span class="pre">monitor_id</span></code> ), as these don’t influence contents of the <code class="docutils literal notranslate"><span class="pre">silenced</span></code> attribute.</p>
-<p>You can compose monitors of all types in order to define more specific alert conditions (see the <a class="reference external" href="https://docs.datadoghq.com/monitors/monitor_types/composite/">doc</a>). You just need to reuse the ID of your <code class="docutils literal notranslate"><span class="pre">Monitor</span></code> resources. You can also compose any monitor with a <code class="docutils literal notranslate"><span class="pre">SyntheticsTest</span></code> by passing the computed <code class="docutils literal notranslate"><span class="pre">monitor_id</span></code> attribute in the query.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
-<span class="kn">import</span> <span class="nn">pulumi_datadog</span> <span class="k">as</span> <span class="nn">datadog</span>
-
-<span class="n">bar</span> <span class="o">=</span> <span class="n">datadog</span><span class="o">.</span><span class="n">Monitor</span><span class="p">(</span><span class="s2">&quot;bar&quot;</span><span class="p">,</span>
-    <span class="n">message</span><span class="o">=</span><span class="s2">&quot;This is a message&quot;</span><span class="p">,</span>
-    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Composite Monitor&quot;</span><span class="p">,</span>
-    <span class="n">query</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">datadog_monitor</span><span class="p">[</span><span class="s1">&#39;foo&#39;</span><span class="p">][</span><span class="s1">&#39;id&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2"> || </span><span class="si">{</span><span class="n">datadog_synthetics_test</span><span class="p">[</span><span class="s1">&#39;foo&#39;</span><span class="p">][</span><span class="s1">&#39;monitor_id&#39;</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
-    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;composite&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>Monitors can be imported using their numeric ID, e.g. console</p>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_datadog.</code><code class="sig-name descname">Monitor</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_logs_sample</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">escalation_message</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">evaluation_delay</span><span class="p">:</span> <span class="n">Union[int, Awaitable[int], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">force_delete</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">include_tags</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">locked</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">message</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">monitor_threshold_windows</span><span class="p">:</span> <span class="n">Union[MonitorMonitorThresholdWindowsArgs, Mapping[str, Any], Awaitable[Union[MonitorMonitorThresholdWindowsArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">monitor_thresholds</span><span class="p">:</span> <span class="n">Union[MonitorMonitorThresholdsArgs, Mapping[str, Any], Awaitable[Union[MonitorMonitorThresholdsArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">new_host_delay</span><span class="p">:</span> <span class="n">Union[int, Awaitable[int], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">no_data_timeframe</span><span class="p">:</span> <span class="n">Union[int, Awaitable[int], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">notify_audit</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">notify_no_data</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">priority</span><span class="p">:</span> <span class="n">Union[int, Awaitable[int], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">query</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">renotify_interval</span><span class="p">:</span> <span class="n">Union[int, Awaitable[int], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">require_full_window</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">silenced</span><span class="p">:</span> <span class="n">Union[Mapping[str, Any], Awaitable[Mapping[str, Any]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="p">:</span> <span class="n">Union[Sequence[Union[str, Awaitable[str], Output[T]]], Awaitable[Sequence[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">threshold_windows</span><span class="p">:</span> <span class="n">Union[MonitorThresholdWindowsArgs, Mapping[str, Any], Awaitable[Union[MonitorThresholdWindowsArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">thresholds</span><span class="p">:</span> <span class="n">Union[MonitorThresholdsArgs, Mapping[str, Any], Awaitable[Union[MonitorThresholdsArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">timeout_h</span><span class="p">:</span> <span class="n">Union[int, Awaitable[int], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">validate</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_datadog.Monitor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Import is supported using the following syntax</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import datadog:index/monitor:Monitor bytes_received_localhost <span class="m">2081</span>
 </pre></div>
 </div>
@@ -2337,39 +2502,59 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>enable_logs_sample</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – A boolean indicating whether or not to include a list of log values which triggered the alert. Defaults to false. This is only used by log monitors.</p></li>
+<li><p><strong>enable_logs_sample</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – A boolean indicating whether or not to include a list of log values which triggered the alert. This is only used by log
+monitors. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><strong>escalation_message</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A message to include with a re-notification. Supports the <code class="docutils literal notranslate"><span class="pre">&#64;username</span></code> notification allowed elsewhere.</p></li>
-<li><p><strong>evaluation_delay</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Time (in seconds) to delay evaluation, as a non-negative integer.</p></li>
-<li><p><strong>force_delete</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – A boolean indicating whether this monitor can be deleted even if it’s referenced by other resources (e.g. SLO, composite monitor).</p></li>
-<li><p><strong>include_tags</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – A boolean indicating whether notifications from this monitor automatically insert its triggering tags into the title. Defaults to true.</p></li>
-<li><p><strong>locked</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – A boolean indicating whether changes to to this monitor should be restricted to the creator or admins. Defaults to False.</p></li>
+<li><p><strong>evaluation_delay</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – (Only applies to metric alert) Time (in seconds) to delay evaluation, as a non-negative integer. For example, if the
+value is set to <code class="docutils literal notranslate"><span class="pre">300</span></code> (5min), the <code class="docutils literal notranslate"><span class="pre">timeframe</span></code> is set to <code class="docutils literal notranslate"><span class="pre">last_5m</span></code> and the time is 7:00, the monitor will evaluate data
+from 6:50 to 6:55. This is useful for AWS CloudWatch and other backfilled metrics to ensure the monitor will always have
+data during evaluation.</p></li>
+<li><p><strong>force_delete</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – A boolean indicating whether this monitor can be deleted even if it’s referenced by other resources (e.g. SLO,
+composite monitor).</p></li>
+<li><p><strong>include_tags</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – A boolean indicating whether notifications from this monitor automatically insert its triggering tags into the title.
+Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+<li><p><strong>locked</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – A boolean indicating whether changes to to this monitor should be restricted to the creator or admins. Defaults to
+<code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><strong>message</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A message to include with notifications for this monitor. Email notifications can be sent to specific users by using the
 same <code class="docutils literal notranslate"><span class="pre">&#64;username</span></code> notation as events.</p></li>
+<li><p><strong>monitor_threshold_windows</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'MonitorMonitorThresholdWindowsArgs'</em><em>]</em><em>]</em>) – A mapping containing <code class="docutils literal notranslate"><span class="pre">recovery_window</span></code> and <code class="docutils literal notranslate"><span class="pre">trigger_window</span></code> values, e.g. <code class="docutils literal notranslate"><span class="pre">last_15m</span></code> . Can only be used for, and are
+required for, anomaly monitors.</p></li>
+<li><p><strong>monitor_thresholds</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'MonitorMonitorThresholdsArgs'</em><em>]</em><em>]</em>) – Alert thresholds of the monitor.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of Datadog monitor.</p></li>
-<li><p><strong>new_host_delay</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Time (in seconds) to allow a host to boot and</p></li>
-<li><p><strong>no_data_timeframe</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The number of minutes before a monitor will notify when data stops reporting. Provider defaults to 10 minutes.</p></li>
-<li><p><strong>notify_audit</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – A boolean indicating whether tagged users will be notified on changes to this monitor.</p></li>
-<li><p><strong>notify_no_data</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – A boolean indicating whether this monitor will notify when data stops reporting. Defaults</p></li>
-<li><p><strong>priority</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Integer from 1 (high) to 5 (low) indicating alert severity.</p></li>
+<li><p><strong>new_host_delay</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Time (in seconds) to allow a host to boot and applications to fully start before starting the evaluation of monitor
+results. Should be a non negative integer. Defaults to <code class="docutils literal notranslate"><span class="pre">300</span></code>.</p></li>
+<li><p><strong>no_data_timeframe</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The number of minutes before a monitor will notify when data stops reporting. Provider defaults to 10 minutes. We
+recommend at least 2x the monitor timeframe for metric alerts or 2 minutes for service checks.</p></li>
+<li><p><strong>notify_audit</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – A boolean indicating whether tagged users will be notified on changes to this monitor. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><strong>notify_no_data</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – A boolean indicating whether this monitor will notify when data stops reporting. Defaults to false.</p></li>
 <li><p><strong>query</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The monitor query to notify on. Note this is not the same query you see in the UI and the syntax is different depending
 on the monitor type, please see the <a class="reference external" href="https://docs.datadoghq.com/api/v1/monitors/#create-a-monitor">API Reference</a> for
 details. Warning: <code class="docutils literal notranslate"><span class="pre">terraform</span> <span class="pre">plan</span></code> won’t perform any validation of the query contents.</p></li>
-<li><p><strong>renotify_interval</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The number of minutes after the last notification before a monitor will re-notify</p></li>
-<li><p><strong>require_full_window</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – A boolean indicating whether this monitor needs a full window of data before it’s evaluated.</p></li>
-<li><p><strong>Any</strong><strong>]</strong><strong>] </strong><strong>silenced</strong> (<em>pulumi.Input</em><em>[</em><em>Mapping</em><em>[</em><em>str</em><em>,</em>) – Each scope will be muted until the given POSIX timestamp or forever if the value is 0. Use <code class="docutils literal notranslate"><span class="pre">-1</span></code> if you want to unmute the scope. <strong>Deprecated</strong> The <code class="docutils literal notranslate"><span class="pre">silenced</span></code> parameter is being deprecated in favor of the downtime resource. This will be removed in the next major version of the provider.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em><em>]</em>) – A list of tags to associate with your monitor. This can help you categorize and filter monitors in the manage monitors page of the UI. Note: it’s not currently possible to filter by these tags when querying via the API</p></li>
-<li><p><strong>threshold_windows</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'MonitorThresholdWindowsArgs'</em><em>]</em><em>]</em>) – A mapping containing <code class="docutils literal notranslate"><span class="pre">recovery_window</span></code> and <code class="docutils literal notranslate"><span class="pre">trigger_window</span></code> values, e.g. <code class="docutils literal notranslate"><span class="pre">last_15m</span></code> . Can only be used for, and are required for, anomaly monitors.</p></li>
-<li><p><strong>timeout_h</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The number of hours of the monitor not reporting data before it will automatically resolve</p></li>
+<li><p><strong>renotify_interval</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The number of minutes after the last notification before a monitor will re-notify on the current status. It will only
+re-notify if it’s not resolved.</p></li>
+<li><p><strong>require_full_window</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – A boolean indicating whether this monitor needs a full window of data before it’s evaluated. We highly recommend you set
+this to <code class="docutils literal notranslate"><span class="pre">false</span></code> for s metrics, otherwise some evaluations will be skipped. Default: <code class="docutils literal notranslate"><span class="pre">true</span></code> for <code class="docutils literal notranslate"><span class="pre">on</span> <span class="pre">average</span></code>, <code class="docutils literal notranslate"><span class="pre">at</span> <span class="pre">all</span>
+<span class="pre">times</span></code> and <code class="docutils literal notranslate"><span class="pre">in</span> <span class="pre">total</span></code> aggregation. <code class="docutils literal notranslate"><span class="pre">false</span></code> otherwise.</p></li>
+<li><p><strong>Any</strong><strong>]</strong><strong>] </strong><strong>silenced</strong> (<em>pulumi.Input</em><em>[</em><em>Mapping</em><em>[</em><em>str</em><em>,</em>) – Each scope will be muted until the given POSIX timestamp or forever if the value is <code class="docutils literal notranslate"><span class="pre">0</span></code>. Use <code class="docutils literal notranslate"><span class="pre">-1</span></code> if you want to unmute
+the scope. Deprecated: the silenced parameter is being deprecated in favor of the downtime resource. This will be
+removed in the next major version of the Terraform Provider.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em><em>]</em>) – A list of tags to associate with your monitor. This can help you categorize and filter monitors in the manage monitors
+page of the UI. Note: it’s not currently possible to filter by these tags when querying via the API</p></li>
+<li><p><strong>threshold_windows</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'MonitorThresholdWindowsArgs'</em><em>]</em><em>]</em>) – A mapping containing <code class="docutils literal notranslate"><span class="pre">recovery_window</span></code> and <code class="docutils literal notranslate"><span class="pre">trigger_window</span></code> values, e.g. <code class="docutils literal notranslate"><span class="pre">last_15m</span></code>. Can only be used for, and are
+required for, anomaly monitors.</p></li>
+<li><p><strong>thresholds</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'MonitorThresholdsArgs'</em><em>]</em><em>]</em>) – Alert thresholds of the monitor.</p></li>
+<li><p><strong>timeout_h</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The number of hours of the monitor not reporting data before it will automatically resolve from a triggered state.
+Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The type of the monitor. The mapping from these types to the types found in the Datadog Web UI can be found in the
-Datadog API <a class="reference external" href="https://docs.datadoghq.com/api/v1/monitors/#create-a-monitor">documentation page</a>. The available options
-are below. Note: The monitor type cannot be changed after a monitor is created.</p></li>
-<li><p><strong>validate</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If set to false, skip the validation call done during <code class="docutils literal notranslate"><span class="pre">plan</span></code> .</p></li>
+Datadog API <a class="reference external" href="https://docs.datadoghq.com/api/v1/monitors/#create-a-monitor">documentation page</a>. Note: The monitor type
+cannot be changed after a monitor is created.</p></li>
+<li><p><strong>validate</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If set to <code class="docutils literal notranslate"><span class="pre">false</span></code>, skip the validation call done during plan.</p></li>
 </ul>
 </dd>
 </dl>
 <dl class="py method">
 <dt id="pulumi_datadog.Monitor.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_logs_sample</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">escalation_message</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">evaluation_delay</span><span class="p">:</span> <span class="n">Union[int, Awaitable[int], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">force_delete</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">include_tags</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">locked</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">message</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">new_host_delay</span><span class="p">:</span> <span class="n">Union[int, Awaitable[int], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">no_data_timeframe</span><span class="p">:</span> <span class="n">Union[int, Awaitable[int], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">notify_audit</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">notify_no_data</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">priority</span><span class="p">:</span> <span class="n">Union[int, Awaitable[int], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">query</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">renotify_interval</span><span class="p">:</span> <span class="n">Union[int, Awaitable[int], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">require_full_window</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">silenced</span><span class="p">:</span> <span class="n">Union[Mapping[str, Any], Awaitable[Mapping[str, Any]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="p">:</span> <span class="n">Union[Sequence[Union[str, Awaitable[str], Output[T]]], Awaitable[Sequence[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">threshold_windows</span><span class="p">:</span> <span class="n">Union[MonitorThresholdWindowsArgs, Mapping[str, Any], Awaitable[Union[MonitorThresholdWindowsArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">thresholds</span><span class="p">:</span> <span class="n">Union[MonitorThresholdsArgs, Mapping[str, Any], Awaitable[Union[MonitorThresholdsArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">timeout_h</span><span class="p">:</span> <span class="n">Union[int, Awaitable[int], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">validate</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_datadog.monitor.Monitor<a class="headerlink" href="#pulumi_datadog.Monitor.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">enable_logs_sample</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">escalation_message</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">evaluation_delay</span><span class="p">:</span> <span class="n">Union[int, Awaitable[int], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">force_delete</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">include_tags</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">locked</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">message</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">monitor_threshold_windows</span><span class="p">:</span> <span class="n">Union[MonitorMonitorThresholdWindowsArgs, Mapping[str, Any], Awaitable[Union[MonitorMonitorThresholdWindowsArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">monitor_thresholds</span><span class="p">:</span> <span class="n">Union[MonitorMonitorThresholdsArgs, Mapping[str, Any], Awaitable[Union[MonitorMonitorThresholdsArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">new_host_delay</span><span class="p">:</span> <span class="n">Union[int, Awaitable[int], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">no_data_timeframe</span><span class="p">:</span> <span class="n">Union[int, Awaitable[int], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">notify_audit</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">notify_no_data</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">priority</span><span class="p">:</span> <span class="n">Union[int, Awaitable[int], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">query</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">renotify_interval</span><span class="p">:</span> <span class="n">Union[int, Awaitable[int], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">require_full_window</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">silenced</span><span class="p">:</span> <span class="n">Union[Mapping[str, Any], Awaitable[Mapping[str, Any]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="p">:</span> <span class="n">Union[Sequence[Union[str, Awaitable[str], Output[T]]], Awaitable[Sequence[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">threshold_windows</span><span class="p">:</span> <span class="n">Union[MonitorThresholdWindowsArgs, Mapping[str, Any], Awaitable[Union[MonitorThresholdWindowsArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">thresholds</span><span class="p">:</span> <span class="n">Union[MonitorThresholdsArgs, Mapping[str, Any], Awaitable[Union[MonitorThresholdsArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">timeout_h</span><span class="p">:</span> <span class="n">Union[int, Awaitable[int], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">type</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">validate</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_datadog.monitor.Monitor<a class="headerlink" href="#pulumi_datadog.Monitor.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing Monitor resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -2378,35 +2563,55 @@ properties used to qualify the lookup.</p>
 <li><p><strong>resource_name</strong> (<em>str</em>) – The unique name of the resulting resource.</p></li>
 <li><p><strong>id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The unique provider ID of the resource to lookup.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
-<li><p><strong>enable_logs_sample</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – A boolean indicating whether or not to include a list of log values which triggered the alert. Defaults to false. This is only used by log monitors.</p></li>
+<li><p><strong>enable_logs_sample</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – A boolean indicating whether or not to include a list of log values which triggered the alert. This is only used by log
+monitors. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><strong>escalation_message</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A message to include with a re-notification. Supports the <code class="docutils literal notranslate"><span class="pre">&#64;username</span></code> notification allowed elsewhere.</p></li>
-<li><p><strong>evaluation_delay</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Time (in seconds) to delay evaluation, as a non-negative integer.</p></li>
-<li><p><strong>force_delete</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – A boolean indicating whether this monitor can be deleted even if it’s referenced by other resources (e.g. SLO, composite monitor).</p></li>
-<li><p><strong>include_tags</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – A boolean indicating whether notifications from this monitor automatically insert its triggering tags into the title. Defaults to true.</p></li>
-<li><p><strong>locked</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – A boolean indicating whether changes to to this monitor should be restricted to the creator or admins. Defaults to False.</p></li>
+<li><p><strong>evaluation_delay</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – (Only applies to metric alert) Time (in seconds) to delay evaluation, as a non-negative integer. For example, if the
+value is set to <code class="docutils literal notranslate"><span class="pre">300</span></code> (5min), the <code class="docutils literal notranslate"><span class="pre">timeframe</span></code> is set to <code class="docutils literal notranslate"><span class="pre">last_5m</span></code> and the time is 7:00, the monitor will evaluate data
+from 6:50 to 6:55. This is useful for AWS CloudWatch and other backfilled metrics to ensure the monitor will always have
+data during evaluation.</p></li>
+<li><p><strong>force_delete</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – A boolean indicating whether this monitor can be deleted even if it’s referenced by other resources (e.g. SLO,
+composite monitor).</p></li>
+<li><p><strong>include_tags</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – A boolean indicating whether notifications from this monitor automatically insert its triggering tags into the title.
+Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+<li><p><strong>locked</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – A boolean indicating whether changes to to this monitor should be restricted to the creator or admins. Defaults to
+<code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><strong>message</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – A message to include with notifications for this monitor. Email notifications can be sent to specific users by using the
 same <code class="docutils literal notranslate"><span class="pre">&#64;username</span></code> notation as events.</p></li>
+<li><p><strong>monitor_threshold_windows</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'MonitorMonitorThresholdWindowsArgs'</em><em>]</em><em>]</em>) – A mapping containing <code class="docutils literal notranslate"><span class="pre">recovery_window</span></code> and <code class="docutils literal notranslate"><span class="pre">trigger_window</span></code> values, e.g. <code class="docutils literal notranslate"><span class="pre">last_15m</span></code> . Can only be used for, and are
+required for, anomaly monitors.</p></li>
+<li><p><strong>monitor_thresholds</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'MonitorMonitorThresholdsArgs'</em><em>]</em><em>]</em>) – Alert thresholds of the monitor.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Name of Datadog monitor.</p></li>
-<li><p><strong>new_host_delay</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Time (in seconds) to allow a host to boot and</p></li>
-<li><p><strong>no_data_timeframe</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The number of minutes before a monitor will notify when data stops reporting. Provider defaults to 10 minutes.</p></li>
-<li><p><strong>notify_audit</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – A boolean indicating whether tagged users will be notified on changes to this monitor.</p></li>
-<li><p><strong>notify_no_data</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – A boolean indicating whether this monitor will notify when data stops reporting. Defaults</p></li>
-<li><p><strong>priority</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Integer from 1 (high) to 5 (low) indicating alert severity.</p></li>
+<li><p><strong>new_host_delay</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – Time (in seconds) to allow a host to boot and applications to fully start before starting the evaluation of monitor
+results. Should be a non negative integer. Defaults to <code class="docutils literal notranslate"><span class="pre">300</span></code>.</p></li>
+<li><p><strong>no_data_timeframe</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The number of minutes before a monitor will notify when data stops reporting. Provider defaults to 10 minutes. We
+recommend at least 2x the monitor timeframe for metric alerts or 2 minutes for service checks.</p></li>
+<li><p><strong>notify_audit</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – A boolean indicating whether tagged users will be notified on changes to this monitor. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
+<li><p><strong>notify_no_data</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – A boolean indicating whether this monitor will notify when data stops reporting. Defaults to false.</p></li>
 <li><p><strong>query</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The monitor query to notify on. Note this is not the same query you see in the UI and the syntax is different depending
 on the monitor type, please see the <a class="reference external" href="https://docs.datadoghq.com/api/v1/monitors/#create-a-monitor">API Reference</a> for
 details. Warning: <code class="docutils literal notranslate"><span class="pre">terraform</span> <span class="pre">plan</span></code> won’t perform any validation of the query contents.</p>
 </p></li>
-<li><p><strong>renotify_interval</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The number of minutes after the last notification before a monitor will re-notify</p></li>
-<li><p><strong>require_full_window</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – A boolean indicating whether this monitor needs a full window of data before it’s evaluated.</p></li>
-<li><p><strong>Any</strong><strong>]</strong><strong>] </strong><strong>silenced</strong> (<em>pulumi.Input</em><em>[</em><em>Mapping</em><em>[</em><em>str</em><em>,</em>) – Each scope will be muted until the given POSIX timestamp or forever if the value is 0. Use <code class="docutils literal notranslate"><span class="pre">-1</span></code> if you want to unmute the scope. <strong>Deprecated</strong> The <code class="docutils literal notranslate"><span class="pre">silenced</span></code> parameter is being deprecated in favor of the downtime resource. This will be removed in the next major version of the provider.</p></li>
-<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em><em>]</em>) – A list of tags to associate with your monitor. This can help you categorize and filter monitors in the manage monitors page of the UI. Note: it’s not currently possible to filter by these tags when querying via the API</p></li>
-<li><p><strong>threshold_windows</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'MonitorThresholdWindowsArgs'</em><em>]</em><em>]</em>) – A mapping containing <code class="docutils literal notranslate"><span class="pre">recovery_window</span></code> and <code class="docutils literal notranslate"><span class="pre">trigger_window</span></code> values, e.g. <code class="docutils literal notranslate"><span class="pre">last_15m</span></code> . Can only be used for, and are required for, anomaly monitors.</p></li>
-<li><p><strong>timeout_h</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The number of hours of the monitor not reporting data before it will automatically resolve</p></li>
+<li><p><strong>renotify_interval</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The number of minutes after the last notification before a monitor will re-notify on the current status. It will only
+re-notify if it’s not resolved.</p></li>
+<li><p><strong>require_full_window</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – A boolean indicating whether this monitor needs a full window of data before it’s evaluated. We highly recommend you set
+this to <code class="docutils literal notranslate"><span class="pre">false</span></code> for s metrics, otherwise some evaluations will be skipped. Default: <code class="docutils literal notranslate"><span class="pre">true</span></code> for <code class="docutils literal notranslate"><span class="pre">on</span> <span class="pre">average</span></code>, <code class="docutils literal notranslate"><span class="pre">at</span> <span class="pre">all</span>
+<span class="pre">times</span></code> and <code class="docutils literal notranslate"><span class="pre">in</span> <span class="pre">total</span></code> aggregation. <code class="docutils literal notranslate"><span class="pre">false</span></code> otherwise.</p></li>
+<li><p><strong>Any</strong><strong>]</strong><strong>] </strong><strong>silenced</strong> (<em>pulumi.Input</em><em>[</em><em>Mapping</em><em>[</em><em>str</em><em>,</em>) – Each scope will be muted until the given POSIX timestamp or forever if the value is <code class="docutils literal notranslate"><span class="pre">0</span></code>. Use <code class="docutils literal notranslate"><span class="pre">-1</span></code> if you want to unmute
+the scope. Deprecated: the silenced parameter is being deprecated in favor of the downtime resource. This will be
+removed in the next major version of the Terraform Provider.</p></li>
+<li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em><em>]</em>) – A list of tags to associate with your monitor. This can help you categorize and filter monitors in the manage monitors
+page of the UI. Note: it’s not currently possible to filter by these tags when querying via the API</p></li>
+<li><p><strong>threshold_windows</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'MonitorThresholdWindowsArgs'</em><em>]</em><em>]</em>) – A mapping containing <code class="docutils literal notranslate"><span class="pre">recovery_window</span></code> and <code class="docutils literal notranslate"><span class="pre">trigger_window</span></code> values, e.g. <code class="docutils literal notranslate"><span class="pre">last_15m</span></code>. Can only be used for, and are
+required for, anomaly monitors.</p></li>
+<li><p><strong>thresholds</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'MonitorThresholdsArgs'</em><em>]</em><em>]</em>) – Alert thresholds of the monitor.</p></li>
+<li><p><strong>timeout_h</strong> (<em>pulumi.Input</em><em>[</em><em>int</em><em>]</em>) – The number of hours of the monitor not reporting data before it will automatically resolve from a triggered state.
+Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><strong>type</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – <p>The type of the monitor. The mapping from these types to the types found in the Datadog Web UI can be found in the
-Datadog API <a class="reference external" href="https://docs.datadoghq.com/api/v1/monitors/#create-a-monitor">documentation page</a>. The available options
-are below. Note: The monitor type cannot be changed after a monitor is created.</p>
+Datadog API <a class="reference external" href="https://docs.datadoghq.com/api/v1/monitors/#create-a-monitor">documentation page</a>. Note: The monitor type
+cannot be changed after a monitor is created.</p>
 </p></li>
-<li><p><strong>validate</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If set to false, skip the validation call done during <code class="docutils literal notranslate"><span class="pre">plan</span></code> .</p></li>
+<li><p><strong>validate</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – If set to <code class="docutils literal notranslate"><span class="pre">false</span></code>, skip the validation call done during plan.</p></li>
 </ul>
 </dd>
 </dl>
@@ -2415,7 +2620,8 @@ are below. Note: The monitor type cannot be changed after a monitor is created.<
 <dl class="py method">
 <dt id="pulumi_datadog.Monitor.enable_logs_sample">
 <em class="property">property </em><code class="sig-name descname">enable_logs_sample</code><a class="headerlink" href="#pulumi_datadog.Monitor.enable_logs_sample" title="Permalink to this definition">¶</a></dt>
-<dd><p>A boolean indicating whether or not to include a list of log values which triggered the alert. Defaults to false. This is only used by log monitors.</p>
+<dd><p>A boolean indicating whether or not to include a list of log values which triggered the alert. This is only used by log
+monitors. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -2427,25 +2633,31 @@ are below. Note: The monitor type cannot be changed after a monitor is created.<
 <dl class="py method">
 <dt id="pulumi_datadog.Monitor.evaluation_delay">
 <em class="property">property </em><code class="sig-name descname">evaluation_delay</code><a class="headerlink" href="#pulumi_datadog.Monitor.evaluation_delay" title="Permalink to this definition">¶</a></dt>
-<dd><p>Time (in seconds) to delay evaluation, as a non-negative integer.</p>
+<dd><p>(Only applies to metric alert) Time (in seconds) to delay evaluation, as a non-negative integer. For example, if the
+value is set to <code class="docutils literal notranslate"><span class="pre">300</span></code> (5min), the <code class="docutils literal notranslate"><span class="pre">timeframe</span></code> is set to <code class="docutils literal notranslate"><span class="pre">last_5m</span></code> and the time is 7:00, the monitor will evaluate data
+from 6:50 to 6:55. This is useful for AWS CloudWatch and other backfilled metrics to ensure the monitor will always have
+data during evaluation.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="pulumi_datadog.Monitor.force_delete">
 <em class="property">property </em><code class="sig-name descname">force_delete</code><a class="headerlink" href="#pulumi_datadog.Monitor.force_delete" title="Permalink to this definition">¶</a></dt>
-<dd><p>A boolean indicating whether this monitor can be deleted even if it’s referenced by other resources (e.g. SLO, composite monitor).</p>
+<dd><p>A boolean indicating whether this monitor can be deleted even if it’s referenced by other resources (e.g. SLO,
+composite monitor).</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="pulumi_datadog.Monitor.include_tags">
 <em class="property">property </em><code class="sig-name descname">include_tags</code><a class="headerlink" href="#pulumi_datadog.Monitor.include_tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>A boolean indicating whether notifications from this monitor automatically insert its triggering tags into the title. Defaults to true.</p>
+<dd><p>A boolean indicating whether notifications from this monitor automatically insert its triggering tags into the title.
+Defaults to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="pulumi_datadog.Monitor.locked">
 <em class="property">property </em><code class="sig-name descname">locked</code><a class="headerlink" href="#pulumi_datadog.Monitor.locked" title="Permalink to this definition">¶</a></dt>
-<dd><p>A boolean indicating whether changes to to this monitor should be restricted to the creator or admins. Defaults to False.</p>
+<dd><p>A boolean indicating whether changes to to this monitor should be restricted to the creator or admins. Defaults to
+<code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -2453,6 +2665,19 @@ are below. Note: The monitor type cannot be changed after a monitor is created.<
 <em class="property">property </em><code class="sig-name descname">message</code><a class="headerlink" href="#pulumi_datadog.Monitor.message" title="Permalink to this definition">¶</a></dt>
 <dd><p>A message to include with notifications for this monitor. Email notifications can be sent to specific users by using the
 same <code class="docutils literal notranslate"><span class="pre">&#64;username</span></code> notation as events.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_datadog.Monitor.monitor_threshold_windows">
+<em class="property">property </em><code class="sig-name descname">monitor_threshold_windows</code><a class="headerlink" href="#pulumi_datadog.Monitor.monitor_threshold_windows" title="Permalink to this definition">¶</a></dt>
+<dd><p>A mapping containing <code class="docutils literal notranslate"><span class="pre">recovery_window</span></code> and <code class="docutils literal notranslate"><span class="pre">trigger_window</span></code> values, e.g. <code class="docutils literal notranslate"><span class="pre">last_15m</span></code> . Can only be used for, and are
+required for, anomaly monitors.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_datadog.Monitor.monitor_thresholds">
+<em class="property">property </em><code class="sig-name descname">monitor_thresholds</code><a class="headerlink" href="#pulumi_datadog.Monitor.monitor_thresholds" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alert thresholds of the monitor.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -2464,31 +2689,27 @@ same <code class="docutils literal notranslate"><span class="pre">&#64;username<
 <dl class="py method">
 <dt id="pulumi_datadog.Monitor.new_host_delay">
 <em class="property">property </em><code class="sig-name descname">new_host_delay</code><a class="headerlink" href="#pulumi_datadog.Monitor.new_host_delay" title="Permalink to this definition">¶</a></dt>
-<dd><p>Time (in seconds) to allow a host to boot and</p>
+<dd><p>Time (in seconds) to allow a host to boot and applications to fully start before starting the evaluation of monitor
+results. Should be a non negative integer. Defaults to <code class="docutils literal notranslate"><span class="pre">300</span></code>.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="pulumi_datadog.Monitor.no_data_timeframe">
 <em class="property">property </em><code class="sig-name descname">no_data_timeframe</code><a class="headerlink" href="#pulumi_datadog.Monitor.no_data_timeframe" title="Permalink to this definition">¶</a></dt>
-<dd><p>The number of minutes before a monitor will notify when data stops reporting. Provider defaults to 10 minutes.</p>
+<dd><p>The number of minutes before a monitor will notify when data stops reporting. Provider defaults to 10 minutes. We
+recommend at least 2x the monitor timeframe for metric alerts or 2 minutes for service checks.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="pulumi_datadog.Monitor.notify_audit">
 <em class="property">property </em><code class="sig-name descname">notify_audit</code><a class="headerlink" href="#pulumi_datadog.Monitor.notify_audit" title="Permalink to this definition">¶</a></dt>
-<dd><p>A boolean indicating whether tagged users will be notified on changes to this monitor.</p>
+<dd><p>A boolean indicating whether tagged users will be notified on changes to this monitor. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="pulumi_datadog.Monitor.notify_no_data">
 <em class="property">property </em><code class="sig-name descname">notify_no_data</code><a class="headerlink" href="#pulumi_datadog.Monitor.notify_no_data" title="Permalink to this definition">¶</a></dt>
-<dd><p>A boolean indicating whether this monitor will notify when data stops reporting. Defaults</p>
-</dd></dl>
-
-<dl class="py method">
-<dt id="pulumi_datadog.Monitor.priority">
-<em class="property">property </em><code class="sig-name descname">priority</code><a class="headerlink" href="#pulumi_datadog.Monitor.priority" title="Permalink to this definition">¶</a></dt>
-<dd><p>Integer from 1 (high) to 5 (low) indicating alert severity.</p>
+<dd><p>A boolean indicating whether this monitor will notify when data stops reporting. Defaults to false.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -2502,51 +2723,65 @@ details. Warning: <code class="docutils literal notranslate"><span class="pre">t
 <dl class="py method">
 <dt id="pulumi_datadog.Monitor.renotify_interval">
 <em class="property">property </em><code class="sig-name descname">renotify_interval</code><a class="headerlink" href="#pulumi_datadog.Monitor.renotify_interval" title="Permalink to this definition">¶</a></dt>
-<dd><p>The number of minutes after the last notification before a monitor will re-notify</p>
+<dd><p>The number of minutes after the last notification before a monitor will re-notify on the current status. It will only
+re-notify if it’s not resolved.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="pulumi_datadog.Monitor.require_full_window">
 <em class="property">property </em><code class="sig-name descname">require_full_window</code><a class="headerlink" href="#pulumi_datadog.Monitor.require_full_window" title="Permalink to this definition">¶</a></dt>
-<dd><p>A boolean indicating whether this monitor needs a full window of data before it’s evaluated.</p>
+<dd><p>A boolean indicating whether this monitor needs a full window of data before it’s evaluated. We highly recommend you set
+this to <code class="docutils literal notranslate"><span class="pre">false</span></code> for s metrics, otherwise some evaluations will be skipped. Default: <code class="docutils literal notranslate"><span class="pre">true</span></code> for <code class="docutils literal notranslate"><span class="pre">on</span> <span class="pre">average</span></code>, <code class="docutils literal notranslate"><span class="pre">at</span> <span class="pre">all</span>
+<span class="pre">times</span></code> and <code class="docutils literal notranslate"><span class="pre">in</span> <span class="pre">total</span></code> aggregation. <code class="docutils literal notranslate"><span class="pre">false</span></code> otherwise.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="pulumi_datadog.Monitor.silenced">
 <em class="property">property </em><code class="sig-name descname">silenced</code><a class="headerlink" href="#pulumi_datadog.Monitor.silenced" title="Permalink to this definition">¶</a></dt>
-<dd><p>Each scope will be muted until the given POSIX timestamp or forever if the value is 0. Use <code class="docutils literal notranslate"><span class="pre">-1</span></code> if you want to unmute the scope. <strong>Deprecated</strong> The <code class="docutils literal notranslate"><span class="pre">silenced</span></code> parameter is being deprecated in favor of the downtime resource. This will be removed in the next major version of the provider.</p>
+<dd><p>Each scope will be muted until the given POSIX timestamp or forever if the value is <code class="docutils literal notranslate"><span class="pre">0</span></code>. Use <code class="docutils literal notranslate"><span class="pre">-1</span></code> if you want to unmute
+the scope. Deprecated: the silenced parameter is being deprecated in favor of the downtime resource. This will be
+removed in the next major version of the Terraform Provider.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="pulumi_datadog.Monitor.tags">
 <em class="property">property </em><code class="sig-name descname">tags</code><a class="headerlink" href="#pulumi_datadog.Monitor.tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>A list of tags to associate with your monitor. This can help you categorize and filter monitors in the manage monitors page of the UI. Note: it’s not currently possible to filter by these tags when querying via the API</p>
+<dd><p>A list of tags to associate with your monitor. This can help you categorize and filter monitors in the manage monitors
+page of the UI. Note: it’s not currently possible to filter by these tags when querying via the API</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="pulumi_datadog.Monitor.threshold_windows">
 <em class="property">property </em><code class="sig-name descname">threshold_windows</code><a class="headerlink" href="#pulumi_datadog.Monitor.threshold_windows" title="Permalink to this definition">¶</a></dt>
-<dd><p>A mapping containing <code class="docutils literal notranslate"><span class="pre">recovery_window</span></code> and <code class="docutils literal notranslate"><span class="pre">trigger_window</span></code> values, e.g. <code class="docutils literal notranslate"><span class="pre">last_15m</span></code> . Can only be used for, and are required for, anomaly monitors.</p>
+<dd><p>A mapping containing <code class="docutils literal notranslate"><span class="pre">recovery_window</span></code> and <code class="docutils literal notranslate"><span class="pre">trigger_window</span></code> values, e.g. <code class="docutils literal notranslate"><span class="pre">last_15m</span></code>. Can only be used for, and are
+required for, anomaly monitors.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_datadog.Monitor.thresholds">
+<em class="property">property </em><code class="sig-name descname">thresholds</code><a class="headerlink" href="#pulumi_datadog.Monitor.thresholds" title="Permalink to this definition">¶</a></dt>
+<dd><p>Alert thresholds of the monitor.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="pulumi_datadog.Monitor.timeout_h">
 <em class="property">property </em><code class="sig-name descname">timeout_h</code><a class="headerlink" href="#pulumi_datadog.Monitor.timeout_h" title="Permalink to this definition">¶</a></dt>
-<dd><p>The number of hours of the monitor not reporting data before it will automatically resolve</p>
+<dd><p>The number of hours of the monitor not reporting data before it will automatically resolve from a triggered state.
+Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="pulumi_datadog.Monitor.type">
 <em class="property">property </em><code class="sig-name descname">type</code><a class="headerlink" href="#pulumi_datadog.Monitor.type" title="Permalink to this definition">¶</a></dt>
 <dd><p>The type of the monitor. The mapping from these types to the types found in the Datadog Web UI can be found in the
-Datadog API <a class="reference external" href="https://docs.datadoghq.com/api/v1/monitors/#create-a-monitor">documentation page</a>. The available options
-are below. Note: The monitor type cannot be changed after a monitor is created.</p>
+Datadog API <a class="reference external" href="https://docs.datadoghq.com/api/v1/monitors/#create-a-monitor">documentation page</a>. Note: The monitor type
+cannot be changed after a monitor is created.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="pulumi_datadog.Monitor.validate">
 <em class="property">property </em><code class="sig-name descname">validate</code><a class="headerlink" href="#pulumi_datadog.Monitor.validate" title="Permalink to this definition">¶</a></dt>
-<dd><p>If set to false, skip the validation call done during <code class="docutils literal notranslate"><span class="pre">plan</span></code> .</p>
+<dd><p>If set to <code class="docutils literal notranslate"><span class="pre">false</span></code>, skip the validation call done during plan.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -2600,12 +2835,12 @@ construction to achieve fine-grained programmatic control over provider settings
 <li><p><strong>resource_name</strong> (<em>str</em>) – The name of the resource.</p></li>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>api_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (Required unless validate is false) Datadog API key. This can also be set via the DD_API_KEY environment variable.</p></li>
-<li><p><strong>api_url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The API Url. This can be also be set via the DD_HOST environment variable. Note that this URL must not end with the
-/api/ path. For example, <a class="reference external" href="https://api.datadoghq.com/">https://api.datadoghq.com/</a> is a correct value, while <a class="reference external" href="https://api.datadoghq.com/api/">https://api.datadoghq.com/api/</a> is not. And
-if you’re working with “EU” version of Datadog, use <a class="reference external" href="https://api.datadoghq.eu/">https://api.datadoghq.eu/</a>.</p></li>
+<li><p><strong>api_url</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The API Url. This can also be set via the DD_HOST environment variable. Note that this URL must not end with the /api/
+path. For example, <a class="reference external" href="https://api.datadoghq.com/">https://api.datadoghq.com/</a> is a correct value, while <a class="reference external" href="https://api.datadoghq.com/api/">https://api.datadoghq.com/api/</a> is not. And if
+you’re working with “EU” version of Datadog, use <a class="reference external" href="https://api.datadoghq.eu/">https://api.datadoghq.eu/</a>.</p></li>
 <li><p><strong>app_key</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – (Required unless validate is false) Datadog APP key. This can also be set via the DD_APP_KEY environment variable.</p></li>
 <li><p><strong>validate</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Enables validation of the provided API and APP keys during provider initialization. Default is true. When false, api_key
-and app_keywon’t be checked.</p></li>
+and app_key won’t be checked.</p></li>
 </ul>
 </dd>
 </dl>
@@ -2834,15 +3069,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
                             <span class="n">search</span><span class="o">=</span><span class="n">datadog</span><span class="o">.</span><span class="n">ScreenBoardWidgetTileDefRequestLogQuerySearchArgs</span><span class="p">(</span>
                                 <span class="n">query</span><span class="o">=</span><span class="s2">&quot;status:info&quot;</span><span class="p">,</span>
                             <span class="p">),</span>
-                            <span class="n">group_bies</span><span class="o">=</span><span class="p">[</span><span class="n">datadog</span><span class="o">.</span><span class="n">ScreenBoardWidgetTileDefRequestLogQueryGroupByArgs</span><span class="p">(</span>
-                                <span class="n">facet</span><span class="o">=</span><span class="s2">&quot;host&quot;</span><span class="p">,</span>
-                                <span class="n">limit</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
-                                <span class="n">sort</span><span class="o">=</span><span class="n">datadog</span><span class="o">.</span><span class="n">ScreenBoardWidgetTileDefRequestLogQueryGroupBySortArgs</span><span class="p">(</span>
-                                    <span class="n">aggregation</span><span class="o">=</span><span class="s2">&quot;avg&quot;</span><span class="p">,</span>
-                                    <span class="n">order</span><span class="o">=</span><span class="s2">&quot;desc&quot;</span><span class="p">,</span>
-                                    <span class="n">facet</span><span class="o">=</span><span class="s2">&quot;@duration&quot;</span><span class="p">,</span>
-                                <span class="p">),</span>
-                            <span class="p">)],</span>
+                            <span class="n">group_bies</span><span class="o">=</span><span class="p">[{</span>
+                                <span class="s2">&quot;facet&quot;</span><span class="p">:</span> <span class="s2">&quot;host&quot;</span><span class="p">,</span>
+                                <span class="s2">&quot;limit&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+                                <span class="s2">&quot;sort&quot;</span><span class="p">:</span> <span class="p">{</span>
+                                    <span class="s2">&quot;aggregation&quot;</span><span class="p">:</span> <span class="s2">&quot;avg&quot;</span><span class="p">,</span>
+                                    <span class="s2">&quot;order&quot;</span><span class="p">:</span> <span class="s2">&quot;desc&quot;</span><span class="p">,</span>
+                                    <span class="s2">&quot;facet&quot;</span><span class="p">:</span> <span class="s2">&quot;@duration&quot;</span><span class="p">,</span>
+                                <span class="p">},</span>
+                            <span class="p">}],</span>
                         <span class="p">),</span>
                         <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;area&quot;</span><span class="p">,</span>
                     <span class="p">),</span>
@@ -2857,15 +3092,15 @@ a format of their choosing before sending those properties to the Pulumi engine.
                             <span class="n">search</span><span class="o">=</span><span class="n">datadog</span><span class="o">.</span><span class="n">ScreenBoardWidgetTileDefRequestApmQuerySearchArgs</span><span class="p">(</span>
                                 <span class="n">query</span><span class="o">=</span><span class="s2">&quot;type:web&quot;</span><span class="p">,</span>
                             <span class="p">),</span>
-                            <span class="n">group_bies</span><span class="o">=</span><span class="p">[</span><span class="n">datadog</span><span class="o">.</span><span class="n">ScreenBoardWidgetTileDefRequestApmQueryGroupByArgs</span><span class="p">(</span>
-                                <span class="n">facet</span><span class="o">=</span><span class="s2">&quot;resource_name&quot;</span><span class="p">,</span>
-                                <span class="n">limit</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span>
-                                <span class="n">sort</span><span class="o">=</span><span class="n">datadog</span><span class="o">.</span><span class="n">ScreenBoardWidgetTileDefRequestApmQueryGroupBySortArgs</span><span class="p">(</span>
-                                    <span class="n">aggregation</span><span class="o">=</span><span class="s2">&quot;avg&quot;</span><span class="p">,</span>
-                                    <span class="n">order</span><span class="o">=</span><span class="s2">&quot;desc&quot;</span><span class="p">,</span>
-                                    <span class="n">facet</span><span class="o">=</span><span class="s2">&quot;@string_query.interval&quot;</span><span class="p">,</span>
-                                <span class="p">),</span>
-                            <span class="p">)],</span>
+                            <span class="n">group_bies</span><span class="o">=</span><span class="p">[{</span>
+                                <span class="s2">&quot;facet&quot;</span><span class="p">:</span> <span class="s2">&quot;resource_name&quot;</span><span class="p">,</span>
+                                <span class="s2">&quot;limit&quot;</span><span class="p">:</span> <span class="mi">50</span><span class="p">,</span>
+                                <span class="s2">&quot;sort&quot;</span><span class="p">:</span> <span class="p">{</span>
+                                    <span class="s2">&quot;aggregation&quot;</span><span class="p">:</span> <span class="s2">&quot;avg&quot;</span><span class="p">,</span>
+                                    <span class="s2">&quot;order&quot;</span><span class="p">:</span> <span class="s2">&quot;desc&quot;</span><span class="p">,</span>
+                                    <span class="s2">&quot;facet&quot;</span><span class="p">:</span> <span class="s2">&quot;@string_query.interval&quot;</span><span class="p">,</span>
+                                <span class="p">},</span>
+                            <span class="p">}],</span>
                         <span class="p">),</span>
                         <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;bars&quot;</span><span class="p">,</span>
                     <span class="p">),</span>
@@ -3682,7 +3917,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 
 <dl class="py class">
 <dt id="pulumi_datadog.SyntheticsGlobalVariable">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_datadog.</code><code class="sig-name descname">SyntheticsGlobalVariable</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">secure</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="p">:</span> <span class="n">Union[Sequence[Union[str, Awaitable[str], Output[T]]], Awaitable[Sequence[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">value</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_datadog.SyntheticsGlobalVariable" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_datadog.</code><code class="sig-name descname">SyntheticsGlobalVariable</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">parse_test_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">parse_test_options</span><span class="p">:</span> <span class="n">Union[SyntheticsGlobalVariableParseTestOptionsArgs, Mapping[str, Any], Awaitable[Union[SyntheticsGlobalVariableParseTestOptionsArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">secure</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="p">:</span> <span class="n">Union[Sequence[Union[str, Awaitable[str], Output[T]]], Awaitable[Sequence[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">value</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__props__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__name__</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">__opts__</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_datadog.SyntheticsGlobalVariable" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a Datadog synthetics global variable resource. This can be used to create and manage Datadog synthetics global variables.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
 <span class="kn">import</span> <span class="nn">pulumi_datadog</span> <span class="k">as</span> <span class="nn">datadog</span>
@@ -3708,6 +3943,8 @@ a format of their choosing before sending those properties to the Pulumi engine.
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of the global variable.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Synthetics global variable name.</p></li>
+<li><p><strong>parse_test_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Id of the Synthetics test to use for a variable from test.</p></li>
+<li><p><strong>parse_test_options</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'SyntheticsGlobalVariableParseTestOptionsArgs'</em><em>]</em><em>]</em>) – ID of the Synthetics test to use a source of the global variable value.</p></li>
 <li><p><strong>secure</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Sets the variable as secure. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em><em>]</em>) – A list of tags to associate with your synthetics global variable.</p></li>
 <li><p><strong>value</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The value of the global variable.</p></li>
@@ -3716,7 +3953,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
 </dl>
 <dl class="py method">
 <dt id="pulumi_datadog.SyntheticsGlobalVariable.get">
-<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">secure</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="p">:</span> <span class="n">Union[Sequence[Union[str, Awaitable[str], Output[T]]], Awaitable[Sequence[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">value</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_datadog.synthetics_global_variable.SyntheticsGlobalVariable<a class="headerlink" href="#pulumi_datadog.SyntheticsGlobalVariable.get" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">resource_name</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">id</span><span class="p">:</span> <span class="n">Union<span class="p">[</span>str<span class="p">, </span>Awaitable<span class="p">[</span>str<span class="p">]</span><span class="p">, </span>Output<span class="p">[</span>T<span class="p">]</span><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">opts</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>pulumi.resource.ResourceOptions<span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">description</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">parse_test_id</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">parse_test_options</span><span class="p">:</span> <span class="n">Union[SyntheticsGlobalVariableParseTestOptionsArgs, Mapping[str, Any], Awaitable[Union[SyntheticsGlobalVariableParseTestOptionsArgs, Mapping[str, Any]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">secure</span><span class="p">:</span> <span class="n">Union[bool, Awaitable[bool], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">tags</span><span class="p">:</span> <span class="n">Union[Sequence[Union[str, Awaitable[str], Output[T]]], Awaitable[Sequence[Union[str, Awaitable[str], Output[T]]]], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">value</span><span class="p">:</span> <span class="n">Union[str, Awaitable[str], Output[T], None]</span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; pulumi_datadog.synthetics_global_variable.SyntheticsGlobalVariable<a class="headerlink" href="#pulumi_datadog.SyntheticsGlobalVariable.get" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get an existing SyntheticsGlobalVariable resource’s state with the given name, id, and optional extra
 properties used to qualify the lookup.</p>
 <dl class="field-list simple">
@@ -3727,6 +3964,8 @@ properties used to qualify the lookup.</p>
 <li><p><strong>opts</strong> (<a class="reference internal" href="../pulumi/#pulumi.ResourceOptions" title="pulumi.ResourceOptions"><em>pulumi.ResourceOptions</em></a>) – Options for the resource.</p></li>
 <li><p><strong>description</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Description of the global variable.</p></li>
 <li><p><strong>name</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Synthetics global variable name.</p></li>
+<li><p><strong>parse_test_id</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – Id of the Synthetics test to use for a variable from test.</p></li>
+<li><p><strong>parse_test_options</strong> (<em>pulumi.Input</em><em>[</em><em>pulumi.InputType</em><em>[</em><em>'SyntheticsGlobalVariableParseTestOptionsArgs'</em><em>]</em><em>]</em>) – ID of the Synthetics test to use a source of the global variable value.</p></li>
 <li><p><strong>secure</strong> (<em>pulumi.Input</em><em>[</em><em>bool</em><em>]</em>) – Sets the variable as secure. Defaults to <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p></li>
 <li><p><strong>tags</strong> (<em>pulumi.Input</em><em>[</em><em>Sequence</em><em>[</em><em>pulumi.Input</em><em>[</em><em>str</em><em>]</em><em>]</em><em>]</em>) – A list of tags to associate with your synthetics global variable.</p></li>
 <li><p><strong>value</strong> (<em>pulumi.Input</em><em>[</em><em>str</em><em>]</em>) – The value of the global variable.</p></li>
@@ -3745,6 +3984,18 @@ properties used to qualify the lookup.</p>
 <dt id="pulumi_datadog.SyntheticsGlobalVariable.name">
 <em class="property">property </em><code class="sig-name descname">name</code><a class="headerlink" href="#pulumi_datadog.SyntheticsGlobalVariable.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>Synthetics global variable name.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_datadog.SyntheticsGlobalVariable.parse_test_id">
+<em class="property">property </em><code class="sig-name descname">parse_test_id</code><a class="headerlink" href="#pulumi_datadog.SyntheticsGlobalVariable.parse_test_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>Id of the Synthetics test to use for a variable from test.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_datadog.SyntheticsGlobalVariable.parse_test_options">
+<em class="property">property </em><code class="sig-name descname">parse_test_options</code><a class="headerlink" href="#pulumi_datadog.SyntheticsGlobalVariable.parse_test_options" title="Permalink to this definition">¶</a></dt>
+<dd><p>ID of the Synthetics test to use a source of the global variable value.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -4500,7 +4751,25 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">roles</span><span class="o">=</span><span class="p">[</span><span class="n">ro_role</span><span class="o">.</span><span class="n">id</span><span class="p">])</span>
 </pre></div>
 </div>
-<p>users can be imported using their ID, e.g.</p>
+<ul class="simple">
+<li><p><strong>email</strong> (String) Email address for user.</p></li>
+</ul>
+<ul class="simple">
+<li><p><strong>access_role</strong> (String, Deprecated) Role description for user. Can be <code class="docutils literal notranslate"><span class="pre">st</span></code> (standard user), <code class="docutils literal notranslate"><span class="pre">adm</span></code> (admin user) or <code class="docutils literal notranslate"><span class="pre">ro</span></code> (read-only user). Default is <code class="docutils literal notranslate"><span class="pre">st</span></code>. <code class="docutils literal notranslate"><span class="pre">access_role</span></code> is ignored for new users created with this resource. New users have to use the <code class="docutils literal notranslate"><span class="pre">roles</span></code> attribute.</p></li>
+<li><p><strong>disabled</strong> (Boolean) Whether the user is disabled.</p></li>
+<li><p><strong>handle</strong> (String, Deprecated) The user handle, must be a valid email.</p></li>
+<li><p><strong>id</strong> (String) The ID of this resource.</p></li>
+<li><p><strong>is_admin</strong> (Boolean, Deprecated) Whether the user is an administrator. Warning: the corresponding query parameter is ignored by the Datadog API, thus the argument would always trigger an execution plan.</p></li>
+<li><p><strong>name</strong> (String) Name for user.</p></li>
+<li><p><strong>role</strong> (String, Deprecated) Role description for user. Warning: the corresponding query parameter is ignored by the Datadog API, thus the argument would always trigger an execution plan.</p></li>
+<li><p><strong>roles</strong> (Set of String) A list a role IDs to assign to the user.</p></li>
+<li><p><strong>send_user_invitation</strong> (Boolean) Whether an invitation email should be sent when the user is created.</p></li>
+</ul>
+<ul class="simple">
+<li><p><strong>user_invitation_id</strong> (String) The ID of the user invitation that was sent when creating the user.</p></li>
+<li><p><strong>verified</strong> (Boolean) Returns true if Datadog user is verified.</p></li>
+</ul>
+<p>Import is supported using the following syntax</p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ pulumi import datadog:index/user:User example_user 6f1b44c0-30b2-11eb-86bc-279f7c1ebaa4
 </pre></div>
 </div>
@@ -4708,6 +4977,51 @@ a format of their choosing before sending those properties to the Pulumi engine.
     <span class="n">name_filter</span><span class="o">=</span><span class="s2">&quot;My awesome monitor&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+<ul class="simple">
+<li><p><strong>id</strong> (String) The ID of this resource.</p></li>
+<li><p><strong>monitor_tags_filter</strong> (List of String) A list of monitor tags to limit the search. This filters on the tags set on the monitor itself.</p></li>
+<li><p><strong>name_filter</strong> (String) A monitor name to limit the search.</p></li>
+<li><p><strong>tags_filter</strong> (List of String) A list of tags to limit the search. This filters on the monitor scope.</p></li>
+</ul>
+<ul class="simple">
+<li><p><strong>enable_logs_sample</strong> (Boolean) Whether or not a list of log values which triggered the alert is included. This is only used by log monitors.</p></li>
+<li><p><strong>escalation_message</strong> (String) Message included with a re-notification for this monitor.</p></li>
+<li><p><strong>evaluation_delay</strong> (Number) Time (in seconds) for which evaluation is delayed. This is only used by metric monitors.</p></li>
+<li><p><strong>include_tags</strong> (Boolean) Whether or not notifications from the monitor automatically inserts its triggering tags into the title.</p></li>
+<li><p><strong>locked</strong> (Boolean) Whether or not changes to the monitor are restricted to the creator or admins.</p></li>
+<li><p><strong>message</strong> (String) Message included with notifications for this monitor</p></li>
+<li><p><strong>monitor_threshold_windows</strong> (List of Object) Mapping containing <code class="docutils literal notranslate"><span class="pre">recovery_window</span></code> and <code class="docutils literal notranslate"><span class="pre">trigger_window</span></code> values, e.g. <code class="docutils literal notranslate"><span class="pre">last_15m</span></code>. This is only used by anomaly monitors. (see below for nested schema)</p></li>
+<li><p><strong>monitor_thresholds</strong> (List of Object) Alert thresholds of the monitor. (see below for nested schema)</p></li>
+<li><p><strong>name</strong> (String) Name of the monitor</p></li>
+<li><p><strong>new_host_delay</strong> (Number) Time (in seconds) allowing a host to boot and applications to fully start before starting the evaluation of monitor results.</p></li>
+<li><p><strong>no_data_timeframe</strong> (Number) The number of minutes before the monitor notifies when data stops reporting.</p></li>
+<li><p><strong>notify_audit</strong> (Boolean) Whether or not tagged users are notified on changes to the monitor.</p></li>
+<li><p><strong>notify_no_data</strong> (Boolean) Whether or not this monitor notifies when data stops reporting.</p></li>
+<li><p><strong>query</strong> (String) Query of the monitor.</p></li>
+<li><p><strong>renotify_interval</strong> (Number) The number of minutes after the last notification before the monitor re-notifies on the current status.</p></li>
+<li><p><strong>require_full_window</strong> (Boolean) Whether or not the monitor needs a full window of data before it is evaluated.</p></li>
+<li><p><strong>tags</strong> (Set of String) List of tags associated with the monitor.</p></li>
+<li><p><strong>threshold_windows</strong> (Map of String, Deprecated) Mapping containing <code class="docutils literal notranslate"><span class="pre">recovery_window</span></code> and <code class="docutils literal notranslate"><span class="pre">trigger_window</span></code> values, e.g. <code class="docutils literal notranslate"><span class="pre">last_15m</span></code>. This is only used by anomaly monitors.</p></li>
+<li><p><strong>thresholds</strong> (Map of String, Deprecated) Alert thresholds of the monitor.</p></li>
+<li><p><strong>timeout_h</strong> (Number) Number of hours of the monitor not reporting data before it automatically resolves from a triggered state.</p></li>
+<li><p><strong>type</strong> (String) Type of the monitor.</p></li>
+</ul>
+<p><span class="raw-html-m2r"><a id="nestedatt--monitor_threshold_windows"></a></span></p>
+<p>Read-only:</p>
+<ul class="simple">
+<li><p><strong>recovery_window</strong> (String)</p></li>
+<li><p><strong>trigger_window</strong> (String)</p></li>
+</ul>
+<p><span class="raw-html-m2r"><a id="nestedatt--monitor_thresholds"></a></span></p>
+<p>Read-only:</p>
+<ul class="simple">
+<li><p><strong>critical</strong> (String)</p></li>
+<li><p><strong>critical_recovery</strong> (String)</p></li>
+<li><p><strong>ok</strong> (String)</p></li>
+<li><p><strong>unknown</strong> (String)</p></li>
+<li><p><strong>warning</strong> (String)</p></li>
+<li><p><strong>warning_recovery</strong> (String)</p></li>
+</ul>
 </dd></dl>
 
 <dl class="py function">

@@ -31,6 +31,7 @@ A Pulumi package for creating and managing Datadog resources.
     <li><a href="logsindex" title="LogsIndex"><span class="symbol resource"></span>LogsIndex</a></li>
     <li><a href="logsindexorder" title="LogsIndexOrder"><span class="symbol resource"></span>LogsIndexOrder</a></li>
     <li><a href="logsintegrationpipeline" title="LogsIntegrationPipeline"><span class="symbol resource"></span>LogsIntegrationPipeline</a></li>
+    <li><a href="logsmetric" title="LogsMetric"><span class="symbol resource"></span>LogsMetric</a></li>
     <li><a href="logspipelineorder" title="LogsPipelineOrder"><span class="symbol resource"></span>LogsPipelineOrder</a></li>
     <li><a href="metricmetadata" title="MetricMetadata"><span class="symbol resource"></span>MetricMetadata</a></li>
     <li><a href="monitor" title="Monitor"><span class="symbol resource"></span>Monitor</a></li>
@@ -67,7 +68,7 @@ A Pulumi package for creating and managing Datadog resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`datadog` Terraform Provider](https://github.com/terraform-providers/terraform-provider-datadog).</dd>
 	<dt>Version</dt>
-	<dd>2.14.1</dd>
+	<dd>2.15.0</dd>
 </dl>
 
 

@@ -3,7 +3,7 @@ title: "Module config"
 title_tag: "Module config | Package @pulumi/datadog | Node.js SDK"
 linktitle: "config"
 meta_desc: "Explore members of the config module in the @pulumi/datadog package."
-git_sha: "1178ac02c525d7fcd31e7632670c3e7603675405"
+git_sha: "7169429ad73f674dfb6999252d3e5e0e48a03daa"
 block_external_search_index: true
 ---
 
@@ -30,7 +30,7 @@ block_external_search_index: true
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="apiKey" data-link-title="apiKey">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/1178ac02c525d7fcd31e7632670c3e7603675405/sdk/nodejs/config/vars.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/config/vars.ts#L12">
         let <strong>apiKey</strong>
     </a>
 </h3>
@@ -40,19 +40,19 @@ block_external_search_index: true
 (Required unless validate is false) Datadog API key. This can also be set via the DD_API_KEY environment variable.
 
 <h3 class="pdoc-module-header" id="apiUrl" data-link-title="apiUrl">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/1178ac02c525d7fcd31e7632670c3e7603675405/sdk/nodejs/config/vars.ts#L18">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/config/vars.ts#L18">
         let <strong>apiUrl</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> apiUrl: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;apiUrl&#34;) || utilities.getEnv(&#34;DATADOG_HOST&#34;)</span>;</code></pre>
 
-The API Url. This can be also be set via the DD_HOST environment variable. Note that this URL must not end with the
-/api/ path. For example, https://api.datadoghq.com/ is a correct value, while https://api.datadoghq.com/api/ is not. And
-if you're working with "EU" version of Datadog, use https://api.datadoghq.eu/.
+The API Url. This can also be set via the DD_HOST environment variable. Note that this URL must not end with the /api/
+path. For example, https://api.datadoghq.com/ is a correct value, while https://api.datadoghq.com/api/ is not. And if
+you're working with "EU" version of Datadog, use https://api.datadoghq.eu/.
 
 <h3 class="pdoc-module-header" id="appKey" data-link-title="appKey">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/1178ac02c525d7fcd31e7632670c3e7603675405/sdk/nodejs/config/vars.ts#L22">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/config/vars.ts#L22">
         let <strong>appKey</strong>
     </a>
 </h3>
@@ -62,7 +62,7 @@ if you're working with "EU" version of Datadog, use https://api.datadoghq.eu/.
 (Required unless validate is false) Datadog APP key. This can also be set via the DD_APP_KEY environment variable.
 
 <h3 class="pdoc-module-header" id="validate" data-link-title="validate">
-    <a href="https://github.com/pulumi/pulumi-datadog/blob/1178ac02c525d7fcd31e7632670c3e7603675405/sdk/nodejs/config/vars.ts#L27">
+    <a href="https://github.com/pulumi/pulumi-datadog/blob/7169429ad73f674dfb6999252d3e5e0e48a03daa/sdk/nodejs/config/vars.ts#L27">
         let <strong>validate</strong>
     </a>
 </h3>
@@ -70,5 +70,5 @@ if you're working with "EU" version of Datadog, use https://api.datadoghq.eu/.
 <pre class="highlight"><code><span class='kd'>let</span> validate: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.getObject&lt;boolean&gt;(&#34;validate&#34;)</span>;</code></pre>
 
 Enables validation of the provided API and APP keys during provider initialization. Default is true. When false, api_key
-and app_keywon't be checked.
+and app_key won't be checked.
 

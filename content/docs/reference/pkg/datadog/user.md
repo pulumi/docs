@@ -11,6 +11,28 @@ meta_desc: "Explore the User resource of the Datadog package, including examples
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Provides a Datadog user resource. This can be used to create and manage Datadog users.
+## Schema
+
+### Required
+
+- **email** (String) Email address for user.
+
+### Optional
+
+- **access_role** (String, Deprecated) Role description for user. Can be `st` (standard user), `adm` (admin user) or `ro` (read-only user). Default is `st`. `access_role` is ignored for new users created with this resource. New users have to use the `roles` attribute.
+- **disabled** (Boolean) Whether the user is disabled.
+- **handle** (String, Deprecated) The user handle, must be a valid email.
+- **id** (String) The ID of this resource.
+- **is_admin** (Boolean, Deprecated) Whether the user is an administrator. Warning: the corresponding query parameter is ignored by the Datadog API, thus the argument would always trigger an execution plan.
+- **name** (String) Name for user.
+- **role** (String, Deprecated) Role description for user. Warning: the corresponding query parameter is ignored by the Datadog API, thus the argument would always trigger an execution plan.
+- **roles** (Set of String) A list a role IDs to assign to the user.
+- **send_user_invitation** (Boolean) Whether an invitation email should be sent when the user is created.
+
+### Read-only
+
+- **user_invitation_id** (String) The ID of the user invitation that was sent when creating the user.
+- **verified** (Boolean) Returns true if Datadog user is verified.
 
 {{% examples %}}
 ## Example Usage
@@ -304,8 +326,8 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
     </dt>
     <dd>{{% md %}}Email address for user.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="accessrole_csharp">
 <a href="#accessrole_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Role</a>
 </span>
@@ -314,7 +336,7 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
     </dt>
     <dd>{{% md %}}Role description for user. Can be `st` (standard user), `adm` (admin user) or `ro` (read-only user). Default is `st`.
 `access_role` is ignored for new users created with this resource. New users have to use the `roles` attribute.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is replaced by `roles` and will be removed from the next Major version{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="disabled_csharp">
@@ -403,8 +425,8 @@ would always trigger an execution plan.
     </dt>
     <dd>{{% md %}}Email address for user.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="accessrole_go">
 <a href="#accessrole_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Role</a>
 </span>
@@ -413,7 +435,7 @@ would always trigger an execution plan.
     </dt>
     <dd>{{% md %}}Role description for user. Can be `st` (standard user), `adm` (admin user) or `ro` (read-only user). Default is `st`.
 `access_role` is ignored for new users created with this resource. New users have to use the `roles` attribute.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is replaced by `roles` and will be removed from the next Major version{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="disabled_go">
@@ -502,8 +524,8 @@ would always trigger an execution plan.
     </dt>
     <dd>{{% md %}}Email address for user.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="accessrole_nodejs">
 <a href="#accessrole_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Role</a>
 </span>
@@ -512,7 +534,7 @@ would always trigger an execution plan.
     </dt>
     <dd>{{% md %}}Role description for user. Can be `st` (standard user), `adm` (admin user) or `ro` (read-only user). Default is `st`.
 `access_role` is ignored for new users created with this resource. New users have to use the `roles` attribute.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is replaced by `roles` and will be removed from the next Major version{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="disabled_nodejs">
@@ -601,8 +623,8 @@ would always trigger an execution plan.
     </dt>
     <dd>{{% md %}}Email address for user.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="access_role_python">
 <a href="#access_role_python" style="color: inherit; text-decoration: inherit;">access_<wbr>role</a>
 </span>
@@ -611,7 +633,7 @@ would always trigger an execution plan.
     </dt>
     <dd>{{% md %}}Role description for user. Can be `st` (standard user), `adm` (admin user) or `ro` (read-only user). Default is `st`.
 `access_role` is ignored for new users created with this resource. New users have to use the `roles` attribute.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is replaced by `roles` and will be removed from the next Major version{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="disabled_python">
@@ -960,8 +982,8 @@ The following state arguments are supported:
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_accessrole_csharp">
 <a href="#state_accessrole_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Role</a>
 </span>
@@ -970,7 +992,7 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}Role description for user. Can be `st` (standard user), `adm` (admin user) or `ro` (read-only user). Default is `st`.
 `access_role` is ignored for new users created with this resource. New users have to use the `roles` attribute.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is replaced by `roles` and will be removed from the next Major version{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_disabled_csharp">
@@ -1079,8 +1101,8 @@ would always trigger an execution plan.
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_accessrole_go">
 <a href="#state_accessrole_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Role</a>
 </span>
@@ -1089,7 +1111,7 @@ would always trigger an execution plan.
     </dt>
     <dd>{{% md %}}Role description for user. Can be `st` (standard user), `adm` (admin user) or `ro` (read-only user). Default is `st`.
 `access_role` is ignored for new users created with this resource. New users have to use the `roles` attribute.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is replaced by `roles` and will be removed from the next Major version{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_disabled_go">
@@ -1198,8 +1220,8 @@ would always trigger an execution plan.
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_accessrole_nodejs">
 <a href="#state_accessrole_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Role</a>
 </span>
@@ -1208,7 +1230,7 @@ would always trigger an execution plan.
     </dt>
     <dd>{{% md %}}Role description for user. Can be `st` (standard user), `adm` (admin user) or `ro` (read-only user). Default is `st`.
 `access_role` is ignored for new users created with this resource. New users have to use the `roles` attribute.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is replaced by `roles` and will be removed from the next Major version{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_disabled_nodejs">
@@ -1317,8 +1339,8 @@ would always trigger an execution plan.
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_access_role_python">
 <a href="#state_access_role_python" style="color: inherit; text-decoration: inherit;">access_<wbr>role</a>
 </span>
@@ -1327,7 +1349,7 @@ would always trigger an execution plan.
     </dt>
     <dd>{{% md %}}Role description for user. Can be `st` (standard user), `adm` (admin user) or `ro` (read-only user). Default is `st`.
 `access_role` is ignored for new users created with this resource. New users have to use the `roles` attribute.
-{{% /md %}}</dd>
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}This parameter is replaced by `roles` and will be removed from the next Major version{{% /md %}}</p></dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_disabled_python">
@@ -1440,7 +1462,7 @@ would always trigger an execution plan.
 ## Import
 
 
-users can be imported using their ID, e.g.
+Import is supported using the following syntax
 
 ```sh
  $ pulumi import datadog:index/user:User example_user 6f1b44c0-30b2-11eb-86bc-279f7c1ebaa4
