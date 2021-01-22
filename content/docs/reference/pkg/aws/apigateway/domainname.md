@@ -550,7 +550,7 @@ const exampleRecord = new aws.route53.Record("exampleRecord", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/apigateway/#pulumi_aws.apigateway.DomainName">DomainName</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">certificate_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">certificate_body</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">certificate_chain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">certificate_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">certificate_private_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">domain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">endpoint_configuration</span><span class="p">:</span> <span class="nx">Optional[DomainNameEndpointConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">regional_certificate_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">regional_certificate_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_aws/apigateway/#pulumi_aws.apigateway.DomainName">DomainName</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">certificate_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">certificate_body</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">certificate_chain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">certificate_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">certificate_private_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">domain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">endpoint_configuration</span><span class="p">:</span> <span class="nx">Optional[DomainNameEndpointConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">mutual_tls_authentication</span><span class="p">:</span> <span class="nx">Optional[DomainNameMutualTlsAuthenticationArgs]</span> = None<span class="p">, </span><span class="nx">regional_certificate_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">regional_certificate_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -801,6 +801,16 @@ domain certificate given in `certificate_body`. Only valid for `EDGE` endpoint c
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="mutualtlsauthentication_csharp">
+<a href="#mutualtlsauthentication_csharp" style="color: inherit; text-decoration: inherit;">Mutual<wbr>Tls<wbr>Authentication</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#domainnamemutualtlsauthentication">Domain<wbr>Name<wbr>Mutual<wbr>Tls<wbr>Authentication<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The mutual TLS authentication configuration for the domain name. Defined below.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="regionalcertificatearn_csharp">
 <a href="#regionalcertificatearn_csharp" style="color: inherit; text-decoration: inherit;">Regional<wbr>Certificate<wbr>Arn</a>
 </span>
@@ -923,6 +933,16 @@ domain certificate given in `certificate_body`. Only valid for `EDGE` endpoint c
         <span class="property-type"><a href="#domainnameendpointconfiguration">Domain<wbr>Name<wbr>Endpoint<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration block defining API endpoint information including type. Defined below.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="mutualtlsauthentication_go">
+<a href="#mutualtlsauthentication_go" style="color: inherit; text-decoration: inherit;">Mutual<wbr>Tls<wbr>Authentication</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#domainnamemutualtlsauthentication">Domain<wbr>Name<wbr>Mutual<wbr>Tls<wbr>Authentication</a></span>
+    </dt>
+    <dd>{{% md %}}The mutual TLS authentication configuration for the domain name. Defined below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1051,6 +1071,16 @@ domain certificate given in `certificate_body`. Only valid for `EDGE` endpoint c
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="mutualtlsauthentication_nodejs">
+<a href="#mutualtlsauthentication_nodejs" style="color: inherit; text-decoration: inherit;">mutual<wbr>Tls<wbr>Authentication</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#domainnamemutualtlsauthentication">Domain<wbr>Name<wbr>Mutual<wbr>Tls<wbr>Authentication</a></span>
+    </dt>
+    <dd>{{% md %}}The mutual TLS authentication configuration for the domain name. Defined below.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="regionalcertificatearn_nodejs">
 <a href="#regionalcertificatearn_nodejs" style="color: inherit; text-decoration: inherit;">regional<wbr>Certificate<wbr>Arn</a>
 </span>
@@ -1173,6 +1203,16 @@ domain certificate given in `certificate_body`. Only valid for `EDGE` endpoint c
         <span class="property-type"><a href="#domainnameendpointconfiguration">Domain<wbr>Name<wbr>Endpoint<wbr>Configuration<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Configuration block defining API endpoint information including type. Defined below.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="mutual_tls_authentication_python">
+<a href="#mutual_tls_authentication_python" style="color: inherit; text-decoration: inherit;">mutual_<wbr>tls_<wbr>authentication</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#domainnamemutualtlsauthentication">Domain<wbr>Name<wbr>Mutual<wbr>Tls<wbr>Authentication<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The mutual TLS authentication configuration for the domain name. Defined below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1546,7 +1586,7 @@ Get an existing DomainName resource's state with the given name, ID, and optiona
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">certificate_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">certificate_body</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">certificate_chain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">certificate_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">certificate_private_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">certificate_upload_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cloudfront_domain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cloudfront_zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">domain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">endpoint_configuration</span><span class="p">:</span> <span class="nx">Optional[DomainNameEndpointConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">regional_certificate_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">regional_certificate_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">regional_domain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">regional_zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> DomainName</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">certificate_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">certificate_body</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">certificate_chain</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">certificate_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">certificate_private_key</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">certificate_upload_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cloudfront_domain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cloudfront_zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">domain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">endpoint_configuration</span><span class="p">:</span> <span class="nx">Optional[DomainNameEndpointConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">mutual_tls_authentication</span><span class="p">:</span> <span class="nx">Optional[DomainNameMutualTlsAuthenticationArgs]</span> = None<span class="p">, </span><span class="nx">regional_certificate_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">regional_certificate_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">regional_domain_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">regional_zone_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_policy</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">) -&gt;</span> DomainName</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1781,6 +1821,16 @@ that can be used to create a Route53 alias record for the distribution.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_mutualtlsauthentication_csharp">
+<a href="#state_mutualtlsauthentication_csharp" style="color: inherit; text-decoration: inherit;">Mutual<wbr>Tls<wbr>Authentication</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#domainnamemutualtlsauthentication">Domain<wbr>Name<wbr>Mutual<wbr>Tls<wbr>Authentication<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The mutual TLS authentication configuration for the domain name. Defined below.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_regionalcertificatearn_csharp">
 <a href="#state_regionalcertificatearn_csharp" style="color: inherit; text-decoration: inherit;">Regional<wbr>Certificate<wbr>Arn</a>
 </span>
@@ -1965,6 +2015,16 @@ that can be used to create a Route53 alias record for the distribution.
         <span class="property-type"><a href="#domainnameendpointconfiguration">Domain<wbr>Name<wbr>Endpoint<wbr>Configuration</a></span>
     </dt>
     <dd>{{% md %}}Configuration block defining API endpoint information including type. Defined below.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_mutualtlsauthentication_go">
+<a href="#state_mutualtlsauthentication_go" style="color: inherit; text-decoration: inherit;">Mutual<wbr>Tls<wbr>Authentication</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#domainnamemutualtlsauthentication">Domain<wbr>Name<wbr>Mutual<wbr>Tls<wbr>Authentication</a></span>
+    </dt>
+    <dd>{{% md %}}The mutual TLS authentication configuration for the domain name. Defined below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2155,6 +2215,16 @@ that can be used to create a Route53 alias record for the distribution.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_mutualtlsauthentication_nodejs">
+<a href="#state_mutualtlsauthentication_nodejs" style="color: inherit; text-decoration: inherit;">mutual<wbr>Tls<wbr>Authentication</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#domainnamemutualtlsauthentication">Domain<wbr>Name<wbr>Mutual<wbr>Tls<wbr>Authentication</a></span>
+    </dt>
+    <dd>{{% md %}}The mutual TLS authentication configuration for the domain name. Defined below.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_regionalcertificatearn_nodejs">
 <a href="#state_regionalcertificatearn_nodejs" style="color: inherit; text-decoration: inherit;">regional<wbr>Certificate<wbr>Arn</a>
 </span>
@@ -2342,6 +2412,16 @@ that can be used to create a Route53 alias record for the distribution.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_mutual_tls_authentication_python">
+<a href="#state_mutual_tls_authentication_python" style="color: inherit; text-decoration: inherit;">mutual_<wbr>tls_<wbr>authentication</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#domainnamemutualtlsauthentication">Domain<wbr>Name<wbr>Mutual<wbr>Tls<wbr>Authentication<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The mutual TLS authentication configuration for the domain name. Defined below.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_regional_certificate_arn_python">
 <a href="#state_regional_certificate_arn_python" style="color: inherit; text-decoration: inherit;">regional_<wbr>certificate_<wbr>arn</a>
 </span>
@@ -2487,6 +2567,128 @@ that can be used to create a Route53 alias record for the distribution.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}A list of endpoint types. This resource currently only supports managing a single value. Valid values: `EDGE` or `REGIONAL`. If unspecified, defaults to `EDGE`. Must be declared as `REGIONAL` in non-Commercial partitions. Refer to the [documentation](https://docs.aws.amazon.com/apigateway/latest/developerguide/create-regional-api.html) for more information on the difference between edge-optimized and regional APIs.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="domainnamemutualtlsauthentication">Domain<wbr>Name<wbr>Mutual<wbr>Tls<wbr>Authentication</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#DomainNameMutualTlsAuthentication">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#DomainNameMutualTlsAuthentication">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/apigateway?tab=doc#DomainNameMutualTlsAuthenticationArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/apigateway?tab=doc#DomainNameMutualTlsAuthenticationOutput">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ApiGateway.Inputs.DomainNameMutualTlsAuthenticationArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.ApiGateway.Outputs.DomainNameMutualTlsAuthentication.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="truststoreuri_csharp">
+<a href="#truststoreuri_csharp" style="color: inherit; text-decoration: inherit;">Truststore<wbr>Uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An Amazon S3 URL that specifies the truststore for mutual TLS authentication, for example, `s3://bucket-name/key-name`.
+The truststore can contain certificates from public or private certificate authorities. To update the truststore, upload a new version to S3, and then update your custom domain name to use the new version.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="truststoreversion_csharp">
+<a href="#truststoreversion_csharp" style="color: inherit; text-decoration: inherit;">Truststore<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The version of the S3 object that contains the truststore. To specify a version, you must have versioning enabled for the S3 bucket.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="truststoreuri_go">
+<a href="#truststoreuri_go" style="color: inherit; text-decoration: inherit;">Truststore<wbr>Uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An Amazon S3 URL that specifies the truststore for mutual TLS authentication, for example, `s3://bucket-name/key-name`.
+The truststore can contain certificates from public or private certificate authorities. To update the truststore, upload a new version to S3, and then update your custom domain name to use the new version.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="truststoreversion_go">
+<a href="#truststoreversion_go" style="color: inherit; text-decoration: inherit;">Truststore<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The version of the S3 object that contains the truststore. To specify a version, you must have versioning enabled for the S3 bucket.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="truststoreuri_nodejs">
+<a href="#truststoreuri_nodejs" style="color: inherit; text-decoration: inherit;">truststore<wbr>Uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An Amazon S3 URL that specifies the truststore for mutual TLS authentication, for example, `s3://bucket-name/key-name`.
+The truststore can contain certificates from public or private certificate authorities. To update the truststore, upload a new version to S3, and then update your custom domain name to use the new version.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="truststoreversion_nodejs">
+<a href="#truststoreversion_nodejs" style="color: inherit; text-decoration: inherit;">truststore<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The version of the S3 object that contains the truststore. To specify a version, you must have versioning enabled for the S3 bucket.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="truststore_uri_python">
+<a href="#truststore_uri_python" style="color: inherit; text-decoration: inherit;">truststore_<wbr>uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}An Amazon S3 URL that specifies the truststore for mutual TLS authentication, for example, `s3://bucket-name/key-name`.
+The truststore can contain certificates from public or private certificate authorities. To update the truststore, upload a new version to S3, and then update your custom domain name to use the new version.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="truststore_version_python">
+<a href="#truststore_version_python" style="color: inherit; text-decoration: inherit;">truststore_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The version of the S3 object that contains the truststore. To specify a version, you must have versioning enabled for the S3 bucket.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}

@@ -129,7 +129,7 @@ my_email_template = auth0.EmailTemplate("myEmailTemplate",
     syntax="liquid",
     url_lifetime_in_seconds=3600,
     enabled=True,
-    opts=ResourceOptions(depends_on=[my_email_provider]))
+    opts=pulumi.ResourceOptions(depends_on=[my_email_provider]))
 ```
 
 {{% /example %}}

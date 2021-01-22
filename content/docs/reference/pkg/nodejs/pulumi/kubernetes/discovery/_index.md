@@ -3,7 +3,7 @@ title: "Module discovery"
 title_tag: "Module discovery | Package @pulumi/kubernetes | Node.js SDK"
 linktitle: "discovery"
 meta_desc: "Explore members of the discovery module in the @pulumi/kubernetes package."
-git_sha: "ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9"
+git_sha: "63f6322ca9e33d39a2e52afc00dc343f1f4f3369"
 block_external_search_index: true
 ---
 

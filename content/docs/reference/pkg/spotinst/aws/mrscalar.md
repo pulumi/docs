@@ -12,218 +12,11 @@ meta_desc: "Documentation for the spotinst.aws.MrScalar resource with examples, 
 
 Provides a Spotinst AWS MrScaler resource.
 
-## Provisioning Timeout (Clone, New strategies)
-
-* `timeout` - (Optional) The amount of time (minutes) after which the cluster is automatically terminated if it's still in provisioning status. Minimum: '15'.
-* `timeout_action` - (Optional) The action to take if the timeout is exceeded. Valid values: `terminate`, `terminateAndRetry`.
-
-<a id="cluster-config"></a>
-## Cluster Configuration (New strategy only)
-
-* `log_uri` - (Optional) The path to the Amazon S3 location where logs for this cluster are stored.
-* `additional_info` - (Optional) This is meta information about third-party applications that third-party vendors use for testing purposes.
-* `security_config` - (Optional) The name of the security configuration applied to the cluster.
-* `service_role` - (Optional) The IAM role that will be assumed by the Amazon EMR service to access AWS resources on your behalf.
-* `job_flow_role` - (Optional) The IAM role that was specified when the job flow was launched. The EC2 instances of the job flow assume this role.
-* `termination_protected` - (Optional) Specifies whether the Amazon EC2 instances in the cluster are protected from termination by API calls, user intervention, or in the event of a job-flow error.
-* `keep_job_flow_alive` - (Optional) Specifies whether the cluster should remain available after completing all steps.
-* `retries` - (Optional; Requires: `timeout_action` is set to `terminateAndRetry`) Specifies the maximum number of times a capacity provisioning should be retried if the provisioning timeout is exceeded. Valid values: `1-5`.
-
-<a id="task-group"></a>
-## Task Group (Wrap, Clone, and New strategies)
-
-* `task_instance_types` - (Required) The MrScaler instance types for the task nodes.
-* `task_target` - (Required) amount of instances in task group.
-* `task_maximum` - (Optional) maximal amount of instances in task group.
-* `task_minimum` - (Optional) The minimal amount of instances in task group.
-* `task_unit` - (Optional, Default: `instance`) Unit of task group for target, min and max. The unit could be `instance` or `weight`. instance - amount of instances. weight - amount of vCPU.
-* `task_lifecycle` - (Required) The MrScaler lifecycle for instances in task group. Allowed values are 'SPOT' and 'ON_DEMAND'.
-* `task_ebs_optimized` - (Optional) EBS Optimization setting for instances in group.
-* `task_ebs_block_device` - (Required) This determines the ebs configuration for your task group instances. Only a single block is allowed.
-    * `volumes_per_instance` - (Optional; Default 1) Amount of volumes per instance in the task group.
-    * `volume_type` - (Required) volume type. Allowed values are 'gp2', 'io1' and others.
-    * `size_in_gb` - (Required) Size of the volume, in GBs.
-    * `iops` - (Optional) IOPS for the volume. Required in some volume types, such as io1.
-
-<a id="core-group"></a>
-## Core Group (Clone, New strategies)
-
-* `core_instance_types` - (Required) The MrScaler instance types for the core nodes.
-* `core_target` - (Required) amount of instances in core group.
-* `core_maximum` - (Optional) maximal amount of instances in core group.
-* `core_minimum` - (Optional) The minimal amount of instances in core group.
-* `core_unit` - (Optional, Default: `instance`) Unit of task group for target, min and max. The unit could be `instance` or `weight`. instance - amount of instances. weight - amount of vCPU.
-* `core_lifecycle` - (Required) The MrScaler lifecycle for instances in core group. Allowed values are 'SPOT' and 'ON_DEMAND'.
-* `core_ebs_optimized` - (Optional) EBS Optimization setting for instances in group.
-* `core_ebs_block_device` - (Required) This determines the ebs configuration for your core group instances. Only a single block is allowed.
-    * `volumes_per_instance` - (Optional; Default 1) Amount of volumes per instance in the core group.
-    * `volume_type` - (Required) volume type. Allowed values are 'gp2', 'io1' and others.
-    * `size_in_gb` - (Required) Size of the volume, in GBs.
-    * `iops` - (Optional) IOPS for the volume. Required in some volume types, such as io1.
-
-<a id="master-group"></a>
-## Master Group (Clone, New strategies)
-
-* `master_instance_types` - (Required) The MrScaler instance types for the master nodes.
-* `master_lifecycle` - (Required) The MrScaler lifecycle for instances in master group. Allowed values are 'SPOT' and 'ON_DEMAND'.
-* `master_ebs_optimized` - (Optional) EBS Optimization setting for instances in group.
-* `master_ebs_block_device` - (Required) This determines the ebs configuration for your master group instances. Only a single block is allowed.
-    * `volumes_per_instance` - (Optional; Default 1) Amount of volumes per instance in the master group.
-    * `volume_type` - (Required) volume type. Allowed values are 'gp2', 'io1' and others.
-    * `size_in_gb` - (Required) Size of the volume, in GBs.
-    * `iops` - (Optional) IOPS for the volume. Required in some volume types, such as io1.
-
-<a id="tags"></a>
-## Tags (Clone, New strategies)
-
-* `tags` - (Optional) A list of tags to assign to the resource. You may define multiple tags.
-    * `key` - (Required) Tag key.
-    * `value` - (Required) Tag value.
-
-<a id="Optional Compute Parameters"></a>
-## Optional Compute Parameters (New strategy)
-
-* `managed_primary_security_group` - (Optional) EMR Managed Security group that will be set to the primary instance group.
-* `managed_replica_security_group` - (Optional) EMR Managed Security group that will be set to the replica instance group.
-* `service_access_security_group` - (Optional) The identifier of the Amazon EC2 security group for the Amazon EMR service to access clusters in VPC private subnets.
-* `additional_primary_security_groups` - (Optional) A list of additional Amazon EC2 security group IDs for the master node.
-* `additional_replica_security_groups` - (Optional) A list of additional Amazon EC2 security group IDs for the core and task nodes.
-* `custom_ami_id` - (Optional) The ID of a custom Amazon EBS-backed Linux AMI if the cluster uses a custom AMI.
-* `repo_upgrade_on_boot` - (Optional) Applies only when `custom_ami_id` is used. Specifies the type of updates that are applied from the Amazon Linux AMI package repositories when an instance boots using the AMI. Possible values include: `SECURITY`, `NONE`.
-* `ec2_key_name` - (Optional) The name of an Amazon EC2 key pair that can be used to ssh to the master node.
-* `applications` - (Optional) A case-insensitive list of applications for Amazon EMR to install and configure when launching the cluster
-    * `args` - (Optional) Arguments for EMR to pass to the application.
-    * `name` - (Required) The application name.
-    * `version`- (Optional)T he version of the application.
-* `instance_weights` - (Optional) Describes the instance and weights. Check out [Elastigroup Weighted Instances](https://api.spotinst.com/elastigroup-for-aws/concepts/general-concepts/elastigroup-capacity-instances-or-weighted) for more info.
-    * `instance_type` - (Required) The type of the instance.
-    * `weighted_capacity` - (Required) The weight given to the associated instance type.
-
-<a id="availability-zone"></a>
-## Availability Zones (Clone, New strategies)
-
-* `availability_zones` - (Required in Clone) List of AZs and their subnet Ids. See example above for usage.
-
-<a id="configurations"></a>
-## Configurations (Clone, New strategies)
-
-* `configurations_file` - (Optional) Describes path to S3 file containing description of configurations. [More Information](https://api.spotinst.com/elastigroup-for-aws/services-integrations/elastic-mapreduce/import-an-emr-cluster/advanced/)
-    * `bucket` - (Required) S3 Bucket name for configurations.
-    * `key`- (Required) S3 key for configurations.
-
-<a id="steps"></a>
-## Steps (Clone, New strategies)
-
-* `steps_file` - (Optional) Steps from S3.
-    * `bucket` - (Required) S3 Bucket name for steps.
-    * `key`- (Required) S3 key for steps.
-
-<a id="boostrap-actions"></a>
-## Bootstrap Actions (Clone, New strategies)
-
-* `bootstrap_actions_file` - (Optional) Describes path to S3 file containing description of bootstrap actions. [More Information](https://api.spotinst.com/elastigroup-for-aws/services-integrations/elastic-mapreduce/import-an-emr-cluster/advanced/)
-    * `bucket` - (Required) S3 Bucket name for bootstrap actions.
-    * `key`- (Required) S3 key for bootstrap actions.
-
-<a id="scaling-policy"></a>
-## Scaling Policies
-
-Possible task group scaling policies (Wrap, Clone, and New strategies):
-* `task_scaling_up_policy`
-* `task_scaling_down_policy`
-
-Possible core group scaling policies (Clone, New strategies):
-* `core_scaling_up_policy`
-* `core_scaling_down_policy`
-
-Each `*_scaling_*_policy` supports the following:
-
-* `policy_name` - (Required) The name of the policy.
-* `metric_name` - (Required) The name of the metric, with or without spaces.
-* `statistic` - (Required) The metric statistics to return. For information about specific statistics go to [Statistics](http://docs.aws.amazon.com/AmazonCloudWatch/latest/DeveloperGuide/index.html?CHAP_TerminologyandKeyConcepts.html#Statistic) in the Amazon CloudWatch Developer Guide.
-* `unit` - (Required) The unit for the metric.
-* `threshold` - (Required) The value against which the specified statistic is compared.
-* `adjustment` - (Optional) The number of instances to add/remove to/from the target capacity when scale is needed.
-* `min_target_capacity` - (Optional) Min target capacity for scale up.
-* `max_target_capacity` - (Optional) Max target capacity for scale down.
-* `namespace` - (Required) The namespace for the metric.
-* `operator` - (Required) The operator to use. Allowed values are : 'gt', 'gte', 'lt' , 'lte'.
-* `evaluation_periods` - (Required) The number of periods over which data is compared to the specified threshold.
-* `period` - (Required) The granularity, in seconds, of the returned datapoints. Period must be at least 60 seconds and must be a multiple of 60.
-* `cooldown` - (Required) The amount of time, in seconds, after a scaling activity completes and before the next scaling activity can start.
-* `dimensions` - (Optional) A mapping of dimensions describing qualities of the metric.
-* `minimum` - (Optional) The minimum to set when scale is needed.
-* `maximum` - (Optional) The maximum to set when scale is needed.
-* `target` - (Optional) The number of instances to set when scale is needed.
-* `action_type` - (Required) The type of action to perform. Allowed values are : 'adjustment', 'setMinTarget', 'setMaxTarget', 'updateCapacity', 'percentageAdjustment'
-
-<a id="scheduled-task"></a>
-## Scheduled Tasks
-
-* `scheduled_task` - (Optional) An array of scheduled tasks.
-* `is_enabled` - (Optional) Enable/Disable the specified scheduling task.
-* `task_type` - (Required) The type of task to be scheduled. Valid values: `setCapacity`.
-* `instance_group_type` - (Required) Select the EMR instance groups to execute the scheduled task on. Valid values: `task`.
-* `cron` - (Required) A cron expression representing the schedule for the task.
-* `desired_capacity` - (Optional) New desired capacity for the elastigroup.
-* `min_capacity` - (Optional) New min capacity for the elastigroup.
-* `max_capacity` - (Optional) New max capacity for the elastigroup.
-
-<a id="termination-policies"></a>
-
 
 {{% examples %}}
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
-
-{{% example csharp %}}
-```csharp
-using Pulumi;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-    }
-
-}
-```
-
-{{% /example %}}
-
-{{% example go %}}
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		return nil
-	})
-}
-```
-
-{{% /example %}}
-
-{{% example python %}}
-```python
-import pulumi
-```
-
-{{% /example %}}
-
-{{% example typescript %}}
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-```
-
-{{% /example %}}
-
 ### New Strategy
 {{% example csharp %}}
 ```csharp
@@ -234,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var terraform_MrScaler_01 = new SpotInst.Aws.MrScalar("terraform-MrScaler-01", new SpotInst.Aws.MrScalarArgs
+        var sample_MrScaler_01 = new SpotInst.Aws.MrScalar("sample-MrScaler-01", new SpotInst.Aws.MrScalarArgs
         {
             AdditionalInfo = "{'test':'more information'}",
             AdditionalPrimarySecurityGroups = 
@@ -274,7 +67,7 @@ class MyStack : Stack
             {
                 new SpotInst.Aws.Inputs.MrScalarBootstrapActionsFileArgs
                 {
-                    Bucket = "terraform-emr-test",
+                    Bucket = "sample-emr-test",
                     Key = "bootstrap-actions.json",
                 },
             },
@@ -307,7 +100,7 @@ class MyStack : Stack
             CoreMinSize = 1,
             CoreUnit = "instance",
             CustomAmiId = "ami-123456",
-            Description = "Testing MrScaler creation via Terraform",
+            Description = "Testing MrScaler creation",
             Ec2KeyName = "test-key",
             InstanceWeights = 
             {
@@ -368,7 +161,7 @@ class MyStack : Stack
                 new SpotInst.Aws.Inputs.MrScalarTagArgs
                 {
                     Key = "Creator",
-                    Value = "Terraform",
+                    Value = "Pulumi",
                 },
             },
             TaskDesiredCapacity = 1,
@@ -411,7 +204,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := aws.NewMrScalar(ctx, "terraform_MrScaler_01", &aws.MrScalarArgs{
+		_, err := aws.NewMrScalar(ctx, "sample_MrScaler_01", &aws.MrScalarArgs{
 			AdditionalInfo: pulumi.String("{'test':'more information'}"),
 			AdditionalPrimarySecurityGroups: pulumi.StringArray{
 				pulumi.String("sg-456321"),
@@ -440,7 +233,7 @@ func main() {
 			},
 			BootstrapActionsFiles: aws.MrScalarBootstrapActionsFileArray{
 				&aws.MrScalarBootstrapActionsFileArgs{
-					Bucket: pulumi.String("terraform-emr-test"),
+					Bucket: pulumi.String("sample-emr-test"),
 					Key:    pulumi.String("bootstrap-actions.json"),
 				},
 			},
@@ -468,7 +261,7 @@ func main() {
 			CoreMinSize:   pulumi.Int(1),
 			CoreUnit:      pulumi.String("instance"),
 			CustomAmiId:   pulumi.String("ami-123456"),
-			Description:   pulumi.String("Testing MrScaler creation via Terraform"),
+			Description:   pulumi.String("Testing MrScaler creation"),
 			Ec2KeyName:    pulumi.String("test-key"),
 			InstanceWeights: aws.MrScalarInstanceWeightArray{
 				&aws.MrScalarInstanceWeightArgs{
@@ -518,7 +311,7 @@ func main() {
 			Tags: aws.MrScalarTagArray{
 				&aws.MrScalarTagArgs{
 					Key:   pulumi.String("Creator"),
-					Value: pulumi.String("Terraform"),
+					Value: pulumi.String("Pulumi"),
 				},
 			},
 			TaskDesiredCapacity: pulumi.Int(1),
@@ -555,7 +348,7 @@ func main() {
 import pulumi
 import pulumi_spotinst as spotinst
 
-terraform__mr_scaler_01 = spotinst.aws.MrScalar("terraform-MrScaler-01",
+sample__mr_scaler_01 = spotinst.aws.MrScalar("sample-MrScaler-01",
     additional_info="{'test':'more information'}",
     additional_primary_security_groups=["sg-456321"],
     additional_replica_security_groups=["sg-123654"],
@@ -577,7 +370,7 @@ terraform__mr_scaler_01 = spotinst.aws.MrScalar("terraform-MrScaler-01",
     ],
     availability_zones=["us-west-2a:subnet-123456"],
     bootstrap_actions_files=[spotinst.aws.MrScalarBootstrapActionsFileArgs(
-        bucket="terraform-emr-test",
+        bucket="sample-emr-test",
         key="bootstrap-actions.json",
     )],
     configurations_files=[spotinst.aws.MrScalarConfigurationsFileArgs(
@@ -600,7 +393,7 @@ terraform__mr_scaler_01 = spotinst.aws.MrScalar("terraform-MrScaler-01",
     core_min_size=1,
     core_unit="instance",
     custom_ami_id="ami-123456",
-    description="Testing MrScaler creation via Terraform",
+    description="Testing MrScaler creation",
     ec2_key_name="test-key",
     instance_weights=[
         spotinst.aws.MrScalarInstanceWeightArgs(
@@ -643,7 +436,7 @@ terraform__mr_scaler_01 = spotinst.aws.MrScalar("terraform-MrScaler-01",
     strategy="new",
     tags=[spotinst.aws.MrScalarTagArgs(
         key="Creator",
-        value="Terraform",
+        value="Pulumi",
     )],
     task_desired_capacity=1,
     task_ebs_block_devices=[spotinst.aws.MrScalarTaskEbsBlockDeviceArgs(
@@ -671,7 +464,7 @@ terraform__mr_scaler_01 = spotinst.aws.MrScalar("terraform-MrScaler-01",
 import * as pulumi from "@pulumi/pulumi";
 import * as spotinst from "@pulumi/spotinst";
 
-const terraform_MrScaler_01 = new spotinst.aws.MrScalar("Terraform-MrScaler-01", {
+const sample_MrScaler_01 = new spotinst.aws.MrScalar("sample-MrScaler-01", {
     additionalInfo: "{'test':'more information'}",
     additionalPrimarySecurityGroups: ["sg-456321"],
     additionalReplicaSecurityGroups: ["sg-123654"],
@@ -693,7 +486,7 @@ const terraform_MrScaler_01 = new spotinst.aws.MrScalar("Terraform-MrScaler-01",
     ],
     availabilityZones: ["us-west-2a:subnet-123456"],
     bootstrapActionsFiles: [{
-        bucket: "terraform-emr-test",
+        bucket: "sample-emr-test",
         key: "bootstrap-actions.json",
     }],
     configurationsFiles: [{
@@ -718,7 +511,7 @@ const terraform_MrScaler_01 = new spotinst.aws.MrScalar("Terraform-MrScaler-01",
     coreUnit: "instance",
     // --- OPTONAL COMPUTE -----
     customAmiId: "ami-123456",
-    description: "Testing MrScaler creation via Terraform",
+    description: "Testing MrScaler creation",
     ec2KeyName: "test-key",
     instanceWeights: [
         {
@@ -764,7 +557,7 @@ const terraform_MrScaler_01 = new spotinst.aws.MrScalar("Terraform-MrScaler-01",
     // --- TAGS -------------------
     tags: [{
         key: "Creator",
-        value: "Terraform",
+        value: "Pulumi",
     }],
     taskDesiredCapacity: 1,
     taskEbsBlockDevices: [{
@@ -798,7 +591,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var terraform_MrScaler_01 = new SpotInst.Aws.MrScalar("terraform-MrScaler-01", new SpotInst.Aws.MrScalarArgs
+        var sample_MrScaler_01 = new SpotInst.Aws.MrScalar("sample-MrScaler-01", new SpotInst.Aws.MrScalarArgs
         {
             AvailabilityZones = 
             {
@@ -825,7 +618,7 @@ class MyStack : Stack
             CoreMaxSize = 1,
             CoreMinSize = 1,
             CoreUnit = "instance",
-            Description = "Testing MrScaler creation via Terraform",
+            Description = "Testing MrScaler creation",
             ExposeClusterId = true,
             MasterEbsBlockDevices = 
             {
@@ -849,7 +642,7 @@ class MyStack : Stack
                 new SpotInst.Aws.Inputs.MrScalarTagArgs
                 {
                     Key = "Creator",
-                    Value = "Terraform",
+                    Value = "Pulumi",
                 },
             },
             TaskDesiredCapacity = 1,
@@ -900,8 +693,8 @@ class MyStack : Stack
             },
             TaskUnit = "instance",
         });
-        this.Mrscaler_name = terraform_MrScaler_01.Name;
-        this.Mrscaler_created_cluster_id = terraform_MrScaler_01.OutputClusterId;
+        this.Mrscaler_name = sample_MrScaler_01.Name;
+        this.Mrscaler_created_cluster_id = sample_MrScaler_01.OutputClusterId;
     }
 
     [Output("mrscaler-name")]
@@ -924,7 +717,7 @@ import (
 
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
-		_, err := aws.NewMrScalar(ctx, "terraform_MrScaler_01", &aws.MrScalarArgs{
+		_, err := aws.NewMrScalar(ctx, "sample_MrScaler_01", &aws.MrScalarArgs{
 			AvailabilityZones: pulumi.StringArray{
 				pulumi.String("us-west-2a:subnet-12345678"),
 			},
@@ -946,7 +739,7 @@ func main() {
 			CoreMaxSize:     pulumi.Int(1),
 			CoreMinSize:     pulumi.Int(1),
 			CoreUnit:        pulumi.String("instance"),
-			Description:     pulumi.String("Testing MrScaler creation via Terraform"),
+			Description:     pulumi.String("Testing MrScaler creation"),
 			ExposeClusterId: pulumi.Bool(true),
 			MasterEbsBlockDevices: aws.MrScalarMasterEbsBlockDeviceArray{
 				&aws.MrScalarMasterEbsBlockDeviceArgs{
@@ -965,7 +758,7 @@ func main() {
 			Tags: aws.MrScalarTagArray{
 				&aws.MrScalarTagArgs{
 					Key:   pulumi.String("Creator"),
-					Value: pulumi.String("Terraform"),
+					Value: pulumi.String("Pulumi"),
 				},
 			},
 			TaskDesiredCapacity: pulumi.Int(1),
@@ -1013,8 +806,8 @@ func main() {
 		if err != nil {
 			return err
 		}
-		ctx.Export("mrscaler-name", terraform_MrScaler_01.Name)
-		ctx.Export("mrscaler-created-cluster-id", terraform_MrScaler_01.OutputClusterId)
+		ctx.Export("mrscaler-name", sample_MrScaler_01.Name)
+		ctx.Export("mrscaler-created-cluster-id", sample_MrScaler_01.OutputClusterId)
 		return nil
 	})
 }
@@ -1027,7 +820,7 @@ func main() {
 import pulumi
 import pulumi_spotinst as spotinst
 
-terraform__mr_scaler_01 = spotinst.aws.MrScalar("terraform-MrScaler-01",
+sample__mr_scaler_01 = spotinst.aws.MrScalar("sample-MrScaler-01",
     availability_zones=["us-west-2a:subnet-12345678"],
     cluster_id="j-123456789",
     core_desired_capacity=1,
@@ -1045,7 +838,7 @@ terraform__mr_scaler_01 = spotinst.aws.MrScalar("terraform-MrScaler-01",
     core_max_size=1,
     core_min_size=1,
     core_unit="instance",
-    description="Testing MrScaler creation via Terraform",
+    description="Testing MrScaler creation",
     expose_cluster_id=True,
     master_ebs_block_devices=[spotinst.aws.MrScalarMasterEbsBlockDeviceArgs(
         size_in_gb=30,
@@ -1059,7 +852,7 @@ terraform__mr_scaler_01 = spotinst.aws.MrScalar("terraform-MrScaler-01",
     strategy="clone",
     tags=[spotinst.aws.MrScalarTagArgs(
         key="Creator",
-        value="Terraform",
+        value="Pulumi",
     )],
     task_desired_capacity=1,
     task_ebs_block_devices=[spotinst.aws.MrScalarTaskEbsBlockDeviceArgs(
@@ -1098,8 +891,8 @@ terraform__mr_scaler_01 = spotinst.aws.MrScalar("terraform-MrScaler-01",
         unit="",
     )],
     task_unit="instance")
-pulumi.export("mrscaler-name", terraform__mr_scaler_01.name)
-pulumi.export("mrscaler-created-cluster-id", terraform__mr_scaler_01.output_cluster_id)
+pulumi.export("mrscaler-name", sample__mr_scaler_01.name)
+pulumi.export("mrscaler-created-cluster-id", sample__mr_scaler_01.output_cluster_id)
 ```
 
 {{% /example %}}
@@ -1110,7 +903,7 @@ pulumi.export("mrscaler-created-cluster-id", terraform__mr_scaler_01.output_clus
 import * as pulumi from "@pulumi/pulumi";
 import * as spotinst from "@pulumi/spotinst";
 
-const terraform_MrScaler_01 = new spotinst.aws.MrScalar("Terraform-MrScaler-01", {
+const sample_MrScaler_01 = new spotinst.aws.MrScalar("sample-MrScaler-01", {
     availabilityZones: ["us-west-2a:subnet-12345678"],
     clusterId: "j-123456789",
     coreDesiredCapacity: 1,
@@ -1129,7 +922,7 @@ const terraform_MrScaler_01 = new spotinst.aws.MrScalar("Terraform-MrScaler-01",
     coreMaxSize: 1,
     coreMinSize: 1,
     coreUnit: "instance",
-    description: "Testing MrScaler creation via Terraform",
+    description: "Testing MrScaler creation",
     exposeClusterId: true,
     masterEbsBlockDevices: [{
         sizeInGb: 30,
@@ -1145,7 +938,7 @@ const terraform_MrScaler_01 = new spotinst.aws.MrScalar("Terraform-MrScaler-01",
     // --- TAGS -------------------
     tags: [{
         key: "Creator",
-        value: "Terraform",
+        value: "Pulumi",
     }],
     taskDesiredCapacity: 1,
     taskEbsBlockDevices: [{
@@ -1188,8 +981,8 @@ const terraform_MrScaler_01 = new spotinst.aws.MrScalar("Terraform-MrScaler-01",
     taskUnit: "instance",
 });
 
-export const mrscaler_name = terraform_MrScaler_01.name;
-export const mrscaler_created_cluster_id = terraform_MrScaler_01.outputClusterId;
+export const mrscaler_name = sample_MrScaler_01.name;
+export const mrscaler_created_cluster_id = sample_MrScaler_01.outputClusterId;
 ```
 
 {{% /example %}}
@@ -1207,7 +1000,7 @@ class MyStack : Stack
         var example_scaler_2 = new SpotInst.Aws.MrScalar("example-scaler-2", new SpotInst.Aws.MrScalarArgs
         {
             ClusterId = "j-27UVDEHXL4OQM",
-            Description = "created by Terraform",
+            Description = "created by Pulumi",
             Region = "us-west-2",
             Strategy = "wrap",
             TaskDesiredCapacity = 2,
@@ -1250,7 +1043,7 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := aws.NewMrScalar(ctx, "example_scaler_2", &aws.MrScalarArgs{
 			ClusterId:           pulumi.String("j-27UVDEHXL4OQM"),
-			Description:         pulumi.String("created by Terraform"),
+			Description:         pulumi.String("created by Pulumi"),
 			Region:              pulumi.String("us-west-2"),
 			Strategy:            pulumi.String("wrap"),
 			TaskDesiredCapacity: pulumi.Int(2),
@@ -1287,7 +1080,7 @@ import pulumi_spotinst as spotinst
 
 example_scaler_2 = spotinst.aws.MrScalar("example-scaler-2",
     cluster_id="j-27UVDEHXL4OQM",
-    description="created by Terraform",
+    description="created by Pulumi",
     region="us-west-2",
     strategy="wrap",
     task_desired_capacity=2,
@@ -1316,7 +1109,7 @@ import * as spotinst from "@pulumi/spotinst";
 
 const example_scaler_2 = new spotinst.aws.MrScalar("example-scaler-2", {
     clusterId: "j-27UVDEHXL4OQM",
-    description: "created by Terraform",
+    description: "created by Pulumi",
     region: "us-west-2",
     strategy: "wrap",
     taskDesiredCapacity: 2,
@@ -1540,7 +1333,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}This is meta information about third-party applications that third-party vendors use for testing purposes.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="additionalprimarysecuritygroups_csharp">
@@ -1549,7 +1343,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of additional Amazon EC2 security group IDs for the master node.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="additionalreplicasecuritygroups_csharp">
@@ -1558,7 +1353,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of additional Amazon EC2 security group IDs for the core and task nodes.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="applications_csharp">
@@ -1567,7 +1363,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mrscalarapplication">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Mr<wbr>Scalar<wbr>Application<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A case-insensitive list of applications for Amazon EMR to install and configure when launching the cluster
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="availabilityzones_csharp">
@@ -1576,7 +1373,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of AZs and their subnet Ids. See example above for usage.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="bootstrapactionsfiles_csharp">
@@ -1585,7 +1383,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mrscalarbootstrapactionsfile">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Mr<wbr>Scalar<wbr>Bootstrap<wbr>Actions<wbr>File<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes path to S3 file containing description of bootstrap actions. [More Information](https://api.spotinst.com/elastigroup-for-aws/services-integrations/elastic-mapreduce/import-an-emr-cluster/advanced/)
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="clusterid_csharp">
@@ -1604,7 +1403,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mrscalarconfigurationsfile">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Mr<wbr>Scalar<wbr>Configurations<wbr>File<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes path to S3 file containing description of configurations. [More Information](https://api.spotinst.com/elastigroup-for-aws/services-integrations/elastic-mapreduce/import-an-emr-cluster/advanced/)
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="coredesiredcapacity_csharp">
@@ -1622,7 +1422,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mrscalarcoreebsblockdevice">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Mr<wbr>Scalar<wbr>Core<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}This determines the ebs configuration for your core group instances. Only a single block is allowed.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="coreebsoptimized_csharp">
@@ -1631,7 +1432,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}EBS Optimization setting for instances in group.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="coreinstancetypes_csharp">
@@ -1640,7 +1442,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The MrScaler instance types for the core nodes.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="corelifecycle_csharp">
@@ -1649,7 +1452,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The MrScaler lifecycle for instances in core group. Allowed values are 'SPOT' and 'ON_DEMAND'.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="coremaxsize_csharp">
@@ -1694,7 +1498,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Unit of task group for target, min and max. The unit could be `instance` or `weight`. instance - amount of instances. weight - amount of vCPU.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="customamiid_csharp">
@@ -1703,7 +1508,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The ID of a custom Amazon EBS-backed Linux AMI if the cluster uses a custom AMI.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
@@ -1731,7 +1537,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of an Amazon EC2 key pair that can be used to ssh to the master node.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="exposeclusterid_csharp">
@@ -1740,7 +1547,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Allow the `cluster_id` to set a provider output variable.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="instanceweights_csharp">
@@ -1749,7 +1557,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mrscalarinstanceweight">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Mr<wbr>Scalar<wbr>Instance<wbr>Weight<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes the instance and weights. Check out [Elastigroup Weighted Instances](https://api.spotinst.com/elastigroup-for-aws/concepts/general-concepts/elastigroup-capacity-instances-or-weighted) for more info.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="jobflowrole_csharp">
@@ -1758,7 +1567,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The IAM role that was specified when the job flow was launched. The EC2 instances of the job flow assume this role.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="keepjobflowalive_csharp">
@@ -1767,7 +1577,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies whether the cluster should remain available after completing all steps.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="loguri_csharp">
@@ -1776,7 +1587,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The path to the Amazon S3 location where logs for this cluster are stored.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="managedprimarysecuritygroup_csharp">
@@ -1785,7 +1597,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}EMR Managed Security group that will be set to the primary instance group.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="managedreplicasecuritygroup_csharp">
@@ -1794,7 +1607,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}EMR Managed Security group that will be set to the replica instance group.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="masterebsblockdevices_csharp">
@@ -1803,7 +1617,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mrscalarmasterebsblockdevice">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Mr<wbr>Scalar<wbr>Master<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}This determines the ebs configuration for your master group instances. Only a single block is allowed.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="masterebsoptimized_csharp">
@@ -1812,7 +1627,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}EBS Optimization setting for instances in group.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="masterinstancetypes_csharp">
@@ -1821,7 +1637,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The MrScaler instance types for the master nodes.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="masterlifecycle_csharp">
@@ -1830,7 +1647,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The MrScaler lifecycle for instances in master group. Allowed values are 'SPOT' and 'ON_DEMAND'.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="name_csharp">
@@ -1839,7 +1657,7 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The MrScaler name.
+    <dd>{{% md %}}The application name.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1877,7 +1695,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Applies only when `custom_ami_id` is used. Specifies the type of updates that are applied from the Amazon Linux AMI package repositories when an instance boots using the AMI. Possible values include: `SECURITY`, `NONE`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="retries_csharp">
@@ -1886,7 +1705,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the maximum number of times a capacity provisioning should be retried if the provisioning timeout is exceeded. Valid values: `1-5`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="scheduledtasks_csharp">
@@ -1895,7 +1715,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mrscalarscheduledtask">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Mr<wbr>Scalar<wbr>Scheduled<wbr>Task<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}An array of scheduled tasks.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="securityconfig_csharp">
@@ -1904,7 +1725,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the security configuration applied to the cluster.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="serviceaccesssecuritygroup_csharp">
@@ -1913,7 +1735,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The identifier of the Amazon EC2 security group for the Amazon EMR service to access clusters in VPC private subnets.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="servicerole_csharp">
@@ -1922,7 +1745,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The IAM role that will be assumed by the Amazon EMR service to access AWS resources on your behalf.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="stepsfiles_csharp">
@@ -1931,7 +1755,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mrscalarstepsfile">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Mr<wbr>Scalar<wbr>Steps<wbr>File<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Steps from S3.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
@@ -1940,7 +1765,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mrscalartag">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Mr<wbr>Scalar<wbr>Tag<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of tags to assign to the resource. You may define multiple tags.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="taskdesiredcapacity_csharp">
@@ -1958,7 +1784,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mrscalartaskebsblockdevice">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Mr<wbr>Scalar<wbr>Task<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}This determines the ebs configuration for your task group instances. Only a single block is allowed.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="taskebsoptimized_csharp">
@@ -1967,7 +1794,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}EBS Optimization setting for instances in group.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="taskinstancetypes_csharp">
@@ -1976,7 +1804,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The MrScaler instance types for the task nodes.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tasklifecycle_csharp">
@@ -1985,7 +1814,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The MrScaler lifecycle for instances in task group. Allowed values are 'SPOT' and 'ON_DEMAND'.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="taskmaxsize_csharp">
@@ -2030,7 +1860,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Unit of task group for target, min and max. The unit could be `instance` or `weight`. instance - amount of instances. weight - amount of vCPU.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="terminationpolicies_csharp">
@@ -2049,7 +1880,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies whether the Amazon EC2 instances in the cluster are protected from termination by API calls, user intervention, or in the event of a job-flow error.
+{{% /md %}}</dd>
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="visibletoallusers_csharp">
@@ -2083,7 +1915,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}This is meta information about third-party applications that third-party vendors use for testing purposes.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="additionalprimarysecuritygroups_go">
@@ -2092,7 +1925,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of additional Amazon EC2 security group IDs for the master node.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="additionalreplicasecuritygroups_go">
@@ -2101,7 +1935,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of additional Amazon EC2 security group IDs for the core and task nodes.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="applications_go">
@@ -2110,7 +1945,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mrscalarapplication">[]Mr<wbr>Scalar<wbr>Application</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A case-insensitive list of applications for Amazon EMR to install and configure when launching the cluster
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="availabilityzones_go">
@@ -2119,7 +1955,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of AZs and their subnet Ids. See example above for usage.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="bootstrapactionsfiles_go">
@@ -2128,7 +1965,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mrscalarbootstrapactionsfile">[]Mr<wbr>Scalar<wbr>Bootstrap<wbr>Actions<wbr>File</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes path to S3 file containing description of bootstrap actions. [More Information](https://api.spotinst.com/elastigroup-for-aws/services-integrations/elastic-mapreduce/import-an-emr-cluster/advanced/)
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="clusterid_go">
@@ -2147,7 +1985,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mrscalarconfigurationsfile">[]Mr<wbr>Scalar<wbr>Configurations<wbr>File</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes path to S3 file containing description of configurations. [More Information](https://api.spotinst.com/elastigroup-for-aws/services-integrations/elastic-mapreduce/import-an-emr-cluster/advanced/)
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="coredesiredcapacity_go">
@@ -2165,7 +2004,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mrscalarcoreebsblockdevice">[]Mr<wbr>Scalar<wbr>Core<wbr>Ebs<wbr>Block<wbr>Device</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}This determines the ebs configuration for your core group instances. Only a single block is allowed.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="coreebsoptimized_go">
@@ -2174,7 +2014,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}EBS Optimization setting for instances in group.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="coreinstancetypes_go">
@@ -2183,7 +2024,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The MrScaler instance types for the core nodes.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="corelifecycle_go">
@@ -2192,7 +2034,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The MrScaler lifecycle for instances in core group. Allowed values are 'SPOT' and 'ON_DEMAND'.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="coremaxsize_go">
@@ -2237,7 +2080,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Unit of task group for target, min and max. The unit could be `instance` or `weight`. instance - amount of instances. weight - amount of vCPU.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="customamiid_go">
@@ -2246,7 +2090,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The ID of a custom Amazon EBS-backed Linux AMI if the cluster uses a custom AMI.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="description_go">
@@ -2274,7 +2119,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of an Amazon EC2 key pair that can be used to ssh to the master node.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="exposeclusterid_go">
@@ -2283,7 +2129,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Allow the `cluster_id` to set a provider output variable.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="instanceweights_go">
@@ -2292,7 +2139,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mrscalarinstanceweight">[]Mr<wbr>Scalar<wbr>Instance<wbr>Weight</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes the instance and weights. Check out [Elastigroup Weighted Instances](https://api.spotinst.com/elastigroup-for-aws/concepts/general-concepts/elastigroup-capacity-instances-or-weighted) for more info.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="jobflowrole_go">
@@ -2301,7 +2149,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The IAM role that was specified when the job flow was launched. The EC2 instances of the job flow assume this role.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="keepjobflowalive_go">
@@ -2310,7 +2159,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies whether the cluster should remain available after completing all steps.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="loguri_go">
@@ -2319,7 +2169,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The path to the Amazon S3 location where logs for this cluster are stored.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="managedprimarysecuritygroup_go">
@@ -2328,7 +2179,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}EMR Managed Security group that will be set to the primary instance group.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="managedreplicasecuritygroup_go">
@@ -2337,7 +2189,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}EMR Managed Security group that will be set to the replica instance group.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="masterebsblockdevices_go">
@@ -2346,7 +2199,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mrscalarmasterebsblockdevice">[]Mr<wbr>Scalar<wbr>Master<wbr>Ebs<wbr>Block<wbr>Device</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}This determines the ebs configuration for your master group instances. Only a single block is allowed.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="masterebsoptimized_go">
@@ -2355,7 +2209,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}EBS Optimization setting for instances in group.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="masterinstancetypes_go">
@@ -2364,7 +2219,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The MrScaler instance types for the master nodes.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="masterlifecycle_go">
@@ -2373,7 +2229,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The MrScaler lifecycle for instances in master group. Allowed values are 'SPOT' and 'ON_DEMAND'.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
@@ -2382,7 +2239,7 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The MrScaler name.
+    <dd>{{% md %}}The application name.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2420,7 +2277,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Applies only when `custom_ami_id` is used. Specifies the type of updates that are applied from the Amazon Linux AMI package repositories when an instance boots using the AMI. Possible values include: `SECURITY`, `NONE`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="retries_go">
@@ -2429,7 +2287,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the maximum number of times a capacity provisioning should be retried if the provisioning timeout is exceeded. Valid values: `1-5`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="scheduledtasks_go">
@@ -2438,7 +2297,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mrscalarscheduledtask">[]Mr<wbr>Scalar<wbr>Scheduled<wbr>Task</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}An array of scheduled tasks.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="securityconfig_go">
@@ -2447,7 +2307,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the security configuration applied to the cluster.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="serviceaccesssecuritygroup_go">
@@ -2456,7 +2317,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The identifier of the Amazon EC2 security group for the Amazon EMR service to access clusters in VPC private subnets.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="servicerole_go">
@@ -2465,7 +2327,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The IAM role that will be assumed by the Amazon EMR service to access AWS resources on your behalf.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="stepsfiles_go">
@@ -2474,7 +2337,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mrscalarstepsfile">[]Mr<wbr>Scalar<wbr>Steps<wbr>File</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Steps from S3.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tags_go">
@@ -2483,7 +2347,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mrscalartag">[]Mr<wbr>Scalar<wbr>Tag</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of tags to assign to the resource. You may define multiple tags.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="taskdesiredcapacity_go">
@@ -2501,7 +2366,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mrscalartaskebsblockdevice">[]Mr<wbr>Scalar<wbr>Task<wbr>Ebs<wbr>Block<wbr>Device</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}This determines the ebs configuration for your task group instances. Only a single block is allowed.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="taskebsoptimized_go">
@@ -2510,7 +2376,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}EBS Optimization setting for instances in group.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="taskinstancetypes_go">
@@ -2519,7 +2386,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The MrScaler instance types for the task nodes.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tasklifecycle_go">
@@ -2528,7 +2396,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The MrScaler lifecycle for instances in task group. Allowed values are 'SPOT' and 'ON_DEMAND'.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="taskmaxsize_go">
@@ -2573,7 +2442,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Unit of task group for target, min and max. The unit could be `instance` or `weight`. instance - amount of instances. weight - amount of vCPU.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="terminationpolicies_go">
@@ -2592,7 +2462,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies whether the Amazon EC2 instances in the cluster are protected from termination by API calls, user intervention, or in the event of a job-flow error.
+{{% /md %}}</dd>
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="visibletoallusers_go">
@@ -2626,7 +2497,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}This is meta information about third-party applications that third-party vendors use for testing purposes.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="additionalprimarysecuritygroups_nodejs">
@@ -2635,7 +2507,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of additional Amazon EC2 security group IDs for the master node.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="additionalreplicasecuritygroups_nodejs">
@@ -2644,7 +2517,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of additional Amazon EC2 security group IDs for the core and task nodes.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="applications_nodejs">
@@ -2653,7 +2527,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mrscalarapplication">Mr<wbr>Scalar<wbr>Application[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A case-insensitive list of applications for Amazon EMR to install and configure when launching the cluster
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="availabilityzones_nodejs">
@@ -2662,7 +2537,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of AZs and their subnet Ids. See example above for usage.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="bootstrapactionsfiles_nodejs">
@@ -2671,7 +2547,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mrscalarbootstrapactionsfile">Mr<wbr>Scalar<wbr>Bootstrap<wbr>Actions<wbr>File[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes path to S3 file containing description of bootstrap actions. [More Information](https://api.spotinst.com/elastigroup-for-aws/services-integrations/elastic-mapreduce/import-an-emr-cluster/advanced/)
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="clusterid_nodejs">
@@ -2690,7 +2567,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mrscalarconfigurationsfile">Mr<wbr>Scalar<wbr>Configurations<wbr>File[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes path to S3 file containing description of configurations. [More Information](https://api.spotinst.com/elastigroup-for-aws/services-integrations/elastic-mapreduce/import-an-emr-cluster/advanced/)
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="coredesiredcapacity_nodejs">
@@ -2708,7 +2586,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mrscalarcoreebsblockdevice">Mr<wbr>Scalar<wbr>Core<wbr>Ebs<wbr>Block<wbr>Device[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}This determines the ebs configuration for your core group instances. Only a single block is allowed.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="coreebsoptimized_nodejs">
@@ -2717,7 +2596,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}EBS Optimization setting for instances in group.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="coreinstancetypes_nodejs">
@@ -2726,7 +2606,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The MrScaler instance types for the core nodes.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="corelifecycle_nodejs">
@@ -2735,7 +2616,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The MrScaler lifecycle for instances in core group. Allowed values are 'SPOT' and 'ON_DEMAND'.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="coremaxsize_nodejs">
@@ -2780,7 +2662,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Unit of task group for target, min and max. The unit could be `instance` or `weight`. instance - amount of instances. weight - amount of vCPU.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="customamiid_nodejs">
@@ -2789,7 +2672,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The ID of a custom Amazon EBS-backed Linux AMI if the cluster uses a custom AMI.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
@@ -2817,7 +2701,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of an Amazon EC2 key pair that can be used to ssh to the master node.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="exposeclusterid_nodejs">
@@ -2826,7 +2711,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Allow the `cluster_id` to set a provider output variable.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="instanceweights_nodejs">
@@ -2835,7 +2721,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mrscalarinstanceweight">Mr<wbr>Scalar<wbr>Instance<wbr>Weight[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes the instance and weights. Check out [Elastigroup Weighted Instances](https://api.spotinst.com/elastigroup-for-aws/concepts/general-concepts/elastigroup-capacity-instances-or-weighted) for more info.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="jobflowrole_nodejs">
@@ -2844,7 +2731,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The IAM role that was specified when the job flow was launched. The EC2 instances of the job flow assume this role.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="keepjobflowalive_nodejs">
@@ -2853,7 +2741,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies whether the cluster should remain available after completing all steps.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="loguri_nodejs">
@@ -2862,7 +2751,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The path to the Amazon S3 location where logs for this cluster are stored.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="managedprimarysecuritygroup_nodejs">
@@ -2871,7 +2761,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}EMR Managed Security group that will be set to the primary instance group.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="managedreplicasecuritygroup_nodejs">
@@ -2880,7 +2771,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}EMR Managed Security group that will be set to the replica instance group.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="masterebsblockdevices_nodejs">
@@ -2889,7 +2781,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mrscalarmasterebsblockdevice">Mr<wbr>Scalar<wbr>Master<wbr>Ebs<wbr>Block<wbr>Device[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}This determines the ebs configuration for your master group instances. Only a single block is allowed.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="masterebsoptimized_nodejs">
@@ -2898,7 +2791,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}EBS Optimization setting for instances in group.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="masterinstancetypes_nodejs">
@@ -2907,7 +2801,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The MrScaler instance types for the master nodes.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="masterlifecycle_nodejs">
@@ -2916,7 +2811,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The MrScaler lifecycle for instances in master group. Allowed values are 'SPOT' and 'ON_DEMAND'.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
@@ -2925,7 +2821,7 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The MrScaler name.
+    <dd>{{% md %}}The application name.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2963,7 +2859,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Applies only when `custom_ami_id` is used. Specifies the type of updates that are applied from the Amazon Linux AMI package repositories when an instance boots using the AMI. Possible values include: `SECURITY`, `NONE`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="retries_nodejs">
@@ -2972,7 +2869,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the maximum number of times a capacity provisioning should be retried if the provisioning timeout is exceeded. Valid values: `1-5`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="scheduledtasks_nodejs">
@@ -2981,7 +2879,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mrscalarscheduledtask">Mr<wbr>Scalar<wbr>Scheduled<wbr>Task[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}An array of scheduled tasks.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="securityconfig_nodejs">
@@ -2990,7 +2889,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the security configuration applied to the cluster.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="serviceaccesssecuritygroup_nodejs">
@@ -2999,7 +2899,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The identifier of the Amazon EC2 security group for the Amazon EMR service to access clusters in VPC private subnets.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="servicerole_nodejs">
@@ -3008,7 +2909,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The IAM role that will be assumed by the Amazon EMR service to access AWS resources on your behalf.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="stepsfiles_nodejs">
@@ -3017,7 +2919,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mrscalarstepsfile">Mr<wbr>Scalar<wbr>Steps<wbr>File[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Steps from S3.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
@@ -3026,7 +2929,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mrscalartag">Mr<wbr>Scalar<wbr>Tag[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of tags to assign to the resource. You may define multiple tags.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="taskdesiredcapacity_nodejs">
@@ -3044,7 +2948,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mrscalartaskebsblockdevice">Mr<wbr>Scalar<wbr>Task<wbr>Ebs<wbr>Block<wbr>Device[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}This determines the ebs configuration for your task group instances. Only a single block is allowed.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="taskebsoptimized_nodejs">
@@ -3053,7 +2958,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}EBS Optimization setting for instances in group.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="taskinstancetypes_nodejs">
@@ -3062,7 +2968,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The MrScaler instance types for the task nodes.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tasklifecycle_nodejs">
@@ -3071,7 +2978,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The MrScaler lifecycle for instances in task group. Allowed values are 'SPOT' and 'ON_DEMAND'.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="taskmaxsize_nodejs">
@@ -3116,7 +3024,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Unit of task group for target, min and max. The unit could be `instance` or `weight`. instance - amount of instances. weight - amount of vCPU.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="terminationpolicies_nodejs">
@@ -3135,7 +3044,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies whether the Amazon EC2 instances in the cluster are protected from termination by API calls, user intervention, or in the event of a job-flow error.
+{{% /md %}}</dd>
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="visibletoallusers_nodejs">
@@ -3169,7 +3079,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}This is meta information about third-party applications that third-party vendors use for testing purposes.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="additional_primary_security_groups_python">
@@ -3178,7 +3089,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of additional Amazon EC2 security group IDs for the master node.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="additional_replica_security_groups_python">
@@ -3187,7 +3099,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of additional Amazon EC2 security group IDs for the core and task nodes.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="applications_python">
@@ -3196,7 +3109,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mrscalarapplication">Sequence[Mr<wbr>Scalar<wbr>Application<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A case-insensitive list of applications for Amazon EMR to install and configure when launching the cluster
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="availability_zones_python">
@@ -3205,7 +3119,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of AZs and their subnet Ids. See example above for usage.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="bootstrap_actions_files_python">
@@ -3214,7 +3129,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mrscalarbootstrapactionsfile">Sequence[Mr<wbr>Scalar<wbr>Bootstrap<wbr>Actions<wbr>File<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes path to S3 file containing description of bootstrap actions. [More Information](https://api.spotinst.com/elastigroup-for-aws/services-integrations/elastic-mapreduce/import-an-emr-cluster/advanced/)
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="cluster_id_python">
@@ -3233,7 +3149,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mrscalarconfigurationsfile">Sequence[Mr<wbr>Scalar<wbr>Configurations<wbr>File<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes path to S3 file containing description of configurations. [More Information](https://api.spotinst.com/elastigroup-for-aws/services-integrations/elastic-mapreduce/import-an-emr-cluster/advanced/)
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="core_desired_capacity_python">
@@ -3251,7 +3168,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mrscalarcoreebsblockdevice">Sequence[Mr<wbr>Scalar<wbr>Core<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}This determines the ebs configuration for your core group instances. Only a single block is allowed.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="core_ebs_optimized_python">
@@ -3260,7 +3178,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}EBS Optimization setting for instances in group.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="core_instance_types_python">
@@ -3269,7 +3188,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The MrScaler instance types for the core nodes.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="core_lifecycle_python">
@@ -3278,7 +3198,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The MrScaler lifecycle for instances in core group. Allowed values are 'SPOT' and 'ON_DEMAND'.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="core_max_size_python">
@@ -3323,7 +3244,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Unit of task group for target, min and max. The unit could be `instance` or `weight`. instance - amount of instances. weight - amount of vCPU.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="custom_ami_id_python">
@@ -3332,7 +3254,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The ID of a custom Amazon EBS-backed Linux AMI if the cluster uses a custom AMI.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="description_python">
@@ -3360,7 +3283,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of an Amazon EC2 key pair that can be used to ssh to the master node.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="expose_cluster_id_python">
@@ -3369,7 +3293,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Allow the `cluster_id` to set a provider output variable.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="instance_weights_python">
@@ -3378,7 +3303,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mrscalarinstanceweight">Sequence[Mr<wbr>Scalar<wbr>Instance<wbr>Weight<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes the instance and weights. Check out [Elastigroup Weighted Instances](https://api.spotinst.com/elastigroup-for-aws/concepts/general-concepts/elastigroup-capacity-instances-or-weighted) for more info.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="job_flow_role_python">
@@ -3387,7 +3313,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The IAM role that was specified when the job flow was launched. The EC2 instances of the job flow assume this role.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="keep_job_flow_alive_python">
@@ -3396,7 +3323,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies whether the cluster should remain available after completing all steps.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="log_uri_python">
@@ -3405,7 +3333,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The path to the Amazon S3 location where logs for this cluster are stored.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="managed_primary_security_group_python">
@@ -3414,7 +3343,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}EMR Managed Security group that will be set to the primary instance group.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="managed_replica_security_group_python">
@@ -3423,7 +3353,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}EMR Managed Security group that will be set to the replica instance group.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="master_ebs_block_devices_python">
@@ -3432,7 +3363,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mrscalarmasterebsblockdevice">Sequence[Mr<wbr>Scalar<wbr>Master<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}This determines the ebs configuration for your master group instances. Only a single block is allowed.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="master_ebs_optimized_python">
@@ -3441,7 +3373,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}EBS Optimization setting for instances in group.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="master_instance_types_python">
@@ -3450,7 +3383,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The MrScaler instance types for the master nodes.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="master_lifecycle_python">
@@ -3459,7 +3393,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The MrScaler lifecycle for instances in master group. Allowed values are 'SPOT' and 'ON_DEMAND'.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
@@ -3468,7 +3403,7 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The MrScaler name.
+    <dd>{{% md %}}The application name.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3506,7 +3441,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Applies only when `custom_ami_id` is used. Specifies the type of updates that are applied from the Amazon Linux AMI package repositories when an instance boots using the AMI. Possible values include: `SECURITY`, `NONE`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="retries_python">
@@ -3515,7 +3451,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the maximum number of times a capacity provisioning should be retried if the provisioning timeout is exceeded. Valid values: `1-5`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="scheduled_tasks_python">
@@ -3524,7 +3461,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mrscalarscheduledtask">Sequence[Mr<wbr>Scalar<wbr>Scheduled<wbr>Task<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}An array of scheduled tasks.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="security_config_python">
@@ -3533,7 +3471,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the security configuration applied to the cluster.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="service_access_security_group_python">
@@ -3542,7 +3481,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The identifier of the Amazon EC2 security group for the Amazon EMR service to access clusters in VPC private subnets.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="service_role_python">
@@ -3551,7 +3491,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The IAM role that will be assumed by the Amazon EMR service to access AWS resources on your behalf.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="steps_files_python">
@@ -3560,7 +3501,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mrscalarstepsfile">Sequence[Mr<wbr>Scalar<wbr>Steps<wbr>File<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Steps from S3.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tags_python">
@@ -3569,7 +3511,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mrscalartag">Sequence[Mr<wbr>Scalar<wbr>Tag<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of tags to assign to the resource. You may define multiple tags.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="task_desired_capacity_python">
@@ -3587,7 +3530,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mrscalartaskebsblockdevice">Sequence[Mr<wbr>Scalar<wbr>Task<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}This determines the ebs configuration for your task group instances. Only a single block is allowed.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="task_ebs_optimized_python">
@@ -3596,7 +3540,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}EBS Optimization setting for instances in group.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="task_instance_types_python">
@@ -3605,7 +3550,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The MrScaler instance types for the task nodes.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="task_lifecycle_python">
@@ -3614,7 +3560,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The MrScaler lifecycle for instances in task group. Allowed values are 'SPOT' and 'ON_DEMAND'.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="task_max_size_python">
@@ -3659,7 +3606,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Unit of task group for target, min and max. The unit could be `instance` or `weight`. instance - amount of instances. weight - amount of vCPU.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="termination_policies_python">
@@ -3678,7 +3626,8 @@ The MrScalar resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies whether the Amazon EC2 instances in the cluster are protected from termination by API calls, user intervention, or in the event of a job-flow error.
+{{% /md %}}</dd>
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="visible_to_all_users_python">
@@ -3928,7 +3877,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}This is meta information about third-party applications that third-party vendors use for testing purposes.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_additionalprimarysecuritygroups_csharp">
@@ -3937,7 +3887,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of additional Amazon EC2 security group IDs for the master node.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_additionalreplicasecuritygroups_csharp">
@@ -3946,7 +3897,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of additional Amazon EC2 security group IDs for the core and task nodes.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_applications_csharp">
@@ -3955,7 +3907,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mrscalarapplication">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Mr<wbr>Scalar<wbr>Application<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A case-insensitive list of applications for Amazon EMR to install and configure when launching the cluster
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_availabilityzones_csharp">
@@ -3964,7 +3917,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of AZs and their subnet Ids. See example above for usage.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_bootstrapactionsfiles_csharp">
@@ -3973,7 +3927,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mrscalarbootstrapactionsfile">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Mr<wbr>Scalar<wbr>Bootstrap<wbr>Actions<wbr>File<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes path to S3 file containing description of bootstrap actions. [More Information](https://api.spotinst.com/elastigroup-for-aws/services-integrations/elastic-mapreduce/import-an-emr-cluster/advanced/)
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_clusterid_csharp">
@@ -3992,7 +3947,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mrscalarconfigurationsfile">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Mr<wbr>Scalar<wbr>Configurations<wbr>File<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes path to S3 file containing description of configurations. [More Information](https://api.spotinst.com/elastigroup-for-aws/services-integrations/elastic-mapreduce/import-an-emr-cluster/advanced/)
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_coredesiredcapacity_csharp">
@@ -4010,7 +3966,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mrscalarcoreebsblockdevice">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Mr<wbr>Scalar<wbr>Core<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}This determines the ebs configuration for your core group instances. Only a single block is allowed.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_coreebsoptimized_csharp">
@@ -4019,7 +3976,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}EBS Optimization setting for instances in group.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_coreinstancetypes_csharp">
@@ -4028,7 +3986,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The MrScaler instance types for the core nodes.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_corelifecycle_csharp">
@@ -4037,7 +3996,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The MrScaler lifecycle for instances in core group. Allowed values are 'SPOT' and 'ON_DEMAND'.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_coremaxsize_csharp">
@@ -4082,7 +4042,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Unit of task group for target, min and max. The unit could be `instance` or `weight`. instance - amount of instances. weight - amount of vCPU.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_customamiid_csharp">
@@ -4091,7 +4052,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The ID of a custom Amazon EBS-backed Linux AMI if the cluster uses a custom AMI.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
@@ -4119,7 +4081,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of an Amazon EC2 key pair that can be used to ssh to the master node.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_exposeclusterid_csharp">
@@ -4128,7 +4091,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Allow the `cluster_id` to set a provider output variable.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_instanceweights_csharp">
@@ -4137,7 +4101,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mrscalarinstanceweight">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Mr<wbr>Scalar<wbr>Instance<wbr>Weight<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes the instance and weights. Check out [Elastigroup Weighted Instances](https://api.spotinst.com/elastigroup-for-aws/concepts/general-concepts/elastigroup-capacity-instances-or-weighted) for more info.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_jobflowrole_csharp">
@@ -4146,7 +4111,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The IAM role that was specified when the job flow was launched. The EC2 instances of the job flow assume this role.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_keepjobflowalive_csharp">
@@ -4155,7 +4121,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies whether the cluster should remain available after completing all steps.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_loguri_csharp">
@@ -4164,7 +4131,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The path to the Amazon S3 location where logs for this cluster are stored.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_managedprimarysecuritygroup_csharp">
@@ -4173,7 +4141,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}EMR Managed Security group that will be set to the primary instance group.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_managedreplicasecuritygroup_csharp">
@@ -4182,7 +4151,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}EMR Managed Security group that will be set to the replica instance group.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_masterebsblockdevices_csharp">
@@ -4191,7 +4161,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mrscalarmasterebsblockdevice">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Mr<wbr>Scalar<wbr>Master<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}This determines the ebs configuration for your master group instances. Only a single block is allowed.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_masterebsoptimized_csharp">
@@ -4200,7 +4171,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}EBS Optimization setting for instances in group.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_masterinstancetypes_csharp">
@@ -4209,7 +4181,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The MrScaler instance types for the master nodes.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_masterlifecycle_csharp">
@@ -4218,7 +4191,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The MrScaler lifecycle for instances in master group. Allowed values are 'SPOT' and 'ON_DEMAND'.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_csharp">
@@ -4227,7 +4201,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The MrScaler name.
+    <dd>{{% md %}}The application name.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4274,7 +4248,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Applies only when `custom_ami_id` is used. Specifies the type of updates that are applied from the Amazon Linux AMI package repositories when an instance boots using the AMI. Possible values include: `SECURITY`, `NONE`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_retries_csharp">
@@ -4283,7 +4258,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the maximum number of times a capacity provisioning should be retried if the provisioning timeout is exceeded. Valid values: `1-5`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_scheduledtasks_csharp">
@@ -4292,7 +4268,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mrscalarscheduledtask">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Mr<wbr>Scalar<wbr>Scheduled<wbr>Task<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}An array of scheduled tasks.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_securityconfig_csharp">
@@ -4301,7 +4278,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the security configuration applied to the cluster.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_serviceaccesssecuritygroup_csharp">
@@ -4310,7 +4288,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The identifier of the Amazon EC2 security group for the Amazon EMR service to access clusters in VPC private subnets.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_servicerole_csharp">
@@ -4319,7 +4298,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The IAM role that will be assumed by the Amazon EMR service to access AWS resources on your behalf.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_stepsfiles_csharp">
@@ -4328,7 +4308,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mrscalarstepsfile">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Mr<wbr>Scalar<wbr>Steps<wbr>File<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Steps from S3.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_strategy_csharp">
@@ -4347,7 +4328,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mrscalartag">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Mr<wbr>Scalar<wbr>Tag<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of tags to assign to the resource. You may define multiple tags.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_taskdesiredcapacity_csharp">
@@ -4365,7 +4347,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mrscalartaskebsblockdevice">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Aws.<wbr>Inputs.<wbr>Mr<wbr>Scalar<wbr>Task<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}This determines the ebs configuration for your task group instances. Only a single block is allowed.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_taskebsoptimized_csharp">
@@ -4374,7 +4357,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}EBS Optimization setting for instances in group.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_taskinstancetypes_csharp">
@@ -4383,7 +4367,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The MrScaler instance types for the task nodes.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_tasklifecycle_csharp">
@@ -4392,7 +4377,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The MrScaler lifecycle for instances in task group. Allowed values are 'SPOT' and 'ON_DEMAND'.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_taskmaxsize_csharp">
@@ -4437,7 +4423,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Unit of task group for target, min and max. The unit could be `instance` or `weight`. instance - amount of instances. weight - amount of vCPU.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_terminationpolicies_csharp">
@@ -4456,7 +4443,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies whether the Amazon EC2 instances in the cluster are protected from termination by API calls, user intervention, or in the event of a job-flow error.
+{{% /md %}}</dd>
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_visibletoallusers_csharp">
@@ -4480,7 +4468,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}This is meta information about third-party applications that third-party vendors use for testing purposes.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_additionalprimarysecuritygroups_go">
@@ -4489,7 +4478,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of additional Amazon EC2 security group IDs for the master node.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_additionalreplicasecuritygroups_go">
@@ -4498,7 +4488,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of additional Amazon EC2 security group IDs for the core and task nodes.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_applications_go">
@@ -4507,7 +4498,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mrscalarapplication">[]Mr<wbr>Scalar<wbr>Application</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A case-insensitive list of applications for Amazon EMR to install and configure when launching the cluster
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_availabilityzones_go">
@@ -4516,7 +4508,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of AZs and their subnet Ids. See example above for usage.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_bootstrapactionsfiles_go">
@@ -4525,7 +4518,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mrscalarbootstrapactionsfile">[]Mr<wbr>Scalar<wbr>Bootstrap<wbr>Actions<wbr>File</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes path to S3 file containing description of bootstrap actions. [More Information](https://api.spotinst.com/elastigroup-for-aws/services-integrations/elastic-mapreduce/import-an-emr-cluster/advanced/)
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_clusterid_go">
@@ -4544,7 +4538,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mrscalarconfigurationsfile">[]Mr<wbr>Scalar<wbr>Configurations<wbr>File</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes path to S3 file containing description of configurations. [More Information](https://api.spotinst.com/elastigroup-for-aws/services-integrations/elastic-mapreduce/import-an-emr-cluster/advanced/)
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_coredesiredcapacity_go">
@@ -4562,7 +4557,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mrscalarcoreebsblockdevice">[]Mr<wbr>Scalar<wbr>Core<wbr>Ebs<wbr>Block<wbr>Device</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}This determines the ebs configuration for your core group instances. Only a single block is allowed.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_coreebsoptimized_go">
@@ -4571,7 +4567,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}EBS Optimization setting for instances in group.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_coreinstancetypes_go">
@@ -4580,7 +4577,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The MrScaler instance types for the core nodes.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_corelifecycle_go">
@@ -4589,7 +4587,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The MrScaler lifecycle for instances in core group. Allowed values are 'SPOT' and 'ON_DEMAND'.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_coremaxsize_go">
@@ -4634,7 +4633,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Unit of task group for target, min and max. The unit could be `instance` or `weight`. instance - amount of instances. weight - amount of vCPU.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_customamiid_go">
@@ -4643,7 +4643,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The ID of a custom Amazon EBS-backed Linux AMI if the cluster uses a custom AMI.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
@@ -4671,7 +4672,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of an Amazon EC2 key pair that can be used to ssh to the master node.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_exposeclusterid_go">
@@ -4680,7 +4682,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Allow the `cluster_id` to set a provider output variable.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_instanceweights_go">
@@ -4689,7 +4692,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mrscalarinstanceweight">[]Mr<wbr>Scalar<wbr>Instance<wbr>Weight</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes the instance and weights. Check out [Elastigroup Weighted Instances](https://api.spotinst.com/elastigroup-for-aws/concepts/general-concepts/elastigroup-capacity-instances-or-weighted) for more info.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_jobflowrole_go">
@@ -4698,7 +4702,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The IAM role that was specified when the job flow was launched. The EC2 instances of the job flow assume this role.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_keepjobflowalive_go">
@@ -4707,7 +4712,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies whether the cluster should remain available after completing all steps.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_loguri_go">
@@ -4716,7 +4722,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The path to the Amazon S3 location where logs for this cluster are stored.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_managedprimarysecuritygroup_go">
@@ -4725,7 +4732,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}EMR Managed Security group that will be set to the primary instance group.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_managedreplicasecuritygroup_go">
@@ -4734,7 +4742,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}EMR Managed Security group that will be set to the replica instance group.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_masterebsblockdevices_go">
@@ -4743,7 +4752,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mrscalarmasterebsblockdevice">[]Mr<wbr>Scalar<wbr>Master<wbr>Ebs<wbr>Block<wbr>Device</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}This determines the ebs configuration for your master group instances. Only a single block is allowed.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_masterebsoptimized_go">
@@ -4752,7 +4762,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}EBS Optimization setting for instances in group.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_masterinstancetypes_go">
@@ -4761,7 +4772,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The MrScaler instance types for the master nodes.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_masterlifecycle_go">
@@ -4770,7 +4782,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The MrScaler lifecycle for instances in master group. Allowed values are 'SPOT' and 'ON_DEMAND'.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_go">
@@ -4779,7 +4792,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The MrScaler name.
+    <dd>{{% md %}}The application name.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4826,7 +4839,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Applies only when `custom_ami_id` is used. Specifies the type of updates that are applied from the Amazon Linux AMI package repositories when an instance boots using the AMI. Possible values include: `SECURITY`, `NONE`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_retries_go">
@@ -4835,7 +4849,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the maximum number of times a capacity provisioning should be retried if the provisioning timeout is exceeded. Valid values: `1-5`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_scheduledtasks_go">
@@ -4844,7 +4859,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mrscalarscheduledtask">[]Mr<wbr>Scalar<wbr>Scheduled<wbr>Task</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}An array of scheduled tasks.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_securityconfig_go">
@@ -4853,7 +4869,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the security configuration applied to the cluster.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_serviceaccesssecuritygroup_go">
@@ -4862,7 +4879,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The identifier of the Amazon EC2 security group for the Amazon EMR service to access clusters in VPC private subnets.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_servicerole_go">
@@ -4871,7 +4889,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The IAM role that will be assumed by the Amazon EMR service to access AWS resources on your behalf.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_stepsfiles_go">
@@ -4880,7 +4899,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mrscalarstepsfile">[]Mr<wbr>Scalar<wbr>Steps<wbr>File</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Steps from S3.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_strategy_go">
@@ -4899,7 +4919,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mrscalartag">[]Mr<wbr>Scalar<wbr>Tag</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of tags to assign to the resource. You may define multiple tags.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_taskdesiredcapacity_go">
@@ -4917,7 +4938,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mrscalartaskebsblockdevice">[]Mr<wbr>Scalar<wbr>Task<wbr>Ebs<wbr>Block<wbr>Device</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}This determines the ebs configuration for your task group instances. Only a single block is allowed.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_taskebsoptimized_go">
@@ -4926,7 +4948,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}EBS Optimization setting for instances in group.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_taskinstancetypes_go">
@@ -4935,7 +4958,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The MrScaler instance types for the task nodes.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_tasklifecycle_go">
@@ -4944,7 +4968,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The MrScaler lifecycle for instances in task group. Allowed values are 'SPOT' and 'ON_DEMAND'.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_taskmaxsize_go">
@@ -4989,7 +5014,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Unit of task group for target, min and max. The unit could be `instance` or `weight`. instance - amount of instances. weight - amount of vCPU.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_terminationpolicies_go">
@@ -5008,7 +5034,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies whether the Amazon EC2 instances in the cluster are protected from termination by API calls, user intervention, or in the event of a job-flow error.
+{{% /md %}}</dd>
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_visibletoallusers_go">
@@ -5032,7 +5059,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}This is meta information about third-party applications that third-party vendors use for testing purposes.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_additionalprimarysecuritygroups_nodejs">
@@ -5041,7 +5069,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of additional Amazon EC2 security group IDs for the master node.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_additionalreplicasecuritygroups_nodejs">
@@ -5050,7 +5079,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of additional Amazon EC2 security group IDs for the core and task nodes.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_applications_nodejs">
@@ -5059,7 +5089,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mrscalarapplication">Mr<wbr>Scalar<wbr>Application[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A case-insensitive list of applications for Amazon EMR to install and configure when launching the cluster
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_availabilityzones_nodejs">
@@ -5068,7 +5099,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of AZs and their subnet Ids. See example above for usage.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_bootstrapactionsfiles_nodejs">
@@ -5077,7 +5109,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mrscalarbootstrapactionsfile">Mr<wbr>Scalar<wbr>Bootstrap<wbr>Actions<wbr>File[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes path to S3 file containing description of bootstrap actions. [More Information](https://api.spotinst.com/elastigroup-for-aws/services-integrations/elastic-mapreduce/import-an-emr-cluster/advanced/)
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_clusterid_nodejs">
@@ -5096,7 +5129,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mrscalarconfigurationsfile">Mr<wbr>Scalar<wbr>Configurations<wbr>File[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes path to S3 file containing description of configurations. [More Information](https://api.spotinst.com/elastigroup-for-aws/services-integrations/elastic-mapreduce/import-an-emr-cluster/advanced/)
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_coredesiredcapacity_nodejs">
@@ -5114,7 +5148,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mrscalarcoreebsblockdevice">Mr<wbr>Scalar<wbr>Core<wbr>Ebs<wbr>Block<wbr>Device[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}This determines the ebs configuration for your core group instances. Only a single block is allowed.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_coreebsoptimized_nodejs">
@@ -5123,7 +5158,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}EBS Optimization setting for instances in group.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_coreinstancetypes_nodejs">
@@ -5132,7 +5168,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The MrScaler instance types for the core nodes.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_corelifecycle_nodejs">
@@ -5141,7 +5178,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The MrScaler lifecycle for instances in core group. Allowed values are 'SPOT' and 'ON_DEMAND'.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_coremaxsize_nodejs">
@@ -5186,7 +5224,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Unit of task group for target, min and max. The unit could be `instance` or `weight`. instance - amount of instances. weight - amount of vCPU.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_customamiid_nodejs">
@@ -5195,7 +5234,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The ID of a custom Amazon EBS-backed Linux AMI if the cluster uses a custom AMI.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
@@ -5223,7 +5263,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of an Amazon EC2 key pair that can be used to ssh to the master node.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_exposeclusterid_nodejs">
@@ -5232,7 +5273,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Allow the `cluster_id` to set a provider output variable.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_instanceweights_nodejs">
@@ -5241,7 +5283,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mrscalarinstanceweight">Mr<wbr>Scalar<wbr>Instance<wbr>Weight[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes the instance and weights. Check out [Elastigroup Weighted Instances](https://api.spotinst.com/elastigroup-for-aws/concepts/general-concepts/elastigroup-capacity-instances-or-weighted) for more info.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_jobflowrole_nodejs">
@@ -5250,7 +5293,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The IAM role that was specified when the job flow was launched. The EC2 instances of the job flow assume this role.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_keepjobflowalive_nodejs">
@@ -5259,7 +5303,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies whether the cluster should remain available after completing all steps.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_loguri_nodejs">
@@ -5268,7 +5313,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The path to the Amazon S3 location where logs for this cluster are stored.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_managedprimarysecuritygroup_nodejs">
@@ -5277,7 +5323,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}EMR Managed Security group that will be set to the primary instance group.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_managedreplicasecuritygroup_nodejs">
@@ -5286,7 +5333,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}EMR Managed Security group that will be set to the replica instance group.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_masterebsblockdevices_nodejs">
@@ -5295,7 +5343,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mrscalarmasterebsblockdevice">Mr<wbr>Scalar<wbr>Master<wbr>Ebs<wbr>Block<wbr>Device[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}This determines the ebs configuration for your master group instances. Only a single block is allowed.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_masterebsoptimized_nodejs">
@@ -5304,7 +5353,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}EBS Optimization setting for instances in group.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_masterinstancetypes_nodejs">
@@ -5313,7 +5363,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The MrScaler instance types for the master nodes.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_masterlifecycle_nodejs">
@@ -5322,7 +5373,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The MrScaler lifecycle for instances in master group. Allowed values are 'SPOT' and 'ON_DEMAND'.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_nodejs">
@@ -5331,7 +5383,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The MrScaler name.
+    <dd>{{% md %}}The application name.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5378,7 +5430,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Applies only when `custom_ami_id` is used. Specifies the type of updates that are applied from the Amazon Linux AMI package repositories when an instance boots using the AMI. Possible values include: `SECURITY`, `NONE`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_retries_nodejs">
@@ -5387,7 +5440,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the maximum number of times a capacity provisioning should be retried if the provisioning timeout is exceeded. Valid values: `1-5`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_scheduledtasks_nodejs">
@@ -5396,7 +5450,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mrscalarscheduledtask">Mr<wbr>Scalar<wbr>Scheduled<wbr>Task[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}An array of scheduled tasks.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_securityconfig_nodejs">
@@ -5405,7 +5460,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the security configuration applied to the cluster.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_serviceaccesssecuritygroup_nodejs">
@@ -5414,7 +5470,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The identifier of the Amazon EC2 security group for the Amazon EMR service to access clusters in VPC private subnets.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_servicerole_nodejs">
@@ -5423,7 +5480,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The IAM role that will be assumed by the Amazon EMR service to access AWS resources on your behalf.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_stepsfiles_nodejs">
@@ -5432,7 +5490,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mrscalarstepsfile">Mr<wbr>Scalar<wbr>Steps<wbr>File[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Steps from S3.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_strategy_nodejs">
@@ -5451,7 +5510,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mrscalartag">Mr<wbr>Scalar<wbr>Tag[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of tags to assign to the resource. You may define multiple tags.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_taskdesiredcapacity_nodejs">
@@ -5469,7 +5529,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mrscalartaskebsblockdevice">Mr<wbr>Scalar<wbr>Task<wbr>Ebs<wbr>Block<wbr>Device[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}This determines the ebs configuration for your task group instances. Only a single block is allowed.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_taskebsoptimized_nodejs">
@@ -5478,7 +5539,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}EBS Optimization setting for instances in group.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_taskinstancetypes_nodejs">
@@ -5487,7 +5549,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The MrScaler instance types for the task nodes.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_tasklifecycle_nodejs">
@@ -5496,7 +5559,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The MrScaler lifecycle for instances in task group. Allowed values are 'SPOT' and 'ON_DEMAND'.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_taskmaxsize_nodejs">
@@ -5541,7 +5605,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Unit of task group for target, min and max. The unit could be `instance` or `weight`. instance - amount of instances. weight - amount of vCPU.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_terminationpolicies_nodejs">
@@ -5560,7 +5625,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies whether the Amazon EC2 instances in the cluster are protected from termination by API calls, user intervention, or in the event of a job-flow error.
+{{% /md %}}</dd>
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_visibletoallusers_nodejs">
@@ -5584,7 +5650,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}This is meta information about third-party applications that third-party vendors use for testing purposes.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_additional_primary_security_groups_python">
@@ -5593,7 +5660,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of additional Amazon EC2 security group IDs for the master node.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_additional_replica_security_groups_python">
@@ -5602,7 +5670,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of additional Amazon EC2 security group IDs for the core and task nodes.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_applications_python">
@@ -5611,7 +5680,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mrscalarapplication">Sequence[Mr<wbr>Scalar<wbr>Application<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A case-insensitive list of applications for Amazon EMR to install and configure when launching the cluster
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_availability_zones_python">
@@ -5620,7 +5690,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}List of AZs and their subnet Ids. See example above for usage.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_bootstrap_actions_files_python">
@@ -5629,7 +5700,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mrscalarbootstrapactionsfile">Sequence[Mr<wbr>Scalar<wbr>Bootstrap<wbr>Actions<wbr>File<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes path to S3 file containing description of bootstrap actions. [More Information](https://api.spotinst.com/elastigroup-for-aws/services-integrations/elastic-mapreduce/import-an-emr-cluster/advanced/)
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_cluster_id_python">
@@ -5648,7 +5720,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mrscalarconfigurationsfile">Sequence[Mr<wbr>Scalar<wbr>Configurations<wbr>File<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes path to S3 file containing description of configurations. [More Information](https://api.spotinst.com/elastigroup-for-aws/services-integrations/elastic-mapreduce/import-an-emr-cluster/advanced/)
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_core_desired_capacity_python">
@@ -5666,7 +5739,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mrscalarcoreebsblockdevice">Sequence[Mr<wbr>Scalar<wbr>Core<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}This determines the ebs configuration for your core group instances. Only a single block is allowed.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_core_ebs_optimized_python">
@@ -5675,7 +5749,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}EBS Optimization setting for instances in group.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_core_instance_types_python">
@@ -5684,7 +5759,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The MrScaler instance types for the core nodes.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_core_lifecycle_python">
@@ -5693,7 +5769,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The MrScaler lifecycle for instances in core group. Allowed values are 'SPOT' and 'ON_DEMAND'.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_core_max_size_python">
@@ -5738,7 +5815,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Unit of task group for target, min and max. The unit could be `instance` or `weight`. instance - amount of instances. weight - amount of vCPU.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_custom_ami_id_python">
@@ -5747,7 +5825,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The ID of a custom Amazon EBS-backed Linux AMI if the cluster uses a custom AMI.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
@@ -5775,7 +5854,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of an Amazon EC2 key pair that can be used to ssh to the master node.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_expose_cluster_id_python">
@@ -5784,7 +5864,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Allow the `cluster_id` to set a provider output variable.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_instance_weights_python">
@@ -5793,7 +5874,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mrscalarinstanceweight">Sequence[Mr<wbr>Scalar<wbr>Instance<wbr>Weight<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes the instance and weights. Check out [Elastigroup Weighted Instances](https://api.spotinst.com/elastigroup-for-aws/concepts/general-concepts/elastigroup-capacity-instances-or-weighted) for more info.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_job_flow_role_python">
@@ -5802,7 +5884,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The IAM role that was specified when the job flow was launched. The EC2 instances of the job flow assume this role.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_keep_job_flow_alive_python">
@@ -5811,7 +5894,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies whether the cluster should remain available after completing all steps.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_log_uri_python">
@@ -5820,7 +5904,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The path to the Amazon S3 location where logs for this cluster are stored.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_managed_primary_security_group_python">
@@ -5829,7 +5914,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}EMR Managed Security group that will be set to the primary instance group.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_managed_replica_security_group_python">
@@ -5838,7 +5924,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}EMR Managed Security group that will be set to the replica instance group.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_master_ebs_block_devices_python">
@@ -5847,7 +5934,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mrscalarmasterebsblockdevice">Sequence[Mr<wbr>Scalar<wbr>Master<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}This determines the ebs configuration for your master group instances. Only a single block is allowed.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_master_ebs_optimized_python">
@@ -5856,7 +5944,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}EBS Optimization setting for instances in group.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_master_instance_types_python">
@@ -5865,7 +5954,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The MrScaler instance types for the master nodes.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_master_lifecycle_python">
@@ -5874,7 +5964,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The MrScaler lifecycle for instances in master group. Allowed values are 'SPOT' and 'ON_DEMAND'.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_name_python">
@@ -5883,7 +5974,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The MrScaler name.
+    <dd>{{% md %}}The application name.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5930,7 +6021,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Applies only when `custom_ami_id` is used. Specifies the type of updates that are applied from the Amazon Linux AMI package repositories when an instance boots using the AMI. Possible values include: `SECURITY`, `NONE`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_retries_python">
@@ -5939,7 +6031,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the maximum number of times a capacity provisioning should be retried if the provisioning timeout is exceeded. Valid values: `1-5`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_scheduled_tasks_python">
@@ -5948,7 +6041,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mrscalarscheduledtask">Sequence[Mr<wbr>Scalar<wbr>Scheduled<wbr>Task<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}An array of scheduled tasks.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_security_config_python">
@@ -5957,7 +6051,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the security configuration applied to the cluster.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_service_access_security_group_python">
@@ -5966,7 +6061,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The identifier of the Amazon EC2 security group for the Amazon EMR service to access clusters in VPC private subnets.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_service_role_python">
@@ -5975,7 +6071,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The IAM role that will be assumed by the Amazon EMR service to access AWS resources on your behalf.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_steps_files_python">
@@ -5984,7 +6081,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mrscalarstepsfile">Sequence[Mr<wbr>Scalar<wbr>Steps<wbr>File<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Steps from S3.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_strategy_python">
@@ -6003,7 +6101,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mrscalartag">Sequence[Mr<wbr>Scalar<wbr>Tag<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of tags to assign to the resource. You may define multiple tags.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_task_desired_capacity_python">
@@ -6021,7 +6120,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#mrscalartaskebsblockdevice">Sequence[Mr<wbr>Scalar<wbr>Task<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}This determines the ebs configuration for your task group instances. Only a single block is allowed.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_task_ebs_optimized_python">
@@ -6030,7 +6130,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}EBS Optimization setting for instances in group.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_task_instance_types_python">
@@ -6039,7 +6140,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The MrScaler instance types for the task nodes.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_task_lifecycle_python">
@@ -6048,7 +6150,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The MrScaler lifecycle for instances in task group. Allowed values are 'SPOT' and 'ON_DEMAND'.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_task_max_size_python">
@@ -6093,7 +6196,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Unit of task group for target, min and max. The unit could be `instance` or `weight`. instance - amount of instances. weight - amount of vCPU.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_termination_policies_python">
@@ -6112,7 +6216,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies whether the Amazon EC2 instances in the cluster are protected from termination by API calls, user intervention, or in the event of a job-flow error.
+{{% /md %}}</dd>
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_visible_to_all_users_python">
@@ -6159,7 +6264,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The MrScaler name.
+    <dd>{{% md %}}The application name.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -6169,7 +6274,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Arguments for EMR to pass to the application.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="version_csharp">
@@ -6178,7 +6284,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}T he version of the application.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -6193,7 +6300,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The MrScaler name.
+    <dd>{{% md %}}The application name.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -6203,7 +6310,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Arguments for EMR to pass to the application.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="version_go">
@@ -6212,7 +6320,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}T he version of the application.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -6227,7 +6336,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The MrScaler name.
+    <dd>{{% md %}}The application name.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -6237,7 +6346,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Arguments for EMR to pass to the application.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="version_nodejs">
@@ -6246,7 +6356,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}T he version of the application.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -6261,7 +6372,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The MrScaler name.
+    <dd>{{% md %}}The application name.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -6271,7 +6382,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Arguments for EMR to pass to the application.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="version_python">
@@ -6280,7 +6392,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}T he version of the application.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -6309,7 +6422,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}S3 Bucket name for bootstrap actions.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="key_csharp">
@@ -6318,7 +6432,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}S3 key for bootstrap actions.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -6333,7 +6448,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}S3 Bucket name for bootstrap actions.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="key_go">
@@ -6342,7 +6458,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}S3 key for bootstrap actions.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -6357,7 +6474,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}S3 Bucket name for bootstrap actions.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="key_nodejs">
@@ -6366,7 +6484,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}S3 key for bootstrap actions.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -6381,7 +6500,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}S3 Bucket name for bootstrap actions.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="key_python">
@@ -6390,7 +6510,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}S3 key for bootstrap actions.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -6419,7 +6540,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}S3 Bucket name for bootstrap actions.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="key_csharp">
@@ -6428,7 +6550,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}S3 key for bootstrap actions.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -6443,7 +6566,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}S3 Bucket name for bootstrap actions.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="key_go">
@@ -6452,7 +6576,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}S3 key for bootstrap actions.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -6467,7 +6592,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}S3 Bucket name for bootstrap actions.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="key_nodejs">
@@ -6476,7 +6602,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}S3 key for bootstrap actions.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -6491,7 +6618,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}S3 Bucket name for bootstrap actions.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="key_python">
@@ -6500,7 +6628,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}S3 key for bootstrap actions.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -6529,7 +6658,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Size of the volume, in GBs.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="volumetype_csharp">
@@ -6538,7 +6668,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}volume type. Allowed values are 'gp2', 'io1' and others.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="iops_csharp">
@@ -6547,7 +6678,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}IOPS for the volume. Required in some volume types, such as io1.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="volumesperinstance_csharp">
@@ -6556,7 +6688,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Amount of volumes per instance in the master group.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -6571,7 +6704,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Size of the volume, in GBs.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="volumetype_go">
@@ -6580,7 +6714,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}volume type. Allowed values are 'gp2', 'io1' and others.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="iops_go">
@@ -6589,7 +6724,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}IOPS for the volume. Required in some volume types, such as io1.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="volumesperinstance_go">
@@ -6598,7 +6734,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Amount of volumes per instance in the master group.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -6613,7 +6750,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Size of the volume, in GBs.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="volumetype_nodejs">
@@ -6622,7 +6760,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}volume type. Allowed values are 'gp2', 'io1' and others.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="iops_nodejs">
@@ -6631,7 +6770,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}IOPS for the volume. Required in some volume types, such as io1.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="volumesperinstance_nodejs">
@@ -6640,7 +6780,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Amount of volumes per instance in the master group.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -6655,7 +6796,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Size of the volume, in GBs.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="volume_type_python">
@@ -6664,7 +6806,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}volume type. Allowed values are 'gp2', 'io1' and others.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="iops_python">
@@ -6673,7 +6816,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}IOPS for the volume. Required in some volume types, such as io1.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="volumes_per_instance_python">
@@ -6682,7 +6826,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Amount of volumes per instance in the master group.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -6731,7 +6876,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the policy.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="threshold_csharp">
@@ -6760,7 +6906,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The type of action to perform. Allowed values are : 'adjustment', 'setMinTarget', 'setMaxTarget', 'updateCapacity', 'percentageAdjustment'
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="adjustment_csharp">
@@ -6769,7 +6916,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of instances to add/remove to/from the target capacity when scale is needed.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="cooldown_csharp">
@@ -6778,7 +6926,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The amount of time, in seconds, after a scaling activity completes and before the next scaling activity can start.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="dimensions_csharp">
@@ -6787,7 +6936,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A mapping of dimensions describing qualities of the metric.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="evaluationperiods_csharp">
@@ -6806,7 +6956,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Max target capacity for scale down.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="maximum_csharp">
@@ -6815,7 +6966,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The maximum to set when scale is needed.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="mintargetcapacity_csharp">
@@ -6824,7 +6976,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Min target capacity for scale up.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="minimum_csharp">
@@ -6833,7 +6986,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The minimum to set when scale is needed.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="operator_csharp">
@@ -6872,7 +7026,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of instances to set when scale is needed.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -6907,7 +7062,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the policy.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="threshold_go">
@@ -6936,7 +7092,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The type of action to perform. Allowed values are : 'adjustment', 'setMinTarget', 'setMaxTarget', 'updateCapacity', 'percentageAdjustment'
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="adjustment_go">
@@ -6945,7 +7102,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of instances to add/remove to/from the target capacity when scale is needed.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="cooldown_go">
@@ -6954,7 +7112,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The amount of time, in seconds, after a scaling activity completes and before the next scaling activity can start.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="dimensions_go">
@@ -6963,7 +7122,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A mapping of dimensions describing qualities of the metric.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="evaluationperiods_go">
@@ -6982,7 +7142,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Max target capacity for scale down.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="maximum_go">
@@ -6991,7 +7152,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The maximum to set when scale is needed.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="mintargetcapacity_go">
@@ -7000,7 +7162,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Min target capacity for scale up.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="minimum_go">
@@ -7009,7 +7172,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The minimum to set when scale is needed.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="operator_go">
@@ -7048,7 +7212,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of instances to set when scale is needed.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -7083,7 +7248,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the policy.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="threshold_nodejs">
@@ -7112,7 +7278,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The type of action to perform. Allowed values are : 'adjustment', 'setMinTarget', 'setMaxTarget', 'updateCapacity', 'percentageAdjustment'
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="adjustment_nodejs">
@@ -7121,7 +7288,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of instances to add/remove to/from the target capacity when scale is needed.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="cooldown_nodejs">
@@ -7130,7 +7298,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The amount of time, in seconds, after a scaling activity completes and before the next scaling activity can start.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="dimensions_nodejs">
@@ -7139,7 +7308,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A mapping of dimensions describing qualities of the metric.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="evaluationperiods_nodejs">
@@ -7158,7 +7328,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Max target capacity for scale down.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="maximum_nodejs">
@@ -7167,7 +7338,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The maximum to set when scale is needed.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="mintargetcapacity_nodejs">
@@ -7176,7 +7348,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Min target capacity for scale up.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="minimum_nodejs">
@@ -7185,7 +7358,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The minimum to set when scale is needed.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="operator_nodejs">
@@ -7224,7 +7398,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of instances to set when scale is needed.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -7259,7 +7434,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the policy.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="threshold_python">
@@ -7288,7 +7464,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The type of action to perform. Allowed values are : 'adjustment', 'setMinTarget', 'setMaxTarget', 'updateCapacity', 'percentageAdjustment'
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="adjustment_python">
@@ -7297,7 +7474,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of instances to add/remove to/from the target capacity when scale is needed.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="cooldown_python">
@@ -7306,7 +7484,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The amount of time, in seconds, after a scaling activity completes and before the next scaling activity can start.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="dimensions_python">
@@ -7315,7 +7494,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A mapping of dimensions describing qualities of the metric.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="evaluation_periods_python">
@@ -7334,7 +7514,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Max target capacity for scale down.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="maximum_python">
@@ -7343,7 +7524,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The maximum to set when scale is needed.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="min_target_capacity_python">
@@ -7352,7 +7534,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Min target capacity for scale up.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="minimum_python">
@@ -7361,7 +7544,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The minimum to set when scale is needed.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="operator_python">
@@ -7400,7 +7584,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of instances to set when scale is needed.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -7449,7 +7634,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the policy.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="threshold_csharp">
@@ -7478,7 +7664,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The type of action to perform. Allowed values are : 'adjustment', 'setMinTarget', 'setMaxTarget', 'updateCapacity', 'percentageAdjustment'
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="adjustment_csharp">
@@ -7487,7 +7674,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of instances to add/remove to/from the target capacity when scale is needed.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="cooldown_csharp">
@@ -7496,7 +7684,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The amount of time, in seconds, after a scaling activity completes and before the next scaling activity can start.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="dimensions_csharp">
@@ -7505,7 +7694,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A mapping of dimensions describing qualities of the metric.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="evaluationperiods_csharp">
@@ -7524,7 +7714,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Max target capacity for scale down.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="maximum_csharp">
@@ -7533,7 +7724,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The maximum to set when scale is needed.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="mintargetcapacity_csharp">
@@ -7542,7 +7734,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Min target capacity for scale up.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="minimum_csharp">
@@ -7551,7 +7744,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The minimum to set when scale is needed.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="operator_csharp">
@@ -7590,7 +7784,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of instances to set when scale is needed.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -7625,7 +7820,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the policy.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="threshold_go">
@@ -7654,7 +7850,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The type of action to perform. Allowed values are : 'adjustment', 'setMinTarget', 'setMaxTarget', 'updateCapacity', 'percentageAdjustment'
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="adjustment_go">
@@ -7663,7 +7860,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of instances to add/remove to/from the target capacity when scale is needed.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="cooldown_go">
@@ -7672,7 +7870,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The amount of time, in seconds, after a scaling activity completes and before the next scaling activity can start.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="dimensions_go">
@@ -7681,7 +7880,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A mapping of dimensions describing qualities of the metric.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="evaluationperiods_go">
@@ -7700,7 +7900,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Max target capacity for scale down.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="maximum_go">
@@ -7709,7 +7910,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The maximum to set when scale is needed.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="mintargetcapacity_go">
@@ -7718,7 +7920,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Min target capacity for scale up.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="minimum_go">
@@ -7727,7 +7930,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The minimum to set when scale is needed.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="operator_go">
@@ -7766,7 +7970,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of instances to set when scale is needed.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -7801,7 +8006,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the policy.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="threshold_nodejs">
@@ -7830,7 +8036,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The type of action to perform. Allowed values are : 'adjustment', 'setMinTarget', 'setMaxTarget', 'updateCapacity', 'percentageAdjustment'
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="adjustment_nodejs">
@@ -7839,7 +8046,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of instances to add/remove to/from the target capacity when scale is needed.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="cooldown_nodejs">
@@ -7848,7 +8056,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The amount of time, in seconds, after a scaling activity completes and before the next scaling activity can start.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="dimensions_nodejs">
@@ -7857,7 +8066,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A mapping of dimensions describing qualities of the metric.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="evaluationperiods_nodejs">
@@ -7876,7 +8086,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Max target capacity for scale down.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="maximum_nodejs">
@@ -7885,7 +8096,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The maximum to set when scale is needed.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="mintargetcapacity_nodejs">
@@ -7894,7 +8106,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Min target capacity for scale up.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="minimum_nodejs">
@@ -7903,7 +8116,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The minimum to set when scale is needed.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="operator_nodejs">
@@ -7942,7 +8156,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of instances to set when scale is needed.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -7977,7 +8192,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the policy.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="threshold_python">
@@ -8006,7 +8222,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The type of action to perform. Allowed values are : 'adjustment', 'setMinTarget', 'setMaxTarget', 'updateCapacity', 'percentageAdjustment'
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="adjustment_python">
@@ -8015,7 +8232,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of instances to add/remove to/from the target capacity when scale is needed.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="cooldown_python">
@@ -8024,7 +8242,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The amount of time, in seconds, after a scaling activity completes and before the next scaling activity can start.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="dimensions_python">
@@ -8033,7 +8252,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A mapping of dimensions describing qualities of the metric.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="evaluation_periods_python">
@@ -8052,7 +8272,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Max target capacity for scale down.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="maximum_python">
@@ -8061,7 +8282,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The maximum to set when scale is needed.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="min_target_capacity_python">
@@ -8070,7 +8292,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Min target capacity for scale up.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="minimum_python">
@@ -8079,7 +8302,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The minimum to set when scale is needed.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="operator_python">
@@ -8118,7 +8342,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of instances to set when scale is needed.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -8147,7 +8372,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the instance.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="weightedcapacity_csharp">
@@ -8156,7 +8382,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The weight given to the associated instance type.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -8171,7 +8398,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the instance.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="weightedcapacity_go">
@@ -8180,7 +8408,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The weight given to the associated instance type.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -8195,7 +8424,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the instance.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="weightedcapacity_nodejs">
@@ -8204,7 +8434,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The weight given to the associated instance type.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -8219,7 +8450,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The type of the instance.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="weighted_capacity_python">
@@ -8228,7 +8460,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The weight given to the associated instance type.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -8257,7 +8490,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Size of the volume, in GBs.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="volumetype_csharp">
@@ -8266,7 +8500,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}volume type. Allowed values are 'gp2', 'io1' and others.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="iops_csharp">
@@ -8275,7 +8510,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}IOPS for the volume. Required in some volume types, such as io1.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="volumesperinstance_csharp">
@@ -8284,7 +8520,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Amount of volumes per instance in the master group.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -8299,7 +8536,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Size of the volume, in GBs.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="volumetype_go">
@@ -8308,7 +8546,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}volume type. Allowed values are 'gp2', 'io1' and others.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="iops_go">
@@ -8317,7 +8556,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}IOPS for the volume. Required in some volume types, such as io1.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="volumesperinstance_go">
@@ -8326,7 +8566,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Amount of volumes per instance in the master group.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -8341,7 +8582,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Size of the volume, in GBs.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="volumetype_nodejs">
@@ -8350,7 +8592,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}volume type. Allowed values are 'gp2', 'io1' and others.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="iops_nodejs">
@@ -8359,7 +8602,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}IOPS for the volume. Required in some volume types, such as io1.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="volumesperinstance_nodejs">
@@ -8368,7 +8612,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Amount of volumes per instance in the master group.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -8383,7 +8628,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Size of the volume, in GBs.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="volume_type_python">
@@ -8392,7 +8638,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}volume type. Allowed values are 'gp2', 'io1' and others.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="iops_python">
@@ -8401,7 +8648,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}IOPS for the volume. Required in some volume types, such as io1.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="volumes_per_instance_python">
@@ -8410,7 +8658,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Amount of volumes per instance in the master group.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -8439,7 +8688,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The amount of time (minutes) after which the cluster is automatically terminated if it's still in provisioning status. Minimum: '15'.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="timeoutaction_csharp">
@@ -8448,7 +8698,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The action to take if the timeout is exceeded. Valid values: `terminate`, `terminateAndRetry`.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -8463,7 +8714,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The amount of time (minutes) after which the cluster is automatically terminated if it's still in provisioning status. Minimum: '15'.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="timeoutaction_go">
@@ -8472,7 +8724,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The action to take if the timeout is exceeded. Valid values: `terminate`, `terminateAndRetry`.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -8487,7 +8740,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The amount of time (minutes) after which the cluster is automatically terminated if it's still in provisioning status. Minimum: '15'.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="timeoutaction_nodejs">
@@ -8496,7 +8750,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The action to take if the timeout is exceeded. Valid values: `terminate`, `terminateAndRetry`.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -8511,7 +8766,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The amount of time (minutes) after which the cluster is automatically terminated if it's still in provisioning status. Minimum: '15'.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="timeout_action_python">
@@ -8520,7 +8776,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The action to take if the timeout is exceeded. Valid values: `terminate`, `terminateAndRetry`.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -8549,7 +8806,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A cron expression representing the schedule for the task.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="instancegrouptype_csharp">
@@ -8558,7 +8816,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Select the EMR instance groups to execute the scheduled task on. Valid values: `task`.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="tasktype_csharp">
@@ -8567,7 +8826,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The type of task to be scheduled. Valid values: `setCapacity`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="desiredcapacity_csharp">
@@ -8576,7 +8836,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}New desired capacity for the elastigroup.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="isenabled_csharp">
@@ -8585,7 +8846,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Enable/Disable the specified scheduling task.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="maxcapacity_csharp">
@@ -8594,7 +8856,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}New max capacity for the elastigroup.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="mincapacity_csharp">
@@ -8603,7 +8866,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}New min capacity for the elastigroup.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -8618,7 +8882,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A cron expression representing the schedule for the task.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="instancegrouptype_go">
@@ -8627,7 +8892,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Select the EMR instance groups to execute the scheduled task on. Valid values: `task`.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="tasktype_go">
@@ -8636,7 +8902,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The type of task to be scheduled. Valid values: `setCapacity`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="desiredcapacity_go">
@@ -8645,7 +8912,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}New desired capacity for the elastigroup.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="isenabled_go">
@@ -8654,7 +8922,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Enable/Disable the specified scheduling task.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="maxcapacity_go">
@@ -8663,7 +8932,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}New max capacity for the elastigroup.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="mincapacity_go">
@@ -8672,7 +8942,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}New min capacity for the elastigroup.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -8687,7 +8958,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A cron expression representing the schedule for the task.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="instancegrouptype_nodejs">
@@ -8696,7 +8968,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Select the EMR instance groups to execute the scheduled task on. Valid values: `task`.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="tasktype_nodejs">
@@ -8705,7 +8978,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The type of task to be scheduled. Valid values: `setCapacity`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="desiredcapacity_nodejs">
@@ -8714,7 +8988,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}New desired capacity for the elastigroup.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="isenabled_nodejs">
@@ -8723,7 +8998,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Enable/Disable the specified scheduling task.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="maxcapacity_nodejs">
@@ -8732,7 +9008,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}New max capacity for the elastigroup.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="mincapacity_nodejs">
@@ -8741,7 +9018,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}New min capacity for the elastigroup.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -8756,7 +9034,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A cron expression representing the schedule for the task.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="instance_group_type_python">
@@ -8765,7 +9044,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Select the EMR instance groups to execute the scheduled task on. Valid values: `task`.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="task_type_python">
@@ -8774,7 +9054,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The type of task to be scheduled. Valid values: `setCapacity`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="desired_capacity_python">
@@ -8783,7 +9064,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}New desired capacity for the elastigroup.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="is_enabled_python">
@@ -8792,7 +9074,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Enable/Disable the specified scheduling task.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="max_capacity_python">
@@ -8801,7 +9084,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}New max capacity for the elastigroup.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="min_capacity_python">
@@ -8810,7 +9094,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}New min capacity for the elastigroup.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -8839,7 +9124,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}S3 Bucket name for bootstrap actions.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="key_csharp">
@@ -8848,7 +9134,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}S3 key for bootstrap actions.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -8863,7 +9150,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}S3 Bucket name for bootstrap actions.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="key_go">
@@ -8872,7 +9160,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}S3 key for bootstrap actions.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -8887,7 +9176,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}S3 Bucket name for bootstrap actions.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="key_nodejs">
@@ -8896,7 +9186,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}S3 key for bootstrap actions.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -8911,7 +9202,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}S3 Bucket name for bootstrap actions.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="key_python">
@@ -8920,7 +9212,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}S3 key for bootstrap actions.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -8949,7 +9242,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}S3 key for bootstrap actions.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="value_csharp">
@@ -8958,7 +9252,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Tag value.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -8973,7 +9268,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}S3 key for bootstrap actions.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="value_go">
@@ -8982,7 +9278,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Tag value.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -8997,7 +9294,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}S3 key for bootstrap actions.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="value_nodejs">
@@ -9006,7 +9304,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Tag value.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -9021,7 +9320,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}S3 key for bootstrap actions.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="value_python">
@@ -9030,7 +9330,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Tag value.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -9059,7 +9360,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Size of the volume, in GBs.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="volumetype_csharp">
@@ -9068,7 +9370,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}volume type. Allowed values are 'gp2', 'io1' and others.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="iops_csharp">
@@ -9077,7 +9380,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}IOPS for the volume. Required in some volume types, such as io1.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="volumesperinstance_csharp">
@@ -9086,7 +9390,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Amount of volumes per instance in the master group.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -9101,7 +9406,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Size of the volume, in GBs.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="volumetype_go">
@@ -9110,7 +9416,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}volume type. Allowed values are 'gp2', 'io1' and others.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="iops_go">
@@ -9119,7 +9426,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}IOPS for the volume. Required in some volume types, such as io1.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="volumesperinstance_go">
@@ -9128,7 +9436,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Amount of volumes per instance in the master group.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -9143,7 +9452,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Size of the volume, in GBs.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="volumetype_nodejs">
@@ -9152,7 +9462,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}volume type. Allowed values are 'gp2', 'io1' and others.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="iops_nodejs">
@@ -9161,7 +9472,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}IOPS for the volume. Required in some volume types, such as io1.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="volumesperinstance_nodejs">
@@ -9170,7 +9482,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Amount of volumes per instance in the master group.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -9185,7 +9498,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Size of the volume, in GBs.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="volume_type_python">
@@ -9194,7 +9508,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}volume type. Allowed values are 'gp2', 'io1' and others.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="iops_python">
@@ -9203,7 +9518,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}IOPS for the volume. Required in some volume types, such as io1.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="volumes_per_instance_python">
@@ -9212,7 +9528,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Amount of volumes per instance in the master group.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -9261,7 +9578,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the policy.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="threshold_csharp">
@@ -9290,7 +9608,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The type of action to perform. Allowed values are : 'adjustment', 'setMinTarget', 'setMaxTarget', 'updateCapacity', 'percentageAdjustment'
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="adjustment_csharp">
@@ -9299,7 +9618,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of instances to add/remove to/from the target capacity when scale is needed.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="cooldown_csharp">
@@ -9308,7 +9628,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The amount of time, in seconds, after a scaling activity completes and before the next scaling activity can start.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="dimensions_csharp">
@@ -9317,7 +9638,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A mapping of dimensions describing qualities of the metric.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="evaluationperiods_csharp">
@@ -9336,7 +9658,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Max target capacity for scale down.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="maximum_csharp">
@@ -9345,7 +9668,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The maximum to set when scale is needed.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="mintargetcapacity_csharp">
@@ -9354,7 +9678,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Min target capacity for scale up.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="minimum_csharp">
@@ -9363,7 +9688,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The minimum to set when scale is needed.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="operator_csharp">
@@ -9402,7 +9728,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of instances to set when scale is needed.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -9437,7 +9764,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the policy.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="threshold_go">
@@ -9466,7 +9794,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The type of action to perform. Allowed values are : 'adjustment', 'setMinTarget', 'setMaxTarget', 'updateCapacity', 'percentageAdjustment'
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="adjustment_go">
@@ -9475,7 +9804,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of instances to add/remove to/from the target capacity when scale is needed.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="cooldown_go">
@@ -9484,7 +9814,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The amount of time, in seconds, after a scaling activity completes and before the next scaling activity can start.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="dimensions_go">
@@ -9493,7 +9824,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A mapping of dimensions describing qualities of the metric.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="evaluationperiods_go">
@@ -9512,7 +9844,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Max target capacity for scale down.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="maximum_go">
@@ -9521,7 +9854,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The maximum to set when scale is needed.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="mintargetcapacity_go">
@@ -9530,7 +9864,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Min target capacity for scale up.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="minimum_go">
@@ -9539,7 +9874,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The minimum to set when scale is needed.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="operator_go">
@@ -9578,7 +9914,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of instances to set when scale is needed.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -9613,7 +9950,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the policy.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="threshold_nodejs">
@@ -9642,7 +9980,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The type of action to perform. Allowed values are : 'adjustment', 'setMinTarget', 'setMaxTarget', 'updateCapacity', 'percentageAdjustment'
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="adjustment_nodejs">
@@ -9651,7 +9990,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of instances to add/remove to/from the target capacity when scale is needed.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="cooldown_nodejs">
@@ -9660,7 +10000,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The amount of time, in seconds, after a scaling activity completes and before the next scaling activity can start.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="dimensions_nodejs">
@@ -9669,7 +10010,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A mapping of dimensions describing qualities of the metric.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="evaluationperiods_nodejs">
@@ -9688,7 +10030,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Max target capacity for scale down.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="maximum_nodejs">
@@ -9697,7 +10040,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The maximum to set when scale is needed.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="mintargetcapacity_nodejs">
@@ -9706,7 +10050,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Min target capacity for scale up.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="minimum_nodejs">
@@ -9715,7 +10060,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The minimum to set when scale is needed.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="operator_nodejs">
@@ -9754,7 +10100,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of instances to set when scale is needed.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -9789,7 +10136,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the policy.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="threshold_python">
@@ -9818,7 +10166,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The type of action to perform. Allowed values are : 'adjustment', 'setMinTarget', 'setMaxTarget', 'updateCapacity', 'percentageAdjustment'
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="adjustment_python">
@@ -9827,7 +10176,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of instances to add/remove to/from the target capacity when scale is needed.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="cooldown_python">
@@ -9836,7 +10186,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The amount of time, in seconds, after a scaling activity completes and before the next scaling activity can start.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="dimensions_python">
@@ -9845,7 +10196,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A mapping of dimensions describing qualities of the metric.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="evaluation_periods_python">
@@ -9864,7 +10216,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Max target capacity for scale down.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="maximum_python">
@@ -9873,7 +10226,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The maximum to set when scale is needed.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="min_target_capacity_python">
@@ -9882,7 +10236,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Min target capacity for scale up.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="minimum_python">
@@ -9891,7 +10246,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The minimum to set when scale is needed.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="operator_python">
@@ -9930,7 +10286,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of instances to set when scale is needed.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -9979,7 +10336,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the policy.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="threshold_csharp">
@@ -10008,7 +10366,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The type of action to perform. Allowed values are : 'adjustment', 'setMinTarget', 'setMaxTarget', 'updateCapacity', 'percentageAdjustment'
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="adjustment_csharp">
@@ -10017,7 +10376,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of instances to add/remove to/from the target capacity when scale is needed.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="cooldown_csharp">
@@ -10026,7 +10386,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The amount of time, in seconds, after a scaling activity completes and before the next scaling activity can start.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="dimensions_csharp">
@@ -10035,7 +10396,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, object&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A mapping of dimensions describing qualities of the metric.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="evaluationperiods_csharp">
@@ -10054,7 +10416,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Max target capacity for scale down.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="maximum_csharp">
@@ -10063,7 +10426,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The maximum to set when scale is needed.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="mintargetcapacity_csharp">
@@ -10072,7 +10436,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Min target capacity for scale up.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="minimum_csharp">
@@ -10081,7 +10446,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The minimum to set when scale is needed.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="operator_csharp">
@@ -10120,7 +10486,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of instances to set when scale is needed.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -10155,7 +10522,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the policy.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="threshold_go">
@@ -10184,7 +10552,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The type of action to perform. Allowed values are : 'adjustment', 'setMinTarget', 'setMaxTarget', 'updateCapacity', 'percentageAdjustment'
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="adjustment_go">
@@ -10193,7 +10562,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of instances to add/remove to/from the target capacity when scale is needed.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="cooldown_go">
@@ -10202,7 +10572,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The amount of time, in seconds, after a scaling activity completes and before the next scaling activity can start.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="dimensions_go">
@@ -10211,7 +10582,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]interface{}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A mapping of dimensions describing qualities of the metric.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="evaluationperiods_go">
@@ -10230,7 +10602,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Max target capacity for scale down.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="maximum_go">
@@ -10239,7 +10612,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The maximum to set when scale is needed.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="mintargetcapacity_go">
@@ -10248,7 +10622,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Min target capacity for scale up.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="minimum_go">
@@ -10257,7 +10632,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The minimum to set when scale is needed.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="operator_go">
@@ -10296,7 +10672,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of instances to set when scale is needed.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -10331,7 +10708,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the policy.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="threshold_nodejs">
@@ -10360,7 +10738,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The type of action to perform. Allowed values are : 'adjustment', 'setMinTarget', 'setMaxTarget', 'updateCapacity', 'percentageAdjustment'
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="adjustment_nodejs">
@@ -10369,7 +10748,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of instances to add/remove to/from the target capacity when scale is needed.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="cooldown_nodejs">
@@ -10378,7 +10758,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The amount of time, in seconds, after a scaling activity completes and before the next scaling activity can start.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="dimensions_nodejs">
@@ -10387,7 +10768,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: any}</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A mapping of dimensions describing qualities of the metric.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="evaluationperiods_nodejs">
@@ -10406,7 +10788,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Max target capacity for scale down.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="maximum_nodejs">
@@ -10415,7 +10798,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The maximum to set when scale is needed.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="mintargetcapacity_nodejs">
@@ -10424,7 +10808,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Min target capacity for scale up.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="minimum_nodejs">
@@ -10433,7 +10818,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The minimum to set when scale is needed.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="operator_nodejs">
@@ -10472,7 +10858,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of instances to set when scale is needed.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -10507,7 +10894,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the policy.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="threshold_python">
@@ -10536,7 +10924,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The type of action to perform. Allowed values are : 'adjustment', 'setMinTarget', 'setMaxTarget', 'updateCapacity', 'percentageAdjustment'
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="adjustment_python">
@@ -10545,7 +10934,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of instances to add/remove to/from the target capacity when scale is needed.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="cooldown_python">
@@ -10554,7 +10944,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The amount of time, in seconds, after a scaling activity completes and before the next scaling activity can start.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="dimensions_python">
@@ -10563,7 +10954,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, Any]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A mapping of dimensions describing qualities of the metric.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="evaluation_periods_python">
@@ -10582,7 +10974,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Max target capacity for scale down.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="maximum_python">
@@ -10591,7 +10984,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The maximum to set when scale is needed.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="min_target_capacity_python">
@@ -10600,7 +10994,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Min target capacity for scale up.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="minimum_python">
@@ -10609,7 +11004,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The minimum to set when scale is needed.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="operator_python">
@@ -10648,7 +11044,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of instances to set when scale is needed.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 

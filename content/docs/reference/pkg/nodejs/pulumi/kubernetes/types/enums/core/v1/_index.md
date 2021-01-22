@@ -3,7 +3,7 @@ title: "Module types/enums/core/v1"
 title_tag: "Module types/enums/core/v1 | Package @pulumi/kubernetes | Node.js SDK"
 linktitle: "enums/core/v1"
 meta_desc: "Explore members of the enums/core/v1 module in the @pulumi/kubernetes package."
-git_sha: "ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9"
+git_sha: "63f6322ca9e33d39a2e52afc00dc343f1f4f3369"
 block_external_search_index: true
 ---
 
@@ -27,7 +27,7 @@ block_external_search_index: true
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="ServiceSpecType" data-link-title="ServiceSpecType">
-    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/ce6173d984c19cbd3bf6f2a7d814e5c1dfc8aab9/sdk/nodejs/types/enums/core/v1/index.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-kubernetes/blob/63f6322ca9e33d39a2e52afc00dc343f1f4f3369/sdk/nodejs/types/enums/core/v1/index.ts#L12">
         type <strong>ServiceSpecType</strong>
     </a>
 </h3>

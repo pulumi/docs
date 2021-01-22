@@ -172,21 +172,21 @@ config = pulumi.Config()
 name = config.get("name")
 if name is None:
     name = "tf-testAccCenInstanceGrantBasic"
-cen = alicloud.cen.Instance("cen", opts=ResourceOptions(provider=alicloud["account2"]))
+cen = alicloud.cen.Instance("cen", opts=pulumi.ResourceOptions(provider=alicloud["account2"]))
 vpc = alicloud.vpc.Network("vpc", cidr_block="192.168.0.0/16",
-opts=ResourceOptions(provider=alicloud["account1"]))
+opts=pulumi.ResourceOptions(provider=alicloud["account1"]))
 foo_instance_grant = alicloud.cen.InstanceGrant("fooInstanceGrant",
     cen_id=cen.id,
     child_instance_id=vpc.id,
     cen_owner_id="uid2",
-    opts=ResourceOptions(provider=alicloud["account1"]))
+    opts=pulumi.ResourceOptions(provider=alicloud["account1"]))
 foo_instance_attachment = alicloud.cen.InstanceAttachment("fooInstanceAttachment",
     instance_id=cen.id,
     child_instance_id=vpc.id,
     child_instance_type="VPC",
     child_instance_region_id="cn-qingdao",
     child_instance_owner_id="uid1",
-    opts=ResourceOptions(provider=alicloud["account2"],
+    opts=pulumi.ResourceOptions(provider=alicloud["account2"],
         depends_on=[foo_instance_grant]))
 ```
 

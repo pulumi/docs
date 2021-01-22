@@ -99,7 +99,7 @@ const example = pulumi.output(aws.workspaces.getDirectory({
 
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_directory(</span><span class="nx">directory_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">workspace_creation_properties</span><span class="p">:</span> <span class="nx">Optional[GetDirectoryWorkspaceCreationPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetDirectoryResult</code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span>get_directory(</span><span class="nx">directory_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.InvokeOptions">Optional[InvokeOptions]</a></span> = None<span class="p">) -&gt;</span> GetDirectoryResult</code></pre></div>
 {{% /choosable %}}
 
 
@@ -145,16 +145,6 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}A map of tags assigned to the WorkSpaces directory.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="workspacecreationproperties_csharp">
-<a href="#workspacecreationproperties_csharp" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Creation<wbr>Properties</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdirectoryworkspacecreationproperties">Get<wbr>Directory<wbr>Workspace<wbr>Creation<wbr>Properties<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The default properties that are used for creating WorkSpaces. Defined below.
-{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -180,16 +170,6 @@ The following arguments are supported:
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the WorkSpaces directory.
-{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="workspacecreationproperties_go">
-<a href="#workspacecreationproperties_go" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Creation<wbr>Properties</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdirectoryworkspacecreationproperties">Get<wbr>Directory<wbr>Workspace<wbr>Creation<wbr>Properties</a></span>
-    </dt>
-    <dd>{{% md %}}The default properties that are used for creating WorkSpaces. Defined below.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -217,16 +197,6 @@ The following arguments are supported:
     </dt>
     <dd>{{% md %}}A map of tags assigned to the WorkSpaces directory.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="workspacecreationproperties_nodejs">
-<a href="#workspacecreationproperties_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Creation<wbr>Properties</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdirectoryworkspacecreationproperties">Get<wbr>Directory<wbr>Workspace<wbr>Creation<wbr>Properties</a></span>
-    </dt>
-    <dd>{{% md %}}The default properties that are used for creating WorkSpaces. Defined below.
-{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -252,16 +222,6 @@ The following arguments are supported:
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}A map of tags assigned to the WorkSpaces directory.
-{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="workspace_creation_properties_python">
-<a href="#workspace_creation_properties_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>creation_<wbr>properties</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#getdirectoryworkspacecreationproperties">Get<wbr>Directory<wbr>Workspace<wbr>Creation<wbr>Properties<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}The default properties that are used for creating WorkSpaces. Defined below.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -396,6 +356,16 @@ The following output properties are available:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The identifiers of the subnets where the directory resides.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="workspaceaccessproperties_csharp">
+<a href="#workspaceaccessproperties_csharp" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Access<wbr>Properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getdirectoryworkspaceaccessproperty">List&lt;Get<wbr>Directory<wbr>Workspace<wbr>Access<wbr>Property&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}(Optional) Specifies which devices and operating systems users can use to access their WorkSpaces. Defined below.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -554,6 +524,16 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="workspaceaccessproperties_go">
+<a href="#workspaceaccessproperties_go" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Access<wbr>Properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getdirectoryworkspaceaccessproperty">[]Get<wbr>Directory<wbr>Workspace<wbr>Access<wbr>Property</a></span>
+    </dt>
+    <dd>{{% md %}}(Optional) Specifies which devices and operating systems users can use to access their WorkSpaces. Defined below.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="workspacecreationproperties_go">
 <a href="#workspacecreationproperties_go" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Creation<wbr>Properties</a>
 </span>
@@ -709,6 +689,16 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="workspaceaccessproperties_nodejs">
+<a href="#workspaceaccessproperties_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Access<wbr>Properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getdirectoryworkspaceaccessproperty">Get<wbr>Directory<wbr>Workspace<wbr>Access<wbr>Property[]</a></span>
+    </dt>
+    <dd>{{% md %}}(Optional) Specifies which devices and operating systems users can use to access their WorkSpaces. Defined below.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="workspacecreationproperties_nodejs">
 <a href="#workspacecreationproperties_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Creation<wbr>Properties</a>
 </span>
@@ -861,6 +851,16 @@ The following output properties are available:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The identifiers of the subnets where the directory resides.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="workspace_access_properties_python">
+<a href="#workspace_access_properties_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>access_<wbr>properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getdirectoryworkspaceaccessproperty">Sequence[Get<wbr>Directory<wbr>Workspace<wbr>Access<wbr>Property]</a></span>
+    </dt>
+    <dd>{{% md %}}(Optional) Specifies which devices and operating systems users can use to access their WorkSpaces. Defined below.
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -1139,16 +1139,334 @@ The following output properties are available:
 </dl>
 {{% /choosable %}}
 
-<h4 id="getdirectoryworkspacecreationproperties">Get<wbr>Directory<wbr>Workspace<wbr>Creation<wbr>Properties</h4>
+<h4 id="getdirectoryworkspaceaccessproperty">Get<wbr>Directory<wbr>Workspace<wbr>Access<wbr>Property</h4>
 {{% choosable language nodejs %}}
-> See the <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetDirectoryWorkspaceCreationProperties">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetDirectoryWorkspaceCreationProperties">output</a> API doc for this type.
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetDirectoryWorkspaceAccessProperty">output</a> API doc for this type.
 {{% /choosable %}}
 
 {{% choosable language go %}}
-> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/workspaces?tab=doc#GetDirectoryWorkspaceCreationPropertiesArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/workspaces?tab=doc#GetDirectoryWorkspaceCreationProperties">output</a> API doc for this type.
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/workspaces?tab=doc#GetDirectoryWorkspaceAccessProperty">output</a> API doc for this type.
 {{% /choosable %}}
 {{% choosable language csharp %}}
-> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Workspaces.Inputs.GetDirectoryWorkspaceCreationPropertiesArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Workspaces.Outputs.GetDirectoryWorkspaceCreationProperties.html">output</a> API doc for this type.
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Workspaces.Outputs.GetDirectoryWorkspaceAccessProperty.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="devicetypeandroid_csharp">
+<a href="#devicetypeandroid_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Type<wbr>Android</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Optional) Indicates whether users can use Android devices to access their WorkSpaces.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="devicetypechromeos_csharp">
+<a href="#devicetypechromeos_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Type<wbr>Chromeos</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Optional) Indicates whether users can use Chromebooks to access their WorkSpaces.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="devicetypeios_csharp">
+<a href="#devicetypeios_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Type<wbr>Ios</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Optional) Indicates whether users can use iOS devices to access their WorkSpaces.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="devicetypeosx_csharp">
+<a href="#devicetypeosx_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Type<wbr>Osx</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Optional) Indicates whether users can use macOS clients to access their WorkSpaces.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="devicetypeweb_csharp">
+<a href="#devicetypeweb_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Type<wbr>Web</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Optional) Indicates whether users can access their WorkSpaces through a web browser.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="devicetypewindows_csharp">
+<a href="#devicetypewindows_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Type<wbr>Windows</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Optional) Indicates whether users can use Windows clients to access their WorkSpaces.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="devicetypezeroclient_csharp">
+<a href="#devicetypezeroclient_csharp" style="color: inherit; text-decoration: inherit;">Device<wbr>Type<wbr>Zeroclient</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Optional) Indicates whether users can use zero client devices to access their WorkSpaces.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="devicetypeandroid_go">
+<a href="#devicetypeandroid_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Type<wbr>Android</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Optional) Indicates whether users can use Android devices to access their WorkSpaces.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="devicetypechromeos_go">
+<a href="#devicetypechromeos_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Type<wbr>Chromeos</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Optional) Indicates whether users can use Chromebooks to access their WorkSpaces.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="devicetypeios_go">
+<a href="#devicetypeios_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Type<wbr>Ios</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Optional) Indicates whether users can use iOS devices to access their WorkSpaces.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="devicetypeosx_go">
+<a href="#devicetypeosx_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Type<wbr>Osx</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Optional) Indicates whether users can use macOS clients to access their WorkSpaces.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="devicetypeweb_go">
+<a href="#devicetypeweb_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Type<wbr>Web</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Optional) Indicates whether users can access their WorkSpaces through a web browser.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="devicetypewindows_go">
+<a href="#devicetypewindows_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Type<wbr>Windows</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Optional) Indicates whether users can use Windows clients to access their WorkSpaces.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="devicetypezeroclient_go">
+<a href="#devicetypezeroclient_go" style="color: inherit; text-decoration: inherit;">Device<wbr>Type<wbr>Zeroclient</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Optional) Indicates whether users can use zero client devices to access their WorkSpaces.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="devicetypeandroid_nodejs">
+<a href="#devicetypeandroid_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Type<wbr>Android</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Optional) Indicates whether users can use Android devices to access their WorkSpaces.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="devicetypechromeos_nodejs">
+<a href="#devicetypechromeos_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Type<wbr>Chromeos</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Optional) Indicates whether users can use Chromebooks to access their WorkSpaces.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="devicetypeios_nodejs">
+<a href="#devicetypeios_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Type<wbr>Ios</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Optional) Indicates whether users can use iOS devices to access their WorkSpaces.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="devicetypeosx_nodejs">
+<a href="#devicetypeosx_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Type<wbr>Osx</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Optional) Indicates whether users can use macOS clients to access their WorkSpaces.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="devicetypeweb_nodejs">
+<a href="#devicetypeweb_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Type<wbr>Web</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Optional) Indicates whether users can access their WorkSpaces through a web browser.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="devicetypewindows_nodejs">
+<a href="#devicetypewindows_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Type<wbr>Windows</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Optional) Indicates whether users can use Windows clients to access their WorkSpaces.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="devicetypezeroclient_nodejs">
+<a href="#devicetypezeroclient_nodejs" style="color: inherit; text-decoration: inherit;">device<wbr>Type<wbr>Zeroclient</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}(Optional) Indicates whether users can use zero client devices to access their WorkSpaces.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="device_type_android_python">
+<a href="#device_type_android_python" style="color: inherit; text-decoration: inherit;">device_<wbr>type_<wbr>android</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}(Optional) Indicates whether users can use Android devices to access their WorkSpaces.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="device_type_chromeos_python">
+<a href="#device_type_chromeos_python" style="color: inherit; text-decoration: inherit;">device_<wbr>type_<wbr>chromeos</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}(Optional) Indicates whether users can use Chromebooks to access their WorkSpaces.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="device_type_ios_python">
+<a href="#device_type_ios_python" style="color: inherit; text-decoration: inherit;">device_<wbr>type_<wbr>ios</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}(Optional) Indicates whether users can use iOS devices to access their WorkSpaces.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="device_type_osx_python">
+<a href="#device_type_osx_python" style="color: inherit; text-decoration: inherit;">device_<wbr>type_<wbr>osx</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}(Optional) Indicates whether users can use macOS clients to access their WorkSpaces.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="device_type_web_python">
+<a href="#device_type_web_python" style="color: inherit; text-decoration: inherit;">device_<wbr>type_<wbr>web</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}(Optional) Indicates whether users can access their WorkSpaces through a web browser.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="device_type_windows_python">
+<a href="#device_type_windows_python" style="color: inherit; text-decoration: inherit;">device_<wbr>type_<wbr>windows</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}(Optional) Indicates whether users can use Windows clients to access their WorkSpaces.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="device_type_zeroclient_python">
+<a href="#device_type_zeroclient_python" style="color: inherit; text-decoration: inherit;">device_<wbr>type_<wbr>zeroclient</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}(Optional) Indicates whether users can use zero client devices to access their WorkSpaces.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="getdirectoryworkspacecreationproperties">Get<wbr>Directory<wbr>Workspace<wbr>Creation<wbr>Properties</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetDirectoryWorkspaceCreationProperties">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aws/sdk/v3/go/aws/workspaces?tab=doc#GetDirectoryWorkspaceCreationProperties">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Aws/Pulumi.Aws.Workspaces.Outputs.GetDirectoryWorkspaceCreationProperties.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -1166,8 +1484,8 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The identifier of your custom security group. Should relate to the same VPC, where workspaces reside in.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="defaultou_csharp">
 <a href="#defaultou_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Ou</a>
 </span>
@@ -1176,8 +1494,8 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The default organizational unit (OU) for your WorkSpace directories.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="enableinternetaccess_csharp">
 <a href="#enableinternetaccess_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Internet<wbr>Access</a>
 </span>
@@ -1186,8 +1504,8 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Indicates whether internet access is enabled for your WorkSpaces.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="enablemaintenancemode_csharp">
 <a href="#enablemaintenancemode_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Maintenance<wbr>Mode</a>
 </span>
@@ -1196,8 +1514,8 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Indicates whether maintenance mode is enabled for your WorkSpaces. For more information, see [WorkSpace Maintenance](https://docs.aws.amazon.com/workspaces/latest/adminguide/workspace-maintenance.html).
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="userenabledaslocaladministrator_csharp">
 <a href="#userenabledaslocaladministrator_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Enabled<wbr>As<wbr>Local<wbr>Administrator</a>
 </span>
@@ -1222,8 +1540,8 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The identifier of your custom security group. Should relate to the same VPC, where workspaces reside in.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="defaultou_go">
 <a href="#defaultou_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Ou</a>
 </span>
@@ -1232,8 +1550,8 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The default organizational unit (OU) for your WorkSpace directories.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="enableinternetaccess_go">
 <a href="#enableinternetaccess_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Internet<wbr>Access</a>
 </span>
@@ -1242,8 +1560,8 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Indicates whether internet access is enabled for your WorkSpaces.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="enablemaintenancemode_go">
 <a href="#enablemaintenancemode_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Maintenance<wbr>Mode</a>
 </span>
@@ -1252,8 +1570,8 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Indicates whether maintenance mode is enabled for your WorkSpaces. For more information, see [WorkSpace Maintenance](https://docs.aws.amazon.com/workspaces/latest/adminguide/workspace-maintenance.html).
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="userenabledaslocaladministrator_go">
 <a href="#userenabledaslocaladministrator_go" style="color: inherit; text-decoration: inherit;">User<wbr>Enabled<wbr>As<wbr>Local<wbr>Administrator</a>
 </span>
@@ -1278,8 +1596,8 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The identifier of your custom security group. Should relate to the same VPC, where workspaces reside in.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="defaultou_nodejs">
 <a href="#defaultou_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Ou</a>
 </span>
@@ -1288,8 +1606,8 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The default organizational unit (OU) for your WorkSpace directories.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="enableinternetaccess_nodejs">
 <a href="#enableinternetaccess_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Internet<wbr>Access</a>
 </span>
@@ -1298,8 +1616,8 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Indicates whether internet access is enabled for your WorkSpaces.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="enablemaintenancemode_nodejs">
 <a href="#enablemaintenancemode_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Maintenance<wbr>Mode</a>
 </span>
@@ -1308,8 +1626,8 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Indicates whether maintenance mode is enabled for your WorkSpaces. For more information, see [WorkSpace Maintenance](https://docs.aws.amazon.com/workspaces/latest/adminguide/workspace-maintenance.html).
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="userenabledaslocaladministrator_nodejs">
 <a href="#userenabledaslocaladministrator_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Enabled<wbr>As<wbr>Local<wbr>Administrator</a>
 </span>
@@ -1334,8 +1652,8 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The identifier of your custom security group. Should relate to the same VPC, where workspaces reside in.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="default_ou_python">
 <a href="#default_ou_python" style="color: inherit; text-decoration: inherit;">default_<wbr>ou</a>
 </span>
@@ -1344,8 +1662,8 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}The default organizational unit (OU) for your WorkSpace directories.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="enable_internet_access_python">
 <a href="#enable_internet_access_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>internet_<wbr>access</a>
 </span>
@@ -1354,8 +1672,8 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Indicates whether internet access is enabled for your WorkSpaces.
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="enable_maintenance_mode_python">
 <a href="#enable_maintenance_mode_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>maintenance_<wbr>mode</a>
 </span>
@@ -1364,8 +1682,8 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}Indicates whether maintenance mode is enabled for your WorkSpaces. For more information, see [WorkSpace Maintenance](https://docs.aws.amazon.com/workspaces/latest/adminguide/workspace-maintenance.html).
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-required"
+            title="Required">
         <span id="user_enabled_as_local_administrator_python">
 <a href="#user_enabled_as_local_administrator_python" style="color: inherit; text-decoration: inherit;">user_<wbr>enabled_<wbr>as_<wbr>local_<wbr>administrator</a>
 </span>

@@ -1,13 +1,13 @@
 ---
 # Name of the webinar.
 title: "CI/CD Pipelines for Kubernetes Apps with Pulumi & Codefresh"
-meta_desc: "In this session we will cover how to set up automated CI/CD pipelines for Kubernetes applications using Pulumi and Codefresh."
+meta_desc: "In this video we will cover how to set up automated CI/CD pipelines for Kubernetes applications using Pulumi and Codefresh."
 
 # A featured webinar will display first in the list.
 featured: false
 
 # If the video is pre-recorded or live.
-pre_recorded: false
+pre_recorded: true
 
 # If the video is part of the PulumiTV series. Setting this value to true will list the video in the "PulumiTV" section.
 pulumi_tv: false
@@ -20,7 +20,7 @@ unlisted: false
 
 # Gated webinars will have a registration form and the user will need
 # to fill out the form before viewing.
-gated: true
+gated: false
 
 # The layout of the landing page.
 type: webinars
@@ -54,13 +54,13 @@ main:
     # Webinar title.
     title: "CI/CD Pipelines for Kubernetes Apps with Pulumi & Codefresh"
     # URL for embedding a URL for ungated webinars.
-    youtube_url: ""
+    youtube_url: "https://www.youtube.com/embed/c7TUy-0N5OA"
     # Sortable date. The datetime Hugo will use to sort the webinars in date order.
     sortable_date: 2021-01-21T09:00:00-08:00
     # Duration of the webinar.
     duration: "1 hour"
     # Datetime of the webinar.
-    datetime: ""
+    datetime: "January 21st, 2021"
     # Description of the webinar.
     description: |
         Leading cloud engineering organizations are automating infrastructure deployments using Pulumi’s infrastructure as code platform and Codefresh makes it easy to manage infrastructure code as part of your continuous delivery process.

@@ -39,6 +39,7 @@ class MyStack : Stack
         // a new dev database.
         var auroraCluster = new Aws.Rds.Cluster("auroraCluster", new Aws.Rds.ClusterArgs
         {
+            ClusterIdentifier = "development_cluster",
             SnapshotIdentifier = developmentFinalSnapshot.Apply(developmentFinalSnapshot => developmentFinalSnapshot.Id),
             DbSubnetGroupName = "my_db_subnet_group",
         });
@@ -76,6 +77,7 @@ func main() {
 			return err
 		}
 		auroraCluster, err := rds.NewCluster(ctx, "auroraCluster", &rds.ClusterArgs{
+			ClusterIdentifier:  pulumi.String("development_cluster"),
 			SnapshotIdentifier: pulumi.String(developmentFinalSnapshot.Id),
 			DbSubnetGroupName:  pulumi.String("my_db_subnet_group"),
 		})
@@ -107,6 +109,7 @@ development_final_snapshot = aws.rds.get_cluster_snapshot(db_cluster_identifier=
 # Use the last snapshot of the dev database before it was destroyed to create
 # a new dev database.
 aurora_cluster = aws.rds.Cluster("auroraCluster",
+    cluster_identifier="development_cluster",
     snapshot_identifier=development_final_snapshot.id,
     db_subnet_group_name="my_db_subnet_group")
 aurora_cluster_instance = aws.rds.ClusterInstance("auroraClusterInstance",
@@ -130,6 +133,7 @@ const developmentFinalSnapshot = aws.rds.getClusterSnapshot({
 // Use the last snapshot of the dev database before it was destroyed to create
 // a new dev database.
 const auroraCluster = new aws.rds.Cluster("auroraCluster", {
+    clusterIdentifier: "development_cluster",
     snapshotIdentifier: developmentFinalSnapshot.then(developmentFinalSnapshot => developmentFinalSnapshot.id),
     dbSubnetGroupName: "my_db_subnet_group",
 });

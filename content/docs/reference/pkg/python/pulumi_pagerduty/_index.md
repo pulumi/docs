@@ -482,7 +482,7 @@ a format of their choosing before sending those properties to the Pulumi engine.
             <span class="s2">&quot;homer&quot;</span><span class="p">,</span>
         <span class="p">],</span>
     <span class="p">]),</span>
-    <span class="n">opts</span><span class="o">=</span><span class="n">ResourceOptions</span><span class="p">(</span><span class="n">depends_on</span><span class="o">=</span><span class="p">[</span><span class="n">pagerduty_event_rule</span><span class="p">[</span><span class="s2">&quot;two&quot;</span><span class="p">]]))</span>
+    <span class="n">opts</span><span class="o">=</span><span class="n">pulumi</span><span class="o">.</span><span class="n">ResourceOptions</span><span class="p">(</span><span class="n">depends_on</span><span class="o">=</span><span class="p">[</span><span class="n">pagerduty_event_rule</span><span class="p">[</span><span class="s2">&quot;two&quot;</span><span class="p">]]))</span>
 </pre></div>
 </div>
 <p>Event rules can be imported using the <code class="docutils literal notranslate"><span class="pre">id</span></code>, e.g.</p>

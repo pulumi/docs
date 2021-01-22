@@ -18,6 +18,7 @@ A Pulumi package for creating and managing AliCloud resources.
     <li><a href="adb/" title="adb"><span class="symbol module"></span>adb</a></li>
     <li><a href="alikafka/" title="alikafka"><span class="symbol module"></span>alikafka</a></li>
     <li><a href="apigateway/" title="apigateway"><span class="symbol module"></span>apigateway</a></li>
+    <li><a href="brain/" title="brain"><span class="symbol module"></span>brain</a></li>
     <li><a href="cas/" title="cas"><span class="symbol module"></span>cas</a></li>
     <li><a href="cassandra/" title="cassandra"><span class="symbol module"></span>cassandra</a></li>
     <li><a href="cdn/" title="cdn"><span class="symbol module"></span>cdn</a></li>
@@ -37,6 +38,7 @@ A Pulumi package for creating and managing AliCloud resources.
     <li><a href="eci/" title="eci"><span class="symbol module"></span>eci</a></li>
     <li><a href="ecs/" title="ecs"><span class="symbol module"></span>ecs</a></li>
     <li><a href="edas/" title="edas"><span class="symbol module"></span>edas</a></li>
+    <li><a href="eipanycast/" title="eipanycast"><span class="symbol module"></span>eipanycast</a></li>
     <li><a href="elasticsearch/" title="elasticsearch"><span class="symbol module"></span>elasticsearch</a></li>
     <li><a href="emr/" title="emr"><span class="symbol module"></span>emr</a></li>
     <li><a href="ess/" title="ess"><span class="symbol module"></span>ess</a></li>
@@ -97,7 +99,7 @@ A Pulumi package for creating and managing AliCloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 	<dt>Version</dt>
-	<dd>2.31.0</dd>
+	<dd>2.32.0</dd>
 </dl>
 
 

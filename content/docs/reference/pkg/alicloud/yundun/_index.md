@@ -30,7 +30,7 @@ Explore the resources and functions of the yundun module in the AliCloud package
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 	<dt>Version</dt>
-	<dd>2.31.0</dd>
+	<dd>2.32.0</dd>
 </dl>
 
 

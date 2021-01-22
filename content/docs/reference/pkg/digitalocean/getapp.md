@@ -594,6 +594,16 @@ The following output properties are available:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="envs_csharp">
+<a href="#envs_csharp" style="color: inherit; text-decoration: inherit;">Envs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getappspecenv">List&lt;Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Get<wbr>App<wbr>Spec<wbr>Env<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Describes an environment variable made available to an app competent.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="region_csharp">
 <a href="#region_csharp" style="color: inherit; text-decoration: inherit;">Region</a>
 </span>
@@ -662,6 +672,16 @@ The following output properties are available:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="envs_go">
+<a href="#envs_go" style="color: inherit; text-decoration: inherit;">Envs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getappspecenv">[]Get<wbr>App<wbr>Spec<wbr>Env</a></span>
+    </dt>
+    <dd>{{% md %}}Describes an environment variable made available to an app competent.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="region_go">
@@ -734,6 +754,16 @@ The following output properties are available:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="envs_nodejs">
+<a href="#envs_nodejs" style="color: inherit; text-decoration: inherit;">envs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getappspecenv">Get<wbr>App<wbr>Spec<wbr>Env[]</a></span>
+    </dt>
+    <dd>{{% md %}}Describes an environment variable made available to an app competent.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="region_nodejs">
 <a href="#region_nodejs" style="color: inherit; text-decoration: inherit;">region</a>
 </span>
@@ -802,6 +832,16 @@ The following output properties are available:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="envs_python">
+<a href="#envs_python" style="color: inherit; text-decoration: inherit;">envs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getappspecenv">Sequence[Get<wbr>App<wbr>Spec<wbr>Env<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Describes an environment variable made available to an app competent.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="region_python">
@@ -1159,6 +1199,204 @@ The following output properties are available:
 </dl>
 {{% /choosable %}}
 
+<h4 id="getappspecenv">Get<wbr>App<wbr>Spec<wbr>Env</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#GetAppSpecEnv">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/?tab=doc#GetAppSpecEnv">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.DigitalOcean/Pulumi.DigitalOcean.Outputs.GetAppSpecEnv.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of the environment variable, `GENERAL` or `SECRET`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="key_csharp">
+<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the environment variable.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scope_csharp">
+<a href="#scope_csharp" style="color: inherit; text-decoration: inherit;">Scope</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The visibility scope of the environment variable. One of `RUN_TIME`, `BUILD_TIME`, or `RUN_AND_BUILD_TIME` (default).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The value of the environment variable.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of the environment variable, `GENERAL` or `SECRET`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="key_go">
+<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the environment variable.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scope_go">
+<a href="#scope_go" style="color: inherit; text-decoration: inherit;">Scope</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The visibility scope of the environment variable. One of `RUN_TIME`, `BUILD_TIME`, or `RUN_AND_BUILD_TIME` (default).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The value of the environment variable.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of the environment variable, `GENERAL` or `SECRET`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="key_nodejs">
+<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the environment variable.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scope_nodejs">
+<a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The visibility scope of the environment variable. One of `RUN_TIME`, `BUILD_TIME`, or `RUN_AND_BUILD_TIME` (default).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The value of the environment variable.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of the environment variable, `GENERAL` or `SECRET`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="key_python">
+<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the environment variable.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scope_python">
+<a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The visibility scope of the environment variable. One of `RUN_TIME`, `BUILD_TIME`, or `RUN_AND_BUILD_TIME` (default).
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The value of the environment variable.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
 <h4 id="getappspecservice">Get<wbr>App<wbr>Spec<wbr>Service</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#GetAppSpecService">output</a> API doc for this type.
@@ -1275,6 +1513,15 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}A GitHub repo to use as component's source. Only one of `git` and `github` may be set.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gitlab_csharp">
+<a href="#gitlab_csharp" style="color: inherit; text-decoration: inherit;">Gitlab</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getappspecservicegitlab">Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Get<wbr>App<wbr>Spec<wbr>Service<wbr>Gitlab<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="healthcheck_csharp">
@@ -1422,6 +1669,15 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="gitlab_go">
+<a href="#gitlab_go" style="color: inherit; text-decoration: inherit;">Gitlab</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getappspecservicegitlab">Get<wbr>App<wbr>Spec<wbr>Service<wbr>Gitlab</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="healthcheck_go">
 <a href="#healthcheck_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Check</a>
 </span>
@@ -1567,6 +1823,15 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="gitlab_nodejs">
+<a href="#gitlab_nodejs" style="color: inherit; text-decoration: inherit;">gitlab</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getappspecservicegitlab">Get<wbr>App<wbr>Spec<wbr>Service<wbr>Gitlab</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="healthcheck_nodejs">
 <a href="#healthcheck_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Check</a>
 </span>
@@ -1710,6 +1975,15 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}A GitHub repo to use as component's source. Only one of `git` and `github` may be set.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gitlab_python">
+<a href="#gitlab_python" style="color: inherit; text-decoration: inherit;">gitlab</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getappspecservicegitlab">Get<wbr>App<wbr>Spec<wbr>Service<wbr>Gitlab<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="health_check_python">
@@ -2079,6 +2353,164 @@ The following output properties are available:
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.DigitalOcean/Pulumi.DigitalOcean.Outputs.GetAppSpecServiceGithub.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="branch_csharp">
+<a href="#branch_csharp" style="color: inherit; text-decoration: inherit;">Branch</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the branch to use.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deployonpush_csharp">
+<a href="#deployonpush_csharp" style="color: inherit; text-decoration: inherit;">Deploy<wbr>On<wbr>Push</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to automatically deploy new commits made to the repo.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="repo_csharp">
+<a href="#repo_csharp" style="color: inherit; text-decoration: inherit;">Repo</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the repo in the format `owner/repo`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="branch_go">
+<a href="#branch_go" style="color: inherit; text-decoration: inherit;">Branch</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the branch to use.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deployonpush_go">
+<a href="#deployonpush_go" style="color: inherit; text-decoration: inherit;">Deploy<wbr>On<wbr>Push</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to automatically deploy new commits made to the repo.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="repo_go">
+<a href="#repo_go" style="color: inherit; text-decoration: inherit;">Repo</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the repo in the format `owner/repo`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="branch_nodejs">
+<a href="#branch_nodejs" style="color: inherit; text-decoration: inherit;">branch</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the branch to use.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deployonpush_nodejs">
+<a href="#deployonpush_nodejs" style="color: inherit; text-decoration: inherit;">deploy<wbr>On<wbr>Push</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether to automatically deploy new commits made to the repo.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="repo_nodejs">
+<a href="#repo_nodejs" style="color: inherit; text-decoration: inherit;">repo</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the repo in the format `owner/repo`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="branch_python">
+<a href="#branch_python" style="color: inherit; text-decoration: inherit;">branch</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the branch to use.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deploy_on_push_python">
+<a href="#deploy_on_push_python" style="color: inherit; text-decoration: inherit;">deploy_<wbr>on_<wbr>push</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to automatically deploy new commits made to the repo.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="repo_python">
+<a href="#repo_python" style="color: inherit; text-decoration: inherit;">repo</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the repo in the format `owner/repo`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="getappspecservicegitlab">Get<wbr>App<wbr>Spec<wbr>Service<wbr>Gitlab</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#GetAppSpecServiceGitlab">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/?tab=doc#GetAppSpecServiceGitlab">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.DigitalOcean/Pulumi.DigitalOcean.Outputs.GetAppSpecServiceGitlab.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 
@@ -2631,6 +3063,16 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="catchalldocument_csharp">
+<a href="#catchalldocument_csharp" style="color: inherit; text-decoration: inherit;">Catchall<wbr>Document</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the document to use as the fallback for any requests to documents that are not found when serving this static site.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="dockerfilepath_csharp">
 <a href="#dockerfilepath_csharp" style="color: inherit; text-decoration: inherit;">Dockerfile<wbr>Path</a>
 </span>
@@ -2667,7 +3109,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the error document to use when serving this static site*
+    <dd>{{% md %}}The name of the error document to use when serving this static site.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2689,6 +3131,15 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}A GitHub repo to use as component's source. Only one of `git` and `github` may be set.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gitlab_csharp">
+<a href="#gitlab_csharp" style="color: inherit; text-decoration: inherit;">Gitlab</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getappspecstaticsitegitlab">Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Get<wbr>App<wbr>Spec<wbr>Static<wbr>Site<wbr>Gitlab<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="indexdocument_csharp">
@@ -2756,6 +3207,16 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="catchalldocument_go">
+<a href="#catchalldocument_go" style="color: inherit; text-decoration: inherit;">Catchall<wbr>Document</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the document to use as the fallback for any requests to documents that are not found when serving this static site.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="dockerfilepath_go">
 <a href="#dockerfilepath_go" style="color: inherit; text-decoration: inherit;">Dockerfile<wbr>Path</a>
 </span>
@@ -2792,7 +3253,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the error document to use when serving this static site*
+    <dd>{{% md %}}The name of the error document to use when serving this static site.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2814,6 +3275,15 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}A GitHub repo to use as component's source. Only one of `git` and `github` may be set.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gitlab_go">
+<a href="#gitlab_go" style="color: inherit; text-decoration: inherit;">Gitlab</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getappspecstaticsitegitlab">Get<wbr>App<wbr>Spec<wbr>Static<wbr>Site<wbr>Gitlab</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="indexdocument_go">
@@ -2881,6 +3351,16 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="catchalldocument_nodejs">
+<a href="#catchalldocument_nodejs" style="color: inherit; text-decoration: inherit;">catchall<wbr>Document</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the document to use as the fallback for any requests to documents that are not found when serving this static site.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="dockerfilepath_nodejs">
 <a href="#dockerfilepath_nodejs" style="color: inherit; text-decoration: inherit;">dockerfile<wbr>Path</a>
 </span>
@@ -2917,7 +3397,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the error document to use when serving this static site*
+    <dd>{{% md %}}The name of the error document to use when serving this static site.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2939,6 +3419,15 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}A GitHub repo to use as component's source. Only one of `git` and `github` may be set.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gitlab_nodejs">
+<a href="#gitlab_nodejs" style="color: inherit; text-decoration: inherit;">gitlab</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getappspecstaticsitegitlab">Get<wbr>App<wbr>Spec<wbr>Static<wbr>Site<wbr>Gitlab</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="indexdocument_nodejs">
@@ -3006,6 +3495,16 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="catchall_document_python">
+<a href="#catchall_document_python" style="color: inherit; text-decoration: inherit;">catchall_<wbr>document</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the document to use as the fallback for any requests to documents that are not found when serving this static site.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="dockerfile_path_python">
 <a href="#dockerfile_path_python" style="color: inherit; text-decoration: inherit;">dockerfile_<wbr>path</a>
 </span>
@@ -3042,7 +3541,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the error document to use when serving this static site*
+    <dd>{{% md %}}The name of the error document to use when serving this static site.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3064,6 +3563,15 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}A GitHub repo to use as component's source. Only one of `git` and `github` may be set.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gitlab_python">
+<a href="#gitlab_python" style="color: inherit; text-decoration: inherit;">gitlab</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getappspecstaticsitegitlab">Get<wbr>App<wbr>Spec<wbr>Static<wbr>Site<wbr>Gitlab<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="index_document_python">
@@ -3571,6 +4079,164 @@ The following output properties are available:
 </dl>
 {{% /choosable %}}
 
+<h4 id="getappspecstaticsitegitlab">Get<wbr>App<wbr>Spec<wbr>Static<wbr>Site<wbr>Gitlab</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#GetAppSpecStaticSiteGitlab">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/?tab=doc#GetAppSpecStaticSiteGitlab">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.DigitalOcean/Pulumi.DigitalOcean.Outputs.GetAppSpecStaticSiteGitlab.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="branch_csharp">
+<a href="#branch_csharp" style="color: inherit; text-decoration: inherit;">Branch</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the branch to use.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deployonpush_csharp">
+<a href="#deployonpush_csharp" style="color: inherit; text-decoration: inherit;">Deploy<wbr>On<wbr>Push</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to automatically deploy new commits made to the repo.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="repo_csharp">
+<a href="#repo_csharp" style="color: inherit; text-decoration: inherit;">Repo</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the repo in the format `owner/repo`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="branch_go">
+<a href="#branch_go" style="color: inherit; text-decoration: inherit;">Branch</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the branch to use.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deployonpush_go">
+<a href="#deployonpush_go" style="color: inherit; text-decoration: inherit;">Deploy<wbr>On<wbr>Push</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to automatically deploy new commits made to the repo.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="repo_go">
+<a href="#repo_go" style="color: inherit; text-decoration: inherit;">Repo</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the repo in the format `owner/repo`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="branch_nodejs">
+<a href="#branch_nodejs" style="color: inherit; text-decoration: inherit;">branch</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the branch to use.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deployonpush_nodejs">
+<a href="#deployonpush_nodejs" style="color: inherit; text-decoration: inherit;">deploy<wbr>On<wbr>Push</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether to automatically deploy new commits made to the repo.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="repo_nodejs">
+<a href="#repo_nodejs" style="color: inherit; text-decoration: inherit;">repo</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the repo in the format `owner/repo`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="branch_python">
+<a href="#branch_python" style="color: inherit; text-decoration: inherit;">branch</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the branch to use.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deploy_on_push_python">
+<a href="#deploy_on_push_python" style="color: inherit; text-decoration: inherit;">deploy_<wbr>on_<wbr>push</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to automatically deploy new commits made to the repo.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="repo_python">
+<a href="#repo_python" style="color: inherit; text-decoration: inherit;">repo</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the repo in the format `owner/repo`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
 <h4 id="getappspecstaticsiteroutes">Get<wbr>App<wbr>Spec<wbr>Static<wbr>Site<wbr>Routes</h4>
 {{% choosable language nodejs %}}
 > See the   <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#GetAppSpecStaticSiteRoutes">output</a> API doc for this type.
@@ -3747,6 +4413,15 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="gitlab_csharp">
+<a href="#gitlab_csharp" style="color: inherit; text-decoration: inherit;">Gitlab</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getappspecworkergitlab">Pulumi.<wbr>Digital<wbr>Ocean.<wbr>Inputs.<wbr>Get<wbr>App<wbr>Spec<wbr>Worker<wbr>Gitlab<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="instancecount_csharp">
 <a href="#instancecount_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Count</a>
 </span>
@@ -3870,6 +4545,15 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}A GitHub repo to use as component's source. Only one of `git` and `github` may be set.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gitlab_go">
+<a href="#gitlab_go" style="color: inherit; text-decoration: inherit;">Gitlab</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getappspecworkergitlab">Get<wbr>App<wbr>Spec<wbr>Worker<wbr>Gitlab</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="instancecount_go">
@@ -3997,6 +4681,15 @@ The following output properties are available:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="gitlab_nodejs">
+<a href="#gitlab_nodejs" style="color: inherit; text-decoration: inherit;">gitlab</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getappspecworkergitlab">Get<wbr>App<wbr>Spec<wbr>Worker<wbr>Gitlab</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="instancecount_nodejs">
 <a href="#instancecount_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Count</a>
 </span>
@@ -4120,6 +4813,15 @@ The following output properties are available:
     </dt>
     <dd>{{% md %}}A GitHub repo to use as component's source. Only one of `git` and `github` may be set.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="gitlab_python">
+<a href="#gitlab_python" style="color: inherit; text-decoration: inherit;">gitlab</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getappspecworkergitlab">Get<wbr>App<wbr>Spec<wbr>Worker<wbr>Gitlab<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="instance_count_python">
@@ -4489,6 +5191,164 @@ The following output properties are available:
 {{% /choosable %}}
 {{% choosable language csharp %}}
 > See the   <a href="/docs/reference/pkg/dotnet/Pulumi.DigitalOcean/Pulumi.DigitalOcean.Outputs.GetAppSpecWorkerGithub.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="branch_csharp">
+<a href="#branch_csharp" style="color: inherit; text-decoration: inherit;">Branch</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the branch to use.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deployonpush_csharp">
+<a href="#deployonpush_csharp" style="color: inherit; text-decoration: inherit;">Deploy<wbr>On<wbr>Push</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to automatically deploy new commits made to the repo.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="repo_csharp">
+<a href="#repo_csharp" style="color: inherit; text-decoration: inherit;">Repo</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the repo in the format `owner/repo`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="branch_go">
+<a href="#branch_go" style="color: inherit; text-decoration: inherit;">Branch</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the branch to use.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deployonpush_go">
+<a href="#deployonpush_go" style="color: inherit; text-decoration: inherit;">Deploy<wbr>On<wbr>Push</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to automatically deploy new commits made to the repo.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="repo_go">
+<a href="#repo_go" style="color: inherit; text-decoration: inherit;">Repo</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the repo in the format `owner/repo`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="branch_nodejs">
+<a href="#branch_nodejs" style="color: inherit; text-decoration: inherit;">branch</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the branch to use.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deployonpush_nodejs">
+<a href="#deployonpush_nodejs" style="color: inherit; text-decoration: inherit;">deploy<wbr>On<wbr>Push</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether to automatically deploy new commits made to the repo.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="repo_nodejs">
+<a href="#repo_nodejs" style="color: inherit; text-decoration: inherit;">repo</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the repo in the format `owner/repo`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="branch_python">
+<a href="#branch_python" style="color: inherit; text-decoration: inherit;">branch</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the branch to use.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deploy_on_push_python">
+<a href="#deploy_on_push_python" style="color: inherit; text-decoration: inherit;">deploy_<wbr>on_<wbr>push</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether to automatically deploy new commits made to the repo.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="repo_python">
+<a href="#repo_python" style="color: inherit; text-decoration: inherit;">repo</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the repo in the format `owner/repo`.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="getappspecworkergitlab">Get<wbr>App<wbr>Spec<wbr>Worker<wbr>Gitlab</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/digitalocean/types/output/#GetAppSpecWorkerGitlab">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-digitalocean/sdk/v3/go/digitalocean/?tab=doc#GetAppSpecWorkerGitlab">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.DigitalOcean/Pulumi.DigitalOcean.Outputs.GetAppSpecWorkerGitlab.html">output</a> API doc for this type.
 {{% /choosable %}}
 
 

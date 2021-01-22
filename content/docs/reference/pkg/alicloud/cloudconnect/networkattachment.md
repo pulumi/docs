@@ -96,7 +96,7 @@ ccn = alicloud.cloudconnect.Network("ccn", is_default=True)
 default = alicloud.cloudconnect.NetworkAttachment("default",
     ccn_id=ccn.id,
     sag_id="sag-xxxxx",
-    opts=ResourceOptions(depends_on=[ccn]))
+    opts=pulumi.ResourceOptions(depends_on=[ccn]))
 ```
 
 {{% /example %}}

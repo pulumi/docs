@@ -19,6 +19,7 @@ A Pulumi package for creating and managing github cloud resources.
     <li><a href="branch" title="Branch"><span class="symbol resource"></span>Branch</a></li>
     <li><a href="branchdefault" title="BranchDefault"><span class="symbol resource"></span>BranchDefault</a></li>
     <li><a href="branchprotection" title="BranchProtection"><span class="symbol resource"></span>BranchProtection</a></li>
+    <li><a href="branchprotectionv3" title="BranchProtectionV3"><span class="symbol resource"></span>BranchProtectionV3</a></li>
     <li><a href="issuelabel" title="IssueLabel"><span class="symbol resource"></span>IssueLabel</a></li>
     <li><a href="membership" title="Membership"><span class="symbol resource"></span>Membership</a></li>
     <li><a href="organizationblock" title="OrganizationBlock"><span class="symbol resource"></span>OrganizationBlock</a></li>
@@ -69,7 +70,7 @@ A Pulumi package for creating and managing github cloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`github` Terraform Provider](https://github.com/terraform-providers/terraform-provider-github).</dd>
 	<dt>Version</dt>
-	<dd>2.4.1</dd>
+	<dd>2.5.0</dd>
 </dl>
 
 

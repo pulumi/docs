@@ -73,7 +73,7 @@ anything, please consult the source <a class="reference external" href="https://
 
 <dl class="py class">
 <dt id="pulumi_aws.AwaitableGetPartitionResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.</code><code class="sig-name descname">AwaitableGetPartitionResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">dns_suffix</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">partition</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.AwaitableGetPartitionResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.</code><code class="sig-name descname">AwaitableGetPartitionResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">dns_suffix</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">partition</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">reverse_dns_prefix</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.AwaitableGetPartitionResult" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py class">
@@ -655,7 +655,7 @@ For Local and Wavelength Zones this is a longer string, for example <code class=
 
 <dl class="py class">
 <dt id="pulumi_aws.GetPartitionResult">
-<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.</code><code class="sig-name descname">GetPartitionResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">dns_suffix</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">partition</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.GetPartitionResult" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">pulumi_aws.</code><code class="sig-name descname">GetPartitionResult</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">dns_suffix</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">id</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">partition</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">reverse_dns_prefix</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pulumi_aws.GetPartitionResult" title="Permalink to this definition">¶</a></dt>
 <dd><p>A collection of values returned by getPartition.</p>
 <dl class="py method">
 <dt id="pulumi_aws.GetPartitionResult.dns_suffix">
@@ -673,6 +673,12 @@ For Local and Wavelength Zones this is a longer string, for example <code class=
 <dt id="pulumi_aws.GetPartitionResult.partition">
 <em class="property">property </em><code class="sig-name descname">partition</code><a class="headerlink" href="#pulumi_aws.GetPartitionResult.partition" title="Permalink to this definition">¶</a></dt>
 <dd><p>Identifier of the current partition (e.g. <code class="docutils literal notranslate"><span class="pre">aws</span></code> in AWS Commercial, <code class="docutils literal notranslate"><span class="pre">aws-cn</span></code> in AWS China).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="pulumi_aws.GetPartitionResult.reverse_dns_prefix">
+<em class="property">property </em><code class="sig-name descname">reverse_dns_prefix</code><a class="headerlink" href="#pulumi_aws.GetPartitionResult.reverse_dns_prefix" title="Permalink to this definition">¶</a></dt>
+<dd><p>Prefix of service names (e.g. <code class="docutils literal notranslate"><span class="pre">com.amazonaws</span></code> in AWS Commercial, <code class="docutils literal notranslate"><span class="pre">cn.com.amazonaws</span></code> in AWS China).</p>
 </dd></dl>
 
 </dd></dl>

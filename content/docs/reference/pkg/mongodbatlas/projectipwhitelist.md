@@ -12,7 +12,10 @@ meta_desc: "Explore the ProjectIpWhitelist resource of the MongoDB Atlas package
 
 `mongodbatlas.ProjectIpWhitelist` provides an IP Whitelist entry resource. The whitelist grants access from IPs, CIDRs or AWS Security Groups (if VPC Peering is enabled) to clusters within the Project.
 
-> **NOTE:** Groups and projects are synonymous terms. You may find `groupId` in the official documentation.
+> **IMPORTANT:**
+Recently we have made changes to modernize the terminology we use in Atlas. The term “Whitelist” has been deprecated in favor of “Access List”.  The Project IP whitelist resource has been deprecated and will be disabled in June 2021.  Please move to using the [Project IP Access List](https://tf-registry.herokuapp.com/providers/mongodb/mongodbatlas/latest/docs/resources/project_ip_access_list) resource before June 2021.
+
+> **NOTE:** Groups and projects are synonymous terms. You may find `groupId` in the official documentation.ß
 
 > **IMPORTANT:**
 When you remove an entry from the whitelist, existing connections from the removed address(es) may remain open for a variable amount of time. How much time passes before Atlas closes the connection depends on several factors, including how the connection was established, the particular behavior of the application or driver using the address, and the connection protocol (e.g., TCP or UDP). This is particularly important to consider when changing an existing IP address or CIDR block as they cannot be updated via the Provider (comments can however), hence a change will force the destruction and recreation of entries.
@@ -290,7 +293,7 @@ test_project_ip_whitelist = mongodbatlas.ProjectIpWhitelist("testProjectIpWhitel
     project_id="<PROJECT-ID>",
     aws_security_group="sg-0026348ec11780bd1",
     comment="TestAcc for awsSecurityGroup",
-    opts=ResourceOptions(depends_on=["mongodbatlas_network_peering.test"]))
+    opts=pulumi.ResourceOptions(depends_on=["mongodbatlas_network_peering.test"]))
 ```
 
 {{% /example %}}

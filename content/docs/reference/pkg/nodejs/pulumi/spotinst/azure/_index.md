@@ -3,7 +3,7 @@ title: "Module azure"
 title_tag: "Module azure | Package @pulumi/spotinst | Node.js SDK"
 linktitle: "azure"
 meta_desc: "Explore members of the azure module in the @pulumi/spotinst package."
-git_sha: "aabf5943c9156643ed7e379271a64b959212b710"
+git_sha: "8b0777509728d621477d945466a125853cc401d5"
 block_external_search_index: true
 ---
 
@@ -30,7 +30,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Elastigroup" data-link-title="Elastigroup">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/azure/elastigroup.ts#L264">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/8b0777509728d621477d945466a125853cc401d5/sdk/nodejs/azure/elastigroup.ts#L137">
         Resource <strong>Elastigroup</strong>
     </a>
 </h3>
@@ -164,136 +164,9 @@ const testAzureGroup = new spotinst.azure.Elastigroup("test_azure_group", {
     userData: "",
 });
 ```
-#### Load Balancers
-
-* `loadBalancers` - (Required) Describes a set of one or more classic load balancer target groups and/or Multai load balancer target sets.
-* `type` - (Required) The resource type. Valid values: CLASSIC, TARGET_GROUP, MULTAI_TARGET_SET.
-* `balancerId` - (Required) The balancer ID.
-* `targetSetId` - (Required) The scale set ID associated with the load balancer.
-* `autoWeight` - (Optional, Default: `false`)
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-```
-
-<a id="image"></a>
-#### Image
-
-* `image` - (Required) Image of a VM. An image is a template for creating new VMs. Choose from Azure image catalogue (marketplace) or use a custom image.
-* `publisher` - (Optional) Image publisher. Required if resourceGroupName is not specified.
-* `offer` - (Optional) Name of the image to use. Required if publisher is specified.
-* `sku` - (Optional) Image's Stock Keeping Unit, which is the specific version of the image. Required if publisher is specified.
-* `resourceGroupName` - (Optional) Name of Resource Group for custom image. Required if publisher not specified.
-* `imageName` - (Optional) Name of the custom image. Required if resourceGroupName is specified.
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-```
-
-<a id="health-check"></a>
-#### Health Check
-
-* `healthCheck` - (Optional) Describes the health check configuration.
-* `healthCheckType` - (Optional) Health check used to validate VM health. Valid values: “INSTANCE_STATE”.
-* `gracePeriod` - (Optional) Period of time (seconds) to wait for VM to reach healthiness before monitoring for unhealthiness.
-* `autoHealing` - (Optional) Enable auto-healing of unhealthy VMs.
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-```
-
-<a id="network"></a>
-#### Network
-
-* `network` - (Required) Defines the Virtual Network and Subnet for your Elastigroup.
-* `virtualNetworkName` - (Required) Name of Vnet.
-* `subnetName` - (Required) ID of subnet.
-* `resourceGroupName` - (Required) Vnet Resource Group Name.
-* `assignPublicUp` - (Optional, Default: `false`) Assign a public IP to each VM in the Elastigroup.
-* `additionalIpConfigs` - (Optional) Array of additional IP configuration objects.
-* `name` - (Required) The IP configuration name.
-* `privateIpVersion` - (Optional) Available from Azure Api-Version 2017-03-30 onwards, it represents whether the specific ipconfiguration is IPv4 or IPv6. Valid values: `IPv4`, `IPv6`.
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-```
-
-<a id="login"></a>
-#### Login
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-```
-
-<a id="login"></a>
-#### Login
-
-* `login` - (Required) Describes the login configuration.
-* `userName` - (Required) Set admin access for accessing your VMs.
-* `sshPublicKey` - (Optional) SSH for admin access to Linux VMs. Required for Linux product types.
-* `password` - (Optional) Password for admin access to Windows VMs. Required for Windows product types.
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-```
-
-<a id="scaling-policy"></a>
-#### Scheduling
-
-* `scheduledTask` - (Optional) Describes the configuration of one or more scheduled tasks.
-* `isEnabled` - (Optional, Default: `true`) Describes whether the task is enabled. When true the task should run when false it should not run.
-* `cronExpression` - (Required) A valid cron expression (`* * * * *`). The cron is running in UTC time zone and is in Unix cron format Cron Expression Validator Script.
-* `taskType` - (Required) The task type to run. Valid Values: `backupAmi`, `scale`, `scaleUp`, `roll`, `statefulUpdateCapacity`, `statefulRecycle`.
-* `scaleMinCapacity` - (Optional) The min capacity of the group. Should be used when choosing ‘task_type' of ‘scale'.
-* `scaleMaxCapacity` - (Optional) The max capacity of the group. Required when ‘task_type' is ‘scale'.
-* `scaleTargetCapacity` - (Optional) The target capacity of the group. Should be used when choosing ‘task_type' of ‘scale'.
-* `adjustment` - (Optional) The number of instances to add/remove to/from the target capacity when scale is needed.
-* `adjustmentPercentage` - (Optional) The percent of instances to add/remove to/from the target capacity when scale is needed.
-* `batchSizePercentage` - (Optional) The percentage size of each batch in the scheduled deployment roll. Required when the 'task_type' is 'roll'.
-* `gracePeriod` - (Optional) The time to allow instances to become healthy.
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-```
-
-<a id="update-policy"></a>
-#### Update Policy
-
-* `updatePolicy` - (Optional)
-
-    * `shouldRoll` - (Required) Sets the enablement of the roll option.
-    * `rollConfig` - (Required) While used, you can control whether the group should perform a deployment after an update to the configuration.
-        * `batchSizePercentage` - (Required) Sets the percentage of the instances to deploy in each batch.
-        * `healthCheckType` - (Optional) Sets the health check type to use. Valid values: `"INSTANCE_STATE"`, `"NONE"`.
-        * `gracePeriod` - (Optional) Sets the grace period for new instances to become healthy.
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-```
-
-<a id="third-party-integrations"></a>
-#### Third-Party Integrations
-
-* `integrationKubernetes` - (Optional) Describes the [Kubernetes](https://kubernetes.io/) integration.
-    * `clusterIdentifier` - (Required) The cluster ID.
-
-Usage:
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-```
-
-* `integrationMultaiRuntime` - (Optional) Describes the [Multai Runtime](https://spotinst.com/) integration.
-    * `deploymentId` - (Optional) The deployment id you want to get
-
-Usage:
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-```
 
 <h4 class="pdoc-member-header" id="Elastigroup-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/azure/elastigroup.ts#L352"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/8b0777509728d621477d945466a125853cc401d5/sdk/nodejs/azure/elastigroup.ts#L249"> <b>constructor</b></a>
 </h4>
 
 
@@ -307,7 +180,7 @@ Create a Elastigroup resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Elastigroup-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/azure/elastigroup.ts#L274">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/8b0777509728d621477d945466a125853cc401d5/sdk/nodejs/azure/elastigroup.ts#L147">method <b>get</b></a>
 </h4>
 
 
@@ -318,14 +191,14 @@ Get an existing Elastigroup resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Elastigroup-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/azure/elastigroup.ts#L264">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/8b0777509728d621477d945466a125853cc401d5/sdk/nodejs/azure/elastigroup.ts#L137">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Elastigroup-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/azure/elastigroup.ts#L285">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/8b0777509728d621477d945466a125853cc401d5/sdk/nodejs/azure/elastigroup.ts#L158">method <b>isInstance</b></a>
 </h4>
 
 
@@ -336,12 +209,12 @@ Returns true if the given object is an instance of Elastigroup.  This is designe
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Elastigroup-customData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/azure/elastigroup.ts#L292">property <b>customData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/8b0777509728d621477d945466a125853cc401d5/sdk/nodejs/azure/elastigroup.ts#L165">property <b>customData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>customData: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Elastigroup-desiredCapacity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/azure/elastigroup.ts#L296">property <b>desiredCapacity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/8b0777509728d621477d945466a125853cc401d5/sdk/nodejs/azure/elastigroup.ts#L169">property <b>desiredCapacity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>desiredCapacity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -349,12 +222,15 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The desired number of instances the group should have at any time.
 
 <h4 class="pdoc-member-header" id="Elastigroup-healthCheck">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/azure/elastigroup.ts#L297">property <b>healthCheck</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/8b0777509728d621477d945466a125853cc401d5/sdk/nodejs/azure/elastigroup.ts#L173">property <b>healthCheck</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>healthCheck: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupHealthCheck'>ElastigroupHealthCheck</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+Describes the health check configuration.
+
 <h4 class="pdoc-member-header" id="Elastigroup-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/azure/elastigroup.ts#L264">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/8b0777509728d621477d945466a125853cc401d5/sdk/nodejs/azure/elastigroup.ts#L137">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -363,32 +239,47 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Elastigroup-images">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/azure/elastigroup.ts#L298">property <b>images</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/8b0777509728d621477d945466a125853cc401d5/sdk/nodejs/azure/elastigroup.ts#L177">property <b>images</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>images: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupImage'>ElastigroupImage</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+Image of a VM. An image is a template for creating new VMs. Choose from Azure image catalogue (marketplace) or use a custom image.
+
 <h4 class="pdoc-member-header" id="Elastigroup-integrationKubernetes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/azure/elastigroup.ts#L299">property <b>integrationKubernetes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/8b0777509728d621477d945466a125853cc401d5/sdk/nodejs/azure/elastigroup.ts#L181">property <b>integrationKubernetes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>integrationKubernetes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupIntegrationKubernetes'>ElastigroupIntegrationKubernetes</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+Describes the [Kubernetes](https://kubernetes.io/) integration.
+
 <h4 class="pdoc-member-header" id="Elastigroup-integrationMultaiRuntime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/azure/elastigroup.ts#L300">property <b>integrationMultaiRuntime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/8b0777509728d621477d945466a125853cc401d5/sdk/nodejs/azure/elastigroup.ts#L185">property <b>integrationMultaiRuntime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>integrationMultaiRuntime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupIntegrationMultaiRuntime'>ElastigroupIntegrationMultaiRuntime</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+Describes the [Multai Runtime](https://spotinst.com/) integration.
+
 <h4 class="pdoc-member-header" id="Elastigroup-loadBalancers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/azure/elastigroup.ts#L301">property <b>loadBalancers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/8b0777509728d621477d945466a125853cc401d5/sdk/nodejs/azure/elastigroup.ts#L189">property <b>loadBalancers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>loadBalancers: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupLoadBalancer'>ElastigroupLoadBalancer</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+Describes a set of one or more classic load balancer target groups and/or Multai load balancer target sets.
+
 <h4 class="pdoc-member-header" id="Elastigroup-login">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/azure/elastigroup.ts#L302">property <b>login</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/8b0777509728d621477d945466a125853cc401d5/sdk/nodejs/azure/elastigroup.ts#L193">property <b>login</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>login: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupLogin'>ElastigroupLogin</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+Describes the login configuration.
+
 <h4 class="pdoc-member-header" id="Elastigroup-lowPrioritySizes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/azure/elastigroup.ts#L306">property <b>lowPrioritySizes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/8b0777509728d621477d945466a125853cc401d5/sdk/nodejs/azure/elastigroup.ts#L197">property <b>lowPrioritySizes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>lowPrioritySizes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -396,12 +287,12 @@ deployments and may be missing (undefined) during planning phases.
 Available Low-Priority sizes.
 
 <h4 class="pdoc-member-header" id="Elastigroup-managedServiceIdentities">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/azure/elastigroup.ts#L307">property <b>managedServiceIdentities</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/8b0777509728d621477d945466a125853cc401d5/sdk/nodejs/azure/elastigroup.ts#L198">property <b>managedServiceIdentities</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>managedServiceIdentities: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupManagedServiceIdentity'>ElastigroupManagedServiceIdentity</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Elastigroup-maxSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/azure/elastigroup.ts#L311">property <b>maxSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/8b0777509728d621477d945466a125853cc401d5/sdk/nodejs/azure/elastigroup.ts#L202">property <b>maxSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>maxSize: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -409,7 +300,7 @@ Available Low-Priority sizes.
 The maximum number of instances the group should have at any time.
 
 <h4 class="pdoc-member-header" id="Elastigroup-minSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/azure/elastigroup.ts#L315">property <b>minSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/8b0777509728d621477d945466a125853cc401d5/sdk/nodejs/azure/elastigroup.ts#L206">property <b>minSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>minSize: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -417,20 +308,23 @@ The maximum number of instances the group should have at any time.
 The minimum number of instances the group should have at any time.
 
 <h4 class="pdoc-member-header" id="Elastigroup-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/azure/elastigroup.ts#L319">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/8b0777509728d621477d945466a125853cc401d5/sdk/nodejs/azure/elastigroup.ts#L210">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-The name of the managed identity.
+The dimension name.
 
 <h4 class="pdoc-member-header" id="Elastigroup-network">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/azure/elastigroup.ts#L320">property <b>network</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/8b0777509728d621477d945466a125853cc401d5/sdk/nodejs/azure/elastigroup.ts#L214">property <b>network</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>network: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupNetwork'>ElastigroupNetwork</a>&gt;;</code></pre>
+
+Defines the Virtual Network and Subnet for your Elastigroup.
+
 <h4 class="pdoc-member-header" id="Elastigroup-odSizes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/azure/elastigroup.ts#L324">property <b>odSizes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/8b0777509728d621477d945466a125853cc401d5/sdk/nodejs/azure/elastigroup.ts#L218">property <b>odSizes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>odSizes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -438,7 +332,7 @@ The name of the managed identity.
 Available On-Demand sizes
 
 <h4 class="pdoc-member-header" id="Elastigroup-product">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/azure/elastigroup.ts#L328">property <b>product</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/8b0777509728d621477d945466a125853cc401d5/sdk/nodejs/azure/elastigroup.ts#L222">property <b>product</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>product: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -446,7 +340,7 @@ Available On-Demand sizes
 Operation system type. Valid values: `"Linux"`, `"Windows"`.
 
 <h4 class="pdoc-member-header" id="Elastigroup-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/azure/elastigroup.ts#L332">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/8b0777509728d621477d945466a125853cc401d5/sdk/nodejs/azure/elastigroup.ts#L226">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -454,30 +348,33 @@ Operation system type. Valid values: `"Linux"`, `"Windows"`.
 The region your Azure group will be created in.
 
 <h4 class="pdoc-member-header" id="Elastigroup-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/azure/elastigroup.ts#L336">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/8b0777509728d621477d945466a125853cc401d5/sdk/nodejs/azure/elastigroup.ts#L230">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-The Resource Group that the user-assigned managed identity resides in.
+Vnet Resource Group Name.
 
 <h4 class="pdoc-member-header" id="Elastigroup-scalingDownPolicies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/azure/elastigroup.ts#L337">property <b>scalingDownPolicies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/8b0777509728d621477d945466a125853cc401d5/sdk/nodejs/azure/elastigroup.ts#L231">property <b>scalingDownPolicies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>scalingDownPolicies: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupScalingDownPolicy'>ElastigroupScalingDownPolicy</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Elastigroup-scalingUpPolicies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/azure/elastigroup.ts#L338">property <b>scalingUpPolicies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/8b0777509728d621477d945466a125853cc401d5/sdk/nodejs/azure/elastigroup.ts#L232">property <b>scalingUpPolicies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>scalingUpPolicies: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupScalingUpPolicy'>ElastigroupScalingUpPolicy</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Elastigroup-scheduledTasks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/azure/elastigroup.ts#L339">property <b>scheduledTasks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/8b0777509728d621477d945466a125853cc401d5/sdk/nodejs/azure/elastigroup.ts#L236">property <b>scheduledTasks</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>scheduledTasks: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupScheduledTask'>ElastigroupScheduledTask</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+Describes the configuration of one or more scheduled tasks.
+
 <h4 class="pdoc-member-header" id="Elastigroup-shutdownScript">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/azure/elastigroup.ts#L343">property <b>shutdownScript</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/8b0777509728d621477d945466a125853cc401d5/sdk/nodejs/azure/elastigroup.ts#L240">property <b>shutdownScript</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>shutdownScript: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -485,7 +382,7 @@ The Resource Group that the user-assigned managed identity resides in.
 Shutdown script for the group. Value should be passed as a string encoded at Base64 only.
 
 <h4 class="pdoc-member-header" id="Elastigroup-strategy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/azure/elastigroup.ts#L347">property <b>strategy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/8b0777509728d621477d945466a125853cc401d5/sdk/nodejs/azure/elastigroup.ts#L244">property <b>strategy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>strategy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupStrategy'>ElastigroupStrategy</a>&gt;;</code></pre>
@@ -493,12 +390,12 @@ Shutdown script for the group. Value should be passed as a string encoded at Bas
 Describes the deployment strategy.
 
 <h4 class="pdoc-member-header" id="Elastigroup-updatePolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/azure/elastigroup.ts#L348">property <b>updatePolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/8b0777509728d621477d945466a125853cc401d5/sdk/nodejs/azure/elastigroup.ts#L245">property <b>updatePolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>updatePolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/output/#ElastigroupUpdatePolicy'>ElastigroupUpdatePolicy</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Elastigroup-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/azure/elastigroup.ts#L264">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/8b0777509728d621477d945466a125853cc401d5/sdk/nodejs/azure/elastigroup.ts#L137">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -507,7 +404,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Elastigroup-userData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/azure/elastigroup.ts#L352">property <b>userData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/8b0777509728d621477d945466a125853cc401d5/sdk/nodejs/azure/elastigroup.ts#L249">property <b>userData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>userData: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -518,7 +415,7 @@ Base64-encoded MIME user data to make available to the instances.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="ElastigroupArgs" data-link-title="ElastigroupArgs">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/azure/elastigroup.ts#L521">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/8b0777509728d621477d945466a125853cc401d5/sdk/nodejs/azure/elastigroup.ts#L442">
         interface <strong>ElastigroupArgs</strong>
     </a>
 </h3>
@@ -528,12 +425,12 @@ Base64-encoded MIME user data to make available to the instances.
 The set of arguments for constructing a Elastigroup resource.
 
 <h4 class="pdoc-member-header" id="ElastigroupArgs-customData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/azure/elastigroup.ts#L522">property <b>customData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/8b0777509728d621477d945466a125853cc401d5/sdk/nodejs/azure/elastigroup.ts#L443">property <b>customData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>customData?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupArgs-desiredCapacity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/azure/elastigroup.ts#L526">property <b>desiredCapacity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/8b0777509728d621477d945466a125853cc401d5/sdk/nodejs/azure/elastigroup.ts#L447">property <b>desiredCapacity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>desiredCapacity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -541,37 +438,55 @@ The set of arguments for constructing a Elastigroup resource.
 The desired number of instances the group should have at any time.
 
 <h4 class="pdoc-member-header" id="ElastigroupArgs-healthCheck">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/azure/elastigroup.ts#L527">property <b>healthCheck</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/8b0777509728d621477d945466a125853cc401d5/sdk/nodejs/azure/elastigroup.ts#L451">property <b>healthCheck</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>healthCheck?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupHealthCheck'>ElastigroupHealthCheck</a>&gt;;</code></pre>
+
+Describes the health check configuration.
+
 <h4 class="pdoc-member-header" id="ElastigroupArgs-images">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/azure/elastigroup.ts#L528">property <b>images</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/8b0777509728d621477d945466a125853cc401d5/sdk/nodejs/azure/elastigroup.ts#L455">property <b>images</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>images?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupImage'>ElastigroupImage</a>&gt;[]&gt;;</code></pre>
+
+Image of a VM. An image is a template for creating new VMs. Choose from Azure image catalogue (marketplace) or use a custom image.
+
 <h4 class="pdoc-member-header" id="ElastigroupArgs-integrationKubernetes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/azure/elastigroup.ts#L529">property <b>integrationKubernetes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/8b0777509728d621477d945466a125853cc401d5/sdk/nodejs/azure/elastigroup.ts#L459">property <b>integrationKubernetes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>integrationKubernetes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupIntegrationKubernetes'>ElastigroupIntegrationKubernetes</a>&gt;;</code></pre>
+
+Describes the [Kubernetes](https://kubernetes.io/) integration.
+
 <h4 class="pdoc-member-header" id="ElastigroupArgs-integrationMultaiRuntime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/azure/elastigroup.ts#L530">property <b>integrationMultaiRuntime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/8b0777509728d621477d945466a125853cc401d5/sdk/nodejs/azure/elastigroup.ts#L463">property <b>integrationMultaiRuntime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>integrationMultaiRuntime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupIntegrationMultaiRuntime'>ElastigroupIntegrationMultaiRuntime</a>&gt;;</code></pre>
+
+Describes the [Multai Runtime](https://spotinst.com/) integration.
+
 <h4 class="pdoc-member-header" id="ElastigroupArgs-loadBalancers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/azure/elastigroup.ts#L531">property <b>loadBalancers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/8b0777509728d621477d945466a125853cc401d5/sdk/nodejs/azure/elastigroup.ts#L467">property <b>loadBalancers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loadBalancers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupLoadBalancer'>ElastigroupLoadBalancer</a>&gt;[]&gt;;</code></pre>
+
+Describes a set of one or more classic load balancer target groups and/or Multai load balancer target sets.
+
 <h4 class="pdoc-member-header" id="ElastigroupArgs-login">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/azure/elastigroup.ts#L532">property <b>login</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/8b0777509728d621477d945466a125853cc401d5/sdk/nodejs/azure/elastigroup.ts#L471">property <b>login</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>login?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupLogin'>ElastigroupLogin</a>&gt;;</code></pre>
+
+Describes the login configuration.
+
 <h4 class="pdoc-member-header" id="ElastigroupArgs-lowPrioritySizes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/azure/elastigroup.ts#L536">property <b>lowPrioritySizes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/8b0777509728d621477d945466a125853cc401d5/sdk/nodejs/azure/elastigroup.ts#L475">property <b>lowPrioritySizes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lowPrioritySizes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -579,12 +494,12 @@ The desired number of instances the group should have at any time.
 Available Low-Priority sizes.
 
 <h4 class="pdoc-member-header" id="ElastigroupArgs-managedServiceIdentities">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/azure/elastigroup.ts#L537">property <b>managedServiceIdentities</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/8b0777509728d621477d945466a125853cc401d5/sdk/nodejs/azure/elastigroup.ts#L476">property <b>managedServiceIdentities</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>managedServiceIdentities?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupManagedServiceIdentity'>ElastigroupManagedServiceIdentity</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupArgs-maxSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/azure/elastigroup.ts#L541">property <b>maxSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/8b0777509728d621477d945466a125853cc401d5/sdk/nodejs/azure/elastigroup.ts#L480">property <b>maxSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxSize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -592,7 +507,7 @@ Available Low-Priority sizes.
 The maximum number of instances the group should have at any time.
 
 <h4 class="pdoc-member-header" id="ElastigroupArgs-minSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/azure/elastigroup.ts#L545">property <b>minSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/8b0777509728d621477d945466a125853cc401d5/sdk/nodejs/azure/elastigroup.ts#L484">property <b>minSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>minSize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -600,20 +515,23 @@ The maximum number of instances the group should have at any time.
 The minimum number of instances the group should have at any time.
 
 <h4 class="pdoc-member-header" id="ElastigroupArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/azure/elastigroup.ts#L549">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/8b0777509728d621477d945466a125853cc401d5/sdk/nodejs/azure/elastigroup.ts#L488">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-The name of the managed identity.
+The dimension name.
 
 <h4 class="pdoc-member-header" id="ElastigroupArgs-network">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/azure/elastigroup.ts#L550">property <b>network</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/8b0777509728d621477d945466a125853cc401d5/sdk/nodejs/azure/elastigroup.ts#L492">property <b>network</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>network: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupNetwork'>ElastigroupNetwork</a>&gt;;</code></pre>
+
+Defines the Virtual Network and Subnet for your Elastigroup.
+
 <h4 class="pdoc-member-header" id="ElastigroupArgs-odSizes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/azure/elastigroup.ts#L554">property <b>odSizes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/8b0777509728d621477d945466a125853cc401d5/sdk/nodejs/azure/elastigroup.ts#L496">property <b>odSizes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>odSizes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -621,7 +539,7 @@ The name of the managed identity.
 Available On-Demand sizes
 
 <h4 class="pdoc-member-header" id="ElastigroupArgs-product">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/azure/elastigroup.ts#L558">property <b>product</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/8b0777509728d621477d945466a125853cc401d5/sdk/nodejs/azure/elastigroup.ts#L500">property <b>product</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>product: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -629,7 +547,7 @@ Available On-Demand sizes
 Operation system type. Valid values: `"Linux"`, `"Windows"`.
 
 <h4 class="pdoc-member-header" id="ElastigroupArgs-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/azure/elastigroup.ts#L562">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/8b0777509728d621477d945466a125853cc401d5/sdk/nodejs/azure/elastigroup.ts#L504">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -637,30 +555,33 @@ Operation system type. Valid values: `"Linux"`, `"Windows"`.
 The region your Azure group will be created in.
 
 <h4 class="pdoc-member-header" id="ElastigroupArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/azure/elastigroup.ts#L566">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/8b0777509728d621477d945466a125853cc401d5/sdk/nodejs/azure/elastigroup.ts#L508">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-The Resource Group that the user-assigned managed identity resides in.
+Vnet Resource Group Name.
 
 <h4 class="pdoc-member-header" id="ElastigroupArgs-scalingDownPolicies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/azure/elastigroup.ts#L567">property <b>scalingDownPolicies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/8b0777509728d621477d945466a125853cc401d5/sdk/nodejs/azure/elastigroup.ts#L509">property <b>scalingDownPolicies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scalingDownPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupScalingDownPolicy'>ElastigroupScalingDownPolicy</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupArgs-scalingUpPolicies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/azure/elastigroup.ts#L568">property <b>scalingUpPolicies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/8b0777509728d621477d945466a125853cc401d5/sdk/nodejs/azure/elastigroup.ts#L510">property <b>scalingUpPolicies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scalingUpPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupScalingUpPolicy'>ElastigroupScalingUpPolicy</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupArgs-scheduledTasks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/azure/elastigroup.ts#L569">property <b>scheduledTasks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/8b0777509728d621477d945466a125853cc401d5/sdk/nodejs/azure/elastigroup.ts#L514">property <b>scheduledTasks</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scheduledTasks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupScheduledTask'>ElastigroupScheduledTask</a>&gt;[]&gt;;</code></pre>
+
+Describes the configuration of one or more scheduled tasks.
+
 <h4 class="pdoc-member-header" id="ElastigroupArgs-shutdownScript">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/azure/elastigroup.ts#L573">property <b>shutdownScript</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/8b0777509728d621477d945466a125853cc401d5/sdk/nodejs/azure/elastigroup.ts#L518">property <b>shutdownScript</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>shutdownScript?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -668,7 +589,7 @@ The Resource Group that the user-assigned managed identity resides in.
 Shutdown script for the group. Value should be passed as a string encoded at Base64 only.
 
 <h4 class="pdoc-member-header" id="ElastigroupArgs-strategy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/azure/elastigroup.ts#L577">property <b>strategy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/8b0777509728d621477d945466a125853cc401d5/sdk/nodejs/azure/elastigroup.ts#L522">property <b>strategy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>strategy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupStrategy'>ElastigroupStrategy</a>&gt;;</code></pre>
@@ -676,12 +597,12 @@ Shutdown script for the group. Value should be passed as a string encoded at Bas
 Describes the deployment strategy.
 
 <h4 class="pdoc-member-header" id="ElastigroupArgs-updatePolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/azure/elastigroup.ts#L578">property <b>updatePolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/8b0777509728d621477d945466a125853cc401d5/sdk/nodejs/azure/elastigroup.ts#L523">property <b>updatePolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>updatePolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupUpdatePolicy'>ElastigroupUpdatePolicy</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupArgs-userData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/azure/elastigroup.ts#L582">property <b>userData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/8b0777509728d621477d945466a125853cc401d5/sdk/nodejs/azure/elastigroup.ts#L527">property <b>userData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userData?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -689,7 +610,7 @@ Describes the deployment strategy.
 Base64-encoded MIME user data to make available to the instances.
 
 <h3 class="pdoc-module-header" id="ElastigroupState" data-link-title="ElastigroupState">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/azure/elastigroup.ts#L454">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/8b0777509728d621477d945466a125853cc401d5/sdk/nodejs/azure/elastigroup.ts#L351">
         interface <strong>ElastigroupState</strong>
     </a>
 </h3>
@@ -699,12 +620,12 @@ Base64-encoded MIME user data to make available to the instances.
 Input properties used for looking up and filtering Elastigroup resources.
 
 <h4 class="pdoc-member-header" id="ElastigroupState-customData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/azure/elastigroup.ts#L455">property <b>customData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/8b0777509728d621477d945466a125853cc401d5/sdk/nodejs/azure/elastigroup.ts#L352">property <b>customData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>customData?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupState-desiredCapacity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/azure/elastigroup.ts#L459">property <b>desiredCapacity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/8b0777509728d621477d945466a125853cc401d5/sdk/nodejs/azure/elastigroup.ts#L356">property <b>desiredCapacity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>desiredCapacity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -712,37 +633,55 @@ Input properties used for looking up and filtering Elastigroup resources.
 The desired number of instances the group should have at any time.
 
 <h4 class="pdoc-member-header" id="ElastigroupState-healthCheck">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/azure/elastigroup.ts#L460">property <b>healthCheck</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/8b0777509728d621477d945466a125853cc401d5/sdk/nodejs/azure/elastigroup.ts#L360">property <b>healthCheck</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>healthCheck?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupHealthCheck'>ElastigroupHealthCheck</a>&gt;;</code></pre>
+
+Describes the health check configuration.
+
 <h4 class="pdoc-member-header" id="ElastigroupState-images">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/azure/elastigroup.ts#L461">property <b>images</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/8b0777509728d621477d945466a125853cc401d5/sdk/nodejs/azure/elastigroup.ts#L364">property <b>images</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>images?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupImage'>ElastigroupImage</a>&gt;[]&gt;;</code></pre>
+
+Image of a VM. An image is a template for creating new VMs. Choose from Azure image catalogue (marketplace) or use a custom image.
+
 <h4 class="pdoc-member-header" id="ElastigroupState-integrationKubernetes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/azure/elastigroup.ts#L462">property <b>integrationKubernetes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/8b0777509728d621477d945466a125853cc401d5/sdk/nodejs/azure/elastigroup.ts#L368">property <b>integrationKubernetes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>integrationKubernetes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupIntegrationKubernetes'>ElastigroupIntegrationKubernetes</a>&gt;;</code></pre>
+
+Describes the [Kubernetes](https://kubernetes.io/) integration.
+
 <h4 class="pdoc-member-header" id="ElastigroupState-integrationMultaiRuntime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/azure/elastigroup.ts#L463">property <b>integrationMultaiRuntime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/8b0777509728d621477d945466a125853cc401d5/sdk/nodejs/azure/elastigroup.ts#L372">property <b>integrationMultaiRuntime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>integrationMultaiRuntime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupIntegrationMultaiRuntime'>ElastigroupIntegrationMultaiRuntime</a>&gt;;</code></pre>
+
+Describes the [Multai Runtime](https://spotinst.com/) integration.
+
 <h4 class="pdoc-member-header" id="ElastigroupState-loadBalancers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/azure/elastigroup.ts#L464">property <b>loadBalancers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/8b0777509728d621477d945466a125853cc401d5/sdk/nodejs/azure/elastigroup.ts#L376">property <b>loadBalancers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loadBalancers?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupLoadBalancer'>ElastigroupLoadBalancer</a>&gt;[]&gt;;</code></pre>
+
+Describes a set of one or more classic load balancer target groups and/or Multai load balancer target sets.
+
 <h4 class="pdoc-member-header" id="ElastigroupState-login">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/azure/elastigroup.ts#L465">property <b>login</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/8b0777509728d621477d945466a125853cc401d5/sdk/nodejs/azure/elastigroup.ts#L380">property <b>login</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>login?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupLogin'>ElastigroupLogin</a>&gt;;</code></pre>
+
+Describes the login configuration.
+
 <h4 class="pdoc-member-header" id="ElastigroupState-lowPrioritySizes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/azure/elastigroup.ts#L469">property <b>lowPrioritySizes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/8b0777509728d621477d945466a125853cc401d5/sdk/nodejs/azure/elastigroup.ts#L384">property <b>lowPrioritySizes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>lowPrioritySizes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -750,12 +689,12 @@ The desired number of instances the group should have at any time.
 Available Low-Priority sizes.
 
 <h4 class="pdoc-member-header" id="ElastigroupState-managedServiceIdentities">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/azure/elastigroup.ts#L470">property <b>managedServiceIdentities</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/8b0777509728d621477d945466a125853cc401d5/sdk/nodejs/azure/elastigroup.ts#L385">property <b>managedServiceIdentities</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>managedServiceIdentities?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupManagedServiceIdentity'>ElastigroupManagedServiceIdentity</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupState-maxSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/azure/elastigroup.ts#L474">property <b>maxSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/8b0777509728d621477d945466a125853cc401d5/sdk/nodejs/azure/elastigroup.ts#L389">property <b>maxSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxSize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -763,7 +702,7 @@ Available Low-Priority sizes.
 The maximum number of instances the group should have at any time.
 
 <h4 class="pdoc-member-header" id="ElastigroupState-minSize">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/azure/elastigroup.ts#L478">property <b>minSize</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/8b0777509728d621477d945466a125853cc401d5/sdk/nodejs/azure/elastigroup.ts#L393">property <b>minSize</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>minSize?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -771,20 +710,23 @@ The maximum number of instances the group should have at any time.
 The minimum number of instances the group should have at any time.
 
 <h4 class="pdoc-member-header" id="ElastigroupState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/azure/elastigroup.ts#L482">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/8b0777509728d621477d945466a125853cc401d5/sdk/nodejs/azure/elastigroup.ts#L397">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-The name of the managed identity.
+The dimension name.
 
 <h4 class="pdoc-member-header" id="ElastigroupState-network">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/azure/elastigroup.ts#L483">property <b>network</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/8b0777509728d621477d945466a125853cc401d5/sdk/nodejs/azure/elastigroup.ts#L401">property <b>network</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>network?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupNetwork'>ElastigroupNetwork</a>&gt;;</code></pre>
+
+Defines the Virtual Network and Subnet for your Elastigroup.
+
 <h4 class="pdoc-member-header" id="ElastigroupState-odSizes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/azure/elastigroup.ts#L487">property <b>odSizes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/8b0777509728d621477d945466a125853cc401d5/sdk/nodejs/azure/elastigroup.ts#L405">property <b>odSizes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>odSizes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -792,7 +734,7 @@ The name of the managed identity.
 Available On-Demand sizes
 
 <h4 class="pdoc-member-header" id="ElastigroupState-product">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/azure/elastigroup.ts#L491">property <b>product</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/8b0777509728d621477d945466a125853cc401d5/sdk/nodejs/azure/elastigroup.ts#L409">property <b>product</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>product?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -800,7 +742,7 @@ Available On-Demand sizes
 Operation system type. Valid values: `"Linux"`, `"Windows"`.
 
 <h4 class="pdoc-member-header" id="ElastigroupState-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/azure/elastigroup.ts#L495">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/8b0777509728d621477d945466a125853cc401d5/sdk/nodejs/azure/elastigroup.ts#L413">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -808,30 +750,33 @@ Operation system type. Valid values: `"Linux"`, `"Windows"`.
 The region your Azure group will be created in.
 
 <h4 class="pdoc-member-header" id="ElastigroupState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/azure/elastigroup.ts#L499">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/8b0777509728d621477d945466a125853cc401d5/sdk/nodejs/azure/elastigroup.ts#L417">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
-The Resource Group that the user-assigned managed identity resides in.
+Vnet Resource Group Name.
 
 <h4 class="pdoc-member-header" id="ElastigroupState-scalingDownPolicies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/azure/elastigroup.ts#L500">property <b>scalingDownPolicies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/8b0777509728d621477d945466a125853cc401d5/sdk/nodejs/azure/elastigroup.ts#L418">property <b>scalingDownPolicies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scalingDownPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupScalingDownPolicy'>ElastigroupScalingDownPolicy</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupState-scalingUpPolicies">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/azure/elastigroup.ts#L501">property <b>scalingUpPolicies</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/8b0777509728d621477d945466a125853cc401d5/sdk/nodejs/azure/elastigroup.ts#L419">property <b>scalingUpPolicies</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scalingUpPolicies?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupScalingUpPolicy'>ElastigroupScalingUpPolicy</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupState-scheduledTasks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/azure/elastigroup.ts#L502">property <b>scheduledTasks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/8b0777509728d621477d945466a125853cc401d5/sdk/nodejs/azure/elastigroup.ts#L423">property <b>scheduledTasks</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>scheduledTasks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupScheduledTask'>ElastigroupScheduledTask</a>&gt;[]&gt;;</code></pre>
+
+Describes the configuration of one or more scheduled tasks.
+
 <h4 class="pdoc-member-header" id="ElastigroupState-shutdownScript">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/azure/elastigroup.ts#L506">property <b>shutdownScript</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/8b0777509728d621477d945466a125853cc401d5/sdk/nodejs/azure/elastigroup.ts#L427">property <b>shutdownScript</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>shutdownScript?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -839,7 +784,7 @@ The Resource Group that the user-assigned managed identity resides in.
 Shutdown script for the group. Value should be passed as a string encoded at Base64 only.
 
 <h4 class="pdoc-member-header" id="ElastigroupState-strategy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/azure/elastigroup.ts#L510">property <b>strategy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/8b0777509728d621477d945466a125853cc401d5/sdk/nodejs/azure/elastigroup.ts#L431">property <b>strategy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>strategy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupStrategy'>ElastigroupStrategy</a>&gt;;</code></pre>
@@ -847,12 +792,12 @@ Shutdown script for the group. Value should be passed as a string encoded at Bas
 Describes the deployment strategy.
 
 <h4 class="pdoc-member-header" id="ElastigroupState-updatePolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/azure/elastigroup.ts#L511">property <b>updatePolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/8b0777509728d621477d945466a125853cc401d5/sdk/nodejs/azure/elastigroup.ts#L432">property <b>updatePolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>updatePolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/spotinst/types/input/#ElastigroupUpdatePolicy'>ElastigroupUpdatePolicy</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ElastigroupState-userData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/azure/elastigroup.ts#L515">property <b>userData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-spotinst/blob/8b0777509728d621477d945466a125853cc401d5/sdk/nodejs/azure/elastigroup.ts#L436">property <b>userData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userData?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

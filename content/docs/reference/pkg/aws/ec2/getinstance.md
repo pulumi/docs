@@ -2284,6 +2284,16 @@ is only available if you've enabled DNS hostnames for your VPC.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the Instance.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
         <span id="throughput_csharp">
 <a href="#throughput_csharp" style="color: inherit; text-decoration: inherit;">Throughput</a>
 </span>
@@ -2385,6 +2395,16 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The ID of the snapshot.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the Instance.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -2492,6 +2512,16 @@ is only available if you've enabled DNS hostnames for your VPC.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the Instance.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
         <span id="throughput_nodejs">
 <a href="#throughput_nodejs" style="color: inherit; text-decoration: inherit;">throughput</a>
 </span>
@@ -2593,6 +2623,16 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The ID of the snapshot.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the Instance.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -3208,6 +3248,16 @@ is only available if you've enabled DNS hostnames for your VPC.
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the Instance.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
         <span id="throughput_csharp">
 <a href="#throughput_csharp" style="color: inherit; text-decoration: inherit;">Throughput</a>
 </span>
@@ -3300,6 +3350,16 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the Instance.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="throughput_go">
@@ -3396,6 +3456,16 @@ is only available if you've enabled DNS hostnames for your VPC.
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the Instance.
+{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
         <span id="throughput_nodejs">
 <a href="#throughput_nodejs" style="color: inherit; text-decoration: inherit;">throughput</a>
 </span>
@@ -3488,6 +3558,16 @@ is only available if you've enabled DNS hostnames for your VPC.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}A map of tags assigned to the Instance.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="throughput_python">

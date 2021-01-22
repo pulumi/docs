@@ -3,7 +3,7 @@ title: "Module ga"
 title_tag: "Module ga | Package @pulumi/alicloud | Node.js SDK"
 linktitle: "ga"
 meta_desc: "Explore members of the ga module in the @pulumi/alicloud package."
-git_sha: "0f615eee1524d45af80e9cf9d0a968ae1d1b58ae"
+git_sha: "84d761bea49f23fb37c890ced8154c67c2c45089"
 block_external_search_index: true
 ---
 
@@ -19,7 +19,9 @@ block_external_search_index: true
 <ul class="api">
     <li><a href="#Accelerator"><span class="symbol resource"></span>Accelerator</a></li>
     <li><a href="#BandwidthPackage"><span class="symbol resource"></span>BandwidthPackage</a></li>
+    <li><a href="#BandwidthPackageAttachment"><span class="symbol resource"></span>BandwidthPackageAttachment</a></li>
     <li><a href="#EndpointGroup"><span class="symbol resource"></span>EndpointGroup</a></li>
+    <li><a href="#IpSet"><span class="symbol resource"></span>IpSet</a></li>
     <li><a href="#Listener"><span class="symbol resource"></span>Listener</a></li>
 </ul>
 
@@ -28,6 +30,7 @@ block_external_search_index: true
     <li><a href="#getAccelerators"><span class="symbol function"></span>getAccelerators</a></li>
     <li><a href="#getBandwidthPackages"><span class="symbol function"></span>getBandwidthPackages</a></li>
     <li><a href="#getEndpointGroups"><span class="symbol function"></span>getEndpointGroups</a></li>
+    <li><a href="#getIpSets"><span class="symbol function"></span>getIpSets</a></li>
     <li><a href="#getListeners"><span class="symbol function"></span>getListeners</a></li>
 </ul>
 
@@ -36,6 +39,8 @@ block_external_search_index: true
     <li><a href="#AcceleratorArgs"><span class="symbol api"></span>AcceleratorArgs</a></li>
     <li><a href="#AcceleratorState"><span class="symbol api"></span>AcceleratorState</a></li>
     <li><a href="#BandwidthPackageArgs"><span class="symbol api"></span>BandwidthPackageArgs</a></li>
+    <li><a href="#BandwidthPackageAttachmentArgs"><span class="symbol api"></span>BandwidthPackageAttachmentArgs</a></li>
+    <li><a href="#BandwidthPackageAttachmentState"><span class="symbol api"></span>BandwidthPackageAttachmentState</a></li>
     <li><a href="#BandwidthPackageState"><span class="symbol api"></span>BandwidthPackageState</a></li>
     <li><a href="#EndpointGroupArgs"><span class="symbol api"></span>EndpointGroupArgs</a></li>
     <li><a href="#EndpointGroupState"><span class="symbol api"></span>EndpointGroupState</a></li>
@@ -45,8 +50,12 @@ block_external_search_index: true
     <li><a href="#GetBandwidthPackagesResult"><span class="symbol api"></span>GetBandwidthPackagesResult</a></li>
     <li><a href="#GetEndpointGroupsArgs"><span class="symbol api"></span>GetEndpointGroupsArgs</a></li>
     <li><a href="#GetEndpointGroupsResult"><span class="symbol api"></span>GetEndpointGroupsResult</a></li>
+    <li><a href="#GetIpSetsArgs"><span class="symbol api"></span>GetIpSetsArgs</a></li>
+    <li><a href="#GetIpSetsResult"><span class="symbol api"></span>GetIpSetsResult</a></li>
     <li><a href="#GetListenersArgs"><span class="symbol api"></span>GetListenersArgs</a></li>
     <li><a href="#GetListenersResult"><span class="symbol api"></span>GetListenersResult</a></li>
+    <li><a href="#IpSetArgs"><span class="symbol api"></span>IpSetArgs</a></li>
+    <li><a href="#IpSetState"><span class="symbol api"></span>IpSetState</a></li>
     <li><a href="#ListenerArgs"><span class="symbol api"></span>ListenerArgs</a></li>
     <li><a href="#ListenerState"><span class="symbol api"></span>ListenerState</a></li>
 </ul>
@@ -54,7 +63,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Accelerator" data-link-title="Accelerator">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/accelerator.ts#L37">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/accelerator.ts#L37">
         Resource <strong>Accelerator</strong>
     </a>
 </h3>
@@ -91,7 +100,7 @@ Ga Accelerator can be imported using the id, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="Accelerator-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/accelerator.ts#L94"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/accelerator.ts#L94"> <b>constructor</b></a>
 </h4>
 
 
@@ -105,7 +114,7 @@ Create a Accelerator resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Accelerator-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/accelerator.ts#L47">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/accelerator.ts#L47">method <b>get</b></a>
 </h4>
 
 
@@ -116,14 +125,14 @@ Get an existing Accelerator resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Accelerator-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/accelerator.ts#L37">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/accelerator.ts#L37">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Accelerator-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/accelerator.ts#L58">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/accelerator.ts#L58">method <b>isInstance</b></a>
 </h4>
 
 
@@ -134,7 +143,7 @@ Returns true if the given object is an instance of Accelerator.  This is designe
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Accelerator-acceleratorName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/accelerator.ts#L68">property <b>acceleratorName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/accelerator.ts#L68">property <b>acceleratorName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>acceleratorName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -142,7 +151,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The Name of the GA instance.
 
 <h4 class="pdoc-member-header" id="Accelerator-autoUseCoupon">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/accelerator.ts#L72">property <b>autoUseCoupon</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/accelerator.ts#L72">property <b>autoUseCoupon</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>autoUseCoupon: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -150,7 +159,7 @@ The Name of the GA instance.
 The auto use coupon.
 
 <h4 class="pdoc-member-header" id="Accelerator-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/accelerator.ts#L76">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/accelerator.ts#L76">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -158,7 +167,7 @@ The auto use coupon.
 Descriptive information of the global acceleration instance.
 
 <h4 class="pdoc-member-header" id="Accelerator-duration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/accelerator.ts#L80">property <b>duration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/accelerator.ts#L80">property <b>duration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>duration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -166,7 +175,7 @@ Descriptive information of the global acceleration instance.
 The duration. The value range is 1-9.
 
 <h4 class="pdoc-member-header" id="Accelerator-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/accelerator.ts#L37">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/accelerator.ts#L37">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -175,7 +184,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Accelerator-spec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/accelerator.ts#L90">property <b>spec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/accelerator.ts#L90">property <b>spec</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -189,7 +198,7 @@ The instance type of the GA instance. Specification of global acceleration insta
 `10`: Medium 3.
 
 <h4 class="pdoc-member-header" id="Accelerator-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/accelerator.ts#L94">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/accelerator.ts#L94">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -197,7 +206,7 @@ The instance type of the GA instance. Specification of global acceleration insta
 The status of the GA instance.
 
 <h4 class="pdoc-member-header" id="Accelerator-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/accelerator.ts#L37">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/accelerator.ts#L37">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -206,7 +215,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="BandwidthPackage" data-link-title="BandwidthPackage">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/bandwidthPackage.ts#L40">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/bandwidthPackage.ts#L40">
         Resource <strong>BandwidthPackage</strong>
     </a>
 </h3>
@@ -246,7 +255,7 @@ Ga Bandwidth Package can be imported using the id, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="BandwidthPackage-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/bandwidthPackage.ts#L123"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/bandwidthPackage.ts#L123"> <b>constructor</b></a>
 </h4>
 
 
@@ -260,7 +269,7 @@ Create a BandwidthPackage resource with the given unique name, arguments, and op
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="BandwidthPackage-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/bandwidthPackage.ts#L50">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/bandwidthPackage.ts#L50">method <b>get</b></a>
 </h4>
 
 
@@ -271,14 +280,14 @@ Get an existing BandwidthPackage resource's state with the given name, ID, and o
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="BandwidthPackage-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/bandwidthPackage.ts#L40">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/bandwidthPackage.ts#L40">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="BandwidthPackage-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/bandwidthPackage.ts#L61">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/bandwidthPackage.ts#L61">method <b>isInstance</b></a>
 </h4>
 
 
@@ -289,7 +298,7 @@ Returns true if the given object is an instance of BandwidthPackage.  This is de
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="BandwidthPackage-autoPay">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/bandwidthPackage.ts#L71">property <b>autoPay</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/bandwidthPackage.ts#L71">property <b>autoPay</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>autoPay: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -297,7 +306,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The auto pay. Valid values: `false`, `true`.
 
 <h4 class="pdoc-member-header" id="BandwidthPackage-autoUseCoupon">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/bandwidthPackage.ts#L75">property <b>autoUseCoupon</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/bandwidthPackage.ts#L75">property <b>autoUseCoupon</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>autoUseCoupon: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -305,7 +314,7 @@ The auto pay. Valid values: `false`, `true`.
 The auto use coupon. Valid values: `false`, `true`.
 
 <h4 class="pdoc-member-header" id="BandwidthPackage-bandwidth">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/bandwidthPackage.ts#L79">property <b>bandwidth</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/bandwidthPackage.ts#L79">property <b>bandwidth</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>bandwidth: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -313,7 +322,7 @@ The auto use coupon. Valid values: `false`, `true`.
 The bandwidth value of bandwidth packet.
 
 <h4 class="pdoc-member-header" id="BandwidthPackage-bandwidthPackageName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/bandwidthPackage.ts#L83">property <b>bandwidthPackageName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/bandwidthPackage.ts#L83">property <b>bandwidthPackageName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>bandwidthPackageName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -321,7 +330,7 @@ The bandwidth value of bandwidth packet.
 The name of the bandwidth packet.
 
 <h4 class="pdoc-member-header" id="BandwidthPackage-bandwidthType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/bandwidthPackage.ts#L87">property <b>bandwidthType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/bandwidthPackage.ts#L87">property <b>bandwidthType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>bandwidthType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -329,7 +338,7 @@ The name of the bandwidth packet.
 The bandwidth type of the bandwidth. Valid values: `Advanced`, `Basic`, `Enhanced`.
 
 <h4 class="pdoc-member-header" id="BandwidthPackage-billingType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/bandwidthPackage.ts#L91">property <b>billingType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/bandwidthPackage.ts#L91">property <b>billingType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>billingType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -337,7 +346,7 @@ The bandwidth type of the bandwidth. Valid values: `Advanced`, `Basic`, `Enhance
 The billing type. Valid values: `PayBy95`, `PayByTraffic`.
 
 <h4 class="pdoc-member-header" id="BandwidthPackage-cbnGeographicRegionIda">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/bandwidthPackage.ts#L95">property <b>cbnGeographicRegionIda</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/bandwidthPackage.ts#L95">property <b>cbnGeographicRegionIda</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>cbnGeographicRegionIda: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -345,7 +354,7 @@ The billing type. Valid values: `PayBy95`, `PayByTraffic`.
 Interworking area A of cross domain acceleration package. Only international stations support returning this parameter. Default value is `China-mainland`.
 
 <h4 class="pdoc-member-header" id="BandwidthPackage-cbnGeographicRegionIdb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/bandwidthPackage.ts#L99">property <b>cbnGeographicRegionIdb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/bandwidthPackage.ts#L99">property <b>cbnGeographicRegionIdb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>cbnGeographicRegionIdb: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -353,7 +362,7 @@ Interworking area A of cross domain acceleration package. Only international sta
 Interworking area B of cross domain acceleration package. Only international stations support returning this parameter. Default value is `Global`.
 
 <h4 class="pdoc-member-header" id="BandwidthPackage-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/bandwidthPackage.ts#L103">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/bandwidthPackage.ts#L103">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -361,7 +370,7 @@ Interworking area B of cross domain acceleration package. Only international sta
 The description of bandwidth package.
 
 <h4 class="pdoc-member-header" id="BandwidthPackage-duration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/bandwidthPackage.ts#L107">property <b>duration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/bandwidthPackage.ts#L107">property <b>duration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>duration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -369,7 +378,7 @@ The description of bandwidth package.
 The duration.
 
 <h4 class="pdoc-member-header" id="BandwidthPackage-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/bandwidthPackage.ts#L40">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/bandwidthPackage.ts#L40">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -378,7 +387,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="BandwidthPackage-paymentType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/bandwidthPackage.ts#L111">property <b>paymentType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/bandwidthPackage.ts#L111">property <b>paymentType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>paymentType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -386,7 +395,7 @@ deployments and may be missing (undefined) during planning phases.
 The payment type of the bandwidth. Valid values: `PayAsYouGo`, `Subscription`. Default value is `Subscription`.
 
 <h4 class="pdoc-member-header" id="BandwidthPackage-ratio">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/bandwidthPackage.ts#L115">property <b>ratio</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/bandwidthPackage.ts#L115">property <b>ratio</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ratio: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -394,7 +403,7 @@ The payment type of the bandwidth. Valid values: `PayAsYouGo`, `Subscription`. D
 The ratio.
 
 <h4 class="pdoc-member-header" id="BandwidthPackage-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/bandwidthPackage.ts#L119">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/bandwidthPackage.ts#L119">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -402,7 +411,7 @@ The ratio.
 The status of the bandwidth plan.
 
 <h4 class="pdoc-member-header" id="BandwidthPackage-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/bandwidthPackage.ts#L123">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/bandwidthPackage.ts#L123">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -410,7 +419,149 @@ The status of the bandwidth plan.
 The type of the bandwidth packet. China station only supports return to basic. Valid values: `Basic`, `CrossDomain`.
 
 <h4 class="pdoc-member-header" id="BandwidthPackage-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/bandwidthPackage.ts#L40">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/bandwidthPackage.ts#L40">property <b>urn</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
+
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
+
+<h3 class="pdoc-module-header" id="BandwidthPackageAttachment" data-link-title="BandwidthPackageAttachment">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/bandwidthPackageAttachment.ts#L49">
+        Resource <strong>BandwidthPackageAttachment</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>BandwidthPackageAttachment</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
+
+Provides a Global Accelerator (GA) Bandwidth Package Attachment resource.
+
+For information about Global Accelerator (GA) Bandwidth Package Attachment and how to use it, see [What is Bandwidth Package Attachment](https://www.alibabacloud.com/help/en/doc-detail/153241.htm).
+
+> **NOTE:** Available in v1.113.0+.
+
+#### Example Usage
+
+Basic Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const exampleAccelerator = new alicloud.ga.Accelerator("example", {
+    autoUseCoupon: true,
+    duration: 1,
+    spec: "1",
+});
+const exampleBandwidthPackage = new alicloud.ga.BandwidthPackage("example", {
+    autoPay: true,
+    bandwidth: 20,
+    bandwidthType: "Basic",
+    duration: "1",
+    ratio: 30,
+    type: "Basic",
+});
+const exampleBandwidthPackageAttachment = new alicloud.ga.BandwidthPackageAttachment("example", {
+    acceleratorId: "alicloud_ga_accelerator.example.id",
+    bandwidthPackageId: "alicloud_ga_bandwidth_package.example.id",
+});
+```
+
+#### Import
+
+Ga Bandwidth Package Attachment can be imported using the id, e.g.
+
+```sh
+ $ pulumi import alicloud:ga/bandwidthPackageAttachment:BandwidthPackageAttachment example <bandwidth_package_id>
+```
+
+<h4 class="pdoc-member-header" id="BandwidthPackageAttachment-constructor">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/bandwidthPackageAttachment.ts#L92"> <b>constructor</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> BandwidthPackageAttachment(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#BandwidthPackageAttachmentArgs'>BandwidthPackageAttachmentArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</code></pre>
+
+
+Create a BandwidthPackageAttachment resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+<h4 class="pdoc-member-header" id="BandwidthPackageAttachment-get">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/bandwidthPackageAttachment.ts#L59">method <b>get</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#BandwidthPackageAttachmentState'>BandwidthPackageAttachmentState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#BandwidthPackageAttachment'>BandwidthPackageAttachment</a></code></pre>
+
+
+Get an existing BandwidthPackageAttachment resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.
+
+<h4 class="pdoc-member-header" id="BandwidthPackageAttachment-getProvider">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/bandwidthPackageAttachment.ts#L49">method <b>getProvider</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
+
+<h4 class="pdoc-member-header" id="BandwidthPackageAttachment-isInstance">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/bandwidthPackageAttachment.ts#L70">method <b>isInstance</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is BandwidthPackageAttachment</code></pre>
+
+
+Returns true if the given object is an instance of BandwidthPackageAttachment.  This is designed to work even
+when multiple copies of the Pulumi SDK have been loaded into the same process.
+
+<h4 class="pdoc-member-header" id="BandwidthPackageAttachment-acceleratorId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/bandwidthPackageAttachment.ts#L80">property <b>acceleratorId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>acceleratorId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The ID of the Global Accelerator instance from which you want to disassociate the bandwidth plan.
+
+<h4 class="pdoc-member-header" id="BandwidthPackageAttachment-accelerators">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/bandwidthPackageAttachment.ts#L84">property <b>accelerators</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>accelerators: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
+
+Accelerators bound with current Bandwidth Package.
+
+<h4 class="pdoc-member-header" id="BandwidthPackageAttachment-bandwidthPackageId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/bandwidthPackageAttachment.ts#L88">property <b>bandwidthPackageId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>bandwidthPackageId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The ID of the bandwidth plan to disassociate.
+
+<h4 class="pdoc-member-header" id="BandwidthPackageAttachment-id">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/bandwidthPackageAttachment.ts#L49">property <b>id</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+<h4 class="pdoc-member-header" id="BandwidthPackageAttachment-status">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/bandwidthPackageAttachment.ts#L92">property <b>status</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+State of Bandwidth Package.
+
+<h4 class="pdoc-member-header" id="BandwidthPackageAttachment-urn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/bandwidthPackageAttachment.ts#L49">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -419,7 +570,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="EndpointGroup" data-link-title="EndpointGroup">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/endpointGroup.ts#L59">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/endpointGroup.ts#L59">
         Resource <strong>EndpointGroup</strong>
     </a>
 </h3>
@@ -477,7 +628,7 @@ Ga Endpoint Group can be imported using the id, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="EndpointGroup-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/endpointGroup.ts#L150"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/endpointGroup.ts#L150"> <b>constructor</b></a>
 </h4>
 
 
@@ -491,7 +642,7 @@ Create a EndpointGroup resource with the given unique name, arguments, and optio
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="EndpointGroup-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/endpointGroup.ts#L69">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/endpointGroup.ts#L69">method <b>get</b></a>
 </h4>
 
 
@@ -502,14 +653,14 @@ Get an existing EndpointGroup resource's state with the given name, ID, and opti
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="EndpointGroup-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/endpointGroup.ts#L59">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/endpointGroup.ts#L59">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="EndpointGroup-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/endpointGroup.ts#L80">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/endpointGroup.ts#L80">method <b>isInstance</b></a>
 </h4>
 
 
@@ -520,7 +671,7 @@ Returns true if the given object is an instance of EndpointGroup.  This is desig
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="EndpointGroup-acceleratorId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/endpointGroup.ts#L90">property <b>acceleratorId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/endpointGroup.ts#L90">property <b>acceleratorId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>acceleratorId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -528,7 +679,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The ID of the Global Accelerator instance to which the endpoint group will be added.
 
 <h4 class="pdoc-member-header" id="EndpointGroup-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/endpointGroup.ts#L94">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/endpointGroup.ts#L94">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -536,7 +687,7 @@ The ID of the Global Accelerator instance to which the endpoint group will be ad
 The description of the endpoint group.
 
 <h4 class="pdoc-member-header" id="EndpointGroup-endpointConfigurations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/endpointGroup.ts#L98">property <b>endpointConfigurations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/endpointGroup.ts#L98">property <b>endpointConfigurations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>endpointConfigurations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#EndpointGroupEndpointConfiguration'>EndpointGroupEndpointConfiguration</a>[]&gt;;</code></pre>
@@ -544,7 +695,7 @@ The description of the endpoint group.
 The endpointConfigurations of the endpoint group.
 
 <h4 class="pdoc-member-header" id="EndpointGroup-endpointGroupRegion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/endpointGroup.ts#L102">property <b>endpointGroupRegion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/endpointGroup.ts#L102">property <b>endpointGroupRegion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>endpointGroupRegion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -552,7 +703,7 @@ The endpointConfigurations of the endpoint group.
 The ID of the region where the endpoint group is deployed.
 
 <h4 class="pdoc-member-header" id="EndpointGroup-endpointGroupType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/endpointGroup.ts#L106">property <b>endpointGroupType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/endpointGroup.ts#L106">property <b>endpointGroupType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>endpointGroupType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -560,7 +711,7 @@ The ID of the region where the endpoint group is deployed.
 The endpoint group type. Valid values: `default`, `virtual`. Default value is `default`.
 
 <h4 class="pdoc-member-header" id="EndpointGroup-endpointRequestProtocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/endpointGroup.ts#L110">property <b>endpointRequestProtocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/endpointGroup.ts#L110">property <b>endpointRequestProtocol</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>endpointRequestProtocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -568,7 +719,7 @@ The endpoint group type. Valid values: `default`, `virtual`. Default value is `d
 The endpoint request protocol.
 
 <h4 class="pdoc-member-header" id="EndpointGroup-healthCheckIntervalSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/endpointGroup.ts#L114">property <b>healthCheckIntervalSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/endpointGroup.ts#L114">property <b>healthCheckIntervalSeconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>healthCheckIntervalSeconds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -576,7 +727,7 @@ The endpoint request protocol.
 The interval between two consecutive health checks. Unit: seconds.
 
 <h4 class="pdoc-member-header" id="EndpointGroup-healthCheckPath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/endpointGroup.ts#L118">property <b>healthCheckPath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/endpointGroup.ts#L118">property <b>healthCheckPath</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>healthCheckPath: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -584,7 +735,7 @@ The interval between two consecutive health checks. Unit: seconds.
 The path specified as the destination of the targets for health checks.
 
 <h4 class="pdoc-member-header" id="EndpointGroup-healthCheckPort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/endpointGroup.ts#L122">property <b>healthCheckPort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/endpointGroup.ts#L122">property <b>healthCheckPort</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>healthCheckPort: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -592,7 +743,7 @@ The path specified as the destination of the targets for health checks.
 The port that is used for health checks.
 
 <h4 class="pdoc-member-header" id="EndpointGroup-healthCheckProtocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/endpointGroup.ts#L126">property <b>healthCheckProtocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/endpointGroup.ts#L126">property <b>healthCheckProtocol</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>healthCheckProtocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -600,7 +751,7 @@ The port that is used for health checks.
 The protocol that is used to connect to the targets for health checks. Valid values: `http`, `https`, `tcp`.
 
 <h4 class="pdoc-member-header" id="EndpointGroup-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/endpointGroup.ts#L59">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/endpointGroup.ts#L59">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -609,7 +760,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="EndpointGroup-listenerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/endpointGroup.ts#L130">property <b>listenerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/endpointGroup.ts#L130">property <b>listenerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>listenerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -617,7 +768,7 @@ deployments and may be missing (undefined) during planning phases.
 The ID of the listener that is associated with the endpoint group.
 
 <h4 class="pdoc-member-header" id="EndpointGroup-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/endpointGroup.ts#L134">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/endpointGroup.ts#L134">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -625,7 +776,7 @@ The ID of the listener that is associated with the endpoint group.
 The name of the endpoint group.
 
 <h4 class="pdoc-member-header" id="EndpointGroup-portOverrides">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/endpointGroup.ts#L138">property <b>portOverrides</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/endpointGroup.ts#L138">property <b>portOverrides</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>portOverrides: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#EndpointGroupPortOverrides'>EndpointGroupPortOverrides</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -633,7 +784,7 @@ The name of the endpoint group.
 Mapping between listening port and forwarding port of boarding point.
 
 <h4 class="pdoc-member-header" id="EndpointGroup-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/endpointGroup.ts#L142">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/endpointGroup.ts#L142">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -641,7 +792,7 @@ Mapping between listening port and forwarding port of boarding point.
 The status of the endpoint group.
 
 <h4 class="pdoc-member-header" id="EndpointGroup-thresholdCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/endpointGroup.ts#L146">property <b>thresholdCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/endpointGroup.ts#L146">property <b>thresholdCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>thresholdCount: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -649,7 +800,7 @@ The status of the endpoint group.
 The number of consecutive failed heath checks that must occur before the endpoint is deemed unhealthy. Default value is `3`.
 
 <h4 class="pdoc-member-header" id="EndpointGroup-trafficPercentage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/endpointGroup.ts#L150">property <b>trafficPercentage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/endpointGroup.ts#L150">property <b>trafficPercentage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>trafficPercentage: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -657,7 +808,172 @@ The number of consecutive failed heath checks that must occur before the endpoin
 The weight of the endpoint group when the corresponding listener is associated with multiple endpoint groups.
 
 <h4 class="pdoc-member-header" id="EndpointGroup-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/endpointGroup.ts#L59">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/endpointGroup.ts#L59">property <b>urn</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
+
+urn is the stable logical URN used to distinctly address a resource, both before and after
+deployments.
+
+<h3 class="pdoc-module-header" id="IpSet" data-link-title="IpSet">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/ipSet.ts#L56">
+        Resource <strong>IpSet</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>IpSet</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
+
+Provides a Global Accelerator (GA) Ip Set resource.
+
+For information about Global Accelerator (GA) Ip Set and how to use it, see [What is Ip Set](https://www.alibabacloud.com/help/en/doc-detail/153246.htm).
+
+> **NOTE:** Available in v1.113.0+.
+
+#### Example Usage
+
+Basic Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const exampleAccelerator = new alicloud.ga.Accelerator("exampleAccelerator", {
+    duration: 1,
+    autoUseCoupon: true,
+    spec: "1",
+});
+const exampleBandwidthPackage = new alicloud.ga.BandwidthPackage("exampleBandwidthPackage", {
+    bandwidth: 20,
+    type: "Basic",
+    bandwidthType: "Basic",
+    duration: 1,
+    autoPay: true,
+    ratio: 30,
+});
+const exampleBandwidthPackageAttachment = new alicloud.ga.BandwidthPackageAttachment("exampleBandwidthPackageAttachment", {
+    acceleratorId: "alicloud_ga_accelerator.example.id",
+    bandwidthPackageId: "alicloud_ga_bandwidth_package.example.id",
+});
+const exampleIpSet = new alicloud.ga.IpSet("exampleIpSet", {
+    accelerateRegionId: "cn-hangzhou",
+    bandwidth: "5",
+    acceleratorId: "alicloud_ga_accelerator.example.id",
+}, {
+    dependsOn: [exampleBandwidthPackageAttachment],
+});
+```
+
+#### Import
+
+Ga Ip Set can be imported using the id, e.g.
+
+```sh
+ $ pulumi import alicloud:ga/ipSet:IpSet example <id>
+```
+
+<h4 class="pdoc-member-header" id="IpSet-constructor">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/ipSet.ts#L107"> <b>constructor</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> IpSet(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#IpSetArgs'>IpSetArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</code></pre>
+
+
+Create a IpSet resource with the given unique name, arguments, and options.
+
+* `name` The _unique_ name of the resource.
+* `args` The arguments to use to populate this resource&#39;s properties.
+* `opts` A bag of options that control this resource&#39;s behavior.
+
+<h4 class="pdoc-member-header" id="IpSet-get">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/ipSet.ts#L66">method <b>get</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'>public static </span>get(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>pulumi.ID</a>&gt;, state?: <a href='#IpSetState'>IpSetState</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>): <a href='#IpSet'>IpSet</a></code></pre>
+
+
+Get an existing IpSet resource's state with the given name, ID, and optional extra
+properties used to qualify the lookup.
+
+<h4 class="pdoc-member-header" id="IpSet-getProvider">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/ipSet.ts#L56">method <b>getProvider</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
+
+<h4 class="pdoc-member-header" id="IpSet-isInstance">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/ipSet.ts#L77">method <b>isInstance</b></a>
+</h4>
+
+
+<pre class="highlight"><code><span class='kd'>public static </span>isInstance(obj: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>): obj is IpSet</code></pre>
+
+
+Returns true if the given object is an instance of IpSet.  This is designed to work even
+when multiple copies of the Pulumi SDK have been loaded into the same process.
+
+<h4 class="pdoc-member-header" id="IpSet-accelerateRegionId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/ipSet.ts#L87">property <b>accelerateRegionId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>accelerateRegionId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The ID of an acceleration region.
+
+<h4 class="pdoc-member-header" id="IpSet-acceleratorId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/ipSet.ts#L91">property <b>acceleratorId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>acceleratorId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The ID of the Global Accelerator (GA) instance.
+
+<h4 class="pdoc-member-header" id="IpSet-bandwidth">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/ipSet.ts#L95">property <b>bandwidth</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>bandwidth: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+The bandwidth allocated to the acceleration region.
+
+<h4 class="pdoc-member-header" id="IpSet-id">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/ipSet.ts#L56">property <b>id</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
+
+id is the provider-assigned unique ID for this managed resource.  It is set during
+deployments and may be missing (undefined) during planning phases.
+
+<h4 class="pdoc-member-header" id="IpSet-ipAddressLists">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/ipSet.ts#L99">property <b>ipAddressLists</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>ipAddressLists: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
+
+The list of accelerated IP addresses in the acceleration region.
+
+<h4 class="pdoc-member-header" id="IpSet-ipVersion">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/ipSet.ts#L103">property <b>ipVersion</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>ipVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
+
+The IP protocol used by the GA instance. Valid values: `IPv4`, `IPv6`. Default value is `IPv4`.
+
+<h4 class="pdoc-member-header" id="IpSet-status">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/ipSet.ts#L107">property <b>status</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The status of the acceleration region.
+
+<h4 class="pdoc-member-header" id="IpSet-urn">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/ipSet.ts#L56">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -666,7 +982,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Listener" data-link-title="Listener">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/listener.ts#L45">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/listener.ts#L45">
         Resource <strong>Listener</strong>
     </a>
 </h3>
@@ -710,7 +1026,7 @@ Ga Listener can be imported using the id, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="Listener-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/listener.ts#L110"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/listener.ts#L110"> <b>constructor</b></a>
 </h4>
 
 
@@ -724,7 +1040,7 @@ Create a Listener resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Listener-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/listener.ts#L55">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/listener.ts#L55">method <b>get</b></a>
 </h4>
 
 
@@ -735,14 +1051,14 @@ Get an existing Listener resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Listener-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/listener.ts#L45">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/listener.ts#L45">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Listener-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/listener.ts#L66">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/listener.ts#L66">method <b>isInstance</b></a>
 </h4>
 
 
@@ -753,7 +1069,7 @@ Returns true if the given object is an instance of Listener.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Listener-acceleratorId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/listener.ts#L76">property <b>acceleratorId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/listener.ts#L76">property <b>acceleratorId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>acceleratorId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -761,7 +1077,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The accelerator id.
 
 <h4 class="pdoc-member-header" id="Listener-certificates">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/listener.ts#L80">property <b>certificates</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/listener.ts#L80">property <b>certificates</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>certificates: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#ListenerCertificate'>ListenerCertificate</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -769,7 +1085,7 @@ The accelerator id.
 The certificates of the listener.
 
 <h4 class="pdoc-member-header" id="Listener-clientAffinity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/listener.ts#L86">property <b>clientAffinity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/listener.ts#L86">property <b>clientAffinity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clientAffinity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -779,7 +1095,7 @@ The clientAffinity of the listener. Default value is `NONE`. Valid values:
 `SOURCE_IP`: maintain client affinity. When a client accesses a stateful application, all requests from the same client can be directed to the same terminal node, regardless of the source port and protocol.
 
 <h4 class="pdoc-member-header" id="Listener-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/listener.ts#L90">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/listener.ts#L90">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -787,7 +1103,7 @@ The clientAffinity of the listener. Default value is `NONE`. Valid values:
 The description of the listener.
 
 <h4 class="pdoc-member-header" id="Listener-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/listener.ts#L45">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/listener.ts#L45">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -796,7 +1112,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Listener-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/listener.ts#L94">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/listener.ts#L94">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -804,7 +1120,7 @@ deployments and may be missing (undefined) during planning phases.
 The name of the listener. The length of the name is 2-128 characters. It starts with uppercase and lowercase letters or Chinese characters. It can contain numbers and underscores and dashes.
 
 <h4 class="pdoc-member-header" id="Listener-portRanges">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/listener.ts#L98">property <b>portRanges</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/listener.ts#L98">property <b>portRanges</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>portRanges: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#ListenerPortRange'>ListenerPortRange</a>[]&gt;;</code></pre>
@@ -812,7 +1128,7 @@ The name of the listener. The length of the name is 2-128 characters. It starts 
 The portRanges of the listener.
 
 <h4 class="pdoc-member-header" id="Listener-protocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/listener.ts#L102">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/listener.ts#L102">property <b>protocol</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>protocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -820,7 +1136,7 @@ The portRanges of the listener.
 Type of network transport protocol monitored. Default value is `TCP`. Valid values: `TCP`, `UDP`.
 
 <h4 class="pdoc-member-header" id="Listener-proxyProtocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/listener.ts#L106">property <b>proxyProtocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/listener.ts#L106">property <b>proxyProtocol</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>proxyProtocol: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -828,7 +1144,7 @@ Type of network transport protocol monitored. Default value is `TCP`. Valid valu
 The proxy protocol of the listener.
 
 <h4 class="pdoc-member-header" id="Listener-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/listener.ts#L110">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/listener.ts#L110">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -836,7 +1152,7 @@ The proxy protocol of the listener.
 The status of the listener.
 
 <h4 class="pdoc-member-header" id="Listener-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/listener.ts#L45">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/listener.ts#L45">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -847,7 +1163,7 @@ deployments.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getAccelerators" data-link-title="getAccelerators">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/getAccelerators.ts#L28">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/getAccelerators.ts#L28">
         Function <strong>getAccelerators</strong>
     </a>
 </h3>
@@ -876,7 +1192,7 @@ export const firstGaAcceleratorId = example.then(example => example.accelerators
 ```
 
 <h3 class="pdoc-module-header" id="getBandwidthPackages" data-link-title="getBandwidthPackages">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/getBandwidthPackages.ts#L28">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/getBandwidthPackages.ts#L28">
         Function <strong>getBandwidthPackages</strong>
     </a>
 </h3>
@@ -905,7 +1221,7 @@ export const firstGaBandwidthPackageId = example.then(example => example.package
 ```
 
 <h3 class="pdoc-module-header" id="getEndpointGroups" data-link-title="getEndpointGroups">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/getEndpointGroups.ts#L29">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/getEndpointGroups.ts#L29">
         Function <strong>getEndpointGroups</strong>
     </a>
 </h3>
@@ -934,8 +1250,37 @@ const example = alicloud.ga.getEndpointGroups({
 export const firstGaEndpointGroupId = example.then(example => example.groups[0].id);
 ```
 
+<h3 class="pdoc-module-header" id="getIpSets" data-link-title="getIpSets">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/getIpSets.ts#L28">
+        Function <strong>getIpSets</strong>
+    </a>
+</h3>
+
+
+<pre class="highlight"><code><span class='kd'></span>getIpSets(args: <a href='#GetIpSetsArgs'>GetIpSetsArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#InvokeOptions'>pulumi.InvokeOptions</a>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<a href='#GetIpSetsResult'>GetIpSetsResult</a>&gt;</code></pre>
+
+
+This data source provides the Global Accelerator (GA) Ip Sets of the current Alibaba Cloud user.
+
+> **NOTE:** Available in v1.113.0+.
+
+#### Example Usage
+
+Basic Usage
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as alicloud from "@pulumi/alicloud";
+
+const example = alicloud.ga.getIpSets({
+    acceleratorId: "example_value",
+    ids: ["example_value"],
+});
+export const firstGaIpSetId = example.then(example => example.sets[0].id);
+```
+
 <h3 class="pdoc-module-header" id="getListeners" data-link-title="getListeners">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/getListeners.ts#L29">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/getListeners.ts#L29">
         Function <strong>getListeners</strong>
     </a>
 </h3>
@@ -967,7 +1312,7 @@ export const firstGaListenerId = example.then(example => example.listeners[0].id
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="AcceleratorArgs" data-link-title="AcceleratorArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/accelerator.ts#L179">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/accelerator.ts#L179">
         interface <strong>AcceleratorArgs</strong>
     </a>
 </h3>
@@ -977,7 +1322,7 @@ export const firstGaListenerId = example.then(example => example.listeners[0].id
 The set of arguments for constructing a Accelerator resource.
 
 <h4 class="pdoc-member-header" id="AcceleratorArgs-acceleratorName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/accelerator.ts#L183">property <b>acceleratorName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/accelerator.ts#L183">property <b>acceleratorName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>acceleratorName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -985,7 +1330,7 @@ The set of arguments for constructing a Accelerator resource.
 The Name of the GA instance.
 
 <h4 class="pdoc-member-header" id="AcceleratorArgs-autoUseCoupon">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/accelerator.ts#L187">property <b>autoUseCoupon</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/accelerator.ts#L187">property <b>autoUseCoupon</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoUseCoupon?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -993,7 +1338,7 @@ The Name of the GA instance.
 The auto use coupon.
 
 <h4 class="pdoc-member-header" id="AcceleratorArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/accelerator.ts#L191">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/accelerator.ts#L191">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1001,7 +1346,7 @@ The auto use coupon.
 Descriptive information of the global acceleration instance.
 
 <h4 class="pdoc-member-header" id="AcceleratorArgs-duration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/accelerator.ts#L195">property <b>duration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/accelerator.ts#L195">property <b>duration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>duration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1009,7 +1354,7 @@ Descriptive information of the global acceleration instance.
 The duration. The value range is 1-9.
 
 <h4 class="pdoc-member-header" id="AcceleratorArgs-spec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/accelerator.ts#L205">property <b>spec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/accelerator.ts#L205">property <b>spec</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>spec: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1023,7 +1368,7 @@ The instance type of the GA instance. Specification of global acceleration insta
 `10`: Medium 3.
 
 <h3 class="pdoc-module-header" id="AcceleratorState" data-link-title="AcceleratorState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/accelerator.ts#L143">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/accelerator.ts#L143">
         interface <strong>AcceleratorState</strong>
     </a>
 </h3>
@@ -1033,7 +1378,7 @@ The instance type of the GA instance. Specification of global acceleration insta
 Input properties used for looking up and filtering Accelerator resources.
 
 <h4 class="pdoc-member-header" id="AcceleratorState-acceleratorName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/accelerator.ts#L147">property <b>acceleratorName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/accelerator.ts#L147">property <b>acceleratorName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>acceleratorName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1041,7 +1386,7 @@ Input properties used for looking up and filtering Accelerator resources.
 The Name of the GA instance.
 
 <h4 class="pdoc-member-header" id="AcceleratorState-autoUseCoupon">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/accelerator.ts#L151">property <b>autoUseCoupon</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/accelerator.ts#L151">property <b>autoUseCoupon</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoUseCoupon?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1049,7 +1394,7 @@ The Name of the GA instance.
 The auto use coupon.
 
 <h4 class="pdoc-member-header" id="AcceleratorState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/accelerator.ts#L155">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/accelerator.ts#L155">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1057,7 +1402,7 @@ The auto use coupon.
 Descriptive information of the global acceleration instance.
 
 <h4 class="pdoc-member-header" id="AcceleratorState-duration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/accelerator.ts#L159">property <b>duration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/accelerator.ts#L159">property <b>duration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>duration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1065,7 +1410,7 @@ Descriptive information of the global acceleration instance.
 The duration. The value range is 1-9.
 
 <h4 class="pdoc-member-header" id="AcceleratorState-spec">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/accelerator.ts#L169">property <b>spec</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/accelerator.ts#L169">property <b>spec</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>spec?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1079,7 +1424,7 @@ The instance type of the GA instance. Specification of global acceleration insta
 `10`: Medium 3.
 
 <h4 class="pdoc-member-header" id="AcceleratorState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/accelerator.ts#L173">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/accelerator.ts#L173">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1087,7 +1432,7 @@ The instance type of the GA instance. Specification of global acceleration insta
 The status of the GA instance.
 
 <h3 class="pdoc-module-header" id="BandwidthPackageArgs" data-link-title="BandwidthPackageArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/bandwidthPackage.ts#L250">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/bandwidthPackage.ts#L250">
         interface <strong>BandwidthPackageArgs</strong>
     </a>
 </h3>
@@ -1097,7 +1442,7 @@ The status of the GA instance.
 The set of arguments for constructing a BandwidthPackage resource.
 
 <h4 class="pdoc-member-header" id="BandwidthPackageArgs-autoPay">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/bandwidthPackage.ts#L254">property <b>autoPay</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/bandwidthPackage.ts#L254">property <b>autoPay</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoPay?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1105,7 +1450,7 @@ The set of arguments for constructing a BandwidthPackage resource.
 The auto pay. Valid values: `false`, `true`.
 
 <h4 class="pdoc-member-header" id="BandwidthPackageArgs-autoUseCoupon">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/bandwidthPackage.ts#L258">property <b>autoUseCoupon</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/bandwidthPackage.ts#L258">property <b>autoUseCoupon</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoUseCoupon?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1113,7 +1458,7 @@ The auto pay. Valid values: `false`, `true`.
 The auto use coupon. Valid values: `false`, `true`.
 
 <h4 class="pdoc-member-header" id="BandwidthPackageArgs-bandwidth">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/bandwidthPackage.ts#L262">property <b>bandwidth</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/bandwidthPackage.ts#L262">property <b>bandwidth</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bandwidth: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1121,7 +1466,7 @@ The auto use coupon. Valid values: `false`, `true`.
 The bandwidth value of bandwidth packet.
 
 <h4 class="pdoc-member-header" id="BandwidthPackageArgs-bandwidthPackageName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/bandwidthPackage.ts#L266">property <b>bandwidthPackageName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/bandwidthPackage.ts#L266">property <b>bandwidthPackageName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bandwidthPackageName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1129,7 +1474,7 @@ The bandwidth value of bandwidth packet.
 The name of the bandwidth packet.
 
 <h4 class="pdoc-member-header" id="BandwidthPackageArgs-bandwidthType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/bandwidthPackage.ts#L270">property <b>bandwidthType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/bandwidthPackage.ts#L270">property <b>bandwidthType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bandwidthType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1137,7 +1482,7 @@ The name of the bandwidth packet.
 The bandwidth type of the bandwidth. Valid values: `Advanced`, `Basic`, `Enhanced`.
 
 <h4 class="pdoc-member-header" id="BandwidthPackageArgs-billingType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/bandwidthPackage.ts#L274">property <b>billingType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/bandwidthPackage.ts#L274">property <b>billingType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>billingType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1145,7 +1490,7 @@ The bandwidth type of the bandwidth. Valid values: `Advanced`, `Basic`, `Enhance
 The billing type. Valid values: `PayBy95`, `PayByTraffic`.
 
 <h4 class="pdoc-member-header" id="BandwidthPackageArgs-cbnGeographicRegionIda">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/bandwidthPackage.ts#L278">property <b>cbnGeographicRegionIda</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/bandwidthPackage.ts#L278">property <b>cbnGeographicRegionIda</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cbnGeographicRegionIda?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1153,7 +1498,7 @@ The billing type. Valid values: `PayBy95`, `PayByTraffic`.
 Interworking area A of cross domain acceleration package. Only international stations support returning this parameter. Default value is `China-mainland`.
 
 <h4 class="pdoc-member-header" id="BandwidthPackageArgs-cbnGeographicRegionIdb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/bandwidthPackage.ts#L282">property <b>cbnGeographicRegionIdb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/bandwidthPackage.ts#L282">property <b>cbnGeographicRegionIdb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cbnGeographicRegionIdb?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1161,7 +1506,7 @@ Interworking area A of cross domain acceleration package. Only international sta
 Interworking area B of cross domain acceleration package. Only international stations support returning this parameter. Default value is `Global`.
 
 <h4 class="pdoc-member-header" id="BandwidthPackageArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/bandwidthPackage.ts#L286">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/bandwidthPackage.ts#L286">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1169,7 +1514,7 @@ Interworking area B of cross domain acceleration package. Only international sta
 The description of bandwidth package.
 
 <h4 class="pdoc-member-header" id="BandwidthPackageArgs-duration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/bandwidthPackage.ts#L290">property <b>duration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/bandwidthPackage.ts#L290">property <b>duration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>duration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1177,7 +1522,7 @@ The description of bandwidth package.
 The duration.
 
 <h4 class="pdoc-member-header" id="BandwidthPackageArgs-paymentType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/bandwidthPackage.ts#L294">property <b>paymentType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/bandwidthPackage.ts#L294">property <b>paymentType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>paymentType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1185,7 +1530,7 @@ The duration.
 The payment type of the bandwidth. Valid values: `PayAsYouGo`, `Subscription`. Default value is `Subscription`.
 
 <h4 class="pdoc-member-header" id="BandwidthPackageArgs-ratio">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/bandwidthPackage.ts#L298">property <b>ratio</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/bandwidthPackage.ts#L298">property <b>ratio</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ratio?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1193,15 +1538,83 @@ The payment type of the bandwidth. Valid values: `PayAsYouGo`, `Subscription`. D
 The ratio.
 
 <h4 class="pdoc-member-header" id="BandwidthPackageArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/bandwidthPackage.ts#L302">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/bandwidthPackage.ts#L302">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 
 The type of the bandwidth packet. China station only supports return to basic. Valid values: `Basic`, `CrossDomain`.
 
+<h3 class="pdoc-module-header" id="BandwidthPackageAttachmentArgs" data-link-title="BandwidthPackageAttachmentArgs">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/bandwidthPackageAttachment.ts#L159">
+        interface <strong>BandwidthPackageAttachmentArgs</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>BandwidthPackageAttachmentArgs</span></code></pre>
+
+The set of arguments for constructing a BandwidthPackageAttachment resource.
+
+<h4 class="pdoc-member-header" id="BandwidthPackageAttachmentArgs-acceleratorId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/bandwidthPackageAttachment.ts#L163">property <b>acceleratorId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>acceleratorId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The ID of the Global Accelerator instance from which you want to disassociate the bandwidth plan.
+
+<h4 class="pdoc-member-header" id="BandwidthPackageAttachmentArgs-bandwidthPackageId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/bandwidthPackageAttachment.ts#L167">property <b>bandwidthPackageId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>bandwidthPackageId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The ID of the bandwidth plan to disassociate.
+
+<h3 class="pdoc-module-header" id="BandwidthPackageAttachmentState" data-link-title="BandwidthPackageAttachmentState">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/bandwidthPackageAttachment.ts#L137">
+        interface <strong>BandwidthPackageAttachmentState</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>BandwidthPackageAttachmentState</span></code></pre>
+
+Input properties used for looking up and filtering BandwidthPackageAttachment resources.
+
+<h4 class="pdoc-member-header" id="BandwidthPackageAttachmentState-acceleratorId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/bandwidthPackageAttachment.ts#L141">property <b>acceleratorId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>acceleratorId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The ID of the Global Accelerator instance from which you want to disassociate the bandwidth plan.
+
+<h4 class="pdoc-member-header" id="BandwidthPackageAttachmentState-accelerators">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/bandwidthPackageAttachment.ts#L145">property <b>accelerators</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>accelerators?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
+
+Accelerators bound with current Bandwidth Package.
+
+<h4 class="pdoc-member-header" id="BandwidthPackageAttachmentState-bandwidthPackageId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/bandwidthPackageAttachment.ts#L149">property <b>bandwidthPackageId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>bandwidthPackageId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The ID of the bandwidth plan to disassociate.
+
+<h4 class="pdoc-member-header" id="BandwidthPackageAttachmentState-status">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/bandwidthPackageAttachment.ts#L153">property <b>status</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+State of Bandwidth Package.
+
 <h3 class="pdoc-module-header" id="BandwidthPackageState" data-link-title="BandwidthPackageState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/bandwidthPackage.ts#L188">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/bandwidthPackage.ts#L188">
         interface <strong>BandwidthPackageState</strong>
     </a>
 </h3>
@@ -1211,7 +1624,7 @@ The type of the bandwidth packet. China station only supports return to basic. V
 Input properties used for looking up and filtering BandwidthPackage resources.
 
 <h4 class="pdoc-member-header" id="BandwidthPackageState-autoPay">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/bandwidthPackage.ts#L192">property <b>autoPay</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/bandwidthPackage.ts#L192">property <b>autoPay</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoPay?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1219,7 +1632,7 @@ Input properties used for looking up and filtering BandwidthPackage resources.
 The auto pay. Valid values: `false`, `true`.
 
 <h4 class="pdoc-member-header" id="BandwidthPackageState-autoUseCoupon">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/bandwidthPackage.ts#L196">property <b>autoUseCoupon</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/bandwidthPackage.ts#L196">property <b>autoUseCoupon</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoUseCoupon?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1227,7 +1640,7 @@ The auto pay. Valid values: `false`, `true`.
 The auto use coupon. Valid values: `false`, `true`.
 
 <h4 class="pdoc-member-header" id="BandwidthPackageState-bandwidth">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/bandwidthPackage.ts#L200">property <b>bandwidth</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/bandwidthPackage.ts#L200">property <b>bandwidth</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bandwidth?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1235,7 +1648,7 @@ The auto use coupon. Valid values: `false`, `true`.
 The bandwidth value of bandwidth packet.
 
 <h4 class="pdoc-member-header" id="BandwidthPackageState-bandwidthPackageName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/bandwidthPackage.ts#L204">property <b>bandwidthPackageName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/bandwidthPackage.ts#L204">property <b>bandwidthPackageName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bandwidthPackageName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1243,7 +1656,7 @@ The bandwidth value of bandwidth packet.
 The name of the bandwidth packet.
 
 <h4 class="pdoc-member-header" id="BandwidthPackageState-bandwidthType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/bandwidthPackage.ts#L208">property <b>bandwidthType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/bandwidthPackage.ts#L208">property <b>bandwidthType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>bandwidthType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1251,7 +1664,7 @@ The name of the bandwidth packet.
 The bandwidth type of the bandwidth. Valid values: `Advanced`, `Basic`, `Enhanced`.
 
 <h4 class="pdoc-member-header" id="BandwidthPackageState-billingType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/bandwidthPackage.ts#L212">property <b>billingType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/bandwidthPackage.ts#L212">property <b>billingType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>billingType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1259,7 +1672,7 @@ The bandwidth type of the bandwidth. Valid values: `Advanced`, `Basic`, `Enhance
 The billing type. Valid values: `PayBy95`, `PayByTraffic`.
 
 <h4 class="pdoc-member-header" id="BandwidthPackageState-cbnGeographicRegionIda">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/bandwidthPackage.ts#L216">property <b>cbnGeographicRegionIda</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/bandwidthPackage.ts#L216">property <b>cbnGeographicRegionIda</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cbnGeographicRegionIda?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1267,7 +1680,7 @@ The billing type. Valid values: `PayBy95`, `PayByTraffic`.
 Interworking area A of cross domain acceleration package. Only international stations support returning this parameter. Default value is `China-mainland`.
 
 <h4 class="pdoc-member-header" id="BandwidthPackageState-cbnGeographicRegionIdb">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/bandwidthPackage.ts#L220">property <b>cbnGeographicRegionIdb</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/bandwidthPackage.ts#L220">property <b>cbnGeographicRegionIdb</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cbnGeographicRegionIdb?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1275,7 +1688,7 @@ Interworking area A of cross domain acceleration package. Only international sta
 Interworking area B of cross domain acceleration package. Only international stations support returning this parameter. Default value is `Global`.
 
 <h4 class="pdoc-member-header" id="BandwidthPackageState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/bandwidthPackage.ts#L224">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/bandwidthPackage.ts#L224">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1283,7 +1696,7 @@ Interworking area B of cross domain acceleration package. Only international sta
 The description of bandwidth package.
 
 <h4 class="pdoc-member-header" id="BandwidthPackageState-duration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/bandwidthPackage.ts#L228">property <b>duration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/bandwidthPackage.ts#L228">property <b>duration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>duration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1291,7 +1704,7 @@ The description of bandwidth package.
 The duration.
 
 <h4 class="pdoc-member-header" id="BandwidthPackageState-paymentType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/bandwidthPackage.ts#L232">property <b>paymentType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/bandwidthPackage.ts#L232">property <b>paymentType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>paymentType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1299,7 +1712,7 @@ The duration.
 The payment type of the bandwidth. Valid values: `PayAsYouGo`, `Subscription`. Default value is `Subscription`.
 
 <h4 class="pdoc-member-header" id="BandwidthPackageState-ratio">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/bandwidthPackage.ts#L236">property <b>ratio</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/bandwidthPackage.ts#L236">property <b>ratio</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ratio?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1307,7 +1720,7 @@ The payment type of the bandwidth. Valid values: `PayAsYouGo`, `Subscription`. D
 The ratio.
 
 <h4 class="pdoc-member-header" id="BandwidthPackageState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/bandwidthPackage.ts#L240">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/bandwidthPackage.ts#L240">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1315,7 +1728,7 @@ The ratio.
 The status of the bandwidth plan.
 
 <h4 class="pdoc-member-header" id="BandwidthPackageState-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/bandwidthPackage.ts#L244">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/bandwidthPackage.ts#L244">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1323,7 +1736,7 @@ The status of the bandwidth plan.
 The type of the bandwidth packet. China station only supports return to basic. Valid values: `Basic`, `CrossDomain`.
 
 <h3 class="pdoc-module-header" id="EndpointGroupArgs" data-link-title="EndpointGroupArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/endpointGroup.ts#L295">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/endpointGroup.ts#L295">
         interface <strong>EndpointGroupArgs</strong>
     </a>
 </h3>
@@ -1333,7 +1746,7 @@ The type of the bandwidth packet. China station only supports return to basic. V
 The set of arguments for constructing a EndpointGroup resource.
 
 <h4 class="pdoc-member-header" id="EndpointGroupArgs-acceleratorId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/endpointGroup.ts#L299">property <b>acceleratorId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/endpointGroup.ts#L299">property <b>acceleratorId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>acceleratorId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1341,7 +1754,7 @@ The set of arguments for constructing a EndpointGroup resource.
 The ID of the Global Accelerator instance to which the endpoint group will be added.
 
 <h4 class="pdoc-member-header" id="EndpointGroupArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/endpointGroup.ts#L303">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/endpointGroup.ts#L303">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1349,7 +1762,7 @@ The ID of the Global Accelerator instance to which the endpoint group will be ad
 The description of the endpoint group.
 
 <h4 class="pdoc-member-header" id="EndpointGroupArgs-endpointConfigurations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/endpointGroup.ts#L307">property <b>endpointConfigurations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/endpointGroup.ts#L307">property <b>endpointConfigurations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endpointConfigurations: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#EndpointGroupEndpointConfiguration'>EndpointGroupEndpointConfiguration</a>&gt;[]&gt;;</code></pre>
@@ -1357,7 +1770,7 @@ The description of the endpoint group.
 The endpointConfigurations of the endpoint group.
 
 <h4 class="pdoc-member-header" id="EndpointGroupArgs-endpointGroupRegion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/endpointGroup.ts#L311">property <b>endpointGroupRegion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/endpointGroup.ts#L311">property <b>endpointGroupRegion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endpointGroupRegion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1365,7 +1778,7 @@ The endpointConfigurations of the endpoint group.
 The ID of the region where the endpoint group is deployed.
 
 <h4 class="pdoc-member-header" id="EndpointGroupArgs-endpointGroupType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/endpointGroup.ts#L315">property <b>endpointGroupType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/endpointGroup.ts#L315">property <b>endpointGroupType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endpointGroupType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1373,7 +1786,7 @@ The ID of the region where the endpoint group is deployed.
 The endpoint group type. Valid values: `default`, `virtual`. Default value is `default`.
 
 <h4 class="pdoc-member-header" id="EndpointGroupArgs-endpointRequestProtocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/endpointGroup.ts#L319">property <b>endpointRequestProtocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/endpointGroup.ts#L319">property <b>endpointRequestProtocol</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endpointRequestProtocol?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1381,7 +1794,7 @@ The endpoint group type. Valid values: `default`, `virtual`. Default value is `d
 The endpoint request protocol.
 
 <h4 class="pdoc-member-header" id="EndpointGroupArgs-healthCheckIntervalSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/endpointGroup.ts#L323">property <b>healthCheckIntervalSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/endpointGroup.ts#L323">property <b>healthCheckIntervalSeconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>healthCheckIntervalSeconds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1389,7 +1802,7 @@ The endpoint request protocol.
 The interval between two consecutive health checks. Unit: seconds.
 
 <h4 class="pdoc-member-header" id="EndpointGroupArgs-healthCheckPath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/endpointGroup.ts#L327">property <b>healthCheckPath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/endpointGroup.ts#L327">property <b>healthCheckPath</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>healthCheckPath?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1397,7 +1810,7 @@ The interval between two consecutive health checks. Unit: seconds.
 The path specified as the destination of the targets for health checks.
 
 <h4 class="pdoc-member-header" id="EndpointGroupArgs-healthCheckPort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/endpointGroup.ts#L331">property <b>healthCheckPort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/endpointGroup.ts#L331">property <b>healthCheckPort</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>healthCheckPort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1405,7 +1818,7 @@ The path specified as the destination of the targets for health checks.
 The port that is used for health checks.
 
 <h4 class="pdoc-member-header" id="EndpointGroupArgs-healthCheckProtocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/endpointGroup.ts#L335">property <b>healthCheckProtocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/endpointGroup.ts#L335">property <b>healthCheckProtocol</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>healthCheckProtocol?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1413,7 +1826,7 @@ The port that is used for health checks.
 The protocol that is used to connect to the targets for health checks. Valid values: `http`, `https`, `tcp`.
 
 <h4 class="pdoc-member-header" id="EndpointGroupArgs-listenerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/endpointGroup.ts#L339">property <b>listenerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/endpointGroup.ts#L339">property <b>listenerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>listenerId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1421,7 +1834,7 @@ The protocol that is used to connect to the targets for health checks. Valid val
 The ID of the listener that is associated with the endpoint group.
 
 <h4 class="pdoc-member-header" id="EndpointGroupArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/endpointGroup.ts#L343">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/endpointGroup.ts#L343">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1429,7 +1842,7 @@ The ID of the listener that is associated with the endpoint group.
 The name of the endpoint group.
 
 <h4 class="pdoc-member-header" id="EndpointGroupArgs-portOverrides">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/endpointGroup.ts#L347">property <b>portOverrides</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/endpointGroup.ts#L347">property <b>portOverrides</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>portOverrides?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#EndpointGroupPortOverrides'>EndpointGroupPortOverrides</a>&gt;;</code></pre>
@@ -1437,7 +1850,7 @@ The name of the endpoint group.
 Mapping between listening port and forwarding port of boarding point.
 
 <h4 class="pdoc-member-header" id="EndpointGroupArgs-thresholdCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/endpointGroup.ts#L351">property <b>thresholdCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/endpointGroup.ts#L351">property <b>thresholdCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>thresholdCount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1445,7 +1858,7 @@ Mapping between listening port and forwarding port of boarding point.
 The number of consecutive failed heath checks that must occur before the endpoint is deemed unhealthy. Default value is `3`.
 
 <h4 class="pdoc-member-header" id="EndpointGroupArgs-trafficPercentage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/endpointGroup.ts#L355">property <b>trafficPercentage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/endpointGroup.ts#L355">property <b>trafficPercentage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>trafficPercentage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1453,7 +1866,7 @@ The number of consecutive failed heath checks that must occur before the endpoin
 The weight of the endpoint group when the corresponding listener is associated with multiple endpoint groups.
 
 <h3 class="pdoc-module-header" id="EndpointGroupState" data-link-title="EndpointGroupState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/endpointGroup.ts#L225">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/endpointGroup.ts#L225">
         interface <strong>EndpointGroupState</strong>
     </a>
 </h3>
@@ -1463,7 +1876,7 @@ The weight of the endpoint group when the corresponding listener is associated w
 Input properties used for looking up and filtering EndpointGroup resources.
 
 <h4 class="pdoc-member-header" id="EndpointGroupState-acceleratorId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/endpointGroup.ts#L229">property <b>acceleratorId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/endpointGroup.ts#L229">property <b>acceleratorId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>acceleratorId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1471,7 +1884,7 @@ Input properties used for looking up and filtering EndpointGroup resources.
 The ID of the Global Accelerator instance to which the endpoint group will be added.
 
 <h4 class="pdoc-member-header" id="EndpointGroupState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/endpointGroup.ts#L233">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/endpointGroup.ts#L233">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1479,7 +1892,7 @@ The ID of the Global Accelerator instance to which the endpoint group will be ad
 The description of the endpoint group.
 
 <h4 class="pdoc-member-header" id="EndpointGroupState-endpointConfigurations">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/endpointGroup.ts#L237">property <b>endpointConfigurations</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/endpointGroup.ts#L237">property <b>endpointConfigurations</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endpointConfigurations?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#EndpointGroupEndpointConfiguration'>EndpointGroupEndpointConfiguration</a>&gt;[]&gt;;</code></pre>
@@ -1487,7 +1900,7 @@ The description of the endpoint group.
 The endpointConfigurations of the endpoint group.
 
 <h4 class="pdoc-member-header" id="EndpointGroupState-endpointGroupRegion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/endpointGroup.ts#L241">property <b>endpointGroupRegion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/endpointGroup.ts#L241">property <b>endpointGroupRegion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endpointGroupRegion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1495,7 +1908,7 @@ The endpointConfigurations of the endpoint group.
 The ID of the region where the endpoint group is deployed.
 
 <h4 class="pdoc-member-header" id="EndpointGroupState-endpointGroupType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/endpointGroup.ts#L245">property <b>endpointGroupType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/endpointGroup.ts#L245">property <b>endpointGroupType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endpointGroupType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1503,7 +1916,7 @@ The ID of the region where the endpoint group is deployed.
 The endpoint group type. Valid values: `default`, `virtual`. Default value is `default`.
 
 <h4 class="pdoc-member-header" id="EndpointGroupState-endpointRequestProtocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/endpointGroup.ts#L249">property <b>endpointRequestProtocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/endpointGroup.ts#L249">property <b>endpointRequestProtocol</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endpointRequestProtocol?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1511,7 +1924,7 @@ The endpoint group type. Valid values: `default`, `virtual`. Default value is `d
 The endpoint request protocol.
 
 <h4 class="pdoc-member-header" id="EndpointGroupState-healthCheckIntervalSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/endpointGroup.ts#L253">property <b>healthCheckIntervalSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/endpointGroup.ts#L253">property <b>healthCheckIntervalSeconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>healthCheckIntervalSeconds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1519,7 +1932,7 @@ The endpoint request protocol.
 The interval between two consecutive health checks. Unit: seconds.
 
 <h4 class="pdoc-member-header" id="EndpointGroupState-healthCheckPath">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/endpointGroup.ts#L257">property <b>healthCheckPath</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/endpointGroup.ts#L257">property <b>healthCheckPath</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>healthCheckPath?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1527,7 +1940,7 @@ The interval between two consecutive health checks. Unit: seconds.
 The path specified as the destination of the targets for health checks.
 
 <h4 class="pdoc-member-header" id="EndpointGroupState-healthCheckPort">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/endpointGroup.ts#L261">property <b>healthCheckPort</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/endpointGroup.ts#L261">property <b>healthCheckPort</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>healthCheckPort?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1535,7 +1948,7 @@ The path specified as the destination of the targets for health checks.
 The port that is used for health checks.
 
 <h4 class="pdoc-member-header" id="EndpointGroupState-healthCheckProtocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/endpointGroup.ts#L265">property <b>healthCheckProtocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/endpointGroup.ts#L265">property <b>healthCheckProtocol</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>healthCheckProtocol?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1543,7 +1956,7 @@ The port that is used for health checks.
 The protocol that is used to connect to the targets for health checks. Valid values: `http`, `https`, `tcp`.
 
 <h4 class="pdoc-member-header" id="EndpointGroupState-listenerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/endpointGroup.ts#L269">property <b>listenerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/endpointGroup.ts#L269">property <b>listenerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>listenerId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1551,7 +1964,7 @@ The protocol that is used to connect to the targets for health checks. Valid val
 The ID of the listener that is associated with the endpoint group.
 
 <h4 class="pdoc-member-header" id="EndpointGroupState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/endpointGroup.ts#L273">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/endpointGroup.ts#L273">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1559,7 +1972,7 @@ The ID of the listener that is associated with the endpoint group.
 The name of the endpoint group.
 
 <h4 class="pdoc-member-header" id="EndpointGroupState-portOverrides">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/endpointGroup.ts#L277">property <b>portOverrides</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/endpointGroup.ts#L277">property <b>portOverrides</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>portOverrides?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#EndpointGroupPortOverrides'>EndpointGroupPortOverrides</a>&gt;;</code></pre>
@@ -1567,7 +1980,7 @@ The name of the endpoint group.
 Mapping between listening port and forwarding port of boarding point.
 
 <h4 class="pdoc-member-header" id="EndpointGroupState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/endpointGroup.ts#L281">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/endpointGroup.ts#L281">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1575,7 +1988,7 @@ Mapping between listening port and forwarding port of boarding point.
 The status of the endpoint group.
 
 <h4 class="pdoc-member-header" id="EndpointGroupState-thresholdCount">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/endpointGroup.ts#L285">property <b>thresholdCount</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/endpointGroup.ts#L285">property <b>thresholdCount</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>thresholdCount?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1583,7 +1996,7 @@ The status of the endpoint group.
 The number of consecutive failed heath checks that must occur before the endpoint is deemed unhealthy. Default value is `3`.
 
 <h4 class="pdoc-member-header" id="EndpointGroupState-trafficPercentage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/endpointGroup.ts#L289">property <b>trafficPercentage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/endpointGroup.ts#L289">property <b>trafficPercentage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>trafficPercentage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1591,7 +2004,7 @@ The number of consecutive failed heath checks that must occur before the endpoin
 The weight of the endpoint group when the corresponding listener is associated with multiple endpoint groups.
 
 <h3 class="pdoc-module-header" id="GetAcceleratorsArgs" data-link-title="GetAcceleratorsArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/getAccelerators.ts#L48">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/getAccelerators.ts#L48">
         interface <strong>GetAcceleratorsArgs</strong>
     </a>
 </h3>
@@ -1601,7 +2014,7 @@ The weight of the endpoint group when the corresponding listener is associated w
 A collection of arguments for invoking getAccelerators.
 
 <h4 class="pdoc-member-header" id="GetAcceleratorsArgs-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/getAccelerators.ts#L52">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/getAccelerators.ts#L52">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1609,7 +2022,7 @@ A collection of arguments for invoking getAccelerators.
 A list of Accelerator IDs.
 
 <h4 class="pdoc-member-header" id="GetAcceleratorsArgs-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/getAccelerators.ts#L56">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/getAccelerators.ts#L56">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1617,12 +2030,12 @@ A list of Accelerator IDs.
 A regex string to filter results by Accelerator name.
 
 <h4 class="pdoc-member-header" id="GetAcceleratorsArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/getAccelerators.ts#L57">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/getAccelerators.ts#L57">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAcceleratorsArgs-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/getAccelerators.ts#L61">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/getAccelerators.ts#L61">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1630,7 +2043,7 @@ A regex string to filter results by Accelerator name.
 The status of the GA instance.
 
 <h3 class="pdoc-module-header" id="GetAcceleratorsResult" data-link-title="GetAcceleratorsResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/getAccelerators.ts#L67">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/getAccelerators.ts#L67">
         interface <strong>GetAcceleratorsResult</strong>
     </a>
 </h3>
@@ -1640,12 +2053,12 @@ The status of the GA instance.
 A collection of values returned by getAccelerators.
 
 <h4 class="pdoc-member-header" id="GetAcceleratorsResult-accelerators">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/getAccelerators.ts#L68">property <b>accelerators</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/getAccelerators.ts#L68">property <b>accelerators</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accelerators: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetAcceleratorsAccelerator'>GetAcceleratorsAccelerator</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetAcceleratorsResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/getAccelerators.ts#L72">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/getAccelerators.ts#L72">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1653,32 +2066,32 @@ A collection of values returned by getAccelerators.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetAcceleratorsResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/getAccelerators.ts#L73">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/getAccelerators.ts#L73">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetAcceleratorsResult-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/getAccelerators.ts#L74">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/getAccelerators.ts#L74">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAcceleratorsResult-names">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/getAccelerators.ts#L75">property <b>names</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/getAccelerators.ts#L75">property <b>names</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>names: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetAcceleratorsResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/getAccelerators.ts#L76">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/getAccelerators.ts#L76">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAcceleratorsResult-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/getAccelerators.ts#L77">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/getAccelerators.ts#L77">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetBandwidthPackagesArgs" data-link-title="GetBandwidthPackagesArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/getBandwidthPackages.ts#L50">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/getBandwidthPackages.ts#L50">
         interface <strong>GetBandwidthPackagesArgs</strong>
     </a>
 </h3>
@@ -1688,7 +2101,7 @@ The provider-assigned unique ID for this managed resource.
 A collection of arguments for invoking getBandwidthPackages.
 
 <h4 class="pdoc-member-header" id="GetBandwidthPackagesArgs-enableDetails">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/getBandwidthPackages.ts#L54">property <b>enableDetails</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/getBandwidthPackages.ts#L54">property <b>enableDetails</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableDetails?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -1696,7 +2109,7 @@ A collection of arguments for invoking getBandwidthPackages.
 Default to `false`. Set it to `true` can output more details about resource attributes.
 
 <h4 class="pdoc-member-header" id="GetBandwidthPackagesArgs-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/getBandwidthPackages.ts#L58">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/getBandwidthPackages.ts#L58">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1704,7 +2117,7 @@ Default to `false`. Set it to `true` can output more details about resource attr
 A list of Bandwidth Package IDs.
 
 <h4 class="pdoc-member-header" id="GetBandwidthPackagesArgs-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/getBandwidthPackages.ts#L62">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/getBandwidthPackages.ts#L62">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1712,12 +2125,12 @@ A list of Bandwidth Package IDs.
 A regex string to filter results by Bandwidth Package name.
 
 <h4 class="pdoc-member-header" id="GetBandwidthPackagesArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/getBandwidthPackages.ts#L63">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/getBandwidthPackages.ts#L63">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetBandwidthPackagesArgs-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/getBandwidthPackages.ts#L67">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/getBandwidthPackages.ts#L67">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1725,7 +2138,7 @@ A regex string to filter results by Bandwidth Package name.
 The status of the bandwidth plan.
 
 <h4 class="pdoc-member-header" id="GetBandwidthPackagesArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/getBandwidthPackages.ts#L71">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/getBandwidthPackages.ts#L71">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1733,7 +2146,7 @@ The status of the bandwidth plan.
 The type of the bandwidth packet. China station only supports return to basic.
 
 <h3 class="pdoc-module-header" id="GetBandwidthPackagesResult" data-link-title="GetBandwidthPackagesResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/getBandwidthPackages.ts#L77">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/getBandwidthPackages.ts#L77">
         interface <strong>GetBandwidthPackagesResult</strong>
     </a>
 </h3>
@@ -1743,12 +2156,12 @@ The type of the bandwidth packet. China station only supports return to basic.
 A collection of values returned by getBandwidthPackages.
 
 <h4 class="pdoc-member-header" id="GetBandwidthPackagesResult-enableDetails">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/getBandwidthPackages.ts#L78">property <b>enableDetails</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/getBandwidthPackages.ts#L78">property <b>enableDetails</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enableDetails?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetBandwidthPackagesResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/getBandwidthPackages.ts#L82">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/getBandwidthPackages.ts#L82">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1756,42 +2169,42 @@ A collection of values returned by getBandwidthPackages.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetBandwidthPackagesResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/getBandwidthPackages.ts#L83">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/getBandwidthPackages.ts#L83">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetBandwidthPackagesResult-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/getBandwidthPackages.ts#L84">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/getBandwidthPackages.ts#L84">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetBandwidthPackagesResult-names">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/getBandwidthPackages.ts#L85">property <b>names</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/getBandwidthPackages.ts#L85">property <b>names</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>names: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetBandwidthPackagesResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/getBandwidthPackages.ts#L86">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/getBandwidthPackages.ts#L86">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetBandwidthPackagesResult-packages">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/getBandwidthPackages.ts#L87">property <b>packages</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/getBandwidthPackages.ts#L87">property <b>packages</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>packages: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetBandwidthPackagesPackage'>GetBandwidthPackagesPackage</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetBandwidthPackagesResult-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/getBandwidthPackages.ts#L88">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/getBandwidthPackages.ts#L88">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetBandwidthPackagesResult-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/getBandwidthPackages.ts#L89">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/getBandwidthPackages.ts#L89">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetEndpointGroupsArgs" data-link-title="GetEndpointGroupsArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/getEndpointGroups.ts#L51">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/getEndpointGroups.ts#L51">
         interface <strong>GetEndpointGroupsArgs</strong>
     </a>
 </h3>
@@ -1801,7 +2214,7 @@ The provider-assigned unique ID for this managed resource.
 A collection of arguments for invoking getEndpointGroups.
 
 <h4 class="pdoc-member-header" id="GetEndpointGroupsArgs-acceleratorId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/getEndpointGroups.ts#L55">property <b>acceleratorId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/getEndpointGroups.ts#L55">property <b>acceleratorId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>acceleratorId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1809,7 +2222,7 @@ A collection of arguments for invoking getEndpointGroups.
 The ID of the Global Accelerator instance to which the endpoint group will be added.
 
 <h4 class="pdoc-member-header" id="GetEndpointGroupsArgs-endpointGroupType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/getEndpointGroups.ts#L59">property <b>endpointGroupType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/getEndpointGroups.ts#L59">property <b>endpointGroupType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endpointGroupType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1817,7 +2230,7 @@ The ID of the Global Accelerator instance to which the endpoint group will be ad
 The endpoint group type. Valid values: `default`, `virtual`. Default value is `default`.
 
 <h4 class="pdoc-member-header" id="GetEndpointGroupsArgs-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/getEndpointGroups.ts#L63">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/getEndpointGroups.ts#L63">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1825,7 +2238,7 @@ The endpoint group type. Valid values: `default`, `virtual`. Default value is `d
 A list of Endpoint Group IDs.
 
 <h4 class="pdoc-member-header" id="GetEndpointGroupsArgs-listenerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/getEndpointGroups.ts#L67">property <b>listenerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/getEndpointGroups.ts#L67">property <b>listenerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>listenerId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1833,7 +2246,7 @@ A list of Endpoint Group IDs.
 The ID of the listener that is associated with the endpoint group.
 
 <h4 class="pdoc-member-header" id="GetEndpointGroupsArgs-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/getEndpointGroups.ts#L71">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/getEndpointGroups.ts#L71">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1841,12 +2254,12 @@ The ID of the listener that is associated with the endpoint group.
 A regex string to filter results by Endpoint Group name.
 
 <h4 class="pdoc-member-header" id="GetEndpointGroupsArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/getEndpointGroups.ts#L72">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/getEndpointGroups.ts#L72">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetEndpointGroupsArgs-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/getEndpointGroups.ts#L76">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/getEndpointGroups.ts#L76">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1854,7 +2267,7 @@ A regex string to filter results by Endpoint Group name.
 The status of the endpoint group.
 
 <h3 class="pdoc-module-header" id="GetEndpointGroupsResult" data-link-title="GetEndpointGroupsResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/getEndpointGroups.ts#L82">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/getEndpointGroups.ts#L82">
         interface <strong>GetEndpointGroupsResult</strong>
     </a>
 </h3>
@@ -1864,22 +2277,22 @@ The status of the endpoint group.
 A collection of values returned by getEndpointGroups.
 
 <h4 class="pdoc-member-header" id="GetEndpointGroupsResult-acceleratorId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/getEndpointGroups.ts#L83">property <b>acceleratorId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/getEndpointGroups.ts#L83">property <b>acceleratorId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>acceleratorId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetEndpointGroupsResult-endpointGroupType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/getEndpointGroups.ts#L84">property <b>endpointGroupType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/getEndpointGroups.ts#L84">property <b>endpointGroupType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endpointGroupType?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetEndpointGroupsResult-groups">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/getEndpointGroups.ts#L85">property <b>groups</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/getEndpointGroups.ts#L85">property <b>groups</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groups: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetEndpointGroupsGroup'>GetEndpointGroupsGroup</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetEndpointGroupsResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/getEndpointGroups.ts#L89">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/getEndpointGroups.ts#L89">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1887,37 +2300,119 @@ A collection of values returned by getEndpointGroups.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetEndpointGroupsResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/getEndpointGroups.ts#L90">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/getEndpointGroups.ts#L90">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetEndpointGroupsResult-listenerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/getEndpointGroups.ts#L91">property <b>listenerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/getEndpointGroups.ts#L91">property <b>listenerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>listenerId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetEndpointGroupsResult-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/getEndpointGroups.ts#L92">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/getEndpointGroups.ts#L92">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetEndpointGroupsResult-names">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/getEndpointGroups.ts#L93">property <b>names</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/getEndpointGroups.ts#L93">property <b>names</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>names: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetEndpointGroupsResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/getEndpointGroups.ts#L94">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/getEndpointGroups.ts#L94">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetEndpointGroupsResult-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/getEndpointGroups.ts#L95">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/getEndpointGroups.ts#L95">property <b>status</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>status?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+<h3 class="pdoc-module-header" id="GetIpSetsArgs" data-link-title="GetIpSetsArgs">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/getIpSets.ts#L47">
+        interface <strong>GetIpSetsArgs</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetIpSetsArgs</span></code></pre>
+
+A collection of arguments for invoking getIpSets.
+
+<h4 class="pdoc-member-header" id="GetIpSetsArgs-acceleratorId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/getIpSets.ts#L51">property <b>acceleratorId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>acceleratorId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+The ID of the Global Accelerator (GA) instance.
+
+<h4 class="pdoc-member-header" id="GetIpSetsArgs-ids">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/getIpSets.ts#L55">property <b>ids</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>ids?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
+
+A list of Ip Set IDs.
+
+<h4 class="pdoc-member-header" id="GetIpSetsArgs-outputFile">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/getIpSets.ts#L56">property <b>outputFile</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+<h4 class="pdoc-member-header" id="GetIpSetsArgs-status">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/getIpSets.ts#L60">property <b>status</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>status?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+The status of the acceleration region.
+
+<h3 class="pdoc-module-header" id="GetIpSetsResult" data-link-title="GetIpSetsResult">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/getIpSets.ts#L66">
+        interface <strong>GetIpSetsResult</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>GetIpSetsResult</span></code></pre>
+
+A collection of values returned by getIpSets.
+
+<h4 class="pdoc-member-header" id="GetIpSetsResult-acceleratorId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/getIpSets.ts#L67">property <b>acceleratorId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>acceleratorId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+<h4 class="pdoc-member-header" id="GetIpSetsResult-id">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/getIpSets.ts#L71">property <b>id</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+
+The provider-assigned unique ID for this managed resource.
+
+<h4 class="pdoc-member-header" id="GetIpSetsResult-ids">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/getIpSets.ts#L72">property <b>ids</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
+<h4 class="pdoc-member-header" id="GetIpSetsResult-outputFile">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/getIpSets.ts#L73">property <b>outputFile</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+<h4 class="pdoc-member-header" id="GetIpSetsResult-sets">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/getIpSets.ts#L74">property <b>sets</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>sets: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetIpSetsSet'>GetIpSetsSet</a>[];</code></pre>
+<h4 class="pdoc-member-header" id="GetIpSetsResult-status">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/getIpSets.ts#L75">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetListenersArgs" data-link-title="GetListenersArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/getListeners.ts#L49">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/getListeners.ts#L49">
         interface <strong>GetListenersArgs</strong>
     </a>
 </h3>
@@ -1927,7 +2422,7 @@ The provider-assigned unique ID for this managed resource.
 A collection of arguments for invoking getListeners.
 
 <h4 class="pdoc-member-header" id="GetListenersArgs-acceleratorId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/getListeners.ts#L53">property <b>acceleratorId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/getListeners.ts#L53">property <b>acceleratorId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>acceleratorId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1935,7 +2430,7 @@ A collection of arguments for invoking getListeners.
 The accelerator id.
 
 <h4 class="pdoc-member-header" id="GetListenersArgs-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/getListeners.ts#L57">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/getListeners.ts#L57">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1943,7 +2438,7 @@ The accelerator id.
 A list of Listener IDs.
 
 <h4 class="pdoc-member-header" id="GetListenersArgs-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/getListeners.ts#L61">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/getListeners.ts#L61">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1951,12 +2446,12 @@ A list of Listener IDs.
 A regex string to filter results by Listener name.
 
 <h4 class="pdoc-member-header" id="GetListenersArgs-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/getListeners.ts#L62">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/getListeners.ts#L62">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetListenersArgs-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/getListeners.ts#L66">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/getListeners.ts#L66">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1964,7 +2459,7 @@ A regex string to filter results by Listener name.
 The status of the listener.
 
 <h3 class="pdoc-module-header" id="GetListenersResult" data-link-title="GetListenersResult">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/getListeners.ts#L72">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/getListeners.ts#L72">
         interface <strong>GetListenersResult</strong>
     </a>
 </h3>
@@ -1974,12 +2469,12 @@ The status of the listener.
 A collection of values returned by getListeners.
 
 <h4 class="pdoc-member-header" id="GetListenersResult-acceleratorId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/getListeners.ts#L73">property <b>acceleratorId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/getListeners.ts#L73">property <b>acceleratorId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>acceleratorId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetListenersResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/getListeners.ts#L77">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/getListeners.ts#L77">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1987,37 +2482,137 @@ A collection of values returned by getListeners.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetListenersResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/getListeners.ts#L78">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/getListeners.ts#L78">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetListenersResult-listeners">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/getListeners.ts#L79">property <b>listeners</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/getListeners.ts#L79">property <b>listeners</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>listeners: <a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/output/#GetListenersListener'>GetListenersListener</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetListenersResult-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/getListeners.ts#L80">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/getListeners.ts#L80">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetListenersResult-names">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/getListeners.ts#L81">property <b>names</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/getListeners.ts#L81">property <b>names</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>names: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetListenersResult-outputFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/getListeners.ts#L82">property <b>outputFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/getListeners.ts#L82">property <b>outputFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>outputFile?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetListenersResult-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/getListeners.ts#L83">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/getListeners.ts#L83">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
+<h3 class="pdoc-module-header" id="IpSetArgs" data-link-title="IpSetArgs">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/ipSet.ts#L186">
+        interface <strong>IpSetArgs</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>IpSetArgs</span></code></pre>
+
+The set of arguments for constructing a IpSet resource.
+
+<h4 class="pdoc-member-header" id="IpSetArgs-accelerateRegionId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/ipSet.ts#L190">property <b>accelerateRegionId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>accelerateRegionId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The ID of an acceleration region.
+
+<h4 class="pdoc-member-header" id="IpSetArgs-acceleratorId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/ipSet.ts#L194">property <b>acceleratorId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>acceleratorId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The ID of the Global Accelerator (GA) instance.
+
+<h4 class="pdoc-member-header" id="IpSetArgs-bandwidth">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/ipSet.ts#L198">property <b>bandwidth</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>bandwidth?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
+
+The bandwidth allocated to the acceleration region.
+
+<h4 class="pdoc-member-header" id="IpSetArgs-ipVersion">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/ipSet.ts#L202">property <b>ipVersion</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>ipVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The IP protocol used by the GA instance. Valid values: `IPv4`, `IPv6`. Default value is `IPv4`.
+
+<h3 class="pdoc-module-header" id="IpSetState" data-link-title="IpSetState">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/ipSet.ts#L156">
+        interface <strong>IpSetState</strong>
+    </a>
+</h3>
+
+<pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>IpSetState</span></code></pre>
+
+Input properties used for looking up and filtering IpSet resources.
+
+<h4 class="pdoc-member-header" id="IpSetState-accelerateRegionId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/ipSet.ts#L160">property <b>accelerateRegionId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>accelerateRegionId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The ID of an acceleration region.
+
+<h4 class="pdoc-member-header" id="IpSetState-acceleratorId">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/ipSet.ts#L164">property <b>acceleratorId</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>acceleratorId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The ID of the Global Accelerator (GA) instance.
+
+<h4 class="pdoc-member-header" id="IpSetState-bandwidth">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/ipSet.ts#L168">property <b>bandwidth</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>bandwidth?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
+
+The bandwidth allocated to the acceleration region.
+
+<h4 class="pdoc-member-header" id="IpSetState-ipAddressLists">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/ipSet.ts#L172">property <b>ipAddressLists</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>ipAddressLists?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
+
+The list of accelerated IP addresses in the acceleration region.
+
+<h4 class="pdoc-member-header" id="IpSetState-ipVersion">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/ipSet.ts#L176">property <b>ipVersion</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>ipVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The IP protocol used by the GA instance. Valid values: `IPv4`, `IPv6`. Default value is `IPv4`.
+
+<h4 class="pdoc-member-header" id="IpSetState-status">
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/ipSet.ts#L180">property <b>status</b></a>
+</h4>
+
+<pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
+
+The status of the acceleration region.
+
 <h3 class="pdoc-module-header" id="ListenerArgs" data-link-title="ListenerArgs">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/listener.ts#L209">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/listener.ts#L209">
         interface <strong>ListenerArgs</strong>
     </a>
 </h3>
@@ -2027,7 +2622,7 @@ The provider-assigned unique ID for this managed resource.
 The set of arguments for constructing a Listener resource.
 
 <h4 class="pdoc-member-header" id="ListenerArgs-acceleratorId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/listener.ts#L213">property <b>acceleratorId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/listener.ts#L213">property <b>acceleratorId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>acceleratorId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2035,7 +2630,7 @@ The set of arguments for constructing a Listener resource.
 The accelerator id.
 
 <h4 class="pdoc-member-header" id="ListenerArgs-certificates">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/listener.ts#L217">property <b>certificates</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/listener.ts#L217">property <b>certificates</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certificates?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#ListenerCertificate'>ListenerCertificate</a>&gt;[]&gt;;</code></pre>
@@ -2043,7 +2638,7 @@ The accelerator id.
 The certificates of the listener.
 
 <h4 class="pdoc-member-header" id="ListenerArgs-clientAffinity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/listener.ts#L223">property <b>clientAffinity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/listener.ts#L223">property <b>clientAffinity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientAffinity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2053,7 +2648,7 @@ The clientAffinity of the listener. Default value is `NONE`. Valid values:
 `SOURCE_IP`: maintain client affinity. When a client accesses a stateful application, all requests from the same client can be directed to the same terminal node, regardless of the source port and protocol.
 
 <h4 class="pdoc-member-header" id="ListenerArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/listener.ts#L227">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/listener.ts#L227">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2061,7 +2656,7 @@ The clientAffinity of the listener. Default value is `NONE`. Valid values:
 The description of the listener.
 
 <h4 class="pdoc-member-header" id="ListenerArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/listener.ts#L231">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/listener.ts#L231">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2069,7 +2664,7 @@ The description of the listener.
 The name of the listener. The length of the name is 2-128 characters. It starts with uppercase and lowercase letters or Chinese characters. It can contain numbers and underscores and dashes.
 
 <h4 class="pdoc-member-header" id="ListenerArgs-portRanges">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/listener.ts#L235">property <b>portRanges</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/listener.ts#L235">property <b>portRanges</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>portRanges: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#ListenerPortRange'>ListenerPortRange</a>&gt;[]&gt;;</code></pre>
@@ -2077,7 +2672,7 @@ The name of the listener. The length of the name is 2-128 characters. It starts 
 The portRanges of the listener.
 
 <h4 class="pdoc-member-header" id="ListenerArgs-protocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/listener.ts#L239">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/listener.ts#L239">property <b>protocol</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>protocol?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2085,7 +2680,7 @@ The portRanges of the listener.
 Type of network transport protocol monitored. Default value is `TCP`. Valid values: `TCP`, `UDP`.
 
 <h4 class="pdoc-member-header" id="ListenerArgs-proxyProtocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/listener.ts#L243">property <b>proxyProtocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/listener.ts#L243">property <b>proxyProtocol</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>proxyProtocol?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2093,7 +2688,7 @@ Type of network transport protocol monitored. Default value is `TCP`. Valid valu
 The proxy protocol of the listener.
 
 <h3 class="pdoc-module-header" id="ListenerState" data-link-title="ListenerState">
-    <a href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/listener.ts#L165">
+    <a href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/listener.ts#L165">
         interface <strong>ListenerState</strong>
     </a>
 </h3>
@@ -2103,7 +2698,7 @@ The proxy protocol of the listener.
 Input properties used for looking up and filtering Listener resources.
 
 <h4 class="pdoc-member-header" id="ListenerState-acceleratorId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/listener.ts#L169">property <b>acceleratorId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/listener.ts#L169">property <b>acceleratorId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>acceleratorId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2111,7 +2706,7 @@ Input properties used for looking up and filtering Listener resources.
 The accelerator id.
 
 <h4 class="pdoc-member-header" id="ListenerState-certificates">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/listener.ts#L173">property <b>certificates</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/listener.ts#L173">property <b>certificates</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certificates?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#ListenerCertificate'>ListenerCertificate</a>&gt;[]&gt;;</code></pre>
@@ -2119,7 +2714,7 @@ The accelerator id.
 The certificates of the listener.
 
 <h4 class="pdoc-member-header" id="ListenerState-clientAffinity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/listener.ts#L179">property <b>clientAffinity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/listener.ts#L179">property <b>clientAffinity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientAffinity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2129,7 +2724,7 @@ The clientAffinity of the listener. Default value is `NONE`. Valid values:
 `SOURCE_IP`: maintain client affinity. When a client accesses a stateful application, all requests from the same client can be directed to the same terminal node, regardless of the source port and protocol.
 
 <h4 class="pdoc-member-header" id="ListenerState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/listener.ts#L183">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/listener.ts#L183">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2137,7 +2732,7 @@ The clientAffinity of the listener. Default value is `NONE`. Valid values:
 The description of the listener.
 
 <h4 class="pdoc-member-header" id="ListenerState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/listener.ts#L187">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/listener.ts#L187">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2145,7 +2740,7 @@ The description of the listener.
 The name of the listener. The length of the name is 2-128 characters. It starts with uppercase and lowercase letters or Chinese characters. It can contain numbers and underscores and dashes.
 
 <h4 class="pdoc-member-header" id="ListenerState-portRanges">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/listener.ts#L191">property <b>portRanges</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/listener.ts#L191">property <b>portRanges</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>portRanges?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/alicloud/types/input/#ListenerPortRange'>ListenerPortRange</a>&gt;[]&gt;;</code></pre>
@@ -2153,7 +2748,7 @@ The name of the listener. The length of the name is 2-128 characters. It starts 
 The portRanges of the listener.
 
 <h4 class="pdoc-member-header" id="ListenerState-protocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/listener.ts#L195">property <b>protocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/listener.ts#L195">property <b>protocol</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>protocol?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2161,7 +2756,7 @@ The portRanges of the listener.
 Type of network transport protocol monitored. Default value is `TCP`. Valid values: `TCP`, `UDP`.
 
 <h4 class="pdoc-member-header" id="ListenerState-proxyProtocol">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/listener.ts#L199">property <b>proxyProtocol</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/listener.ts#L199">property <b>proxyProtocol</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>proxyProtocol?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2169,7 +2764,7 @@ Type of network transport protocol monitored. Default value is `TCP`. Valid valu
 The proxy protocol of the listener.
 
 <h4 class="pdoc-member-header" id="ListenerState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/0f615eee1524d45af80e9cf9d0a968ae1d1b58ae/sdk/nodejs/ga/listener.ts#L203">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-alicloud/blob/84d761bea49f23fb37c890ced8154c67c2c45089/sdk/nodejs/ga/listener.ts#L203">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

@@ -295,16 +295,16 @@ default_images = alicloud.ecs.get_images(name_regex="^ubuntu_18.*64",
     most_recent=True,
     owners="system")
 vpc = alicloud.vpc.Network("vpc", cidr_block="172.16.0.0/12",
-opts=ResourceOptions(provider=alicloud["hz"]))
+opts=pulumi.ResourceOptions(provider=alicloud["hz"]))
 default_switch = alicloud.vpc.Switch("defaultSwitch",
     vpc_id=vpc.id,
     cidr_block="172.16.0.0/21",
     availability_zone=default_zones.zones[0].id,
-    opts=ResourceOptions(provider=alicloud["hz"]))
+    opts=pulumi.ResourceOptions(provider=alicloud["hz"]))
 default_security_group = alicloud.ecs.SecurityGroup("defaultSecurityGroup",
     description="foo",
     vpc_id=vpc.id,
-    opts=ResourceOptions(provider=alicloud["hz"]))
+    opts=pulumi.ResourceOptions(provider=alicloud["hz"]))
 default_instance = alicloud.ecs.Instance("defaultInstance",
     vswitch_id=default_switch.id,
     image_id=default_images.images[0].id,
@@ -314,25 +314,25 @@ default_instance = alicloud.ecs.Instance("defaultInstance",
     internet_max_bandwidth_out=5,
     security_groups=[default_security_group.id],
     instance_name=name,
-    opts=ResourceOptions(provider=alicloud["hz"]))
+    opts=pulumi.ResourceOptions(provider=alicloud["hz"]))
 cen = alicloud.cen.Instance("cen")
 attach = alicloud.cen.InstanceAttachment("attach",
     instance_id=cen.id,
     child_instance_id=vpc.id,
     child_instance_type="VPC",
     child_instance_region_id="cn-hangzhou",
-    opts=ResourceOptions(depends_on=[default_switch]))
+    opts=pulumi.ResourceOptions(depends_on=[default_switch]))
 route = alicloud.vpc.RouteEntry("route",
     route_table_id=vpc.route_table_id,
     destination_cidrblock="11.0.0.0/16",
     nexthop_type="Instance",
     nexthop_id=default_instance.id,
-    opts=ResourceOptions(provider=alicloud["hz"]))
+    opts=pulumi.ResourceOptions(provider=alicloud["hz"]))
 foo = alicloud.cen.RouteEntry("foo",
     instance_id=cen.id,
     route_table_id=vpc.route_table_id,
     cidr_block=route.destination_cidrblock,
-    opts=ResourceOptions(provider=alicloud["hz"],
+    opts=pulumi.ResourceOptions(provider=alicloud["hz"],
         depends_on=[attach]))
 ```
 

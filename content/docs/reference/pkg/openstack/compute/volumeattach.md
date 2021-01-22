@@ -344,7 +344,7 @@ const va2 = new openstack.compute.VolumeAttach("va_2", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/compute/#pulumi_openstack.compute.VolumeAttach">VolumeAttach</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">device</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">multiattach</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">volume_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_openstack/compute/#pulumi_openstack.compute.VolumeAttach">VolumeAttach</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">device</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">multiattach</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vendor_options</span><span class="p">:</span> <span class="nx">Optional[VolumeAttachVendorOptionsArgs]</span> = None<span class="p">, </span><span class="nx">volume_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -570,6 +570,17 @@ A Compute client is needed to create a volume attachment. If omitted, the
 `region` argument of the provider is used. Changing this creates a
 new volume attachment.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vendoroptions_csharp">
+<a href="#vendoroptions_csharp" style="color: inherit; text-decoration: inherit;">Vendor<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#volumeattachvendoroptions">Pulumi.<wbr>Open<wbr>Stack.<wbr>Compute.<wbr>Inputs.<wbr>Volume<wbr>Attach<wbr>Vendor<wbr>Options<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Map of additional vendor-specific options.
+Supported options are described below.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -630,6 +641,17 @@ should not be used as an authoritative piece of information.
 A Compute client is needed to create a volume attachment. If omitted, the
 `region` argument of the provider is used. Changing this creates a
 new volume attachment.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vendoroptions_go">
+<a href="#vendoroptions_go" style="color: inherit; text-decoration: inherit;">Vendor<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#volumeattachvendoroptions">Volume<wbr>Attach<wbr>Vendor<wbr>Options</a></span>
+    </dt>
+    <dd>{{% md %}}Map of additional vendor-specific options.
+Supported options are described below.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -692,6 +714,17 @@ A Compute client is needed to create a volume attachment. If omitted, the
 `region` argument of the provider is used. Changing this creates a
 new volume attachment.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vendoroptions_nodejs">
+<a href="#vendoroptions_nodejs" style="color: inherit; text-decoration: inherit;">vendor<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#volumeattachvendoroptions">Volume<wbr>Attach<wbr>Vendor<wbr>Options</a></span>
+    </dt>
+    <dd>{{% md %}}Map of additional vendor-specific options.
+Supported options are described below.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -752,6 +785,17 @@ should not be used as an authoritative piece of information.
 A Compute client is needed to create a volume attachment. If omitted, the
 `region` argument of the provider is used. Changing this creates a
 new volume attachment.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vendor_options_python">
+<a href="#vendor_options_python" style="color: inherit; text-decoration: inherit;">vendor_<wbr>options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#volumeattachvendoroptions">Volume<wbr>Attach<wbr>Vendor<wbr>Options<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Map of additional vendor-specific options.
+Supported options are described below.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -836,7 +880,7 @@ Get an existing VolumeAttach resource's state with the given name, ID, and optio
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">device</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">multiattach</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">volume_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> VolumeAttach</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">device</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">instance_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">multiattach</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">vendor_options</span><span class="p">:</span> <span class="nx">Optional[VolumeAttachVendorOptionsArgs]</span> = None<span class="p">, </span><span class="nx">volume_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> VolumeAttach</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -996,6 +1040,17 @@ new volume attachment.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_vendoroptions_csharp">
+<a href="#state_vendoroptions_csharp" style="color: inherit; text-decoration: inherit;">Vendor<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#volumeattachvendoroptions">Pulumi.<wbr>Open<wbr>Stack.<wbr>Compute.<wbr>Inputs.<wbr>Volume<wbr>Attach<wbr>Vendor<wbr>Options<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Map of additional vendor-specific options.
+Supported options are described below.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_volumeid_csharp">
 <a href="#state_volumeid_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Id</a>
 </span>
@@ -1054,6 +1109,17 @@ should not be used as an authoritative piece of information.
 A Compute client is needed to create a volume attachment. If omitted, the
 `region` argument of the provider is used. Changing this creates a
 new volume attachment.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_vendoroptions_go">
+<a href="#state_vendoroptions_go" style="color: inherit; text-decoration: inherit;">Vendor<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#volumeattachvendoroptions">Volume<wbr>Attach<wbr>Vendor<wbr>Options</a></span>
+    </dt>
+    <dd>{{% md %}}Map of additional vendor-specific options.
+Supported options are described below.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1118,6 +1184,17 @@ new volume attachment.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_vendoroptions_nodejs">
+<a href="#state_vendoroptions_nodejs" style="color: inherit; text-decoration: inherit;">vendor<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#volumeattachvendoroptions">Volume<wbr>Attach<wbr>Vendor<wbr>Options</a></span>
+    </dt>
+    <dd>{{% md %}}Map of additional vendor-specific options.
+Supported options are described below.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_volumeid_nodejs">
 <a href="#state_volumeid_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Id</a>
 </span>
@@ -1179,6 +1256,17 @@ new volume attachment.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_vendor_options_python">
+<a href="#state_vendor_options_python" style="color: inherit; text-decoration: inherit;">vendor_<wbr>options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#volumeattachvendoroptions">Volume<wbr>Attach<wbr>Vendor<wbr>Options<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Map of additional vendor-specific options.
+Supported options are described below.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_volume_id_python">
 <a href="#state_volume_id_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>id</a>
 </span>
@@ -1194,6 +1282,96 @@ new volume attachment.
 
 
 
+
+## Supporting Types
+
+
+
+<h4 id="volumeattachvendoroptions">Volume<wbr>Attach<wbr>Vendor<wbr>Options</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/openstack/types/input/#VolumeAttachVendorOptions">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/openstack/types/output/#VolumeAttachVendorOptions">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/compute?tab=doc#VolumeAttachVendorOptionsArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-openstack/sdk/v2/go/openstack/compute?tab=doc#VolumeAttachVendorOptionsOutput">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.OpenStack/Pulumi.OpenStack.Compute.Inputs.VolumeAttachVendorOptionsArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.OpenStack/Pulumi.OpenStack.Compute.Outputs.VolumeAttachVendorOptions.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ignorevolumeconfirmation_csharp">
+<a href="#ignorevolumeconfirmation_csharp" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Volume<wbr>Confirmation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Boolean to control whether
+to ignore volume status confirmation of the attached volume. This can be helpful
+to work with some OpenStack clouds which don't have the Block Storage V3 API available.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ignorevolumeconfirmation_go">
+<a href="#ignorevolumeconfirmation_go" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Volume<wbr>Confirmation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Boolean to control whether
+to ignore volume status confirmation of the attached volume. This can be helpful
+to work with some OpenStack clouds which don't have the Block Storage V3 API available.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ignorevolumeconfirmation_nodejs">
+<a href="#ignorevolumeconfirmation_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Volume<wbr>Confirmation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Boolean to control whether
+to ignore volume status confirmation of the attached volume. This can be helpful
+to work with some OpenStack clouds which don't have the Block Storage V3 API available.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ignore_volume_confirmation_python">
+<a href="#ignore_volume_confirmation_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>volume_<wbr>confirmation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Boolean to control whether
+to ignore volume status confirmation of the attached volume. This can be helpful
+to work with some OpenStack clouds which don't have the Block Storage V3 API available.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
 ## Import
 
 

@@ -11,403 +11,6 @@ meta_desc: "Documentation for the spotinst.azure.Elastigroup resource with examp
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Provides a Spotinst elastigroup Azure resource.
-## Load Balancers
-
-* `load_balancers` - (Required) Describes a set of one or more classic load balancer target groups and/or Multai load balancer target sets.
-* `type` - (Required) The resource type. Valid values: CLASSIC, TARGET_GROUP, MULTAI_TARGET_SET.
-* `balancer_id` - (Required) The balancer ID.
-* `target_set_id` - (Required) The scale set ID associated with the load balancer.
-* `auto_weight` - (Optional, Default: `false`)
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-```
-```python
-import pulumi
-```
-```csharp
-using Pulumi;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-    }
-
-}
-```
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		return nil
-	})
-}
-```
-
-<a id="image"></a>
-## Image
-
-* `image` - (Required) Image of a VM. An image is a template for creating new VMs. Choose from Azure image catalogue (marketplace) or use a custom image.
-* `publisher` - (Optional) Image publisher. Required if resource_group_name is not specified.
-* `offer` - (Optional) Name of the image to use. Required if publisher is specified.
-* `sku` - (Optional) Image's Stock Keeping Unit, which is the specific version of the image. Required if publisher is specified.
-* `resource_group_name` - (Optional) Name of Resource Group for custom image. Required if publisher not specified.
-* `image_name` - (Optional) Name of the custom image. Required if resource_group_name is specified.
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-```
-```python
-import pulumi
-```
-```csharp
-using Pulumi;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-    }
-
-}
-```
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		return nil
-	})
-}
-```
-
-<a id="health-check"></a>
-## Health Check
-
-* `health_check` - (Optional) Describes the health check configuration.
-* `health_check_type` - (Optional) Health check used to validate VM health. Valid values: “INSTANCE_STATE”.
-* `grace_period` - (Optional) Period of time (seconds) to wait for VM to reach healthiness before monitoring for unhealthiness.
-* `auto_healing` - (Optional) Enable auto-healing of unhealthy VMs.
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-```
-```python
-import pulumi
-```
-```csharp
-using Pulumi;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-    }
-
-}
-```
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		return nil
-	})
-}
-```
-
-<a id="network"></a>
-## Network
-
-* `network` - (Required) Defines the Virtual Network and Subnet for your Elastigroup.
-* `virtual_network_name` - (Required) Name of Vnet.
-* `subnet_name` - (Required) ID of subnet.
-* `resource_group_name` - (Required) Vnet Resource Group Name.
-* `assign_public_up` - (Optional, Default: `false`) Assign a public IP to each VM in the Elastigroup.
-* `additional_ip_configs` - (Optional) Array of additional IP configuration objects.
-* `name` - (Required) The IP configuration name.
-* `private_ip_version` - (Optional) Available from Azure Api-Version 2017-03-30 onwards, it represents whether the specific ipconfiguration is IPv4 or IPv6. Valid values: `IPv4`, `IPv6`.
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-```
-```python
-import pulumi
-```
-```csharp
-using Pulumi;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-    }
-
-}
-```
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		return nil
-	})
-}
-```
-
-<a id="login"></a>
-## Login
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-```
-```python
-import pulumi
-```
-```csharp
-using Pulumi;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-    }
-
-}
-```
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		return nil
-	})
-}
-```
-
-<a id="login"></a>
-## Login
-
-* `login` - (Required) Describes the login configuration.
-* `user_name` - (Required) Set admin access for accessing your VMs.
-* `ssh_public_key` - (Optional) SSH for admin access to Linux VMs. Required for Linux product types.
-* `password` - (Optional) Password for admin access to Windows VMs. Required for Windows product types.
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-```
-```python
-import pulumi
-```
-```csharp
-using Pulumi;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-    }
-
-}
-```
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		return nil
-	})
-}
-```
-
-<a id="scaling-policy"></a>
-## Scheduling
-
-* `scheduled_task` - (Optional) Describes the configuration of one or more scheduled tasks.
-* `is_enabled` - (Optional, Default: `true`) Describes whether the task is enabled. When true the task should run when false it should not run.
-* `cron_expression` - (Required) A valid cron expression (`* * * * *`). The cron is running in UTC time zone and is in Unix cron format Cron Expression Validator Script.
-* `task_type` - (Required) The task type to run. Valid Values: `backup_ami`, `scale`, `scaleUp`, `roll`, `statefulUpdateCapacity`, `statefulRecycle`.
-* `scale_min_capacity` - (Optional) The min capacity of the group. Should be used when choosing ‘task_type' of ‘scale'.
-* `scale_max_capacity` - (Optional) The max capacity of the group. Required when ‘task_type' is ‘scale'.
-* `scale_target_capacity` - (Optional) The target capacity of the group. Should be used when choosing ‘task_type' of ‘scale'.
-* `adjustment` - (Optional) The number of instances to add/remove to/from the target capacity when scale is needed.
-* `adjustment_percentage` - (Optional) The percent of instances to add/remove to/from the target capacity when scale is needed.
-* `batch_size_percentage` - (Optional) The percentage size of each batch in the scheduled deployment roll. Required when the 'task_type' is 'roll'.
-* `grace_period` - (Optional) The time to allow instances to become healthy.
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-```
-```python
-import pulumi
-```
-```csharp
-using Pulumi;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-    }
-
-}
-```
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		return nil
-	})
-}
-```
-
-<a id="update-policy"></a>
-## Update Policy
-
-* `update_policy` - (Optional)
-  
-    * `should_roll` - (Required) Sets the enablement of the roll option.
-    * `roll_config` - (Required) While used, you can control whether the group should perform a deployment after an update to the configuration.
-        * `batch_size_percentage` - (Required) Sets the percentage of the instances to deploy in each batch.
-        * `health_check_type` - (Optional) Sets the health check type to use. Valid values: `"INSTANCE_STATE"`, `"NONE"`.
-        * `grace_period` - (Optional) Sets the grace period for new instances to become healthy.
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-```
-```python
-import pulumi
-```
-```csharp
-using Pulumi;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-    }
-
-}
-```
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		return nil
-	})
-}
-```
-
-<a id="third-party-integrations"></a>
-## Third-Party Integrations
-
-* `integration_kubernetes` - (Optional) Describes the [Kubernetes](https://kubernetes.io/) integration.
-    * `cluster_identifier` - (Required) The cluster ID.
-
-Usage:
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-```
-```python
-import pulumi
-```
-```csharp
-using Pulumi;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-    }
-
-}
-```
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		return nil
-	})
-}
-```
-
-* `integration_multai_runtime` - (Optional) Describes the [Multai Runtime](https://spotinst.com/) integration.
-    * `deployment_id` - (Optional) The deployment id you want to get
-
-Usage:
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-```
-```python
-import pulumi
-```
-```csharp
-using Pulumi;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-    }
-
-}
-```
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		return nil
-	})
-}
-```
 
 
 {{% examples %}}
@@ -1171,7 +774,8 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupnetwork">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Azure.<wbr>Inputs.<wbr>Elastigroup<wbr>Network<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Defines the Virtual Network and Subnet for your Elastigroup.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="odsizes_csharp">
@@ -1210,7 +814,7 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Resource Group that the user-assigned managed identity resides in.
+    <dd>{{% md %}}Vnet Resource Group Name.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1249,7 +853,8 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigrouphealthcheck">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Azure.<wbr>Inputs.<wbr>Elastigroup<wbr>Health<wbr>Check<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes the health check configuration.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="images_csharp">
@@ -1258,7 +863,8 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupimage">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Azure.<wbr>Inputs.<wbr>Elastigroup<wbr>Image<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Image of a VM. An image is a template for creating new VMs. Choose from Azure image catalogue (marketplace) or use a custom image.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="integrationkubernetes_csharp">
@@ -1267,7 +873,8 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupintegrationkubernetes">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Azure.<wbr>Inputs.<wbr>Elastigroup<wbr>Integration<wbr>Kubernetes<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes the [Kubernetes](https://kubernetes.io/) integration.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="integrationmultairuntime_csharp">
@@ -1276,7 +883,8 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupintegrationmultairuntime">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Azure.<wbr>Inputs.<wbr>Elastigroup<wbr>Integration<wbr>Multai<wbr>Runtime<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes the [Multai Runtime](https://spotinst.com/) integration.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="loadbalancers_csharp">
@@ -1285,7 +893,8 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigrouploadbalancer">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Azure.<wbr>Inputs.<wbr>Elastigroup<wbr>Load<wbr>Balancer<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes a set of one or more classic load balancer target groups and/or Multai load balancer target sets.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="login_csharp">
@@ -1294,7 +903,8 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigrouplogin">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Azure.<wbr>Inputs.<wbr>Elastigroup<wbr>Login<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes the login configuration.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="managedserviceidentities_csharp">
@@ -1332,7 +942,7 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the managed identity.
+    <dd>{{% md %}}The dimension name.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1360,7 +970,8 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupscheduledtask">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Azure.<wbr>Inputs.<wbr>Elastigroup<wbr>Scheduled<wbr>Task<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes the configuration of one or more scheduled tasks.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="shutdownscript_csharp">
@@ -1414,7 +1025,8 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupnetwork">Elastigroup<wbr>Network</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Defines the Virtual Network and Subnet for your Elastigroup.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="odsizes_go">
@@ -1453,7 +1065,7 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Resource Group that the user-assigned managed identity resides in.
+    <dd>{{% md %}}Vnet Resource Group Name.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1492,7 +1104,8 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigrouphealthcheck">Elastigroup<wbr>Health<wbr>Check</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes the health check configuration.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="images_go">
@@ -1501,7 +1114,8 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupimage">[]Elastigroup<wbr>Image</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Image of a VM. An image is a template for creating new VMs. Choose from Azure image catalogue (marketplace) or use a custom image.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="integrationkubernetes_go">
@@ -1510,7 +1124,8 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupintegrationkubernetes">Elastigroup<wbr>Integration<wbr>Kubernetes</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes the [Kubernetes](https://kubernetes.io/) integration.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="integrationmultairuntime_go">
@@ -1519,7 +1134,8 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupintegrationmultairuntime">Elastigroup<wbr>Integration<wbr>Multai<wbr>Runtime</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes the [Multai Runtime](https://spotinst.com/) integration.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="loadbalancers_go">
@@ -1528,7 +1144,8 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigrouploadbalancer">[]Elastigroup<wbr>Load<wbr>Balancer</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes a set of one or more classic load balancer target groups and/or Multai load balancer target sets.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="login_go">
@@ -1537,7 +1154,8 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigrouplogin">Elastigroup<wbr>Login</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes the login configuration.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="managedserviceidentities_go">
@@ -1575,7 +1193,7 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the managed identity.
+    <dd>{{% md %}}The dimension name.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1603,7 +1221,8 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupscheduledtask">[]Elastigroup<wbr>Scheduled<wbr>Task</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes the configuration of one or more scheduled tasks.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="shutdownscript_go">
@@ -1657,7 +1276,8 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupnetwork">Elastigroup<wbr>Network</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Defines the Virtual Network and Subnet for your Elastigroup.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="odsizes_nodejs">
@@ -1696,7 +1316,7 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Resource Group that the user-assigned managed identity resides in.
+    <dd>{{% md %}}Vnet Resource Group Name.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1735,7 +1355,8 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigrouphealthcheck">Elastigroup<wbr>Health<wbr>Check</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes the health check configuration.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="images_nodejs">
@@ -1744,7 +1365,8 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupimage">Elastigroup<wbr>Image[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Image of a VM. An image is a template for creating new VMs. Choose from Azure image catalogue (marketplace) or use a custom image.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="integrationkubernetes_nodejs">
@@ -1753,7 +1375,8 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupintegrationkubernetes">Elastigroup<wbr>Integration<wbr>Kubernetes</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes the [Kubernetes](https://kubernetes.io/) integration.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="integrationmultairuntime_nodejs">
@@ -1762,7 +1385,8 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupintegrationmultairuntime">Elastigroup<wbr>Integration<wbr>Multai<wbr>Runtime</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes the [Multai Runtime](https://spotinst.com/) integration.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="loadbalancers_nodejs">
@@ -1771,7 +1395,8 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigrouploadbalancer">Elastigroup<wbr>Load<wbr>Balancer[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes a set of one or more classic load balancer target groups and/or Multai load balancer target sets.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="login_nodejs">
@@ -1780,7 +1405,8 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigrouplogin">Elastigroup<wbr>Login</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes the login configuration.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="managedserviceidentities_nodejs">
@@ -1818,7 +1444,7 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the managed identity.
+    <dd>{{% md %}}The dimension name.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1846,7 +1472,8 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupscheduledtask">Elastigroup<wbr>Scheduled<wbr>Task[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes the configuration of one or more scheduled tasks.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="shutdownscript_nodejs">
@@ -1900,7 +1527,8 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupnetwork">Elastigroup<wbr>Network<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Defines the Virtual Network and Subnet for your Elastigroup.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="od_sizes_python">
@@ -1939,7 +1567,7 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Resource Group that the user-assigned managed identity resides in.
+    <dd>{{% md %}}Vnet Resource Group Name.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1978,7 +1606,8 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigrouphealthcheck">Elastigroup<wbr>Health<wbr>Check<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes the health check configuration.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="images_python">
@@ -1987,7 +1616,8 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupimage">Sequence[Elastigroup<wbr>Image<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Image of a VM. An image is a template for creating new VMs. Choose from Azure image catalogue (marketplace) or use a custom image.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="integration_kubernetes_python">
@@ -1996,7 +1626,8 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupintegrationkubernetes">Elastigroup<wbr>Integration<wbr>Kubernetes<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes the [Kubernetes](https://kubernetes.io/) integration.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="integration_multai_runtime_python">
@@ -2005,7 +1636,8 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupintegrationmultairuntime">Elastigroup<wbr>Integration<wbr>Multai<wbr>Runtime<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes the [Multai Runtime](https://spotinst.com/) integration.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="load_balancers_python">
@@ -2014,7 +1646,8 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigrouploadbalancer">Sequence[Elastigroup<wbr>Load<wbr>Balancer<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes a set of one or more classic load balancer target groups and/or Multai load balancer target sets.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="login_python">
@@ -2023,7 +1656,8 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigrouplogin">Elastigroup<wbr>Login<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes the login configuration.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="managed_service_identities_python">
@@ -2061,7 +1695,7 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the managed identity.
+    <dd>{{% md %}}The dimension name.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2089,7 +1723,8 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupscheduledtask">Sequence[Elastigroup<wbr>Scheduled<wbr>Task<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes the configuration of one or more scheduled tasks.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="shutdown_script_python">
@@ -2342,7 +1977,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigrouphealthcheck">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Azure.<wbr>Inputs.<wbr>Elastigroup<wbr>Health<wbr>Check<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes the health check configuration.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_images_csharp">
@@ -2351,7 +1987,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupimage">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Azure.<wbr>Inputs.<wbr>Elastigroup<wbr>Image<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Image of a VM. An image is a template for creating new VMs. Choose from Azure image catalogue (marketplace) or use a custom image.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_integrationkubernetes_csharp">
@@ -2360,7 +1997,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupintegrationkubernetes">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Azure.<wbr>Inputs.<wbr>Elastigroup<wbr>Integration<wbr>Kubernetes<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes the [Kubernetes](https://kubernetes.io/) integration.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_integrationmultairuntime_csharp">
@@ -2369,7 +2007,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupintegrationmultairuntime">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Azure.<wbr>Inputs.<wbr>Elastigroup<wbr>Integration<wbr>Multai<wbr>Runtime<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes the [Multai Runtime](https://spotinst.com/) integration.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_loadbalancers_csharp">
@@ -2378,7 +2017,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigrouploadbalancer">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Azure.<wbr>Inputs.<wbr>Elastigroup<wbr>Load<wbr>Balancer<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes a set of one or more classic load balancer target groups and/or Multai load balancer target sets.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_login_csharp">
@@ -2387,7 +2027,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigrouplogin">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Azure.<wbr>Inputs.<wbr>Elastigroup<wbr>Login<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes the login configuration.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_lowprioritysizes_csharp">
@@ -2435,7 +2076,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the managed identity.
+    <dd>{{% md %}}The dimension name.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2445,7 +2086,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupnetwork">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Azure.<wbr>Inputs.<wbr>Elastigroup<wbr>Network<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Defines the Virtual Network and Subnet for your Elastigroup.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_odsizes_csharp">
@@ -2484,7 +2126,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Resource Group that the user-assigned managed identity resides in.
+    <dd>{{% md %}}Vnet Resource Group Name.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2512,7 +2154,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupscheduledtask">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Azure.<wbr>Inputs.<wbr>Elastigroup<wbr>Scheduled<wbr>Task<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes the configuration of one or more scheduled tasks.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_shutdownscript_csharp">
@@ -2585,7 +2228,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigrouphealthcheck">Elastigroup<wbr>Health<wbr>Check</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes the health check configuration.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_images_go">
@@ -2594,7 +2238,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupimage">[]Elastigroup<wbr>Image</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Image of a VM. An image is a template for creating new VMs. Choose from Azure image catalogue (marketplace) or use a custom image.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_integrationkubernetes_go">
@@ -2603,7 +2248,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupintegrationkubernetes">Elastigroup<wbr>Integration<wbr>Kubernetes</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes the [Kubernetes](https://kubernetes.io/) integration.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_integrationmultairuntime_go">
@@ -2612,7 +2258,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupintegrationmultairuntime">Elastigroup<wbr>Integration<wbr>Multai<wbr>Runtime</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes the [Multai Runtime](https://spotinst.com/) integration.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_loadbalancers_go">
@@ -2621,7 +2268,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigrouploadbalancer">[]Elastigroup<wbr>Load<wbr>Balancer</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes a set of one or more classic load balancer target groups and/or Multai load balancer target sets.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_login_go">
@@ -2630,7 +2278,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigrouplogin">Elastigroup<wbr>Login</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes the login configuration.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_lowprioritysizes_go">
@@ -2678,7 +2327,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the managed identity.
+    <dd>{{% md %}}The dimension name.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2688,7 +2337,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupnetwork">Elastigroup<wbr>Network</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Defines the Virtual Network and Subnet for your Elastigroup.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_odsizes_go">
@@ -2727,7 +2377,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Resource Group that the user-assigned managed identity resides in.
+    <dd>{{% md %}}Vnet Resource Group Name.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2755,7 +2405,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupscheduledtask">[]Elastigroup<wbr>Scheduled<wbr>Task</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes the configuration of one or more scheduled tasks.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_shutdownscript_go">
@@ -2828,7 +2479,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigrouphealthcheck">Elastigroup<wbr>Health<wbr>Check</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes the health check configuration.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_images_nodejs">
@@ -2837,7 +2489,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupimage">Elastigroup<wbr>Image[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Image of a VM. An image is a template for creating new VMs. Choose from Azure image catalogue (marketplace) or use a custom image.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_integrationkubernetes_nodejs">
@@ -2846,7 +2499,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupintegrationkubernetes">Elastigroup<wbr>Integration<wbr>Kubernetes</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes the [Kubernetes](https://kubernetes.io/) integration.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_integrationmultairuntime_nodejs">
@@ -2855,7 +2509,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupintegrationmultairuntime">Elastigroup<wbr>Integration<wbr>Multai<wbr>Runtime</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes the [Multai Runtime](https://spotinst.com/) integration.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_loadbalancers_nodejs">
@@ -2864,7 +2519,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigrouploadbalancer">Elastigroup<wbr>Load<wbr>Balancer[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes a set of one or more classic load balancer target groups and/or Multai load balancer target sets.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_login_nodejs">
@@ -2873,7 +2529,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigrouplogin">Elastigroup<wbr>Login</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes the login configuration.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_lowprioritysizes_nodejs">
@@ -2921,7 +2578,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the managed identity.
+    <dd>{{% md %}}The dimension name.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2931,7 +2588,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupnetwork">Elastigroup<wbr>Network</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Defines the Virtual Network and Subnet for your Elastigroup.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_odsizes_nodejs">
@@ -2970,7 +2628,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Resource Group that the user-assigned managed identity resides in.
+    <dd>{{% md %}}Vnet Resource Group Name.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2998,7 +2656,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupscheduledtask">Elastigroup<wbr>Scheduled<wbr>Task[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes the configuration of one or more scheduled tasks.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_shutdownscript_nodejs">
@@ -3071,7 +2730,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigrouphealthcheck">Elastigroup<wbr>Health<wbr>Check<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes the health check configuration.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_images_python">
@@ -3080,7 +2740,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupimage">Sequence[Elastigroup<wbr>Image<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Image of a VM. An image is a template for creating new VMs. Choose from Azure image catalogue (marketplace) or use a custom image.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_integration_kubernetes_python">
@@ -3089,7 +2750,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupintegrationkubernetes">Elastigroup<wbr>Integration<wbr>Kubernetes<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes the [Kubernetes](https://kubernetes.io/) integration.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_integration_multai_runtime_python">
@@ -3098,7 +2760,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupintegrationmultairuntime">Elastigroup<wbr>Integration<wbr>Multai<wbr>Runtime<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes the [Multai Runtime](https://spotinst.com/) integration.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_load_balancers_python">
@@ -3107,7 +2770,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigrouploadbalancer">Sequence[Elastigroup<wbr>Load<wbr>Balancer<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes a set of one or more classic load balancer target groups and/or Multai load balancer target sets.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_login_python">
@@ -3116,7 +2780,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigrouplogin">Elastigroup<wbr>Login<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes the login configuration.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_low_priority_sizes_python">
@@ -3164,7 +2829,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the managed identity.
+    <dd>{{% md %}}The dimension name.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3174,7 +2839,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupnetwork">Elastigroup<wbr>Network<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Defines the Virtual Network and Subnet for your Elastigroup.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_od_sizes_python">
@@ -3213,7 +2879,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Resource Group that the user-assigned managed identity resides in.
+    <dd>{{% md %}}Vnet Resource Group Name.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3241,7 +2907,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupscheduledtask">Sequence[Elastigroup<wbr>Scheduled<wbr>Task<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes the configuration of one or more scheduled tasks.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_shutdown_script_python">
@@ -3318,7 +2985,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Sets the health check type to use. Valid values: `"INSTANCE_STATE"`, `"NONE"`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="autohealing_csharp">
@@ -3327,7 +2995,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Enable auto-healing of unhealthy VMs.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="graceperiod_csharp">
@@ -3336,7 +3005,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Sets the grace period for new instances to become healthy.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -3351,7 +3021,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Sets the health check type to use. Valid values: `"INSTANCE_STATE"`, `"NONE"`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="autohealing_go">
@@ -3360,7 +3031,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Enable auto-healing of unhealthy VMs.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="graceperiod_go">
@@ -3369,7 +3041,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Sets the grace period for new instances to become healthy.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -3384,7 +3057,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Sets the health check type to use. Valid values: `"INSTANCE_STATE"`, `"NONE"`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="autohealing_nodejs">
@@ -3393,7 +3067,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Enable auto-healing of unhealthy VMs.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="graceperiod_nodejs">
@@ -3402,7 +3077,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Sets the grace period for new instances to become healthy.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -3417,7 +3093,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Sets the health check type to use. Valid values: `"INSTANCE_STATE"`, `"NONE"`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="auto_healing_python">
@@ -3426,7 +3103,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Enable auto-healing of unhealthy VMs.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="grace_period_python">
@@ -3435,7 +3113,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Sets the grace period for new instances to become healthy.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -3574,7 +3253,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the custom image. Required if resource_group_name is specified.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
@@ -3583,7 +3263,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Resource Group that the user-assigned managed identity resides in.
+    <dd>{{% md %}}Vnet Resource Group Name.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -3599,7 +3279,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the custom image. Required if resource_group_name is specified.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
@@ -3608,7 +3289,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Resource Group that the user-assigned managed identity resides in.
+    <dd>{{% md %}}Vnet Resource Group Name.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -3624,7 +3305,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the custom image. Required if resource_group_name is specified.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
@@ -3633,7 +3315,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Resource Group that the user-assigned managed identity resides in.
+    <dd>{{% md %}}Vnet Resource Group Name.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -3649,7 +3331,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the custom image. Required if resource_group_name is specified.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
@@ -3658,7 +3341,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Resource Group that the user-assigned managed identity resides in.
+    <dd>{{% md %}}Vnet Resource Group Name.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -3688,7 +3371,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the image to use. Required if publisher is specified.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="publisher_csharp">
@@ -3697,7 +3381,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Image publisher. Required if resource_group_name is not specified.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="sku_csharp">
@@ -3706,7 +3391,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Image's Stock Keeping Unit, which is the specific version of the image. Required if publisher is specified.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -3721,7 +3407,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the image to use. Required if publisher is specified.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="publisher_go">
@@ -3730,7 +3417,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Image publisher. Required if resource_group_name is not specified.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="sku_go">
@@ -3739,7 +3427,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Image's Stock Keeping Unit, which is the specific version of the image. Required if publisher is specified.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -3754,7 +3443,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the image to use. Required if publisher is specified.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="publisher_nodejs">
@@ -3763,7 +3453,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Image publisher. Required if resource_group_name is not specified.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="sku_nodejs">
@@ -3772,7 +3463,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Image's Stock Keeping Unit, which is the specific version of the image. Required if publisher is specified.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -3787,7 +3479,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the image to use. Required if publisher is specified.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="publisher_python">
@@ -3796,7 +3489,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Image publisher. Required if resource_group_name is not specified.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="sku_python">
@@ -3805,7 +3499,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Image's Stock Keeping Unit, which is the specific version of the image. Required if publisher is specified.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -3834,7 +3529,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The cluster ID.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -3849,7 +3545,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The cluster ID.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -3864,7 +3561,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The cluster ID.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -3879,7 +3577,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The cluster ID.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -3908,7 +3607,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The deployment id you want to get
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -3923,7 +3623,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The deployment id you want to get
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -3938,7 +3639,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The deployment id you want to get
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -3953,7 +3655,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The deployment id you want to get
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -3982,7 +3685,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The resource type. Valid values: CLASSIC, TARGET_GROUP, MULTAI_TARGET_SET.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="autoweight_csharp">
@@ -4000,7 +3704,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The balancer ID.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="targetsetid_csharp">
@@ -4009,7 +3714,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The scale set ID associated with the load balancer.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4024,7 +3730,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The resource type. Valid values: CLASSIC, TARGET_GROUP, MULTAI_TARGET_SET.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="autoweight_go">
@@ -4042,7 +3749,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The balancer ID.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="targetsetid_go">
@@ -4051,7 +3759,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The scale set ID associated with the load balancer.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4066,7 +3775,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The resource type. Valid values: CLASSIC, TARGET_GROUP, MULTAI_TARGET_SET.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="autoweight_nodejs">
@@ -4084,7 +3794,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The balancer ID.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="targetsetid_nodejs">
@@ -4093,7 +3804,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The scale set ID associated with the load balancer.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4108,7 +3820,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The resource type. Valid values: CLASSIC, TARGET_GROUP, MULTAI_TARGET_SET.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="auto_weight_python">
@@ -4126,7 +3839,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The balancer ID.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="target_set_id_python">
@@ -4135,7 +3849,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The scale set ID associated with the load balancer.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4164,7 +3879,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Set admin access for accessing your VMs.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="password_csharp">
@@ -4173,7 +3889,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Password for admin access to Windows VMs. Required for Windows product types.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="sshpublickey_csharp">
@@ -4182,7 +3899,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}SSH for admin access to Linux VMs. Required for Linux product types.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4197,7 +3915,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Set admin access for accessing your VMs.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="password_go">
@@ -4206,7 +3925,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Password for admin access to Windows VMs. Required for Windows product types.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="sshpublickey_go">
@@ -4215,7 +3935,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}SSH for admin access to Linux VMs. Required for Linux product types.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4230,7 +3951,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Set admin access for accessing your VMs.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="password_nodejs">
@@ -4239,7 +3961,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Password for admin access to Windows VMs. Required for Windows product types.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="sshpublickey_nodejs">
@@ -4248,7 +3971,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}SSH for admin access to Linux VMs. Required for Linux product types.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4263,7 +3987,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Set admin access for accessing your VMs.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="password_python">
@@ -4272,7 +3997,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Password for admin access to Windows VMs. Required for Windows product types.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="ssh_public_key_python">
@@ -4281,7 +4007,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}SSH for admin access to Linux VMs. Required for Linux product types.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4310,7 +4037,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the managed identity.
+    <dd>{{% md %}}The dimension name.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -4320,7 +4047,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Resource Group that the user-assigned managed identity resides in.
+    <dd>{{% md %}}Vnet Resource Group Name.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -4336,7 +4063,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the managed identity.
+    <dd>{{% md %}}The dimension name.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -4346,7 +4073,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Resource Group that the user-assigned managed identity resides in.
+    <dd>{{% md %}}Vnet Resource Group Name.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -4362,7 +4089,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the managed identity.
+    <dd>{{% md %}}The dimension name.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -4372,7 +4099,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Resource Group that the user-assigned managed identity resides in.
+    <dd>{{% md %}}Vnet Resource Group Name.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -4388,7 +4115,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the managed identity.
+    <dd>{{% md %}}The dimension name.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -4398,7 +4125,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Resource Group that the user-assigned managed identity resides in.
+    <dd>{{% md %}}Vnet Resource Group Name.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -4428,7 +4155,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Resource Group that the user-assigned managed identity resides in.
+    <dd>{{% md %}}Vnet Resource Group Name.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -4438,7 +4165,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}ID of subnet.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="virtualnetworkname_csharp">
@@ -4447,7 +4175,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of Vnet.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="additionalipconfigs_csharp">
@@ -4456,7 +4185,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupnetworkadditionalipconfig">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Azure.<wbr>Inputs.<wbr>Elastigroup<wbr>Network<wbr>Additional<wbr>Ip<wbr>Config<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Array of additional IP configuration objects.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="assignpublicip_csharp">
@@ -4480,7 +4210,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Resource Group that the user-assigned managed identity resides in.
+    <dd>{{% md %}}Vnet Resource Group Name.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -4490,7 +4220,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}ID of subnet.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="virtualnetworkname_go">
@@ -4499,7 +4230,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of Vnet.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="additionalipconfigs_go">
@@ -4508,7 +4240,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupnetworkadditionalipconfig">[]Elastigroup<wbr>Network<wbr>Additional<wbr>Ip<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Array of additional IP configuration objects.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="assignpublicip_go">
@@ -4532,7 +4265,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Resource Group that the user-assigned managed identity resides in.
+    <dd>{{% md %}}Vnet Resource Group Name.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -4542,7 +4275,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}ID of subnet.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="virtualnetworkname_nodejs">
@@ -4551,7 +4285,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of Vnet.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="additionalipconfigs_nodejs">
@@ -4560,7 +4295,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupnetworkadditionalipconfig">Elastigroup<wbr>Network<wbr>Additional<wbr>Ip<wbr>Config[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Array of additional IP configuration objects.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="assignpublicip_nodejs">
@@ -4584,7 +4320,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Resource Group that the user-assigned managed identity resides in.
+    <dd>{{% md %}}Vnet Resource Group Name.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -4594,7 +4330,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}ID of subnet.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="virtual_network_name_python">
@@ -4603,7 +4340,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of Vnet.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="additional_ip_configs_python">
@@ -4612,7 +4350,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupnetworkadditionalipconfig">Sequence[Elastigroup<wbr>Network<wbr>Additional<wbr>Ip<wbr>Config<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Array of additional IP configuration objects.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="assign_public_ip_python">
@@ -4650,7 +4389,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the managed identity.
+    <dd>{{% md %}}The dimension name.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4660,7 +4399,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Available from Azure Api-Version 2017-03-30 onwards, it represents whether the specific ipconfiguration is IPv4 or IPv6. Valid values: `IPv4`, `IPv6`.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4675,7 +4415,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the managed identity.
+    <dd>{{% md %}}The dimension name.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4685,7 +4425,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Available from Azure Api-Version 2017-03-30 onwards, it represents whether the specific ipconfiguration is IPv4 or IPv6. Valid values: `IPv4`, `IPv6`.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4700,7 +4441,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the managed identity.
+    <dd>{{% md %}}The dimension name.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4710,7 +4451,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Available from Azure Api-Version 2017-03-30 onwards, it represents whether the specific ipconfiguration is IPv4 or IPv6. Valid values: `IPv4`, `IPv6`.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4725,7 +4467,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the managed identity.
+    <dd>{{% md %}}The dimension name.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4735,7 +4477,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Available from Azure Api-Version 2017-03-30 onwards, it represents whether the specific ipconfiguration is IPv4 or IPv6. Valid values: `IPv4`, `IPv6`.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4764,7 +4507,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Metric to monitor by Azure metric display name.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="namespace_csharp">
@@ -4773,7 +4517,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The namespace for the alarm's associated metric. Valid values:
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="policyname_csharp">
@@ -4782,7 +4527,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the policy.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="threshold_csharp">
@@ -4791,7 +4537,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value against which the specified statistic is compared.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="actiontype_csharp">
@@ -4800,7 +4547,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The type of action to perform for scaling. Valid values: `"adjustment"`, `"percentageAdjustment"`, `"setMaxTarget"`, `"setMinTarget"`, `"updateCapacity"`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="adjustment_csharp">
@@ -4809,7 +4557,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of instances to add/remove to/from the target capacity when scale is needed.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="cooldown_csharp">
@@ -4818,7 +4567,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The amount of time, in seconds, after a scaling activity completes and before the next scaling activity can start. If this parameter is not specified, the default cooldown period for the group applies.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="dimensions_csharp">
@@ -4827,7 +4577,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupscalingdownpolicydimension">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Azure.<wbr>Inputs.<wbr>Elastigroup<wbr>Scaling<wbr>Down<wbr>Policy<wbr>Dimension<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of dimensions describing qualities of the metric. Required when `namespace` is defined AND not `"Microsoft.Compute"`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="evaluationperiods_csharp">
@@ -4836,7 +4587,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of periods over which data is compared to the specified threshold.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="maxtargetcapacity_csharp">
@@ -4845,7 +4597,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}. The number of the desired target (and maximum) capacity
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="maximum_csharp">
@@ -4854,7 +4607,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The maximal number of instances to have in the group.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="mintargetcapacity_csharp">
@@ -4863,7 +4617,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}. The number of the desired target (and minimum) capacity
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="minimum_csharp">
@@ -4872,7 +4627,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The minimal number of instances to have in the group.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="operator_csharp">
@@ -4881,7 +4637,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The operator to use in order to determine if the scaling policy is applicable. Valid values: `"gt"`, `"gte"`, `"lt"`, `"lte"`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="period_csharp">
@@ -4890,7 +4647,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The granularity, in seconds, of the returned datapoints. Period must be at least 60 seconds and must be a multiple of 60.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="statistic_csharp">
@@ -4899,7 +4657,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The metric statistics to return. Valid values: `average`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="target_csharp">
@@ -4908,7 +4667,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The target number of instances to have in the group.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="unit_csharp">
@@ -4917,7 +4677,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The unit for the alarm's associated metric. Valid values: `"percent`, `"seconds"`, `"microseconds"`, `"milliseconds"`, `"bytes"`, `"kilobytes"`, `"megabytes"`, `"gigabytes"`, `"terabytes"`, `"bits"`, `"kilobits"`, `"megabits"`, `"gigabits"`, `"terabits"`, `"count"`, `"bytes/second"`, `"kilobytes/second"`, `"megabytes/second"`, `"gigabytes/second"`, `"terabytes/second"`, `"bits/second"`, `"kilobits/second"`, `"megabits/second"`, `"gigabits/second"`, `"terabits/second"`, `"count/second"`, `"none"`.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4932,7 +4693,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Metric to monitor by Azure metric display name.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="namespace_go">
@@ -4941,7 +4703,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The namespace for the alarm's associated metric. Valid values:
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="policyname_go">
@@ -4950,7 +4713,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the policy.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="threshold_go">
@@ -4959,7 +4723,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value against which the specified statistic is compared.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="actiontype_go">
@@ -4968,7 +4733,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The type of action to perform for scaling. Valid values: `"adjustment"`, `"percentageAdjustment"`, `"setMaxTarget"`, `"setMinTarget"`, `"updateCapacity"`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="adjustment_go">
@@ -4977,7 +4743,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of instances to add/remove to/from the target capacity when scale is needed.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="cooldown_go">
@@ -4986,7 +4753,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The amount of time, in seconds, after a scaling activity completes and before the next scaling activity can start. If this parameter is not specified, the default cooldown period for the group applies.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="dimensions_go">
@@ -4995,7 +4763,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupscalingdownpolicydimension">[]Elastigroup<wbr>Scaling<wbr>Down<wbr>Policy<wbr>Dimension</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of dimensions describing qualities of the metric. Required when `namespace` is defined AND not `"Microsoft.Compute"`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="evaluationperiods_go">
@@ -5004,7 +4773,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of periods over which data is compared to the specified threshold.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="maxtargetcapacity_go">
@@ -5013,7 +4783,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}. The number of the desired target (and maximum) capacity
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="maximum_go">
@@ -5022,7 +4793,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The maximal number of instances to have in the group.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="mintargetcapacity_go">
@@ -5031,7 +4803,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}. The number of the desired target (and minimum) capacity
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="minimum_go">
@@ -5040,7 +4813,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The minimal number of instances to have in the group.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="operator_go">
@@ -5049,7 +4823,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The operator to use in order to determine if the scaling policy is applicable. Valid values: `"gt"`, `"gte"`, `"lt"`, `"lte"`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="period_go">
@@ -5058,7 +4833,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The granularity, in seconds, of the returned datapoints. Period must be at least 60 seconds and must be a multiple of 60.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="statistic_go">
@@ -5067,7 +4843,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The metric statistics to return. Valid values: `average`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="target_go">
@@ -5076,7 +4853,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The target number of instances to have in the group.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="unit_go">
@@ -5085,7 +4863,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The unit for the alarm's associated metric. Valid values: `"percent`, `"seconds"`, `"microseconds"`, `"milliseconds"`, `"bytes"`, `"kilobytes"`, `"megabytes"`, `"gigabytes"`, `"terabytes"`, `"bits"`, `"kilobits"`, `"megabits"`, `"gigabits"`, `"terabits"`, `"count"`, `"bytes/second"`, `"kilobytes/second"`, `"megabytes/second"`, `"gigabytes/second"`, `"terabytes/second"`, `"bits/second"`, `"kilobits/second"`, `"megabits/second"`, `"gigabits/second"`, `"terabits/second"`, `"count/second"`, `"none"`.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -5100,7 +4879,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Metric to monitor by Azure metric display name.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="namespace_nodejs">
@@ -5109,7 +4889,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The namespace for the alarm's associated metric. Valid values:
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="policyname_nodejs">
@@ -5118,7 +4899,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the policy.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="threshold_nodejs">
@@ -5127,7 +4909,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value against which the specified statistic is compared.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="actiontype_nodejs">
@@ -5136,7 +4919,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The type of action to perform for scaling. Valid values: `"adjustment"`, `"percentageAdjustment"`, `"setMaxTarget"`, `"setMinTarget"`, `"updateCapacity"`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="adjustment_nodejs">
@@ -5145,7 +4929,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of instances to add/remove to/from the target capacity when scale is needed.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="cooldown_nodejs">
@@ -5154,7 +4939,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The amount of time, in seconds, after a scaling activity completes and before the next scaling activity can start. If this parameter is not specified, the default cooldown period for the group applies.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="dimensions_nodejs">
@@ -5163,7 +4949,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupscalingdownpolicydimension">Elastigroup<wbr>Scaling<wbr>Down<wbr>Policy<wbr>Dimension[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of dimensions describing qualities of the metric. Required when `namespace` is defined AND not `"Microsoft.Compute"`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="evaluationperiods_nodejs">
@@ -5172,7 +4959,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of periods over which data is compared to the specified threshold.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="maxtargetcapacity_nodejs">
@@ -5181,7 +4969,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}. The number of the desired target (and maximum) capacity
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="maximum_nodejs">
@@ -5190,7 +4979,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The maximal number of instances to have in the group.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="mintargetcapacity_nodejs">
@@ -5199,7 +4989,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}. The number of the desired target (and minimum) capacity
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="minimum_nodejs">
@@ -5208,7 +4999,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The minimal number of instances to have in the group.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="operator_nodejs">
@@ -5217,7 +5009,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The operator to use in order to determine if the scaling policy is applicable. Valid values: `"gt"`, `"gte"`, `"lt"`, `"lte"`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="period_nodejs">
@@ -5226,7 +5019,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The granularity, in seconds, of the returned datapoints. Period must be at least 60 seconds and must be a multiple of 60.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="statistic_nodejs">
@@ -5235,7 +5029,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The metric statistics to return. Valid values: `average`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="target_nodejs">
@@ -5244,7 +5039,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The target number of instances to have in the group.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="unit_nodejs">
@@ -5253,7 +5049,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The unit for the alarm's associated metric. Valid values: `"percent`, `"seconds"`, `"microseconds"`, `"milliseconds"`, `"bytes"`, `"kilobytes"`, `"megabytes"`, `"gigabytes"`, `"terabytes"`, `"bits"`, `"kilobits"`, `"megabits"`, `"gigabits"`, `"terabits"`, `"count"`, `"bytes/second"`, `"kilobytes/second"`, `"megabytes/second"`, `"gigabytes/second"`, `"terabytes/second"`, `"bits/second"`, `"kilobits/second"`, `"megabits/second"`, `"gigabits/second"`, `"terabits/second"`, `"count/second"`, `"none"`.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -5268,7 +5065,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Metric to monitor by Azure metric display name.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="namespace_python">
@@ -5277,7 +5075,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The namespace for the alarm's associated metric. Valid values:
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="policy_name_python">
@@ -5286,7 +5085,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the policy.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="threshold_python">
@@ -5295,7 +5095,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value against which the specified statistic is compared.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="action_type_python">
@@ -5304,7 +5105,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The type of action to perform for scaling. Valid values: `"adjustment"`, `"percentageAdjustment"`, `"setMaxTarget"`, `"setMinTarget"`, `"updateCapacity"`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="adjustment_python">
@@ -5313,7 +5115,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of instances to add/remove to/from the target capacity when scale is needed.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="cooldown_python">
@@ -5322,7 +5125,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The amount of time, in seconds, after a scaling activity completes and before the next scaling activity can start. If this parameter is not specified, the default cooldown period for the group applies.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="dimensions_python">
@@ -5331,7 +5135,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupscalingdownpolicydimension">Sequence[Elastigroup<wbr>Scaling<wbr>Down<wbr>Policy<wbr>Dimension<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of dimensions describing qualities of the metric. Required when `namespace` is defined AND not `"Microsoft.Compute"`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="evaluation_periods_python">
@@ -5340,7 +5145,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of periods over which data is compared to the specified threshold.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="max_target_capacity_python">
@@ -5349,7 +5155,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}. The number of the desired target (and maximum) capacity
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="maximum_python">
@@ -5358,7 +5165,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The maximal number of instances to have in the group.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="min_target_capacity_python">
@@ -5367,7 +5175,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}. The number of the desired target (and minimum) capacity
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="minimum_python">
@@ -5376,7 +5185,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The minimal number of instances to have in the group.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="operator_python">
@@ -5385,7 +5195,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The operator to use in order to determine if the scaling policy is applicable. Valid values: `"gt"`, `"gte"`, `"lt"`, `"lte"`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="period_python">
@@ -5394,7 +5205,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The granularity, in seconds, of the returned datapoints. Period must be at least 60 seconds and must be a multiple of 60.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="statistic_python">
@@ -5403,7 +5215,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The metric statistics to return. Valid values: `average`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="target_python">
@@ -5412,7 +5225,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The target number of instances to have in the group.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="unit_python">
@@ -5421,7 +5235,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The unit for the alarm's associated metric. Valid values: `"percent`, `"seconds"`, `"microseconds"`, `"milliseconds"`, `"bytes"`, `"kilobytes"`, `"megabytes"`, `"gigabytes"`, `"terabytes"`, `"bits"`, `"kilobits"`, `"megabits"`, `"gigabits"`, `"terabits"`, `"count"`, `"bytes/second"`, `"kilobytes/second"`, `"megabytes/second"`, `"gigabytes/second"`, `"terabytes/second"`, `"bits/second"`, `"kilobits/second"`, `"megabits/second"`, `"gigabits/second"`, `"terabits/second"`, `"count/second"`, `"none"`.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -5450,7 +5265,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the managed identity.
+    <dd>{{% md %}}The dimension name.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5460,7 +5275,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The dimension value.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -5475,7 +5291,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the managed identity.
+    <dd>{{% md %}}The dimension name.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5485,7 +5301,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The dimension value.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -5500,7 +5317,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the managed identity.
+    <dd>{{% md %}}The dimension name.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5510,7 +5327,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The dimension value.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -5525,7 +5343,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the managed identity.
+    <dd>{{% md %}}The dimension name.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5535,7 +5353,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The dimension value.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -5564,7 +5383,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Metric to monitor by Azure metric display name.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="namespace_csharp">
@@ -5573,7 +5393,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The namespace for the alarm's associated metric. Valid values:
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="policyname_csharp">
@@ -5582,7 +5403,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the policy.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="threshold_csharp">
@@ -5591,7 +5413,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value against which the specified statistic is compared.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="actiontype_csharp">
@@ -5600,7 +5423,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The type of action to perform for scaling. Valid values: `"adjustment"`, `"percentageAdjustment"`, `"setMaxTarget"`, `"setMinTarget"`, `"updateCapacity"`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="adjustment_csharp">
@@ -5609,7 +5433,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of instances to add/remove to/from the target capacity when scale is needed.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="cooldown_csharp">
@@ -5618,7 +5443,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The amount of time, in seconds, after a scaling activity completes and before the next scaling activity can start. If this parameter is not specified, the default cooldown period for the group applies.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="dimensions_csharp">
@@ -5627,7 +5453,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupscalinguppolicydimension">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Azure.<wbr>Inputs.<wbr>Elastigroup<wbr>Scaling<wbr>Up<wbr>Policy<wbr>Dimension<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of dimensions describing qualities of the metric. Required when `namespace` is defined AND not `"Microsoft.Compute"`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="evaluationperiods_csharp">
@@ -5636,7 +5463,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of periods over which data is compared to the specified threshold.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="maxtargetcapacity_csharp">
@@ -5645,7 +5473,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}. The number of the desired target (and maximum) capacity
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="maximum_csharp">
@@ -5654,7 +5483,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The maximal number of instances to have in the group.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="mintargetcapacity_csharp">
@@ -5663,7 +5493,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}. The number of the desired target (and minimum) capacity
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="minimum_csharp">
@@ -5672,7 +5503,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The minimal number of instances to have in the group.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="operator_csharp">
@@ -5681,7 +5513,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The operator to use in order to determine if the scaling policy is applicable. Valid values: `"gt"`, `"gte"`, `"lt"`, `"lte"`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="period_csharp">
@@ -5690,7 +5523,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The granularity, in seconds, of the returned datapoints. Period must be at least 60 seconds and must be a multiple of 60.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="statistic_csharp">
@@ -5699,7 +5533,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The metric statistics to return. Valid values: `average`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="target_csharp">
@@ -5708,7 +5543,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The target number of instances to have in the group.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="unit_csharp">
@@ -5717,7 +5553,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The unit for the alarm's associated metric. Valid values: `"percent`, `"seconds"`, `"microseconds"`, `"milliseconds"`, `"bytes"`, `"kilobytes"`, `"megabytes"`, `"gigabytes"`, `"terabytes"`, `"bits"`, `"kilobits"`, `"megabits"`, `"gigabits"`, `"terabits"`, `"count"`, `"bytes/second"`, `"kilobytes/second"`, `"megabytes/second"`, `"gigabytes/second"`, `"terabytes/second"`, `"bits/second"`, `"kilobits/second"`, `"megabits/second"`, `"gigabits/second"`, `"terabits/second"`, `"count/second"`, `"none"`.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -5732,7 +5569,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Metric to monitor by Azure metric display name.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="namespace_go">
@@ -5741,7 +5579,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The namespace for the alarm's associated metric. Valid values:
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="policyname_go">
@@ -5750,7 +5589,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the policy.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="threshold_go">
@@ -5759,7 +5599,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value against which the specified statistic is compared.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="actiontype_go">
@@ -5768,7 +5609,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The type of action to perform for scaling. Valid values: `"adjustment"`, `"percentageAdjustment"`, `"setMaxTarget"`, `"setMinTarget"`, `"updateCapacity"`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="adjustment_go">
@@ -5777,7 +5619,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of instances to add/remove to/from the target capacity when scale is needed.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="cooldown_go">
@@ -5786,7 +5629,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The amount of time, in seconds, after a scaling activity completes and before the next scaling activity can start. If this parameter is not specified, the default cooldown period for the group applies.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="dimensions_go">
@@ -5795,7 +5639,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupscalinguppolicydimension">[]Elastigroup<wbr>Scaling<wbr>Up<wbr>Policy<wbr>Dimension</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of dimensions describing qualities of the metric. Required when `namespace` is defined AND not `"Microsoft.Compute"`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="evaluationperiods_go">
@@ -5804,7 +5649,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of periods over which data is compared to the specified threshold.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="maxtargetcapacity_go">
@@ -5813,7 +5659,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}. The number of the desired target (and maximum) capacity
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="maximum_go">
@@ -5822,7 +5669,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The maximal number of instances to have in the group.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="mintargetcapacity_go">
@@ -5831,7 +5679,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}. The number of the desired target (and minimum) capacity
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="minimum_go">
@@ -5840,7 +5689,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The minimal number of instances to have in the group.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="operator_go">
@@ -5849,7 +5699,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The operator to use in order to determine if the scaling policy is applicable. Valid values: `"gt"`, `"gte"`, `"lt"`, `"lte"`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="period_go">
@@ -5858,7 +5709,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The granularity, in seconds, of the returned datapoints. Period must be at least 60 seconds and must be a multiple of 60.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="statistic_go">
@@ -5867,7 +5719,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The metric statistics to return. Valid values: `average`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="target_go">
@@ -5876,7 +5729,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The target number of instances to have in the group.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="unit_go">
@@ -5885,7 +5739,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The unit for the alarm's associated metric. Valid values: `"percent`, `"seconds"`, `"microseconds"`, `"milliseconds"`, `"bytes"`, `"kilobytes"`, `"megabytes"`, `"gigabytes"`, `"terabytes"`, `"bits"`, `"kilobits"`, `"megabits"`, `"gigabits"`, `"terabits"`, `"count"`, `"bytes/second"`, `"kilobytes/second"`, `"megabytes/second"`, `"gigabytes/second"`, `"terabytes/second"`, `"bits/second"`, `"kilobits/second"`, `"megabits/second"`, `"gigabits/second"`, `"terabits/second"`, `"count/second"`, `"none"`.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -5900,7 +5755,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Metric to monitor by Azure metric display name.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="namespace_nodejs">
@@ -5909,7 +5765,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The namespace for the alarm's associated metric. Valid values:
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="policyname_nodejs">
@@ -5918,7 +5775,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the policy.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="threshold_nodejs">
@@ -5927,7 +5785,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value against which the specified statistic is compared.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="actiontype_nodejs">
@@ -5936,7 +5795,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The type of action to perform for scaling. Valid values: `"adjustment"`, `"percentageAdjustment"`, `"setMaxTarget"`, `"setMinTarget"`, `"updateCapacity"`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="adjustment_nodejs">
@@ -5945,7 +5805,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of instances to add/remove to/from the target capacity when scale is needed.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="cooldown_nodejs">
@@ -5954,7 +5815,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The amount of time, in seconds, after a scaling activity completes and before the next scaling activity can start. If this parameter is not specified, the default cooldown period for the group applies.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="dimensions_nodejs">
@@ -5963,7 +5825,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupscalinguppolicydimension">Elastigroup<wbr>Scaling<wbr>Up<wbr>Policy<wbr>Dimension[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of dimensions describing qualities of the metric. Required when `namespace` is defined AND not `"Microsoft.Compute"`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="evaluationperiods_nodejs">
@@ -5972,7 +5835,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of periods over which data is compared to the specified threshold.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="maxtargetcapacity_nodejs">
@@ -5981,7 +5845,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}. The number of the desired target (and maximum) capacity
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="maximum_nodejs">
@@ -5990,7 +5855,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The maximal number of instances to have in the group.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="mintargetcapacity_nodejs">
@@ -5999,7 +5865,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}. The number of the desired target (and minimum) capacity
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="minimum_nodejs">
@@ -6008,7 +5875,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The minimal number of instances to have in the group.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="operator_nodejs">
@@ -6017,7 +5885,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The operator to use in order to determine if the scaling policy is applicable. Valid values: `"gt"`, `"gte"`, `"lt"`, `"lte"`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="period_nodejs">
@@ -6026,7 +5895,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The granularity, in seconds, of the returned datapoints. Period must be at least 60 seconds and must be a multiple of 60.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="statistic_nodejs">
@@ -6035,7 +5905,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The metric statistics to return. Valid values: `average`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="target_nodejs">
@@ -6044,7 +5915,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The target number of instances to have in the group.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="unit_nodejs">
@@ -6053,7 +5925,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The unit for the alarm's associated metric. Valid values: `"percent`, `"seconds"`, `"microseconds"`, `"milliseconds"`, `"bytes"`, `"kilobytes"`, `"megabytes"`, `"gigabytes"`, `"terabytes"`, `"bits"`, `"kilobits"`, `"megabits"`, `"gigabits"`, `"terabits"`, `"count"`, `"bytes/second"`, `"kilobytes/second"`, `"megabytes/second"`, `"gigabytes/second"`, `"terabytes/second"`, `"bits/second"`, `"kilobits/second"`, `"megabits/second"`, `"gigabits/second"`, `"terabits/second"`, `"count/second"`, `"none"`.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -6068,7 +5941,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Metric to monitor by Azure metric display name.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="namespace_python">
@@ -6077,7 +5951,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The namespace for the alarm's associated metric. Valid values:
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="policy_name_python">
@@ -6086,7 +5961,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the policy.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="threshold_python">
@@ -6095,7 +5971,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value against which the specified statistic is compared.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="action_type_python">
@@ -6104,7 +5981,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The type of action to perform for scaling. Valid values: `"adjustment"`, `"percentageAdjustment"`, `"setMaxTarget"`, `"setMinTarget"`, `"updateCapacity"`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="adjustment_python">
@@ -6113,7 +5991,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of instances to add/remove to/from the target capacity when scale is needed.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="cooldown_python">
@@ -6122,7 +6001,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The amount of time, in seconds, after a scaling activity completes and before the next scaling activity can start. If this parameter is not specified, the default cooldown period for the group applies.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="dimensions_python">
@@ -6131,7 +6011,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupscalinguppolicydimension">Sequence[Elastigroup<wbr>Scaling<wbr>Up<wbr>Policy<wbr>Dimension<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of dimensions describing qualities of the metric. Required when `namespace` is defined AND not `"Microsoft.Compute"`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="evaluation_periods_python">
@@ -6140,7 +6021,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of periods over which data is compared to the specified threshold.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="max_target_capacity_python">
@@ -6149,7 +6031,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}. The number of the desired target (and maximum) capacity
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="maximum_python">
@@ -6158,7 +6041,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The maximal number of instances to have in the group.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="min_target_capacity_python">
@@ -6167,7 +6051,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}. The number of the desired target (and minimum) capacity
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="minimum_python">
@@ -6176,7 +6061,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The minimal number of instances to have in the group.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="operator_python">
@@ -6185,7 +6071,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The operator to use in order to determine if the scaling policy is applicable. Valid values: `"gt"`, `"gte"`, `"lt"`, `"lte"`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="period_python">
@@ -6194,7 +6081,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The granularity, in seconds, of the returned datapoints. Period must be at least 60 seconds and must be a multiple of 60.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="statistic_python">
@@ -6203,7 +6091,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The metric statistics to return. Valid values: `average`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="target_python">
@@ -6212,7 +6101,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The target number of instances to have in the group.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="unit_python">
@@ -6221,7 +6111,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The unit for the alarm's associated metric. Valid values: `"percent`, `"seconds"`, `"microseconds"`, `"milliseconds"`, `"bytes"`, `"kilobytes"`, `"megabytes"`, `"gigabytes"`, `"terabytes"`, `"bits"`, `"kilobits"`, `"megabits"`, `"gigabits"`, `"terabits"`, `"count"`, `"bytes/second"`, `"kilobytes/second"`, `"megabytes/second"`, `"gigabytes/second"`, `"terabytes/second"`, `"bits/second"`, `"kilobits/second"`, `"megabits/second"`, `"gigabits/second"`, `"terabits/second"`, `"count/second"`, `"none"`.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -6250,7 +6141,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the managed identity.
+    <dd>{{% md %}}The dimension name.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -6260,7 +6151,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The dimension value.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -6275,7 +6167,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the managed identity.
+    <dd>{{% md %}}The dimension name.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -6285,7 +6177,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The dimension value.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -6300,7 +6193,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the managed identity.
+    <dd>{{% md %}}The dimension name.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -6310,7 +6203,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The dimension value.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -6325,7 +6219,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the managed identity.
+    <dd>{{% md %}}The dimension name.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -6335,7 +6229,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The dimension value.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -6364,7 +6259,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A valid cron expression (`* * * * *`). The cron is running in UTC time zone and is in Unix cron format Cron Expression Validator Script.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="tasktype_csharp">
@@ -6373,7 +6269,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The task type to run. Valid Values: `backup_ami`, `scale`, `scaleUp`, `roll`, `statefulUpdateCapacity`, `statefulRecycle`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="adjustment_csharp">
@@ -6382,7 +6279,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of instances to add/remove to/from the target capacity when scale is needed.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="adjustmentpercentage_csharp">
@@ -6391,7 +6289,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The percent of instances to add/remove to/from the target capacity when scale is needed.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="batchsizepercentage_csharp">
@@ -6400,7 +6299,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Sets the percentage of the instances to deploy in each batch.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="graceperiod_csharp">
@@ -6409,7 +6309,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Sets the grace period for new instances to become healthy.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="isenabled_csharp">
@@ -6418,7 +6319,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes whether the task is enabled. When true the task should run when false it should not run.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="scalemaxcapacity_csharp">
@@ -6427,7 +6329,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The max capacity of the group. Required when ‘task_type' is ‘scale'.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="scalemincapacity_csharp">
@@ -6436,7 +6339,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The min capacity of the group. Should be used when choosing ‘task_type' of ‘scale'.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="scaletargetcapacity_csharp">
@@ -6445,7 +6349,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The target capacity of the group. Should be used when choosing ‘task_type' of ‘scale'.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -6460,7 +6365,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A valid cron expression (`* * * * *`). The cron is running in UTC time zone and is in Unix cron format Cron Expression Validator Script.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="tasktype_go">
@@ -6469,7 +6375,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The task type to run. Valid Values: `backup_ami`, `scale`, `scaleUp`, `roll`, `statefulUpdateCapacity`, `statefulRecycle`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="adjustment_go">
@@ -6478,7 +6385,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of instances to add/remove to/from the target capacity when scale is needed.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="adjustmentpercentage_go">
@@ -6487,7 +6395,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The percent of instances to add/remove to/from the target capacity when scale is needed.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="batchsizepercentage_go">
@@ -6496,7 +6405,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Sets the percentage of the instances to deploy in each batch.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="graceperiod_go">
@@ -6505,7 +6415,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Sets the grace period for new instances to become healthy.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="isenabled_go">
@@ -6514,7 +6425,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes whether the task is enabled. When true the task should run when false it should not run.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="scalemaxcapacity_go">
@@ -6523,7 +6435,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The max capacity of the group. Required when ‘task_type' is ‘scale'.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="scalemincapacity_go">
@@ -6532,7 +6445,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The min capacity of the group. Should be used when choosing ‘task_type' of ‘scale'.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="scaletargetcapacity_go">
@@ -6541,7 +6455,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The target capacity of the group. Should be used when choosing ‘task_type' of ‘scale'.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -6556,7 +6471,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A valid cron expression (`* * * * *`). The cron is running in UTC time zone and is in Unix cron format Cron Expression Validator Script.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="tasktype_nodejs">
@@ -6565,7 +6481,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The task type to run. Valid Values: `backup_ami`, `scale`, `scaleUp`, `roll`, `statefulUpdateCapacity`, `statefulRecycle`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="adjustment_nodejs">
@@ -6574,7 +6491,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of instances to add/remove to/from the target capacity when scale is needed.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="adjustmentpercentage_nodejs">
@@ -6583,7 +6501,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The percent of instances to add/remove to/from the target capacity when scale is needed.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="batchsizepercentage_nodejs">
@@ -6592,7 +6511,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Sets the percentage of the instances to deploy in each batch.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="graceperiod_nodejs">
@@ -6601,7 +6521,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Sets the grace period for new instances to become healthy.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="isenabled_nodejs">
@@ -6610,7 +6531,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes whether the task is enabled. When true the task should run when false it should not run.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="scalemaxcapacity_nodejs">
@@ -6619,7 +6541,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The max capacity of the group. Required when ‘task_type' is ‘scale'.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="scalemincapacity_nodejs">
@@ -6628,7 +6551,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The min capacity of the group. Should be used when choosing ‘task_type' of ‘scale'.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="scaletargetcapacity_nodejs">
@@ -6637,7 +6561,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The target capacity of the group. Should be used when choosing ‘task_type' of ‘scale'.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -6652,7 +6577,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A valid cron expression (`* * * * *`). The cron is running in UTC time zone and is in Unix cron format Cron Expression Validator Script.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="task_type_python">
@@ -6661,7 +6587,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The task type to run. Valid Values: `backup_ami`, `scale`, `scaleUp`, `roll`, `statefulUpdateCapacity`, `statefulRecycle`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="adjustment_python">
@@ -6670,7 +6597,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of instances to add/remove to/from the target capacity when scale is needed.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="adjustment_percentage_python">
@@ -6679,7 +6607,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The percent of instances to add/remove to/from the target capacity when scale is needed.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="batch_size_percentage_python">
@@ -6688,7 +6617,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Sets the percentage of the instances to deploy in each batch.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="grace_period_python">
@@ -6697,7 +6627,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Sets the grace period for new instances to become healthy.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="is_enabled_python">
@@ -6706,7 +6637,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes whether the task is enabled. When true the task should run when false it should not run.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="scale_max_capacity_python">
@@ -6715,7 +6647,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The max capacity of the group. Required when ‘task_type' is ‘scale'.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="scale_min_capacity_python">
@@ -6724,7 +6657,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The min capacity of the group. Should be used when choosing ‘task_type' of ‘scale'.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="scale_target_capacity_python">
@@ -6733,7 +6667,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The target capacity of the group. Should be used when choosing ‘task_type' of ‘scale'.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -6920,7 +6855,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Sets the enablement of the roll option.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="rollconfig_csharp">
@@ -6929,7 +6865,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupupdatepolicyrollconfig">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Azure.<wbr>Inputs.<wbr>Elastigroup<wbr>Update<wbr>Policy<wbr>Roll<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}While used, you can control whether the group should perform a deployment after an update to the configuration.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -6944,7 +6881,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Sets the enablement of the roll option.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="rollconfig_go">
@@ -6953,7 +6891,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupupdatepolicyrollconfig">Elastigroup<wbr>Update<wbr>Policy<wbr>Roll<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}While used, you can control whether the group should perform a deployment after an update to the configuration.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -6968,7 +6907,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Sets the enablement of the roll option.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="rollconfig_nodejs">
@@ -6977,7 +6917,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupupdatepolicyrollconfig">Elastigroup<wbr>Update<wbr>Policy<wbr>Roll<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}While used, you can control whether the group should perform a deployment after an update to the configuration.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -6992,7 +6933,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Sets the enablement of the roll option.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="roll_config_python">
@@ -7001,7 +6943,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupupdatepolicyrollconfig">Elastigroup<wbr>Update<wbr>Policy<wbr>Roll<wbr>Config<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}While used, you can control whether the group should perform a deployment after an update to the configuration.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -7030,7 +6973,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Sets the percentage of the instances to deploy in each batch.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="graceperiod_csharp">
@@ -7039,7 +6983,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Sets the grace period for new instances to become healthy.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="healthchecktype_csharp">
@@ -7048,7 +6993,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Sets the health check type to use. Valid values: `"INSTANCE_STATE"`, `"NONE"`.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -7063,7 +7009,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Sets the percentage of the instances to deploy in each batch.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="graceperiod_go">
@@ -7072,7 +7019,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Sets the grace period for new instances to become healthy.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="healthchecktype_go">
@@ -7081,7 +7029,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Sets the health check type to use. Valid values: `"INSTANCE_STATE"`, `"NONE"`.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -7096,7 +7045,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Sets the percentage of the instances to deploy in each batch.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="graceperiod_nodejs">
@@ -7105,7 +7055,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Sets the grace period for new instances to become healthy.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="healthchecktype_nodejs">
@@ -7114,7 +7065,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Sets the health check type to use. Valid values: `"INSTANCE_STATE"`, `"NONE"`.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -7129,7 +7081,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Sets the percentage of the instances to deploy in each batch.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="grace_period_python">
@@ -7138,7 +7091,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Sets the grace period for new instances to become healthy.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="health_check_type_python">
@@ -7147,7 +7101,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Sets the health check type to use. Valid values: `"INSTANCE_STATE"`, `"NONE"`.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 

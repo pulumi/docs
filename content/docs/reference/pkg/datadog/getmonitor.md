@@ -11,6 +11,58 @@ meta_desc: "Explore the GetMonitor function of the Datadog package, including ex
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Use this data source to retrieve information about an existing monitor for use in other resources.
+## Schema
+
+### Optional
+
+- **id** (String) The ID of this resource.
+- **monitor_tags_filter** (List of String) A list of monitor tags to limit the search. This filters on the tags set on the monitor itself.
+- **name_filter** (String) A monitor name to limit the search.
+- **tags_filter** (List of String) A list of tags to limit the search. This filters on the monitor scope.
+
+### Read-only
+
+- **enable_logs_sample** (Boolean) Whether or not a list of log values which triggered the alert is included. This is only used by log monitors.
+- **escalation_message** (String) Message included with a re-notification for this monitor.
+- **evaluation_delay** (Number) Time (in seconds) for which evaluation is delayed. This is only used by metric monitors.
+- **include_tags** (Boolean) Whether or not notifications from the monitor automatically inserts its triggering tags into the title.
+- **locked** (Boolean) Whether or not changes to the monitor are restricted to the creator or admins.
+- **message** (String) Message included with notifications for this monitor
+- **monitor_threshold_windows** (List of Object) Mapping containing `recovery_window` and `trigger_window` values, e.g. `last_15m`. This is only used by anomaly monitors. (see below for nested schema)
+- **monitor_thresholds** (List of Object) Alert thresholds of the monitor. (see below for nested schema)
+- **name** (String) Name of the monitor
+- **new_host_delay** (Number) Time (in seconds) allowing a host to boot and applications to fully start before starting the evaluation of monitor results.
+- **no_data_timeframe** (Number) The number of minutes before the monitor notifies when data stops reporting.
+- **notify_audit** (Boolean) Whether or not tagged users are notified on changes to the monitor.
+- **notify_no_data** (Boolean) Whether or not this monitor notifies when data stops reporting.
+- **query** (String) Query of the monitor.
+- **renotify_interval** (Number) The number of minutes after the last notification before the monitor re-notifies on the current status.
+- **require_full_window** (Boolean) Whether or not the monitor needs a full window of data before it is evaluated.
+- **tags** (Set of String) List of tags associated with the monitor.
+- **threshold_windows** (Map of String, Deprecated) Mapping containing `recovery_window` and `trigger_window` values, e.g. `last_15m`. This is only used by anomaly monitors.
+- **thresholds** (Map of String, Deprecated) Alert thresholds of the monitor.
+- **timeout_h** (Number) Number of hours of the monitor not reporting data before it automatically resolves from a triggered state.
+- **type** (String) Type of the monitor.
+
+<a id="nestedatt--monitor_threshold_windows"></a>
+### Nested Schema for `monitor_threshold_windows`
+
+Read-only:
+
+- **recovery_window** (String)
+- **trigger_window** (String)
+
+<a id="nestedatt--monitor_thresholds"></a>
+### Nested Schema for `monitor_thresholds`
+
+Read-only:
+
+- **critical** (String)
+- **critical_recovery** (String)
+- **ok** (String)
+- **unknown** (String)
+- **warning** (String)
+- **warning_recovery** (String)
 
 
 {{% examples %}}
@@ -342,6 +394,24 @@ The following output properties are available:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="monitorthresholdwindows_csharp">
+<a href="#monitorthresholdwindows_csharp" style="color: inherit; text-decoration: inherit;">Monitor<wbr>Threshold<wbr>Windows</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getmonitormonitorthresholdwindows">Get<wbr>Monitor<wbr>Monitor<wbr>Threshold<wbr>Windows</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="monitorthresholds_csharp">
+<a href="#monitorthresholds_csharp" style="color: inherit; text-decoration: inherit;">Monitor<wbr>Thresholds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getmonitormonitorthresholds">Get<wbr>Monitor<wbr>Monitor<wbr>Thresholds</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -421,24 +491,24 @@ The following output properties are available:
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="thresholdwindows_csharp">
 <a href="#thresholdwindows_csharp" style="color: inherit; text-decoration: inherit;">Threshold<wbr>Windows</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getmonitorthresholdwindows">Get<wbr>Monitor<wbr>Threshold<wbr>Windows</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `monitor_threshold_windows` list with one element instead.{{% /md %}}</p></dd>
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="thresholds_csharp">
 <a href="#thresholds_csharp" style="color: inherit; text-decoration: inherit;">Thresholds</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getmonitorthresholds">Get<wbr>Monitor<wbr>Thresholds</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `monitor_thresholds` list with one element instead.{{% /md %}}</p></dd>
     <dt class="property-"
             title="">
         <span id="timeouth_csharp">
@@ -556,6 +626,24 @@ The following output properties are available:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="monitorthresholdwindows_go">
+<a href="#monitorthresholdwindows_go" style="color: inherit; text-decoration: inherit;">Monitor<wbr>Threshold<wbr>Windows</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getmonitormonitorthresholdwindows">Get<wbr>Monitor<wbr>Monitor<wbr>Threshold<wbr>Windows</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="monitorthresholds_go">
+<a href="#monitorthresholds_go" style="color: inherit; text-decoration: inherit;">Monitor<wbr>Thresholds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getmonitormonitorthresholds">Get<wbr>Monitor<wbr>Monitor<wbr>Thresholds</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -635,24 +723,24 @@ The following output properties are available:
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="thresholdwindows_go">
 <a href="#thresholdwindows_go" style="color: inherit; text-decoration: inherit;">Threshold<wbr>Windows</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getmonitorthresholdwindows">Get<wbr>Monitor<wbr>Threshold<wbr>Windows</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `monitor_threshold_windows` list with one element instead.{{% /md %}}</p></dd>
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="thresholds_go">
 <a href="#thresholds_go" style="color: inherit; text-decoration: inherit;">Thresholds</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getmonitorthresholds">Get<wbr>Monitor<wbr>Thresholds</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `monitor_thresholds` list with one element instead.{{% /md %}}</p></dd>
     <dt class="property-"
             title="">
         <span id="timeouth_go">
@@ -770,6 +858,24 @@ The following output properties are available:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="monitorthresholdwindows_nodejs">
+<a href="#monitorthresholdwindows_nodejs" style="color: inherit; text-decoration: inherit;">monitor<wbr>Threshold<wbr>Windows</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getmonitormonitorthresholdwindows">Get<wbr>Monitor<wbr>Monitor<wbr>Threshold<wbr>Windows</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="monitorthresholds_nodejs">
+<a href="#monitorthresholds_nodejs" style="color: inherit; text-decoration: inherit;">monitor<wbr>Thresholds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getmonitormonitorthresholds">Get<wbr>Monitor<wbr>Monitor<wbr>Thresholds</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -849,24 +955,24 @@ The following output properties are available:
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="thresholdwindows_nodejs">
 <a href="#thresholdwindows_nodejs" style="color: inherit; text-decoration: inherit;">threshold<wbr>Windows</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getmonitorthresholdwindows">Get<wbr>Monitor<wbr>Threshold<wbr>Windows</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `monitor_threshold_windows` list with one element instead.{{% /md %}}</p></dd>
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="thresholds_nodejs">
 <a href="#thresholds_nodejs" style="color: inherit; text-decoration: inherit;">thresholds</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getmonitorthresholds">Get<wbr>Monitor<wbr>Thresholds</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `monitor_thresholds` list with one element instead.{{% /md %}}</p></dd>
     <dt class="property-"
             title="">
         <span id="timeouth_nodejs">
@@ -984,6 +1090,24 @@ The following output properties are available:
     <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="monitor_threshold_windows_python">
+<a href="#monitor_threshold_windows_python" style="color: inherit; text-decoration: inherit;">monitor_<wbr>threshold_<wbr>windows</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getmonitormonitorthresholdwindows">Get<wbr>Monitor<wbr>Monitor<wbr>Threshold<wbr>Windows</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="monitor_thresholds_python">
+<a href="#monitor_thresholds_python" style="color: inherit; text-decoration: inherit;">monitor_<wbr>thresholds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getmonitormonitorthresholds">Get<wbr>Monitor<wbr>Monitor<wbr>Thresholds</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -1063,24 +1187,24 @@ The following output properties are available:
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="threshold_windows_python">
 <a href="#threshold_windows_python" style="color: inherit; text-decoration: inherit;">threshold_<wbr>windows</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getmonitorthresholdwindows">Get<wbr>Monitor<wbr>Threshold<wbr>Windows</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `monitor_threshold_windows` list with one element instead.{{% /md %}}</p></dd>
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="thresholds_python">
 <a href="#thresholds_python" style="color: inherit; text-decoration: inherit;">thresholds</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#getmonitorthresholds">Get<wbr>Monitor<wbr>Thresholds</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}<p class="property-message">Deprecated: {{% md %}}Define `monitor_thresholds` list with one element instead.{{% /md %}}</p></dd>
     <dt class="property-"
             title="">
         <span id="timeout_h_python">
@@ -1134,6 +1258,370 @@ The following output properties are available:
 
 ## Supporting Types
 
+
+<h4 id="getmonitormonitorthresholdwindows">Get<wbr>Monitor<wbr>Monitor<wbr>Threshold<wbr>Windows</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#GetMonitorMonitorThresholdWindows">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#GetMonitorMonitorThresholdWindows">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Outputs.GetMonitorMonitorThresholdWindows.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="recoverywindow_csharp">
+<a href="#recoverywindow_csharp" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Window</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="triggerwindow_csharp">
+<a href="#triggerwindow_csharp" style="color: inherit; text-decoration: inherit;">Trigger<wbr>Window</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="recoverywindow_go">
+<a href="#recoverywindow_go" style="color: inherit; text-decoration: inherit;">Recovery<wbr>Window</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="triggerwindow_go">
+<a href="#triggerwindow_go" style="color: inherit; text-decoration: inherit;">Trigger<wbr>Window</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="recoverywindow_nodejs">
+<a href="#recoverywindow_nodejs" style="color: inherit; text-decoration: inherit;">recovery<wbr>Window</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="triggerwindow_nodejs">
+<a href="#triggerwindow_nodejs" style="color: inherit; text-decoration: inherit;">trigger<wbr>Window</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="recovery_window_python">
+<a href="#recovery_window_python" style="color: inherit; text-decoration: inherit;">recovery_<wbr>window</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="trigger_window_python">
+<a href="#trigger_window_python" style="color: inherit; text-decoration: inherit;">trigger_<wbr>window</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="getmonitormonitorthresholds">Get<wbr>Monitor<wbr>Monitor<wbr>Thresholds</h4>
+{{% choosable language nodejs %}}
+> See the   <a href="/docs/reference/pkg/nodejs/pulumi/datadog/types/output/#GetMonitorMonitorThresholds">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the   <a href="https://pkg.go.dev/github.com/pulumi/pulumi-datadog/sdk/v2/go/datadog/?tab=doc#GetMonitorMonitorThresholds">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the   <a href="/docs/reference/pkg/dotnet/Pulumi.Datadog/Pulumi.Datadog.Outputs.GetMonitorMonitorThresholds.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="critical_csharp">
+<a href="#critical_csharp" style="color: inherit; text-decoration: inherit;">Critical</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="criticalrecovery_csharp">
+<a href="#criticalrecovery_csharp" style="color: inherit; text-decoration: inherit;">Critical<wbr>Recovery</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="ok_csharp">
+<a href="#ok_csharp" style="color: inherit; text-decoration: inherit;">Ok</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="unknown_csharp">
+<a href="#unknown_csharp" style="color: inherit; text-decoration: inherit;">Unknown</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="warning_csharp">
+<a href="#warning_csharp" style="color: inherit; text-decoration: inherit;">Warning</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="warningrecovery_csharp">
+<a href="#warningrecovery_csharp" style="color: inherit; text-decoration: inherit;">Warning<wbr>Recovery</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="critical_go">
+<a href="#critical_go" style="color: inherit; text-decoration: inherit;">Critical</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="criticalrecovery_go">
+<a href="#criticalrecovery_go" style="color: inherit; text-decoration: inherit;">Critical<wbr>Recovery</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="ok_go">
+<a href="#ok_go" style="color: inherit; text-decoration: inherit;">Ok</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="unknown_go">
+<a href="#unknown_go" style="color: inherit; text-decoration: inherit;">Unknown</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="warning_go">
+<a href="#warning_go" style="color: inherit; text-decoration: inherit;">Warning</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="warningrecovery_go">
+<a href="#warningrecovery_go" style="color: inherit; text-decoration: inherit;">Warning<wbr>Recovery</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="critical_nodejs">
+<a href="#critical_nodejs" style="color: inherit; text-decoration: inherit;">critical</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="criticalrecovery_nodejs">
+<a href="#criticalrecovery_nodejs" style="color: inherit; text-decoration: inherit;">critical<wbr>Recovery</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="ok_nodejs">
+<a href="#ok_nodejs" style="color: inherit; text-decoration: inherit;">ok</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="unknown_nodejs">
+<a href="#unknown_nodejs" style="color: inherit; text-decoration: inherit;">unknown</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="warning_nodejs">
+<a href="#warning_nodejs" style="color: inherit; text-decoration: inherit;">warning</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="warningrecovery_nodejs">
+<a href="#warningrecovery_nodejs" style="color: inherit; text-decoration: inherit;">warning<wbr>Recovery</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="critical_python">
+<a href="#critical_python" style="color: inherit; text-decoration: inherit;">critical</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="critical_recovery_python">
+<a href="#critical_recovery_python" style="color: inherit; text-decoration: inherit;">critical_<wbr>recovery</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="ok_python">
+<a href="#ok_python" style="color: inherit; text-decoration: inherit;">ok</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="unknown_python">
+<a href="#unknown_python" style="color: inherit; text-decoration: inherit;">unknown</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="warning_python">
+<a href="#warning_python" style="color: inherit; text-decoration: inherit;">warning</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="warning_recovery_python">
+<a href="#warning_recovery_python" style="color: inherit; text-decoration: inherit;">warning_<wbr>recovery</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
 
 <h4 id="getmonitorthresholdwindows">Get<wbr>Monitor<wbr>Threshold<wbr>Windows</h4>
 {{% choosable language nodejs %}}

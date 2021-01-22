@@ -1,6 +1,6 @@
 ---
 title: FAQ
-meta_desc: A collection of Freduently Asked Questions (FAQ) about the Pulumi CLI and Cloud Services.
+meta_desc: A collection of Frequently Asked Questions (FAQ) about the Pulumi CLI and Cloud Services.
 menu:
   troubleshooting:
     weight: 2
@@ -23,7 +23,7 @@ If there is an existing Terraform Resource Provider for the target, you can also
 
 ## How can I add support for my favorite language?
 
-Supported languages run out of process and communicate over gRPC with the Pulumi engine and resource providers.  The protocol definitions can be found at [https://github.com/pulumi/pulumi/tree/master/sdk/proto](https://github.com/pulumi/pulumi/tree/master/sdk/proto) along with the language providers themselves.  You can look at how we added support for Go at [https://github.com/pulumi/pulumi/pull/1456](https://github.com/pulumi/pulumi/pull/1456), which should help with scoping.  There is also a summary of the core work items needed as part of adding support for a typical new language on the [New Language Bring Up wiki page](https://github.com/pulumi/pulumi/wiki/New-Language-Bringup).
+Supported languages run out of process and communicate over gRPC with the Pulumi engine and resource providers.  The protocol definitions can be found at [https://github.com/pulumi/pulumi/tree/master/sdk/proto](https://github.com/pulumi/pulumi/tree/master/sdk/proto) along with the language providers themselves.  You can look at how we added support for Go at [https://github.com/pulumi/pulumi/pull/1456](https://github.com/pulumi/pulumi/pull/1456), which should help with scoping.  There is also a summary of the core work items needed as part of adding support for a typical new language on the [New Language Bring Up wiki page](https://github.com/pulumi/pulumi/wiki/New-Language-Bring-up).
 
 ## Does Pulumi support automatic rollback in the event of an error or failure?
 

@@ -40,7 +40,7 @@ Database instances can be imported using one of any of these accepted formats
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/sql/#pulumi_gcp.sql.DatabaseInstance">DatabaseInstance</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">database_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deletion_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">encryption_key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">master_instance_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">replica_configuration</span><span class="p">:</span> <span class="nx">Optional[DatabaseInstanceReplicaConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">root_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">settings</span><span class="p">:</span> <span class="nx">Optional[DatabaseInstanceSettingsArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_gcp/sql/#pulumi_gcp.sql.DatabaseInstance">DatabaseInstance</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">database_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deletion_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">encryption_key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">master_instance_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">replica_configuration</span><span class="p">:</span> <span class="nx">Optional[DatabaseInstanceReplicaConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">restore_backup_context</span><span class="p">:</span> <span class="nx">Optional[DatabaseInstanceRestoreBackupContextArgs]</span> = None<span class="p">, </span><span class="nx">root_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">settings</span><span class="p">:</span> <span class="nx">Optional[DatabaseInstanceSettingsArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -295,8 +295,7 @@ the master in the replication setup. Note, this requires the master to have
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the project in which the resource belongs. If it
-is not provided, the provider project is used.
+    <dd>{{% md %}}The full project ID of the source instance.`
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -324,6 +323,15 @@ make sure you understand this.
     <dd>{{% md %}}The configuration for replication. The
 configuration is detailed below.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="restorebackupcontext_csharp">
+<a href="#restorebackupcontext_csharp" style="color: inherit; text-decoration: inherit;">Restore<wbr>Backup<wbr>Context</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#databaseinstancerestorebackupcontext">Database<wbr>Instance<wbr>Restore<wbr>Backup<wbr>Context<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="rootpassword_csharp">
@@ -424,8 +432,7 @@ the master in the replication setup. Note, this requires the master to have
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the project in which the resource belongs. If it
-is not provided, the provider project is used.
+    <dd>{{% md %}}The full project ID of the source instance.`
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -453,6 +460,15 @@ make sure you understand this.
     <dd>{{% md %}}The configuration for replication. The
 configuration is detailed below.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="restorebackupcontext_go">
+<a href="#restorebackupcontext_go" style="color: inherit; text-decoration: inherit;">Restore<wbr>Backup<wbr>Context</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#databaseinstancerestorebackupcontext">Database<wbr>Instance<wbr>Restore<wbr>Backup<wbr>Context</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="rootpassword_go">
@@ -553,8 +569,7 @@ the master in the replication setup. Note, this requires the master to have
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the project in which the resource belongs. If it
-is not provided, the provider project is used.
+    <dd>{{% md %}}The full project ID of the source instance.`
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -582,6 +597,15 @@ make sure you understand this.
     <dd>{{% md %}}The configuration for replication. The
 configuration is detailed below.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="restorebackupcontext_nodejs">
+<a href="#restorebackupcontext_nodejs" style="color: inherit; text-decoration: inherit;">restore<wbr>Backup<wbr>Context</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#databaseinstancerestorebackupcontext">Database<wbr>Instance<wbr>Restore<wbr>Backup<wbr>Context</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="rootpassword_nodejs">
@@ -682,8 +706,7 @@ the master in the replication setup. Note, this requires the master to have
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ID of the project in which the resource belongs. If it
-is not provided, the provider project is used.
+    <dd>{{% md %}}The full project ID of the source instance.`
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -711,6 +734,15 @@ make sure you understand this.
     <dd>{{% md %}}The configuration for replication. The
 configuration is detailed below.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="restore_backup_context_python">
+<a href="#restore_backup_context_python" style="color: inherit; text-decoration: inherit;">restore_<wbr>backup_<wbr>context</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#databaseinstancerestorebackupcontext">Database<wbr>Instance<wbr>Restore<wbr>Backup<wbr>Context<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="root_password_python">
@@ -1124,7 +1156,7 @@ Get an existing DatabaseInstance resource's state with the given name, ID, and o
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">connection_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">database_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deletion_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">encryption_key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">first_ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_addresses</span><span class="p">:</span> <span class="nx">Optional[Sequence[DatabaseInstanceIpAddressArgs]]</span> = None<span class="p">, </span><span class="nx">master_instance_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">public_ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">replica_configuration</span><span class="p">:</span> <span class="nx">Optional[DatabaseInstanceReplicaConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">root_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_ca_certs</span><span class="p">:</span> <span class="nx">Optional[Sequence[DatabaseInstanceServerCaCertArgs]]</span> = None<span class="p">, </span><span class="nx">service_account_email_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">settings</span><span class="p">:</span> <span class="nx">Optional[DatabaseInstanceSettingsArgs]</span> = None<span class="p">) -&gt;</span> DatabaseInstance</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">connection_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">database_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">deletion_protection</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">encryption_key_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">first_ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ip_addresses</span><span class="p">:</span> <span class="nx">Optional[Sequence[DatabaseInstanceIpAddressArgs]]</span> = None<span class="p">, </span><span class="nx">master_instance_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">project</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">public_ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">region</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">replica_configuration</span><span class="p">:</span> <span class="nx">Optional[DatabaseInstanceReplicaConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">restore_backup_context</span><span class="p">:</span> <span class="nx">Optional[DatabaseInstanceRestoreBackupContextArgs]</span> = None<span class="p">, </span><span class="nx">root_password</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">self_link</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_ca_certs</span><span class="p">:</span> <span class="nx">Optional[Sequence[DatabaseInstanceServerCaCertArgs]]</span> = None<span class="p">, </span><span class="nx">service_account_email_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">settings</span><span class="p">:</span> <span class="nx">Optional[DatabaseInstanceSettingsArgs]</span> = None<span class="p">) -&gt;</span> DatabaseInstance</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1350,8 +1382,7 @@ the master in the replication setup. Note, this requires the master to have
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the project in which the resource belongs. If it
-is not provided, the provider project is used.
+    <dd>{{% md %}}The full project ID of the source instance.`
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1389,6 +1420,15 @@ make sure you understand this.
     <dd>{{% md %}}The configuration for replication. The
 configuration is detailed below.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_restorebackupcontext_csharp">
+<a href="#state_restorebackupcontext_csharp" style="color: inherit; text-decoration: inherit;">Restore<wbr>Backup<wbr>Context</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#databaseinstancerestorebackupcontext">Database<wbr>Instance<wbr>Restore<wbr>Backup<wbr>Context<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_rootpassword_csharp">
@@ -1559,8 +1599,7 @@ the master in the replication setup. Note, this requires the master to have
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the project in which the resource belongs. If it
-is not provided, the provider project is used.
+    <dd>{{% md %}}The full project ID of the source instance.`
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1598,6 +1637,15 @@ make sure you understand this.
     <dd>{{% md %}}The configuration for replication. The
 configuration is detailed below.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_restorebackupcontext_go">
+<a href="#state_restorebackupcontext_go" style="color: inherit; text-decoration: inherit;">Restore<wbr>Backup<wbr>Context</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#databaseinstancerestorebackupcontext">Database<wbr>Instance<wbr>Restore<wbr>Backup<wbr>Context</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_rootpassword_go">
@@ -1768,8 +1816,7 @@ the master in the replication setup. Note, this requires the master to have
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the project in which the resource belongs. If it
-is not provided, the provider project is used.
+    <dd>{{% md %}}The full project ID of the source instance.`
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1807,6 +1854,15 @@ make sure you understand this.
     <dd>{{% md %}}The configuration for replication. The
 configuration is detailed below.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_restorebackupcontext_nodejs">
+<a href="#state_restorebackupcontext_nodejs" style="color: inherit; text-decoration: inherit;">restore<wbr>Backup<wbr>Context</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#databaseinstancerestorebackupcontext">Database<wbr>Instance<wbr>Restore<wbr>Backup<wbr>Context</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_rootpassword_nodejs">
@@ -1977,8 +2033,7 @@ the master in the replication setup. Note, this requires the master to have
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ID of the project in which the resource belongs. If it
-is not provided, the provider project is used.
+    <dd>{{% md %}}The full project ID of the source instance.`
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2016,6 +2071,15 @@ make sure you understand this.
     <dd>{{% md %}}The configuration for replication. The
 configuration is detailed below.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_restore_backup_context_python">
+<a href="#state_restore_backup_context_python" style="color: inherit; text-decoration: inherit;">restore_<wbr>backup_<wbr>context</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#databaseinstancerestorebackupcontext">Database<wbr>Instance<wbr>Restore<wbr>Backup<wbr>Context<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_root_password_python">
@@ -2735,6 +2799,168 @@ heartbeats.
     </dt>
     <dd>{{% md %}}True if the master's common name
 value is checked during the SSL handshake.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="databaseinstancerestorebackupcontext">Database<wbr>Instance<wbr>Restore<wbr>Backup<wbr>Context</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/input/#DatabaseInstanceRestoreBackupContext">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/gcp/types/output/#DatabaseInstanceRestoreBackupContext">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/sql?tab=doc#DatabaseInstanceRestoreBackupContextArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/sql?tab=doc#DatabaseInstanceRestoreBackupContextOutput">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Sql.Inputs.DatabaseInstanceRestoreBackupContextArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Gcp/Pulumi.Gcp.Sql.Outputs.DatabaseInstanceRestoreBackupContext.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="backuprunid_csharp">
+<a href="#backuprunid_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Run<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The ID of the backup run to restore from.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="instanceid_csharp">
+<a href="#instanceid_csharp" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the instance that the backup was taken from. If left empty,
+this instance's ID will be used.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="project_csharp">
+<a href="#project_csharp" style="color: inherit; text-decoration: inherit;">Project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The full project ID of the source instance.`
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="backuprunid_go">
+<a href="#backuprunid_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Run<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The ID of the backup run to restore from.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="instanceid_go">
+<a href="#instanceid_go" style="color: inherit; text-decoration: inherit;">Instance<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the instance that the backup was taken from. If left empty,
+this instance's ID will be used.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="project_go">
+<a href="#project_go" style="color: inherit; text-decoration: inherit;">Project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The full project ID of the source instance.`
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="backuprunid_nodejs">
+<a href="#backuprunid_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Run<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The ID of the backup run to restore from.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="instanceid_nodejs">
+<a href="#instanceid_nodejs" style="color: inherit; text-decoration: inherit;">instance<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ID of the instance that the backup was taken from. If left empty,
+this instance's ID will be used.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="project_nodejs">
+<a href="#project_nodejs" style="color: inherit; text-decoration: inherit;">project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The full project ID of the source instance.`
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="backup_run_id_python">
+<a href="#backup_run_id_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>run_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The ID of the backup run to restore from.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="instance_id_python">
+<a href="#instance_id_python" style="color: inherit; text-decoration: inherit;">instance_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ID of the instance that the backup was taken from. If left empty,
+this instance's ID will be used.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="project_python">
+<a href="#project_python" style="color: inherit; text-decoration: inherit;">project</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The full project ID of the source instance.`
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}

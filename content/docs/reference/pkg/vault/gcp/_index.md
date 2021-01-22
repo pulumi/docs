@@ -26,7 +26,7 @@ Explore the resources and functions of the gcp module in the Vault package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`vault` Terraform Provider](https://github.com/hashicorp/terraform-provider-vault).</dd>
 	<dt>Version</dt>
-	<dd>3.2.0</dd>
+	<dd>3.2.1</dd>
 </dl>
 
 

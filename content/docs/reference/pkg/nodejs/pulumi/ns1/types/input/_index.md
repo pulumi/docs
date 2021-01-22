@@ -3,7 +3,7 @@ title: "Module types/input"
 title_tag: "Module types/input | Package @pulumi/ns1 | Node.js SDK"
 linktitle: "input"
 meta_desc: "Explore members of the input module in the @pulumi/ns1 package."
-git_sha: "1f2ed41c3a7ef52aa8da1d83cae453661fddd804"
+git_sha: "3620dcfc3338e583f3cbe8c9b27aa7e840a08f04"
 block_external_search_index: true
 ---
 
@@ -33,36 +33,36 @@ block_external_search_index: true
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="MonitoringJobRule" data-link-title="MonitoringJobRule">
-    <a href="https://github.com/pulumi/pulumi-ns1/blob/1f2ed41c3a7ef52aa8da1d83cae453661fddd804/sdk/nodejs/types/input.ts#L7">
+    <a href="https://github.com/pulumi/pulumi-ns1/blob/3620dcfc3338e583f3cbe8c9b27aa7e840a08f04/sdk/nodejs/types/input.ts#L7">
         interface <strong>MonitoringJobRule</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>MonitoringJobRule</span></code></pre>
 <h4 class="pdoc-member-header" id="MonitoringJobRule-comparison">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1f2ed41c3a7ef52aa8da1d83cae453661fddd804/sdk/nodejs/types/input.ts#L8">property <b>comparison</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/3620dcfc3338e583f3cbe8c9b27aa7e840a08f04/sdk/nodejs/types/input.ts#L8">property <b>comparison</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>comparison: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="MonitoringJobRule-key">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1f2ed41c3a7ef52aa8da1d83cae453661fddd804/sdk/nodejs/types/input.ts#L9">property <b>key</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/3620dcfc3338e583f3cbe8c9b27aa7e840a08f04/sdk/nodejs/types/input.ts#L9">property <b>key</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>key: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="MonitoringJobRule-value">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1f2ed41c3a7ef52aa8da1d83cae453661fddd804/sdk/nodejs/types/input.ts#L10">property <b>value</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/3620dcfc3338e583f3cbe8c9b27aa7e840a08f04/sdk/nodejs/types/input.ts#L10">property <b>value</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>value: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="NotifyListNotification" data-link-title="NotifyListNotification">
-    <a href="https://github.com/pulumi/pulumi-ns1/blob/1f2ed41c3a7ef52aa8da1d83cae453661fddd804/sdk/nodejs/types/input.ts#L13">
+    <a href="https://github.com/pulumi/pulumi-ns1/blob/3620dcfc3338e583f3cbe8c9b27aa7e840a08f04/sdk/nodejs/types/input.ts#L13">
         interface <strong>NotifyListNotification</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>NotifyListNotification</span></code></pre>
 <h4 class="pdoc-member-header" id="NotifyListNotification-config">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1f2ed41c3a7ef52aa8da1d83cae453661fddd804/sdk/nodejs/types/input.ts#L17">property <b>config</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/3620dcfc3338e583f3cbe8c9b27aa7e840a08f04/sdk/nodejs/types/input.ts#L17">property <b>config</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>config: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -70,7 +70,7 @@ block_external_search_index: true
 Configuration details for the given notifier type.
 
 <h4 class="pdoc-member-header" id="NotifyListNotification-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1f2ed41c3a7ef52aa8da1d83cae453661fddd804/sdk/nodejs/types/input.ts#L21">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/3620dcfc3338e583f3cbe8c9b27aa7e840a08f04/sdk/nodejs/types/input.ts#L21">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -78,14 +78,14 @@ Configuration details for the given notifier type.
 The type of notifier. Available notifiers are indicated in /notifytypes endpoint.
 
 <h3 class="pdoc-module-header" id="RecordAnswer" data-link-title="RecordAnswer">
-    <a href="https://github.com/pulumi/pulumi-ns1/blob/1f2ed41c3a7ef52aa8da1d83cae453661fddd804/sdk/nodejs/types/input.ts#L24">
+    <a href="https://github.com/pulumi/pulumi-ns1/blob/3620dcfc3338e583f3cbe8c9b27aa7e840a08f04/sdk/nodejs/types/input.ts#L24">
         interface <strong>RecordAnswer</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>RecordAnswer</span></code></pre>
 <h4 class="pdoc-member-header" id="RecordAnswer-answer">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1f2ed41c3a7ef52aa8da1d83cae453661fddd804/sdk/nodejs/types/input.ts#L28">property <b>answer</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/3620dcfc3338e583f3cbe8c9b27aa7e840a08f04/sdk/nodejs/types/input.ts#L28">property <b>answer</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>answer?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -93,12 +93,12 @@ The type of notifier. Available notifiers are indicated in /notifytypes endpoint
 Space delimited string of RDATA fields dependent on the record type.
 
 <h4 class="pdoc-member-header" id="RecordAnswer-meta">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1f2ed41c3a7ef52aa8da1d83cae453661fddd804/sdk/nodejs/types/input.ts#L29">property <b>meta</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/3620dcfc3338e583f3cbe8c9b27aa7e840a08f04/sdk/nodejs/types/input.ts#L29">property <b>meta</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>meta?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RecordAnswer-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1f2ed41c3a7ef52aa8da1d83cae453661fddd804/sdk/nodejs/types/input.ts#L39">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/3620dcfc3338e583f3cbe8c9b27aa7e840a08f04/sdk/nodejs/types/input.ts#L39">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -112,14 +112,14 @@ approach.
 is documented below.
 
 <h3 class="pdoc-module-header" id="RecordFilter" data-link-title="RecordFilter">
-    <a href="https://github.com/pulumi/pulumi-ns1/blob/1f2ed41c3a7ef52aa8da1d83cae453661fddd804/sdk/nodejs/types/input.ts#L42">
+    <a href="https://github.com/pulumi/pulumi-ns1/blob/3620dcfc3338e583f3cbe8c9b27aa7e840a08f04/sdk/nodejs/types/input.ts#L42">
         interface <strong>RecordFilter</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>RecordFilter</span></code></pre>
 <h4 class="pdoc-member-header" id="RecordFilter-config">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1f2ed41c3a7ef52aa8da1d83cae453661fddd804/sdk/nodejs/types/input.ts#L47">property <b>config</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/3620dcfc3338e583f3cbe8c9b27aa7e840a08f04/sdk/nodejs/types/input.ts#L47">property <b>config</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>config?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -128,7 +128,7 @@ The filters' configuration. Simple key/value pairs
 determined by the filter type.
 
 <h4 class="pdoc-member-header" id="RecordFilter-disabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1f2ed41c3a7ef52aa8da1d83cae453661fddd804/sdk/nodejs/types/input.ts#L52">property <b>disabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/3620dcfc3338e583f3cbe8c9b27aa7e840a08f04/sdk/nodejs/types/input.ts#L52">property <b>disabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>disabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -137,7 +137,7 @@ Determines whether the filter is applied in the
 filter chain.
 
 <h4 class="pdoc-member-header" id="RecordFilter-filter">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1f2ed41c3a7ef52aa8da1d83cae453661fddd804/sdk/nodejs/types/input.ts#L56">property <b>filter</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/3620dcfc3338e583f3cbe8c9b27aa7e840a08f04/sdk/nodejs/types/input.ts#L56">property <b>filter</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filter: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -145,19 +145,19 @@ filter chain.
 The type of filter.
 
 <h3 class="pdoc-module-header" id="RecordRegion" data-link-title="RecordRegion">
-    <a href="https://github.com/pulumi/pulumi-ns1/blob/1f2ed41c3a7ef52aa8da1d83cae453661fddd804/sdk/nodejs/types/input.ts#L59">
+    <a href="https://github.com/pulumi/pulumi-ns1/blob/3620dcfc3338e583f3cbe8c9b27aa7e840a08f04/sdk/nodejs/types/input.ts#L59">
         interface <strong>RecordRegion</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>RecordRegion</span></code></pre>
 <h4 class="pdoc-member-header" id="RecordRegion-meta">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1f2ed41c3a7ef52aa8da1d83cae453661fddd804/sdk/nodejs/types/input.ts#L60">property <b>meta</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/3620dcfc3338e583f3cbe8c9b27aa7e840a08f04/sdk/nodejs/types/input.ts#L60">property <b>meta</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>meta?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="RecordRegion-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1f2ed41c3a7ef52aa8da1d83cae453661fddd804/sdk/nodejs/types/input.ts#L64">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/3620dcfc3338e583f3cbe8c9b27aa7e840a08f04/sdk/nodejs/types/input.ts#L64">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -165,14 +165,14 @@ The type of filter.
 Name of the region (or Answer Group).
 
 <h3 class="pdoc-module-header" id="TeamIpWhitelist" data-link-title="TeamIpWhitelist">
-    <a href="https://github.com/pulumi/pulumi-ns1/blob/1f2ed41c3a7ef52aa8da1d83cae453661fddd804/sdk/nodejs/types/input.ts#L67">
+    <a href="https://github.com/pulumi/pulumi-ns1/blob/3620dcfc3338e583f3cbe8c9b27aa7e840a08f04/sdk/nodejs/types/input.ts#L67">
         interface <strong>TeamIpWhitelist</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>TeamIpWhitelist</span></code></pre>
 <h4 class="pdoc-member-header" id="TeamIpWhitelist-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1f2ed41c3a7ef52aa8da1d83cae453661fddd804/sdk/nodejs/types/input.ts#L71">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/3620dcfc3338e583f3cbe8c9b27aa7e840a08f04/sdk/nodejs/types/input.ts#L71">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -180,19 +180,19 @@ Name of the region (or Answer Group).
 The free form name of the team.
 
 <h4 class="pdoc-member-header" id="TeamIpWhitelist-values">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1f2ed41c3a7ef52aa8da1d83cae453661fddd804/sdk/nodejs/types/input.ts#L72">property <b>values</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/3620dcfc3338e583f3cbe8c9b27aa7e840a08f04/sdk/nodejs/types/input.ts#L72">property <b>values</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>values: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ZoneSecondary" data-link-title="ZoneSecondary">
-    <a href="https://github.com/pulumi/pulumi-ns1/blob/1f2ed41c3a7ef52aa8da1d83cae453661fddd804/sdk/nodejs/types/input.ts#L75">
+    <a href="https://github.com/pulumi/pulumi-ns1/blob/3620dcfc3338e583f3cbe8c9b27aa7e840a08f04/sdk/nodejs/types/input.ts#L75">
         interface <strong>ZoneSecondary</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>interface</span> <span class='nx'>ZoneSecondary</span></code></pre>
 <h4 class="pdoc-member-header" id="ZoneSecondary-ip">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1f2ed41c3a7ef52aa8da1d83cae453661fddd804/sdk/nodejs/types/input.ts#L79">property <b>ip</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/3620dcfc3338e583f3cbe8c9b27aa7e840a08f04/sdk/nodejs/types/input.ts#L79">property <b>ip</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ip: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -200,7 +200,7 @@ The free form name of the team.
 IPv4 address of the secondary server.
 
 <h4 class="pdoc-member-header" id="ZoneSecondary-networks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1f2ed41c3a7ef52aa8da1d83cae453661fddd804/sdk/nodejs/types/input.ts#L85">property <b>networks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/3620dcfc3338e583f3cbe8c9b27aa7e840a08f04/sdk/nodejs/types/input.ts#L85">property <b>networks</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>networks?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;[]&gt;;</code></pre>
@@ -210,7 +210,7 @@ should be made available. Default is network 0, the primary NSONE Global
 Network. Normally, you should not have to worry about this.
 
 <h4 class="pdoc-member-header" id="ZoneSecondary-notify">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1f2ed41c3a7ef52aa8da1d83cae453661fddd804/sdk/nodejs/types/input.ts#L90">property <b>notify</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/3620dcfc3338e583f3cbe8c9b27aa7e840a08f04/sdk/nodejs/types/input.ts#L90">property <b>notify</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>notify?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -219,7 +219,7 @@ Whether we send `NOTIFY` messages to the secondary host
 when the zone changes. Default `false`.
 
 <h4 class="pdoc-member-header" id="ZoneSecondary-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/1f2ed41c3a7ef52aa8da1d83cae453661fddd804/sdk/nodejs/types/input.ts#L94">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-ns1/blob/3620dcfc3338e583f3cbe8c9b27aa7e840a08f04/sdk/nodejs/types/input.ts#L94">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>port?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>

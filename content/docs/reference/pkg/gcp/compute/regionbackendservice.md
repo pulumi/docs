@@ -181,6 +181,9 @@ class MyStack : Stack
             },
             LoadBalancingScheme = "EXTERNAL",
             Protocol = "HTTP",
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
         });
     }
 
@@ -225,7 +228,7 @@ func main() {
 			},
 			LoadBalancingScheme: pulumi.String("EXTERNAL"),
 			Protocol:            pulumi.String("HTTP"),
-		})
+		}, pulumi.Provider(google_beta))
 		if err != nil {
 			return err
 		}
@@ -260,7 +263,8 @@ default_region_backend_service = gcp.compute.RegionBackendService("defaultRegion
         signed_url_cache_max_age_sec=7200,
     ),
     load_balancing_scheme="EXTERNAL",
-    protocol="HTTP")
+    protocol="HTTP",
+    opts=pulumi.ResourceOptions(provider=google_beta))
 ```
 
 {{% /example %}}
@@ -293,6 +297,8 @@ const defaultRegionBackendService = new gcp.compute.RegionBackendService("defaul
     },
     loadBalancingScheme: "EXTERNAL",
     protocol: "HTTP",
+}, {
+    provider: google_beta,
 });
 ```
 

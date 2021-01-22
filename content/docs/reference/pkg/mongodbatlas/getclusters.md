@@ -37,8 +37,24 @@ class MyStack : Stack
         {
             ProjectId = "<YOUR-PROJECT-ID>",
             DiskSizeGb = 100,
-            NumShards = 1,
-            ReplicationFactor = 3,
+            ClusterType = "REPLICASET",
+            ReplicationSpecs = 
+            {
+                new Mongodbatlas.Inputs.ClusterReplicationSpecArgs
+                {
+                    NumShards = 1,
+                    RegionsConfigs = 
+                    {
+                        new Mongodbatlas.Inputs.ClusterReplicationSpecRegionsConfigArgs
+                        {
+                            RegionName = "US_EAST_1",
+                            ElectableNodes = 3,
+                            Priority = 7,
+                            ReadOnlyNodes = 0,
+                        },
+                    },
+                },
+            },
             ProviderBackupEnabled = true,
             AutoScalingDiskGbEnabled = true,
             ProviderName = "AWS",
@@ -46,7 +62,6 @@ class MyStack : Stack
             ProviderVolumeType = "STANDARD",
             ProviderEncryptEbsVolume = true,
             ProviderInstanceSizeName = "M40",
-            ProviderRegionName = "US_EAST_1",
         });
         var testClusters = testCluster.ProjectId.Apply(projectId => Mongodbatlas.GetClusters.InvokeAsync(new Mongodbatlas.GetClustersArgs
         {
@@ -71,10 +86,22 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		testCluster, err := mongodbatlas.NewCluster(ctx, "testCluster", &mongodbatlas.ClusterArgs{
-			ProjectId:                pulumi.String("<YOUR-PROJECT-ID>"),
-			DiskSizeGb:               pulumi.Float64(100),
-			NumShards:                pulumi.Int(1),
-			ReplicationFactor:        pulumi.Int(3),
+			ProjectId:   pulumi.String("<YOUR-PROJECT-ID>"),
+			DiskSizeGb:  pulumi.Float64(100),
+			ClusterType: pulumi.String("REPLICASET"),
+			ReplicationSpecs: mongodbatlas.ClusterReplicationSpecArray{
+				&mongodbatlas.ClusterReplicationSpecArgs{
+					NumShards: pulumi.Int(1),
+					RegionsConfigs: mongodbatlas.ClusterReplicationSpecRegionsConfigArray{
+						&mongodbatlas.ClusterReplicationSpecRegionsConfigArgs{
+							RegionName:     pulumi.String("US_EAST_1"),
+							ElectableNodes: pulumi.Int(3),
+							Priority:       pulumi.Int(7),
+							ReadOnlyNodes:  pulumi.Int(0),
+						},
+					},
+				},
+			},
 			ProviderBackupEnabled:    pulumi.Bool(true),
 			AutoScalingDiskGbEnabled: pulumi.Bool(true),
 			ProviderName:             pulumi.String("AWS"),
@@ -82,7 +109,6 @@ func main() {
 			ProviderVolumeType:       pulumi.String("STANDARD"),
 			ProviderEncryptEbsVolume: pulumi.Bool(true),
 			ProviderInstanceSizeName: pulumi.String("M40"),
-			ProviderRegionName:       pulumi.String("US_EAST_1"),
 		})
 		if err != nil {
 			return err
@@ -102,16 +128,23 @@ import pulumi_mongodbatlas as mongodbatlas
 test_cluster = mongodbatlas.Cluster("testCluster",
     project_id="<YOUR-PROJECT-ID>",
     disk_size_gb=100,
-    num_shards=1,
-    replication_factor=3,
+    cluster_type="REPLICASET",
+    replication_specs=[mongodbatlas.ClusterReplicationSpecArgs(
+        num_shards=1,
+        regions_configs=[mongodbatlas.ClusterReplicationSpecRegionsConfigArgs(
+            region_name="US_EAST_1",
+            electable_nodes=3,
+            priority=7,
+            read_only_nodes=0,
+        )],
+    )],
     provider_backup_enabled=True,
     auto_scaling_disk_gb_enabled=True,
     provider_name="AWS",
     provider_disk_iops=300,
     provider_volume_type="STANDARD",
     provider_encrypt_ebs_volume=True,
-    provider_instance_size_name="M40",
-    provider_region_name="US_EAST_1")
+    provider_instance_size_name="M40")
 test_clusters = test_cluster.project_id.apply(lambda project_id: mongodbatlas.get_clusters(project_id=project_id))
 ```
 
@@ -126,8 +159,16 @@ import * as mongodbatlas from "@pulumi/mongodbatlas";
 const testCluster = new mongodbatlas.Cluster("testCluster", {
     projectId: "<YOUR-PROJECT-ID>",
     diskSizeGb: 100,
-    numShards: 1,
-    replicationFactor: 3,
+    clusterType: "REPLICASET",
+    replicationSpecs: [{
+        numShards: 1,
+        regionsConfigs: [{
+            regionName: "US_EAST_1",
+            electableNodes: 3,
+            priority: 7,
+            readOnlyNodes: 0,
+        }],
+    }],
     providerBackupEnabled: true,
     autoScalingDiskGbEnabled: true,
     providerName: "AWS",
@@ -135,7 +176,6 @@ const testCluster = new mongodbatlas.Cluster("testCluster", {
     providerVolumeType: "STANDARD",
     providerEncryptEbsVolume: true,
     providerInstanceSizeName: "M40",
-    providerRegionName: "US_EAST_1",
 });
 const testClusters = testCluster.projectId.apply(projectId => mongodbatlas.getClusters({
     projectId: projectId,
@@ -738,7 +778,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of replica set members. Each member keeps a copy of your databases, providing high availability and data redundancy. The possible values are 3, 5, or 7. The default value is 3.
+    <dd>{{% md %}}(Deprecated) Number of replica set members. Each member keeps a copy of your databases, providing high availability and data redundancy. The possible values are 3, 5, or 7. The default value is 3.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1115,7 +1155,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of replica set members. Each member keeps a copy of your databases, providing high availability and data redundancy. The possible values are 3, 5, or 7. The default value is 3.
+    <dd>{{% md %}}(Deprecated) Number of replica set members. Each member keeps a copy of your databases, providing high availability and data redundancy. The possible values are 3, 5, or 7. The default value is 3.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1492,7 +1532,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Number of replica set members. Each member keeps a copy of your databases, providing high availability and data redundancy. The possible values are 3, 5, or 7. The default value is 3.
+    <dd>{{% md %}}(Deprecated) Number of replica set members. Each member keeps a copy of your databases, providing high availability and data redundancy. The possible values are 3, 5, or 7. The default value is 3.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1869,7 +1909,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Number of replica set members. Each member keeps a copy of your databases, providing high availability and data redundancy. The possible values are 3, 5, or 7. The default value is 3.
+    <dd>{{% md %}}(Deprecated) Number of replica set members. Each member keeps a copy of your databases, providing high availability and data redundancy. The possible values are 3, 5, or 7. The default value is 3.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">

@@ -11,8 +11,7 @@ meta_desc: "Documentation for the gcp.folder.OrganizationPolicy resource with ex
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Allows management of Organization policies for a Google Folder. For more information see
-[the official
-documentation](https://cloud.google.com/resource-manager/docs/organization-policy/overview) and
+[the official documentation](https://cloud.google.com/resource-manager/docs/organization-policy/overview) and
 [API](https://cloud.google.com/resource-manager/reference/rest/v1/folders/setOrgPolicy).
 
 {{% examples %}}

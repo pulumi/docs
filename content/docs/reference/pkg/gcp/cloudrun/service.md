@@ -161,6 +161,178 @@ const defaultService = new gcp.cloudrun.Service("default", {
 
 {{% /example %}}
 
+### Cloud Run Service Sql
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using Gcp = Pulumi.Gcp;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var instance = new Gcp.Sql.DatabaseInstance("instance", new Gcp.Sql.DatabaseInstanceArgs
+        {
+            Region = "us-east1",
+            Settings = new Gcp.Sql.Inputs.DatabaseInstanceSettingsArgs
+            {
+                Tier = "db-f1-micro",
+            },
+            DeletionProtection = true,
+        });
+        var @default = new Gcp.CloudRun.Service("default", new Gcp.CloudRun.ServiceArgs
+        {
+            Location = "us-central1",
+            Template = new Gcp.CloudRun.Inputs.ServiceTemplateArgs
+            {
+                Spec = new Gcp.CloudRun.Inputs.ServiceTemplateSpecArgs
+                {
+                    Containers = 
+                    {
+                        new Gcp.CloudRun.Inputs.ServiceTemplateSpecContainerArgs
+                        {
+                            Image = "gcr.io/cloudrun/hello",
+                        },
+                    },
+                },
+                Metadata = new Gcp.CloudRun.Inputs.ServiceTemplateMetadataArgs
+                {
+                    Annotations = 
+                    {
+                        { "autoscaling.knative.dev/maxScale", "1000" },
+                        { "run.googleapis.com/cloudsql-instances", instance.ConnectionName },
+                        { "run.googleapis.com/client-name", "demo" },
+                    },
+                },
+            },
+            AutogenerateRevisionName = true,
+        });
+    }
+
+}
+```
+
+{{% /example %}}
+
+{{% example go %}}
+```go
+package main
+
+import (
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/cloudrun"
+	"github.com/pulumi/pulumi-gcp/sdk/v4/go/gcp/sql"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		instance, err := sql.NewDatabaseInstance(ctx, "instance", &sql.DatabaseInstanceArgs{
+			Region: pulumi.String("us-east1"),
+			Settings: &sql.DatabaseInstanceSettingsArgs{
+				Tier: pulumi.String("db-f1-micro"),
+			},
+			DeletionProtection: pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
+		_, err = cloudrun.NewService(ctx, "_default", &cloudrun.ServiceArgs{
+			Location: pulumi.String("us-central1"),
+			Template: &cloudrun.ServiceTemplateArgs{
+				Spec: &cloudrun.ServiceTemplateSpecArgs{
+					Containers: cloudrun.ServiceTemplateSpecContainerArray{
+						&cloudrun.ServiceTemplateSpecContainerArgs{
+							Image: pulumi.String("gcr.io/cloudrun/hello"),
+						},
+					},
+				},
+				Metadata: &cloudrun.ServiceTemplateMetadataArgs{
+					Annotations: pulumi.StringMap{
+						"autoscaling.knative.dev/maxScale":      pulumi.String("1000"),
+						"run.googleapis.com/cloudsql-instances": instance.ConnectionName,
+						"run.googleapis.com/client-name":        pulumi.String("demo"),
+					},
+				},
+			},
+			AutogenerateRevisionName: pulumi.Bool(true),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+```
+
+{{% /example %}}
+
+{{% example python %}}
+```python
+import pulumi
+import pulumi_gcp as gcp
+
+instance = gcp.sql.DatabaseInstance("instance",
+    region="us-east1",
+    settings=gcp.sql.DatabaseInstanceSettingsArgs(
+        tier="db-f1-micro",
+    ),
+    deletion_protection=True)
+default = gcp.cloudrun.Service("default",
+    location="us-central1",
+    template=gcp.cloudrun.ServiceTemplateArgs(
+        spec=gcp.cloudrun.ServiceTemplateSpecArgs(
+            containers=[gcp.cloudrun.ServiceTemplateSpecContainerArgs(
+                image="gcr.io/cloudrun/hello",
+            )],
+        ),
+        metadata=gcp.cloudrun.ServiceTemplateMetadataArgs(
+            annotations={
+                "autoscaling.knative.dev/maxScale": "1000",
+                "run.googleapis.com/cloudsql-instances": instance.connection_name,
+                "run.googleapis.com/client-name": "demo",
+            },
+        ),
+    ),
+    autogenerate_revision_name=True)
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as gcp from "@pulumi/gcp";
+
+const instance = new gcp.sql.DatabaseInstance("instance", {
+    region: "us-east1",
+    settings: {
+        tier: "db-f1-micro",
+    },
+    deletionProtection: "true",
+});
+const _default = new gcp.cloudrun.Service("default", {
+    location: "us-central1",
+    template: {
+        spec: {
+            containers: [{
+                image: "gcr.io/cloudrun/hello",
+            }],
+        },
+        metadata: {
+            annotations: {
+                "autoscaling.knative.dev/maxScale": "1000",
+                "run.googleapis.com/cloudsql-instances": instance.connectionName,
+                "run.googleapis.com/client-name": "demo",
+            },
+        },
+    },
+    autogenerateRevisionName: true,
+});
+```
+
+{{% /example %}}
+
 ### Cloud Run Service Multiple Environment Variables
 {{% example csharp %}}
 ```csharp
@@ -720,7 +892,7 @@ The Service resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If set to `true`, the revision name (template.metadata.name) will be omitted and 
+    <dd>{{% md %}}If set to `true`, the revision name (template.metadata.name) will be omitted and
 autogenerated by Cloud Run. This cannot be set to `true` while `template.metadata.name`
 is also set.
 (For legacy support, if `template.metadata.name` is unset in state while
@@ -814,7 +986,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If set to `true`, the revision name (template.metadata.name) will be omitted and 
+    <dd>{{% md %}}If set to `true`, the revision name (template.metadata.name) will be omitted and
 autogenerated by Cloud Run. This cannot be set to `true` while `template.metadata.name`
 is also set.
 (For legacy support, if `template.metadata.name` is unset in state while
@@ -908,7 +1080,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}If set to `true`, the revision name (template.metadata.name) will be omitted and 
+    <dd>{{% md %}}If set to `true`, the revision name (template.metadata.name) will be omitted and
 autogenerated by Cloud Run. This cannot be set to `true` while `template.metadata.name`
 is also set.
 (For legacy support, if `template.metadata.name` is unset in state while
@@ -1002,7 +1174,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If set to `true`, the revision name (template.metadata.name) will be omitted and 
+    <dd>{{% md %}}If set to `true`, the revision name (template.metadata.name) will be omitted and
 autogenerated by Cloud Run. This cannot be set to `true` while `template.metadata.name`
 is also set.
 (For legacy support, if `template.metadata.name` is unset in state while
@@ -1316,7 +1488,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If set to `true`, the revision name (template.metadata.name) will be omitted and 
+    <dd>{{% md %}}If set to `true`, the revision name (template.metadata.name) will be omitted and
 autogenerated by Cloud Run. This cannot be set to `true` while `template.metadata.name`
 is also set.
 (For legacy support, if `template.metadata.name` is unset in state while
@@ -1420,7 +1592,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If set to `true`, the revision name (template.metadata.name) will be omitted and 
+    <dd>{{% md %}}If set to `true`, the revision name (template.metadata.name) will be omitted and
 autogenerated by Cloud Run. This cannot be set to `true` while `template.metadata.name`
 is also set.
 (For legacy support, if `template.metadata.name` is unset in state while
@@ -1524,7 +1696,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}If set to `true`, the revision name (template.metadata.name) will be omitted and 
+    <dd>{{% md %}}If set to `true`, the revision name (template.metadata.name) will be omitted and
 autogenerated by Cloud Run. This cannot be set to `true` while `template.metadata.name`
 is also set.
 (For legacy support, if `template.metadata.name` is unset in state while
@@ -1628,7 +1800,7 @@ Structure is documented below.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If set to `true`, the revision name (template.metadata.name) will be omitted and 
+    <dd>{{% md %}}If set to `true`, the revision name (template.metadata.name) will be omitted and
 autogenerated by Cloud Run. This cannot be set to `true` while `template.metadata.name`
 is also set.
 (For legacy support, if `template.metadata.name` is unset in state while

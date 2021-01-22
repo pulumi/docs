@@ -3,7 +3,7 @@ title: "Module msi"
 title_tag: "Module msi | Package @pulumi/azure | Node.js SDK"
 linktitle: "msi"
 meta_desc: "Explore members of the msi module in the @pulumi/azure package."
-git_sha: "3a2aa71633a2e4806395dfbf14969b02ddf7e2d4"
+git_sha: "389b9d2c106e6ab264d2820b1729d61ac832ff9a"
 block_external_search_index: true
 ---
 
@@ -30,7 +30,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="UserAssignedIdentity" data-link-title="UserAssignedIdentity">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/3a2aa71633a2e4806395dfbf14969b02ddf7e2d4/sdk/nodejs/msi/userAssignedIdentity.ts#L33">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/msi/userAssignedIdentity.ts#L33">
         Resource <strong>UserAssignedIdentity</strong>
     </a>
 </h3>
@@ -65,7 +65,7 @@ User Assigned Identities can be imported using the `resource id`, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="UserAssignedIdentity-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/3a2aa71633a2e4806395dfbf14969b02ddf7e2d4/sdk/nodejs/msi/userAssignedIdentity.ts#L88"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/msi/userAssignedIdentity.ts#L88"> <b>constructor</b></a>
 </h4>
 
 <div class="note note-deprecated">
@@ -80,7 +80,7 @@ azure.msi.UserAssignedIdentity has been deprecated in favor of azure.authorizati
 <pre class="highlight"><code><span class='kd'></span><span class='kd'>new</span> UserAssignedIdentity(name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>, args: <a href='#UserAssignedIdentityArgs'>UserAssignedIdentityArgs</a>, opts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResourceOptions'>pulumi.CustomResourceOptions</a>)</code></pre>
 
 <h4 class="pdoc-member-header" id="UserAssignedIdentity-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/3a2aa71633a2e4806395dfbf14969b02ddf7e2d4/sdk/nodejs/msi/userAssignedIdentity.ts#L43">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/msi/userAssignedIdentity.ts#L43">method <b>get</b></a>
 </h4>
 
 
@@ -91,14 +91,14 @@ Get an existing UserAssignedIdentity resource's state with the given name, ID, a
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="UserAssignedIdentity-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/3a2aa71633a2e4806395dfbf14969b02ddf7e2d4/sdk/nodejs/msi/userAssignedIdentity.ts#L33">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/msi/userAssignedIdentity.ts#L33">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="UserAssignedIdentity-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/3a2aa71633a2e4806395dfbf14969b02ddf7e2d4/sdk/nodejs/msi/userAssignedIdentity.ts#L55">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/msi/userAssignedIdentity.ts#L55">method <b>isInstance</b></a>
 </h4>
 
 
@@ -109,7 +109,7 @@ Returns true if the given object is an instance of UserAssignedIdentity.  This i
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="UserAssignedIdentity-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/3a2aa71633a2e4806395dfbf14969b02ddf7e2d4/sdk/nodejs/msi/userAssignedIdentity.ts#L65">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/msi/userAssignedIdentity.ts#L65">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>clientId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -117,7 +117,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Client ID associated with the user assigned identity.
 
 <h4 class="pdoc-member-header" id="UserAssignedIdentity-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/3a2aa71633a2e4806395dfbf14969b02ddf7e2d4/sdk/nodejs/msi/userAssignedIdentity.ts#L33">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/msi/userAssignedIdentity.ts#L33">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -126,7 +126,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="UserAssignedIdentity-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/3a2aa71633a2e4806395dfbf14969b02ddf7e2d4/sdk/nodejs/msi/userAssignedIdentity.ts#L70">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/msi/userAssignedIdentity.ts#L70">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>location: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -135,7 +135,7 @@ The location/region where the user assigned identity is
 created.
 
 <h4 class="pdoc-member-header" id="UserAssignedIdentity-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/3a2aa71633a2e4806395dfbf14969b02ddf7e2d4/sdk/nodejs/msi/userAssignedIdentity.ts#L75">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/msi/userAssignedIdentity.ts#L75">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -144,7 +144,7 @@ The name of the user assigned identity. Changing this forces a
 new identity to be created.
 
 <h4 class="pdoc-member-header" id="UserAssignedIdentity-principalId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/3a2aa71633a2e4806395dfbf14969b02ddf7e2d4/sdk/nodejs/msi/userAssignedIdentity.ts#L79">property <b>principalId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/msi/userAssignedIdentity.ts#L79">property <b>principalId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>principalId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -152,7 +152,7 @@ new identity to be created.
 Service Principal ID associated with the user assigned identity.
 
 <h4 class="pdoc-member-header" id="UserAssignedIdentity-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/3a2aa71633a2e4806395dfbf14969b02ddf7e2d4/sdk/nodejs/msi/userAssignedIdentity.ts#L84">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/msi/userAssignedIdentity.ts#L84">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -161,7 +161,7 @@ The name of the resource group in which to
 create the user assigned identity.
 
 <h4 class="pdoc-member-header" id="UserAssignedIdentity-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/3a2aa71633a2e4806395dfbf14969b02ddf7e2d4/sdk/nodejs/msi/userAssignedIdentity.ts#L88">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/msi/userAssignedIdentity.ts#L88">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -169,7 +169,7 @@ create the user assigned identity.
 A mapping of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="UserAssignedIdentity-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/3a2aa71633a2e4806395dfbf14969b02ddf7e2d4/sdk/nodejs/msi/userAssignedIdentity.ts#L33">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/msi/userAssignedIdentity.ts#L33">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -181,7 +181,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="UserAssignedIdentityArgs" data-link-title="UserAssignedIdentityArgs">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/3a2aa71633a2e4806395dfbf14969b02ddf7e2d4/sdk/nodejs/msi/userAssignedIdentity.ts#L170">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/msi/userAssignedIdentity.ts#L170">
         interface <strong>UserAssignedIdentityArgs</strong>
     </a>
 </h3>
@@ -191,7 +191,7 @@ deployments.
 The set of arguments for constructing a UserAssignedIdentity resource.
 
 <h4 class="pdoc-member-header" id="UserAssignedIdentityArgs-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/3a2aa71633a2e4806395dfbf14969b02ddf7e2d4/sdk/nodejs/msi/userAssignedIdentity.ts#L175">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/msi/userAssignedIdentity.ts#L175">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -200,7 +200,7 @@ The location/region where the user assigned identity is
 created.
 
 <h4 class="pdoc-member-header" id="UserAssignedIdentityArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/3a2aa71633a2e4806395dfbf14969b02ddf7e2d4/sdk/nodejs/msi/userAssignedIdentity.ts#L180">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/msi/userAssignedIdentity.ts#L180">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -209,7 +209,7 @@ The name of the user assigned identity. Changing this forces a
 new identity to be created.
 
 <h4 class="pdoc-member-header" id="UserAssignedIdentityArgs-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/3a2aa71633a2e4806395dfbf14969b02ddf7e2d4/sdk/nodejs/msi/userAssignedIdentity.ts#L185">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/msi/userAssignedIdentity.ts#L185">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -218,7 +218,7 @@ The name of the resource group in which to
 create the user assigned identity.
 
 <h4 class="pdoc-member-header" id="UserAssignedIdentityArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/3a2aa71633a2e4806395dfbf14969b02ddf7e2d4/sdk/nodejs/msi/userAssignedIdentity.ts#L189">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/msi/userAssignedIdentity.ts#L189">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -226,7 +226,7 @@ create the user assigned identity.
 A mapping of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="UserAssignedIdentityState" data-link-title="UserAssignedIdentityState">
-    <a href="https://github.com/pulumi/pulumi-azure/blob/3a2aa71633a2e4806395dfbf14969b02ddf7e2d4/sdk/nodejs/msi/userAssignedIdentity.ts#L137">
+    <a href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/msi/userAssignedIdentity.ts#L137">
         interface <strong>UserAssignedIdentityState</strong>
     </a>
 </h3>
@@ -236,7 +236,7 @@ A mapping of tags to assign to the resource.
 Input properties used for looking up and filtering UserAssignedIdentity resources.
 
 <h4 class="pdoc-member-header" id="UserAssignedIdentityState-clientId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/3a2aa71633a2e4806395dfbf14969b02ddf7e2d4/sdk/nodejs/msi/userAssignedIdentity.ts#L141">property <b>clientId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/msi/userAssignedIdentity.ts#L141">property <b>clientId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>clientId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -244,7 +244,7 @@ Input properties used for looking up and filtering UserAssignedIdentity resource
 Client ID associated with the user assigned identity.
 
 <h4 class="pdoc-member-header" id="UserAssignedIdentityState-location">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/3a2aa71633a2e4806395dfbf14969b02ddf7e2d4/sdk/nodejs/msi/userAssignedIdentity.ts#L146">property <b>location</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/msi/userAssignedIdentity.ts#L146">property <b>location</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>location?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -253,7 +253,7 @@ The location/region where the user assigned identity is
 created.
 
 <h4 class="pdoc-member-header" id="UserAssignedIdentityState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/3a2aa71633a2e4806395dfbf14969b02ddf7e2d4/sdk/nodejs/msi/userAssignedIdentity.ts#L151">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/msi/userAssignedIdentity.ts#L151">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -262,7 +262,7 @@ The name of the user assigned identity. Changing this forces a
 new identity to be created.
 
 <h4 class="pdoc-member-header" id="UserAssignedIdentityState-principalId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/3a2aa71633a2e4806395dfbf14969b02ddf7e2d4/sdk/nodejs/msi/userAssignedIdentity.ts#L155">property <b>principalId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/msi/userAssignedIdentity.ts#L155">property <b>principalId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>principalId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -270,7 +270,7 @@ new identity to be created.
 Service Principal ID associated with the user assigned identity.
 
 <h4 class="pdoc-member-header" id="UserAssignedIdentityState-resourceGroupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/3a2aa71633a2e4806395dfbf14969b02ddf7e2d4/sdk/nodejs/msi/userAssignedIdentity.ts#L160">property <b>resourceGroupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/msi/userAssignedIdentity.ts#L160">property <b>resourceGroupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceGroupName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -279,7 +279,7 @@ The name of the resource group in which to
 create the user assigned identity.
 
 <h4 class="pdoc-member-header" id="UserAssignedIdentityState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/3a2aa71633a2e4806395dfbf14969b02ddf7e2d4/sdk/nodejs/msi/userAssignedIdentity.ts#L164">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-azure/blob/389b9d2c106e6ab264d2820b1729d61ac832ff9a/sdk/nodejs/msi/userAssignedIdentity.ts#L164">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>

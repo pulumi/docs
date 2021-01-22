@@ -27,6 +27,7 @@ Explore the resources and functions of the cs module in the AliCloud package.
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
+    <li><a href="getackservice" title="GetAckService"><span class="symbol function"></span>GetAckService</a></li>
     <li><a href="getedgekubernetesclusters" title="GetEdgeKubernetesClusters"><span class="symbol function"></span>GetEdgeKubernetesClusters</a></li>
     <li><a href="getkubernetesclusters" title="GetKubernetesClusters"><span class="symbol function"></span>GetKubernetesClusters</a></li>
     <li><a href="getmanagedkubernetesclusters" title="GetManagedKubernetesClusters"><span class="symbol function"></span>GetManagedKubernetesClusters</a></li>
@@ -46,7 +47,7 @@ Explore the resources and functions of the cs module in the AliCloud package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`alicloud` Terraform Provider](https://github.com/aliyun/terraform-provider-alicloud).</dd>
 	<dt>Version</dt>
-	<dd>2.31.0</dd>
+	<dd>2.32.0</dd>
 </dl>
 
 

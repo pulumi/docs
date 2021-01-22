@@ -35,7 +35,7 @@ A Pulumi package for creating and managing Kong resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`kong` Terraform Provider](https://github.com/kevholditch/terraform-provider-kong).</dd>
 	<dt>Version</dt>
-	<dd>2.4.1</dd>
+	<dd>2.4.2</dd>
 </dl>
 
 

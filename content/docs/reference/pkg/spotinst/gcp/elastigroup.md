@@ -11,323 +11,6 @@ meta_desc: "Documentation for the spotinst.gcp.Elastigroup resource with example
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Provides a Spotinst elastigroup GCP resource.
-## GPU
-
-* `gpu` - (Optional) Defines the GPU configuration.
-    * `type` - (Required) The type of GPU instance. Valid values: `nvidia-tesla-v100`, `nvidia-tesla-p100`, `nvidia-tesla-k80`.
-    * `count` - (Required) The number of GPUs. Must be 0, 2, 4, 6, 8.
-
-Usage:
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-```
-```python
-import pulumi
-```
-```csharp
-using Pulumi;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-    }
-
-}
-```
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		return nil
-	})
-}
-```
-
-<a id="health-check"></a>
-## Backend Services
-
-* `backend_services` - (Optional) Describes the backend service configurations.
-    * `service_name` - (Required) The name of the backend service.
-    * `location_type` - (Optional) Sets which location the backend services will be active. Valid values: `regional`, `global`.
-    * `scheme` - (Optional) Use when `location_type` is "regional". Set the traffic for the backend service to either between the instances in the vpc or to traffic from the internet. Valid values: `INTERNAL`, `EXTERNAL`.
-    * `named_port` - (Optional) Describes a named port and a list of ports.
-        * `port_name` - (Required) The name of the port.
-        * `ports` - (Required) A list of ports.
-
-Usage:
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-```
-```python
-import pulumi
-```
-```csharp
-using Pulumi;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-    }
-
-}
-```
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		return nil
-	})
-}
-```
-
-<a id="disks"></a>
-## Disks
-
-* `disks` - (Optional) Array of disks associated with this instance. Persistent disks must be created before you can assign them.
-    * `auto_delete` - (Optional) Specifies whether the disk will be auto-deleted when the instance is deleted.
-    * `boot` - (Optional) Indicates that this is a boot disk. The virtual machine will use the first partition of the disk for its root filesystem.
-    * `device_name` - (Optional) Specifies a unique device name of your choice.
-    * `interface` - (Optional, Default: `SCSI`) Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME.
-    * `mode` - (Optional, Default: `READ_WRITE`) The mode in which to attach this disk, either READ_WRITE or READ_ONLY.
-    * `source` - (Optional) Specifies a valid partial or full URL to an existing Persistent Disk resource. This field is only applicable for persistent disks.
-    * `type` - (Optional, Default: `PERSISTENT`) Specifies the type of disk, either SCRATCH or PERSISTENT.
-    * `initialize_params` - (Optional) Specifies the parameters for a new disk that will be created alongside the new instance. Use initialization parameters to create boot disks or local SSDs attached to the new instance.
-        * `disk_size_gb` - (Optional) Specifies disk size in gigabytes. Must be in increments of 2.
-        * `disk_type` - (Optional, Default" `pd-standard`) Specifies the disk type to use to create the instance. Valid values: pd-ssd, local-ssd.
-        * `source_image` - (Optional) A source image used to create the disk. You can provide a private (custom) image, and Compute Engine will use the corresponding image from your project.
-
-Usage:
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-```
-```python
-import pulumi
-```
-```csharp
-using Pulumi;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-    }
-
-}
-```
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		return nil
-	})
-}
-```
-
-<a id="network-interface"></a>
-## Network Interfaces
-
-Each of the `network_interface` attributes controls a portion of the GCP
-Instance's "Network Interfaces". It's a good idea to familiarize yourself with [GCP's Network
-Interfaces docs](https://cloud.google.com/vpc/docs/multiple-interfaces-concepts)
-to understand the implications of using these attributes.
-
-* `network_interface` - (Required, minimum 1) Array of objects representing the network configuration for the elastigroup.
-    * `network` - (Required) Network resource for this group.
-    * `access_configs` - (Optional) Array of configurations.
-        * `name` - (Optional) Name of this access configuration.
-        * `type` - (Optional) Array of configurations for this interface. Currently, only ONE_TO_ONE_NAT is supported.
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-```
-```python
-import pulumi
-```
-```csharp
-using Pulumi;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-    }
-
-}
-```
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		return nil
-	})
-}
-```
-
-<a id="scaling-policy"></a>
-## Scaling Policies
-
-* `scaling_up_policy` - (Optional) Contains scaling policies for scaling the Elastigroup up.
-* `scaling_down_policy` - (Optional) Contains scaling policies for scaling the Elastigroup down.
-
-Each `scaling_*_policy` supports the following:
-
-* `policy_name` - (Optional) Name of scaling policy.
-* `metric_name` - (Optional) Metric to monitor. Valid values: "Percentage CPU", "Network In", "Network Out", "Disk Read Bytes", "Disk Write Bytes", "Disk Write Operations/Sec", "Disk Read Operations/Sec".
-* `statistic` - (Optional) Statistic by which to evaluate the selected metric. Valid values: "AVERAGE", "SAMPLE_COUNT", "SUM", "MINIMUM", "MAXIMUM", "PERCENTILE", "COUNT".
-* `threshold` - (Optional) The value at which the scaling action is triggered.
-* `period` - (Optional) Amount of time (seconds) for which the threshold must be met in order to trigger the scaling action.
-* `evaluation_periods` - (Optional) Number of consecutive periods in which the threshold must be met in order to trigger a scaling action.
-* `cooldown` - (Optional) Time (seconds) to wait after a scaling action before resuming monitoring.
-* `operator` - (Optional) The operator used to evaluate the threshold against the current metric value. Valid values: "gt" (greater than), "get" (greater-than or equal), "lt" (less than), "lte" (less than or equal).
-* `action` - (Optional) Scaling action to take when the policy is triggered.
-    * `type` - (Optional) Type of scaling action to take when the scaling policy is triggered. Valid values: "adjustment", "setMinTarget", "updateCapacity", "percentageAdjustment"
-    * `adjustment` - (Optional) Value to which the action type will be adjusted. Required if using "numeric" or "percentageAdjustment" action types.
-* `dimensions` - (Optional) A list of dimensions describing qualities of the metric.
-    * `name` - (Required) The dimension name.
-    * `value` - (Required) The dimension value.
-
-Usage:
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-```
-```python
-import pulumi
-```
-```csharp
-using Pulumi;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-    }
-
-}
-```
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		return nil
-	})
-}
-```
-
-<a id="third-party-integrations"></a>
-## Third-Party Integrations
-
-* `integration_docker_swarm` - (Optional) Describes the [Docker Swarm](https://api.spotinst.com/integration-docs/elastigroup/container-management/docker-swarm/docker-swarm-integration/) integration.
-    * `master_host` - (Required) IP or FQDN of one of your swarm managers.
-    * `master_port` - (Required) Network port used by your swarm.
-
-Usage:
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-```
-```python
-import pulumi
-```
-```csharp
-using Pulumi;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-    }
-
-}
-```
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		return nil
-	})
-}
-```
-
-<a id="scheduled-task"></a>
-## Scheduled Tasks
-
-Each `scheduled_task` supports the following:
-
-* `task_type` - (Required) The task type to run. Valid values: `"setCapacity"`.
-* `cron_expression` - (Optional) A valid cron expression. The cron is running in UTC time zone and is in [Unix cron format](https://en.wikipedia.org/wiki/Cron).
-* `is_enabled` - (Optional, Default: `true`) Setting the task to being enabled or disabled.
-* `target_capacity` - (Optional) The desired number of instances the group should have.
-* `min_capacity` - (Optional) The minimum number of instances the group should have.
-* `max_capacity` - (Optional) The maximum number of instances the group should have.
-
-Usage:
-
-```typescript
-import * as pulumi from "@pulumi/pulumi";
-```
-```python
-import pulumi
-```
-```csharp
-using Pulumi;
-
-class MyStack : Stack
-{
-    public MyStack()
-    {
-    }
-
-}
-```
-```go
-package main
-
-import (
-	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
-)
-
-func main() {
-	pulumi.Run(func(ctx *pulumi.Context) error {
-		return nil
-	})
-}
-```
 
 
 {{% examples %}}
@@ -644,7 +327,8 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Enable auto-replacement of unhealthy instances.
+{{% /md %}}</dd>
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="availabilityzones_csharp">
@@ -663,7 +347,8 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupbackendservice">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Gcp.<wbr>Inputs.<wbr>Elastigroup<wbr>Backend<wbr>Service<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes the backend service configurations.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="description_csharp">
@@ -711,7 +396,8 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupgpu">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Gcp.<wbr>Inputs.<wbr>Elastigroup<wbr>Gpu<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Defines the GPU configuration.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="healthcheckgraceperiod_csharp">
@@ -720,7 +406,8 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Period of time (seconds) to wait for VM to reach healthiness before monitoring for unhealthiness.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="healthchecktype_csharp">
@@ -729,7 +416,8 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The kind of health check to perform when monitoring for unhealthiness.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="instancetypescustoms_csharp">
@@ -768,7 +456,8 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupintegrationdockerswarm">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Gcp.<wbr>Inputs.<wbr>Elastigroup<wbr>Integration<wbr>Docker<wbr>Swarm<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes the [Docker Swarm](https://api.spotinst.com/integration-docs/elastigroup/container-management/docker-swarm/docker-swarm-integration/) integration.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="integrationgke_csharp">
@@ -835,7 +524,7 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The group name.
+    <dd>{{% md %}}The dimension name.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -845,7 +534,8 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupnetworkinterface">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Gcp.<wbr>Inputs.<wbr>Elastigroup<wbr>Network<wbr>Interface<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Array of objects representing the network configuration for the elastigroup.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="ondemandcount_csharp">
@@ -873,7 +563,8 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupscalingdownpolicy">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Gcp.<wbr>Inputs.<wbr>Elastigroup<wbr>Scaling<wbr>Down<wbr>Policy<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Contains scaling policies for scaling the Elastigroup down.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="scalinguppolicies_csharp">
@@ -882,7 +573,8 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupscalinguppolicy">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Gcp.<wbr>Inputs.<wbr>Elastigroup<wbr>Scaling<wbr>Up<wbr>Policy<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Contains scaling policies for scaling the Elastigroup up.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="scheduledtasks_csharp">
@@ -950,7 +642,8 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Period of time (seconds) to remain in an unhealthy status before a replacement is triggered.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -975,7 +668,8 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Enable auto-replacement of unhealthy instances.
+{{% /md %}}</dd>
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="availabilityzones_go">
@@ -994,7 +688,8 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupbackendservice">[]Elastigroup<wbr>Backend<wbr>Service</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes the backend service configurations.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="description_go">
@@ -1042,7 +737,8 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupgpu">[]Elastigroup<wbr>Gpu</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Defines the GPU configuration.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="healthcheckgraceperiod_go">
@@ -1051,7 +747,8 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Period of time (seconds) to wait for VM to reach healthiness before monitoring for unhealthiness.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="healthchecktype_go">
@@ -1060,7 +757,8 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The kind of health check to perform when monitoring for unhealthiness.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="instancetypescustoms_go">
@@ -1099,7 +797,8 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupintegrationdockerswarm">Elastigroup<wbr>Integration<wbr>Docker<wbr>Swarm</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes the [Docker Swarm](https://api.spotinst.com/integration-docs/elastigroup/container-management/docker-swarm/docker-swarm-integration/) integration.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="integrationgke_go">
@@ -1166,7 +865,7 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The group name.
+    <dd>{{% md %}}The dimension name.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1176,7 +875,8 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupnetworkinterface">[]Elastigroup<wbr>Network<wbr>Interface</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Array of objects representing the network configuration for the elastigroup.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="ondemandcount_go">
@@ -1204,7 +904,8 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupscalingdownpolicy">[]Elastigroup<wbr>Scaling<wbr>Down<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Contains scaling policies for scaling the Elastigroup down.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="scalinguppolicies_go">
@@ -1213,7 +914,8 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupscalinguppolicy">[]Elastigroup<wbr>Scaling<wbr>Up<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Contains scaling policies for scaling the Elastigroup up.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="scheduledtasks_go">
@@ -1281,7 +983,8 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Period of time (seconds) to remain in an unhealthy status before a replacement is triggered.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1306,7 +1009,8 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Enable auto-replacement of unhealthy instances.
+{{% /md %}}</dd>
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="availabilityzones_nodejs">
@@ -1325,7 +1029,8 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupbackendservice">Elastigroup<wbr>Backend<wbr>Service[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes the backend service configurations.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="description_nodejs">
@@ -1373,7 +1078,8 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupgpu">Elastigroup<wbr>Gpu[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Defines the GPU configuration.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="healthcheckgraceperiod_nodejs">
@@ -1382,7 +1088,8 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Period of time (seconds) to wait for VM to reach healthiness before monitoring for unhealthiness.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="healthchecktype_nodejs">
@@ -1391,7 +1098,8 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The kind of health check to perform when monitoring for unhealthiness.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="instancetypescustoms_nodejs">
@@ -1430,7 +1138,8 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupintegrationdockerswarm">Elastigroup<wbr>Integration<wbr>Docker<wbr>Swarm</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes the [Docker Swarm](https://api.spotinst.com/integration-docs/elastigroup/container-management/docker-swarm/docker-swarm-integration/) integration.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="integrationgke_nodejs">
@@ -1497,7 +1206,7 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The group name.
+    <dd>{{% md %}}The dimension name.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1507,7 +1216,8 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupnetworkinterface">Elastigroup<wbr>Network<wbr>Interface[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Array of objects representing the network configuration for the elastigroup.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="ondemandcount_nodejs">
@@ -1535,7 +1245,8 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupscalingdownpolicy">Elastigroup<wbr>Scaling<wbr>Down<wbr>Policy[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Contains scaling policies for scaling the Elastigroup down.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="scalinguppolicies_nodejs">
@@ -1544,7 +1255,8 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupscalinguppolicy">Elastigroup<wbr>Scaling<wbr>Up<wbr>Policy[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Contains scaling policies for scaling the Elastigroup up.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="scheduledtasks_nodejs">
@@ -1612,7 +1324,8 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Period of time (seconds) to remain in an unhealthy status before a replacement is triggered.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1637,7 +1350,8 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Enable auto-replacement of unhealthy instances.
+{{% /md %}}</dd>
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="availability_zones_python">
@@ -1656,7 +1370,8 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupbackendservice">Sequence[Elastigroup<wbr>Backend<wbr>Service<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes the backend service configurations.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="description_python">
@@ -1704,7 +1419,8 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupgpu">Sequence[Elastigroup<wbr>Gpu<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Defines the GPU configuration.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="health_check_grace_period_python">
@@ -1713,7 +1429,8 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Period of time (seconds) to wait for VM to reach healthiness before monitoring for unhealthiness.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="health_check_type_python">
@@ -1722,7 +1439,8 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The kind of health check to perform when monitoring for unhealthiness.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="instance_types_customs_python">
@@ -1761,7 +1479,8 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupintegrationdockerswarm">Elastigroup<wbr>Integration<wbr>Docker<wbr>Swarm<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes the [Docker Swarm](https://api.spotinst.com/integration-docs/elastigroup/container-management/docker-swarm/docker-swarm-integration/) integration.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="integration_gke_python">
@@ -1828,7 +1547,7 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The group name.
+    <dd>{{% md %}}The dimension name.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1838,7 +1557,8 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupnetworkinterface">Sequence[Elastigroup<wbr>Network<wbr>Interface<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Array of objects representing the network configuration for the elastigroup.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="ondemand_count_python">
@@ -1866,7 +1586,8 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupscalingdownpolicy">Sequence[Elastigroup<wbr>Scaling<wbr>Down<wbr>Policy<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Contains scaling policies for scaling the Elastigroup down.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="scaling_up_policies_python">
@@ -1875,7 +1596,8 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupscalinguppolicy">Sequence[Elastigroup<wbr>Scaling<wbr>Up<wbr>Policy<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Contains scaling policies for scaling the Elastigroup up.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="scheduled_tasks_python">
@@ -1943,7 +1665,8 @@ The Elastigroup resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Period of time (seconds) to remain in an unhealthy status before a replacement is triggered.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -2148,7 +1871,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Enable auto-replacement of unhealthy instances.
+{{% /md %}}</dd>
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_availabilityzones_csharp">
@@ -2167,7 +1891,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupbackendservice">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Gcp.<wbr>Inputs.<wbr>Elastigroup<wbr>Backend<wbr>Service<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes the backend service configurations.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_csharp">
@@ -2225,7 +1950,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupgpu">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Gcp.<wbr>Inputs.<wbr>Elastigroup<wbr>Gpu<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Defines the GPU configuration.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_healthcheckgraceperiod_csharp">
@@ -2234,7 +1960,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Period of time (seconds) to wait for VM to reach healthiness before monitoring for unhealthiness.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_healthchecktype_csharp">
@@ -2243,7 +1970,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The kind of health check to perform when monitoring for unhealthiness.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_instancetypescustoms_csharp">
@@ -2282,7 +2010,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupintegrationdockerswarm">Pulumi.<wbr>Spot<wbr>Inst.<wbr>Gcp.<wbr>Inputs.<wbr>Elastigroup<wbr>Integration<wbr>Docker<wbr>Swarm<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes the [Docker Swarm](https://api.spotinst.com/integration-docs/elastigroup/container-management/docker-swarm/docker-swarm-integration/) integration.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_integrationgke_csharp">
@@ -2349,7 +2078,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The group name.
+    <dd>{{% md %}}The dimension name.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2359,7 +2088,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupnetworkinterface">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Gcp.<wbr>Inputs.<wbr>Elastigroup<wbr>Network<wbr>Interface<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Array of objects representing the network configuration for the elastigroup.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_ondemandcount_csharp">
@@ -2387,7 +2117,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupscalingdownpolicy">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Gcp.<wbr>Inputs.<wbr>Elastigroup<wbr>Scaling<wbr>Down<wbr>Policy<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Contains scaling policies for scaling the Elastigroup down.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_scalinguppolicies_csharp">
@@ -2396,7 +2127,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupscalinguppolicy">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Gcp.<wbr>Inputs.<wbr>Elastigroup<wbr>Scaling<wbr>Up<wbr>Policy<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Contains scaling policies for scaling the Elastigroup up.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_scheduledtasks_csharp">
@@ -2464,7 +2196,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Period of time (seconds) to remain in an unhealthy status before a replacement is triggered.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -2479,7 +2212,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Enable auto-replacement of unhealthy instances.
+{{% /md %}}</dd>
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_availabilityzones_go">
@@ -2498,7 +2232,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupbackendservice">[]Elastigroup<wbr>Backend<wbr>Service</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes the backend service configurations.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_go">
@@ -2556,7 +2291,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupgpu">[]Elastigroup<wbr>Gpu</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Defines the GPU configuration.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_healthcheckgraceperiod_go">
@@ -2565,7 +2301,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Period of time (seconds) to wait for VM to reach healthiness before monitoring for unhealthiness.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_healthchecktype_go">
@@ -2574,7 +2311,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The kind of health check to perform when monitoring for unhealthiness.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_instancetypescustoms_go">
@@ -2613,7 +2351,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupintegrationdockerswarm">Elastigroup<wbr>Integration<wbr>Docker<wbr>Swarm</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes the [Docker Swarm](https://api.spotinst.com/integration-docs/elastigroup/container-management/docker-swarm/docker-swarm-integration/) integration.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_integrationgke_go">
@@ -2680,7 +2419,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The group name.
+    <dd>{{% md %}}The dimension name.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2690,7 +2429,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupnetworkinterface">[]Elastigroup<wbr>Network<wbr>Interface</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Array of objects representing the network configuration for the elastigroup.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_ondemandcount_go">
@@ -2718,7 +2458,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupscalingdownpolicy">[]Elastigroup<wbr>Scaling<wbr>Down<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Contains scaling policies for scaling the Elastigroup down.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_scalinguppolicies_go">
@@ -2727,7 +2468,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupscalinguppolicy">[]Elastigroup<wbr>Scaling<wbr>Up<wbr>Policy</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Contains scaling policies for scaling the Elastigroup up.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_scheduledtasks_go">
@@ -2795,7 +2537,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Period of time (seconds) to remain in an unhealthy status before a replacement is triggered.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -2810,7 +2553,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Enable auto-replacement of unhealthy instances.
+{{% /md %}}</dd>
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_availabilityzones_nodejs">
@@ -2829,7 +2573,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupbackendservice">Elastigroup<wbr>Backend<wbr>Service[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes the backend service configurations.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_nodejs">
@@ -2887,7 +2632,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupgpu">Elastigroup<wbr>Gpu[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Defines the GPU configuration.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_healthcheckgraceperiod_nodejs">
@@ -2896,7 +2642,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Period of time (seconds) to wait for VM to reach healthiness before monitoring for unhealthiness.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_healthchecktype_nodejs">
@@ -2905,7 +2652,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The kind of health check to perform when monitoring for unhealthiness.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_instancetypescustoms_nodejs">
@@ -2944,7 +2692,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupintegrationdockerswarm">Elastigroup<wbr>Integration<wbr>Docker<wbr>Swarm</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes the [Docker Swarm](https://api.spotinst.com/integration-docs/elastigroup/container-management/docker-swarm/docker-swarm-integration/) integration.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_integrationgke_nodejs">
@@ -3011,7 +2760,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The group name.
+    <dd>{{% md %}}The dimension name.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3021,7 +2770,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupnetworkinterface">Elastigroup<wbr>Network<wbr>Interface[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Array of objects representing the network configuration for the elastigroup.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_ondemandcount_nodejs">
@@ -3049,7 +2799,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupscalingdownpolicy">Elastigroup<wbr>Scaling<wbr>Down<wbr>Policy[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Contains scaling policies for scaling the Elastigroup down.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_scalinguppolicies_nodejs">
@@ -3058,7 +2809,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupscalinguppolicy">Elastigroup<wbr>Scaling<wbr>Up<wbr>Policy[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Contains scaling policies for scaling the Elastigroup up.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_scheduledtasks_nodejs">
@@ -3126,7 +2878,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Period of time (seconds) to remain in an unhealthy status before a replacement is triggered.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -3141,7 +2894,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Enable auto-replacement of unhealthy instances.
+{{% /md %}}</dd>
     <dt class="property-optional property-deprecated"
             title="Optional, Deprecated">
         <span id="state_availability_zones_python">
@@ -3160,7 +2914,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupbackendservice">Sequence[Elastigroup<wbr>Backend<wbr>Service<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes the backend service configurations.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_description_python">
@@ -3218,7 +2973,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupgpu">Sequence[Elastigroup<wbr>Gpu<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Defines the GPU configuration.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_health_check_grace_period_python">
@@ -3227,7 +2983,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Period of time (seconds) to wait for VM to reach healthiness before monitoring for unhealthiness.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_health_check_type_python">
@@ -3236,7 +2993,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The kind of health check to perform when monitoring for unhealthiness.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_instance_types_customs_python">
@@ -3275,7 +3033,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupintegrationdockerswarm">Elastigroup<wbr>Integration<wbr>Docker<wbr>Swarm<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Describes the [Docker Swarm](https://api.spotinst.com/integration-docs/elastigroup/container-management/docker-swarm/docker-swarm-integration/) integration.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_integration_gke_python">
@@ -3342,7 +3101,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The group name.
+    <dd>{{% md %}}The dimension name.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3352,7 +3111,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupnetworkinterface">Sequence[Elastigroup<wbr>Network<wbr>Interface<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Array of objects representing the network configuration for the elastigroup.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_ondemand_count_python">
@@ -3380,7 +3140,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupscalingdownpolicy">Sequence[Elastigroup<wbr>Scaling<wbr>Down<wbr>Policy<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Contains scaling policies for scaling the Elastigroup down.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_scaling_up_policies_python">
@@ -3389,7 +3150,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupscalinguppolicy">Sequence[Elastigroup<wbr>Scaling<wbr>Up<wbr>Policy<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Contains scaling policies for scaling the Elastigroup up.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_scheduled_tasks_python">
@@ -3457,7 +3219,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Period of time (seconds) to remain in an unhealthy status before a replacement is triggered.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -3495,7 +3258,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the backend service.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="locationtype_csharp">
@@ -3504,7 +3268,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Sets which location the backend services will be active. Valid values: `regional`, `global`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="namedports_csharp">
@@ -3522,7 +3287,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Use when `location_type` is "regional". Set the traffic for the backend service to either between the instances in the vpc or to traffic from the internet. Valid values: `INTERNAL`, `EXTERNAL`.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -3537,7 +3303,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the backend service.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="locationtype_go">
@@ -3546,7 +3313,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Sets which location the backend services will be active. Valid values: `regional`, `global`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="namedports_go">
@@ -3564,7 +3332,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Use when `location_type` is "regional". Set the traffic for the backend service to either between the instances in the vpc or to traffic from the internet. Valid values: `INTERNAL`, `EXTERNAL`.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -3579,7 +3348,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the backend service.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="locationtype_nodejs">
@@ -3588,7 +3358,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Sets which location the backend services will be active. Valid values: `regional`, `global`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="namedports_nodejs">
@@ -3606,7 +3377,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Use when `location_type` is "regional". Set the traffic for the backend service to either between the instances in the vpc or to traffic from the internet. Valid values: `INTERNAL`, `EXTERNAL`.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -3621,7 +3393,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The name of the backend service.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="location_type_python">
@@ -3630,7 +3403,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Sets which location the backend services will be active. Valid values: `regional`, `global`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="named_ports_python">
@@ -3648,7 +3422,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Use when `location_type` is "regional". Set the traffic for the backend service to either between the instances in the vpc or to traffic from the internet. Valid values: `INTERNAL`, `EXTERNAL`.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -3677,7 +3452,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The group name.
+    <dd>{{% md %}}The dimension name.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -3687,7 +3462,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of ports.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -3702,7 +3478,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The group name.
+    <dd>{{% md %}}The dimension name.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -3712,7 +3488,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of ports.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -3727,7 +3504,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The group name.
+    <dd>{{% md %}}The dimension name.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -3737,7 +3514,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of ports.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -3752,7 +3530,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The group name.
+    <dd>{{% md %}}The dimension name.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -3762,7 +3540,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of ports.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -3791,7 +3570,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies whether the disk will be auto-deleted when the instance is deleted.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="boot_csharp">
@@ -3800,7 +3580,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Indicates that this is a boot disk. The virtual machine will use the first partition of the disk for its root filesystem.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="devicename_csharp">
@@ -3809,7 +3590,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies a unique device name of your choice.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="initializeparams_csharp">
@@ -3818,7 +3600,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupdiskinitializeparam">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Gcp.<wbr>Inputs.<wbr>Elastigroup<wbr>Disk<wbr>Initialize<wbr>Param<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the parameters for a new disk that will be created alongside the new instance. Use initialization parameters to create boot disks or local SSDs attached to the new instance.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="interface_csharp">
@@ -3827,7 +3610,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="mode_csharp">
@@ -3836,7 +3620,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The mode in which to attach this disk, either READ_WRITE or READ_ONLY.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="source_csharp">
@@ -3845,7 +3630,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies a valid partial or full URL to an existing Persistent Disk resource. This field is only applicable for persistent disks.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
@@ -3854,7 +3640,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Type of scaling action to take when the scaling policy is triggered. Valid values: "adjustment", "setMinTarget", "updateCapacity", "percentageAdjustment"
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -3869,7 +3656,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies whether the disk will be auto-deleted when the instance is deleted.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="boot_go">
@@ -3878,7 +3666,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Indicates that this is a boot disk. The virtual machine will use the first partition of the disk for its root filesystem.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="devicename_go">
@@ -3887,7 +3676,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies a unique device name of your choice.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="initializeparams_go">
@@ -3896,7 +3686,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupdiskinitializeparam">[]Elastigroup<wbr>Disk<wbr>Initialize<wbr>Param</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the parameters for a new disk that will be created alongside the new instance. Use initialization parameters to create boot disks or local SSDs attached to the new instance.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="interface_go">
@@ -3905,7 +3696,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="mode_go">
@@ -3914,7 +3706,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The mode in which to attach this disk, either READ_WRITE or READ_ONLY.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="source_go">
@@ -3923,7 +3716,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies a valid partial or full URL to an existing Persistent Disk resource. This field is only applicable for persistent disks.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="type_go">
@@ -3932,7 +3726,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Type of scaling action to take when the scaling policy is triggered. Valid values: "adjustment", "setMinTarget", "updateCapacity", "percentageAdjustment"
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -3947,7 +3742,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies whether the disk will be auto-deleted when the instance is deleted.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="boot_nodejs">
@@ -3956,7 +3752,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Indicates that this is a boot disk. The virtual machine will use the first partition of the disk for its root filesystem.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="devicename_nodejs">
@@ -3965,7 +3762,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies a unique device name of your choice.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="initializeparams_nodejs">
@@ -3974,7 +3772,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupdiskinitializeparam">Elastigroup<wbr>Disk<wbr>Initialize<wbr>Param[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the parameters for a new disk that will be created alongside the new instance. Use initialization parameters to create boot disks or local SSDs attached to the new instance.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="interface_nodejs">
@@ -3983,7 +3782,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="mode_nodejs">
@@ -3992,7 +3792,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The mode in which to attach this disk, either READ_WRITE or READ_ONLY.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="source_nodejs">
@@ -4001,7 +3802,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies a valid partial or full URL to an existing Persistent Disk resource. This field is only applicable for persistent disks.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
@@ -4010,7 +3812,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Type of scaling action to take when the scaling policy is triggered. Valid values: "adjustment", "setMinTarget", "updateCapacity", "percentageAdjustment"
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4025,7 +3828,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies whether the disk will be auto-deleted when the instance is deleted.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="boot_python">
@@ -4034,7 +3838,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Indicates that this is a boot disk. The virtual machine will use the first partition of the disk for its root filesystem.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="device_name_python">
@@ -4043,7 +3848,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies a unique device name of your choice.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="initialize_params_python">
@@ -4052,7 +3858,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupdiskinitializeparam">Sequence[Elastigroup<wbr>Disk<wbr>Initialize<wbr>Param<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the parameters for a new disk that will be created alongside the new instance. Use initialization parameters to create boot disks or local SSDs attached to the new instance.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="interface_python">
@@ -4061,7 +3868,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the disk interface to use for attaching this disk, which is either SCSI or NVME.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="mode_python">
@@ -4070,7 +3878,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The mode in which to attach this disk, either READ_WRITE or READ_ONLY.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="source_python">
@@ -4079,7 +3888,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies a valid partial or full URL to an existing Persistent Disk resource. This field is only applicable for persistent disks.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="type_python">
@@ -4088,7 +3898,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Type of scaling action to take when the scaling policy is triggered. Valid values: "adjustment", "setMinTarget", "updateCapacity", "percentageAdjustment"
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4117,7 +3928,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A source image used to create the disk. You can provide a private (custom) image, and Compute Engine will use the corresponding image from your project.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="disksizegb_csharp">
@@ -4126,7 +3938,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies disk size in gigabytes. Must be in increments of 2.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="disktype_csharp">
@@ -4135,7 +3948,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the disk type to use to create the instance. Valid values: pd-ssd, local-ssd.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4150,7 +3964,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A source image used to create the disk. You can provide a private (custom) image, and Compute Engine will use the corresponding image from your project.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="disksizegb_go">
@@ -4159,7 +3974,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies disk size in gigabytes. Must be in increments of 2.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="disktype_go">
@@ -4168,7 +3984,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the disk type to use to create the instance. Valid values: pd-ssd, local-ssd.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4183,7 +4000,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A source image used to create the disk. You can provide a private (custom) image, and Compute Engine will use the corresponding image from your project.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="disksizegb_nodejs">
@@ -4192,7 +4010,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies disk size in gigabytes. Must be in increments of 2.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="disktype_nodejs">
@@ -4201,7 +4020,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the disk type to use to create the instance. Valid values: pd-ssd, local-ssd.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4216,7 +4036,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A source image used to create the disk. You can provide a private (custom) image, and Compute Engine will use the corresponding image from your project.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="disk_size_gb_python">
@@ -4225,7 +4046,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies disk size in gigabytes. Must be in increments of 2.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="disk_type_python">
@@ -4234,7 +4056,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies the disk type to use to create the instance. Valid values: pd-ssd, local-ssd.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4263,7 +4086,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of GPUs. Must be 0, 2, 4, 6, 8.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="type_csharp">
@@ -4272,7 +4096,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Type of scaling action to take when the scaling policy is triggered. Valid values: "adjustment", "setMinTarget", "updateCapacity", "percentageAdjustment"
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4287,7 +4112,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of GPUs. Must be 0, 2, 4, 6, 8.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="type_go">
@@ -4296,7 +4122,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Type of scaling action to take when the scaling policy is triggered. Valid values: "adjustment", "setMinTarget", "updateCapacity", "percentageAdjustment"
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4311,7 +4138,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of GPUs. Must be 0, 2, 4, 6, 8.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="type_nodejs">
@@ -4320,7 +4148,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Type of scaling action to take when the scaling policy is triggered. Valid values: "adjustment", "setMinTarget", "updateCapacity", "percentageAdjustment"
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4335,7 +4164,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The number of GPUs. Must be 0, 2, 4, 6, 8.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="type_python">
@@ -4344,7 +4174,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Type of scaling action to take when the scaling policy is triggered. Valid values: "adjustment", "setMinTarget", "updateCapacity", "percentageAdjustment"
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4487,7 +4318,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}IP or FQDN of one of your swarm managers.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="masterport_csharp">
@@ -4496,7 +4328,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Network port used by your swarm.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4511,7 +4344,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}IP or FQDN of one of your swarm managers.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="masterport_go">
@@ -4520,7 +4354,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Network port used by your swarm.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4535,7 +4370,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}IP or FQDN of one of your swarm managers.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="masterport_nodejs">
@@ -4544,7 +4380,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Network port used by your swarm.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4559,7 +4396,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}IP or FQDN of one of your swarm managers.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="master_port_python">
@@ -4568,7 +4406,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Network port used by your swarm.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4959,7 +4798,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Number of consecutive periods in which the threshold must be met in order to trigger a scaling action.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4974,7 +4814,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Number of consecutive periods in which the threshold must be met in order to trigger a scaling action.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4989,7 +4830,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Number of consecutive periods in which the threshold must be met in order to trigger a scaling action.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -5004,7 +4846,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Number of consecutive periods in which the threshold must be met in order to trigger a scaling action.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -5189,7 +5032,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Labels value.
+    <dd>{{% md %}}The dimension value.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -5215,7 +5058,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Labels value.
+    <dd>{{% md %}}The dimension value.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -5241,7 +5084,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Labels value.
+    <dd>{{% md %}}The dimension value.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -5267,7 +5110,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Labels value.
+    <dd>{{% md %}}The dimension value.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -5307,7 +5150,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Labels value.
+    <dd>{{% md %}}The dimension value.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -5333,7 +5176,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Labels value.
+    <dd>{{% md %}}The dimension value.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -5359,7 +5202,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Labels value.
+    <dd>{{% md %}}The dimension value.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -5385,7 +5228,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Labels value.
+    <dd>{{% md %}}The dimension value.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -5425,7 +5268,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Labels value.
+    <dd>{{% md %}}The dimension value.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -5451,7 +5294,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Labels value.
+    <dd>{{% md %}}The dimension value.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -5477,7 +5320,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Labels value.
+    <dd>{{% md %}}The dimension value.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -5503,7 +5346,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Labels value.
+    <dd>{{% md %}}The dimension value.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -5533,7 +5376,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Network resource for this group.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="accessconfigs_csharp">
@@ -5542,7 +5386,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupnetworkinterfaceaccessconfig">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Gcp.<wbr>Inputs.<wbr>Elastigroup<wbr>Network<wbr>Interface<wbr>Access<wbr>Config<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Array of configurations.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="aliasipranges_csharp">
@@ -5566,7 +5411,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Network resource for this group.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="accessconfigs_go">
@@ -5575,7 +5421,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupnetworkinterfaceaccessconfig">[]Elastigroup<wbr>Network<wbr>Interface<wbr>Access<wbr>Config</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Array of configurations.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="aliasipranges_go">
@@ -5599,7 +5446,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Network resource for this group.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="accessconfigs_nodejs">
@@ -5608,7 +5456,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupnetworkinterfaceaccessconfig">Elastigroup<wbr>Network<wbr>Interface<wbr>Access<wbr>Config[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Array of configurations.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="aliasipranges_nodejs">
@@ -5632,7 +5481,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Network resource for this group.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="access_configs_python">
@@ -5641,7 +5491,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupnetworkinterfaceaccessconfig">Sequence[Elastigroup<wbr>Network<wbr>Interface<wbr>Access<wbr>Config<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Array of configurations.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="alias_ip_ranges_python">
@@ -5679,7 +5530,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The group name.
+    <dd>{{% md %}}The dimension name.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5689,7 +5540,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Type of scaling action to take when the scaling policy is triggered. Valid values: "adjustment", "setMinTarget", "updateCapacity", "percentageAdjustment"
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -5704,7 +5556,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The group name.
+    <dd>{{% md %}}The dimension name.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5714,7 +5566,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Type of scaling action to take when the scaling policy is triggered. Valid values: "adjustment", "setMinTarget", "updateCapacity", "percentageAdjustment"
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -5729,7 +5582,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The group name.
+    <dd>{{% md %}}The dimension name.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5739,7 +5592,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Type of scaling action to take when the scaling policy is triggered. Valid values: "adjustment", "setMinTarget", "updateCapacity", "percentageAdjustment"
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -5754,7 +5608,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The group name.
+    <dd>{{% md %}}The dimension name.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5764,7 +5618,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Type of scaling action to take when the scaling policy is triggered. Valid values: "adjustment", "setMinTarget", "updateCapacity", "percentageAdjustment"
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -5903,7 +5758,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Metric to monitor. Valid values: "Percentage CPU", "Network In", "Network Out", "Disk Read Bytes", "Disk Write Bytes", "Disk Write Operations/Sec", "Disk Read Operations/Sec".
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="namespace_csharp">
@@ -5921,7 +5777,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of scaling policy.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="threshold_csharp">
@@ -5930,7 +5787,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value at which the scaling action is triggered.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="unit_csharp">
@@ -5957,7 +5815,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Value to which the action type will be adjusted. Required if using "numeric" or "percentageAdjustment" action types.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="cooldown_csharp">
@@ -5966,7 +5825,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Time (seconds) to wait after a scaling action before resuming monitoring.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="dimensions_csharp">
@@ -5975,7 +5835,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupscalingdownpolicydimension">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Gcp.<wbr>Inputs.<wbr>Elastigroup<wbr>Scaling<wbr>Down<wbr>Policy<wbr>Dimension<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of dimensions describing qualities of the metric.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="evaluationperiods_csharp">
@@ -5984,7 +5845,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Number of consecutive periods in which the threshold must be met in order to trigger a scaling action.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="operator_csharp">
@@ -5993,7 +5855,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The operator used to evaluate the threshold against the current metric value. Valid values: "gt" (greater than), "get" (greater-than or equal), "lt" (less than), "lte" (less than or equal).
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="period_csharp">
@@ -6002,7 +5865,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Amount of time (seconds) for which the threshold must be met in order to trigger the scaling action.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="source_csharp">
@@ -6011,7 +5875,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies a valid partial or full URL to an existing Persistent Disk resource. This field is only applicable for persistent disks.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="statistic_csharp">
@@ -6020,7 +5885,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Statistic by which to evaluate the selected metric. Valid values: "AVERAGE", "SAMPLE_COUNT", "SUM", "MINIMUM", "MAXIMUM", "PERCENTILE", "COUNT".
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -6035,7 +5901,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Metric to monitor. Valid values: "Percentage CPU", "Network In", "Network Out", "Disk Read Bytes", "Disk Write Bytes", "Disk Write Operations/Sec", "Disk Read Operations/Sec".
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="namespace_go">
@@ -6053,7 +5920,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of scaling policy.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="threshold_go">
@@ -6062,7 +5930,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value at which the scaling action is triggered.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="unit_go">
@@ -6089,7 +5958,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Value to which the action type will be adjusted. Required if using "numeric" or "percentageAdjustment" action types.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="cooldown_go">
@@ -6098,7 +5968,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Time (seconds) to wait after a scaling action before resuming monitoring.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="dimensions_go">
@@ -6107,7 +5978,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupscalingdownpolicydimension">[]Elastigroup<wbr>Scaling<wbr>Down<wbr>Policy<wbr>Dimension</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of dimensions describing qualities of the metric.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="evaluationperiods_go">
@@ -6116,7 +5988,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Number of consecutive periods in which the threshold must be met in order to trigger a scaling action.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="operator_go">
@@ -6125,7 +5998,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The operator used to evaluate the threshold against the current metric value. Valid values: "gt" (greater than), "get" (greater-than or equal), "lt" (less than), "lte" (less than or equal).
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="period_go">
@@ -6134,7 +6008,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Amount of time (seconds) for which the threshold must be met in order to trigger the scaling action.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="source_go">
@@ -6143,7 +6018,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies a valid partial or full URL to an existing Persistent Disk resource. This field is only applicable for persistent disks.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="statistic_go">
@@ -6152,7 +6028,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Statistic by which to evaluate the selected metric. Valid values: "AVERAGE", "SAMPLE_COUNT", "SUM", "MINIMUM", "MAXIMUM", "PERCENTILE", "COUNT".
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -6167,7 +6044,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Metric to monitor. Valid values: "Percentage CPU", "Network In", "Network Out", "Disk Read Bytes", "Disk Write Bytes", "Disk Write Operations/Sec", "Disk Read Operations/Sec".
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="namespace_nodejs">
@@ -6185,7 +6063,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of scaling policy.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="threshold_nodejs">
@@ -6194,7 +6073,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value at which the scaling action is triggered.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="unit_nodejs">
@@ -6221,7 +6101,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Value to which the action type will be adjusted. Required if using "numeric" or "percentageAdjustment" action types.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="cooldown_nodejs">
@@ -6230,7 +6111,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Time (seconds) to wait after a scaling action before resuming monitoring.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="dimensions_nodejs">
@@ -6239,7 +6121,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupscalingdownpolicydimension">Elastigroup<wbr>Scaling<wbr>Down<wbr>Policy<wbr>Dimension[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of dimensions describing qualities of the metric.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="evaluationperiods_nodejs">
@@ -6248,7 +6131,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Number of consecutive periods in which the threshold must be met in order to trigger a scaling action.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="operator_nodejs">
@@ -6257,7 +6141,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The operator used to evaluate the threshold against the current metric value. Valid values: "gt" (greater than), "get" (greater-than or equal), "lt" (less than), "lte" (less than or equal).
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="period_nodejs">
@@ -6266,7 +6151,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Amount of time (seconds) for which the threshold must be met in order to trigger the scaling action.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="source_nodejs">
@@ -6275,7 +6161,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies a valid partial or full URL to an existing Persistent Disk resource. This field is only applicable for persistent disks.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="statistic_nodejs">
@@ -6284,7 +6171,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Statistic by which to evaluate the selected metric. Valid values: "AVERAGE", "SAMPLE_COUNT", "SUM", "MINIMUM", "MAXIMUM", "PERCENTILE", "COUNT".
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -6299,7 +6187,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Metric to monitor. Valid values: "Percentage CPU", "Network In", "Network Out", "Disk Read Bytes", "Disk Write Bytes", "Disk Write Operations/Sec", "Disk Read Operations/Sec".
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="namespace_python">
@@ -6317,7 +6206,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of scaling policy.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="threshold_python">
@@ -6326,7 +6216,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value at which the scaling action is triggered.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="unit_python">
@@ -6353,7 +6244,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Value to which the action type will be adjusted. Required if using "numeric" or "percentageAdjustment" action types.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="cooldown_python">
@@ -6362,7 +6254,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Time (seconds) to wait after a scaling action before resuming monitoring.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="dimensions_python">
@@ -6371,7 +6264,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupscalingdownpolicydimension">Sequence[Elastigroup<wbr>Scaling<wbr>Down<wbr>Policy<wbr>Dimension<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of dimensions describing qualities of the metric.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="evaluation_periods_python">
@@ -6380,7 +6274,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Number of consecutive periods in which the threshold must be met in order to trigger a scaling action.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="operator_python">
@@ -6389,7 +6284,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The operator used to evaluate the threshold against the current metric value. Valid values: "gt" (greater than), "get" (greater-than or equal), "lt" (less than), "lte" (less than or equal).
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="period_python">
@@ -6398,7 +6294,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Amount of time (seconds) for which the threshold must be met in order to trigger the scaling action.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="source_python">
@@ -6407,7 +6304,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies a valid partial or full URL to an existing Persistent Disk resource. This field is only applicable for persistent disks.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="statistic_python">
@@ -6416,7 +6314,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Statistic by which to evaluate the selected metric. Valid values: "AVERAGE", "SAMPLE_COUNT", "SUM", "MINIMUM", "MAXIMUM", "PERCENTILE", "COUNT".
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -6445,7 +6344,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The group name.
+    <dd>{{% md %}}The dimension name.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -6455,7 +6354,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Labels value.
+    <dd>{{% md %}}The dimension value.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -6471,7 +6370,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The group name.
+    <dd>{{% md %}}The dimension name.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -6481,7 +6380,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Labels value.
+    <dd>{{% md %}}The dimension value.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -6497,7 +6396,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The group name.
+    <dd>{{% md %}}The dimension name.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -6507,7 +6406,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Labels value.
+    <dd>{{% md %}}The dimension value.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -6523,7 +6422,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The group name.
+    <dd>{{% md %}}The dimension name.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -6533,7 +6432,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Labels value.
+    <dd>{{% md %}}The dimension value.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -6563,7 +6462,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Metric to monitor. Valid values: "Percentage CPU", "Network In", "Network Out", "Disk Read Bytes", "Disk Write Bytes", "Disk Write Operations/Sec", "Disk Read Operations/Sec".
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="namespace_csharp">
@@ -6581,7 +6481,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of scaling policy.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="threshold_csharp">
@@ -6590,7 +6491,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">double</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value at which the scaling action is triggered.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="unit_csharp">
@@ -6617,7 +6519,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Value to which the action type will be adjusted. Required if using "numeric" or "percentageAdjustment" action types.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="cooldown_csharp">
@@ -6626,7 +6529,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Time (seconds) to wait after a scaling action before resuming monitoring.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="dimensions_csharp">
@@ -6635,7 +6539,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupscalinguppolicydimension">List&lt;Pulumi.<wbr>Spot<wbr>Inst.<wbr>Gcp.<wbr>Inputs.<wbr>Elastigroup<wbr>Scaling<wbr>Up<wbr>Policy<wbr>Dimension<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of dimensions describing qualities of the metric.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="evaluationperiods_csharp">
@@ -6644,7 +6549,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Number of consecutive periods in which the threshold must be met in order to trigger a scaling action.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="operator_csharp">
@@ -6653,7 +6559,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The operator used to evaluate the threshold against the current metric value. Valid values: "gt" (greater than), "get" (greater-than or equal), "lt" (less than), "lte" (less than or equal).
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="period_csharp">
@@ -6662,7 +6569,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Amount of time (seconds) for which the threshold must be met in order to trigger the scaling action.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="source_csharp">
@@ -6671,7 +6579,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies a valid partial or full URL to an existing Persistent Disk resource. This field is only applicable for persistent disks.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="statistic_csharp">
@@ -6680,7 +6589,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Statistic by which to evaluate the selected metric. Valid values: "AVERAGE", "SAMPLE_COUNT", "SUM", "MINIMUM", "MAXIMUM", "PERCENTILE", "COUNT".
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -6695,7 +6605,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Metric to monitor. Valid values: "Percentage CPU", "Network In", "Network Out", "Disk Read Bytes", "Disk Write Bytes", "Disk Write Operations/Sec", "Disk Read Operations/Sec".
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="namespace_go">
@@ -6713,7 +6624,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of scaling policy.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="threshold_go">
@@ -6722,7 +6634,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">float64</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value at which the scaling action is triggered.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="unit_go">
@@ -6749,7 +6662,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Value to which the action type will be adjusted. Required if using "numeric" or "percentageAdjustment" action types.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="cooldown_go">
@@ -6758,7 +6672,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Time (seconds) to wait after a scaling action before resuming monitoring.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="dimensions_go">
@@ -6767,7 +6682,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupscalinguppolicydimension">[]Elastigroup<wbr>Scaling<wbr>Up<wbr>Policy<wbr>Dimension</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of dimensions describing qualities of the metric.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="evaluationperiods_go">
@@ -6776,7 +6692,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Number of consecutive periods in which the threshold must be met in order to trigger a scaling action.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="operator_go">
@@ -6785,7 +6702,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The operator used to evaluate the threshold against the current metric value. Valid values: "gt" (greater than), "get" (greater-than or equal), "lt" (less than), "lte" (less than or equal).
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="period_go">
@@ -6794,7 +6712,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Amount of time (seconds) for which the threshold must be met in order to trigger the scaling action.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="source_go">
@@ -6803,7 +6722,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies a valid partial or full URL to an existing Persistent Disk resource. This field is only applicable for persistent disks.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="statistic_go">
@@ -6812,7 +6732,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Statistic by which to evaluate the selected metric. Valid values: "AVERAGE", "SAMPLE_COUNT", "SUM", "MINIMUM", "MAXIMUM", "PERCENTILE", "COUNT".
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -6827,7 +6748,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Metric to monitor. Valid values: "Percentage CPU", "Network In", "Network Out", "Disk Read Bytes", "Disk Write Bytes", "Disk Write Operations/Sec", "Disk Read Operations/Sec".
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="namespace_nodejs">
@@ -6845,7 +6767,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of scaling policy.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="threshold_nodejs">
@@ -6854,7 +6777,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value at which the scaling action is triggered.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="unit_nodejs">
@@ -6881,7 +6805,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Value to which the action type will be adjusted. Required if using "numeric" or "percentageAdjustment" action types.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="cooldown_nodejs">
@@ -6890,7 +6815,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Time (seconds) to wait after a scaling action before resuming monitoring.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="dimensions_nodejs">
@@ -6899,7 +6825,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupscalinguppolicydimension">Elastigroup<wbr>Scaling<wbr>Up<wbr>Policy<wbr>Dimension[]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of dimensions describing qualities of the metric.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="evaluationperiods_nodejs">
@@ -6908,7 +6835,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Number of consecutive periods in which the threshold must be met in order to trigger a scaling action.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="operator_nodejs">
@@ -6917,7 +6845,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The operator used to evaluate the threshold against the current metric value. Valid values: "gt" (greater than), "get" (greater-than or equal), "lt" (less than), "lte" (less than or equal).
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="period_nodejs">
@@ -6926,7 +6855,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Amount of time (seconds) for which the threshold must be met in order to trigger the scaling action.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="source_nodejs">
@@ -6935,7 +6865,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies a valid partial or full URL to an existing Persistent Disk resource. This field is only applicable for persistent disks.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="statistic_nodejs">
@@ -6944,7 +6875,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Statistic by which to evaluate the selected metric. Valid values: "AVERAGE", "SAMPLE_COUNT", "SUM", "MINIMUM", "MAXIMUM", "PERCENTILE", "COUNT".
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -6959,7 +6891,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Metric to monitor. Valid values: "Percentage CPU", "Network In", "Network Out", "Disk Read Bytes", "Disk Write Bytes", "Disk Write Operations/Sec", "Disk Read Operations/Sec".
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="namespace_python">
@@ -6977,7 +6910,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Name of scaling policy.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="threshold_python">
@@ -6986,7 +6920,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">float</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The value at which the scaling action is triggered.
+{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="unit_python">
@@ -7013,7 +6948,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Value to which the action type will be adjusted. Required if using "numeric" or "percentageAdjustment" action types.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="cooldown_python">
@@ -7022,7 +6958,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Time (seconds) to wait after a scaling action before resuming monitoring.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="dimensions_python">
@@ -7031,7 +6968,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#elastigroupscalinguppolicydimension">Sequence[Elastigroup<wbr>Scaling<wbr>Up<wbr>Policy<wbr>Dimension<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A list of dimensions describing qualities of the metric.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="evaluation_periods_python">
@@ -7040,7 +6978,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Number of consecutive periods in which the threshold must be met in order to trigger a scaling action.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="operator_python">
@@ -7049,7 +6988,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The operator used to evaluate the threshold against the current metric value. Valid values: "gt" (greater than), "get" (greater-than or equal), "lt" (less than), "lte" (less than or equal).
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="period_python">
@@ -7058,7 +6998,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Amount of time (seconds) for which the threshold must be met in order to trigger the scaling action.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="source_python">
@@ -7067,7 +7008,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Specifies a valid partial or full URL to an existing Persistent Disk resource. This field is only applicable for persistent disks.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="statistic_python">
@@ -7076,7 +7018,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Statistic by which to evaluate the selected metric. Valid values: "AVERAGE", "SAMPLE_COUNT", "SUM", "MINIMUM", "MAXIMUM", "PERCENTILE", "COUNT".
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -7105,7 +7048,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The group name.
+    <dd>{{% md %}}The dimension name.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -7115,7 +7058,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Labels value.
+    <dd>{{% md %}}The dimension value.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -7131,7 +7074,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The group name.
+    <dd>{{% md %}}The dimension name.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -7141,7 +7084,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Labels value.
+    <dd>{{% md %}}The dimension value.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -7157,7 +7100,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The group name.
+    <dd>{{% md %}}The dimension name.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -7167,7 +7110,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Labels value.
+    <dd>{{% md %}}The dimension value.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -7183,7 +7126,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The group name.
+    <dd>{{% md %}}The dimension name.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -7193,7 +7136,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Labels value.
+    <dd>{{% md %}}The dimension value.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -7223,7 +7166,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The task type to run. Valid values: `"setCapacity"`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="cronexpression_csharp">
@@ -7232,7 +7176,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A valid cron expression. The cron is running in UTC time zone and is in [Unix cron format](https://en.wikipedia.org/wiki/Cron).
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="isenabled_csharp">
@@ -7241,7 +7186,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Setting the task to being enabled or disabled.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="maxcapacity_csharp">
@@ -7250,7 +7196,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The maximum number of instances the group should have.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="mincapacity_csharp">
@@ -7259,7 +7206,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The minimum number of instances the group should have.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="targetcapacity_csharp">
@@ -7268,7 +7216,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The desired number of instances the group should have.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -7283,7 +7232,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The task type to run. Valid values: `"setCapacity"`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="cronexpression_go">
@@ -7292,7 +7242,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A valid cron expression. The cron is running in UTC time zone and is in [Unix cron format](https://en.wikipedia.org/wiki/Cron).
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="isenabled_go">
@@ -7301,7 +7252,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Setting the task to being enabled or disabled.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="maxcapacity_go">
@@ -7310,7 +7262,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The maximum number of instances the group should have.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="mincapacity_go">
@@ -7319,7 +7272,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The minimum number of instances the group should have.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="targetcapacity_go">
@@ -7328,7 +7282,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The desired number of instances the group should have.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -7343,7 +7298,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The task type to run. Valid values: `"setCapacity"`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="cronexpression_nodejs">
@@ -7352,7 +7308,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A valid cron expression. The cron is running in UTC time zone and is in [Unix cron format](https://en.wikipedia.org/wiki/Cron).
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="isenabled_nodejs">
@@ -7361,7 +7318,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Setting the task to being enabled or disabled.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="maxcapacity_nodejs">
@@ -7370,7 +7328,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The maximum number of instances the group should have.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="mincapacity_nodejs">
@@ -7379,7 +7338,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The minimum number of instances the group should have.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="targetcapacity_nodejs">
@@ -7388,7 +7348,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The desired number of instances the group should have.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -7403,7 +7364,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The task type to run. Valid values: `"setCapacity"`.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="cron_expression_python">
@@ -7412,7 +7374,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}A valid cron expression. The cron is running in UTC time zone and is in [Unix cron format](https://en.wikipedia.org/wiki/Cron).
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="is_enabled_python">
@@ -7421,7 +7384,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Setting the task to being enabled or disabled.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="max_capacity_python">
@@ -7430,7 +7394,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The maximum number of instances the group should have.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="min_capacity_python">
@@ -7439,7 +7404,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The minimum number of instances the group should have.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="target_capacity_python">
@@ -7448,7 +7414,8 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}The desired number of instances the group should have.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 

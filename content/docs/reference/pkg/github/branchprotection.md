@@ -25,7 +25,7 @@ This resource allows you to configure branch protection for repositories in your
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_github/#pulumi_github.BranchProtection">BranchProtection</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">enforce_admins</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">pattern</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">push_restrictions</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">repository_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">require_signed_commits</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">required_pull_request_reviews</span><span class="p">:</span> <span class="nx">Optional[Sequence[BranchProtectionRequiredPullRequestReviewArgs]]</span> = None<span class="p">, </span><span class="nx">required_status_checks</span><span class="p">:</span> <span class="nx">Optional[Sequence[BranchProtectionRequiredStatusCheckArgs]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_github/#pulumi_github.BranchProtection">BranchProtection</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allows_deletions</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">allows_force_pushes</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enforce_admins</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">pattern</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">push_restrictions</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">repository_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">require_signed_commits</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">required_pull_request_reviews</span><span class="p">:</span> <span class="nx">Optional[Sequence[BranchProtectionRequiredPullRequestReviewArgs]]</span> = None<span class="p">, </span><span class="nx">required_status_checks</span><span class="p">:</span> <span class="nx">Optional[Sequence[BranchProtectionRequiredStatusCheckArgs]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -218,6 +218,26 @@ The BranchProtection resource accepts the following [input]({{< relref "/docs/in
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="allowsdeletions_csharp">
+<a href="#allowsdeletions_csharp" style="color: inherit; text-decoration: inherit;">Allows<wbr>Deletions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Boolean, setting this to `true` to allow the branch to be deleted.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allowsforcepushes_csharp">
+<a href="#allowsforcepushes_csharp" style="color: inherit; text-decoration: inherit;">Allows<wbr>Force<wbr>Pushes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Boolean, setting this to `true` to allow force pushes on the branch.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="enforceadmins_csharp">
 <a href="#enforceadmins_csharp" style="color: inherit; text-decoration: inherit;">Enforce<wbr>Admins</a>
 </span>
@@ -291,6 +311,26 @@ The BranchProtection resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name or node ID of the repository associated with this branch protection rule.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allowsdeletions_go">
+<a href="#allowsdeletions_go" style="color: inherit; text-decoration: inherit;">Allows<wbr>Deletions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Boolean, setting this to `true` to allow the branch to be deleted.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allowsforcepushes_go">
+<a href="#allowsforcepushes_go" style="color: inherit; text-decoration: inherit;">Allows<wbr>Force<wbr>Pushes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Boolean, setting this to `true` to allow force pushes on the branch.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -370,6 +410,26 @@ The BranchProtection resource accepts the following [input]({{< relref "/docs/in
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="allowsdeletions_nodejs">
+<a href="#allowsdeletions_nodejs" style="color: inherit; text-decoration: inherit;">allows<wbr>Deletions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Boolean, setting this to `true` to allow the branch to be deleted.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allowsforcepushes_nodejs">
+<a href="#allowsforcepushes_nodejs" style="color: inherit; text-decoration: inherit;">allows<wbr>Force<wbr>Pushes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Boolean, setting this to `true` to allow force pushes on the branch.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="enforceadmins_nodejs">
 <a href="#enforceadmins_nodejs" style="color: inherit; text-decoration: inherit;">enforce<wbr>Admins</a>
 </span>
@@ -443,6 +503,26 @@ The BranchProtection resource accepts the following [input]({{< relref "/docs/in
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name or node ID of the repository associated with this branch protection rule.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allows_deletions_python">
+<a href="#allows_deletions_python" style="color: inherit; text-decoration: inherit;">allows_<wbr>deletions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Boolean, setting this to `true` to allow the branch to be deleted.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="allows_force_pushes_python">
+<a href="#allows_force_pushes_python" style="color: inherit; text-decoration: inherit;">allows_<wbr>force_<wbr>pushes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Boolean, setting this to `true` to allow force pushes on the branch.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -577,7 +657,7 @@ Get an existing BranchProtection resource's state with the given name, ID, and o
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">enforce_admins</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">pattern</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">push_restrictions</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">repository_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">require_signed_commits</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">required_pull_request_reviews</span><span class="p">:</span> <span class="nx">Optional[Sequence[BranchProtectionRequiredPullRequestReviewArgs]]</span> = None<span class="p">, </span><span class="nx">required_status_checks</span><span class="p">:</span> <span class="nx">Optional[Sequence[BranchProtectionRequiredStatusCheckArgs]]</span> = None<span class="p">) -&gt;</span> BranchProtection</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">allows_deletions</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">allows_force_pushes</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">enforce_admins</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">pattern</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">push_restrictions</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">repository_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">require_signed_commits</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">required_pull_request_reviews</span><span class="p">:</span> <span class="nx">Optional[Sequence[BranchProtectionRequiredPullRequestReviewArgs]]</span> = None<span class="p">, </span><span class="nx">required_status_checks</span><span class="p">:</span> <span class="nx">Optional[Sequence[BranchProtectionRequiredStatusCheckArgs]]</span> = None<span class="p">) -&gt;</span> BranchProtection</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -692,6 +772,26 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_allowsdeletions_csharp">
+<a href="#state_allowsdeletions_csharp" style="color: inherit; text-decoration: inherit;">Allows<wbr>Deletions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Boolean, setting this to `true` to allow the branch to be deleted.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_allowsforcepushes_csharp">
+<a href="#state_allowsforcepushes_csharp" style="color: inherit; text-decoration: inherit;">Allows<wbr>Force<wbr>Pushes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Boolean, setting this to `true` to allow force pushes on the branch.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_enforceadmins_csharp">
 <a href="#state_enforceadmins_csharp" style="color: inherit; text-decoration: inherit;">Enforce<wbr>Admins</a>
 </span>
@@ -766,6 +866,26 @@ The following state arguments are supported:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_allowsdeletions_go">
+<a href="#state_allowsdeletions_go" style="color: inherit; text-decoration: inherit;">Allows<wbr>Deletions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Boolean, setting this to `true` to allow the branch to be deleted.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_allowsforcepushes_go">
+<a href="#state_allowsforcepushes_go" style="color: inherit; text-decoration: inherit;">Allows<wbr>Force<wbr>Pushes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Boolean, setting this to `true` to allow force pushes on the branch.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_enforceadmins_go">
@@ -844,6 +964,26 @@ The following state arguments are supported:
 
     <dt class="property-optional"
             title="Optional">
+        <span id="state_allowsdeletions_nodejs">
+<a href="#state_allowsdeletions_nodejs" style="color: inherit; text-decoration: inherit;">allows<wbr>Deletions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Boolean, setting this to `true` to allow the branch to be deleted.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_allowsforcepushes_nodejs">
+<a href="#state_allowsforcepushes_nodejs" style="color: inherit; text-decoration: inherit;">allows<wbr>Force<wbr>Pushes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Boolean, setting this to `true` to allow force pushes on the branch.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_enforceadmins_nodejs">
 <a href="#state_enforceadmins_nodejs" style="color: inherit; text-decoration: inherit;">enforce<wbr>Admins</a>
 </span>
@@ -918,6 +1058,26 @@ The following state arguments are supported:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_allows_deletions_python">
+<a href="#state_allows_deletions_python" style="color: inherit; text-decoration: inherit;">allows_<wbr>deletions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Boolean, setting this to `true` to allow the branch to be deleted.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_allows_force_pushes_python">
+<a href="#state_allows_force_pushes_python" style="color: inherit; text-decoration: inherit;">allows_<wbr>force_<wbr>pushes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Boolean, setting this to `true` to allow force pushes on the branch.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_enforce_admins_python">

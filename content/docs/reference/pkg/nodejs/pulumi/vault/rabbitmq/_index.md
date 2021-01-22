@@ -3,7 +3,7 @@ title: "Module rabbitmq"
 title_tag: "Module rabbitmq | Package @pulumi/vault | Node.js SDK"
 linktitle: "rabbitmq"
 meta_desc: "Explore members of the rabbitmq module in the @pulumi/vault package."
-git_sha: "207e7b59fd6b174087a0dc12a33dfcad3ee0712e"
+git_sha: "09ca03ecf17d3f2a37795741ba9309406227d766"
 block_external_search_index: true
 ---
 
@@ -33,7 +33,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="SecretBackend" data-link-title="SecretBackend">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/rabbitmq/secretBackend.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/rabbitmq/secretBackend.ts#L16">
         Resource <strong>SecretBackend</strong>
     </a>
 </h3>
@@ -49,7 +49,7 @@ RabbitMQ secret backends can be imported using the `path`, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="SecretBackend-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/rabbitmq/secretBackend.ts#L79"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/rabbitmq/secretBackend.ts#L79"> <b>constructor</b></a>
 </h4>
 
 
@@ -63,7 +63,7 @@ Create a SecretBackend resource with the given unique name, arguments, and optio
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="SecretBackend-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/rabbitmq/secretBackend.ts#L26">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/rabbitmq/secretBackend.ts#L26">method <b>get</b></a>
 </h4>
 
 
@@ -74,14 +74,14 @@ Get an existing SecretBackend resource's state with the given name, ID, and opti
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="SecretBackend-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/rabbitmq/secretBackend.ts#L16">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/rabbitmq/secretBackend.ts#L16">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="SecretBackend-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/rabbitmq/secretBackend.ts#L37">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/rabbitmq/secretBackend.ts#L37">method <b>isInstance</b></a>
 </h4>
 
 
@@ -92,7 +92,7 @@ Returns true if the given object is an instance of SecretBackend.  This is desig
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="SecretBackend-connectionUri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/rabbitmq/secretBackend.ts#L47">property <b>connectionUri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/rabbitmq/secretBackend.ts#L47">property <b>connectionUri</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>connectionUri: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -100,7 +100,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Specifies the RabbitMQ connection URI.
 
 <h4 class="pdoc-member-header" id="SecretBackend-defaultLeaseTtlSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/rabbitmq/secretBackend.ts#L52">property <b>defaultLeaseTtlSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/rabbitmq/secretBackend.ts#L52">property <b>defaultLeaseTtlSeconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>defaultLeaseTtlSeconds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -109,7 +109,7 @@ The default TTL for credentials
 issued by this backend.
 
 <h4 class="pdoc-member-header" id="SecretBackend-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/rabbitmq/secretBackend.ts#L56">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/rabbitmq/secretBackend.ts#L56">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -117,7 +117,7 @@ issued by this backend.
 A human-friendly description for this backend.
 
 <h4 class="pdoc-member-header" id="SecretBackend-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/rabbitmq/secretBackend.ts#L16">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/rabbitmq/secretBackend.ts#L16">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -126,7 +126,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="SecretBackend-maxLeaseTtlSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/rabbitmq/secretBackend.ts#L61">property <b>maxLeaseTtlSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/rabbitmq/secretBackend.ts#L61">property <b>maxLeaseTtlSeconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>maxLeaseTtlSeconds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -135,7 +135,7 @@ The maximum TTL that can be requested
 for credentials issued by this backend.
 
 <h4 class="pdoc-member-header" id="SecretBackend-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/rabbitmq/secretBackend.ts#L65">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/rabbitmq/secretBackend.ts#L65">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>password: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -143,7 +143,7 @@ for credentials issued by this backend.
 Specifies the RabbitMQ management administrator password.
 
 <h4 class="pdoc-member-header" id="SecretBackend-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/rabbitmq/secretBackend.ts#L70">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/rabbitmq/secretBackend.ts#L70">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>path: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -152,7 +152,7 @@ The unique path this backend should be mounted at. Must
 not begin or end with a `/`. Defaults to `aws`.
 
 <h4 class="pdoc-member-header" id="SecretBackend-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/rabbitmq/secretBackend.ts#L16">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/rabbitmq/secretBackend.ts#L16">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -161,7 +161,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="SecretBackend-username">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/rabbitmq/secretBackend.ts#L74">property <b>username</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/rabbitmq/secretBackend.ts#L74">property <b>username</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>username: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -169,7 +169,7 @@ deployments.
 Specifies the RabbitMQ management administrator username.
 
 <h4 class="pdoc-member-header" id="SecretBackend-verifyConnection">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/rabbitmq/secretBackend.ts#L79">property <b>verifyConnection</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/rabbitmq/secretBackend.ts#L79">property <b>verifyConnection</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>verifyConnection: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -178,7 +178,7 @@ Specifies whether to verify connection URI, username, and password.
 Defaults to `true`.
 
 <h3 class="pdoc-module-header" id="SecretBackendRole" data-link-title="SecretBackendRole">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/rabbitmq/secretBackendRole.ts#L17">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/rabbitmq/secretBackendRole.ts#L17">
         Resource <strong>SecretBackendRole</strong>
     </a>
 </h3>
@@ -194,7 +194,7 @@ RabbitMQ secret backend roles can be imported using the `path`, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="SecretBackendRole-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/rabbitmq/secretBackendRole.ts#L62"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/rabbitmq/secretBackendRole.ts#L62"> <b>constructor</b></a>
 </h4>
 
 
@@ -208,7 +208,7 @@ Create a SecretBackendRole resource with the given unique name, arguments, and o
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="SecretBackendRole-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/rabbitmq/secretBackendRole.ts#L27">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/rabbitmq/secretBackendRole.ts#L27">method <b>get</b></a>
 </h4>
 
 
@@ -219,14 +219,14 @@ Get an existing SecretBackendRole resource's state with the given name, ID, and 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="SecretBackendRole-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/rabbitmq/secretBackendRole.ts#L17">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/rabbitmq/secretBackendRole.ts#L17">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="SecretBackendRole-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/rabbitmq/secretBackendRole.ts#L38">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/rabbitmq/secretBackendRole.ts#L38">method <b>isInstance</b></a>
 </h4>
 
 
@@ -237,7 +237,7 @@ Returns true if the given object is an instance of SecretBackendRole.  This is d
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="SecretBackendRole-backend">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/rabbitmq/secretBackendRole.ts#L49">property <b>backend</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/rabbitmq/secretBackendRole.ts#L49">property <b>backend</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>backend: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -246,7 +246,7 @@ The path the RabbitMQ secret backend is mounted at,
 with no leading or trailing `/`s.
 
 <h4 class="pdoc-member-header" id="SecretBackendRole-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/rabbitmq/secretBackendRole.ts#L17">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/rabbitmq/secretBackendRole.ts#L17">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -255,7 +255,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="SecretBackendRole-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/rabbitmq/secretBackendRole.ts#L54">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/rabbitmq/secretBackendRole.ts#L54">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -264,7 +264,7 @@ The name to identify this role within the backend.
 Must be unique within the backend.
 
 <h4 class="pdoc-member-header" id="SecretBackendRole-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/rabbitmq/secretBackendRole.ts#L58">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/rabbitmq/secretBackendRole.ts#L58">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -272,7 +272,7 @@ Must be unique within the backend.
 Specifies a comma-separated RabbitMQ management tags.
 
 <h4 class="pdoc-member-header" id="SecretBackendRole-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/rabbitmq/secretBackendRole.ts#L17">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/rabbitmq/secretBackendRole.ts#L17">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -281,7 +281,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="SecretBackendRole-vhosts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/rabbitmq/secretBackendRole.ts#L62">property <b>vhosts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/rabbitmq/secretBackendRole.ts#L62">property <b>vhosts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>vhosts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vault/types/output/#SecretBackendRoleVhost'>SecretBackendRoleVhost</a>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -292,7 +292,7 @@ Specifies a map of virtual hosts to permissions.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="SecretBackendArgs" data-link-title="SecretBackendArgs">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/rabbitmq/secretBackend.ts#L177">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/rabbitmq/secretBackend.ts#L177">
         interface <strong>SecretBackendArgs</strong>
     </a>
 </h3>
@@ -302,7 +302,7 @@ Specifies a map of virtual hosts to permissions.
 The set of arguments for constructing a SecretBackend resource.
 
 <h4 class="pdoc-member-header" id="SecretBackendArgs-connectionUri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/rabbitmq/secretBackend.ts#L181">property <b>connectionUri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/rabbitmq/secretBackend.ts#L181">property <b>connectionUri</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>connectionUri: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -310,7 +310,7 @@ The set of arguments for constructing a SecretBackend resource.
 Specifies the RabbitMQ connection URI.
 
 <h4 class="pdoc-member-header" id="SecretBackendArgs-defaultLeaseTtlSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/rabbitmq/secretBackend.ts#L186">property <b>defaultLeaseTtlSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/rabbitmq/secretBackend.ts#L186">property <b>defaultLeaseTtlSeconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultLeaseTtlSeconds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -319,7 +319,7 @@ The default TTL for credentials
 issued by this backend.
 
 <h4 class="pdoc-member-header" id="SecretBackendArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/rabbitmq/secretBackend.ts#L190">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/rabbitmq/secretBackend.ts#L190">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -327,7 +327,7 @@ issued by this backend.
 A human-friendly description for this backend.
 
 <h4 class="pdoc-member-header" id="SecretBackendArgs-maxLeaseTtlSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/rabbitmq/secretBackend.ts#L195">property <b>maxLeaseTtlSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/rabbitmq/secretBackend.ts#L195">property <b>maxLeaseTtlSeconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxLeaseTtlSeconds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -336,7 +336,7 @@ The maximum TTL that can be requested
 for credentials issued by this backend.
 
 <h4 class="pdoc-member-header" id="SecretBackendArgs-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/rabbitmq/secretBackend.ts#L199">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/rabbitmq/secretBackend.ts#L199">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>password: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -344,7 +344,7 @@ for credentials issued by this backend.
 Specifies the RabbitMQ management administrator password.
 
 <h4 class="pdoc-member-header" id="SecretBackendArgs-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/rabbitmq/secretBackend.ts#L204">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/rabbitmq/secretBackend.ts#L204">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>path?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -353,7 +353,7 @@ The unique path this backend should be mounted at. Must
 not begin or end with a `/`. Defaults to `aws`.
 
 <h4 class="pdoc-member-header" id="SecretBackendArgs-username">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/rabbitmq/secretBackend.ts#L208">property <b>username</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/rabbitmq/secretBackend.ts#L208">property <b>username</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>username: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -361,7 +361,7 @@ not begin or end with a `/`. Defaults to `aws`.
 Specifies the RabbitMQ management administrator username.
 
 <h4 class="pdoc-member-header" id="SecretBackendArgs-verifyConnection">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/rabbitmq/secretBackend.ts#L213">property <b>verifyConnection</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/rabbitmq/secretBackend.ts#L213">property <b>verifyConnection</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>verifyConnection?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -370,7 +370,7 @@ Specifies whether to verify connection URI, username, and password.
 Defaults to `true`.
 
 <h3 class="pdoc-module-header" id="SecretBackendRoleArgs" data-link-title="SecretBackendRoleArgs">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/rabbitmq/secretBackendRole.ts#L128">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/rabbitmq/secretBackendRole.ts#L128">
         interface <strong>SecretBackendRoleArgs</strong>
     </a>
 </h3>
@@ -380,7 +380,7 @@ Defaults to `true`.
 The set of arguments for constructing a SecretBackendRole resource.
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleArgs-backend">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/rabbitmq/secretBackendRole.ts#L133">property <b>backend</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/rabbitmq/secretBackendRole.ts#L133">property <b>backend</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backend: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -389,7 +389,7 @@ The path the RabbitMQ secret backend is mounted at,
 with no leading or trailing `/`s.
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/rabbitmq/secretBackendRole.ts#L138">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/rabbitmq/secretBackendRole.ts#L138">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -398,7 +398,7 @@ The name to identify this role within the backend.
 Must be unique within the backend.
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/rabbitmq/secretBackendRole.ts#L142">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/rabbitmq/secretBackendRole.ts#L142">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -406,7 +406,7 @@ Must be unique within the backend.
 Specifies a comma-separated RabbitMQ management tags.
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleArgs-vhosts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/rabbitmq/secretBackendRole.ts#L146">property <b>vhosts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/rabbitmq/secretBackendRole.ts#L146">property <b>vhosts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vhosts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vault/types/input/#SecretBackendRoleVhost'>SecretBackendRoleVhost</a>&gt;[]&gt;;</code></pre>
@@ -414,7 +414,7 @@ Specifies a comma-separated RabbitMQ management tags.
 Specifies a map of virtual hosts to permissions.
 
 <h3 class="pdoc-module-header" id="SecretBackendRoleState" data-link-title="SecretBackendRoleState">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/rabbitmq/secretBackendRole.ts#L104">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/rabbitmq/secretBackendRole.ts#L104">
         interface <strong>SecretBackendRoleState</strong>
     </a>
 </h3>
@@ -424,7 +424,7 @@ Specifies a map of virtual hosts to permissions.
 Input properties used for looking up and filtering SecretBackendRole resources.
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleState-backend">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/rabbitmq/secretBackendRole.ts#L109">property <b>backend</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/rabbitmq/secretBackendRole.ts#L109">property <b>backend</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>backend?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -433,7 +433,7 @@ The path the RabbitMQ secret backend is mounted at,
 with no leading or trailing `/`s.
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/rabbitmq/secretBackendRole.ts#L114">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/rabbitmq/secretBackendRole.ts#L114">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -442,7 +442,7 @@ The name to identify this role within the backend.
 Must be unique within the backend.
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/rabbitmq/secretBackendRole.ts#L118">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/rabbitmq/secretBackendRole.ts#L118">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -450,7 +450,7 @@ Must be unique within the backend.
 Specifies a comma-separated RabbitMQ management tags.
 
 <h4 class="pdoc-member-header" id="SecretBackendRoleState-vhosts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/rabbitmq/secretBackendRole.ts#L122">property <b>vhosts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/rabbitmq/secretBackendRole.ts#L122">property <b>vhosts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vhosts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/vault/types/input/#SecretBackendRoleVhost'>SecretBackendRoleVhost</a>&gt;[]&gt;;</code></pre>
@@ -458,7 +458,7 @@ Specifies a comma-separated RabbitMQ management tags.
 Specifies a map of virtual hosts to permissions.
 
 <h3 class="pdoc-module-header" id="SecretBackendState" data-link-title="SecretBackendState">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/rabbitmq/secretBackend.ts#L135">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/rabbitmq/secretBackend.ts#L135">
         interface <strong>SecretBackendState</strong>
     </a>
 </h3>
@@ -468,7 +468,7 @@ Specifies a map of virtual hosts to permissions.
 Input properties used for looking up and filtering SecretBackend resources.
 
 <h4 class="pdoc-member-header" id="SecretBackendState-connectionUri">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/rabbitmq/secretBackend.ts#L139">property <b>connectionUri</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/rabbitmq/secretBackend.ts#L139">property <b>connectionUri</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>connectionUri?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -476,7 +476,7 @@ Input properties used for looking up and filtering SecretBackend resources.
 Specifies the RabbitMQ connection URI.
 
 <h4 class="pdoc-member-header" id="SecretBackendState-defaultLeaseTtlSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/rabbitmq/secretBackend.ts#L144">property <b>defaultLeaseTtlSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/rabbitmq/secretBackend.ts#L144">property <b>defaultLeaseTtlSeconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>defaultLeaseTtlSeconds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -485,7 +485,7 @@ The default TTL for credentials
 issued by this backend.
 
 <h4 class="pdoc-member-header" id="SecretBackendState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/rabbitmq/secretBackend.ts#L148">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/rabbitmq/secretBackend.ts#L148">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -493,7 +493,7 @@ issued by this backend.
 A human-friendly description for this backend.
 
 <h4 class="pdoc-member-header" id="SecretBackendState-maxLeaseTtlSeconds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/rabbitmq/secretBackend.ts#L153">property <b>maxLeaseTtlSeconds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/rabbitmq/secretBackend.ts#L153">property <b>maxLeaseTtlSeconds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxLeaseTtlSeconds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -502,7 +502,7 @@ The maximum TTL that can be requested
 for credentials issued by this backend.
 
 <h4 class="pdoc-member-header" id="SecretBackendState-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/rabbitmq/secretBackend.ts#L157">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/rabbitmq/secretBackend.ts#L157">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>password?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -510,7 +510,7 @@ for credentials issued by this backend.
 Specifies the RabbitMQ management administrator password.
 
 <h4 class="pdoc-member-header" id="SecretBackendState-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/rabbitmq/secretBackend.ts#L162">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/rabbitmq/secretBackend.ts#L162">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>path?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -519,7 +519,7 @@ The unique path this backend should be mounted at. Must
 not begin or end with a `/`. Defaults to `aws`.
 
 <h4 class="pdoc-member-header" id="SecretBackendState-username">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/rabbitmq/secretBackend.ts#L166">property <b>username</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/rabbitmq/secretBackend.ts#L166">property <b>username</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>username?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -527,7 +527,7 @@ not begin or end with a `/`. Defaults to `aws`.
 Specifies the RabbitMQ management administrator username.
 
 <h4 class="pdoc-member-header" id="SecretBackendState-verifyConnection">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/207e7b59fd6b174087a0dc12a33dfcad3ee0712e/sdk/nodejs/rabbitmq/secretBackend.ts#L171">property <b>verifyConnection</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/rabbitmq/secretBackend.ts#L171">property <b>verifyConnection</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>verifyConnection?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>

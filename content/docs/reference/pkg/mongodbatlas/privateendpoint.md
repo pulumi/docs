@@ -12,6 +12,9 @@ meta_desc: "Explore the PrivateEndpoint resource of the MongoDB Atlas package, i
 
 `mongodbatlas.PrivateEndpoint` provides a Private Endpoint resource. This represents a Private Endpoint Connection that can be created in an Atlas project.
 
+!> **WARNING:** This resource is deprecated and will be removed in the next major version
+                Please transition to privatelink_endpoint as soon as possible. [PrivateLink Endpoints] (https://docs.atlas.mongodb.com/reference/api/private-endpoints/)
+
 > **IMPORTANT:**You must have one of the following roles to successfully handle the resource:
   * Organization Owner
   * Project Owner

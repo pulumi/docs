@@ -3,7 +3,7 @@ title: "Module config"
 title_tag: "Module config | Package @pulumi/spotinst | Node.js SDK"
 linktitle: "config"
 meta_desc: "Explore members of the config module in the @pulumi/spotinst package."
-git_sha: "aabf5943c9156643ed7e379271a64b959212b710"
+git_sha: "8b0777509728d621477d945466a125853cc401d5"
 block_external_search_index: true
 ---
 
@@ -29,7 +29,7 @@ block_external_search_index: true
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="account" data-link-title="account">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/config/vars.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/8b0777509728d621477d945466a125853cc401d5/sdk/nodejs/config/vars.ts#L12">
         let <strong>account</strong>
     </a>
 </h3>
@@ -39,7 +39,7 @@ block_external_search_index: true
 Spotinst Account ID
 
 <h3 class="pdoc-module-header" id="featureFlags" data-link-title="featureFlags">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/config/vars.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/8b0777509728d621477d945466a125853cc401d5/sdk/nodejs/config/vars.ts#L16">
         let <strong>featureFlags</strong>
     </a>
 </h3>
@@ -49,7 +49,7 @@ Spotinst Account ID
 Spotinst SDK Feature Flags
 
 <h3 class="pdoc-module-header" id="token" data-link-title="token">
-    <a href="https://github.com/pulumi/pulumi-spotinst/blob/aabf5943c9156643ed7e379271a64b959212b710/sdk/nodejs/config/vars.ts#L20">
+    <a href="https://github.com/pulumi/pulumi-spotinst/blob/8b0777509728d621477d945466a125853cc401d5/sdk/nodejs/config/vars.ts#L20">
         let <strong>token</strong>
     </a>
 </h3>

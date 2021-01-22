@@ -3,7 +3,7 @@ title: "Module config"
 title_tag: "Module config | Package @pulumi/ns1 | Node.js SDK"
 linktitle: "config"
 meta_desc: "Explore members of the config module in the @pulumi/ns1 package."
-git_sha: "1f2ed41c3a7ef52aa8da1d83cae453661fddd804"
+git_sha: "3620dcfc3338e583f3cbe8c9b27aa7e840a08f04"
 block_external_search_index: true
 ---
 
@@ -31,7 +31,7 @@ block_external_search_index: true
 
 <h2 id="apis">APIs</h2>
 <h3 class="pdoc-module-header" id="apikey" data-link-title="apikey">
-    <a href="https://github.com/pulumi/pulumi-ns1/blob/1f2ed41c3a7ef52aa8da1d83cae453661fddd804/sdk/nodejs/config/vars.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-ns1/blob/3620dcfc3338e583f3cbe8c9b27aa7e840a08f04/sdk/nodejs/config/vars.ts#L12">
         let <strong>apikey</strong>
     </a>
 </h3>
@@ -41,28 +41,28 @@ block_external_search_index: true
 The ns1 API key, this is required
 
 <h3 class="pdoc-module-header" id="enableDdi" data-link-title="enableDdi">
-    <a href="https://github.com/pulumi/pulumi-ns1/blob/1f2ed41c3a7ef52aa8da1d83cae453661fddd804/sdk/nodejs/config/vars.ts#L13">
+    <a href="https://github.com/pulumi/pulumi-ns1/blob/3620dcfc3338e583f3cbe8c9b27aa7e840a08f04/sdk/nodejs/config/vars.ts#L13">
         let <strong>enableDdi</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> enableDdi: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.getObject&lt;boolean&gt;(&#34;enableDdi&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="endpoint" data-link-title="endpoint">
-    <a href="https://github.com/pulumi/pulumi-ns1/blob/1f2ed41c3a7ef52aa8da1d83cae453661fddd804/sdk/nodejs/config/vars.ts#L14">
+    <a href="https://github.com/pulumi/pulumi-ns1/blob/3620dcfc3338e583f3cbe8c9b27aa7e840a08f04/sdk/nodejs/config/vars.ts#L14">
         let <strong>endpoint</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> endpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.get(&#34;endpoint&#34;) || utilities.getEnv(&#34;NS1_ENDPOINT&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="ignoreSsl" data-link-title="ignoreSsl">
-    <a href="https://github.com/pulumi/pulumi-ns1/blob/1f2ed41c3a7ef52aa8da1d83cae453661fddd804/sdk/nodejs/config/vars.ts#L15">
+    <a href="https://github.com/pulumi/pulumi-ns1/blob/3620dcfc3338e583f3cbe8c9b27aa7e840a08f04/sdk/nodejs/config/vars.ts#L15">
         let <strong>ignoreSsl</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>let</span> ignoreSsl: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> = <span class='s2'> __config.getObject&lt;boolean&gt;(&#34;ignoreSsl&#34;)</span>;</code></pre>
 <h3 class="pdoc-module-header" id="rateLimitParallelism" data-link-title="rateLimitParallelism">
-    <a href="https://github.com/pulumi/pulumi-ns1/blob/1f2ed41c3a7ef52aa8da1d83cae453661fddd804/sdk/nodejs/config/vars.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-ns1/blob/3620dcfc3338e583f3cbe8c9b27aa7e840a08f04/sdk/nodejs/config/vars.ts#L16">
         let <strong>rateLimitParallelism</strong>
     </a>
 </h3>

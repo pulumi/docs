@@ -31,7 +31,7 @@ class MyStack : Stack
         var example = new Github.Repository("example", new Github.RepositoryArgs
         {
             Description = "My awesome codebase",
-            Private = true,
+            Visibility = "private",
             Template = new Github.Inputs.RepositoryTemplateArgs
             {
                 Owner = "github",
@@ -68,7 +68,7 @@ func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		example, err := github.NewRepository(ctx, "example", &github.RepositoryArgs{
 			Description: pulumi.String("My awesome codebase"),
-			Private:     pulumi.Bool(true),
+			Visibility:  pulumi.String("private"),
 			Template: &github.RepositoryTemplateArgs{
 				Owner:      pulumi.String("github"),
 				Repository: pulumi.String("terraform-module-template"),
@@ -105,7 +105,7 @@ import pulumi_github as github
 
 example = github.Repository("example",
     description="My awesome codebase",
-    private=True,
+    visibility="private",
     template=github.RepositoryTemplateArgs(
         owner="github",
         repository="terraform-module-template",
@@ -128,7 +128,7 @@ import * as github from "@pulumi/github";
 
 const example = new github.Repository("example", {
     description: "My awesome codebase",
-    "private": true,
+    visibility: "private",
     template: {
         owner: "github",
         repository: "terraform-module-template",

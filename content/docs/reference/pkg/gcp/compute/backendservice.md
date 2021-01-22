@@ -250,6 +250,9 @@ class MyStack : Stack
             RequestPath = "/",
             CheckIntervalSec = 1,
             TimeoutSec = 1,
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
         });
         var defaultBackendService = new Gcp.Compute.BackendService("defaultBackendService", new Gcp.Compute.BackendServiceArgs
         {
@@ -267,6 +270,9 @@ class MyStack : Stack
                 NegativeCaching = true,
                 SignedUrlCacheMaxAgeSec = 7200,
             },
+        }, new CustomResourceOptions
+        {
+            Provider = google_beta,
         });
     }
 
@@ -290,7 +296,7 @@ func main() {
 			RequestPath:      pulumi.String("/"),
 			CheckIntervalSec: pulumi.Int(1),
 			TimeoutSec:       pulumi.Int(1),
-		})
+		}, pulumi.Provider(google_beta))
 		if err != nil {
 			return err
 		}
@@ -307,7 +313,7 @@ func main() {
 				NegativeCaching:         pulumi.Bool(true),
 				SignedUrlCacheMaxAgeSec: pulumi.Int(7200),
 			},
-		})
+		}, pulumi.Provider(google_beta))
 		if err != nil {
 			return err
 		}
@@ -326,7 +332,8 @@ import pulumi_gcp as gcp
 default_http_health_check = gcp.compute.HttpHealthCheck("defaultHttpHealthCheck",
     request_path="/",
     check_interval_sec=1,
-    timeout_sec=1)
+    timeout_sec=1,
+    opts=pulumi.ResourceOptions(provider=google_beta))
 default_backend_service = gcp.compute.BackendService("defaultBackendService",
     health_checks=[default_http_health_check.id],
     enable_cdn=True,
@@ -337,7 +344,8 @@ default_backend_service = gcp.compute.BackendService("defaultBackendService",
         max_ttl=10800,
         negative_caching=True,
         signed_url_cache_max_age_sec=7200,
-    ))
+    ),
+    opts=pulumi.ResourceOptions(provider=google_beta))
 ```
 
 {{% /example %}}
@@ -352,6 +360,8 @@ const defaultHttpHealthCheck = new gcp.compute.HttpHealthCheck("defaultHttpHealt
     requestPath: "/",
     checkIntervalSec: 1,
     timeoutSec: 1,
+}, {
+    provider: google_beta,
 });
 const defaultBackendService = new gcp.compute.BackendService("defaultBackendService", {
     healthChecks: [defaultHttpHealthCheck.id],
@@ -364,6 +374,8 @@ const defaultBackendService = new gcp.compute.BackendService("defaultBackendServ
         negativeCaching: true,
         signedUrlCacheMaxAgeSec: 7200,
     },
+}, {
+    provider: google_beta,
 });
 ```
 

@@ -2138,8 +2138,8 @@ Routes are matched based on the specified value, where `0` is the highest priori
     </dt>
     <dd>{{% md %}}The action to take if a match is determined.
 {{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="match_csharp">
 <a href="#match_csharp" style="color: inherit; text-decoration: inherit;">Match</a>
 </span>
@@ -2184,8 +2184,8 @@ Routes are matched based on the specified value, where `0` is the highest priori
     </dt>
     <dd>{{% md %}}The action to take if a match is determined.
 {{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="match_go">
 <a href="#match_go" style="color: inherit; text-decoration: inherit;">Match</a>
 </span>
@@ -2230,8 +2230,8 @@ Routes are matched based on the specified value, where `0` is the highest priori
     </dt>
     <dd>{{% md %}}The action to take if a match is determined.
 {{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="match_nodejs">
 <a href="#match_nodejs" style="color: inherit; text-decoration: inherit;">match</a>
 </span>
@@ -2276,8 +2276,8 @@ Routes are matched based on the specified value, where `0` is the highest priori
     </dt>
     <dd>{{% md %}}The action to take if a match is determined.
 {{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="match_python">
 <a href="#match_python" style="color: inherit; text-decoration: inherit;">match</a>
 </span>

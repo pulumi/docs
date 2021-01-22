@@ -322,7 +322,7 @@ The SpotInstanceRequest resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The AMI to use for the instance.
+    <dd>{{% md %}}AMI to use for the instance.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -332,7 +332,7 @@ The SpotInstanceRequest resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of instance to start. Updates to this field will trigger a stop/start of the EC2 instance.
+    <dd>{{% md %}}Type of instance to start. Updates to this field will trigger a stop/start of the EC2 instance.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -342,7 +342,7 @@ The SpotInstanceRequest resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Associate a public ip address with an instance in a VPC.  Boolean value.
+    <dd>{{% md %}}Whether to associate a public IP address with an instance in a VPC.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -352,7 +352,7 @@ The SpotInstanceRequest resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The AZ to start the instance in.
+    <dd>{{% md %}}AZ to start the instance in.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -374,9 +374,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sets the number of CPU cores for an instance. This option is
-only supported on creation of instance type that support CPU Options
-[CPU Cores and Threads Per CPU Core Per Instance Type](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html#cpu-options-supported-instances-values) - specifying this option for unsupported instance types will return an error from the EC2 API.
+    <dd>{{% md %}}Sets the number of CPU cores for an instance. This option is only supported on creation of instance type that support CPU Options [CPU Cores and Threads Per CPU Core Per Instance Type](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html#cpu-options-supported-instances-values) - specifying this option for unsupported instance types will return an error from the EC2 API.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -406,8 +404,7 @@ only supported on creation of instance type that support CPU Options
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If true, enables [EC2 Instance
-Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingDisableAPITermination)
+    <dd>{{% md %}}If true, enables [EC2 Instance Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingDisableAPITermination).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -417,8 +414,7 @@ Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/term
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotinstancerequestebsblockdevice">List&lt;Spot<wbr>Instance<wbr>Request<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Additional EBS block devices to attach to the
-instance.  Block device configurations only apply on resource creation. See Block Devices below for details on attributes and drift detection.
+    <dd>{{% md %}}Additional EBS block devices to attach to the instance.  Block device configurations only apply on resource creation. See Block Devices below for details on attributes and drift detection.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -428,11 +424,7 @@ instance.  Block device configurations only apply on resource creation. See Bloc
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If true, the launched EC2 instance will be EBS-optimized.
-Note that if this is not set on an instance type that is optimized by default then
-this will show as disabled but if the instance type is optimized by default then
-there is no need to set this and there is no effect to disabling it.
-See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimized.html) of the AWS User Guide for more information.
+    <dd>{{% md %}}If true, the launched EC2 instance will be EBS-optimized. Note that if this is not set on an instance type that is optimized by default then this will show as disabled but if the instance type is optimized by default then there is no need to set this and there is no effect to disabling it. See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimized.html) of the AWS User Guide for more information.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -452,8 +444,7 @@ See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotinstancerequestephemeralblockdevice">List&lt;Spot<wbr>Instance<wbr>Request<wbr>Ephemeral<wbr>Block<wbr>Device<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Customize Ephemeral (also known as
-"Instance Store") volumes on the instance. See Block Devices below for details.
+    <dd>{{% md %}}Customize Ephemeral (also known as "Instance Store") volumes on the instance. See Block Devices below for details.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -483,7 +474,7 @@ See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGu
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Id of a dedicated host that the instance will be assigned to. Use when an instance is to be launched on a specific dedicated host.
+    <dd>{{% md %}}ID of a dedicated host that the instance will be assigned to. Use when an instance is to be launched on a specific dedicated host.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -493,8 +484,7 @@ See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGu
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The IAM Instance Profile to
-launch the instance with. Specified as the name of the Instance Profile. Ensure your credentials have the correct permission to assign the instance profile according to the [EC2 documentation](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2.html#roles-usingrole-ec2instance-permissions), notably `iam:PassRole`.
+    <dd>{{% md %}}IAM Instance Profile to launch the instance with. Specified as the name of the Instance Profile. Ensure your credentials have the correct permission to assign the instance profile according to the [EC2 documentation](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2.html#roles-usingrole-ec2instance-permissions), notably `iam:PassRole`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -504,10 +494,7 @@ launch the instance with. Specified as the name of the Instance Profile. Ensure 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Shutdown behavior for the
-instance. Amazon defaults this to `stop` for EBS-backed instances and
-`terminate` for instance-store instances. Cannot be set on instance-store
-instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingInstanceInitiatedShutdownBehavior) for more information.
+    <dd>{{% md %}}Shutdown behavior for the instance. Amazon defaults this to `stop` for EBS-backed instances and `terminate` for instance-store instances. Cannot be set on instance-store instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingInstanceInitiatedShutdownBehavior) for more information.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -547,7 +534,7 @@ instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/Use
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The key name of the Key Pair to use for the instance; which can be managed using the `aws.ec2.KeyPair` resource.
+    <dd>{{% md %}}Key name of the Key Pair to use for the instance; which can be managed using the `aws.ec2.KeyPair` resource.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -598,7 +585,7 @@ If left empty instances are launched and terminated individually.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Placement Group to start the instance in.
+    <dd>{{% md %}}Placement Group to start the instance in.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -608,8 +595,7 @@ If left empty instances are launched and terminated individually.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Private IP address to associate with the
-instance in a VPC.
+    <dd>{{% md %}}Private IP address to associate with the instance in a VPC.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -619,8 +605,7 @@ instance in a VPC.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotinstancerequestrootblockdevice">Spot<wbr>Instance<wbr>Request<wbr>Root<wbr>Block<wbr>Device<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Customize details about the root block
-device of the instance. See Block Devices below for details.
+    <dd>{{% md %}}Customize details about the root block device of the instance. See Block Devices below for details.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -650,8 +635,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Controls if traffic is routed to the instance when
-the destination address does not match the instance. Used for NAT or VPNs. Defaults true.
+    <dd>{{% md %}}Controls if traffic is routed to the instance when the destination address does not match the instance. Used for NAT or VPNs. Defaults true.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -682,7 +666,7 @@ the instance is terminated, the spot request will be closed.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The VPC Subnet ID to launch in.
+    <dd>{{% md %}}VPC Subnet ID to launch in.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -692,7 +676,7 @@ the instance is terminated, the spot request will be closed.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource. Note that these tags apply to the instance and not block storage devices.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -702,7 +686,7 @@ the instance is terminated, the spot request will be closed.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tenancy of the instance (if the instance is running in a VPC). An instance with a tenancy of dedicated runs on single-tenant hardware. The host tenancy is not supported for the import-instance command.
+    <dd>{{% md %}}Tenancy of the instance (if the instance is running in a VPC). An instance with a tenancy of dedicated runs on single-tenant hardware. The host tenancy is not supported for the import-instance command.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -712,7 +696,7 @@ the instance is terminated, the spot request will be closed.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The user data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see `user_data_base64` instead.
+    <dd>{{% md %}}User data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see `user_data_base64` instead.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -752,7 +736,7 @@ the instance is terminated, the spot request will be closed.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the devices created by the instance at launch time.
+    <dd>{{% md %}}A map of tags to assign, at instance-creation time, to root and EBS volumes.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -790,7 +774,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The AMI to use for the instance.
+    <dd>{{% md %}}AMI to use for the instance.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -800,7 +784,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of instance to start. Updates to this field will trigger a stop/start of the EC2 instance.
+    <dd>{{% md %}}Type of instance to start. Updates to this field will trigger a stop/start of the EC2 instance.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -810,7 +794,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Associate a public ip address with an instance in a VPC.  Boolean value.
+    <dd>{{% md %}}Whether to associate a public IP address with an instance in a VPC.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -820,7 +804,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The AZ to start the instance in.
+    <dd>{{% md %}}AZ to start the instance in.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -842,9 +826,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sets the number of CPU cores for an instance. This option is
-only supported on creation of instance type that support CPU Options
-[CPU Cores and Threads Per CPU Core Per Instance Type](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html#cpu-options-supported-instances-values) - specifying this option for unsupported instance types will return an error from the EC2 API.
+    <dd>{{% md %}}Sets the number of CPU cores for an instance. This option is only supported on creation of instance type that support CPU Options [CPU Cores and Threads Per CPU Core Per Instance Type](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html#cpu-options-supported-instances-values) - specifying this option for unsupported instance types will return an error from the EC2 API.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -874,8 +856,7 @@ only supported on creation of instance type that support CPU Options
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If true, enables [EC2 Instance
-Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingDisableAPITermination)
+    <dd>{{% md %}}If true, enables [EC2 Instance Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingDisableAPITermination).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -885,8 +866,7 @@ Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/term
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotinstancerequestebsblockdevice">[]Spot<wbr>Instance<wbr>Request<wbr>Ebs<wbr>Block<wbr>Device</a></span>
     </dt>
-    <dd>{{% md %}}Additional EBS block devices to attach to the
-instance.  Block device configurations only apply on resource creation. See Block Devices below for details on attributes and drift detection.
+    <dd>{{% md %}}Additional EBS block devices to attach to the instance.  Block device configurations only apply on resource creation. See Block Devices below for details on attributes and drift detection.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -896,11 +876,7 @@ instance.  Block device configurations only apply on resource creation. See Bloc
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If true, the launched EC2 instance will be EBS-optimized.
-Note that if this is not set on an instance type that is optimized by default then
-this will show as disabled but if the instance type is optimized by default then
-there is no need to set this and there is no effect to disabling it.
-See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimized.html) of the AWS User Guide for more information.
+    <dd>{{% md %}}If true, the launched EC2 instance will be EBS-optimized. Note that if this is not set on an instance type that is optimized by default then this will show as disabled but if the instance type is optimized by default then there is no need to set this and there is no effect to disabling it. See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimized.html) of the AWS User Guide for more information.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -920,8 +896,7 @@ See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotinstancerequestephemeralblockdevice">[]Spot<wbr>Instance<wbr>Request<wbr>Ephemeral<wbr>Block<wbr>Device</a></span>
     </dt>
-    <dd>{{% md %}}Customize Ephemeral (also known as
-"Instance Store") volumes on the instance. See Block Devices below for details.
+    <dd>{{% md %}}Customize Ephemeral (also known as "Instance Store") volumes on the instance. See Block Devices below for details.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -951,7 +926,7 @@ See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGu
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Id of a dedicated host that the instance will be assigned to. Use when an instance is to be launched on a specific dedicated host.
+    <dd>{{% md %}}ID of a dedicated host that the instance will be assigned to. Use when an instance is to be launched on a specific dedicated host.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -961,8 +936,7 @@ See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGu
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The IAM Instance Profile to
-launch the instance with. Specified as the name of the Instance Profile. Ensure your credentials have the correct permission to assign the instance profile according to the [EC2 documentation](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2.html#roles-usingrole-ec2instance-permissions), notably `iam:PassRole`.
+    <dd>{{% md %}}IAM Instance Profile to launch the instance with. Specified as the name of the Instance Profile. Ensure your credentials have the correct permission to assign the instance profile according to the [EC2 documentation](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2.html#roles-usingrole-ec2instance-permissions), notably `iam:PassRole`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -972,10 +946,7 @@ launch the instance with. Specified as the name of the Instance Profile. Ensure 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Shutdown behavior for the
-instance. Amazon defaults this to `stop` for EBS-backed instances and
-`terminate` for instance-store instances. Cannot be set on instance-store
-instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingInstanceInitiatedShutdownBehavior) for more information.
+    <dd>{{% md %}}Shutdown behavior for the instance. Amazon defaults this to `stop` for EBS-backed instances and `terminate` for instance-store instances. Cannot be set on instance-store instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingInstanceInitiatedShutdownBehavior) for more information.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1015,7 +986,7 @@ instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/Use
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The key name of the Key Pair to use for the instance; which can be managed using the `aws.ec2.KeyPair` resource.
+    <dd>{{% md %}}Key name of the Key Pair to use for the instance; which can be managed using the `aws.ec2.KeyPair` resource.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1066,7 +1037,7 @@ If left empty instances are launched and terminated individually.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Placement Group to start the instance in.
+    <dd>{{% md %}}Placement Group to start the instance in.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1076,8 +1047,7 @@ If left empty instances are launched and terminated individually.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Private IP address to associate with the
-instance in a VPC.
+    <dd>{{% md %}}Private IP address to associate with the instance in a VPC.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1087,8 +1057,7 @@ instance in a VPC.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotinstancerequestrootblockdevice">Spot<wbr>Instance<wbr>Request<wbr>Root<wbr>Block<wbr>Device</a></span>
     </dt>
-    <dd>{{% md %}}Customize details about the root block
-device of the instance. See Block Devices below for details.
+    <dd>{{% md %}}Customize details about the root block device of the instance. See Block Devices below for details.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1118,8 +1087,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Controls if traffic is routed to the instance when
-the destination address does not match the instance. Used for NAT or VPNs. Defaults true.
+    <dd>{{% md %}}Controls if traffic is routed to the instance when the destination address does not match the instance. Used for NAT or VPNs. Defaults true.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1150,7 +1118,7 @@ the instance is terminated, the spot request will be closed.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The VPC Subnet ID to launch in.
+    <dd>{{% md %}}VPC Subnet ID to launch in.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1160,7 +1128,7 @@ the instance is terminated, the spot request will be closed.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource. Note that these tags apply to the instance and not block storage devices.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1170,7 +1138,7 @@ the instance is terminated, the spot request will be closed.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tenancy of the instance (if the instance is running in a VPC). An instance with a tenancy of dedicated runs on single-tenant hardware. The host tenancy is not supported for the import-instance command.
+    <dd>{{% md %}}Tenancy of the instance (if the instance is running in a VPC). An instance with a tenancy of dedicated runs on single-tenant hardware. The host tenancy is not supported for the import-instance command.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1180,7 +1148,7 @@ the instance is terminated, the spot request will be closed.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The user data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see `user_data_base64` instead.
+    <dd>{{% md %}}User data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see `user_data_base64` instead.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1220,7 +1188,7 @@ the instance is terminated, the spot request will be closed.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the devices created by the instance at launch time.
+    <dd>{{% md %}}A map of tags to assign, at instance-creation time, to root and EBS volumes.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1258,7 +1226,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The AMI to use for the instance.
+    <dd>{{% md %}}AMI to use for the instance.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1268,7 +1236,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of instance to start. Updates to this field will trigger a stop/start of the EC2 instance.
+    <dd>{{% md %}}Type of instance to start. Updates to this field will trigger a stop/start of the EC2 instance.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1278,7 +1246,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Associate a public ip address with an instance in a VPC.  Boolean value.
+    <dd>{{% md %}}Whether to associate a public IP address with an instance in a VPC.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1288,7 +1256,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The AZ to start the instance in.
+    <dd>{{% md %}}AZ to start the instance in.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1310,9 +1278,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Sets the number of CPU cores for an instance. This option is
-only supported on creation of instance type that support CPU Options
-[CPU Cores and Threads Per CPU Core Per Instance Type](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html#cpu-options-supported-instances-values) - specifying this option for unsupported instance types will return an error from the EC2 API.
+    <dd>{{% md %}}Sets the number of CPU cores for an instance. This option is only supported on creation of instance type that support CPU Options [CPU Cores and Threads Per CPU Core Per Instance Type](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html#cpu-options-supported-instances-values) - specifying this option for unsupported instance types will return an error from the EC2 API.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1342,8 +1308,7 @@ only supported on creation of instance type that support CPU Options
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}If true, enables [EC2 Instance
-Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingDisableAPITermination)
+    <dd>{{% md %}}If true, enables [EC2 Instance Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingDisableAPITermination).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1353,8 +1318,7 @@ Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/term
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotinstancerequestebsblockdevice">Spot<wbr>Instance<wbr>Request<wbr>Ebs<wbr>Block<wbr>Device[]</a></span>
     </dt>
-    <dd>{{% md %}}Additional EBS block devices to attach to the
-instance.  Block device configurations only apply on resource creation. See Block Devices below for details on attributes and drift detection.
+    <dd>{{% md %}}Additional EBS block devices to attach to the instance.  Block device configurations only apply on resource creation. See Block Devices below for details on attributes and drift detection.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1364,11 +1328,7 @@ instance.  Block device configurations only apply on resource creation. See Bloc
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}If true, the launched EC2 instance will be EBS-optimized.
-Note that if this is not set on an instance type that is optimized by default then
-this will show as disabled but if the instance type is optimized by default then
-there is no need to set this and there is no effect to disabling it.
-See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimized.html) of the AWS User Guide for more information.
+    <dd>{{% md %}}If true, the launched EC2 instance will be EBS-optimized. Note that if this is not set on an instance type that is optimized by default then this will show as disabled but if the instance type is optimized by default then there is no need to set this and there is no effect to disabling it. See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimized.html) of the AWS User Guide for more information.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1388,8 +1348,7 @@ See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotinstancerequestephemeralblockdevice">Spot<wbr>Instance<wbr>Request<wbr>Ephemeral<wbr>Block<wbr>Device[]</a></span>
     </dt>
-    <dd>{{% md %}}Customize Ephemeral (also known as
-"Instance Store") volumes on the instance. See Block Devices below for details.
+    <dd>{{% md %}}Customize Ephemeral (also known as "Instance Store") volumes on the instance. See Block Devices below for details.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1419,7 +1378,7 @@ See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGu
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Id of a dedicated host that the instance will be assigned to. Use when an instance is to be launched on a specific dedicated host.
+    <dd>{{% md %}}ID of a dedicated host that the instance will be assigned to. Use when an instance is to be launched on a specific dedicated host.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1429,8 +1388,7 @@ See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGu
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The IAM Instance Profile to
-launch the instance with. Specified as the name of the Instance Profile. Ensure your credentials have the correct permission to assign the instance profile according to the [EC2 documentation](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2.html#roles-usingrole-ec2instance-permissions), notably `iam:PassRole`.
+    <dd>{{% md %}}IAM Instance Profile to launch the instance with. Specified as the name of the Instance Profile. Ensure your credentials have the correct permission to assign the instance profile according to the [EC2 documentation](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2.html#roles-usingrole-ec2instance-permissions), notably `iam:PassRole`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1440,10 +1398,7 @@ launch the instance with. Specified as the name of the Instance Profile. Ensure 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Shutdown behavior for the
-instance. Amazon defaults this to `stop` for EBS-backed instances and
-`terminate` for instance-store instances. Cannot be set on instance-store
-instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingInstanceInitiatedShutdownBehavior) for more information.
+    <dd>{{% md %}}Shutdown behavior for the instance. Amazon defaults this to `stop` for EBS-backed instances and `terminate` for instance-store instances. Cannot be set on instance-store instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingInstanceInitiatedShutdownBehavior) for more information.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1483,7 +1438,7 @@ instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/Use
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The key name of the Key Pair to use for the instance; which can be managed using the `aws.ec2.KeyPair` resource.
+    <dd>{{% md %}}Key name of the Key Pair to use for the instance; which can be managed using the `aws.ec2.KeyPair` resource.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1534,7 +1489,7 @@ If left empty instances are launched and terminated individually.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Placement Group to start the instance in.
+    <dd>{{% md %}}Placement Group to start the instance in.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1544,8 +1499,7 @@ If left empty instances are launched and terminated individually.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Private IP address to associate with the
-instance in a VPC.
+    <dd>{{% md %}}Private IP address to associate with the instance in a VPC.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1555,8 +1509,7 @@ instance in a VPC.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotinstancerequestrootblockdevice">Spot<wbr>Instance<wbr>Request<wbr>Root<wbr>Block<wbr>Device</a></span>
     </dt>
-    <dd>{{% md %}}Customize details about the root block
-device of the instance. See Block Devices below for details.
+    <dd>{{% md %}}Customize details about the root block device of the instance. See Block Devices below for details.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1586,8 +1539,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Controls if traffic is routed to the instance when
-the destination address does not match the instance. Used for NAT or VPNs. Defaults true.
+    <dd>{{% md %}}Controls if traffic is routed to the instance when the destination address does not match the instance. Used for NAT or VPNs. Defaults true.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1618,7 +1570,7 @@ the instance is terminated, the spot request will be closed.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The VPC Subnet ID to launch in.
+    <dd>{{% md %}}VPC Subnet ID to launch in.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1628,7 +1580,7 @@ the instance is terminated, the spot request will be closed.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource. Note that these tags apply to the instance and not block storage devices.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1638,7 +1590,7 @@ the instance is terminated, the spot request will be closed.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tenancy of the instance (if the instance is running in a VPC). An instance with a tenancy of dedicated runs on single-tenant hardware. The host tenancy is not supported for the import-instance command.
+    <dd>{{% md %}}Tenancy of the instance (if the instance is running in a VPC). An instance with a tenancy of dedicated runs on single-tenant hardware. The host tenancy is not supported for the import-instance command.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1648,7 +1600,7 @@ the instance is terminated, the spot request will be closed.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The user data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see `user_data_base64` instead.
+    <dd>{{% md %}}User data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see `user_data_base64` instead.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1688,7 +1640,7 @@ the instance is terminated, the spot request will be closed.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the devices created by the instance at launch time.
+    <dd>{{% md %}}A map of tags to assign, at instance-creation time, to root and EBS volumes.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1726,7 +1678,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The AMI to use for the instance.
+    <dd>{{% md %}}AMI to use for the instance.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -1736,7 +1688,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of instance to start. Updates to this field will trigger a stop/start of the EC2 instance.
+    <dd>{{% md %}}Type of instance to start. Updates to this field will trigger a stop/start of the EC2 instance.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1746,7 +1698,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Associate a public ip address with an instance in a VPC.  Boolean value.
+    <dd>{{% md %}}Whether to associate a public IP address with an instance in a VPC.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1756,7 +1708,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The AZ to start the instance in.
+    <dd>{{% md %}}AZ to start the instance in.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1778,9 +1730,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sets the number of CPU cores for an instance. This option is
-only supported on creation of instance type that support CPU Options
-[CPU Cores and Threads Per CPU Core Per Instance Type](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html#cpu-options-supported-instances-values) - specifying this option for unsupported instance types will return an error from the EC2 API.
+    <dd>{{% md %}}Sets the number of CPU cores for an instance. This option is only supported on creation of instance type that support CPU Options [CPU Cores and Threads Per CPU Core Per Instance Type](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html#cpu-options-supported-instances-values) - specifying this option for unsupported instance types will return an error from the EC2 API.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1810,8 +1760,7 @@ only supported on creation of instance type that support CPU Options
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If true, enables [EC2 Instance
-Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingDisableAPITermination)
+    <dd>{{% md %}}If true, enables [EC2 Instance Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingDisableAPITermination).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1821,8 +1770,7 @@ Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/term
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotinstancerequestebsblockdevice">Sequence[Spot<wbr>Instance<wbr>Request<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Additional EBS block devices to attach to the
-instance.  Block device configurations only apply on resource creation. See Block Devices below for details on attributes and drift detection.
+    <dd>{{% md %}}Additional EBS block devices to attach to the instance.  Block device configurations only apply on resource creation. See Block Devices below for details on attributes and drift detection.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1832,11 +1780,7 @@ instance.  Block device configurations only apply on resource creation. See Bloc
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If true, the launched EC2 instance will be EBS-optimized.
-Note that if this is not set on an instance type that is optimized by default then
-this will show as disabled but if the instance type is optimized by default then
-there is no need to set this and there is no effect to disabling it.
-See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimized.html) of the AWS User Guide for more information.
+    <dd>{{% md %}}If true, the launched EC2 instance will be EBS-optimized. Note that if this is not set on an instance type that is optimized by default then this will show as disabled but if the instance type is optimized by default then there is no need to set this and there is no effect to disabling it. See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimized.html) of the AWS User Guide for more information.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1856,8 +1800,7 @@ See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotinstancerequestephemeralblockdevice">Sequence[Spot<wbr>Instance<wbr>Request<wbr>Ephemeral<wbr>Block<wbr>Device<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Customize Ephemeral (also known as
-"Instance Store") volumes on the instance. See Block Devices below for details.
+    <dd>{{% md %}}Customize Ephemeral (also known as "Instance Store") volumes on the instance. See Block Devices below for details.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1887,7 +1830,7 @@ See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGu
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Id of a dedicated host that the instance will be assigned to. Use when an instance is to be launched on a specific dedicated host.
+    <dd>{{% md %}}ID of a dedicated host that the instance will be assigned to. Use when an instance is to be launched on a specific dedicated host.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1897,8 +1840,7 @@ See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGu
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The IAM Instance Profile to
-launch the instance with. Specified as the name of the Instance Profile. Ensure your credentials have the correct permission to assign the instance profile according to the [EC2 documentation](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2.html#roles-usingrole-ec2instance-permissions), notably `iam:PassRole`.
+    <dd>{{% md %}}IAM Instance Profile to launch the instance with. Specified as the name of the Instance Profile. Ensure your credentials have the correct permission to assign the instance profile according to the [EC2 documentation](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2.html#roles-usingrole-ec2instance-permissions), notably `iam:PassRole`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1908,10 +1850,7 @@ launch the instance with. Specified as the name of the Instance Profile. Ensure 
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Shutdown behavior for the
-instance. Amazon defaults this to `stop` for EBS-backed instances and
-`terminate` for instance-store instances. Cannot be set on instance-store
-instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingInstanceInitiatedShutdownBehavior) for more information.
+    <dd>{{% md %}}Shutdown behavior for the instance. Amazon defaults this to `stop` for EBS-backed instances and `terminate` for instance-store instances. Cannot be set on instance-store instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingInstanceInitiatedShutdownBehavior) for more information.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1951,7 +1890,7 @@ instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/Use
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The key name of the Key Pair to use for the instance; which can be managed using the `aws.ec2.KeyPair` resource.
+    <dd>{{% md %}}Key name of the Key Pair to use for the instance; which can be managed using the `aws.ec2.KeyPair` resource.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2002,7 +1941,7 @@ If left empty instances are launched and terminated individually.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Placement Group to start the instance in.
+    <dd>{{% md %}}Placement Group to start the instance in.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2012,8 +1951,7 @@ If left empty instances are launched and terminated individually.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Private IP address to associate with the
-instance in a VPC.
+    <dd>{{% md %}}Private IP address to associate with the instance in a VPC.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2023,8 +1961,7 @@ instance in a VPC.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotinstancerequestrootblockdevice">Spot<wbr>Instance<wbr>Request<wbr>Root<wbr>Block<wbr>Device<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Customize details about the root block
-device of the instance. See Block Devices below for details.
+    <dd>{{% md %}}Customize details about the root block device of the instance. See Block Devices below for details.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2054,8 +1991,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Controls if traffic is routed to the instance when
-the destination address does not match the instance. Used for NAT or VPNs. Defaults true.
+    <dd>{{% md %}}Controls if traffic is routed to the instance when the destination address does not match the instance. Used for NAT or VPNs. Defaults true.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2086,7 +2022,7 @@ the instance is terminated, the spot request will be closed.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The VPC Subnet ID to launch in.
+    <dd>{{% md %}}VPC Subnet ID to launch in.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2096,7 +2032,7 @@ the instance is terminated, the spot request will be closed.
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource. Note that these tags apply to the instance and not block storage devices.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2106,7 +2042,7 @@ the instance is terminated, the spot request will be closed.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The tenancy of the instance (if the instance is running in a VPC). An instance with a tenancy of dedicated runs on single-tenant hardware. The host tenancy is not supported for the import-instance command.
+    <dd>{{% md %}}Tenancy of the instance (if the instance is running in a VPC). An instance with a tenancy of dedicated runs on single-tenant hardware. The host tenancy is not supported for the import-instance command.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2116,7 +2052,7 @@ the instance is terminated, the spot request will be closed.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The user data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see `user_data_base64` instead.
+    <dd>{{% md %}}User data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see `user_data_base64` instead.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2156,7 +2092,7 @@ the instance is terminated, the spot request will be closed.
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the devices created by the instance at launch time.
+    <dd>{{% md %}}A map of tags to assign, at instance-creation time, to root and EBS volumes.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2836,7 +2772,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The AMI to use for the instance.
+    <dd>{{% md %}}AMI to use for the instance.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2855,7 +2791,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Associate a public ip address with an instance in a VPC.  Boolean value.
+    <dd>{{% md %}}Whether to associate a public IP address with an instance in a VPC.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2865,7 +2801,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The AZ to start the instance in.
+    <dd>{{% md %}}AZ to start the instance in.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2887,9 +2823,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sets the number of CPU cores for an instance. This option is
-only supported on creation of instance type that support CPU Options
-[CPU Cores and Threads Per CPU Core Per Instance Type](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html#cpu-options-supported-instances-values) - specifying this option for unsupported instance types will return an error from the EC2 API.
+    <dd>{{% md %}}Sets the number of CPU cores for an instance. This option is only supported on creation of instance type that support CPU Options [CPU Cores and Threads Per CPU Core Per Instance Type](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html#cpu-options-supported-instances-values) - specifying this option for unsupported instance types will return an error from the EC2 API.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2919,8 +2853,7 @@ only supported on creation of instance type that support CPU Options
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If true, enables [EC2 Instance
-Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingDisableAPITermination)
+    <dd>{{% md %}}If true, enables [EC2 Instance Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingDisableAPITermination).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2930,8 +2863,7 @@ Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/term
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotinstancerequestebsblockdevice">List&lt;Spot<wbr>Instance<wbr>Request<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Additional EBS block devices to attach to the
-instance.  Block device configurations only apply on resource creation. See Block Devices below for details on attributes and drift detection.
+    <dd>{{% md %}}Additional EBS block devices to attach to the instance.  Block device configurations only apply on resource creation. See Block Devices below for details on attributes and drift detection.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2941,11 +2873,7 @@ instance.  Block device configurations only apply on resource creation. See Bloc
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If true, the launched EC2 instance will be EBS-optimized.
-Note that if this is not set on an instance type that is optimized by default then
-this will show as disabled but if the instance type is optimized by default then
-there is no need to set this and there is no effect to disabling it.
-See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimized.html) of the AWS User Guide for more information.
+    <dd>{{% md %}}If true, the launched EC2 instance will be EBS-optimized. Note that if this is not set on an instance type that is optimized by default then this will show as disabled but if the instance type is optimized by default then there is no need to set this and there is no effect to disabling it. See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimized.html) of the AWS User Guide for more information.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2965,8 +2893,7 @@ See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotinstancerequestephemeralblockdevice">List&lt;Spot<wbr>Instance<wbr>Request<wbr>Ephemeral<wbr>Block<wbr>Device<wbr>Args&gt;</a></span>
     </dt>
-    <dd>{{% md %}}Customize Ephemeral (also known as
-"Instance Store") volumes on the instance. See Block Devices below for details.
+    <dd>{{% md %}}Customize Ephemeral (also known as "Instance Store") volumes on the instance. See Block Devices below for details.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2996,7 +2923,7 @@ See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGu
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Id of a dedicated host that the instance will be assigned to. Use when an instance is to be launched on a specific dedicated host.
+    <dd>{{% md %}}ID of a dedicated host that the instance will be assigned to. Use when an instance is to be launched on a specific dedicated host.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3006,8 +2933,7 @@ See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGu
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The IAM Instance Profile to
-launch the instance with. Specified as the name of the Instance Profile. Ensure your credentials have the correct permission to assign the instance profile according to the [EC2 documentation](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2.html#roles-usingrole-ec2instance-permissions), notably `iam:PassRole`.
+    <dd>{{% md %}}IAM Instance Profile to launch the instance with. Specified as the name of the Instance Profile. Ensure your credentials have the correct permission to assign the instance profile according to the [EC2 documentation](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2.html#roles-usingrole-ec2instance-permissions), notably `iam:PassRole`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3017,10 +2943,7 @@ launch the instance with. Specified as the name of the Instance Profile. Ensure 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Shutdown behavior for the
-instance. Amazon defaults this to `stop` for EBS-backed instances and
-`terminate` for instance-store instances. Cannot be set on instance-store
-instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingInstanceInitiatedShutdownBehavior) for more information.
+    <dd>{{% md %}}Shutdown behavior for the instance. Amazon defaults this to `stop` for EBS-backed instances and `terminate` for instance-store instances. Cannot be set on instance-store instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingInstanceInitiatedShutdownBehavior) for more information.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3049,7 +2972,7 @@ instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/Use
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of instance to start. Updates to this field will trigger a stop/start of the EC2 instance.
+    <dd>{{% md %}}Type of instance to start. Updates to this field will trigger a stop/start of the EC2 instance.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3079,7 +3002,7 @@ instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/Use
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The key name of the Key Pair to use for the instance; which can be managed using the `aws.ec2.KeyPair` resource.
+    <dd>{{% md %}}Key name of the Key Pair to use for the instance; which can be managed using the `aws.ec2.KeyPair` resource.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3148,7 +3071,7 @@ If left empty instances are launched and terminated individually.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Placement Group to start the instance in.
+    <dd>{{% md %}}Placement Group to start the instance in.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3179,8 +3102,7 @@ for your VPC
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Private IP address to associate with the
-instance in a VPC.
+    <dd>{{% md %}}Private IP address to associate with the instance in a VPC.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3211,8 +3133,7 @@ is only available if you've enabled DNS hostnames for your VPC
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotinstancerequestrootblockdevice">Spot<wbr>Instance<wbr>Request<wbr>Root<wbr>Block<wbr>Device<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Customize details about the root block
-device of the instance. See Block Devices below for details.
+    <dd>{{% md %}}Customize details about the root block device of the instance. See Block Devices below for details.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3242,8 +3163,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Controls if traffic is routed to the instance when
-the destination address does not match the instance. Used for NAT or VPNs. Defaults true.
+    <dd>{{% md %}}Controls if traffic is routed to the instance when the destination address does not match the instance. Used for NAT or VPNs. Defaults true.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3309,7 +3229,7 @@ the instance is terminated, the spot request will be closed.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The VPC Subnet ID to launch in.
+    <dd>{{% md %}}VPC Subnet ID to launch in.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3319,7 +3239,7 @@ the instance is terminated, the spot request will be closed.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource. Note that these tags apply to the instance and not block storage devices.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3329,7 +3249,7 @@ the instance is terminated, the spot request will be closed.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tenancy of the instance (if the instance is running in a VPC). An instance with a tenancy of dedicated runs on single-tenant hardware. The host tenancy is not supported for the import-instance command.
+    <dd>{{% md %}}Tenancy of the instance (if the instance is running in a VPC). An instance with a tenancy of dedicated runs on single-tenant hardware. The host tenancy is not supported for the import-instance command.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3339,7 +3259,7 @@ the instance is terminated, the spot request will be closed.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The user data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see `user_data_base64` instead.
+    <dd>{{% md %}}User data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see `user_data_base64` instead.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3379,7 +3299,7 @@ the instance is terminated, the spot request will be closed.
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the devices created by the instance at launch time.
+    <dd>{{% md %}}A map of tags to assign, at instance-creation time, to root and EBS volumes.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3417,7 +3337,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The AMI to use for the instance.
+    <dd>{{% md %}}AMI to use for the instance.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3436,7 +3356,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Associate a public ip address with an instance in a VPC.  Boolean value.
+    <dd>{{% md %}}Whether to associate a public IP address with an instance in a VPC.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3446,7 +3366,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The AZ to start the instance in.
+    <dd>{{% md %}}AZ to start the instance in.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3468,9 +3388,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sets the number of CPU cores for an instance. This option is
-only supported on creation of instance type that support CPU Options
-[CPU Cores and Threads Per CPU Core Per Instance Type](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html#cpu-options-supported-instances-values) - specifying this option for unsupported instance types will return an error from the EC2 API.
+    <dd>{{% md %}}Sets the number of CPU cores for an instance. This option is only supported on creation of instance type that support CPU Options [CPU Cores and Threads Per CPU Core Per Instance Type](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html#cpu-options-supported-instances-values) - specifying this option for unsupported instance types will return an error from the EC2 API.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3500,8 +3418,7 @@ only supported on creation of instance type that support CPU Options
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If true, enables [EC2 Instance
-Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingDisableAPITermination)
+    <dd>{{% md %}}If true, enables [EC2 Instance Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingDisableAPITermination).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3511,8 +3428,7 @@ Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/term
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotinstancerequestebsblockdevice">[]Spot<wbr>Instance<wbr>Request<wbr>Ebs<wbr>Block<wbr>Device</a></span>
     </dt>
-    <dd>{{% md %}}Additional EBS block devices to attach to the
-instance.  Block device configurations only apply on resource creation. See Block Devices below for details on attributes and drift detection.
+    <dd>{{% md %}}Additional EBS block devices to attach to the instance.  Block device configurations only apply on resource creation. See Block Devices below for details on attributes and drift detection.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3522,11 +3438,7 @@ instance.  Block device configurations only apply on resource creation. See Bloc
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If true, the launched EC2 instance will be EBS-optimized.
-Note that if this is not set on an instance type that is optimized by default then
-this will show as disabled but if the instance type is optimized by default then
-there is no need to set this and there is no effect to disabling it.
-See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimized.html) of the AWS User Guide for more information.
+    <dd>{{% md %}}If true, the launched EC2 instance will be EBS-optimized. Note that if this is not set on an instance type that is optimized by default then this will show as disabled but if the instance type is optimized by default then there is no need to set this and there is no effect to disabling it. See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimized.html) of the AWS User Guide for more information.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3546,8 +3458,7 @@ See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotinstancerequestephemeralblockdevice">[]Spot<wbr>Instance<wbr>Request<wbr>Ephemeral<wbr>Block<wbr>Device</a></span>
     </dt>
-    <dd>{{% md %}}Customize Ephemeral (also known as
-"Instance Store") volumes on the instance. See Block Devices below for details.
+    <dd>{{% md %}}Customize Ephemeral (also known as "Instance Store") volumes on the instance. See Block Devices below for details.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3577,7 +3488,7 @@ See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGu
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Id of a dedicated host that the instance will be assigned to. Use when an instance is to be launched on a specific dedicated host.
+    <dd>{{% md %}}ID of a dedicated host that the instance will be assigned to. Use when an instance is to be launched on a specific dedicated host.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3587,8 +3498,7 @@ See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGu
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The IAM Instance Profile to
-launch the instance with. Specified as the name of the Instance Profile. Ensure your credentials have the correct permission to assign the instance profile according to the [EC2 documentation](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2.html#roles-usingrole-ec2instance-permissions), notably `iam:PassRole`.
+    <dd>{{% md %}}IAM Instance Profile to launch the instance with. Specified as the name of the Instance Profile. Ensure your credentials have the correct permission to assign the instance profile according to the [EC2 documentation](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2.html#roles-usingrole-ec2instance-permissions), notably `iam:PassRole`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3598,10 +3508,7 @@ launch the instance with. Specified as the name of the Instance Profile. Ensure 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Shutdown behavior for the
-instance. Amazon defaults this to `stop` for EBS-backed instances and
-`terminate` for instance-store instances. Cannot be set on instance-store
-instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingInstanceInitiatedShutdownBehavior) for more information.
+    <dd>{{% md %}}Shutdown behavior for the instance. Amazon defaults this to `stop` for EBS-backed instances and `terminate` for instance-store instances. Cannot be set on instance-store instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingInstanceInitiatedShutdownBehavior) for more information.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3630,7 +3537,7 @@ instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/Use
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of instance to start. Updates to this field will trigger a stop/start of the EC2 instance.
+    <dd>{{% md %}}Type of instance to start. Updates to this field will trigger a stop/start of the EC2 instance.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3660,7 +3567,7 @@ instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/Use
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The key name of the Key Pair to use for the instance; which can be managed using the `aws.ec2.KeyPair` resource.
+    <dd>{{% md %}}Key name of the Key Pair to use for the instance; which can be managed using the `aws.ec2.KeyPair` resource.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3729,7 +3636,7 @@ If left empty instances are launched and terminated individually.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Placement Group to start the instance in.
+    <dd>{{% md %}}Placement Group to start the instance in.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3760,8 +3667,7 @@ for your VPC
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Private IP address to associate with the
-instance in a VPC.
+    <dd>{{% md %}}Private IP address to associate with the instance in a VPC.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3792,8 +3698,7 @@ is only available if you've enabled DNS hostnames for your VPC
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotinstancerequestrootblockdevice">Spot<wbr>Instance<wbr>Request<wbr>Root<wbr>Block<wbr>Device</a></span>
     </dt>
-    <dd>{{% md %}}Customize details about the root block
-device of the instance. See Block Devices below for details.
+    <dd>{{% md %}}Customize details about the root block device of the instance. See Block Devices below for details.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3823,8 +3728,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Controls if traffic is routed to the instance when
-the destination address does not match the instance. Used for NAT or VPNs. Defaults true.
+    <dd>{{% md %}}Controls if traffic is routed to the instance when the destination address does not match the instance. Used for NAT or VPNs. Defaults true.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3890,7 +3794,7 @@ the instance is terminated, the spot request will be closed.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The VPC Subnet ID to launch in.
+    <dd>{{% md %}}VPC Subnet ID to launch in.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3900,7 +3804,7 @@ the instance is terminated, the spot request will be closed.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource. Note that these tags apply to the instance and not block storage devices.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3910,7 +3814,7 @@ the instance is terminated, the spot request will be closed.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tenancy of the instance (if the instance is running in a VPC). An instance with a tenancy of dedicated runs on single-tenant hardware. The host tenancy is not supported for the import-instance command.
+    <dd>{{% md %}}Tenancy of the instance (if the instance is running in a VPC). An instance with a tenancy of dedicated runs on single-tenant hardware. The host tenancy is not supported for the import-instance command.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3920,7 +3824,7 @@ the instance is terminated, the spot request will be closed.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The user data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see `user_data_base64` instead.
+    <dd>{{% md %}}User data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see `user_data_base64` instead.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3960,7 +3864,7 @@ the instance is terminated, the spot request will be closed.
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the devices created by the instance at launch time.
+    <dd>{{% md %}}A map of tags to assign, at instance-creation time, to root and EBS volumes.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3998,7 +3902,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The AMI to use for the instance.
+    <dd>{{% md %}}AMI to use for the instance.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4017,7 +3921,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Associate a public ip address with an instance in a VPC.  Boolean value.
+    <dd>{{% md %}}Whether to associate a public IP address with an instance in a VPC.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4027,7 +3931,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The AZ to start the instance in.
+    <dd>{{% md %}}AZ to start the instance in.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4049,9 +3953,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Sets the number of CPU cores for an instance. This option is
-only supported on creation of instance type that support CPU Options
-[CPU Cores and Threads Per CPU Core Per Instance Type](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html#cpu-options-supported-instances-values) - specifying this option for unsupported instance types will return an error from the EC2 API.
+    <dd>{{% md %}}Sets the number of CPU cores for an instance. This option is only supported on creation of instance type that support CPU Options [CPU Cores and Threads Per CPU Core Per Instance Type](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html#cpu-options-supported-instances-values) - specifying this option for unsupported instance types will return an error from the EC2 API.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4081,8 +3983,7 @@ only supported on creation of instance type that support CPU Options
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}If true, enables [EC2 Instance
-Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingDisableAPITermination)
+    <dd>{{% md %}}If true, enables [EC2 Instance Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingDisableAPITermination).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4092,8 +3993,7 @@ Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/term
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotinstancerequestebsblockdevice">Spot<wbr>Instance<wbr>Request<wbr>Ebs<wbr>Block<wbr>Device[]</a></span>
     </dt>
-    <dd>{{% md %}}Additional EBS block devices to attach to the
-instance.  Block device configurations only apply on resource creation. See Block Devices below for details on attributes and drift detection.
+    <dd>{{% md %}}Additional EBS block devices to attach to the instance.  Block device configurations only apply on resource creation. See Block Devices below for details on attributes and drift detection.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4103,11 +4003,7 @@ instance.  Block device configurations only apply on resource creation. See Bloc
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}If true, the launched EC2 instance will be EBS-optimized.
-Note that if this is not set on an instance type that is optimized by default then
-this will show as disabled but if the instance type is optimized by default then
-there is no need to set this and there is no effect to disabling it.
-See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimized.html) of the AWS User Guide for more information.
+    <dd>{{% md %}}If true, the launched EC2 instance will be EBS-optimized. Note that if this is not set on an instance type that is optimized by default then this will show as disabled but if the instance type is optimized by default then there is no need to set this and there is no effect to disabling it. See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimized.html) of the AWS User Guide for more information.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4127,8 +4023,7 @@ See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotinstancerequestephemeralblockdevice">Spot<wbr>Instance<wbr>Request<wbr>Ephemeral<wbr>Block<wbr>Device[]</a></span>
     </dt>
-    <dd>{{% md %}}Customize Ephemeral (also known as
-"Instance Store") volumes on the instance. See Block Devices below for details.
+    <dd>{{% md %}}Customize Ephemeral (also known as "Instance Store") volumes on the instance. See Block Devices below for details.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4158,7 +4053,7 @@ See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGu
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Id of a dedicated host that the instance will be assigned to. Use when an instance is to be launched on a specific dedicated host.
+    <dd>{{% md %}}ID of a dedicated host that the instance will be assigned to. Use when an instance is to be launched on a specific dedicated host.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4168,8 +4063,7 @@ See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGu
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The IAM Instance Profile to
-launch the instance with. Specified as the name of the Instance Profile. Ensure your credentials have the correct permission to assign the instance profile according to the [EC2 documentation](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2.html#roles-usingrole-ec2instance-permissions), notably `iam:PassRole`.
+    <dd>{{% md %}}IAM Instance Profile to launch the instance with. Specified as the name of the Instance Profile. Ensure your credentials have the correct permission to assign the instance profile according to the [EC2 documentation](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2.html#roles-usingrole-ec2instance-permissions), notably `iam:PassRole`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4179,10 +4073,7 @@ launch the instance with. Specified as the name of the Instance Profile. Ensure 
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Shutdown behavior for the
-instance. Amazon defaults this to `stop` for EBS-backed instances and
-`terminate` for instance-store instances. Cannot be set on instance-store
-instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingInstanceInitiatedShutdownBehavior) for more information.
+    <dd>{{% md %}}Shutdown behavior for the instance. Amazon defaults this to `stop` for EBS-backed instances and `terminate` for instance-store instances. Cannot be set on instance-store instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingInstanceInitiatedShutdownBehavior) for more information.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4211,7 +4102,7 @@ instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/Use
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of instance to start. Updates to this field will trigger a stop/start of the EC2 instance.
+    <dd>{{% md %}}Type of instance to start. Updates to this field will trigger a stop/start of the EC2 instance.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4241,7 +4132,7 @@ instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/Use
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The key name of the Key Pair to use for the instance; which can be managed using the `aws.ec2.KeyPair` resource.
+    <dd>{{% md %}}Key name of the Key Pair to use for the instance; which can be managed using the `aws.ec2.KeyPair` resource.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4310,7 +4201,7 @@ If left empty instances are launched and terminated individually.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Placement Group to start the instance in.
+    <dd>{{% md %}}Placement Group to start the instance in.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4341,8 +4232,7 @@ for your VPC
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Private IP address to associate with the
-instance in a VPC.
+    <dd>{{% md %}}Private IP address to associate with the instance in a VPC.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4373,8 +4263,7 @@ is only available if you've enabled DNS hostnames for your VPC
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotinstancerequestrootblockdevice">Spot<wbr>Instance<wbr>Request<wbr>Root<wbr>Block<wbr>Device</a></span>
     </dt>
-    <dd>{{% md %}}Customize details about the root block
-device of the instance. See Block Devices below for details.
+    <dd>{{% md %}}Customize details about the root block device of the instance. See Block Devices below for details.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4404,8 +4293,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Controls if traffic is routed to the instance when
-the destination address does not match the instance. Used for NAT or VPNs. Defaults true.
+    <dd>{{% md %}}Controls if traffic is routed to the instance when the destination address does not match the instance. Used for NAT or VPNs. Defaults true.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4471,7 +4359,7 @@ the instance is terminated, the spot request will be closed.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The VPC Subnet ID to launch in.
+    <dd>{{% md %}}VPC Subnet ID to launch in.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4481,7 +4369,7 @@ the instance is terminated, the spot request will be closed.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource. Note that these tags apply to the instance and not block storage devices.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4491,7 +4379,7 @@ the instance is terminated, the spot request will be closed.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The tenancy of the instance (if the instance is running in a VPC). An instance with a tenancy of dedicated runs on single-tenant hardware. The host tenancy is not supported for the import-instance command.
+    <dd>{{% md %}}Tenancy of the instance (if the instance is running in a VPC). An instance with a tenancy of dedicated runs on single-tenant hardware. The host tenancy is not supported for the import-instance command.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4501,7 +4389,7 @@ the instance is terminated, the spot request will be closed.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The user data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see `user_data_base64` instead.
+    <dd>{{% md %}}User data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see `user_data_base64` instead.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4541,7 +4429,7 @@ the instance is terminated, the spot request will be closed.
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the devices created by the instance at launch time.
+    <dd>{{% md %}}A map of tags to assign, at instance-creation time, to root and EBS volumes.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4579,7 +4467,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The AMI to use for the instance.
+    <dd>{{% md %}}AMI to use for the instance.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4598,7 +4486,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Associate a public ip address with an instance in a VPC.  Boolean value.
+    <dd>{{% md %}}Whether to associate a public IP address with an instance in a VPC.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4608,7 +4496,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The AZ to start the instance in.
+    <dd>{{% md %}}AZ to start the instance in.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4630,9 +4518,7 @@ Note that you can't specify an Availability Zone group or a launch group if you 
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Sets the number of CPU cores for an instance. This option is
-only supported on creation of instance type that support CPU Options
-[CPU Cores and Threads Per CPU Core Per Instance Type](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html#cpu-options-supported-instances-values) - specifying this option for unsupported instance types will return an error from the EC2 API.
+    <dd>{{% md %}}Sets the number of CPU cores for an instance. This option is only supported on creation of instance type that support CPU Options [CPU Cores and Threads Per CPU Core Per Instance Type](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-optimize-cpu.html#cpu-options-supported-instances-values) - specifying this option for unsupported instance types will return an error from the EC2 API.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4662,8 +4548,7 @@ only supported on creation of instance type that support CPU Options
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If true, enables [EC2 Instance
-Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingDisableAPITermination)
+    <dd>{{% md %}}If true, enables [EC2 Instance Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingDisableAPITermination).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4673,8 +4558,7 @@ Termination Protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/term
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotinstancerequestebsblockdevice">Sequence[Spot<wbr>Instance<wbr>Request<wbr>Ebs<wbr>Block<wbr>Device<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Additional EBS block devices to attach to the
-instance.  Block device configurations only apply on resource creation. See Block Devices below for details on attributes and drift detection.
+    <dd>{{% md %}}Additional EBS block devices to attach to the instance.  Block device configurations only apply on resource creation. See Block Devices below for details on attributes and drift detection.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4684,11 +4568,7 @@ instance.  Block device configurations only apply on resource creation. See Bloc
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}If true, the launched EC2 instance will be EBS-optimized.
-Note that if this is not set on an instance type that is optimized by default then
-this will show as disabled but if the instance type is optimized by default then
-there is no need to set this and there is no effect to disabling it.
-See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimized.html) of the AWS User Guide for more information.
+    <dd>{{% md %}}If true, the launched EC2 instance will be EBS-optimized. Note that if this is not set on an instance type that is optimized by default then this will show as disabled but if the instance type is optimized by default then there is no need to set this and there is no effect to disabling it. See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSOptimized.html) of the AWS User Guide for more information.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4708,8 +4588,7 @@ See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGu
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotinstancerequestephemeralblockdevice">Sequence[Spot<wbr>Instance<wbr>Request<wbr>Ephemeral<wbr>Block<wbr>Device<wbr>Args]</a></span>
     </dt>
-    <dd>{{% md %}}Customize Ephemeral (also known as
-"Instance Store") volumes on the instance. See Block Devices below for details.
+    <dd>{{% md %}}Customize Ephemeral (also known as "Instance Store") volumes on the instance. See Block Devices below for details.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4739,7 +4618,7 @@ See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGu
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Id of a dedicated host that the instance will be assigned to. Use when an instance is to be launched on a specific dedicated host.
+    <dd>{{% md %}}ID of a dedicated host that the instance will be assigned to. Use when an instance is to be launched on a specific dedicated host.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4749,8 +4628,7 @@ See the [EBS Optimized section](https://docs.aws.amazon.com/AWSEC2/latest/UserGu
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The IAM Instance Profile to
-launch the instance with. Specified as the name of the Instance Profile. Ensure your credentials have the correct permission to assign the instance profile according to the [EC2 documentation](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2.html#roles-usingrole-ec2instance-permissions), notably `iam:PassRole`.
+    <dd>{{% md %}}IAM Instance Profile to launch the instance with. Specified as the name of the Instance Profile. Ensure your credentials have the correct permission to assign the instance profile according to the [EC2 documentation](http://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_switch-role-ec2.html#roles-usingrole-ec2instance-permissions), notably `iam:PassRole`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4760,10 +4638,7 @@ launch the instance with. Specified as the name of the Instance Profile. Ensure 
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Shutdown behavior for the
-instance. Amazon defaults this to `stop` for EBS-backed instances and
-`terminate` for instance-store instances. Cannot be set on instance-store
-instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingInstanceInitiatedShutdownBehavior) for more information.
+    <dd>{{% md %}}Shutdown behavior for the instance. Amazon defaults this to `stop` for EBS-backed instances and `terminate` for instance-store instances. Cannot be set on instance-store instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html#Using_ChangingInstanceInitiatedShutdownBehavior) for more information.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4792,7 +4667,7 @@ instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/Use
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of instance to start. Updates to this field will trigger a stop/start of the EC2 instance.
+    <dd>{{% md %}}Type of instance to start. Updates to this field will trigger a stop/start of the EC2 instance.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4822,7 +4697,7 @@ instances. See [Shutdown Behavior](https://docs.aws.amazon.com/AWSEC2/latest/Use
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The key name of the Key Pair to use for the instance; which can be managed using the `aws.ec2.KeyPair` resource.
+    <dd>{{% md %}}Key name of the Key Pair to use for the instance; which can be managed using the `aws.ec2.KeyPair` resource.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4891,7 +4766,7 @@ If left empty instances are launched and terminated individually.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Placement Group to start the instance in.
+    <dd>{{% md %}}Placement Group to start the instance in.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4922,8 +4797,7 @@ for your VPC
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Private IP address to associate with the
-instance in a VPC.
+    <dd>{{% md %}}Private IP address to associate with the instance in a VPC.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4954,8 +4828,7 @@ is only available if you've enabled DNS hostnames for your VPC
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#spotinstancerequestrootblockdevice">Spot<wbr>Instance<wbr>Request<wbr>Root<wbr>Block<wbr>Device<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Customize details about the root block
-device of the instance. See Block Devices below for details.
+    <dd>{{% md %}}Customize details about the root block device of the instance. See Block Devices below for details.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4985,8 +4858,7 @@ device of the instance. See Block Devices below for details.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Controls if traffic is routed to the instance when
-the destination address does not match the instance. Used for NAT or VPNs. Defaults true.
+    <dd>{{% md %}}Controls if traffic is routed to the instance when the destination address does not match the instance. Used for NAT or VPNs. Defaults true.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5052,7 +4924,7 @@ the instance is terminated, the spot request will be closed.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The VPC Subnet ID to launch in.
+    <dd>{{% md %}}VPC Subnet ID to launch in.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5062,7 +4934,7 @@ the instance is terminated, the spot request will be closed.
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the resource.
+    <dd>{{% md %}}A map of tags to assign to the resource. Note that these tags apply to the instance and not block storage devices.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5072,7 +4944,7 @@ the instance is terminated, the spot request will be closed.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The tenancy of the instance (if the instance is running in a VPC). An instance with a tenancy of dedicated runs on single-tenant hardware. The host tenancy is not supported for the import-instance command.
+    <dd>{{% md %}}Tenancy of the instance (if the instance is running in a VPC). An instance with a tenancy of dedicated runs on single-tenant hardware. The host tenancy is not supported for the import-instance command.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5082,7 +4954,7 @@ the instance is terminated, the spot request will be closed.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The user data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see `user_data_base64` instead.
+    <dd>{{% md %}}User data to provide when launching the instance. Do not pass gzip-compressed data via this argument; see `user_data_base64` instead.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5122,7 +4994,7 @@ the instance is terminated, the spot request will be closed.
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}A map of tags to assign to the devices created by the instance at launch time.
+    <dd>{{% md %}}A map of tags to assign, at instance-creation time, to root and EBS volumes.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5183,7 +5055,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The credit option for CPU usage. Can be `"standard"` or `"unlimited"`. T3 instances are launched as unlimited by default. T2 instances are launched as standard by default.
+    <dd>{{% md %}}Credit option for CPU usage. Valid values include `standard` or `unlimited`. T3 instances are launched as unlimited by default. T2 instances are launched as standard by default.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -5199,7 +5071,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The credit option for CPU usage. Can be `"standard"` or `"unlimited"`. T3 instances are launched as unlimited by default. T2 instances are launched as standard by default.
+    <dd>{{% md %}}Credit option for CPU usage. Valid values include `standard` or `unlimited`. T3 instances are launched as unlimited by default. T2 instances are launched as standard by default.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -5215,7 +5087,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The credit option for CPU usage. Can be `"standard"` or `"unlimited"`. T3 instances are launched as unlimited by default. T2 instances are launched as standard by default.
+    <dd>{{% md %}}Credit option for CPU usage. Valid values include `standard` or `unlimited`. T3 instances are launched as unlimited by default. T2 instances are launched as standard by default.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -5231,7 +5103,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The credit option for CPU usage. Can be `"standard"` or `"unlimited"`. T3 instances are launched as unlimited by default. T2 instances are launched as standard by default.
+    <dd>{{% md %}}Credit option for CPU usage. Valid values include `standard` or `unlimited`. T3 instances are launched as unlimited by default. T2 instances are launched as standard by default.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -5261,7 +5133,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the device to mount.
+    <dd>{{% md %}}Name of the device to mount.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5271,8 +5143,7 @@ timeout of 10m is reached.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the volume should be destroyed
-on instance termination (Default: `true`).
+    <dd>{{% md %}}Whether the volume should be destroyed on instance termination. Defaults to `true`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5282,9 +5153,7 @@ on instance termination (Default: `true`).
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enables [EBS
-encryption](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html)
-on the volume (Default: `false`). Cannot be used with `snapshot_id`. Must be configured to perform drift detection.
+    <dd>{{% md %}}Enables [EBS encryption](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html) on the volume. Defaults to `false`. Cannot be used with `snapshot_id`. Must be configured to perform drift detection.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5294,9 +5163,7 @@ on the volume (Default: `false`). Cannot be used with `snapshot_id`. Must be con
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The amount of provisioned
-[IOPS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-io-characteristics.html).
-Only valid for volume_type of `"io1"`, `"io2"` or `"gp3"`.
+    <dd>{{% md %}}Amount of provisioned [IOPS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-io-characteristics.html). Only valid for volume_type of `io1`, `io2` or `gp3`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5316,7 +5183,17 @@ Only valid for volume_type of `"io1"`, `"io2"` or `"gp3"`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Snapshot ID to mount.
+    <dd>{{% md %}}Snapshot ID to mount.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A map of tags to assign to the device.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5326,7 +5203,7 @@ Only valid for volume_type of `"io1"`, `"io2"` or `"gp3"`.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The throughput to provision for a volume in mebibytes per second (MiB/s). This is only valid for `volume_type` of `"gp3"`.
+    <dd>{{% md %}}Throughput to provision for a volume in mebibytes per second (MiB/s). This is only valid for `volume_type` of `gp3`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5345,7 +5222,7 @@ Only valid for volume_type of `"io1"`, `"io2"` or `"gp3"`.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The size of the volume in gibibytes (GiB).
+    <dd>{{% md %}}Size of the volume in gibibytes (GiB).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5355,7 +5232,7 @@ Only valid for volume_type of `"io1"`, `"io2"` or `"gp3"`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of volume. Can be `"standard"`, `"gp2"`, `"gp3"`, `"io1"`, `"io2"`, `"sc1"`, or `"st1"`. (Default: `"gp2"`).
+    <dd>{{% md %}}Type of volume. Valid values include `standard`, `gp2`, `gp3`, `io1`, `io2`, `sc1`, or `st1`. Defaults to `gp2`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -5371,7 +5248,7 @@ Only valid for volume_type of `"io1"`, `"io2"` or `"gp3"`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the device to mount.
+    <dd>{{% md %}}Name of the device to mount.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5381,8 +5258,7 @@ Only valid for volume_type of `"io1"`, `"io2"` or `"gp3"`.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the volume should be destroyed
-on instance termination (Default: `true`).
+    <dd>{{% md %}}Whether the volume should be destroyed on instance termination. Defaults to `true`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5392,9 +5268,7 @@ on instance termination (Default: `true`).
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enables [EBS
-encryption](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html)
-on the volume (Default: `false`). Cannot be used with `snapshot_id`. Must be configured to perform drift detection.
+    <dd>{{% md %}}Enables [EBS encryption](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html) on the volume. Defaults to `false`. Cannot be used with `snapshot_id`. Must be configured to perform drift detection.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5404,9 +5278,7 @@ on the volume (Default: `false`). Cannot be used with `snapshot_id`. Must be con
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The amount of provisioned
-[IOPS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-io-characteristics.html).
-Only valid for volume_type of `"io1"`, `"io2"` or `"gp3"`.
+    <dd>{{% md %}}Amount of provisioned [IOPS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-io-characteristics.html). Only valid for volume_type of `io1`, `io2` or `gp3`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5426,7 +5298,17 @@ Only valid for volume_type of `"io1"`, `"io2"` or `"gp3"`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Snapshot ID to mount.
+    <dd>{{% md %}}Snapshot ID to mount.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}A map of tags to assign to the device.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5436,7 +5318,7 @@ Only valid for volume_type of `"io1"`, `"io2"` or `"gp3"`.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The throughput to provision for a volume in mebibytes per second (MiB/s). This is only valid for `volume_type` of `"gp3"`.
+    <dd>{{% md %}}Throughput to provision for a volume in mebibytes per second (MiB/s). This is only valid for `volume_type` of `gp3`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5455,7 +5337,7 @@ Only valid for volume_type of `"io1"`, `"io2"` or `"gp3"`.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The size of the volume in gibibytes (GiB).
+    <dd>{{% md %}}Size of the volume in gibibytes (GiB).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5465,7 +5347,7 @@ Only valid for volume_type of `"io1"`, `"io2"` or `"gp3"`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of volume. Can be `"standard"`, `"gp2"`, `"gp3"`, `"io1"`, `"io2"`, `"sc1"`, or `"st1"`. (Default: `"gp2"`).
+    <dd>{{% md %}}Type of volume. Valid values include `standard`, `gp2`, `gp3`, `io1`, `io2`, `sc1`, or `st1`. Defaults to `gp2`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -5481,7 +5363,7 @@ Only valid for volume_type of `"io1"`, `"io2"` or `"gp3"`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the device to mount.
+    <dd>{{% md %}}Name of the device to mount.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5491,8 +5373,7 @@ Only valid for volume_type of `"io1"`, `"io2"` or `"gp3"`.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether the volume should be destroyed
-on instance termination (Default: `true`).
+    <dd>{{% md %}}Whether the volume should be destroyed on instance termination. Defaults to `true`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5502,9 +5383,7 @@ on instance termination (Default: `true`).
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Enables [EBS
-encryption](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html)
-on the volume (Default: `false`). Cannot be used with `snapshot_id`. Must be configured to perform drift detection.
+    <dd>{{% md %}}Enables [EBS encryption](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html) on the volume. Defaults to `false`. Cannot be used with `snapshot_id`. Must be configured to perform drift detection.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5514,9 +5393,7 @@ on the volume (Default: `false`). Cannot be used with `snapshot_id`. Must be con
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The amount of provisioned
-[IOPS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-io-characteristics.html).
-Only valid for volume_type of `"io1"`, `"io2"` or `"gp3"`.
+    <dd>{{% md %}}Amount of provisioned [IOPS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-io-characteristics.html). Only valid for volume_type of `io1`, `io2` or `gp3`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5536,7 +5413,17 @@ Only valid for volume_type of `"io1"`, `"io2"` or `"gp3"`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Snapshot ID to mount.
+    <dd>{{% md %}}Snapshot ID to mount.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}A map of tags to assign to the device.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5546,7 +5433,7 @@ Only valid for volume_type of `"io1"`, `"io2"` or `"gp3"`.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The throughput to provision for a volume in mebibytes per second (MiB/s). This is only valid for `volume_type` of `"gp3"`.
+    <dd>{{% md %}}Throughput to provision for a volume in mebibytes per second (MiB/s). This is only valid for `volume_type` of `gp3`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5565,7 +5452,7 @@ Only valid for volume_type of `"io1"`, `"io2"` or `"gp3"`.
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The size of the volume in gibibytes (GiB).
+    <dd>{{% md %}}Size of the volume in gibibytes (GiB).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5575,7 +5462,7 @@ Only valid for volume_type of `"io1"`, `"io2"` or `"gp3"`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of volume. Can be `"standard"`, `"gp2"`, `"gp3"`, `"io1"`, `"io2"`, `"sc1"`, or `"st1"`. (Default: `"gp2"`).
+    <dd>{{% md %}}Type of volume. Valid values include `standard`, `gp2`, `gp3`, `io1`, `io2`, `sc1`, or `st1`. Defaults to `gp2`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -5591,7 +5478,7 @@ Only valid for volume_type of `"io1"`, `"io2"` or `"gp3"`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the device to mount.
+    <dd>{{% md %}}Name of the device to mount.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5601,8 +5488,7 @@ Only valid for volume_type of `"io1"`, `"io2"` or `"gp3"`.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the volume should be destroyed
-on instance termination (Default: `true`).
+    <dd>{{% md %}}Whether the volume should be destroyed on instance termination. Defaults to `true`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5612,9 +5498,7 @@ on instance termination (Default: `true`).
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enables [EBS
-encryption](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html)
-on the volume (Default: `false`). Cannot be used with `snapshot_id`. Must be configured to perform drift detection.
+    <dd>{{% md %}}Enables [EBS encryption](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSEncryption.html) on the volume. Defaults to `false`. Cannot be used with `snapshot_id`. Must be configured to perform drift detection.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5624,9 +5508,7 @@ on the volume (Default: `false`). Cannot be used with `snapshot_id`. Must be con
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The amount of provisioned
-[IOPS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-io-characteristics.html).
-Only valid for volume_type of `"io1"`, `"io2"` or `"gp3"`.
+    <dd>{{% md %}}Amount of provisioned [IOPS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-io-characteristics.html). Only valid for volume_type of `io1`, `io2` or `gp3`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5646,7 +5528,17 @@ Only valid for volume_type of `"io1"`, `"io2"` or `"gp3"`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Snapshot ID to mount.
+    <dd>{{% md %}}Snapshot ID to mount.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}A map of tags to assign to the device.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5656,7 +5548,7 @@ Only valid for volume_type of `"io1"`, `"io2"` or `"gp3"`.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The throughput to provision for a volume in mebibytes per second (MiB/s). This is only valid for `volume_type` of `"gp3"`.
+    <dd>{{% md %}}Throughput to provision for a volume in mebibytes per second (MiB/s). This is only valid for `volume_type` of `gp3`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5675,7 +5567,7 @@ Only valid for volume_type of `"io1"`, `"io2"` or `"gp3"`.
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The size of the volume in gibibytes (GiB).
+    <dd>{{% md %}}Size of the volume in gibibytes (GiB).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5685,7 +5577,7 @@ Only valid for volume_type of `"io1"`, `"io2"` or `"gp3"`.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of volume. Can be `"standard"`, `"gp2"`, `"gp3"`, `"io1"`, `"io2"`, `"sc1"`, or `"st1"`. (Default: `"gp2"`).
+    <dd>{{% md %}}Type of volume. Valid values include `standard`, `gp2`, `gp3`, `io1`, `io2`, `sc1`, or `st1`. Defaults to `gp2`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -5715,7 +5607,7 @@ Only valid for volume_type of `"io1"`, `"io2"` or `"gp3"`.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether Nitro Enclaves will be enabled on the instance. (Default: `"false"`).
+    <dd>{{% md %}}Whether Nitro Enclaves will be enabled on the instance. Defaults to `false`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -5731,7 +5623,7 @@ Only valid for volume_type of `"io1"`, `"io2"` or `"gp3"`.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether Nitro Enclaves will be enabled on the instance. (Default: `"false"`).
+    <dd>{{% md %}}Whether Nitro Enclaves will be enabled on the instance. Defaults to `false`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -5747,7 +5639,7 @@ Only valid for volume_type of `"io1"`, `"io2"` or `"gp3"`.
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether Nitro Enclaves will be enabled on the instance. (Default: `"false"`).
+    <dd>{{% md %}}Whether Nitro Enclaves will be enabled on the instance. Defaults to `false`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -5763,7 +5655,7 @@ Only valid for volume_type of `"io1"`, `"io2"` or `"gp3"`.
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether Nitro Enclaves will be enabled on the instance. (Default: `"false"`).
+    <dd>{{% md %}}Whether Nitro Enclaves will be enabled on the instance. Defaults to `false`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -5813,9 +5705,7 @@ Only valid for volume_type of `"io1"`, `"io2"` or `"gp3"`.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The [Instance Store Device
-Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#InstanceStoreDeviceNames)
-(e.g. `"ephemeral0"`).
+    <dd>{{% md %}}[Instance Store Device Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#InstanceStoreDeviceNames) (e.g. `ephemeral0`).
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -5851,9 +5741,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The [Instance Store Device
-Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#InstanceStoreDeviceNames)
-(e.g. `"ephemeral0"`).
+    <dd>{{% md %}}[Instance Store Device Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#InstanceStoreDeviceNames) (e.g. `ephemeral0`).
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -5889,9 +5777,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The [Instance Store Device
-Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#InstanceStoreDeviceNames)
-(e.g. `"ephemeral0"`).
+    <dd>{{% md %}}[Instance Store Device Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#InstanceStoreDeviceNames) (e.g. `ephemeral0`).
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -5927,9 +5813,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The [Instance Store Device
-Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#InstanceStoreDeviceNames)
-(e.g. `"ephemeral0"`).
+    <dd>{{% md %}}[Instance Store Device Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#InstanceStoreDeviceNames) (e.g. `ephemeral0`).
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -5959,7 +5843,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Whether the metadata service is available. Can be `"enabled"` or `"disabled"`. (Default: `"enabled"`).
+    <dd>{{% md %}}Whether the metadata service is available. Valid values include `enabled` or `disabled`. Defaults to `enabled`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5969,7 +5853,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The desired HTTP PUT response hop limit for instance metadata requests. The larger the number, the further instance metadata requests can travel. Can be an integer from `1` to `64`. (Default: `1`).
+    <dd>{{% md %}}Desired HTTP PUT response hop limit for instance metadata requests. The larger the number, the further instance metadata requests can travel. Valid values are integer from `1` to `64`. Defaults to `1`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -5979,7 +5863,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Whether or not the metadata service requires session tokens, also referred to as _Instance Metadata Service Version 2 (IMDSv2)_. Can be `"optional"` or `"required"`. (Default: `"optional"`).
+    <dd>{{% md %}}Whether or not the metadata service requires session tokens, also referred to as _Instance Metadata Service Version 2 (IMDSv2)_. Valid values include `optional` or `required`. Defaults to `optional`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -5995,7 +5879,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Whether the metadata service is available. Can be `"enabled"` or `"disabled"`. (Default: `"enabled"`).
+    <dd>{{% md %}}Whether the metadata service is available. Valid values include `enabled` or `disabled`. Defaults to `enabled`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -6005,7 +5889,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The desired HTTP PUT response hop limit for instance metadata requests. The larger the number, the further instance metadata requests can travel. Can be an integer from `1` to `64`. (Default: `1`).
+    <dd>{{% md %}}Desired HTTP PUT response hop limit for instance metadata requests. The larger the number, the further instance metadata requests can travel. Valid values are integer from `1` to `64`. Defaults to `1`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -6015,7 +5899,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Whether or not the metadata service requires session tokens, also referred to as _Instance Metadata Service Version 2 (IMDSv2)_. Can be `"optional"` or `"required"`. (Default: `"optional"`).
+    <dd>{{% md %}}Whether or not the metadata service requires session tokens, also referred to as _Instance Metadata Service Version 2 (IMDSv2)_. Valid values include `optional` or `required`. Defaults to `optional`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -6031,7 +5915,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Whether the metadata service is available. Can be `"enabled"` or `"disabled"`. (Default: `"enabled"`).
+    <dd>{{% md %}}Whether the metadata service is available. Valid values include `enabled` or `disabled`. Defaults to `enabled`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -6041,7 +5925,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The desired HTTP PUT response hop limit for instance metadata requests. The larger the number, the further instance metadata requests can travel. Can be an integer from `1` to `64`. (Default: `1`).
+    <dd>{{% md %}}Desired HTTP PUT response hop limit for instance metadata requests. The larger the number, the further instance metadata requests can travel. Valid values are integer from `1` to `64`. Defaults to `1`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -6051,7 +5935,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Whether or not the metadata service requires session tokens, also referred to as _Instance Metadata Service Version 2 (IMDSv2)_. Can be `"optional"` or `"required"`. (Default: `"optional"`).
+    <dd>{{% md %}}Whether or not the metadata service requires session tokens, also referred to as _Instance Metadata Service Version 2 (IMDSv2)_. Valid values include `optional` or `required`. Defaults to `optional`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -6067,7 +5951,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Whether the metadata service is available. Can be `"enabled"` or `"disabled"`. (Default: `"enabled"`).
+    <dd>{{% md %}}Whether the metadata service is available. Valid values include `enabled` or `disabled`. Defaults to `enabled`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -6077,7 +5961,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The desired HTTP PUT response hop limit for instance metadata requests. The larger the number, the further instance metadata requests can travel. Can be an integer from `1` to `64`. (Default: `1`).
+    <dd>{{% md %}}Desired HTTP PUT response hop limit for instance metadata requests. The larger the number, the further instance metadata requests can travel. Valid values are integer from `1` to `64`. Defaults to `1`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -6087,7 +5971,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Whether or not the metadata service requires session tokens, also referred to as _Instance Metadata Service Version 2 (IMDSv2)_. Can be `"optional"` or `"required"`. (Default: `"optional"`).
+    <dd>{{% md %}}Whether or not the metadata service requires session tokens, also referred to as _Instance Metadata Service Version 2 (IMDSv2)_. Valid values include `optional` or `required`. Defaults to `optional`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -6117,7 +6001,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The integer index of the network interface attachment. Limited by instance type.
+    <dd>{{% md %}}Integer index of the network interface attachment. Limited by instance type.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -6127,7 +6011,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the network interface to attach.
+    <dd>{{% md %}}ID of the network interface to attach.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -6153,7 +6037,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The integer index of the network interface attachment. Limited by instance type.
+    <dd>{{% md %}}Integer index of the network interface attachment. Limited by instance type.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -6163,7 +6047,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the network interface to attach.
+    <dd>{{% md %}}ID of the network interface to attach.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -6189,7 +6073,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The integer index of the network interface attachment. Limited by instance type.
+    <dd>{{% md %}}Integer index of the network interface attachment. Limited by instance type.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -6199,7 +6083,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The ID of the network interface to attach.
+    <dd>{{% md %}}ID of the network interface to attach.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -6225,7 +6109,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The integer index of the network interface attachment. Limited by instance type.
+    <dd>{{% md %}}Integer index of the network interface attachment. Limited by instance type.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -6235,7 +6119,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The ID of the network interface to attach.
+    <dd>{{% md %}}ID of the network interface to attach.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -6275,8 +6159,7 @@ Name](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#I
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the volume should be destroyed
-on instance termination (Default: `true`).
+    <dd>{{% md %}}Whether the volume should be destroyed on instance termination. Defaults to `true`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -6286,7 +6169,7 @@ on instance termination (Default: `true`).
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the device to mount.
+    <dd>{{% md %}}Name of the device to mount.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -6296,7 +6179,7 @@ on instance termination (Default: `true`).
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable volume encryption. (Default: `false`). Must be configured to perform drift detection.
+    <dd>{{% md %}}Whether to enable volume encryption. Defaults to `false`. Must be configured to perform drift detection.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -6306,8 +6189,7 @@ on instance termination (Default: `true`).
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The amount of provisioned
-[IOPS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-io-characteristics.html). Only valid for volume_type of `"io1"`, `"io2"` or `"gp3"`.
+    <dd>{{% md %}}Amount of provisioned [IOPS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-io-characteristics.html). Only valid for volume_type of `io1`, `io2` or `gp3`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -6321,13 +6203,23 @@ on instance termination (Default: `true`).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}A map of tags to assign to the device.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="throughput_csharp">
 <a href="#throughput_csharp" style="color: inherit; text-decoration: inherit;">Throughput</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The throughput to provision for a volume in mebibytes per second (MiB/s). This is only valid for `volume_type` of `"gp3"`.
+    <dd>{{% md %}}Throughput to provision for a volume in mebibytes per second (MiB/s). This is only valid for `volume_type` of `gp3`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -6346,7 +6238,7 @@ on instance termination (Default: `true`).
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The size of the volume in gibibytes (GiB).
+    <dd>{{% md %}}Size of the volume in gibibytes (GiB).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -6356,7 +6248,7 @@ on instance termination (Default: `true`).
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of volume. Can be `"standard"`, `"gp2"`, `"gp3"`, `"io1"`, `"io2"`, `"sc1"`, or `"st1"`. (Default: `"gp2"`).
+    <dd>{{% md %}}Type of volume. Valid values include `standard`, `gp2`, `gp3`, `io1`, `io2`, `sc1`, or `st1`. Defaults to `gp2`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -6372,8 +6264,7 @@ on instance termination (Default: `true`).
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the volume should be destroyed
-on instance termination (Default: `true`).
+    <dd>{{% md %}}Whether the volume should be destroyed on instance termination. Defaults to `true`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -6383,7 +6274,7 @@ on instance termination (Default: `true`).
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the device to mount.
+    <dd>{{% md %}}Name of the device to mount.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -6393,7 +6284,7 @@ on instance termination (Default: `true`).
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable volume encryption. (Default: `false`). Must be configured to perform drift detection.
+    <dd>{{% md %}}Whether to enable volume encryption. Defaults to `false`. Must be configured to perform drift detection.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -6403,8 +6294,7 @@ on instance termination (Default: `true`).
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The amount of provisioned
-[IOPS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-io-characteristics.html). Only valid for volume_type of `"io1"`, `"io2"` or `"gp3"`.
+    <dd>{{% md %}}Amount of provisioned [IOPS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-io-characteristics.html). Only valid for volume_type of `io1`, `io2` or `gp3`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -6418,13 +6308,23 @@ on instance termination (Default: `true`).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}A map of tags to assign to the device.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="throughput_go">
 <a href="#throughput_go" style="color: inherit; text-decoration: inherit;">Throughput</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The throughput to provision for a volume in mebibytes per second (MiB/s). This is only valid for `volume_type` of `"gp3"`.
+    <dd>{{% md %}}Throughput to provision for a volume in mebibytes per second (MiB/s). This is only valid for `volume_type` of `gp3`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -6443,7 +6343,7 @@ on instance termination (Default: `true`).
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The size of the volume in gibibytes (GiB).
+    <dd>{{% md %}}Size of the volume in gibibytes (GiB).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -6453,7 +6353,7 @@ on instance termination (Default: `true`).
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of volume. Can be `"standard"`, `"gp2"`, `"gp3"`, `"io1"`, `"io2"`, `"sc1"`, or `"st1"`. (Default: `"gp2"`).
+    <dd>{{% md %}}Type of volume. Valid values include `standard`, `gp2`, `gp3`, `io1`, `io2`, `sc1`, or `st1`. Defaults to `gp2`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -6469,8 +6369,7 @@ on instance termination (Default: `true`).
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Whether the volume should be destroyed
-on instance termination (Default: `true`).
+    <dd>{{% md %}}Whether the volume should be destroyed on instance termination. Defaults to `true`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -6480,7 +6379,7 @@ on instance termination (Default: `true`).
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The name of the device to mount.
+    <dd>{{% md %}}Name of the device to mount.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -6490,7 +6389,7 @@ on instance termination (Default: `true`).
         <span class="property-indicator"></span>
         <span class="property-type">boolean</span>
     </dt>
-    <dd>{{% md %}}Enable volume encryption. (Default: `false`). Must be configured to perform drift detection.
+    <dd>{{% md %}}Whether to enable volume encryption. Defaults to `false`. Must be configured to perform drift detection.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -6500,8 +6399,7 @@ on instance termination (Default: `true`).
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The amount of provisioned
-[IOPS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-io-characteristics.html). Only valid for volume_type of `"io1"`, `"io2"` or `"gp3"`.
+    <dd>{{% md %}}Amount of provisioned [IOPS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-io-characteristics.html). Only valid for volume_type of `io1`, `io2` or `gp3`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -6515,13 +6413,23 @@ on instance termination (Default: `true`).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}A map of tags to assign to the device.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="throughput_nodejs">
 <a href="#throughput_nodejs" style="color: inherit; text-decoration: inherit;">throughput</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The throughput to provision for a volume in mebibytes per second (MiB/s). This is only valid for `volume_type` of `"gp3"`.
+    <dd>{{% md %}}Throughput to provision for a volume in mebibytes per second (MiB/s). This is only valid for `volume_type` of `gp3`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -6540,7 +6448,7 @@ on instance termination (Default: `true`).
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}The size of the volume in gibibytes (GiB).
+    <dd>{{% md %}}Size of the volume in gibibytes (GiB).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -6550,7 +6458,7 @@ on instance termination (Default: `true`).
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of volume. Can be `"standard"`, `"gp2"`, `"gp3"`, `"io1"`, `"io2"`, `"sc1"`, or `"st1"`. (Default: `"gp2"`).
+    <dd>{{% md %}}Type of volume. Valid values include `standard`, `gp2`, `gp3`, `io1`, `io2`, `sc1`, or `st1`. Defaults to `gp2`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -6566,8 +6474,7 @@ on instance termination (Default: `true`).
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Whether the volume should be destroyed
-on instance termination (Default: `true`).
+    <dd>{{% md %}}Whether the volume should be destroyed on instance termination. Defaults to `true`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -6577,7 +6484,7 @@ on instance termination (Default: `true`).
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The name of the device to mount.
+    <dd>{{% md %}}Name of the device to mount.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -6587,7 +6494,7 @@ on instance termination (Default: `true`).
         <span class="property-indicator"></span>
         <span class="property-type">bool</span>
     </dt>
-    <dd>{{% md %}}Enable volume encryption. (Default: `false`). Must be configured to perform drift detection.
+    <dd>{{% md %}}Whether to enable volume encryption. Defaults to `false`. Must be configured to perform drift detection.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -6597,8 +6504,7 @@ on instance termination (Default: `true`).
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The amount of provisioned
-[IOPS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-io-characteristics.html). Only valid for volume_type of `"io1"`, `"io2"` or `"gp3"`.
+    <dd>{{% md %}}Amount of provisioned [IOPS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-io-characteristics.html). Only valid for volume_type of `io1`, `io2` or `gp3`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -6612,13 +6518,23 @@ on instance termination (Default: `true`).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}A map of tags to assign to the device.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="throughput_python">
 <a href="#throughput_python" style="color: inherit; text-decoration: inherit;">throughput</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The throughput to provision for a volume in mebibytes per second (MiB/s). This is only valid for `volume_type` of `"gp3"`.
+    <dd>{{% md %}}Throughput to provision for a volume in mebibytes per second (MiB/s). This is only valid for `volume_type` of `gp3`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -6637,7 +6553,7 @@ on instance termination (Default: `true`).
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}The size of the volume in gibibytes (GiB).
+    <dd>{{% md %}}Size of the volume in gibibytes (GiB).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -6647,7 +6563,7 @@ on instance termination (Default: `true`).
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of volume. Can be `"standard"`, `"gp2"`, `"gp3"`, `"io1"`, `"io2"`, `"sc1"`, or `"st1"`. (Default: `"gp2"`).
+    <dd>{{% md %}}Type of volume. Valid values include `standard`, `gp2`, `gp3`, `io1`, `io2`, `sc1`, or `st1`. Defaults to `gp2`.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}

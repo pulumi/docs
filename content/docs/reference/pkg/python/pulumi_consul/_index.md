@@ -1586,6 +1586,81 @@ Consul.</p>
     <span class="p">}))</span>
 </pre></div>
 </div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">pulumi_consul</span> <span class="k">as</span> <span class="nn">consul</span>
+
+<span class="n">service_intentions</span> <span class="o">=</span> <span class="n">consul</span><span class="o">.</span><span class="n">ConfigEntry</span><span class="p">(</span><span class="s2">&quot;serviceIntentions&quot;</span><span class="p">,</span>
+    <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;service-intentions&quot;</span><span class="p">,</span>
+    <span class="n">config_json</span><span class="o">=</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">({</span>
+        <span class="s2">&quot;Sources&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;Action&quot;</span><span class="p">:</span> <span class="s2">&quot;allow&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;frontend-webapp&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;Precedence&quot;</span><span class="p">:</span> <span class="mi">9</span><span class="p">,</span>
+                <span class="s2">&quot;Type&quot;</span><span class="p">:</span> <span class="s2">&quot;consul&quot;</span><span class="p">,</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;Action&quot;</span><span class="p">:</span> <span class="s2">&quot;allow&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;nightly-cronjob&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;Precedence&quot;</span><span class="p">:</span> <span class="mi">9</span><span class="p">,</span>
+                <span class="s2">&quot;Type&quot;</span><span class="p">:</span> <span class="s2">&quot;consul&quot;</span><span class="p">,</span>
+            <span class="p">},</span>
+        <span class="p">],</span>
+    <span class="p">}))</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pulumi</span>
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">pulumi_consul</span> <span class="k">as</span> <span class="nn">consul</span>
+
+<span class="n">sd</span> <span class="o">=</span> <span class="n">consul</span><span class="o">.</span><span class="n">ConfigEntry</span><span class="p">(</span><span class="s2">&quot;sd&quot;</span><span class="p">,</span>
+    <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;service-defaults&quot;</span><span class="p">,</span>
+    <span class="n">config_json</span><span class="o">=</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">({</span>
+        <span class="s2">&quot;Protocol&quot;</span><span class="p">:</span> <span class="s2">&quot;http&quot;</span><span class="p">,</span>
+    <span class="p">}))</span>
+<span class="n">service_intentions</span> <span class="o">=</span> <span class="n">consul</span><span class="o">.</span><span class="n">ConfigEntry</span><span class="p">(</span><span class="s2">&quot;serviceIntentions&quot;</span><span class="p">,</span>
+    <span class="n">kind</span><span class="o">=</span><span class="s2">&quot;service-intentions&quot;</span><span class="p">,</span>
+    <span class="n">config_json</span><span class="o">=</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">({</span>
+        <span class="s2">&quot;Sources&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;contractor-webapp&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;Permissions&quot;</span><span class="p">:</span> <span class="p">[{</span>
+                    <span class="s2">&quot;Action&quot;</span><span class="p">:</span> <span class="s2">&quot;allow&quot;</span><span class="p">,</span>
+                    <span class="s2">&quot;HTTP&quot;</span><span class="p">:</span> <span class="p">{</span>
+                        <span class="s2">&quot;Methods&quot;</span><span class="p">:</span> <span class="p">[</span>
+                            <span class="s2">&quot;GET&quot;</span><span class="p">,</span>
+                            <span class="s2">&quot;HEAD&quot;</span><span class="p">,</span>
+                        <span class="p">],</span>
+                        <span class="s2">&quot;PathExact&quot;</span><span class="p">:</span> <span class="s2">&quot;/healtz&quot;</span><span class="p">,</span>
+                    <span class="p">},</span>
+                <span class="p">}],</span>
+                <span class="s2">&quot;Precedence&quot;</span><span class="p">:</span> <span class="mi">9</span><span class="p">,</span>
+                <span class="s2">&quot;Type&quot;</span><span class="p">:</span> <span class="s2">&quot;consul&quot;</span><span class="p">,</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="s2">&quot;Name&quot;</span><span class="p">:</span> <span class="s2">&quot;admin-dashboard-webapp&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;Permissions&quot;</span><span class="p">:</span> <span class="p">[</span>
+                    <span class="p">{</span>
+                        <span class="s2">&quot;Action&quot;</span><span class="p">:</span> <span class="s2">&quot;deny&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;HTTP&quot;</span><span class="p">:</span> <span class="p">{</span>
+                            <span class="s2">&quot;PathPrefix&quot;</span><span class="p">:</span> <span class="s2">&quot;/debugz&quot;</span><span class="p">,</span>
+                        <span class="p">},</span>
+                    <span class="p">},</span>
+                    <span class="p">{</span>
+                        <span class="s2">&quot;Action&quot;</span><span class="p">:</span> <span class="s2">&quot;allow&quot;</span><span class="p">,</span>
+                        <span class="s2">&quot;HTTP&quot;</span><span class="p">:</span> <span class="p">{</span>
+                            <span class="s2">&quot;PathPrefix&quot;</span><span class="p">:</span> <span class="s2">&quot;/&quot;</span><span class="p">,</span>
+                        <span class="p">},</span>
+                    <span class="p">},</span>
+                <span class="p">],</span>
+                <span class="s2">&quot;Precedence&quot;</span><span class="p">:</span> <span class="mi">9</span><span class="p">,</span>
+                <span class="s2">&quot;Type&quot;</span><span class="p">:</span> <span class="s2">&quot;consul&quot;</span><span class="p">,</span>
+            <span class="p">},</span>
+        <span class="p">],</span>
+    <span class="p">}))</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">

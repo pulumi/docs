@@ -39,6 +39,7 @@ Explore the resources and functions of the apigateway module in the AWS package.
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
+    <li><a href="getdomainname" title="GetDomainName"><span class="symbol function"></span>GetDomainName</a></li>
     <li><a href="getkey" title="GetKey"><span class="symbol function"></span>GetKey</a></li>
     <li><a href="getresource" title="GetResource"><span class="symbol function"></span>GetResource</a></li>
     <li><a href="getrestapi" title="GetRestApi"><span class="symbol function"></span>GetRestApi</a></li>
@@ -54,7 +55,7 @@ Explore the resources and functions of the apigateway module in the AWS package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>3.23.0</dd>
+	<dd>3.24.0</dd>
 </dl>
 
 

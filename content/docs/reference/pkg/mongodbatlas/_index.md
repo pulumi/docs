@@ -16,6 +16,7 @@ A Pulumi package for creating and managing mongodbatlas cloud resources.
 <ul class="api">
     <li><a href="alertconfiguration" title="AlertConfiguration"><span class="symbol resource"></span>AlertConfiguration</a></li>
     <li><a href="auditing" title="Auditing"><span class="symbol resource"></span>Auditing</a></li>
+    <li><a href="cloudprovideraccess" title="CloudProviderAccess"><span class="symbol resource"></span>CloudProviderAccess</a></li>
     <li><a href="cloudprovidersnapshot" title="CloudProviderSnapshot"><span class="symbol resource"></span>CloudProviderSnapshot</a></li>
     <li><a href="cloudprovidersnapshotbackuppolicy" title="CloudProviderSnapshotBackupPolicy"><span class="symbol resource"></span>CloudProviderSnapshotBackupPolicy</a></li>
     <li><a href="cloudprovidersnapshotrestorejob" title="CloudProviderSnapshotRestoreJob"><span class="symbol resource"></span>CloudProviderSnapshotRestoreJob</a></li>
@@ -30,11 +31,15 @@ A Pulumi package for creating and managing mongodbatlas cloud resources.
     <li><a href="privateendpoint" title="PrivateEndpoint"><span class="symbol resource"></span>PrivateEndpoint</a></li>
     <li><a href="privateendpointinterfacelink" title="PrivateEndpointInterfaceLink"><span class="symbol resource"></span>PrivateEndpointInterfaceLink</a></li>
     <li><a href="privateipmode" title="PrivateIpMode"><span class="symbol resource"></span>PrivateIpMode</a></li>
+    <li><a href="privatelinkendpoint" title="PrivateLinkEndpoint"><span class="symbol resource"></span>PrivateLinkEndpoint</a></li>
+    <li><a href="privatelinkendpointservice" title="PrivateLinkEndpointService"><span class="symbol resource"></span>PrivateLinkEndpointService</a></li>
     <li><a href="project" title="Project"><span class="symbol resource"></span>Project</a></li>
+    <li><a href="projectipaccesslist" title="ProjectIpAccessList"><span class="symbol resource"></span>ProjectIpAccessList</a></li>
     <li><a href="projectipwhitelist" title="ProjectIpWhitelist"><span class="symbol resource"></span>ProjectIpWhitelist</a></li>
     <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
     <li><a href="team" title="Team"><span class="symbol resource"></span>Team</a></li>
     <li><a href="teams" title="Teams"><span class="symbol resource"></span>Teams</a></li>
+    <li><a href="thirdpartyintegration" title="ThirdPartyIntegration"><span class="symbol resource"></span>ThirdPartyIntegration</a></li>
     <li><a href="x509authenticationdatabaseuser" title="X509AuthenticationDatabaseUser"><span class="symbol resource"></span>X509AuthenticationDatabaseUser</a></li>
 </ul>
 
@@ -43,6 +48,7 @@ A Pulumi package for creating and managing mongodbatlas cloud resources.
     <li><a href="get509authenticationdatabaseuser" title="Get509AuthenticationDatabaseUser"><span class="symbol function"></span>Get509AuthenticationDatabaseUser</a></li>
     <li><a href="getalertconfiguration" title="GetAlertConfiguration"><span class="symbol function"></span>GetAlertConfiguration</a></li>
     <li><a href="getauditing" title="GetAuditing"><span class="symbol function"></span>GetAuditing</a></li>
+    <li><a href="getcloudprovideraccess" title="GetCloudProviderAccess"><span class="symbol function"></span>GetCloudProviderAccess</a></li>
     <li><a href="getcloudprovidersnapshot" title="GetCloudProviderSnapshot"><span class="symbol function"></span>GetCloudProviderSnapshot</a></li>
     <li><a href="getcloudprovidersnapshotbackuppolicy" title="GetCloudProviderSnapshotBackupPolicy"><span class="symbol function"></span>GetCloudProviderSnapshotBackupPolicy</a></li>
     <li><a href="getcloudprovidersnapshotrestorejob" title="GetCloudProviderSnapshotRestoreJob"><span class="symbol function"></span>GetCloudProviderSnapshotRestoreJob</a></li>
@@ -62,11 +68,16 @@ A Pulumi package for creating and managing mongodbatlas cloud resources.
     <li><a href="getnetworkpeerings" title="GetNetworkPeerings"><span class="symbol function"></span>GetNetworkPeerings</a></li>
     <li><a href="getprivateendpoint" title="GetPrivateEndpoint"><span class="symbol function"></span>GetPrivateEndpoint</a></li>
     <li><a href="getprivateendpointinterfacelink" title="GetPrivateEndpointInterfaceLink"><span class="symbol function"></span>GetPrivateEndpointInterfaceLink</a></li>
+    <li><a href="getprivatelinkendpoint" title="GetPrivateLinkEndpoint"><span class="symbol function"></span>GetPrivateLinkEndpoint</a></li>
+    <li><a href="getprivatelinkendpointservice" title="GetPrivateLinkEndpointService"><span class="symbol function"></span>GetPrivateLinkEndpointService</a></li>
     <li><a href="getproject" title="GetProject"><span class="symbol function"></span>GetProject</a></li>
+    <li><a href="getprojectipaccesslist" title="GetProjectIpAccessList"><span class="symbol function"></span>GetProjectIpAccessList</a></li>
     <li><a href="getprojectipwhitelist" title="GetProjectIpWhitelist"><span class="symbol function"></span>GetProjectIpWhitelist</a></li>
     <li><a href="getprojects" title="GetProjects"><span class="symbol function"></span>GetProjects</a></li>
     <li><a href="getteam" title="GetTeam"><span class="symbol function"></span>GetTeam</a></li>
     <li><a href="getteams" title="GetTeams"><span class="symbol function"></span>GetTeams</a></li>
+    <li><a href="getthirdpartyintegration" title="GetThirdPartyIntegration"><span class="symbol function"></span>GetThirdPartyIntegration</a></li>
+    <li><a href="getthirdpartyintegrations" title="GetThirdPartyIntegrations"><span class="symbol function"></span>GetThirdPartyIntegrations</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -78,7 +89,7 @@ A Pulumi package for creating and managing mongodbatlas cloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`mongodbatlas` Terraform Provider](https://github.com/mongodb/terraform-provider-mongodbatlas).</dd>
 	<dt>Version</dt>
-	<dd>1.3.1</dd>
+	<dd>1.4.0</dd>
 </dl>
 
 

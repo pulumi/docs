@@ -32,7 +32,7 @@ class MyStack : Stack
     {
         var instance = new Gcp.Sql.SourceRepresentationInstance("instance", new Gcp.Sql.SourceRepresentationInstanceArgs
         {
-            DatabaseVersion = "MYSQL_5_7",
+            DatabaseVersion = "MYSQL_8_0",
             Host = "10.20.30.40",
             Port = 3306,
             Region = "us-central1",
@@ -56,7 +56,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := sql.NewSourceRepresentationInstance(ctx, "instance", &sql.SourceRepresentationInstanceArgs{
-			DatabaseVersion: pulumi.String("MYSQL_5_7"),
+			DatabaseVersion: pulumi.String("MYSQL_8_0"),
 			Host:            pulumi.String("10.20.30.40"),
 			Port:            pulumi.Int(3306),
 			Region:          pulumi.String("us-central1"),
@@ -77,7 +77,7 @@ import pulumi
 import pulumi_gcp as gcp
 
 instance = gcp.sql.SourceRepresentationInstance("instance",
-    database_version="MYSQL_5_7",
+    database_version="MYSQL_8_0",
     host="10.20.30.40",
     port=3306,
     region="us-central1")
@@ -92,7 +92,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as gcp from "@pulumi/gcp";
 
 const instance = new gcp.sql.SourceRepresentationInstance("instance", {
-    databaseVersion: "MYSQL_5_7",
+    databaseVersion: "MYSQL_8_0",
     host: "10.20.30.40",
     port: 3306,
     region: "us-central1",
@@ -293,7 +293,7 @@ The SourceRepresentationInstance resource accepts the following [input]({{< relr
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The MySQL version running on your source database server.
-Possible values are `MYSQL_5_6` and `MYSQL_5_7`.
+Possible values are `MYSQL_5_6`, `MYSQL_5_7`, and `MYSQL_8_0`.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -363,7 +363,7 @@ If it is not provided, the provider region is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The MySQL version running on your source database server.
-Possible values are `MYSQL_5_6` and `MYSQL_5_7`.
+Possible values are `MYSQL_5_6`, `MYSQL_5_7`, and `MYSQL_8_0`.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -433,7 +433,7 @@ If it is not provided, the provider region is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The MySQL version running on your source database server.
-Possible values are `MYSQL_5_6` and `MYSQL_5_7`.
+Possible values are `MYSQL_5_6`, `MYSQL_5_7`, and `MYSQL_8_0`.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -503,7 +503,7 @@ If it is not provided, the provider region is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The MySQL version running on your source database server.
-Possible values are `MYSQL_5_6` and `MYSQL_5_7`.
+Possible values are `MYSQL_5_6`, `MYSQL_5_7`, and `MYSQL_8_0`.
 {{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
@@ -763,7 +763,7 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The MySQL version running on your source database server.
-Possible values are `MYSQL_5_6` and `MYSQL_5_7`.
+Possible values are `MYSQL_5_6`, `MYSQL_5_7`, and `MYSQL_8_0`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -833,7 +833,7 @@ If it is not provided, the provider region is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The MySQL version running on your source database server.
-Possible values are `MYSQL_5_6` and `MYSQL_5_7`.
+Possible values are `MYSQL_5_6`, `MYSQL_5_7`, and `MYSQL_8_0`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -903,7 +903,7 @@ If it is not provided, the provider region is used.
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The MySQL version running on your source database server.
-Possible values are `MYSQL_5_6` and `MYSQL_5_7`.
+Possible values are `MYSQL_5_6`, `MYSQL_5_7`, and `MYSQL_8_0`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -973,7 +973,7 @@ If it is not provided, the provider region is used.
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The MySQL version running on your source database server.
-Possible values are `MYSQL_5_6` and `MYSQL_5_7`.
+Possible values are `MYSQL_5_6`, `MYSQL_5_7`, and `MYSQL_8_0`.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">

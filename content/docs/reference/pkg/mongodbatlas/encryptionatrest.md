@@ -1011,6 +1011,16 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The IAM secret access key with permissions to access the customer master key specified by customerMasterKeyID.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="roleid_csharp">
+<a href="#roleid_csharp" style="color: inherit; text-decoration: inherit;">Role<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ID of an AWS IAM role authorized to manage an AWS customer master key. To find the ID for an existing IAM role check the `role_id` attribute of the `mongodbatlas.CloudProviderAccess` resource.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1066,6 +1076,16 @@ The following state arguments are supported:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IAM secret access key with permissions to access the customer master key specified by customerMasterKeyID.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="roleid_go">
+<a href="#roleid_go" style="color: inherit; text-decoration: inherit;">Role<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ID of an AWS IAM role authorized to manage an AWS customer master key. To find the ID for an existing IAM role check the `role_id` attribute of the `mongodbatlas.CloudProviderAccess` resource.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1123,6 +1143,16 @@ The following state arguments are supported:
     </dt>
     <dd>{{% md %}}The IAM secret access key with permissions to access the customer master key specified by customerMasterKeyID.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="roleid_nodejs">
+<a href="#roleid_nodejs" style="color: inherit; text-decoration: inherit;">role<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ID of an AWS IAM role authorized to manage an AWS customer master key. To find the ID for an existing IAM role check the `role_id` attribute of the `mongodbatlas.CloudProviderAccess` resource.
+{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1178,6 +1208,16 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IAM secret access key with permissions to access the customer master key specified by customerMasterKeyID.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="role_id_python">
+<a href="#role_id_python" style="color: inherit; text-decoration: inherit;">role_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}ID of an AWS IAM role authorized to manage an AWS customer master key. To find the ID for an existing IAM role check the `role_id` attribute of the `mongodbatlas.CloudProviderAccess` resource.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}

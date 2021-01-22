@@ -11,6 +11,7 @@ Explore the resources and functions of the ssoadmin module in the AWS package.
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="accountassignment" title="AccountAssignment"><span class="symbol resource"></span>AccountAssignment</a></li>
     <li><a href="managedpolicyattachment" title="ManagedPolicyAttachment"><span class="symbol resource"></span>ManagedPolicyAttachment</a></li>
     <li><a href="permissionset" title="PermissionSet"><span class="symbol resource"></span>PermissionSet</a></li>
     <li><a href="permissionsetinlinepolicy" title="PermissionSetInlinePolicy"><span class="symbol resource"></span>PermissionSetInlinePolicy</a></li>
@@ -31,7 +32,7 @@ Explore the resources and functions of the ssoadmin module in the AWS package.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`aws` Terraform Provider](https://github.com/terraform-providers/terraform-provider-aws).</dd>
 	<dt>Version</dt>
-	<dd>3.23.0</dd>
+	<dd>3.24.0</dd>
 </dl>
 
 
