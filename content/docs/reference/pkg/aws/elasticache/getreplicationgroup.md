@@ -200,6 +200,16 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="arn_csharp">
+<a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the created ElastiCache Replication Group.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="authtokenenabled_csharp">
 <a href="#authtokenenabled_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>Token<wbr>Enabled</a>
 </span>
@@ -316,8 +326,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identifier for the replication group.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="snapshotretentionlimit_csharp">
@@ -344,6 +353,16 @@ The following output properties are available:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-"
+            title="">
+        <span id="arn_go">
+<a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the created ElastiCache Replication Group.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="authtokenenabled_go">
@@ -462,8 +481,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identifier for the replication group.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="snapshotretentionlimit_go">
@@ -490,6 +508,16 @@ The following output properties are available:
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
+    <dt class="property-"
+            title="">
+        <span id="arn_nodejs">
+<a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the created ElastiCache Replication Group.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="authtokenenabled_nodejs">
@@ -608,8 +636,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identifier for the replication group.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="snapshotretentionlimit_nodejs">
@@ -636,6 +663,16 @@ The following output properties are available:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
+    <dt class="property-"
+            title="">
+        <span id="arn_python">
+<a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the created ElastiCache Replication Group.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="auth_token_enabled_python">
@@ -754,8 +791,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The identifier for the replication group.
-{{% /md %}}</dd>
+    <dd>{{% md %}}{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="snapshot_retention_limit_python">

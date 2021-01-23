@@ -1941,7 +1941,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegrouprulegrouprulevariables">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rule<wbr>Variables<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A configuration block that defines additional settings available to use in the rules defined in the rule group. See Rule Variables below for details.
+    <dd>{{% md %}}A configuration block that defines additional settings available to use in the rules defined in the rule group. Can only be specified for **stateful** rule groups. See Rule Variables below for details.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1967,7 +1967,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegrouprulegrouprulevariables">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rule<wbr>Variables</a></span>
     </dt>
-    <dd>{{% md %}}A configuration block that defines additional settings available to use in the rules defined in the rule group. See Rule Variables below for details.
+    <dd>{{% md %}}A configuration block that defines additional settings available to use in the rules defined in the rule group. Can only be specified for **stateful** rule groups. See Rule Variables below for details.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -1993,7 +1993,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegrouprulegrouprulevariables">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rule<wbr>Variables</a></span>
     </dt>
-    <dd>{{% md %}}A configuration block that defines additional settings available to use in the rules defined in the rule group. See Rule Variables below for details.
+    <dd>{{% md %}}A configuration block that defines additional settings available to use in the rules defined in the rule group. Can only be specified for **stateful** rule groups. See Rule Variables below for details.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -2019,7 +2019,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#rulegrouprulegrouprulevariables">Rule<wbr>Group<wbr>Rule<wbr>Group<wbr>Rule<wbr>Variables<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}A configuration block that defines additional settings available to use in the rules defined in the rule group. See Rule Variables below for details.
+    <dd>{{% md %}}A configuration block that defines additional settings available to use in the rules defined in the rule group. Can only be specified for **stateful** rule groups. See Rule Variables below for details.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}

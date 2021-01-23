@@ -3,7 +3,7 @@ title: "Module mediaconvert"
 title_tag: "Module mediaconvert | Package @pulumi/aws | Node.js SDK"
 linktitle: "mediaconvert"
 meta_desc: "Explore members of the mediaconvert module in the @pulumi/aws package."
-git_sha: "a9e42c93f0706bcf9d8cdca4801c68e27a01c41d"
+git_sha: "b08a8bf97426301e20cfb4790eaddfd5bb8cd655"
 block_external_search_index: true
 ---
 
@@ -30,7 +30,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Queue" data-link-title="Queue">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/mediaconvert/queue.ts#L28">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/mediaconvert/queue.ts#L28">
         Resource <strong>Queue</strong>
     </a>
 </h3>
@@ -57,7 +57,7 @@ Media Convert Queue can be imported via the queue name, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="Queue-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/mediaconvert/queue.ts#L83"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/mediaconvert/queue.ts#L83"> <b>constructor</b></a>
 </h4>
 
 
@@ -71,7 +71,7 @@ Create a Queue resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Queue-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/mediaconvert/queue.ts#L38">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/mediaconvert/queue.ts#L38">method <b>get</b></a>
 </h4>
 
 
@@ -82,14 +82,14 @@ Get an existing Queue resource's state with the given name, ID, and optional ext
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Queue-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/mediaconvert/queue.ts#L28">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/mediaconvert/queue.ts#L28">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Queue-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/mediaconvert/queue.ts#L49">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/mediaconvert/queue.ts#L49">method <b>isInstance</b></a>
 </h4>
 
 
@@ -100,7 +100,7 @@ Returns true if the given object is an instance of Queue.  This is designed to w
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Queue-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/mediaconvert/queue.ts#L59">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/mediaconvert/queue.ts#L59">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -108,7 +108,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The Arn of the queue
 
 <h4 class="pdoc-member-header" id="Queue-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/mediaconvert/queue.ts#L63">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/mediaconvert/queue.ts#L63">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -116,7 +116,7 @@ The Arn of the queue
 A description of the queue
 
 <h4 class="pdoc-member-header" id="Queue-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/mediaconvert/queue.ts#L28">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/mediaconvert/queue.ts#L28">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -125,7 +125,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Queue-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/mediaconvert/queue.ts#L67">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/mediaconvert/queue.ts#L67">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -133,7 +133,7 @@ deployments and may be missing (undefined) during planning phases.
 A unique identifier describing the queue
 
 <h4 class="pdoc-member-header" id="Queue-pricingPlan">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/mediaconvert/queue.ts#L71">property <b>pricingPlan</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/mediaconvert/queue.ts#L71">property <b>pricingPlan</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>pricingPlan: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -141,7 +141,7 @@ A unique identifier describing the queue
 Specifies whether the pricing plan for the queue is on-demand or reserved. Valid values are `ON_DEMAND` or `RESERVED`. Default to `ON_DEMAND`.
 
 <h4 class="pdoc-member-header" id="Queue-reservationPlanSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/mediaconvert/queue.ts#L75">property <b>reservationPlanSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/mediaconvert/queue.ts#L75">property <b>reservationPlanSettings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>reservationPlanSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#QueueReservationPlanSettings'>QueueReservationPlanSettings</a>&gt;;</code></pre>
@@ -149,7 +149,7 @@ Specifies whether the pricing plan for the queue is on-demand or reserved. Valid
 A detail pricing plan of the  reserved queue. See below.
 
 <h4 class="pdoc-member-header" id="Queue-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/mediaconvert/queue.ts#L79">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/mediaconvert/queue.ts#L79">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>status: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -157,7 +157,7 @@ A detail pricing plan of the  reserved queue. See below.
 A status of the queue. Valid values are `ACTIVE` or `RESERVED`. Default to `PAUSED`.
 
 <h4 class="pdoc-member-header" id="Queue-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/mediaconvert/queue.ts#L83">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/mediaconvert/queue.ts#L83">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -165,7 +165,7 @@ A status of the queue. Valid values are `ACTIVE` or `RESERVED`. Default to `PAUS
 A map of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="Queue-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/mediaconvert/queue.ts#L28">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/mediaconvert/queue.ts#L28">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -177,7 +177,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="QueueArgs" data-link-title="QueueArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/mediaconvert/queue.ts#L162">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/mediaconvert/queue.ts#L162">
         interface <strong>QueueArgs</strong>
     </a>
 </h3>
@@ -187,7 +187,7 @@ deployments.
 The set of arguments for constructing a Queue resource.
 
 <h4 class="pdoc-member-header" id="QueueArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/mediaconvert/queue.ts#L166">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/mediaconvert/queue.ts#L166">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -195,7 +195,7 @@ The set of arguments for constructing a Queue resource.
 A description of the queue
 
 <h4 class="pdoc-member-header" id="QueueArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/mediaconvert/queue.ts#L170">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/mediaconvert/queue.ts#L170">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -203,7 +203,7 @@ A description of the queue
 A unique identifier describing the queue
 
 <h4 class="pdoc-member-header" id="QueueArgs-pricingPlan">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/mediaconvert/queue.ts#L174">property <b>pricingPlan</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/mediaconvert/queue.ts#L174">property <b>pricingPlan</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pricingPlan?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -211,7 +211,7 @@ A unique identifier describing the queue
 Specifies whether the pricing plan for the queue is on-demand or reserved. Valid values are `ON_DEMAND` or `RESERVED`. Default to `ON_DEMAND`.
 
 <h4 class="pdoc-member-header" id="QueueArgs-reservationPlanSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/mediaconvert/queue.ts#L178">property <b>reservationPlanSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/mediaconvert/queue.ts#L178">property <b>reservationPlanSettings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>reservationPlanSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#QueueReservationPlanSettings'>QueueReservationPlanSettings</a>&gt;;</code></pre>
@@ -219,7 +219,7 @@ Specifies whether the pricing plan for the queue is on-demand or reserved. Valid
 A detail pricing plan of the  reserved queue. See below.
 
 <h4 class="pdoc-member-header" id="QueueArgs-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/mediaconvert/queue.ts#L182">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/mediaconvert/queue.ts#L182">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -227,7 +227,7 @@ A detail pricing plan of the  reserved queue. See below.
 A status of the queue. Valid values are `ACTIVE` or `RESERVED`. Default to `PAUSED`.
 
 <h4 class="pdoc-member-header" id="QueueArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/mediaconvert/queue.ts#L186">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/mediaconvert/queue.ts#L186">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -235,7 +235,7 @@ A status of the queue. Valid values are `ACTIVE` or `RESERVED`. Default to `PAUS
 A map of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="QueueState" data-link-title="QueueState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/mediaconvert/queue.ts#L128">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/mediaconvert/queue.ts#L128">
         interface <strong>QueueState</strong>
     </a>
 </h3>
@@ -245,7 +245,7 @@ A map of tags to assign to the resource.
 Input properties used for looking up and filtering Queue resources.
 
 <h4 class="pdoc-member-header" id="QueueState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/mediaconvert/queue.ts#L132">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/mediaconvert/queue.ts#L132">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -253,7 +253,7 @@ Input properties used for looking up and filtering Queue resources.
 The Arn of the queue
 
 <h4 class="pdoc-member-header" id="QueueState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/mediaconvert/queue.ts#L136">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/mediaconvert/queue.ts#L136">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -261,7 +261,7 @@ The Arn of the queue
 A description of the queue
 
 <h4 class="pdoc-member-header" id="QueueState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/mediaconvert/queue.ts#L140">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/mediaconvert/queue.ts#L140">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -269,7 +269,7 @@ A description of the queue
 A unique identifier describing the queue
 
 <h4 class="pdoc-member-header" id="QueueState-pricingPlan">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/mediaconvert/queue.ts#L144">property <b>pricingPlan</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/mediaconvert/queue.ts#L144">property <b>pricingPlan</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>pricingPlan?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -277,7 +277,7 @@ A unique identifier describing the queue
 Specifies whether the pricing plan for the queue is on-demand or reserved. Valid values are `ON_DEMAND` or `RESERVED`. Default to `ON_DEMAND`.
 
 <h4 class="pdoc-member-header" id="QueueState-reservationPlanSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/mediaconvert/queue.ts#L148">property <b>reservationPlanSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/mediaconvert/queue.ts#L148">property <b>reservationPlanSettings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>reservationPlanSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#QueueReservationPlanSettings'>QueueReservationPlanSettings</a>&gt;;</code></pre>
@@ -285,7 +285,7 @@ Specifies whether the pricing plan for the queue is on-demand or reserved. Valid
 A detail pricing plan of the  reserved queue. See below.
 
 <h4 class="pdoc-member-header" id="QueueState-status">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/mediaconvert/queue.ts#L152">property <b>status</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/mediaconvert/queue.ts#L152">property <b>status</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>status?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -293,7 +293,7 @@ A detail pricing plan of the  reserved queue. See below.
 A status of the queue. Valid values are `ACTIVE` or `RESERVED`. Default to `PAUSED`.
 
 <h4 class="pdoc-member-header" id="QueueState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/mediaconvert/queue.ts#L156">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/mediaconvert/queue.ts#L156">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>

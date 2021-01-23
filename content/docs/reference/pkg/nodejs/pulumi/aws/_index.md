@@ -3,7 +3,7 @@ title: "Package @pulumi/aws"
 title_tag: "Package @pulumi/aws | Node.js SDK"
 linktitle: "@pulumi/aws"
 meta_desc: "Explore members of the @pulumi/aws package."
-git_sha: "a9e42c93f0706bcf9d8cdca4801c68e27a01c41d"
+git_sha: "b08a8bf97426301e20cfb4790eaddfd5bb8cd655"
 block_external_search_index: true
 ---
 
@@ -261,7 +261,7 @@ import * as aws from "@pulumi/aws";
 
 <h2 id=""."" data-link-title=""."">namespace <strong>"."</strong></h2>
 <h3 class="pdoc-module-header" id="sdk" data-link-title="sdk">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/awsMixins.ts#L59">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/awsMixins.ts#L59">
         const <strong>sdk</strong>
     </a>
 </h3>
@@ -287,7 +287,7 @@ with any javascript Lambda.
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Provider" data-link-title="Provider">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/provider.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/provider.ts#L16">
         Resource <strong>Provider</strong>
     </a>
 </h3>
@@ -300,7 +300,7 @@ construction to achieve fine-grained programmatic control over provider settings
 [documentation](https://www.pulumi.com/docs/reference/programming-model/#providers) for more information.
 
 <h4 class="pdoc-member-header" id="Provider-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/provider.ts#L29"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/provider.ts#L29"> <b>constructor</b></a>
 </h4>
 
 
@@ -314,14 +314,14 @@ Create a Provider resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Provider-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/provider.ts#L16">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/provider.ts#L16">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Provider-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/provider.ts#L24">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/provider.ts#L24">method <b>isInstance</b></a>
 </h4>
 
 
@@ -332,14 +332,14 @@ Returns true if the given object is an instance of Provider.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Provider-register">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/provider.ts#L16">method <b>register</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/provider.ts#L16">method <b>register</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>static </span>register(provider: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;</code></pre>
 
 <h4 class="pdoc-member-header" id="Provider-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/provider.ts#L16">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/provider.ts#L16">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -348,7 +348,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Provider-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/provider.ts#L16">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/provider.ts#L16">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -359,7 +359,7 @@ deployments.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getAmi" data-link-title="getAmi">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getAmi.ts#L40">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getAmi.ts#L40">
         Function <strong>getAmi</strong>
     </a>
 </h3>
@@ -400,7 +400,7 @@ const example = pulumi.output(aws.getAmi({
 ```
 
 <h3 class="pdoc-module-header" id="getAmiIds" data-link-title="getAmiIds">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getAmiIds.ts#L26">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getAmiIds.ts#L26">
         Function <strong>getAmiIds</strong>
     </a>
 </h3>
@@ -427,7 +427,7 @@ const ubuntu = pulumi.output(aws.getAmiIds({
 ```
 
 <h3 class="pdoc-module-header" id="getArn" data-link-title="getArn">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getArn.ts#L22">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getArn.ts#L22">
         Function <strong>getArn</strong>
     </a>
 </h3>
@@ -450,7 +450,7 @@ const dbInstance = pulumi.output(aws.getArn({
 ```
 
 <h3 class="pdoc-module-header" id="getAutoscalingGroups" data-link-title="getAutoscalingGroups">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getAutoscalingGroups.ts#L42">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getAutoscalingGroups.ts#L42">
         Function <strong>getAutoscalingGroups</strong>
     </a>
 </h3>
@@ -493,7 +493,7 @@ const slackNotifications = new aws.autoscaling.Notification("slackNotifications"
 ```
 
 <h3 class="pdoc-module-header" id="getAvailabilityZone" data-link-title="getAvailabilityZone">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getAvailabilityZone.ts#L21">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getAvailabilityZone.ts#L21">
         Function <strong>getAvailabilityZone</strong>
     </a>
 </h3>
@@ -515,7 +515,7 @@ This is different from the `aws.getAvailabilityZones` (plural) data source,
 which provides a list of the available zones.
 
 <h3 class="pdoc-module-header" id="getAvailabilityZones" data-link-title="getAvailabilityZones">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getAvailabilityZones.ts#L67">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getAvailabilityZones.ts#L67">
         Function <strong>getAvailabilityZones</strong>
     </a>
 </h3>
@@ -583,7 +583,7 @@ const example = pulumi.output(aws.getAvailabilityZones({
 ```
 
 <h3 class="pdoc-module-header" id="getBillingServiceAccount" data-link-title="getBillingServiceAccount">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getBillingServiceAccount.ts#L54">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getBillingServiceAccount.ts#L54">
         Function <strong>getBillingServiceAccount</strong>
     </a>
 </h3>
@@ -638,7 +638,7 @@ const billingLogs = new aws.s3.Bucket("billing_logs", {
 ```
 
 <h3 class="pdoc-module-header" id="getCallerIdentity" data-link-title="getCallerIdentity">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getCallerIdentity.ts#L24">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getCallerIdentity.ts#L24">
         Function <strong>getCallerIdentity</strong>
     </a>
 </h3>
@@ -663,7 +663,7 @@ export const callerUser = current.then(current => current.userId);
 ```
 
 <h3 class="pdoc-module-header" id="getCanonicalUserId" data-link-title="getCanonicalUserId">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getCanonicalUserId.ts#L22">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getCanonicalUserId.ts#L22">
         Function <strong>getCanonicalUserId</strong>
     </a>
 </h3>
@@ -686,7 +686,7 @@ export const canonicalUserId = current.then(current => current.id);
 ```
 
 <h3 class="pdoc-module-header" id="getElasticIp" data-link-title="getElasticIp">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getElasticIp.ts#L58">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getElasticIp.ts#L58">
         Function <strong>getElasticIp</strong>
     </a>
 </h3>
@@ -745,7 +745,7 @@ const byTags = pulumi.output(aws.getElasticIp({
 ```
 
 <h3 class="pdoc-module-header" id="getIpRanges" data-link-title="getIpRanges">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getIpRanges.ts#L39">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getIpRanges.ts#L39">
         Function <strong>getIpRanges</strong>
     </a>
 </h3>
@@ -785,7 +785,7 @@ const fromEurope = new aws.ec2.SecurityGroup("fromEurope", {
 ```
 
 <h3 class="pdoc-module-header" id="getPartition" data-link-title="getPartition">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getPartition.ts#L27">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getPartition.ts#L27">
         Function <strong>getPartition</strong>
     </a>
 </h3>
@@ -813,7 +813,7 @@ const s3Policy = current.apply(current => aws.iam.getPolicyDocument({
 ```
 
 <h3 class="pdoc-module-header" id="getPrefixList" data-link-title="getPrefixList">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getPrefixList.ts#L56">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getPrefixList.ts#L56">
         Function <strong>getPrefixList</strong>
     </a>
 </h3>
@@ -870,7 +870,7 @@ const test = pulumi.output(aws.getPrefixList({
 ```
 
 <h3 class="pdoc-module-header" id="getRegion" data-link-title="getRegion">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getRegion.ts#L28">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getRegion.ts#L28">
         Function <strong>getRegion</strong>
     </a>
 </h3>
@@ -899,7 +899,7 @@ const current = pulumi.output(aws.getRegion({ async: true }));
 ```
 
 <h3 class="pdoc-module-header" id="getRegions" data-link-title="getRegions">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getRegions.ts#L48">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getRegions.ts#L48">
         Function <strong>getRegions</strong>
     </a>
 </h3>
@@ -950,7 +950,7 @@ const current = pulumi.output(aws.getRegions({
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="AFSouth1Region" data-link-title="AFSouth1Region">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/region.ts#L23">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/region.ts#L23">
         let <strong>AFSouth1Region</strong>
     </a>
 </h3>
@@ -960,7 +960,7 @@ const current = pulumi.output(aws.getRegions({
 The AFSouth1Region constant is deprecated, use Region.AFSouth1 instead.
 
 <h3 class="pdoc-module-header" id="APEast1Region" data-link-title="APEast1Region">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/region.ts#L25">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/region.ts#L25">
         let <strong>APEast1Region</strong>
     </a>
 </h3>
@@ -970,7 +970,7 @@ The AFSouth1Region constant is deprecated, use Region.AFSouth1 instead.
 The APEast1Region constant is deprecated, use Region.AFEast1 instead.
 
 <h3 class="pdoc-module-header" id="APNortheast1Region" data-link-title="APNortheast1Region">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/region.ts#L27">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/region.ts#L27">
         let <strong>APNortheast1Region</strong>
     </a>
 </h3>
@@ -980,7 +980,7 @@ The APEast1Region constant is deprecated, use Region.AFEast1 instead.
 The APNortheast1Region constant is deprecated, use Region.AFNortheast1 instead.
 
 <h3 class="pdoc-module-header" id="APNortheast2Region" data-link-title="APNortheast2Region">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/region.ts#L29">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/region.ts#L29">
         let <strong>APNortheast2Region</strong>
     </a>
 </h3>
@@ -990,7 +990,7 @@ The APNortheast1Region constant is deprecated, use Region.AFNortheast1 instead.
 The APNortheast2Region constant is deprecated, use Region.APNortheast2 instead.
 
 <h3 class="pdoc-module-header" id="APSouth1Region" data-link-title="APSouth1Region">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/region.ts#L31">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/region.ts#L31">
         let <strong>APSouth1Region</strong>
     </a>
 </h3>
@@ -1000,7 +1000,7 @@ The APNortheast2Region constant is deprecated, use Region.APNortheast2 instead.
 The APSouth1Region constant is deprecated, use Region.APSouth1 instead.
 
 <h3 class="pdoc-module-header" id="APSoutheast1Region" data-link-title="APSoutheast1Region">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/region.ts#L35">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/region.ts#L35">
         let <strong>APSoutheast1Region</strong>
     </a>
 </h3>
@@ -1010,7 +1010,7 @@ The APSouth1Region constant is deprecated, use Region.APSouth1 instead.
 The APSoutheast1Region constant is deprecated, use Region.APSoutheast1 instead.
 
 <h3 class="pdoc-module-header" id="APSouthEast2Region" data-link-title="APSouthEast2Region">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/region.ts#L33">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/region.ts#L33">
         let <strong>APSouthEast2Region</strong>
     </a>
 </h3>
@@ -1020,7 +1020,7 @@ The APSoutheast1Region constant is deprecated, use Region.APSoutheast1 instead.
 The APSouthEast2Region constant is deprecated, use Region.APSoutheast2 instead.
 
 <h3 class="pdoc-module-header" id="ARN" data-link-title="ARN">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/arn.ts#L19">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/arn.ts#L19">
         type <strong>ARN</strong>
     </a>
 </h3>
@@ -1030,7 +1030,7 @@ The APSouthEast2Region constant is deprecated, use Region.APSoutheast2 instead.
 An ARN is an Amazon Resource Name, and uniquely identifies a region globally across all accounts and regions.
 
 <h3 class="pdoc-module-header" id="CACentralRegion" data-link-title="CACentralRegion">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/region.ts#L37">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/region.ts#L37">
         let <strong>CACentralRegion</strong>
     </a>
 </h3>
@@ -1040,7 +1040,7 @@ An ARN is an Amazon Resource Name, and uniquely identifies a region globally acr
 The CACentralRegion constant is deprecated, use Region.CACentral1 instead.
 
 <h3 class="pdoc-module-header" id="CNNorth1Region" data-link-title="CNNorth1Region">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/region.ts#L39">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/region.ts#L39">
         let <strong>CNNorth1Region</strong>
     </a>
 </h3>
@@ -1050,7 +1050,7 @@ The CACentralRegion constant is deprecated, use Region.CACentral1 instead.
 The CNNorth1Region constant is deprecated, use Region.CNNorth1 instead.
 
 <h3 class="pdoc-module-header" id="CNNorthWest1Region" data-link-title="CNNorthWest1Region">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/region.ts#L41">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/region.ts#L41">
         let <strong>CNNorthWest1Region</strong>
     </a>
 </h3>
@@ -1060,7 +1060,7 @@ The CNNorth1Region constant is deprecated, use Region.CNNorth1 instead.
 The CNNorthWest1Region constant is deprecated, use Region.CNNorthwest1 instead.
 
 <h3 class="pdoc-module-header" id="EUCentral1Region" data-link-title="EUCentral1Region">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/region.ts#L43">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/region.ts#L43">
         let <strong>EUCentral1Region</strong>
     </a>
 </h3>
@@ -1070,7 +1070,7 @@ The CNNorthWest1Region constant is deprecated, use Region.CNNorthwest1 instead.
 The EUCentral1Region constant is deprecated, use Region.EUCentral1 instead.
 
 <h3 class="pdoc-module-header" id="EUNorth1Region" data-link-title="EUNorth1Region">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/region.ts#L45">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/region.ts#L45">
         let <strong>EUNorth1Region</strong>
     </a>
 </h3>
@@ -1080,7 +1080,7 @@ The EUCentral1Region constant is deprecated, use Region.EUCentral1 instead.
 The EUNorth1Region constant is deprecated, use Region.EUNorth1 instead.
 
 <h3 class="pdoc-module-header" id="EUSouth1Region" data-link-title="EUSouth1Region">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/region.ts#L53">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/region.ts#L53">
         let <strong>EUSouth1Region</strong>
     </a>
 </h3>
@@ -1090,7 +1090,7 @@ The EUNorth1Region constant is deprecated, use Region.EUNorth1 instead.
 The EUSouth1Region constant is deprecated, use Region.EUSouth1 instead.
 
 <h3 class="pdoc-module-header" id="EUWest1Region" data-link-title="EUWest1Region">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/region.ts#L47">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/region.ts#L47">
         let <strong>EUWest1Region</strong>
     </a>
 </h3>
@@ -1100,7 +1100,7 @@ The EUSouth1Region constant is deprecated, use Region.EUSouth1 instead.
 The EUWest1Region constant is deprecated, use Region.EUWest1 instead.
 
 <h3 class="pdoc-module-header" id="EUWest2Region" data-link-title="EUWest2Region">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/region.ts#L49">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/region.ts#L49">
         let <strong>EUWest2Region</strong>
     </a>
 </h3>
@@ -1110,7 +1110,7 @@ The EUWest1Region constant is deprecated, use Region.EUWest1 instead.
 The EUWest2Region constant is deprecated, use Region.EUWest2 instead.
 
 <h3 class="pdoc-module-header" id="EUWest3Region" data-link-title="EUWest3Region">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/region.ts#L51">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/region.ts#L51">
         let <strong>EUWest3Region</strong>
     </a>
 </h3>
@@ -1120,7 +1120,7 @@ The EUWest2Region constant is deprecated, use Region.EUWest2 instead.
 The EUWest3Region constant is deprecated, use Region.EUWest3 instead.
 
 <h3 class="pdoc-module-header" id="GetAmiArgs" data-link-title="GetAmiArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getAmi.ts#L61">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getAmi.ts#L61">
         interface <strong>GetAmiArgs</strong>
     </a>
 </h3>
@@ -1130,7 +1130,7 @@ The EUWest3Region constant is deprecated, use Region.EUWest3 instead.
 A collection of arguments for invoking getAmi.
 
 <h4 class="pdoc-member-header" id="GetAmiArgs-executableUsers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getAmi.ts#L66">property <b>executableUsers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getAmi.ts#L66">property <b>executableUsers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>executableUsers?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1139,7 +1139,7 @@ Limit search to users with *explicit* launch permission on
 the image. Valid items are the numeric account ID or `self`.
 
 <h4 class="pdoc-member-header" id="GetAmiArgs-filters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getAmi.ts#L72">property <b>filters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getAmi.ts#L72">property <b>filters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetAmiFilter'>GetAmiFilter</a>[];</code></pre>
@@ -1149,7 +1149,7 @@ several valid keys, for a full reference, check out
 [describe-images in the AWS CLI reference][1].
 
 <h4 class="pdoc-member-header" id="GetAmiArgs-mostRecent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getAmi.ts#L77">property <b>mostRecent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getAmi.ts#L77">property <b>mostRecent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mostRecent?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -1158,7 +1158,7 @@ If more than one result is returned, use the most
 recent AMI.
 
 <h4 class="pdoc-member-header" id="GetAmiArgs-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getAmi.ts#L85">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getAmi.ts#L85">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1170,7 +1170,7 @@ impact if the result is large. It is recommended to combine this with other
 options to narrow down the list AWS returns.
 
 <h4 class="pdoc-member-header" id="GetAmiArgs-owners">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getAmi.ts#L89">property <b>owners</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getAmi.ts#L89">property <b>owners</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>owners: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1178,7 +1178,7 @@ options to narrow down the list AWS returns.
 List of AMI owners to limit search. At least 1 value must be specified. Valid values: an AWS account ID, `self` (the current account), or an AWS owner alias (e.g. `amazon`, `aws-marketplace`, `microsoft`).
 
 <h4 class="pdoc-member-header" id="GetAmiArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getAmi.ts#L95">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getAmi.ts#L95">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
@@ -1188,7 +1188,7 @@ Any tags assigned to the image.
 * `tags.#.value` - The value of the tag.
 
 <h3 class="pdoc-module-header" id="GetAmiIdsArgs" data-link-title="GetAmiIdsArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getAmiIds.ts#L46">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getAmiIds.ts#L46">
         interface <strong>GetAmiIdsArgs</strong>
     </a>
 </h3>
@@ -1198,7 +1198,7 @@ Any tags assigned to the image.
 A collection of arguments for invoking getAmiIds.
 
 <h4 class="pdoc-member-header" id="GetAmiIdsArgs-executableUsers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getAmiIds.ts#L51">property <b>executableUsers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getAmiIds.ts#L51">property <b>executableUsers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>executableUsers?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1207,7 +1207,7 @@ Limit search to users with *explicit* launch
 permission on  the image. Valid items are the numeric account ID or `self`.
 
 <h4 class="pdoc-member-header" id="GetAmiIdsArgs-filters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getAmiIds.ts#L57">property <b>filters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getAmiIds.ts#L57">property <b>filters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetAmiIdsFilter'>GetAmiIdsFilter</a>[];</code></pre>
@@ -1217,7 +1217,7 @@ are several valid keys, for a full reference, check out
 [describe-images in the AWS CLI reference][1].
 
 <h4 class="pdoc-member-header" id="GetAmiIdsArgs-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getAmiIds.ts#L65">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getAmiIds.ts#L65">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1229,7 +1229,7 @@ impact if the result is large. It is recommended to combine this with other
 options to narrow down the list AWS returns.
 
 <h4 class="pdoc-member-header" id="GetAmiIdsArgs-owners">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getAmiIds.ts#L69">property <b>owners</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getAmiIds.ts#L69">property <b>owners</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>owners: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1237,7 +1237,7 @@ options to narrow down the list AWS returns.
 List of AMI owners to limit search. At least 1 value must be specified. Valid values: an AWS account ID, `self` (the current account), or an AWS owner alias (e.g. `amazon`, `aws-marketplace`, `microsoft`).
 
 <h4 class="pdoc-member-header" id="GetAmiIdsArgs-sortAscending">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getAmiIds.ts#L73">property <b>sortAscending</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getAmiIds.ts#L73">property <b>sortAscending</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sortAscending?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -1245,7 +1245,7 @@ List of AMI owners to limit search. At least 1 value must be specified. Valid va
 Used to sort AMIs by creation time.
 
 <h3 class="pdoc-module-header" id="GetAmiIdsResult" data-link-title="GetAmiIdsResult">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getAmiIds.ts#L79">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getAmiIds.ts#L79">
         interface <strong>GetAmiIdsResult</strong>
     </a>
 </h3>
@@ -1255,17 +1255,17 @@ Used to sort AMIs by creation time.
 A collection of values returned by getAmiIds.
 
 <h4 class="pdoc-member-header" id="GetAmiIdsResult-executableUsers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getAmiIds.ts#L80">property <b>executableUsers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getAmiIds.ts#L80">property <b>executableUsers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>executableUsers?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetAmiIdsResult-filters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getAmiIds.ts#L81">property <b>filters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getAmiIds.ts#L81">property <b>filters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetAmiIdsFilter'>GetAmiIdsFilter</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetAmiIdsResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getAmiIds.ts#L85">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getAmiIds.ts#L85">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1273,27 +1273,27 @@ A collection of values returned by getAmiIds.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetAmiIdsResult-ids">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getAmiIds.ts#L86">property <b>ids</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getAmiIds.ts#L86">property <b>ids</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ids: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetAmiIdsResult-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getAmiIds.ts#L87">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getAmiIds.ts#L87">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAmiIdsResult-owners">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getAmiIds.ts#L88">property <b>owners</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getAmiIds.ts#L88">property <b>owners</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>owners: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetAmiIdsResult-sortAscending">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getAmiIds.ts#L89">property <b>sortAscending</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getAmiIds.ts#L89">property <b>sortAscending</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sortAscending?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetAmiResult" data-link-title="GetAmiResult">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getAmi.ts#L101">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getAmi.ts#L101">
         interface <strong>GetAmiResult</strong>
     </a>
 </h3>
@@ -1303,7 +1303,7 @@ The provider-assigned unique ID for this managed resource.
 A collection of values returned by getAmi.
 
 <h4 class="pdoc-member-header" id="GetAmiResult-architecture">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getAmi.ts#L105">property <b>architecture</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getAmi.ts#L105">property <b>architecture</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>architecture: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1311,7 +1311,7 @@ A collection of values returned by getAmi.
 The OS architecture of the AMI (ie: `i386` or `x8664`).
 
 <h4 class="pdoc-member-header" id="GetAmiResult-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getAmi.ts#L109">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getAmi.ts#L109">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1319,7 +1319,7 @@ The OS architecture of the AMI (ie: `i386` or `x8664`).
 The ARN of the AMI.
 
 <h4 class="pdoc-member-header" id="GetAmiResult-blockDeviceMappings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getAmi.ts#L127">property <b>blockDeviceMappings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getAmi.ts#L128">property <b>blockDeviceMappings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>blockDeviceMappings: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetAmiBlockDeviceMapping'>GetAmiBlockDeviceMapping</a>[];</code></pre>
@@ -1334,6 +1334,7 @@ is encrypted.
 not a provisioned IOPS image, otherwise the supported IOPS count.
 * `block_device_mappings.#.ebs.snapshot_id` - The ID of the snapshot.
 * `block_device_mappings.#.ebs.volume_size` - The size of the volume, in GiB.
+* `block_device_mappings.#.ebs.throughput` - The throughput that the EBS volume supports, in MiB/s.
 * `block_device_mappings.#.ebs.volume_type` - The volume type.
 * `block_device_mappings.#.no_device` - Suppresses the specified device
 included in the block device mapping of the AMI.
@@ -1341,7 +1342,7 @@ included in the block device mapping of the AMI.
 instance stores).
 
 <h4 class="pdoc-member-header" id="GetAmiResult-creationDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getAmi.ts#L131">property <b>creationDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getAmi.ts#L132">property <b>creationDate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>creationDate: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1349,7 +1350,7 @@ instance stores).
 The date and time the image was created.
 
 <h4 class="pdoc-member-header" id="GetAmiResult-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getAmi.ts#L136">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getAmi.ts#L137">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1358,17 +1359,17 @@ The description of the AMI that was provided during image
 creation.
 
 <h4 class="pdoc-member-header" id="GetAmiResult-executableUsers">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getAmi.ts#L137">property <b>executableUsers</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getAmi.ts#L138">property <b>executableUsers</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>executableUsers?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetAmiResult-filters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getAmi.ts#L138">property <b>filters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getAmi.ts#L139">property <b>filters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetAmiFilter'>GetAmiFilter</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetAmiResult-hypervisor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getAmi.ts#L142">property <b>hypervisor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getAmi.ts#L143">property <b>hypervisor</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>hypervisor: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1376,7 +1377,7 @@ creation.
 The hypervisor type of the image.
 
 <h4 class="pdoc-member-header" id="GetAmiResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getAmi.ts#L146">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getAmi.ts#L147">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1384,7 +1385,7 @@ The hypervisor type of the image.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetAmiResult-imageId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getAmi.ts#L150">property <b>imageId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getAmi.ts#L151">property <b>imageId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>imageId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1392,7 +1393,7 @@ The provider-assigned unique ID for this managed resource.
 The ID of the AMI. Should be the same as the resource `id`.
 
 <h4 class="pdoc-member-header" id="GetAmiResult-imageLocation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getAmi.ts#L154">property <b>imageLocation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getAmi.ts#L155">property <b>imageLocation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>imageLocation: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1400,7 +1401,7 @@ The ID of the AMI. Should be the same as the resource `id`.
 The location of the AMI.
 
 <h4 class="pdoc-member-header" id="GetAmiResult-imageOwnerAlias">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getAmi.ts#L159">property <b>imageOwnerAlias</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getAmi.ts#L160">property <b>imageOwnerAlias</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>imageOwnerAlias: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1409,7 +1410,7 @@ The AWS account alias (for example, `amazon`, `self`) or
 the AWS account ID of the AMI owner.
 
 <h4 class="pdoc-member-header" id="GetAmiResult-imageType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getAmi.ts#L163">property <b>imageType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getAmi.ts#L164">property <b>imageType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>imageType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1417,7 +1418,7 @@ the AWS account ID of the AMI owner.
 The type of image.
 
 <h4 class="pdoc-member-header" id="GetAmiResult-kernelId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getAmi.ts#L168">property <b>kernelId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getAmi.ts#L169">property <b>kernelId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kernelId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1426,12 +1427,12 @@ The kernel associated with the image, if any. Only applicable
 for machine images.
 
 <h4 class="pdoc-member-header" id="GetAmiResult-mostRecent">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getAmi.ts#L169">property <b>mostRecent</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getAmi.ts#L170">property <b>mostRecent</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mostRecent?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAmiResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getAmi.ts#L173">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getAmi.ts#L174">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1439,12 +1440,12 @@ for machine images.
 The name of the AMI that was provided during image creation.
 
 <h4 class="pdoc-member-header" id="GetAmiResult-nameRegex">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getAmi.ts#L174">property <b>nameRegex</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getAmi.ts#L175">property <b>nameRegex</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameRegex?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAmiResult-ownerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getAmi.ts#L178">property <b>ownerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getAmi.ts#L179">property <b>ownerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ownerId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1452,12 +1453,12 @@ The name of the AMI that was provided during image creation.
 The AWS account ID of the image owner.
 
 <h4 class="pdoc-member-header" id="GetAmiResult-owners">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getAmi.ts#L179">property <b>owners</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getAmi.ts#L180">property <b>owners</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>owners: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetAmiResult-platform">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getAmi.ts#L183">property <b>platform</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getAmi.ts#L184">property <b>platform</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>platform: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1465,7 +1466,7 @@ The AWS account ID of the image owner.
 The value is Windows for `Windows` AMIs; otherwise blank.
 
 <h4 class="pdoc-member-header" id="GetAmiResult-productCodes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getAmi.ts#L189">property <b>productCodes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getAmi.ts#L190">property <b>productCodes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>productCodes: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetAmiProductCode'>GetAmiProductCode</a>[];</code></pre>
@@ -1475,7 +1476,7 @@ Any product codes associated with the AMI.
 * `product_codes.#.product_code_type` - The type of product code.
 
 <h4 class="pdoc-member-header" id="GetAmiResult-public">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getAmi.ts#L193">property <b>public</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getAmi.ts#L194">property <b>public</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>public: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
@@ -1483,7 +1484,7 @@ Any product codes associated with the AMI.
 `true` if the image has public launch permissions.
 
 <h4 class="pdoc-member-header" id="GetAmiResult-ramdiskId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getAmi.ts#L198">property <b>ramdiskId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getAmi.ts#L199">property <b>ramdiskId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ramdiskId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1492,7 +1493,7 @@ The RAM disk associated with the image, if any. Only applicable
 for machine images.
 
 <h4 class="pdoc-member-header" id="GetAmiResult-rootDeviceName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getAmi.ts#L202">property <b>rootDeviceName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getAmi.ts#L203">property <b>rootDeviceName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rootDeviceName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1500,7 +1501,7 @@ for machine images.
 The device name of the root device.
 
 <h4 class="pdoc-member-header" id="GetAmiResult-rootDeviceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getAmi.ts#L206">property <b>rootDeviceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getAmi.ts#L207">property <b>rootDeviceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rootDeviceType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1508,7 +1509,7 @@ The device name of the root device.
 The type of root device (ie: `ebs` or `instance-store`).
 
 <h4 class="pdoc-member-header" id="GetAmiResult-rootSnapshotId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getAmi.ts#L211">property <b>rootSnapshotId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getAmi.ts#L212">property <b>rootSnapshotId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rootSnapshotId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1517,7 +1518,7 @@ The snapshot id associated with the root device, if any
 (only applies to `ebs` root devices).
 
 <h4 class="pdoc-member-header" id="GetAmiResult-sriovNetSupport">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getAmi.ts#L215">property <b>sriovNetSupport</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getAmi.ts#L216">property <b>sriovNetSupport</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sriovNetSupport: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1525,7 +1526,7 @@ The snapshot id associated with the root device, if any
 Specifies whether enhanced networking is enabled.
 
 <h4 class="pdoc-member-header" id="GetAmiResult-state">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getAmi.ts#L220">property <b>state</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getAmi.ts#L221">property <b>state</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>state: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1534,7 +1535,7 @@ The current state of the AMI. If the state is `available`, the image
 is successfully registered and can be used to launch an instance.
 
 <h4 class="pdoc-member-header" id="GetAmiResult-stateReason">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getAmi.ts#L226">property <b>stateReason</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getAmi.ts#L227">property <b>stateReason</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>stateReason: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
@@ -1544,7 +1545,7 @@ Describes a state change. Fields are `UNSET` if not available.
 * `state_reason.message` - The message for the state change.
 
 <h4 class="pdoc-member-header" id="GetAmiResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getAmi.ts#L232">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getAmi.ts#L233">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
@@ -1554,7 +1555,7 @@ Any tags assigned to the image.
 * `tags.#.value` - The value of the tag.
 
 <h4 class="pdoc-member-header" id="GetAmiResult-virtualizationType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getAmi.ts#L237">property <b>virtualizationType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getAmi.ts#L238">property <b>virtualizationType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>virtualizationType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1563,7 +1564,7 @@ The type of virtualization of the AMI (ie: `hvm` or
 `paravirtual`).
 
 <h3 class="pdoc-module-header" id="GetArnArgs" data-link-title="GetArnArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getArn.ts#L38">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getArn.ts#L38">
         interface <strong>GetArnArgs</strong>
     </a>
 </h3>
@@ -1573,7 +1574,7 @@ The type of virtualization of the AMI (ie: `hvm` or
 A collection of arguments for invoking getArn.
 
 <h4 class="pdoc-member-header" id="GetArnArgs-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getArn.ts#L42">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getArn.ts#L42">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1581,7 +1582,7 @@ A collection of arguments for invoking getArn.
 The ARN to parse.
 
 <h3 class="pdoc-module-header" id="GetArnResult" data-link-title="GetArnResult">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getArn.ts#L48">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getArn.ts#L48">
         interface <strong>GetArnResult</strong>
     </a>
 </h3>
@@ -1591,7 +1592,7 @@ The ARN to parse.
 A collection of values returned by getArn.
 
 <h4 class="pdoc-member-header" id="GetArnResult-account">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getArn.ts#L52">property <b>account</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getArn.ts#L52">property <b>account</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>account: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1599,12 +1600,12 @@ A collection of values returned by getArn.
 The [ID](https://docs.aws.amazon.com/general/latest/gr/acct-identifiers.html) of the AWS account that owns the resource, without the hyphens.
 
 <h4 class="pdoc-member-header" id="GetArnResult-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getArn.ts#L53">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getArn.ts#L53">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetArnResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getArn.ts#L57">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getArn.ts#L57">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1612,7 +1613,7 @@ The [ID](https://docs.aws.amazon.com/general/latest/gr/acct-identifiers.html) of
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetArnResult-partition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getArn.ts#L61">property <b>partition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getArn.ts#L61">property <b>partition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>partition: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1620,7 +1621,7 @@ The provider-assigned unique ID for this managed resource.
 The partition that the resource is in.
 
 <h4 class="pdoc-member-header" id="GetArnResult-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getArn.ts#L66">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getArn.ts#L66">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1629,7 +1630,7 @@ The region the resource resides in.
 Note that the ARNs for some resources do not require a region, so this component might be omitted.
 
 <h4 class="pdoc-member-header" id="GetArnResult-resource">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getArn.ts#L71">property <b>resource</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getArn.ts#L71">property <b>resource</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resource: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1638,7 +1639,7 @@ The content of this part of the ARN varies by service.
 It often includes an indicator of the type of resource—for example, an IAM user or Amazon RDS database —followed by a slash (/) or a colon (:), followed by the resource name itself.
 
 <h4 class="pdoc-member-header" id="GetArnResult-service">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getArn.ts#L75">property <b>service</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getArn.ts#L75">property <b>service</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>service: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1646,7 +1647,7 @@ It often includes an indicator of the type of resource—for example, an IAM use
 The [service namespace](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html#genref-aws-service-namespaces) that identifies the AWS product.
 
 <h3 class="pdoc-module-header" id="GetAutoscalingGroupsArgs" data-link-title="GetAutoscalingGroupsArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getAutoscalingGroups.ts#L59">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getAutoscalingGroups.ts#L59">
         interface <strong>GetAutoscalingGroupsArgs</strong>
     </a>
 </h3>
@@ -1656,7 +1657,7 @@ The [service namespace](https://docs.aws.amazon.com/general/latest/gr/aws-arns-a
 A collection of arguments for invoking getAutoscalingGroups.
 
 <h4 class="pdoc-member-header" id="GetAutoscalingGroupsArgs-filters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getAutoscalingGroups.ts#L63">property <b>filters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getAutoscalingGroups.ts#L63">property <b>filters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetAutoscalingGroupsFilter'>GetAutoscalingGroupsFilter</a>[];</code></pre>
@@ -1664,7 +1665,7 @@ A collection of arguments for invoking getAutoscalingGroups.
 A filter used to scope the list e.g. by tags. See [related docs](http://docs.aws.amazon.com/AutoScaling/latest/APIReference/API_Filter.html).
 
 <h3 class="pdoc-module-header" id="GetAutoscalingGroupsResult" data-link-title="GetAutoscalingGroupsResult">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getAutoscalingGroups.ts#L69">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getAutoscalingGroups.ts#L69">
         interface <strong>GetAutoscalingGroupsResult</strong>
     </a>
 </h3>
@@ -1674,7 +1675,7 @@ A filter used to scope the list e.g. by tags. See [related docs](http://docs.aws
 A collection of values returned by getAutoscalingGroups.
 
 <h4 class="pdoc-member-header" id="GetAutoscalingGroupsResult-arns">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getAutoscalingGroups.ts#L73">property <b>arns</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getAutoscalingGroups.ts#L73">property <b>arns</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arns: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1682,12 +1683,12 @@ A collection of values returned by getAutoscalingGroups.
 A list of the Autoscaling Groups Arns in the current region.
 
 <h4 class="pdoc-member-header" id="GetAutoscalingGroupsResult-filters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getAutoscalingGroups.ts#L74">property <b>filters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getAutoscalingGroups.ts#L74">property <b>filters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetAutoscalingGroupsFilter'>GetAutoscalingGroupsFilter</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetAutoscalingGroupsResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getAutoscalingGroups.ts#L78">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getAutoscalingGroups.ts#L78">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1695,7 +1696,7 @@ A list of the Autoscaling Groups Arns in the current region.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetAutoscalingGroupsResult-names">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getAutoscalingGroups.ts#L82">property <b>names</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getAutoscalingGroups.ts#L82">property <b>names</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>names: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1703,7 +1704,7 @@ The provider-assigned unique ID for this managed resource.
 A list of the Autoscaling Groups in the current region.
 
 <h3 class="pdoc-module-header" id="GetAvailabilityZoneArgs" data-link-title="GetAvailabilityZoneArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getAvailabilityZone.ts#L42">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getAvailabilityZone.ts#L42">
         interface <strong>GetAvailabilityZoneArgs</strong>
     </a>
 </h3>
@@ -1713,7 +1714,7 @@ A list of the Autoscaling Groups in the current region.
 A collection of arguments for invoking getAvailabilityZone.
 
 <h4 class="pdoc-member-header" id="GetAvailabilityZoneArgs-allAvailabilityZones">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getAvailabilityZone.ts#L46">property <b>allAvailabilityZones</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getAvailabilityZone.ts#L46">property <b>allAvailabilityZones</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allAvailabilityZones?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -1721,7 +1722,7 @@ A collection of arguments for invoking getAvailabilityZone.
 Set to `true` to include all Availability Zones and Local Zones regardless of your opt in status.
 
 <h4 class="pdoc-member-header" id="GetAvailabilityZoneArgs-filters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getAvailabilityZone.ts#L50">property <b>filters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getAvailabilityZone.ts#L50">property <b>filters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetAvailabilityZoneFilter'>GetAvailabilityZoneFilter</a>[];</code></pre>
@@ -1729,7 +1730,7 @@ Set to `true` to include all Availability Zones and Local Zones regardless of yo
 Configuration block(s) for filtering. Detailed below.
 
 <h4 class="pdoc-member-header" id="GetAvailabilityZoneArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getAvailabilityZone.ts#L54">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getAvailabilityZone.ts#L54">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1737,7 +1738,7 @@ Configuration block(s) for filtering. Detailed below.
 The name of the filter field. Valid values can be found in the [EC2 DescribeAvailabilityZones API Reference](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeAvailabilityZones.html).
 
 <h4 class="pdoc-member-header" id="GetAvailabilityZoneArgs-state">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getAvailabilityZone.ts#L58">property <b>state</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getAvailabilityZone.ts#L58">property <b>state</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>state?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1745,7 +1746,7 @@ The name of the filter field. Valid values can be found in the [EC2 DescribeAvai
 A specific availability zone state to require. May be any of `"available"`, `"information"` or `"impaired"`.
 
 <h4 class="pdoc-member-header" id="GetAvailabilityZoneArgs-zoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getAvailabilityZone.ts#L62">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getAvailabilityZone.ts#L62">property <b>zoneId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zoneId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1753,7 +1754,7 @@ A specific availability zone state to require. May be any of `"available"`, `"in
 The zone ID of the availability zone to select.
 
 <h3 class="pdoc-module-header" id="GetAvailabilityZoneResult" data-link-title="GetAvailabilityZoneResult">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getAvailabilityZone.ts#L68">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getAvailabilityZone.ts#L68">
         interface <strong>GetAvailabilityZoneResult</strong>
     </a>
 </h3>
@@ -1763,17 +1764,17 @@ The zone ID of the availability zone to select.
 A collection of values returned by getAvailabilityZone.
 
 <h4 class="pdoc-member-header" id="GetAvailabilityZoneResult-allAvailabilityZones">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getAvailabilityZone.ts#L69">property <b>allAvailabilityZones</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getAvailabilityZone.ts#L69">property <b>allAvailabilityZones</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allAvailabilityZones?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAvailabilityZoneResult-filters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getAvailabilityZone.ts#L70">property <b>filters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getAvailabilityZone.ts#L70">property <b>filters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetAvailabilityZoneFilter'>GetAvailabilityZoneFilter</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetAvailabilityZoneResult-groupName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getAvailabilityZone.ts#L74">property <b>groupName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getAvailabilityZone.ts#L74">property <b>groupName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1781,7 +1782,7 @@ A collection of values returned by getAvailabilityZone.
 For Availability Zones, this is the same value as the Region name. For Local Zones, the name of the associated group, for example `us-west-2-lax-1`.
 
 <h4 class="pdoc-member-header" id="GetAvailabilityZoneResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getAvailabilityZone.ts#L78">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getAvailabilityZone.ts#L78">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1789,12 +1790,12 @@ For Availability Zones, this is the same value as the Region name. For Local Zon
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetAvailabilityZoneResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getAvailabilityZone.ts#L79">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getAvailabilityZone.ts#L79">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAvailabilityZoneResult-nameSuffix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getAvailabilityZone.ts#L85">property <b>nameSuffix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getAvailabilityZone.ts#L85">property <b>nameSuffix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>nameSuffix: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1804,7 +1805,7 @@ For Availability Zones this is usually a single letter, for example `a` for the 
 For Local and Wavelength Zones this is a longer string, for example `wl1-sfo-wlz-1` for the `us-west-2-wl1-sfo-wlz-1` zone.
 
 <h4 class="pdoc-member-header" id="GetAvailabilityZoneResult-networkBorderGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getAvailabilityZone.ts#L89">property <b>networkBorderGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getAvailabilityZone.ts#L89">property <b>networkBorderGroup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>networkBorderGroup: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1812,7 +1813,7 @@ For Local and Wavelength Zones this is a longer string, for example `wl1-sfo-wlz
 The name of the location from which the address is advertised.
 
 <h4 class="pdoc-member-header" id="GetAvailabilityZoneResult-optInStatus">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getAvailabilityZone.ts#L93">property <b>optInStatus</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getAvailabilityZone.ts#L93">property <b>optInStatus</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>optInStatus: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1820,7 +1821,7 @@ The name of the location from which the address is advertised.
 For Availability Zones, this always has the value of `opt-in-not-required`. For Local Zones, this is the opt in status. The possible values are `opted-in` and `not-opted-in`.
 
 <h4 class="pdoc-member-header" id="GetAvailabilityZoneResult-parentZoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getAvailabilityZone.ts#L97">property <b>parentZoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getAvailabilityZone.ts#L97">property <b>parentZoneId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parentZoneId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1828,7 +1829,7 @@ For Availability Zones, this always has the value of `opt-in-not-required`. For 
 The ID of the zone that handles some of the Local Zone or Wavelength Zone control plane operations, such as API calls.
 
 <h4 class="pdoc-member-header" id="GetAvailabilityZoneResult-parentZoneName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getAvailabilityZone.ts#L101">property <b>parentZoneName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getAvailabilityZone.ts#L101">property <b>parentZoneName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parentZoneName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1836,7 +1837,7 @@ The ID of the zone that handles some of the Local Zone or Wavelength Zone contro
 The name of the zone that handles some of the Local Zone or Wavelength Zone control plane operations, such as API calls.
 
 <h4 class="pdoc-member-header" id="GetAvailabilityZoneResult-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getAvailabilityZone.ts#L105">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getAvailabilityZone.ts#L105">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1844,17 +1845,17 @@ The name of the zone that handles some of the Local Zone or Wavelength Zone cont
 The region where the selected availability zone resides. This is always the region selected on the provider, since this data source searches only within that region.
 
 <h4 class="pdoc-member-header" id="GetAvailabilityZoneResult-state">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getAvailabilityZone.ts#L106">property <b>state</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getAvailabilityZone.ts#L106">property <b>state</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>state: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAvailabilityZoneResult-zoneId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getAvailabilityZone.ts#L107">property <b>zoneId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getAvailabilityZone.ts#L107">property <b>zoneId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zoneId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAvailabilityZoneResult-zoneType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getAvailabilityZone.ts#L111">property <b>zoneType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getAvailabilityZone.ts#L111">property <b>zoneType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zoneType: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1862,7 +1863,7 @@ The region where the selected availability zone resides. This is always the regi
 The type of zone. Values are `availability-zone`, `local-zone`, and `wavelength-zone`.
 
 <h3 class="pdoc-module-header" id="GetAvailabilityZonesArgs" data-link-title="GetAvailabilityZonesArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getAvailabilityZones.ts#L88">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getAvailabilityZones.ts#L88">
         interface <strong>GetAvailabilityZonesArgs</strong>
     </a>
 </h3>
@@ -1872,7 +1873,7 @@ The type of zone. Values are `availability-zone`, `local-zone`, and `wavelength-
 A collection of arguments for invoking getAvailabilityZones.
 
 <h4 class="pdoc-member-header" id="GetAvailabilityZonesArgs-allAvailabilityZones">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getAvailabilityZones.ts#L92">property <b>allAvailabilityZones</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getAvailabilityZones.ts#L92">property <b>allAvailabilityZones</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allAvailabilityZones?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -1880,7 +1881,7 @@ A collection of arguments for invoking getAvailabilityZones.
 Set to `true` to include all Availability Zones and Local Zones regardless of your opt in status.
 
 <h4 class="pdoc-member-header" id="GetAvailabilityZonesArgs-excludeNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getAvailabilityZones.ts#L96">property <b>excludeNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getAvailabilityZones.ts#L96">property <b>excludeNames</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>excludeNames?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1888,7 +1889,7 @@ Set to `true` to include all Availability Zones and Local Zones regardless of yo
 List of Availability Zone names to exclude.
 
 <h4 class="pdoc-member-header" id="GetAvailabilityZonesArgs-excludeZoneIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getAvailabilityZones.ts#L100">property <b>excludeZoneIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getAvailabilityZones.ts#L100">property <b>excludeZoneIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>excludeZoneIds?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1896,7 +1897,7 @@ List of Availability Zone names to exclude.
 List of Availability Zone IDs to exclude.
 
 <h4 class="pdoc-member-header" id="GetAvailabilityZonesArgs-filters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getAvailabilityZones.ts#L104">property <b>filters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getAvailabilityZones.ts#L104">property <b>filters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetAvailabilityZonesFilter'>GetAvailabilityZonesFilter</a>[];</code></pre>
@@ -1904,7 +1905,7 @@ List of Availability Zone IDs to exclude.
 Configuration block(s) for filtering. Detailed below.
 
 <h4 class="pdoc-member-header" id="GetAvailabilityZonesArgs-state">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getAvailabilityZones.ts#L111">property <b>state</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getAvailabilityZones.ts#L111">property <b>state</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>state?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1915,7 +1916,7 @@ current state. Can be either `"available"`, `"information"`, `"impaired"` or
 to which the underlying AWS account has access, regardless of their state.
 
 <h3 class="pdoc-module-header" id="GetAvailabilityZonesResult" data-link-title="GetAvailabilityZonesResult">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getAvailabilityZones.ts#L117">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getAvailabilityZones.ts#L117">
         interface <strong>GetAvailabilityZonesResult</strong>
     </a>
 </h3>
@@ -1925,32 +1926,32 @@ to which the underlying AWS account has access, regardless of their state.
 A collection of values returned by getAvailabilityZones.
 
 <h4 class="pdoc-member-header" id="GetAvailabilityZonesResult-allAvailabilityZones">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getAvailabilityZones.ts#L118">property <b>allAvailabilityZones</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getAvailabilityZones.ts#L118">property <b>allAvailabilityZones</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allAvailabilityZones?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAvailabilityZonesResult-excludeNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getAvailabilityZones.ts#L119">property <b>excludeNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getAvailabilityZones.ts#L119">property <b>excludeNames</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>excludeNames?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetAvailabilityZonesResult-excludeZoneIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getAvailabilityZones.ts#L120">property <b>excludeZoneIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getAvailabilityZones.ts#L120">property <b>excludeZoneIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>excludeZoneIds?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetAvailabilityZonesResult-filters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getAvailabilityZones.ts#L121">property <b>filters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getAvailabilityZones.ts#L121">property <b>filters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetAvailabilityZonesFilter'>GetAvailabilityZonesFilter</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetAvailabilityZonesResult-groupNames">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getAvailabilityZones.ts#L122">property <b>groupNames</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getAvailabilityZones.ts#L122">property <b>groupNames</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupNames: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetAvailabilityZonesResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getAvailabilityZones.ts#L126">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getAvailabilityZones.ts#L126">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1958,7 +1959,7 @@ A collection of values returned by getAvailabilityZones.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetAvailabilityZonesResult-names">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getAvailabilityZones.ts#L130">property <b>names</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getAvailabilityZones.ts#L130">property <b>names</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>names: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1966,12 +1967,12 @@ The provider-assigned unique ID for this managed resource.
 A list of the Availability Zone names available to the account.
 
 <h4 class="pdoc-member-header" id="GetAvailabilityZonesResult-state">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getAvailabilityZones.ts#L131">property <b>state</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getAvailabilityZones.ts#L131">property <b>state</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>state?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetAvailabilityZonesResult-zoneIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getAvailabilityZones.ts#L135">property <b>zoneIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getAvailabilityZones.ts#L135">property <b>zoneIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>zoneIds: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -1979,7 +1980,7 @@ A list of the Availability Zone names available to the account.
 A list of the Availability Zone IDs available to the account.
 
 <h3 class="pdoc-module-header" id="GetBillingServiceAccountResult" data-link-title="GetBillingServiceAccountResult">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getBillingServiceAccount.ts#L69">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getBillingServiceAccount.ts#L69">
         interface <strong>GetBillingServiceAccountResult</strong>
     </a>
 </h3>
@@ -1989,7 +1990,7 @@ A list of the Availability Zone IDs available to the account.
 A collection of values returned by getBillingServiceAccount.
 
 <h4 class="pdoc-member-header" id="GetBillingServiceAccountResult-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getBillingServiceAccount.ts#L73">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getBillingServiceAccount.ts#L73">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -1997,7 +1998,7 @@ A collection of values returned by getBillingServiceAccount.
 The ARN of the AWS billing service account.
 
 <h4 class="pdoc-member-header" id="GetBillingServiceAccountResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getBillingServiceAccount.ts#L77">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getBillingServiceAccount.ts#L77">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2005,7 +2006,7 @@ The ARN of the AWS billing service account.
 The provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-module-header" id="GetCallerIdentityResult" data-link-title="GetCallerIdentityResult">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getCallerIdentity.ts#L39">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getCallerIdentity.ts#L39">
         interface <strong>GetCallerIdentityResult</strong>
     </a>
 </h3>
@@ -2015,7 +2016,7 @@ The provider-assigned unique ID for this managed resource.
 A collection of values returned by getCallerIdentity.
 
 <h4 class="pdoc-member-header" id="GetCallerIdentityResult-accountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getCallerIdentity.ts#L43">property <b>accountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getCallerIdentity.ts#L43">property <b>accountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accountId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2023,7 +2024,7 @@ A collection of values returned by getCallerIdentity.
 The AWS Account ID number of the account that owns or contains the calling entity.
 
 <h4 class="pdoc-member-header" id="GetCallerIdentityResult-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getCallerIdentity.ts#L47">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getCallerIdentity.ts#L47">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2031,7 +2032,7 @@ The AWS Account ID number of the account that owns or contains the calling entit
 The AWS ARN associated with the calling entity.
 
 <h4 class="pdoc-member-header" id="GetCallerIdentityResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getCallerIdentity.ts#L51">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getCallerIdentity.ts#L51">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2039,7 +2040,7 @@ The AWS ARN associated with the calling entity.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetCallerIdentityResult-userId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getCallerIdentity.ts#L55">property <b>userId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getCallerIdentity.ts#L55">property <b>userId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2047,7 +2048,7 @@ The provider-assigned unique ID for this managed resource.
 The unique identifier of the calling entity.
 
 <h3 class="pdoc-module-header" id="GetCanonicalUserIdResult" data-link-title="GetCanonicalUserIdResult">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getCanonicalUserId.ts#L37">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getCanonicalUserId.ts#L37">
         interface <strong>GetCanonicalUserIdResult</strong>
     </a>
 </h3>
@@ -2057,7 +2058,7 @@ The unique identifier of the calling entity.
 A collection of values returned by getCanonicalUserId.
 
 <h4 class="pdoc-member-header" id="GetCanonicalUserIdResult-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getCanonicalUserId.ts#L41">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getCanonicalUserId.ts#L41">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2065,7 +2066,7 @@ A collection of values returned by getCanonicalUserId.
 The human-friendly name linked to the canonical user ID. The bucket owner's display name. **NOTE:** [This value](https://docs.aws.amazon.com/AmazonS3/latest/API/RESTServiceGET.html) is only included in the response in the US East (N. Virginia), US West (N. California), US West (Oregon), Asia Pacific (Singapore), Asia Pacific (Sydney), Asia Pacific (Tokyo), EU (Ireland), and South America (São Paulo) regions.
 
 <h4 class="pdoc-member-header" id="GetCanonicalUserIdResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getCanonicalUserId.ts#L45">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getCanonicalUserId.ts#L45">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2073,7 +2074,7 @@ The human-friendly name linked to the canonical user ID. The bucket owner's disp
 The provider-assigned unique ID for this managed resource.
 
 <h3 class="pdoc-module-header" id="GetElasticIpArgs" data-link-title="GetElasticIpArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getElasticIp.ts#L78">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getElasticIp.ts#L78">
         interface <strong>GetElasticIpArgs</strong>
     </a>
 </h3>
@@ -2083,7 +2084,7 @@ The provider-assigned unique ID for this managed resource.
 A collection of arguments for invoking getElasticIp.
 
 <h4 class="pdoc-member-header" id="GetElasticIpArgs-filters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getElasticIp.ts#L82">property <b>filters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getElasticIp.ts#L82">property <b>filters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetElasticIpFilter'>GetElasticIpFilter</a>[];</code></pre>
@@ -2091,7 +2092,7 @@ A collection of arguments for invoking getElasticIp.
 One or more name/value pairs to use as filters. There are several valid keys, for a full reference, check out the [EC2 API Reference](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeAddresses.html).
 
 <h4 class="pdoc-member-header" id="GetElasticIpArgs-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getElasticIp.ts#L86">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getElasticIp.ts#L86">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2099,7 +2100,7 @@ One or more name/value pairs to use as filters. There are several valid keys, fo
 The allocation id of the specific VPC EIP to retrieve. If a classic EIP is required, do NOT set `id`, only set `publicIp`
 
 <h4 class="pdoc-member-header" id="GetElasticIpArgs-publicIp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getElasticIp.ts#L90">property <b>publicIp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getElasticIp.ts#L90">property <b>publicIp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publicIp?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2107,7 +2108,7 @@ The allocation id of the specific VPC EIP to retrieve. If a classic EIP is requi
 The public IP of the specific EIP to retrieve.
 
 <h4 class="pdoc-member-header" id="GetElasticIpArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getElasticIp.ts#L94">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getElasticIp.ts#L94">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
@@ -2115,7 +2116,7 @@ The public IP of the specific EIP to retrieve.
 A map of tags, each pair of which must exactly match a pair on the desired Elastic IP
 
 <h3 class="pdoc-module-header" id="GetElasticIpResult" data-link-title="GetElasticIpResult">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getElasticIp.ts#L100">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getElasticIp.ts#L100">
         interface <strong>GetElasticIpResult</strong>
     </a>
 </h3>
@@ -2125,7 +2126,7 @@ A map of tags, each pair of which must exactly match a pair on the desired Elast
 A collection of values returned by getElasticIp.
 
 <h4 class="pdoc-member-header" id="GetElasticIpResult-associationId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getElasticIp.ts#L104">property <b>associationId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getElasticIp.ts#L104">property <b>associationId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>associationId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2133,7 +2134,7 @@ A collection of values returned by getElasticIp.
 The ID representing the association of the address with an instance in a VPC.
 
 <h4 class="pdoc-member-header" id="GetElasticIpResult-carrierIp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getElasticIp.ts#L108">property <b>carrierIp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getElasticIp.ts#L108">property <b>carrierIp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>carrierIp: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2141,7 +2142,7 @@ The ID representing the association of the address with an instance in a VPC.
 The carrier IP address.
 
 <h4 class="pdoc-member-header" id="GetElasticIpResult-customerOwnedIp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getElasticIp.ts#L112">property <b>customerOwnedIp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getElasticIp.ts#L112">property <b>customerOwnedIp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>customerOwnedIp: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2149,7 +2150,7 @@ The carrier IP address.
 Customer Owned IP.
 
 <h4 class="pdoc-member-header" id="GetElasticIpResult-customerOwnedIpv4Pool">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getElasticIp.ts#L116">property <b>customerOwnedIpv4Pool</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getElasticIp.ts#L116">property <b>customerOwnedIpv4Pool</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>customerOwnedIpv4Pool: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2157,7 +2158,7 @@ Customer Owned IP.
 The ID of a Customer Owned IP Pool. For more on customer owned IP addressed check out [Customer-owned IP addresses guide](https://docs.aws.amazon.com/outposts/latest/userguide/outposts-networking-components.html#ip-addressing)
 
 <h4 class="pdoc-member-header" id="GetElasticIpResult-domain">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getElasticIp.ts#L120">property <b>domain</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getElasticIp.ts#L120">property <b>domain</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>domain: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2165,12 +2166,12 @@ The ID of a Customer Owned IP Pool. For more on customer owned IP addressed chec
 Indicates whether the address is for use in EC2-Classic (standard) or in a VPC (vpc).
 
 <h4 class="pdoc-member-header" id="GetElasticIpResult-filters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getElasticIp.ts#L121">property <b>filters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getElasticIp.ts#L121">property <b>filters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetElasticIpFilter'>GetElasticIpFilter</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetElasticIpResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getElasticIp.ts#L125">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getElasticIp.ts#L125">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2178,7 +2179,7 @@ Indicates whether the address is for use in EC2-Classic (standard) or in a VPC (
 If VPC Elastic IP, the allocation identifier. If EC2-Classic Elastic IP, the public IP address.
 
 <h4 class="pdoc-member-header" id="GetElasticIpResult-instanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getElasticIp.ts#L129">property <b>instanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getElasticIp.ts#L129">property <b>instanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>instanceId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2186,7 +2187,7 @@ If VPC Elastic IP, the allocation identifier. If EC2-Classic Elastic IP, the pub
 The ID of the instance that the address is associated with (if any).
 
 <h4 class="pdoc-member-header" id="GetElasticIpResult-networkInterfaceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getElasticIp.ts#L133">property <b>networkInterfaceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getElasticIp.ts#L133">property <b>networkInterfaceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>networkInterfaceId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2194,7 +2195,7 @@ The ID of the instance that the address is associated with (if any).
 The ID of the network interface.
 
 <h4 class="pdoc-member-header" id="GetElasticIpResult-networkInterfaceOwnerId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getElasticIp.ts#L137">property <b>networkInterfaceOwnerId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getElasticIp.ts#L137">property <b>networkInterfaceOwnerId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>networkInterfaceOwnerId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2202,7 +2203,7 @@ The ID of the network interface.
 The ID of the AWS account that owns the network interface.
 
 <h4 class="pdoc-member-header" id="GetElasticIpResult-privateDns">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getElasticIp.ts#L141">property <b>privateDns</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getElasticIp.ts#L141">property <b>privateDns</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateDns: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2210,7 +2211,7 @@ The ID of the AWS account that owns the network interface.
 The Private DNS associated with the Elastic IP address.
 
 <h4 class="pdoc-member-header" id="GetElasticIpResult-privateIp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getElasticIp.ts#L145">property <b>privateIp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getElasticIp.ts#L145">property <b>privateIp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>privateIp: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2218,7 +2219,7 @@ The Private DNS associated with the Elastic IP address.
 The private IP address associated with the Elastic IP address.
 
 <h4 class="pdoc-member-header" id="GetElasticIpResult-publicDns">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getElasticIp.ts#L149">property <b>publicDns</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getElasticIp.ts#L149">property <b>publicDns</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publicDns: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2226,7 +2227,7 @@ The private IP address associated with the Elastic IP address.
 Public DNS associated with the Elastic IP address.
 
 <h4 class="pdoc-member-header" id="GetElasticIpResult-publicIp">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getElasticIp.ts#L153">property <b>publicIp</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getElasticIp.ts#L153">property <b>publicIp</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publicIp: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2234,7 +2235,7 @@ Public DNS associated with the Elastic IP address.
 Public IP address of Elastic IP.
 
 <h4 class="pdoc-member-header" id="GetElasticIpResult-publicIpv4Pool">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getElasticIp.ts#L157">property <b>publicIpv4Pool</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getElasticIp.ts#L157">property <b>publicIpv4Pool</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publicIpv4Pool: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2242,7 +2243,7 @@ Public IP address of Elastic IP.
 The ID of an address pool.
 
 <h4 class="pdoc-member-header" id="GetElasticIpResult-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getElasticIp.ts#L161">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getElasticIp.ts#L161">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>};</code></pre>
@@ -2250,7 +2251,7 @@ The ID of an address pool.
 Key-value map of tags associated with Elastic IP.
 
 <h3 class="pdoc-module-header" id="getEnv" data-link-title="getEnv">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/utilities.ts#L5">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/utilities.ts#L5">
         function <strong>getEnv</strong>
     </a>
 </h3>
@@ -2259,7 +2260,7 @@ Key-value map of tags associated with Elastic IP.
 <pre class="highlight"><code><span class='kd'></span>getEnv(vars: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="getEnvBoolean" data-link-title="getEnvBoolean">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/utilities.ts#L15">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/utilities.ts#L15">
         function <strong>getEnvBoolean</strong>
     </a>
 </h3>
@@ -2268,7 +2269,7 @@ Key-value map of tags associated with Elastic IP.
 <pre class="highlight"><code><span class='kd'></span>getEnvBoolean(vars: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="getEnvNumber" data-link-title="getEnvNumber">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/utilities.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/utilities.ts#L30">
         function <strong>getEnvNumber</strong>
     </a>
 </h3>
@@ -2277,7 +2278,7 @@ Key-value map of tags associated with Elastic IP.
 <pre class="highlight"><code><span class='kd'></span>getEnvNumber(vars: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="GetIpRangesArgs" data-link-title="GetIpRangesArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getIpRanges.ts#L57">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getIpRanges.ts#L57">
         interface <strong>GetIpRangesArgs</strong>
     </a>
 </h3>
@@ -2287,7 +2288,7 @@ Key-value map of tags associated with Elastic IP.
 A collection of arguments for invoking getIpRanges.
 
 <h4 class="pdoc-member-header" id="GetIpRangesArgs-regions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getIpRanges.ts#L63">property <b>regions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getIpRanges.ts#L63">property <b>regions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>regions?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -2297,7 +2298,7 @@ omitted). Valid items are `global` (for `cloudfront`) as well as all AWS regions
 (e.g. `eu-central-1`)
 
 <h4 class="pdoc-member-header" id="GetIpRangesArgs-services">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getIpRanges.ts#L71">property <b>services</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getIpRanges.ts#L71">property <b>services</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>services: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -2309,7 +2310,7 @@ Filter IP ranges by services. Valid items are `amazon`
 [`service` attribute][2] documentation for other possible values.
 
 <h4 class="pdoc-member-header" id="GetIpRangesArgs-url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getIpRanges.ts#L75">property <b>url</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getIpRanges.ts#L75">property <b>url</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>url?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2317,7 +2318,7 @@ Filter IP ranges by services. Valid items are `amazon`
 Custom URL for source JSON file. Syntax must match [AWS IP Address Ranges documentation](https://docs.aws.amazon.com/general/latest/gr/aws-ip-ranges.html). Defaults to `https://ip-ranges.amazonaws.com/ip-ranges.json`.
 
 <h3 class="pdoc-module-header" id="GetIpRangesResult" data-link-title="GetIpRangesResult">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getIpRanges.ts#L81">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getIpRanges.ts#L81">
         interface <strong>GetIpRangesResult</strong>
     </a>
 </h3>
@@ -2327,7 +2328,7 @@ Custom URL for source JSON file. Syntax must match [AWS IP Address Ranges docume
 A collection of values returned by getIpRanges.
 
 <h4 class="pdoc-member-header" id="GetIpRangesResult-cidrBlocks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getIpRanges.ts#L85">property <b>cidrBlocks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getIpRanges.ts#L85">property <b>cidrBlocks</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cidrBlocks: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -2335,7 +2336,7 @@ A collection of values returned by getIpRanges.
 The lexically ordered list of CIDR blocks.
 
 <h4 class="pdoc-member-header" id="GetIpRangesResult-createDate">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getIpRanges.ts#L89">property <b>createDate</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getIpRanges.ts#L89">property <b>createDate</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>createDate: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2343,7 +2344,7 @@ The lexically ordered list of CIDR blocks.
 The publication time of the IP ranges (e.g. `2016-08-03-23-46-05`).
 
 <h4 class="pdoc-member-header" id="GetIpRangesResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getIpRanges.ts#L93">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getIpRanges.ts#L93">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2351,7 +2352,7 @@ The publication time of the IP ranges (e.g. `2016-08-03-23-46-05`).
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetIpRangesResult-ipv6CidrBlocks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getIpRanges.ts#L97">property <b>ipv6CidrBlocks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getIpRanges.ts#L97">property <b>ipv6CidrBlocks</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ipv6CidrBlocks: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -2359,17 +2360,17 @@ The provider-assigned unique ID for this managed resource.
 The lexically ordered list of IPv6 CIDR blocks.
 
 <h4 class="pdoc-member-header" id="GetIpRangesResult-regions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getIpRanges.ts#L98">property <b>regions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getIpRanges.ts#L98">property <b>regions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>regions?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetIpRangesResult-services">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getIpRanges.ts#L99">property <b>services</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getIpRanges.ts#L99">property <b>services</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>services: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetIpRangesResult-syncToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getIpRanges.ts#L104">property <b>syncToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getIpRanges.ts#L104">property <b>syncToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>syncToken: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -2378,12 +2379,12 @@ The publication time of the IP ranges, in Unix epoch time format
 (e.g. `1470267965`).
 
 <h4 class="pdoc-member-header" id="GetIpRangesResult-url">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getIpRanges.ts#L105">property <b>url</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getIpRanges.ts#L105">property <b>url</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>url?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetPartitionResult" data-link-title="GetPartitionResult">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getPartition.ts#L42">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getPartition.ts#L42">
         interface <strong>GetPartitionResult</strong>
     </a>
 </h3>
@@ -2393,7 +2394,7 @@ The publication time of the IP ranges, in Unix epoch time format
 A collection of values returned by getPartition.
 
 <h4 class="pdoc-member-header" id="GetPartitionResult-dnsSuffix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getPartition.ts#L46">property <b>dnsSuffix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getPartition.ts#L46">property <b>dnsSuffix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dnsSuffix: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2401,7 +2402,7 @@ A collection of values returned by getPartition.
 Base DNS domain name for the current partition (e.g. `amazonaws.com` in AWS Commercial, `amazonaws.com.cn` in AWS China).
 
 <h4 class="pdoc-member-header" id="GetPartitionResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getPartition.ts#L50">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getPartition.ts#L50">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2409,7 +2410,7 @@ Base DNS domain name for the current partition (e.g. `amazonaws.com` in AWS Comm
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetPartitionResult-partition">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getPartition.ts#L54">property <b>partition</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getPartition.ts#L54">property <b>partition</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>partition: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2417,7 +2418,7 @@ The provider-assigned unique ID for this managed resource.
 Identifier of the current partition (e.g. `aws` in AWS Commercial, `aws-cn` in AWS China).
 
 <h4 class="pdoc-member-header" id="GetPartitionResult-reverseDnsPrefix">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getPartition.ts#L58">property <b>reverseDnsPrefix</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getPartition.ts#L58">property <b>reverseDnsPrefix</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>reverseDnsPrefix: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2425,7 +2426,7 @@ Identifier of the current partition (e.g. `aws` in AWS Commercial, `aws-cn` in A
 Prefix of service names (e.g. `com.amazonaws` in AWS Commercial, `cn.com.amazonaws` in AWS China).
 
 <h3 class="pdoc-module-header" id="GetPrefixListArgs" data-link-title="GetPrefixListArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getPrefixList.ts#L75">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getPrefixList.ts#L75">
         interface <strong>GetPrefixListArgs</strong>
     </a>
 </h3>
@@ -2435,7 +2436,7 @@ Prefix of service names (e.g. `com.amazonaws` in AWS Commercial, `cn.com.amazona
 A collection of arguments for invoking getPrefixList.
 
 <h4 class="pdoc-member-header" id="GetPrefixListArgs-filters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getPrefixList.ts#L79">property <b>filters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getPrefixList.ts#L79">property <b>filters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetPrefixListFilter'>GetPrefixListFilter</a>[];</code></pre>
@@ -2443,7 +2444,7 @@ A collection of arguments for invoking getPrefixList.
 Configuration block(s) for filtering. Detailed below.
 
 <h4 class="pdoc-member-header" id="GetPrefixListArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getPrefixList.ts#L83">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getPrefixList.ts#L83">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2451,7 +2452,7 @@ Configuration block(s) for filtering. Detailed below.
 The name of the filter field. Valid values can be found in the [EC2 DescribePrefixLists API Reference](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribePrefixLists.html).
 
 <h4 class="pdoc-member-header" id="GetPrefixListArgs-prefixListId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getPrefixList.ts#L87">property <b>prefixListId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getPrefixList.ts#L87">property <b>prefixListId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>prefixListId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2459,7 +2460,7 @@ The name of the filter field. Valid values can be found in the [EC2 DescribePref
 The ID of the prefix list to select.
 
 <h3 class="pdoc-module-header" id="GetPrefixListResult" data-link-title="GetPrefixListResult">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getPrefixList.ts#L93">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getPrefixList.ts#L93">
         interface <strong>GetPrefixListResult</strong>
     </a>
 </h3>
@@ -2469,7 +2470,7 @@ The ID of the prefix list to select.
 A collection of values returned by getPrefixList.
 
 <h4 class="pdoc-member-header" id="GetPrefixListResult-cidrBlocks">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getPrefixList.ts#L97">property <b>cidrBlocks</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getPrefixList.ts#L97">property <b>cidrBlocks</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cidrBlocks: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -2477,12 +2478,12 @@ A collection of values returned by getPrefixList.
 The list of CIDR blocks for the AWS service associated with the prefix list.
 
 <h4 class="pdoc-member-header" id="GetPrefixListResult-filters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getPrefixList.ts#L98">property <b>filters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getPrefixList.ts#L98">property <b>filters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetPrefixListFilter'>GetPrefixListFilter</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetPrefixListResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getPrefixList.ts#L102">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getPrefixList.ts#L102">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2490,7 +2491,7 @@ The list of CIDR blocks for the AWS service associated with the prefix list.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetPrefixListResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getPrefixList.ts#L106">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getPrefixList.ts#L106">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2498,12 +2499,12 @@ The provider-assigned unique ID for this managed resource.
 The name of the selected prefix list.
 
 <h4 class="pdoc-member-header" id="GetPrefixListResult-prefixListId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getPrefixList.ts#L107">property <b>prefixListId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getPrefixList.ts#L107">property <b>prefixListId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>prefixListId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetRegionArgs" data-link-title="GetRegionArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getRegion.ts#L46">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getRegion.ts#L46">
         interface <strong>GetRegionArgs</strong>
     </a>
 </h3>
@@ -2513,7 +2514,7 @@ The name of the selected prefix list.
 A collection of arguments for invoking getRegion.
 
 <h4 class="pdoc-member-header" id="GetRegionArgs-endpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getRegion.ts#L50">property <b>endpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getRegion.ts#L50">property <b>endpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endpoint?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2521,7 +2522,7 @@ A collection of arguments for invoking getRegion.
 The EC2 endpoint of the region to select.
 
 <h4 class="pdoc-member-header" id="GetRegionArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getRegion.ts#L54">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getRegion.ts#L54">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2529,7 +2530,7 @@ The EC2 endpoint of the region to select.
 The full name of the region to select.
 
 <h3 class="pdoc-module-header" id="GetRegionResult" data-link-title="GetRegionResult">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getRegion.ts#L60">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getRegion.ts#L60">
         interface <strong>GetRegionResult</strong>
     </a>
 </h3>
@@ -2539,7 +2540,7 @@ The full name of the region to select.
 A collection of values returned by getRegion.
 
 <h4 class="pdoc-member-header" id="GetRegionResult-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getRegion.ts#L64">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getRegion.ts#L64">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2547,7 +2548,7 @@ A collection of values returned by getRegion.
 The region's description in this format: "Location (Region name)".
 
 <h4 class="pdoc-member-header" id="GetRegionResult-endpoint">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getRegion.ts#L68">property <b>endpoint</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getRegion.ts#L68">property <b>endpoint</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endpoint: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2555,7 +2556,7 @@ The region's description in this format: "Location (Region name)".
 The EC2 endpoint for the selected region.
 
 <h4 class="pdoc-member-header" id="GetRegionResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getRegion.ts#L72">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getRegion.ts#L72">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2563,7 +2564,7 @@ The EC2 endpoint for the selected region.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetRegionResult-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getRegion.ts#L76">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getRegion.ts#L76">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2571,7 +2572,7 @@ The provider-assigned unique ID for this managed resource.
 The name of the selected region.
 
 <h3 class="pdoc-module-header" id="GetRegionsArgs" data-link-title="GetRegionsArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getRegions.ts#L66">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getRegions.ts#L66">
         interface <strong>GetRegionsArgs</strong>
     </a>
 </h3>
@@ -2581,7 +2582,7 @@ The name of the selected region.
 A collection of arguments for invoking getRegions.
 
 <h4 class="pdoc-member-header" id="GetRegionsArgs-allRegions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getRegions.ts#L70">property <b>allRegions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getRegions.ts#L70">property <b>allRegions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allRegions?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -2589,7 +2590,7 @@ A collection of arguments for invoking getRegions.
 If true the source will query all regions regardless of availability.
 
 <h4 class="pdoc-member-header" id="GetRegionsArgs-filters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getRegions.ts#L74">property <b>filters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getRegions.ts#L74">property <b>filters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetRegionsFilter'>GetRegionsFilter</a>[];</code></pre>
@@ -2597,7 +2598,7 @@ If true the source will query all regions regardless of availability.
 Configuration block(s) to use as filters. Detailed below.
 
 <h3 class="pdoc-module-header" id="GetRegionsResult" data-link-title="GetRegionsResult">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getRegions.ts#L80">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getRegions.ts#L80">
         interface <strong>GetRegionsResult</strong>
     </a>
 </h3>
@@ -2607,17 +2608,17 @@ Configuration block(s) to use as filters. Detailed below.
 A collection of values returned by getRegions.
 
 <h4 class="pdoc-member-header" id="GetRegionsResult-allRegions">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getRegions.ts#L81">property <b>allRegions</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getRegions.ts#L81">property <b>allRegions</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allRegions?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetRegionsResult-filters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getRegions.ts#L82">property <b>filters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getRegions.ts#L82">property <b>filters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filters?: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetRegionsFilter'>GetRegionsFilter</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetRegionsResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getRegions.ts#L86">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getRegions.ts#L86">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -2625,7 +2626,7 @@ A collection of values returned by getRegions.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetRegionsResult-names">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/getRegions.ts#L90">property <b>names</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/getRegions.ts#L90">property <b>names</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>names: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[];</code></pre>
@@ -2633,7 +2634,7 @@ The provider-assigned unique ID for this managed resource.
 Names of regions that meets the criteria.
 
 <h3 class="pdoc-module-header" id="getVersion" data-link-title="getVersion">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/utilities.ts#L41">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/utilities.ts#L41">
         function <strong>getVersion</strong>
     </a>
 </h3>
@@ -2642,7 +2643,7 @@ Names of regions that meets the criteria.
 <pre class="highlight"><code><span class='kd'></span>getVersion(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="MESouth1Region" data-link-title="MESouth1Region">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/region.ts#L55">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/region.ts#L55">
         let <strong>MESouth1Region</strong>
     </a>
 </h3>
@@ -2652,14 +2653,14 @@ Names of regions that meets the criteria.
 The MESouth1Region constant is deprecated, use Region.MESouth1 instead.
 
 <h3 class="pdoc-module-header" id="Overwrite" data-link-title="Overwrite">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/utils.ts#L31">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/utils.ts#L31">
         type <strong>Overwrite</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kd'>type</span> Overwrite = Pick&lt;T, Diff&lt;keyof T, keyof U&gt;&gt; &amp; U;</code></pre>
 <h3 class="pdoc-module-header" id="ProviderArgs" data-link-title="ProviderArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/provider.ts#L76">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/provider.ts#L76">
         interface <strong>ProviderArgs</strong>
     </a>
 </h3>
@@ -2669,7 +2670,7 @@ The MESouth1Region constant is deprecated, use Region.MESouth1 instead.
 The set of arguments for constructing a Provider resource.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-accessKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/provider.ts#L80">property <b>accessKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/provider.ts#L80">property <b>accessKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>accessKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2677,27 +2678,27 @@ The set of arguments for constructing a Provider resource.
 The access key for API operations. You can retrieve this from the 'Security & Credentials' section of the AWS console.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-allowedAccountIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/provider.ts#L81">property <b>allowedAccountIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/provider.ts#L81">property <b>allowedAccountIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowedAccountIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ProviderArgs-assumeRole">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/provider.ts#L82">property <b>assumeRole</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/provider.ts#L82">property <b>assumeRole</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>assumeRole?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ProviderAssumeRole'>ProviderAssumeRole</a>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ProviderArgs-endpoints">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/provider.ts#L83">property <b>endpoints</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/provider.ts#L83">property <b>endpoints</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endpoints?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ProviderEndpoint'>ProviderEndpoint</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ProviderArgs-forbiddenAccountIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/provider.ts#L84">property <b>forbiddenAccountIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/provider.ts#L84">property <b>forbiddenAccountIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>forbiddenAccountIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ProviderArgs-ignoreTags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/provider.ts#L88">property <b>ignoreTags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/provider.ts#L88">property <b>ignoreTags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ignoreTags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#ProviderIgnoreTags'>ProviderIgnoreTags</a>&gt;;</code></pre>
@@ -2705,7 +2706,7 @@ The access key for API operations. You can retrieve this from the 'Security & Cr
 Configuration block with settings to ignore resource tags across all resources.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-insecure">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/provider.ts#L92">property <b>insecure</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/provider.ts#L92">property <b>insecure</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>insecure?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2713,7 +2714,7 @@ Configuration block with settings to ignore resource tags across all resources.
 Explicitly allow the provider to perform "insecure" SSL requests. If omitted,default value is `false`
 
 <h4 class="pdoc-member-header" id="ProviderArgs-maxRetries">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/provider.ts#L96">property <b>maxRetries</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/provider.ts#L96">property <b>maxRetries</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>maxRetries?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -2721,7 +2722,7 @@ Explicitly allow the provider to perform "insecure" SSL requests. If omitted,def
 The maximum number of times an AWS API request is being executed. If the API request still fails, an error is thrown.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-profile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/provider.ts#L100">property <b>profile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/provider.ts#L100">property <b>profile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>profile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2729,7 +2730,7 @@ The maximum number of times an AWS API request is being executed. If the API req
 The profile for API operations. If not set, the default profile created with `aws configure` will be used.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-region">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/provider.ts#L104">property <b>region</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/provider.ts#L104">property <b>region</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>region?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;Region&gt;;</code></pre>
@@ -2737,7 +2738,7 @@ The profile for API operations. If not set, the default profile created with `aw
 The region where AWS operations will take place. Examples are us-east-1, us-west-2, etc.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-s3ForcePathStyle">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/provider.ts#L110">property <b>s3ForcePathStyle</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/provider.ts#L110">property <b>s3ForcePathStyle</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>s3ForcePathStyle?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2747,7 +2748,7 @@ default, the S3 client will use virtual hosted bucket addressing when possible (
 Specific to the Amazon S3 service.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-secretKey">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/provider.ts#L114">property <b>secretKey</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/provider.ts#L114">property <b>secretKey</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>secretKey?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2755,7 +2756,7 @@ Specific to the Amazon S3 service.
 The secret key for API operations. You can retrieve this from the 'Security & Credentials' section of the AWS console.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-sharedCredentialsFile">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/provider.ts#L118">property <b>sharedCredentialsFile</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/provider.ts#L118">property <b>sharedCredentialsFile</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sharedCredentialsFile?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2763,7 +2764,7 @@ The secret key for API operations. You can retrieve this from the 'Security & Cr
 The path to the shared credentials file. If not set this defaults to ~/.aws/credentials.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-skipCredentialsValidation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/provider.ts#L123">property <b>skipCredentialsValidation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/provider.ts#L123">property <b>skipCredentialsValidation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>skipCredentialsValidation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2772,7 +2773,7 @@ Skip the credentials validation via STS API. Used for AWS API implementations th
 available/implemented.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-skipGetEc2Platforms">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/provider.ts#L127">property <b>skipGetEc2Platforms</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/provider.ts#L127">property <b>skipGetEc2Platforms</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>skipGetEc2Platforms?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2780,12 +2781,12 @@ available/implemented.
 Skip getting the supported EC2 platforms. Used by users that don't have ec2:DescribeAccountAttributes permissions.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-skipMetadataApiCheck">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/provider.ts#L128">property <b>skipMetadataApiCheck</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/provider.ts#L128">property <b>skipMetadataApiCheck</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>skipMetadataApiCheck?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ProviderArgs-skipRegionValidation">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/provider.ts#L133">property <b>skipRegionValidation</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/provider.ts#L133">property <b>skipRegionValidation</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>skipRegionValidation?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2794,7 +2795,7 @@ Skip static validation of region name. Used by users of alternative AWS-like API
 not public (yet).
 
 <h4 class="pdoc-member-header" id="ProviderArgs-skipRequestingAccountId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/provider.ts#L137">property <b>skipRequestingAccountId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/provider.ts#L137">property <b>skipRequestingAccountId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>skipRequestingAccountId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -2802,7 +2803,7 @@ not public (yet).
 Skip requesting the account ID. Used for AWS API implementations that do not have IAM/STS API and/or metadata API.
 
 <h4 class="pdoc-member-header" id="ProviderArgs-token">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/provider.ts#L141">property <b>token</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/provider.ts#L141">property <b>token</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>token?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2810,7 +2811,7 @@ Skip requesting the account ID. Used for AWS API implementations that do not hav
 session token. A session token is only required if you are using temporary security credentials.
 
 <h3 class="pdoc-module-header" id="SAEast1Region" data-link-title="SAEast1Region">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/region.ts#L57">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/region.ts#L57">
         let <strong>SAEast1Region</strong>
     </a>
 </h3>
@@ -2820,7 +2821,7 @@ session token. A session token is only required if you are using temporary secur
 The SAEast1Region constant is deprecated, use Region.SAEast1 instead.
 
 <h3 class="pdoc-module-header" id="Tags" data-link-title="Tags">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/tags.ts#L21">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/tags.ts#L21">
         interface <strong>Tags</strong>
     </a>
 </h3>
@@ -2831,7 +2832,7 @@ Tags represents a set of key-value string pairs to which can be applied
 to an AWS resource.
 
 <h3 class="pdoc-module-header" id="USEast1Region" data-link-title="USEast1Region">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/region.ts#L63">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/region.ts#L63">
         let <strong>USEast1Region</strong>
     </a>
 </h3>
@@ -2841,7 +2842,7 @@ to an AWS resource.
 The USEast1Region constant is deprecated, use Region.USEast1 instead.
 
 <h3 class="pdoc-module-header" id="USEast2Region" data-link-title="USEast2Region">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/region.ts#L65">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/region.ts#L65">
         let <strong>USEast2Region</strong>
     </a>
 </h3>
@@ -2851,7 +2852,7 @@ The USEast1Region constant is deprecated, use Region.USEast1 instead.
 The USEast2Region constant is deprecated, use Region.USEast2 instead.
 
 <h3 class="pdoc-module-header" id="USGovEast1Region" data-link-title="USGovEast1Region">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/region.ts#L59">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/region.ts#L59">
         let <strong>USGovEast1Region</strong>
     </a>
 </h3>
@@ -2861,7 +2862,7 @@ The USEast2Region constant is deprecated, use Region.USEast2 instead.
 The USGovEast1Region constant is deprecated, use Region.USGovEast1 instead.
 
 <h3 class="pdoc-module-header" id="USGovWest1Region" data-link-title="USGovWest1Region">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/region.ts#L61">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/region.ts#L61">
         let <strong>USGovWest1Region</strong>
     </a>
 </h3>
@@ -2871,7 +2872,7 @@ The USGovEast1Region constant is deprecated, use Region.USGovEast1 instead.
 The USGovWest1Region constant is deprecated, use Region.USGovWest1 instead.
 
 <h3 class="pdoc-module-header" id="USWest1Region" data-link-title="USWest1Region">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/region.ts#L67">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/region.ts#L67">
         let <strong>USWest1Region</strong>
     </a>
 </h3>
@@ -2881,7 +2882,7 @@ The USGovWest1Region constant is deprecated, use Region.USGovWest1 instead.
 The USWest1Region constant is deprecated, use Region.USWest1 instead.
 
 <h3 class="pdoc-module-header" id="USWest2Region" data-link-title="USWest2Region">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/region.ts#L69">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/region.ts#L69">
         let <strong>USWest2Region</strong>
     </a>
 </h3>

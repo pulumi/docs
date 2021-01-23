@@ -3,7 +3,7 @@ title: "Module dms"
 title_tag: "Module dms | Package @pulumi/aws | Node.js SDK"
 linktitle: "dms"
 meta_desc: "Explore members of the dms module in the @pulumi/aws package."
-git_sha: "a9e42c93f0706bcf9d8cdca4801c68e27a01c41d"
+git_sha: "b08a8bf97426301e20cfb4790eaddfd5bb8cd655"
 block_external_search_index: true
 ---
 
@@ -45,7 +45,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Certificate" data-link-title="Certificate">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/certificate.ts#L33">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/certificate.ts#L33">
         Resource <strong>Certificate</strong>
     </a>
 </h3>
@@ -78,7 +78,7 @@ Certificates can be imported using the `certificate_arn`, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="Certificate-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/certificate.ts#L76"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/certificate.ts#L76"> <b>constructor</b></a>
 </h4>
 
 
@@ -92,7 +92,7 @@ Create a Certificate resource with the given unique name, arguments, and options
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Certificate-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/certificate.ts#L43">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/certificate.ts#L43">method <b>get</b></a>
 </h4>
 
 
@@ -103,14 +103,14 @@ Get an existing Certificate resource's state with the given name, ID, and option
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Certificate-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/certificate.ts#L33">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/certificate.ts#L33">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Certificate-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/certificate.ts#L54">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/certificate.ts#L54">method <b>isInstance</b></a>
 </h4>
 
 
@@ -121,7 +121,7 @@ Returns true if the given object is an instance of Certificate.  This is designe
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Certificate-certificateArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/certificate.ts#L64">property <b>certificateArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/certificate.ts#L64">property <b>certificateArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>certificateArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -129,7 +129,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The Amazon Resource Name (ARN) for the certificate.
 
 <h4 class="pdoc-member-header" id="Certificate-certificateId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/certificate.ts#L68">property <b>certificateId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/certificate.ts#L68">property <b>certificateId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>certificateId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -137,7 +137,7 @@ The Amazon Resource Name (ARN) for the certificate.
 The certificate identifier.
 
 <h4 class="pdoc-member-header" id="Certificate-certificatePem">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/certificate.ts#L72">property <b>certificatePem</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/certificate.ts#L72">property <b>certificatePem</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>certificatePem: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -145,7 +145,7 @@ The certificate identifier.
 The contents of the .pem X.509 certificate file for the certificate. Either `certificatePem` or `certificateWallet` must be set.
 
 <h4 class="pdoc-member-header" id="Certificate-certificateWallet">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/certificate.ts#L76">property <b>certificateWallet</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/certificate.ts#L76">property <b>certificateWallet</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>certificateWallet: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -153,7 +153,7 @@ The contents of the .pem X.509 certificate file for the certificate. Either `cer
 The contents of the Oracle Wallet certificate for use with SSL. Either `certificatePem` or `certificateWallet` must be set.
 
 <h4 class="pdoc-member-header" id="Certificate-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/certificate.ts#L33">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/certificate.ts#L33">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -162,7 +162,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Certificate-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/certificate.ts#L33">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/certificate.ts#L33">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -171,7 +171,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Endpoint" data-link-title="Endpoint">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/endpoint.ts#L47">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/endpoint.ts#L47">
         Resource <strong>Endpoint</strong>
     </a>
 </h3>
@@ -217,7 +217,7 @@ Endpoints can be imported using the `endpoint_id`, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="Endpoint-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/endpoint.ts#L154"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/endpoint.ts#L154"> <b>constructor</b></a>
 </h4>
 
 
@@ -231,7 +231,7 @@ Create a Endpoint resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Endpoint-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/endpoint.ts#L57">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/endpoint.ts#L57">method <b>get</b></a>
 </h4>
 
 
@@ -242,14 +242,14 @@ Get an existing Endpoint resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Endpoint-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/endpoint.ts#L47">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/endpoint.ts#L47">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Endpoint-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/endpoint.ts#L68">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/endpoint.ts#L68">method <b>isInstance</b></a>
 </h4>
 
 
@@ -260,7 +260,7 @@ Returns true if the given object is an instance of Endpoint.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Endpoint-certificateArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/endpoint.ts#L78">property <b>certificateArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/endpoint.ts#L78">property <b>certificateArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>certificateArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -268,7 +268,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The Amazon Resource Name (ARN) for the certificate.
 
 <h4 class="pdoc-member-header" id="Endpoint-databaseName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/endpoint.ts#L82">property <b>databaseName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/endpoint.ts#L82">property <b>databaseName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>databaseName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -276,7 +276,7 @@ The Amazon Resource Name (ARN) for the certificate.
 The name of the endpoint database.
 
 <h4 class="pdoc-member-header" id="Endpoint-elasticsearchSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/endpoint.ts#L86">property <b>elasticsearchSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/endpoint.ts#L86">property <b>elasticsearchSettings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>elasticsearchSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#EndpointElasticsearchSettings'>EndpointElasticsearchSettings</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -284,7 +284,7 @@ The name of the endpoint database.
 Configuration block with Elasticsearch settings. Detailed below.
 
 <h4 class="pdoc-member-header" id="Endpoint-endpointArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/endpoint.ts#L90">property <b>endpointArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/endpoint.ts#L90">property <b>endpointArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>endpointArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -292,7 +292,7 @@ Configuration block with Elasticsearch settings. Detailed below.
 The Amazon Resource Name (ARN) for the endpoint.
 
 <h4 class="pdoc-member-header" id="Endpoint-endpointId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/endpoint.ts#L94">property <b>endpointId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/endpoint.ts#L94">property <b>endpointId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>endpointId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -300,7 +300,7 @@ The Amazon Resource Name (ARN) for the endpoint.
 The database endpoint identifier.
 
 <h4 class="pdoc-member-header" id="Endpoint-endpointType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/endpoint.ts#L98">property <b>endpointType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/endpoint.ts#L98">property <b>endpointType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>endpointType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -308,7 +308,7 @@ The database endpoint identifier.
 The type of endpoint. Can be one of `source | target`.
 
 <h4 class="pdoc-member-header" id="Endpoint-engineName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/endpoint.ts#L102">property <b>engineName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/endpoint.ts#L102">property <b>engineName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>engineName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -316,7 +316,7 @@ The type of endpoint. Can be one of `source | target`.
 The type of engine for the endpoint. Can be one of `aurora | aurora-postgresql| azuredb | db2 | docdb | dynamodb | elasticsearch | kafka | kinesis | mariadb | mongodb | mysql | oracle | postgres | redshift | s3 | sqlserver | sybase`.
 
 <h4 class="pdoc-member-header" id="Endpoint-extraConnectionAttributes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/endpoint.ts#L106">property <b>extraConnectionAttributes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/endpoint.ts#L106">property <b>extraConnectionAttributes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>extraConnectionAttributes: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -324,7 +324,7 @@ The type of engine for the endpoint. Can be one of `aurora | aurora-postgresql| 
 Additional attributes associated with the connection. For available attributes see [Using Extra Connection Attributes with AWS Database Migration Service](http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Introduction.ConnectionAttributes.html).
 
 <h4 class="pdoc-member-header" id="Endpoint-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/endpoint.ts#L47">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/endpoint.ts#L47">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -333,7 +333,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Endpoint-kafkaSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/endpoint.ts#L110">property <b>kafkaSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/endpoint.ts#L110">property <b>kafkaSettings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kafkaSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#EndpointKafkaSettings'>EndpointKafkaSettings</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -341,7 +341,7 @@ deployments and may be missing (undefined) during planning phases.
 Configuration block with Kafka settings. Detailed below.
 
 <h4 class="pdoc-member-header" id="Endpoint-kinesisSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/endpoint.ts#L114">property <b>kinesisSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/endpoint.ts#L114">property <b>kinesisSettings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kinesisSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#EndpointKinesisSettings'>EndpointKinesisSettings</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -349,7 +349,7 @@ Configuration block with Kafka settings. Detailed below.
 Configuration block with Kinesis settings. Detailed below.
 
 <h4 class="pdoc-member-header" id="Endpoint-kmsKeyArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/endpoint.ts#L118">property <b>kmsKeyArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/endpoint.ts#L118">property <b>kmsKeyArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kmsKeyArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -357,7 +357,7 @@ Configuration block with Kinesis settings. Detailed below.
 The Amazon Resource Name (ARN) for the KMS key that will be used to encrypt the connection parameters. If you do not specify a value for `kmsKeyArn`, then AWS DMS will use your default encryption key. AWS KMS creates the default encryption key for your AWS account. Your AWS account has a different default encryption key for each AWS region.
 
 <h4 class="pdoc-member-header" id="Endpoint-mongodbSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/endpoint.ts#L122">property <b>mongodbSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/endpoint.ts#L122">property <b>mongodbSettings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>mongodbSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#EndpointMongodbSettings'>EndpointMongodbSettings</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -365,7 +365,7 @@ The Amazon Resource Name (ARN) for the KMS key that will be used to encrypt the 
 Configuration block with MongoDB settings. Detailed below.
 
 <h4 class="pdoc-member-header" id="Endpoint-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/endpoint.ts#L126">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/endpoint.ts#L126">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>password: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -373,7 +373,7 @@ Configuration block with MongoDB settings. Detailed below.
 The password to be used to login to the endpoint database.
 
 <h4 class="pdoc-member-header" id="Endpoint-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/endpoint.ts#L130">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/endpoint.ts#L130">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>port: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -381,7 +381,7 @@ The password to be used to login to the endpoint database.
 The port used by the endpoint database.
 
 <h4 class="pdoc-member-header" id="Endpoint-s3Settings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/endpoint.ts#L134">property <b>s3Settings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/endpoint.ts#L134">property <b>s3Settings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>s3Settings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#EndpointS3Settings'>EndpointS3Settings</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -389,7 +389,7 @@ The port used by the endpoint database.
 Configuration block with S3 settings. Detailed below.
 
 <h4 class="pdoc-member-header" id="Endpoint-serverName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/endpoint.ts#L138">property <b>serverName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/endpoint.ts#L138">property <b>serverName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serverName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -397,7 +397,7 @@ Configuration block with S3 settings. Detailed below.
 The host name of the server.
 
 <h4 class="pdoc-member-header" id="Endpoint-serviceAccessRole">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/endpoint.ts#L142">property <b>serviceAccessRole</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/endpoint.ts#L142">property <b>serviceAccessRole</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>serviceAccessRole: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -405,7 +405,7 @@ The host name of the server.
 The Amazon Resource Name (ARN) used by the service access IAM role for dynamodb endpoints.
 
 <h4 class="pdoc-member-header" id="Endpoint-sslMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/endpoint.ts#L146">property <b>sslMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/endpoint.ts#L146">property <b>sslMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sslMode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -413,7 +413,7 @@ The Amazon Resource Name (ARN) used by the service access IAM role for dynamodb 
 The SSL mode to use for the connection. Can be one of `none | require | verify-ca | verify-full`
 
 <h4 class="pdoc-member-header" id="Endpoint-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/endpoint.ts#L150">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/endpoint.ts#L150">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -421,7 +421,7 @@ The SSL mode to use for the connection. Can be one of `none | require | verify-c
 A map of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="Endpoint-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/endpoint.ts#L47">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/endpoint.ts#L47">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -430,7 +430,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Endpoint-username">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/endpoint.ts#L154">property <b>username</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/endpoint.ts#L154">property <b>username</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>username: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -438,7 +438,7 @@ deployments.
 The user name to be used to login to the endpoint database.
 
 <h3 class="pdoc-module-header" id="EventSubscription" data-link-title="EventSubscription">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/eventSubscription.ts#L39">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/eventSubscription.ts#L39">
         Resource <strong>EventSubscription</strong>
     </a>
 </h3>
@@ -477,7 +477,7 @@ Event subscriptions can be imported using the `name`, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="EventSubscription-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/eventSubscription.ts#L92"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/eventSubscription.ts#L92"> <b>constructor</b></a>
 </h4>
 
 
@@ -491,7 +491,7 @@ Create a EventSubscription resource with the given unique name, arguments, and o
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="EventSubscription-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/eventSubscription.ts#L49">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/eventSubscription.ts#L49">method <b>get</b></a>
 </h4>
 
 
@@ -502,14 +502,14 @@ Get an existing EventSubscription resource's state with the given name, ID, and 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="EventSubscription-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/eventSubscription.ts#L39">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/eventSubscription.ts#L39">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="EventSubscription-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/eventSubscription.ts#L60">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/eventSubscription.ts#L60">method <b>isInstance</b></a>
 </h4>
 
 
@@ -520,12 +520,12 @@ Returns true if the given object is an instance of EventSubscription.  This is d
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="EventSubscription-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/eventSubscription.ts#L67">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/eventSubscription.ts#L67">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EventSubscription-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/eventSubscription.ts#L71">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/eventSubscription.ts#L71">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>enabled: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -533,7 +533,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 Whether the event subscription should be enabled.
 
 <h4 class="pdoc-member-header" id="EventSubscription-eventCategories">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/eventSubscription.ts#L75">property <b>eventCategories</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/eventSubscription.ts#L75">property <b>eventCategories</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>eventCategories: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -541,7 +541,7 @@ Whether the event subscription should be enabled.
 List of event categories to listen for, see `DescribeEventCategories` for a canonical list.
 
 <h4 class="pdoc-member-header" id="EventSubscription-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/eventSubscription.ts#L39">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/eventSubscription.ts#L39">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -550,7 +550,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="EventSubscription-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/eventSubscription.ts#L79">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/eventSubscription.ts#L79">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -558,7 +558,7 @@ deployments and may be missing (undefined) during planning phases.
 Name of event subscription.
 
 <h4 class="pdoc-member-header" id="EventSubscription-snsTopicArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/eventSubscription.ts#L83">property <b>snsTopicArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/eventSubscription.ts#L83">property <b>snsTopicArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>snsTopicArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -566,7 +566,7 @@ Name of event subscription.
 SNS topic arn to send events on.
 
 <h4 class="pdoc-member-header" id="EventSubscription-sourceIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/eventSubscription.ts#L87">property <b>sourceIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/eventSubscription.ts#L87">property <b>sourceIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sourceIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -574,7 +574,7 @@ SNS topic arn to send events on.
 Ids of sources to listen to.
 
 <h4 class="pdoc-member-header" id="EventSubscription-sourceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/eventSubscription.ts#L91">property <b>sourceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/eventSubscription.ts#L91">property <b>sourceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sourceType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -582,12 +582,12 @@ Ids of sources to listen to.
 Type of source for events. Valid values: `replication-instance` or `replication-task`
 
 <h4 class="pdoc-member-header" id="EventSubscription-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/eventSubscription.ts#L92">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/eventSubscription.ts#L92">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EventSubscription-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/eventSubscription.ts#L39">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/eventSubscription.ts#L39">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -596,7 +596,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="ReplicationInstance" data-link-title="ReplicationInstance">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationInstance.ts#L69">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationInstance.ts#L69">
         Resource <strong>ReplicationInstance</strong>
     </a>
 </h3>
@@ -665,7 +665,7 @@ Replication instances can be imported using the `replication_instance_id`, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="ReplicationInstance-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationInstance.ts#L168"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationInstance.ts#L168"> <b>constructor</b></a>
 </h4>
 
 
@@ -679,7 +679,7 @@ Create a ReplicationInstance resource with the given unique name, arguments, and
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ReplicationInstance-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationInstance.ts#L79">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationInstance.ts#L79">method <b>get</b></a>
 </h4>
 
 
@@ -690,14 +690,14 @@ Get an existing ReplicationInstance resource's state with the given name, ID, an
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ReplicationInstance-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationInstance.ts#L69">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationInstance.ts#L69">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ReplicationInstance-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationInstance.ts#L90">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationInstance.ts#L90">method <b>isInstance</b></a>
 </h4>
 
 
@@ -708,7 +708,7 @@ Returns true if the given object is an instance of ReplicationInstance.  This is
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ReplicationInstance-allocatedStorage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationInstance.ts#L100">property <b>allocatedStorage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationInstance.ts#L100">property <b>allocatedStorage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>allocatedStorage: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -716,7 +716,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The amount of storage (in gigabytes) to be initially allocated for the replication instance.
 
 <h4 class="pdoc-member-header" id="ReplicationInstance-allowMajorVersionUpgrade">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationInstance.ts#L104">property <b>allowMajorVersionUpgrade</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationInstance.ts#L104">property <b>allowMajorVersionUpgrade</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>allowMajorVersionUpgrade: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -724,7 +724,7 @@ The amount of storage (in gigabytes) to be initially allocated for the replicati
 Indicates that major version upgrades are allowed.
 
 <h4 class="pdoc-member-header" id="ReplicationInstance-applyImmediately">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationInstance.ts#L108">property <b>applyImmediately</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationInstance.ts#L108">property <b>applyImmediately</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>applyImmediately: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -732,7 +732,7 @@ Indicates that major version upgrades are allowed.
 Indicates whether the changes should be applied immediately or during the next maintenance window. Only used when updating an existing resource.
 
 <h4 class="pdoc-member-header" id="ReplicationInstance-autoMinorVersionUpgrade">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationInstance.ts#L112">property <b>autoMinorVersionUpgrade</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationInstance.ts#L112">property <b>autoMinorVersionUpgrade</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>autoMinorVersionUpgrade: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -740,7 +740,7 @@ Indicates whether the changes should be applied immediately or during the next m
 Indicates that minor engine upgrades will be applied automatically to the replication instance during the maintenance window.
 
 <h4 class="pdoc-member-header" id="ReplicationInstance-availabilityZone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationInstance.ts#L116">property <b>availabilityZone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationInstance.ts#L116">property <b>availabilityZone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>availabilityZone: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -748,7 +748,7 @@ Indicates that minor engine upgrades will be applied automatically to the replic
 The EC2 Availability Zone that the replication instance will be created in.
 
 <h4 class="pdoc-member-header" id="ReplicationInstance-engineVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationInstance.ts#L120">property <b>engineVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationInstance.ts#L120">property <b>engineVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>engineVersion: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -756,7 +756,7 @@ The EC2 Availability Zone that the replication instance will be created in.
 The engine version number of the replication instance.
 
 <h4 class="pdoc-member-header" id="ReplicationInstance-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationInstance.ts#L69">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationInstance.ts#L69">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -765,7 +765,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ReplicationInstance-kmsKeyArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationInstance.ts#L124">property <b>kmsKeyArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationInstance.ts#L124">property <b>kmsKeyArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>kmsKeyArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -773,7 +773,7 @@ deployments and may be missing (undefined) during planning phases.
 The Amazon Resource Name (ARN) for the KMS key that will be used to encrypt the connection parameters. If you do not specify a value for `kmsKeyArn`, then AWS DMS will use your default encryption key. AWS KMS creates the default encryption key for your AWS account. Your AWS account has a different default encryption key for each AWS region.
 
 <h4 class="pdoc-member-header" id="ReplicationInstance-multiAz">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationInstance.ts#L128">property <b>multiAz</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationInstance.ts#L128">property <b>multiAz</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>multiAz: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -781,7 +781,7 @@ The Amazon Resource Name (ARN) for the KMS key that will be used to encrypt the 
 Specifies if the replication instance is a multi-az deployment. You cannot set the `availabilityZone` parameter if the `multiAz` parameter is set to `true`.
 
 <h4 class="pdoc-member-header" id="ReplicationInstance-preferredMaintenanceWindow">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationInstance.ts#L132">property <b>preferredMaintenanceWindow</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationInstance.ts#L132">property <b>preferredMaintenanceWindow</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>preferredMaintenanceWindow: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -789,7 +789,7 @@ Specifies if the replication instance is a multi-az deployment. You cannot set t
 The weekly time range during which system maintenance can occur, in Universal Coordinated Time (UTC).
 
 <h4 class="pdoc-member-header" id="ReplicationInstance-publiclyAccessible">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationInstance.ts#L136">property <b>publiclyAccessible</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationInstance.ts#L136">property <b>publiclyAccessible</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>publiclyAccessible: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -797,7 +797,7 @@ The weekly time range during which system maintenance can occur, in Universal Co
 Specifies the accessibility options for the replication instance. A value of true represents an instance with a public IP address. A value of false represents an instance with a private IP address.
 
 <h4 class="pdoc-member-header" id="ReplicationInstance-replicationInstanceArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationInstance.ts#L140">property <b>replicationInstanceArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationInstance.ts#L140">property <b>replicationInstanceArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>replicationInstanceArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -805,7 +805,7 @@ Specifies the accessibility options for the replication instance. A value of tru
 The Amazon Resource Name (ARN) of the replication instance.
 
 <h4 class="pdoc-member-header" id="ReplicationInstance-replicationInstanceClass">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationInstance.ts#L144">property <b>replicationInstanceClass</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationInstance.ts#L144">property <b>replicationInstanceClass</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>replicationInstanceClass: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -813,7 +813,7 @@ The Amazon Resource Name (ARN) of the replication instance.
 The compute and memory capacity of the replication instance as specified by the replication instance class. Can be one of `dms.t2.micro | dms.t2.small | dms.t2.medium | dms.t2.large | dms.c4.large | dms.c4.xlarge | dms.c4.2xlarge | dms.c4.4xlarge`
 
 <h4 class="pdoc-member-header" id="ReplicationInstance-replicationInstanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationInstance.ts#L148">property <b>replicationInstanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationInstance.ts#L148">property <b>replicationInstanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>replicationInstanceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -821,7 +821,7 @@ The compute and memory capacity of the replication instance as specified by the 
 The replication instance identifier. This parameter is stored as a lowercase string.
 
 <h4 class="pdoc-member-header" id="ReplicationInstance-replicationInstancePrivateIps">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationInstance.ts#L152">property <b>replicationInstancePrivateIps</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationInstance.ts#L152">property <b>replicationInstancePrivateIps</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>replicationInstancePrivateIps: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -829,7 +829,7 @@ The replication instance identifier. This parameter is stored as a lowercase str
 A list of the private IP addresses of the replication instance.
 
 <h4 class="pdoc-member-header" id="ReplicationInstance-replicationInstancePublicIps">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationInstance.ts#L156">property <b>replicationInstancePublicIps</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationInstance.ts#L156">property <b>replicationInstancePublicIps</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>replicationInstancePublicIps: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -837,7 +837,7 @@ A list of the private IP addresses of the replication instance.
 A list of the public IP addresses of the replication instance.
 
 <h4 class="pdoc-member-header" id="ReplicationInstance-replicationSubnetGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationInstance.ts#L160">property <b>replicationSubnetGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationInstance.ts#L160">property <b>replicationSubnetGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>replicationSubnetGroupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -845,7 +845,7 @@ A list of the public IP addresses of the replication instance.
 A subnet group to associate with the replication instance.
 
 <h4 class="pdoc-member-header" id="ReplicationInstance-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationInstance.ts#L164">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationInstance.ts#L164">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -853,7 +853,7 @@ A subnet group to associate with the replication instance.
 A map of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="ReplicationInstance-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationInstance.ts#L69">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationInstance.ts#L69">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -862,7 +862,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="ReplicationInstance-vpcSecurityGroupIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationInstance.ts#L168">property <b>vpcSecurityGroupIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationInstance.ts#L168">property <b>vpcSecurityGroupIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>vpcSecurityGroupIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -870,7 +870,7 @@ deployments.
 A list of VPC security group IDs to be used with the replication instance. The VPC security groups must work with the VPC containing the replication instance.
 
 <h3 class="pdoc-module-header" id="ReplicationSubnetGroup" data-link-title="ReplicationSubnetGroup">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationSubnetGroup.ts#L35">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationSubnetGroup.ts#L35">
         Resource <strong>ReplicationSubnetGroup</strong>
     </a>
 </h3>
@@ -905,7 +905,7 @@ Replication subnet groups can be imported using the `replication_subnet_group_id
 ```
 
 <h4 class="pdoc-member-header" id="ReplicationSubnetGroup-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationSubnetGroup.ts#L83"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationSubnetGroup.ts#L83"> <b>constructor</b></a>
 </h4>
 
 
@@ -919,7 +919,7 @@ Create a ReplicationSubnetGroup resource with the given unique name, arguments, 
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ReplicationSubnetGroup-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationSubnetGroup.ts#L45">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationSubnetGroup.ts#L45">method <b>get</b></a>
 </h4>
 
 
@@ -930,14 +930,14 @@ Get an existing ReplicationSubnetGroup resource's state with the given name, ID,
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ReplicationSubnetGroup-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationSubnetGroup.ts#L35">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationSubnetGroup.ts#L35">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ReplicationSubnetGroup-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationSubnetGroup.ts#L56">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationSubnetGroup.ts#L56">method <b>isInstance</b></a>
 </h4>
 
 
@@ -948,7 +948,7 @@ Returns true if the given object is an instance of ReplicationSubnetGroup.  This
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ReplicationSubnetGroup-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationSubnetGroup.ts#L35">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationSubnetGroup.ts#L35">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -957,12 +957,12 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ReplicationSubnetGroup-replicationSubnetGroupArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationSubnetGroup.ts#L63">property <b>replicationSubnetGroupArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationSubnetGroup.ts#L63">property <b>replicationSubnetGroupArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>replicationSubnetGroupArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ReplicationSubnetGroup-replicationSubnetGroupDescription">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationSubnetGroup.ts#L67">property <b>replicationSubnetGroupDescription</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationSubnetGroup.ts#L67">property <b>replicationSubnetGroupDescription</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>replicationSubnetGroupDescription: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -970,7 +970,7 @@ deployments and may be missing (undefined) during planning phases.
 The description for the subnet group.
 
 <h4 class="pdoc-member-header" id="ReplicationSubnetGroup-replicationSubnetGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationSubnetGroup.ts#L71">property <b>replicationSubnetGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationSubnetGroup.ts#L71">property <b>replicationSubnetGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>replicationSubnetGroupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -978,7 +978,7 @@ The description for the subnet group.
 The name for the replication subnet group. This value is stored as a lowercase string.
 
 <h4 class="pdoc-member-header" id="ReplicationSubnetGroup-subnetIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationSubnetGroup.ts#L75">property <b>subnetIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationSubnetGroup.ts#L75">property <b>subnetIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>subnetIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]&gt;;</code></pre>
@@ -986,7 +986,7 @@ The name for the replication subnet group. This value is stored as a lowercase s
 A list of the EC2 subnet IDs for the subnet group.
 
 <h4 class="pdoc-member-header" id="ReplicationSubnetGroup-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationSubnetGroup.ts#L79">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationSubnetGroup.ts#L79">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -994,7 +994,7 @@ A list of the EC2 subnet IDs for the subnet group.
 A map of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="ReplicationSubnetGroup-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationSubnetGroup.ts#L35">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationSubnetGroup.ts#L35">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1003,7 +1003,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="ReplicationSubnetGroup-vpcId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationSubnetGroup.ts#L83">property <b>vpcId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationSubnetGroup.ts#L83">property <b>vpcId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>vpcId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1011,7 +1011,7 @@ deployments.
 The ID of the VPC the subnet group is in.
 
 <h3 class="pdoc-module-header" id="ReplicationTask" data-link-title="ReplicationTask">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationTask.ts#L40">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationTask.ts#L40">
         Resource <strong>ReplicationTask</strong>
     </a>
 </h3>
@@ -1051,7 +1051,7 @@ Replication tasks can be imported using the `replication_task_id`, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="ReplicationTask-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationTask.ts#L107"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationTask.ts#L107"> <b>constructor</b></a>
 </h4>
 
 
@@ -1065,7 +1065,7 @@ Create a ReplicationTask resource with the given unique name, arguments, and opt
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ReplicationTask-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationTask.ts#L50">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationTask.ts#L50">method <b>get</b></a>
 </h4>
 
 
@@ -1076,14 +1076,14 @@ Get an existing ReplicationTask resource's state with the given name, ID, and op
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ReplicationTask-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationTask.ts#L40">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationTask.ts#L40">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ReplicationTask-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationTask.ts#L61">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationTask.ts#L61">method <b>isInstance</b></a>
 </h4>
 
 
@@ -1094,7 +1094,7 @@ Returns true if the given object is an instance of ReplicationTask.  This is des
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ReplicationTask-cdcStartTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationTask.ts#L71">property <b>cdcStartTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationTask.ts#L71">property <b>cdcStartTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>cdcStartTime: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1102,7 +1102,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The Unix timestamp integer for the start of the Change Data Capture (CDC) operation.
 
 <h4 class="pdoc-member-header" id="ReplicationTask-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationTask.ts#L40">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationTask.ts#L40">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -1111,7 +1111,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ReplicationTask-migrationType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationTask.ts#L75">property <b>migrationType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationTask.ts#L75">property <b>migrationType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>migrationType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1119,7 +1119,7 @@ deployments and may be missing (undefined) during planning phases.
 The migration type. Can be one of `full-load | cdc | full-load-and-cdc`.
 
 <h4 class="pdoc-member-header" id="ReplicationTask-replicationInstanceArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationTask.ts#L79">property <b>replicationInstanceArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationTask.ts#L79">property <b>replicationInstanceArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>replicationInstanceArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1127,7 +1127,7 @@ The migration type. Can be one of `full-load | cdc | full-load-and-cdc`.
 The Amazon Resource Name (ARN) of the replication instance.
 
 <h4 class="pdoc-member-header" id="ReplicationTask-replicationTaskArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationTask.ts#L83">property <b>replicationTaskArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationTask.ts#L83">property <b>replicationTaskArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>replicationTaskArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1135,7 +1135,7 @@ The Amazon Resource Name (ARN) of the replication instance.
 The Amazon Resource Name (ARN) for the replication task.
 
 <h4 class="pdoc-member-header" id="ReplicationTask-replicationTaskId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationTask.ts#L87">property <b>replicationTaskId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationTask.ts#L87">property <b>replicationTaskId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>replicationTaskId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1143,7 +1143,7 @@ The Amazon Resource Name (ARN) for the replication task.
 The replication task identifier.
 
 <h4 class="pdoc-member-header" id="ReplicationTask-replicationTaskSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationTask.ts#L91">property <b>replicationTaskSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationTask.ts#L91">property <b>replicationTaskSettings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>replicationTaskSettings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1151,7 +1151,7 @@ The replication task identifier.
 An escaped JSON string that contains the task settings. For a complete list of task settings, see [Task Settings for AWS Database Migration Service Tasks](http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.CustomizingTasks.TaskSettings.html).
 
 <h4 class="pdoc-member-header" id="ReplicationTask-sourceEndpointArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationTask.ts#L95">property <b>sourceEndpointArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationTask.ts#L95">property <b>sourceEndpointArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>sourceEndpointArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1159,7 +1159,7 @@ An escaped JSON string that contains the task settings. For a complete list of t
 The Amazon Resource Name (ARN) string that uniquely identifies the source endpoint.
 
 <h4 class="pdoc-member-header" id="ReplicationTask-tableMappings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationTask.ts#L99">property <b>tableMappings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationTask.ts#L99">property <b>tableMappings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tableMappings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1167,7 +1167,7 @@ The Amazon Resource Name (ARN) string that uniquely identifies the source endpoi
 An escaped JSON string that contains the table mappings. For information on table mapping see [Using Table Mapping with an AWS Database Migration Service Task to Select and Filter Data](http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.CustomizingTasks.TableMapping.html)
 
 <h4 class="pdoc-member-header" id="ReplicationTask-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationTask.ts#L103">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationTask.ts#L103">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -1175,7 +1175,7 @@ An escaped JSON string that contains the table mappings. For information on tabl
 A map of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="ReplicationTask-targetEndpointArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationTask.ts#L107">property <b>targetEndpointArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationTask.ts#L107">property <b>targetEndpointArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>targetEndpointArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1183,7 +1183,7 @@ A map of tags to assign to the resource.
 The Amazon Resource Name (ARN) string that uniquely identifies the target endpoint.
 
 <h4 class="pdoc-member-header" id="ReplicationTask-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationTask.ts#L40">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationTask.ts#L40">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1195,7 +1195,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="CertificateArgs" data-link-title="CertificateArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/certificate.ts#L140">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/certificate.ts#L140">
         interface <strong>CertificateArgs</strong>
     </a>
 </h3>
@@ -1205,7 +1205,7 @@ deployments.
 The set of arguments for constructing a Certificate resource.
 
 <h4 class="pdoc-member-header" id="CertificateArgs-certificateId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/certificate.ts#L144">property <b>certificateId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/certificate.ts#L144">property <b>certificateId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certificateId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1213,7 +1213,7 @@ The set of arguments for constructing a Certificate resource.
 The certificate identifier.
 
 <h4 class="pdoc-member-header" id="CertificateArgs-certificatePem">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/certificate.ts#L148">property <b>certificatePem</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/certificate.ts#L148">property <b>certificatePem</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certificatePem?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1221,7 +1221,7 @@ The certificate identifier.
 The contents of the .pem X.509 certificate file for the certificate. Either `certificatePem` or `certificateWallet` must be set.
 
 <h4 class="pdoc-member-header" id="CertificateArgs-certificateWallet">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/certificate.ts#L152">property <b>certificateWallet</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/certificate.ts#L152">property <b>certificateWallet</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certificateWallet?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1229,7 +1229,7 @@ The contents of the .pem X.509 certificate file for the certificate. Either `cer
 The contents of the Oracle Wallet certificate for use with SSL. Either `certificatePem` or `certificateWallet` must be set.
 
 <h3 class="pdoc-module-header" id="CertificateState" data-link-title="CertificateState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/certificate.ts#L118">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/certificate.ts#L118">
         interface <strong>CertificateState</strong>
     </a>
 </h3>
@@ -1239,7 +1239,7 @@ The contents of the Oracle Wallet certificate for use with SSL. Either `certific
 Input properties used for looking up and filtering Certificate resources.
 
 <h4 class="pdoc-member-header" id="CertificateState-certificateArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/certificate.ts#L122">property <b>certificateArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/certificate.ts#L122">property <b>certificateArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certificateArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1247,7 +1247,7 @@ Input properties used for looking up and filtering Certificate resources.
 The Amazon Resource Name (ARN) for the certificate.
 
 <h4 class="pdoc-member-header" id="CertificateState-certificateId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/certificate.ts#L126">property <b>certificateId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/certificate.ts#L126">property <b>certificateId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certificateId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1255,7 +1255,7 @@ The Amazon Resource Name (ARN) for the certificate.
 The certificate identifier.
 
 <h4 class="pdoc-member-header" id="CertificateState-certificatePem">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/certificate.ts#L130">property <b>certificatePem</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/certificate.ts#L130">property <b>certificatePem</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certificatePem?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1263,7 +1263,7 @@ The certificate identifier.
 The contents of the .pem X.509 certificate file for the certificate. Either `certificatePem` or `certificateWallet` must be set.
 
 <h4 class="pdoc-member-header" id="CertificateState-certificateWallet">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/certificate.ts#L134">property <b>certificateWallet</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/certificate.ts#L134">property <b>certificateWallet</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certificateWallet?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1271,7 +1271,7 @@ The contents of the .pem X.509 certificate file for the certificate. Either `cer
 The contents of the Oracle Wallet certificate for use with SSL. Either `certificatePem` or `certificateWallet` must be set.
 
 <h3 class="pdoc-module-header" id="EndpointArgs" data-link-title="EndpointArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/endpoint.ts#L320">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/endpoint.ts#L320">
         interface <strong>EndpointArgs</strong>
     </a>
 </h3>
@@ -1281,7 +1281,7 @@ The contents of the Oracle Wallet certificate for use with SSL. Either `certific
 The set of arguments for constructing a Endpoint resource.
 
 <h4 class="pdoc-member-header" id="EndpointArgs-certificateArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/endpoint.ts#L324">property <b>certificateArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/endpoint.ts#L324">property <b>certificateArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certificateArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1289,7 +1289,7 @@ The set of arguments for constructing a Endpoint resource.
 The Amazon Resource Name (ARN) for the certificate.
 
 <h4 class="pdoc-member-header" id="EndpointArgs-databaseName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/endpoint.ts#L328">property <b>databaseName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/endpoint.ts#L328">property <b>databaseName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>databaseName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1297,7 +1297,7 @@ The Amazon Resource Name (ARN) for the certificate.
 The name of the endpoint database.
 
 <h4 class="pdoc-member-header" id="EndpointArgs-elasticsearchSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/endpoint.ts#L332">property <b>elasticsearchSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/endpoint.ts#L332">property <b>elasticsearchSettings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>elasticsearchSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EndpointElasticsearchSettings'>EndpointElasticsearchSettings</a>&gt;;</code></pre>
@@ -1305,7 +1305,7 @@ The name of the endpoint database.
 Configuration block with Elasticsearch settings. Detailed below.
 
 <h4 class="pdoc-member-header" id="EndpointArgs-endpointId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/endpoint.ts#L336">property <b>endpointId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/endpoint.ts#L336">property <b>endpointId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endpointId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1313,7 +1313,7 @@ Configuration block with Elasticsearch settings. Detailed below.
 The database endpoint identifier.
 
 <h4 class="pdoc-member-header" id="EndpointArgs-endpointType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/endpoint.ts#L340">property <b>endpointType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/endpoint.ts#L340">property <b>endpointType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endpointType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1321,7 +1321,7 @@ The database endpoint identifier.
 The type of endpoint. Can be one of `source | target`.
 
 <h4 class="pdoc-member-header" id="EndpointArgs-engineName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/endpoint.ts#L344">property <b>engineName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/endpoint.ts#L344">property <b>engineName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>engineName: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1329,7 +1329,7 @@ The type of endpoint. Can be one of `source | target`.
 The type of engine for the endpoint. Can be one of `aurora | aurora-postgresql| azuredb | db2 | docdb | dynamodb | elasticsearch | kafka | kinesis | mariadb | mongodb | mysql | oracle | postgres | redshift | s3 | sqlserver | sybase`.
 
 <h4 class="pdoc-member-header" id="EndpointArgs-extraConnectionAttributes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/endpoint.ts#L348">property <b>extraConnectionAttributes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/endpoint.ts#L348">property <b>extraConnectionAttributes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>extraConnectionAttributes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1337,7 +1337,7 @@ The type of engine for the endpoint. Can be one of `aurora | aurora-postgresql| 
 Additional attributes associated with the connection. For available attributes see [Using Extra Connection Attributes with AWS Database Migration Service](http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Introduction.ConnectionAttributes.html).
 
 <h4 class="pdoc-member-header" id="EndpointArgs-kafkaSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/endpoint.ts#L352">property <b>kafkaSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/endpoint.ts#L352">property <b>kafkaSettings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kafkaSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EndpointKafkaSettings'>EndpointKafkaSettings</a>&gt;;</code></pre>
@@ -1345,7 +1345,7 @@ Additional attributes associated with the connection. For available attributes s
 Configuration block with Kafka settings. Detailed below.
 
 <h4 class="pdoc-member-header" id="EndpointArgs-kinesisSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/endpoint.ts#L356">property <b>kinesisSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/endpoint.ts#L356">property <b>kinesisSettings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kinesisSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EndpointKinesisSettings'>EndpointKinesisSettings</a>&gt;;</code></pre>
@@ -1353,7 +1353,7 @@ Configuration block with Kafka settings. Detailed below.
 Configuration block with Kinesis settings. Detailed below.
 
 <h4 class="pdoc-member-header" id="EndpointArgs-kmsKeyArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/endpoint.ts#L360">property <b>kmsKeyArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/endpoint.ts#L360">property <b>kmsKeyArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kmsKeyArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1361,7 +1361,7 @@ Configuration block with Kinesis settings. Detailed below.
 The Amazon Resource Name (ARN) for the KMS key that will be used to encrypt the connection parameters. If you do not specify a value for `kmsKeyArn`, then AWS DMS will use your default encryption key. AWS KMS creates the default encryption key for your AWS account. Your AWS account has a different default encryption key for each AWS region.
 
 <h4 class="pdoc-member-header" id="EndpointArgs-mongodbSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/endpoint.ts#L364">property <b>mongodbSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/endpoint.ts#L364">property <b>mongodbSettings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mongodbSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EndpointMongodbSettings'>EndpointMongodbSettings</a>&gt;;</code></pre>
@@ -1369,7 +1369,7 @@ The Amazon Resource Name (ARN) for the KMS key that will be used to encrypt the 
 Configuration block with MongoDB settings. Detailed below.
 
 <h4 class="pdoc-member-header" id="EndpointArgs-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/endpoint.ts#L368">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/endpoint.ts#L368">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>password?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1377,7 +1377,7 @@ Configuration block with MongoDB settings. Detailed below.
 The password to be used to login to the endpoint database.
 
 <h4 class="pdoc-member-header" id="EndpointArgs-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/endpoint.ts#L372">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/endpoint.ts#L372">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>port?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1385,7 +1385,7 @@ The password to be used to login to the endpoint database.
 The port used by the endpoint database.
 
 <h4 class="pdoc-member-header" id="EndpointArgs-s3Settings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/endpoint.ts#L376">property <b>s3Settings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/endpoint.ts#L376">property <b>s3Settings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>s3Settings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EndpointS3Settings'>EndpointS3Settings</a>&gt;;</code></pre>
@@ -1393,7 +1393,7 @@ The port used by the endpoint database.
 Configuration block with S3 settings. Detailed below.
 
 <h4 class="pdoc-member-header" id="EndpointArgs-serverName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/endpoint.ts#L380">property <b>serverName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/endpoint.ts#L380">property <b>serverName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serverName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1401,7 +1401,7 @@ Configuration block with S3 settings. Detailed below.
 The host name of the server.
 
 <h4 class="pdoc-member-header" id="EndpointArgs-serviceAccessRole">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/endpoint.ts#L384">property <b>serviceAccessRole</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/endpoint.ts#L384">property <b>serviceAccessRole</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceAccessRole?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1409,7 +1409,7 @@ The host name of the server.
 The Amazon Resource Name (ARN) used by the service access IAM role for dynamodb endpoints.
 
 <h4 class="pdoc-member-header" id="EndpointArgs-sslMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/endpoint.ts#L388">property <b>sslMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/endpoint.ts#L388">property <b>sslMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sslMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1417,7 +1417,7 @@ The Amazon Resource Name (ARN) used by the service access IAM role for dynamodb 
 The SSL mode to use for the connection. Can be one of `none | require | verify-ca | verify-full`
 
 <h4 class="pdoc-member-header" id="EndpointArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/endpoint.ts#L392">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/endpoint.ts#L392">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1425,7 +1425,7 @@ The SSL mode to use for the connection. Can be one of `none | require | verify-c
 A map of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="EndpointArgs-username">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/endpoint.ts#L396">property <b>username</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/endpoint.ts#L396">property <b>username</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>username?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1433,7 +1433,7 @@ A map of tags to assign to the resource.
 The user name to be used to login to the endpoint database.
 
 <h3 class="pdoc-module-header" id="EndpointState" data-link-title="EndpointState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/endpoint.ts#L234">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/endpoint.ts#L234">
         interface <strong>EndpointState</strong>
     </a>
 </h3>
@@ -1443,7 +1443,7 @@ The user name to be used to login to the endpoint database.
 Input properties used for looking up and filtering Endpoint resources.
 
 <h4 class="pdoc-member-header" id="EndpointState-certificateArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/endpoint.ts#L238">property <b>certificateArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/endpoint.ts#L238">property <b>certificateArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>certificateArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1451,7 +1451,7 @@ Input properties used for looking up and filtering Endpoint resources.
 The Amazon Resource Name (ARN) for the certificate.
 
 <h4 class="pdoc-member-header" id="EndpointState-databaseName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/endpoint.ts#L242">property <b>databaseName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/endpoint.ts#L242">property <b>databaseName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>databaseName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1459,7 +1459,7 @@ The Amazon Resource Name (ARN) for the certificate.
 The name of the endpoint database.
 
 <h4 class="pdoc-member-header" id="EndpointState-elasticsearchSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/endpoint.ts#L246">property <b>elasticsearchSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/endpoint.ts#L246">property <b>elasticsearchSettings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>elasticsearchSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EndpointElasticsearchSettings'>EndpointElasticsearchSettings</a>&gt;;</code></pre>
@@ -1467,7 +1467,7 @@ The name of the endpoint database.
 Configuration block with Elasticsearch settings. Detailed below.
 
 <h4 class="pdoc-member-header" id="EndpointState-endpointArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/endpoint.ts#L250">property <b>endpointArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/endpoint.ts#L250">property <b>endpointArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endpointArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1475,7 +1475,7 @@ Configuration block with Elasticsearch settings. Detailed below.
 The Amazon Resource Name (ARN) for the endpoint.
 
 <h4 class="pdoc-member-header" id="EndpointState-endpointId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/endpoint.ts#L254">property <b>endpointId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/endpoint.ts#L254">property <b>endpointId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endpointId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1483,7 +1483,7 @@ The Amazon Resource Name (ARN) for the endpoint.
 The database endpoint identifier.
 
 <h4 class="pdoc-member-header" id="EndpointState-endpointType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/endpoint.ts#L258">property <b>endpointType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/endpoint.ts#L258">property <b>endpointType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>endpointType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1491,7 +1491,7 @@ The database endpoint identifier.
 The type of endpoint. Can be one of `source | target`.
 
 <h4 class="pdoc-member-header" id="EndpointState-engineName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/endpoint.ts#L262">property <b>engineName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/endpoint.ts#L262">property <b>engineName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>engineName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1499,7 +1499,7 @@ The type of endpoint. Can be one of `source | target`.
 The type of engine for the endpoint. Can be one of `aurora | aurora-postgresql| azuredb | db2 | docdb | dynamodb | elasticsearch | kafka | kinesis | mariadb | mongodb | mysql | oracle | postgres | redshift | s3 | sqlserver | sybase`.
 
 <h4 class="pdoc-member-header" id="EndpointState-extraConnectionAttributes">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/endpoint.ts#L266">property <b>extraConnectionAttributes</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/endpoint.ts#L266">property <b>extraConnectionAttributes</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>extraConnectionAttributes?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1507,7 +1507,7 @@ The type of engine for the endpoint. Can be one of `aurora | aurora-postgresql| 
 Additional attributes associated with the connection. For available attributes see [Using Extra Connection Attributes with AWS Database Migration Service](http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Introduction.ConnectionAttributes.html).
 
 <h4 class="pdoc-member-header" id="EndpointState-kafkaSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/endpoint.ts#L270">property <b>kafkaSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/endpoint.ts#L270">property <b>kafkaSettings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kafkaSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EndpointKafkaSettings'>EndpointKafkaSettings</a>&gt;;</code></pre>
@@ -1515,7 +1515,7 @@ Additional attributes associated with the connection. For available attributes s
 Configuration block with Kafka settings. Detailed below.
 
 <h4 class="pdoc-member-header" id="EndpointState-kinesisSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/endpoint.ts#L274">property <b>kinesisSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/endpoint.ts#L274">property <b>kinesisSettings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kinesisSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EndpointKinesisSettings'>EndpointKinesisSettings</a>&gt;;</code></pre>
@@ -1523,7 +1523,7 @@ Configuration block with Kafka settings. Detailed below.
 Configuration block with Kinesis settings. Detailed below.
 
 <h4 class="pdoc-member-header" id="EndpointState-kmsKeyArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/endpoint.ts#L278">property <b>kmsKeyArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/endpoint.ts#L278">property <b>kmsKeyArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kmsKeyArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1531,7 +1531,7 @@ Configuration block with Kinesis settings. Detailed below.
 The Amazon Resource Name (ARN) for the KMS key that will be used to encrypt the connection parameters. If you do not specify a value for `kmsKeyArn`, then AWS DMS will use your default encryption key. AWS KMS creates the default encryption key for your AWS account. Your AWS account has a different default encryption key for each AWS region.
 
 <h4 class="pdoc-member-header" id="EndpointState-mongodbSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/endpoint.ts#L282">property <b>mongodbSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/endpoint.ts#L282">property <b>mongodbSettings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>mongodbSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EndpointMongodbSettings'>EndpointMongodbSettings</a>&gt;;</code></pre>
@@ -1539,7 +1539,7 @@ The Amazon Resource Name (ARN) for the KMS key that will be used to encrypt the 
 Configuration block with MongoDB settings. Detailed below.
 
 <h4 class="pdoc-member-header" id="EndpointState-password">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/endpoint.ts#L286">property <b>password</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/endpoint.ts#L286">property <b>password</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>password?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1547,7 +1547,7 @@ Configuration block with MongoDB settings. Detailed below.
 The password to be used to login to the endpoint database.
 
 <h4 class="pdoc-member-header" id="EndpointState-port">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/endpoint.ts#L290">property <b>port</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/endpoint.ts#L290">property <b>port</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>port?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1555,7 +1555,7 @@ The password to be used to login to the endpoint database.
 The port used by the endpoint database.
 
 <h4 class="pdoc-member-header" id="EndpointState-s3Settings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/endpoint.ts#L294">property <b>s3Settings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/endpoint.ts#L294">property <b>s3Settings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>s3Settings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#EndpointS3Settings'>EndpointS3Settings</a>&gt;;</code></pre>
@@ -1563,7 +1563,7 @@ The port used by the endpoint database.
 Configuration block with S3 settings. Detailed below.
 
 <h4 class="pdoc-member-header" id="EndpointState-serverName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/endpoint.ts#L298">property <b>serverName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/endpoint.ts#L298">property <b>serverName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serverName?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1571,7 +1571,7 @@ Configuration block with S3 settings. Detailed below.
 The host name of the server.
 
 <h4 class="pdoc-member-header" id="EndpointState-serviceAccessRole">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/endpoint.ts#L302">property <b>serviceAccessRole</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/endpoint.ts#L302">property <b>serviceAccessRole</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>serviceAccessRole?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1579,7 +1579,7 @@ The host name of the server.
 The Amazon Resource Name (ARN) used by the service access IAM role for dynamodb endpoints.
 
 <h4 class="pdoc-member-header" id="EndpointState-sslMode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/endpoint.ts#L306">property <b>sslMode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/endpoint.ts#L306">property <b>sslMode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sslMode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1587,7 +1587,7 @@ The Amazon Resource Name (ARN) used by the service access IAM role for dynamodb 
 The SSL mode to use for the connection. Can be one of `none | require | verify-ca | verify-full`
 
 <h4 class="pdoc-member-header" id="EndpointState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/endpoint.ts#L310">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/endpoint.ts#L310">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1595,7 +1595,7 @@ The SSL mode to use for the connection. Can be one of `none | require | verify-c
 A map of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="EndpointState-username">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/endpoint.ts#L314">property <b>username</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/endpoint.ts#L314">property <b>username</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>username?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1603,7 +1603,7 @@ A map of tags to assign to the resource.
 The user name to be used to login to the endpoint database.
 
 <h3 class="pdoc-module-header" id="EventSubscriptionArgs" data-link-title="EventSubscriptionArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/eventSubscription.ts#L177">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/eventSubscription.ts#L177">
         interface <strong>EventSubscriptionArgs</strong>
     </a>
 </h3>
@@ -1613,7 +1613,7 @@ The user name to be used to login to the endpoint database.
 The set of arguments for constructing a EventSubscription resource.
 
 <h4 class="pdoc-member-header" id="EventSubscriptionArgs-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/eventSubscription.ts#L181">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/eventSubscription.ts#L181">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1621,7 +1621,7 @@ The set of arguments for constructing a EventSubscription resource.
 Whether the event subscription should be enabled.
 
 <h4 class="pdoc-member-header" id="EventSubscriptionArgs-eventCategories">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/eventSubscription.ts#L185">property <b>eventCategories</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/eventSubscription.ts#L185">property <b>eventCategories</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eventCategories: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1629,7 +1629,7 @@ Whether the event subscription should be enabled.
 List of event categories to listen for, see `DescribeEventCategories` for a canonical list.
 
 <h4 class="pdoc-member-header" id="EventSubscriptionArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/eventSubscription.ts#L189">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/eventSubscription.ts#L189">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1637,7 +1637,7 @@ List of event categories to listen for, see `DescribeEventCategories` for a cano
 Name of event subscription.
 
 <h4 class="pdoc-member-header" id="EventSubscriptionArgs-snsTopicArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/eventSubscription.ts#L193">property <b>snsTopicArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/eventSubscription.ts#L193">property <b>snsTopicArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>snsTopicArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1645,7 +1645,7 @@ Name of event subscription.
 SNS topic arn to send events on.
 
 <h4 class="pdoc-member-header" id="EventSubscriptionArgs-sourceIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/eventSubscription.ts#L197">property <b>sourceIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/eventSubscription.ts#L197">property <b>sourceIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1653,7 +1653,7 @@ SNS topic arn to send events on.
 Ids of sources to listen to.
 
 <h4 class="pdoc-member-header" id="EventSubscriptionArgs-sourceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/eventSubscription.ts#L201">property <b>sourceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/eventSubscription.ts#L201">property <b>sourceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1661,12 +1661,12 @@ Ids of sources to listen to.
 Type of source for events. Valid values: `replication-instance` or `replication-task`
 
 <h4 class="pdoc-member-header" id="EventSubscriptionArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/eventSubscription.ts#L202">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/eventSubscription.ts#L202">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="EventSubscriptionState" data-link-title="EventSubscriptionState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/eventSubscription.ts#L145">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/eventSubscription.ts#L145">
         interface <strong>EventSubscriptionState</strong>
     </a>
 </h3>
@@ -1676,12 +1676,12 @@ Type of source for events. Valid values: `replication-instance` or `replication-
 Input properties used for looking up and filtering EventSubscription resources.
 
 <h4 class="pdoc-member-header" id="EventSubscriptionState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/eventSubscription.ts#L146">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/eventSubscription.ts#L146">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="EventSubscriptionState-enabled">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/eventSubscription.ts#L150">property <b>enabled</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/eventSubscription.ts#L150">property <b>enabled</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>enabled?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1689,7 +1689,7 @@ Input properties used for looking up and filtering EventSubscription resources.
 Whether the event subscription should be enabled.
 
 <h4 class="pdoc-member-header" id="EventSubscriptionState-eventCategories">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/eventSubscription.ts#L154">property <b>eventCategories</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/eventSubscription.ts#L154">property <b>eventCategories</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>eventCategories?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1697,7 +1697,7 @@ Whether the event subscription should be enabled.
 List of event categories to listen for, see `DescribeEventCategories` for a canonical list.
 
 <h4 class="pdoc-member-header" id="EventSubscriptionState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/eventSubscription.ts#L158">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/eventSubscription.ts#L158">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1705,7 +1705,7 @@ List of event categories to listen for, see `DescribeEventCategories` for a cano
 Name of event subscription.
 
 <h4 class="pdoc-member-header" id="EventSubscriptionState-snsTopicArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/eventSubscription.ts#L162">property <b>snsTopicArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/eventSubscription.ts#L162">property <b>snsTopicArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>snsTopicArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1713,7 +1713,7 @@ Name of event subscription.
 SNS topic arn to send events on.
 
 <h4 class="pdoc-member-header" id="EventSubscriptionState-sourceIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/eventSubscription.ts#L166">property <b>sourceIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/eventSubscription.ts#L166">property <b>sourceIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1721,7 +1721,7 @@ SNS topic arn to send events on.
 Ids of sources to listen to.
 
 <h4 class="pdoc-member-header" id="EventSubscriptionState-sourceType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/eventSubscription.ts#L170">property <b>sourceType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/eventSubscription.ts#L170">property <b>sourceType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1729,12 +1729,12 @@ Ids of sources to listen to.
 Type of source for events. Valid values: `replication-instance` or `replication-task`
 
 <h4 class="pdoc-member-header" id="EventSubscriptionState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/eventSubscription.ts#L171">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/eventSubscription.ts#L171">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ReplicationInstanceArgs" data-link-title="ReplicationInstanceArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationInstance.ts#L319">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationInstance.ts#L319">
         interface <strong>ReplicationInstanceArgs</strong>
     </a>
 </h3>
@@ -1744,7 +1744,7 @@ Type of source for events. Valid values: `replication-instance` or `replication-
 The set of arguments for constructing a ReplicationInstance resource.
 
 <h4 class="pdoc-member-header" id="ReplicationInstanceArgs-allocatedStorage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationInstance.ts#L323">property <b>allocatedStorage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationInstance.ts#L323">property <b>allocatedStorage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allocatedStorage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1752,7 +1752,7 @@ The set of arguments for constructing a ReplicationInstance resource.
 The amount of storage (in gigabytes) to be initially allocated for the replication instance.
 
 <h4 class="pdoc-member-header" id="ReplicationInstanceArgs-allowMajorVersionUpgrade">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationInstance.ts#L327">property <b>allowMajorVersionUpgrade</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationInstance.ts#L327">property <b>allowMajorVersionUpgrade</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowMajorVersionUpgrade?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1760,7 +1760,7 @@ The amount of storage (in gigabytes) to be initially allocated for the replicati
 Indicates that major version upgrades are allowed.
 
 <h4 class="pdoc-member-header" id="ReplicationInstanceArgs-applyImmediately">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationInstance.ts#L331">property <b>applyImmediately</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationInstance.ts#L331">property <b>applyImmediately</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>applyImmediately?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1768,7 +1768,7 @@ Indicates that major version upgrades are allowed.
 Indicates whether the changes should be applied immediately or during the next maintenance window. Only used when updating an existing resource.
 
 <h4 class="pdoc-member-header" id="ReplicationInstanceArgs-autoMinorVersionUpgrade">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationInstance.ts#L335">property <b>autoMinorVersionUpgrade</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationInstance.ts#L335">property <b>autoMinorVersionUpgrade</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoMinorVersionUpgrade?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1776,7 +1776,7 @@ Indicates whether the changes should be applied immediately or during the next m
 Indicates that minor engine upgrades will be applied automatically to the replication instance during the maintenance window.
 
 <h4 class="pdoc-member-header" id="ReplicationInstanceArgs-availabilityZone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationInstance.ts#L339">property <b>availabilityZone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationInstance.ts#L339">property <b>availabilityZone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>availabilityZone?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1784,7 +1784,7 @@ Indicates that minor engine upgrades will be applied automatically to the replic
 The EC2 Availability Zone that the replication instance will be created in.
 
 <h4 class="pdoc-member-header" id="ReplicationInstanceArgs-engineVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationInstance.ts#L343">property <b>engineVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationInstance.ts#L343">property <b>engineVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>engineVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1792,7 +1792,7 @@ The EC2 Availability Zone that the replication instance will be created in.
 The engine version number of the replication instance.
 
 <h4 class="pdoc-member-header" id="ReplicationInstanceArgs-kmsKeyArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationInstance.ts#L347">property <b>kmsKeyArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationInstance.ts#L347">property <b>kmsKeyArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kmsKeyArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1800,7 +1800,7 @@ The engine version number of the replication instance.
 The Amazon Resource Name (ARN) for the KMS key that will be used to encrypt the connection parameters. If you do not specify a value for `kmsKeyArn`, then AWS DMS will use your default encryption key. AWS KMS creates the default encryption key for your AWS account. Your AWS account has a different default encryption key for each AWS region.
 
 <h4 class="pdoc-member-header" id="ReplicationInstanceArgs-multiAz">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationInstance.ts#L351">property <b>multiAz</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationInstance.ts#L351">property <b>multiAz</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>multiAz?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1808,7 +1808,7 @@ The Amazon Resource Name (ARN) for the KMS key that will be used to encrypt the 
 Specifies if the replication instance is a multi-az deployment. You cannot set the `availabilityZone` parameter if the `multiAz` parameter is set to `true`.
 
 <h4 class="pdoc-member-header" id="ReplicationInstanceArgs-preferredMaintenanceWindow">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationInstance.ts#L355">property <b>preferredMaintenanceWindow</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationInstance.ts#L355">property <b>preferredMaintenanceWindow</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>preferredMaintenanceWindow?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1816,7 +1816,7 @@ Specifies if the replication instance is a multi-az deployment. You cannot set t
 The weekly time range during which system maintenance can occur, in Universal Coordinated Time (UTC).
 
 <h4 class="pdoc-member-header" id="ReplicationInstanceArgs-publiclyAccessible">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationInstance.ts#L359">property <b>publiclyAccessible</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationInstance.ts#L359">property <b>publiclyAccessible</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publiclyAccessible?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1824,7 +1824,7 @@ The weekly time range during which system maintenance can occur, in Universal Co
 Specifies the accessibility options for the replication instance. A value of true represents an instance with a public IP address. A value of false represents an instance with a private IP address.
 
 <h4 class="pdoc-member-header" id="ReplicationInstanceArgs-replicationInstanceClass">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationInstance.ts#L363">property <b>replicationInstanceClass</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationInstance.ts#L363">property <b>replicationInstanceClass</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>replicationInstanceClass: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1832,7 +1832,7 @@ Specifies the accessibility options for the replication instance. A value of tru
 The compute and memory capacity of the replication instance as specified by the replication instance class. Can be one of `dms.t2.micro | dms.t2.small | dms.t2.medium | dms.t2.large | dms.c4.large | dms.c4.xlarge | dms.c4.2xlarge | dms.c4.4xlarge`
 
 <h4 class="pdoc-member-header" id="ReplicationInstanceArgs-replicationInstanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationInstance.ts#L367">property <b>replicationInstanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationInstance.ts#L367">property <b>replicationInstanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>replicationInstanceId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1840,7 +1840,7 @@ The compute and memory capacity of the replication instance as specified by the 
 The replication instance identifier. This parameter is stored as a lowercase string.
 
 <h4 class="pdoc-member-header" id="ReplicationInstanceArgs-replicationSubnetGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationInstance.ts#L371">property <b>replicationSubnetGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationInstance.ts#L371">property <b>replicationSubnetGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>replicationSubnetGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1848,7 +1848,7 @@ The replication instance identifier. This parameter is stored as a lowercase str
 A subnet group to associate with the replication instance.
 
 <h4 class="pdoc-member-header" id="ReplicationInstanceArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationInstance.ts#L375">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationInstance.ts#L375">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1856,7 +1856,7 @@ A subnet group to associate with the replication instance.
 A map of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="ReplicationInstanceArgs-vpcSecurityGroupIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationInstance.ts#L379">property <b>vpcSecurityGroupIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationInstance.ts#L379">property <b>vpcSecurityGroupIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpcSecurityGroupIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1864,7 +1864,7 @@ A map of tags to assign to the resource.
 A list of VPC security group IDs to be used with the replication instance. The VPC security groups must work with the VPC containing the replication instance.
 
 <h3 class="pdoc-module-header" id="ReplicationInstanceState" data-link-title="ReplicationInstanceState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationInstance.ts#L241">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationInstance.ts#L241">
         interface <strong>ReplicationInstanceState</strong>
     </a>
 </h3>
@@ -1874,7 +1874,7 @@ A list of VPC security group IDs to be used with the replication instance. The V
 Input properties used for looking up and filtering ReplicationInstance resources.
 
 <h4 class="pdoc-member-header" id="ReplicationInstanceState-allocatedStorage">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationInstance.ts#L245">property <b>allocatedStorage</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationInstance.ts#L245">property <b>allocatedStorage</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allocatedStorage?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1882,7 +1882,7 @@ Input properties used for looking up and filtering ReplicationInstance resources
 The amount of storage (in gigabytes) to be initially allocated for the replication instance.
 
 <h4 class="pdoc-member-header" id="ReplicationInstanceState-allowMajorVersionUpgrade">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationInstance.ts#L249">property <b>allowMajorVersionUpgrade</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationInstance.ts#L249">property <b>allowMajorVersionUpgrade</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>allowMajorVersionUpgrade?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1890,7 +1890,7 @@ The amount of storage (in gigabytes) to be initially allocated for the replicati
 Indicates that major version upgrades are allowed.
 
 <h4 class="pdoc-member-header" id="ReplicationInstanceState-applyImmediately">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationInstance.ts#L253">property <b>applyImmediately</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationInstance.ts#L253">property <b>applyImmediately</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>applyImmediately?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1898,7 +1898,7 @@ Indicates that major version upgrades are allowed.
 Indicates whether the changes should be applied immediately or during the next maintenance window. Only used when updating an existing resource.
 
 <h4 class="pdoc-member-header" id="ReplicationInstanceState-autoMinorVersionUpgrade">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationInstance.ts#L257">property <b>autoMinorVersionUpgrade</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationInstance.ts#L257">property <b>autoMinorVersionUpgrade</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>autoMinorVersionUpgrade?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1906,7 +1906,7 @@ Indicates whether the changes should be applied immediately or during the next m
 Indicates that minor engine upgrades will be applied automatically to the replication instance during the maintenance window.
 
 <h4 class="pdoc-member-header" id="ReplicationInstanceState-availabilityZone">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationInstance.ts#L261">property <b>availabilityZone</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationInstance.ts#L261">property <b>availabilityZone</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>availabilityZone?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1914,7 +1914,7 @@ Indicates that minor engine upgrades will be applied automatically to the replic
 The EC2 Availability Zone that the replication instance will be created in.
 
 <h4 class="pdoc-member-header" id="ReplicationInstanceState-engineVersion">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationInstance.ts#L265">property <b>engineVersion</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationInstance.ts#L265">property <b>engineVersion</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>engineVersion?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1922,7 +1922,7 @@ The EC2 Availability Zone that the replication instance will be created in.
 The engine version number of the replication instance.
 
 <h4 class="pdoc-member-header" id="ReplicationInstanceState-kmsKeyArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationInstance.ts#L269">property <b>kmsKeyArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationInstance.ts#L269">property <b>kmsKeyArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>kmsKeyArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1930,7 +1930,7 @@ The engine version number of the replication instance.
 The Amazon Resource Name (ARN) for the KMS key that will be used to encrypt the connection parameters. If you do not specify a value for `kmsKeyArn`, then AWS DMS will use your default encryption key. AWS KMS creates the default encryption key for your AWS account. Your AWS account has a different default encryption key for each AWS region.
 
 <h4 class="pdoc-member-header" id="ReplicationInstanceState-multiAz">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationInstance.ts#L273">property <b>multiAz</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationInstance.ts#L273">property <b>multiAz</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>multiAz?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1938,7 +1938,7 @@ The Amazon Resource Name (ARN) for the KMS key that will be used to encrypt the 
 Specifies if the replication instance is a multi-az deployment. You cannot set the `availabilityZone` parameter if the `multiAz` parameter is set to `true`.
 
 <h4 class="pdoc-member-header" id="ReplicationInstanceState-preferredMaintenanceWindow">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationInstance.ts#L277">property <b>preferredMaintenanceWindow</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationInstance.ts#L277">property <b>preferredMaintenanceWindow</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>preferredMaintenanceWindow?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1946,7 +1946,7 @@ Specifies if the replication instance is a multi-az deployment. You cannot set t
 The weekly time range during which system maintenance can occur, in Universal Coordinated Time (UTC).
 
 <h4 class="pdoc-member-header" id="ReplicationInstanceState-publiclyAccessible">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationInstance.ts#L281">property <b>publiclyAccessible</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationInstance.ts#L281">property <b>publiclyAccessible</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>publiclyAccessible?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1954,7 +1954,7 @@ The weekly time range during which system maintenance can occur, in Universal Co
 Specifies the accessibility options for the replication instance. A value of true represents an instance with a public IP address. A value of false represents an instance with a private IP address.
 
 <h4 class="pdoc-member-header" id="ReplicationInstanceState-replicationInstanceArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationInstance.ts#L285">property <b>replicationInstanceArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationInstance.ts#L285">property <b>replicationInstanceArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>replicationInstanceArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1962,7 +1962,7 @@ Specifies the accessibility options for the replication instance. A value of tru
 The Amazon Resource Name (ARN) of the replication instance.
 
 <h4 class="pdoc-member-header" id="ReplicationInstanceState-replicationInstanceClass">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationInstance.ts#L289">property <b>replicationInstanceClass</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationInstance.ts#L289">property <b>replicationInstanceClass</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>replicationInstanceClass?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1970,7 +1970,7 @@ The Amazon Resource Name (ARN) of the replication instance.
 The compute and memory capacity of the replication instance as specified by the replication instance class. Can be one of `dms.t2.micro | dms.t2.small | dms.t2.medium | dms.t2.large | dms.c4.large | dms.c4.xlarge | dms.c4.2xlarge | dms.c4.4xlarge`
 
 <h4 class="pdoc-member-header" id="ReplicationInstanceState-replicationInstanceId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationInstance.ts#L293">property <b>replicationInstanceId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationInstance.ts#L293">property <b>replicationInstanceId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>replicationInstanceId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1978,7 +1978,7 @@ The compute and memory capacity of the replication instance as specified by the 
 The replication instance identifier. This parameter is stored as a lowercase string.
 
 <h4 class="pdoc-member-header" id="ReplicationInstanceState-replicationInstancePrivateIps">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationInstance.ts#L297">property <b>replicationInstancePrivateIps</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationInstance.ts#L297">property <b>replicationInstancePrivateIps</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>replicationInstancePrivateIps?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1986,7 +1986,7 @@ The replication instance identifier. This parameter is stored as a lowercase str
 A list of the private IP addresses of the replication instance.
 
 <h4 class="pdoc-member-header" id="ReplicationInstanceState-replicationInstancePublicIps">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationInstance.ts#L301">property <b>replicationInstancePublicIps</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationInstance.ts#L301">property <b>replicationInstancePublicIps</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>replicationInstancePublicIps?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -1994,7 +1994,7 @@ A list of the private IP addresses of the replication instance.
 A list of the public IP addresses of the replication instance.
 
 <h4 class="pdoc-member-header" id="ReplicationInstanceState-replicationSubnetGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationInstance.ts#L305">property <b>replicationSubnetGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationInstance.ts#L305">property <b>replicationSubnetGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>replicationSubnetGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2002,7 +2002,7 @@ A list of the public IP addresses of the replication instance.
 A subnet group to associate with the replication instance.
 
 <h4 class="pdoc-member-header" id="ReplicationInstanceState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationInstance.ts#L309">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationInstance.ts#L309">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2010,7 +2010,7 @@ A subnet group to associate with the replication instance.
 A map of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="ReplicationInstanceState-vpcSecurityGroupIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationInstance.ts#L313">property <b>vpcSecurityGroupIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationInstance.ts#L313">property <b>vpcSecurityGroupIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpcSecurityGroupIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2018,7 +2018,7 @@ A map of tags to assign to the resource.
 A list of VPC security group IDs to be used with the replication instance. The VPC security groups must work with the VPC containing the replication instance.
 
 <h3 class="pdoc-module-header" id="ReplicationSubnetGroupArgs" data-link-title="ReplicationSubnetGroupArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationSubnetGroup.ts#L162">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationSubnetGroup.ts#L162">
         interface <strong>ReplicationSubnetGroupArgs</strong>
     </a>
 </h3>
@@ -2028,7 +2028,7 @@ A list of VPC security group IDs to be used with the replication instance. The V
 The set of arguments for constructing a ReplicationSubnetGroup resource.
 
 <h4 class="pdoc-member-header" id="ReplicationSubnetGroupArgs-replicationSubnetGroupDescription">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationSubnetGroup.ts#L166">property <b>replicationSubnetGroupDescription</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationSubnetGroup.ts#L166">property <b>replicationSubnetGroupDescription</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>replicationSubnetGroupDescription: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2036,7 +2036,7 @@ The set of arguments for constructing a ReplicationSubnetGroup resource.
 The description for the subnet group.
 
 <h4 class="pdoc-member-header" id="ReplicationSubnetGroupArgs-replicationSubnetGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationSubnetGroup.ts#L170">property <b>replicationSubnetGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationSubnetGroup.ts#L170">property <b>replicationSubnetGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>replicationSubnetGroupId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2044,7 +2044,7 @@ The description for the subnet group.
 The name for the replication subnet group. This value is stored as a lowercase string.
 
 <h4 class="pdoc-member-header" id="ReplicationSubnetGroupArgs-subnetIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationSubnetGroup.ts#L174">property <b>subnetIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationSubnetGroup.ts#L174">property <b>subnetIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subnetIds: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2052,7 +2052,7 @@ The name for the replication subnet group. This value is stored as a lowercase s
 A list of the EC2 subnet IDs for the subnet group.
 
 <h4 class="pdoc-member-header" id="ReplicationSubnetGroupArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationSubnetGroup.ts#L178">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationSubnetGroup.ts#L178">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2060,7 +2060,7 @@ A list of the EC2 subnet IDs for the subnet group.
 A map of tags to assign to the resource.
 
 <h3 class="pdoc-module-header" id="ReplicationSubnetGroupState" data-link-title="ReplicationSubnetGroupState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationSubnetGroup.ts#L135">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationSubnetGroup.ts#L135">
         interface <strong>ReplicationSubnetGroupState</strong>
     </a>
 </h3>
@@ -2070,12 +2070,12 @@ A map of tags to assign to the resource.
 Input properties used for looking up and filtering ReplicationSubnetGroup resources.
 
 <h4 class="pdoc-member-header" id="ReplicationSubnetGroupState-replicationSubnetGroupArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationSubnetGroup.ts#L136">property <b>replicationSubnetGroupArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationSubnetGroup.ts#L136">property <b>replicationSubnetGroupArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>replicationSubnetGroupArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ReplicationSubnetGroupState-replicationSubnetGroupDescription">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationSubnetGroup.ts#L140">property <b>replicationSubnetGroupDescription</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationSubnetGroup.ts#L140">property <b>replicationSubnetGroupDescription</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>replicationSubnetGroupDescription?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2083,7 +2083,7 @@ Input properties used for looking up and filtering ReplicationSubnetGroup resour
 The description for the subnet group.
 
 <h4 class="pdoc-member-header" id="ReplicationSubnetGroupState-replicationSubnetGroupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationSubnetGroup.ts#L144">property <b>replicationSubnetGroupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationSubnetGroup.ts#L144">property <b>replicationSubnetGroupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>replicationSubnetGroupId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2091,7 +2091,7 @@ The description for the subnet group.
 The name for the replication subnet group. This value is stored as a lowercase string.
 
 <h4 class="pdoc-member-header" id="ReplicationSubnetGroupState-subnetIds">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationSubnetGroup.ts#L148">property <b>subnetIds</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationSubnetGroup.ts#L148">property <b>subnetIds</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subnetIds?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -2099,7 +2099,7 @@ The name for the replication subnet group. This value is stored as a lowercase s
 A list of the EC2 subnet IDs for the subnet group.
 
 <h4 class="pdoc-member-header" id="ReplicationSubnetGroupState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationSubnetGroup.ts#L152">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationSubnetGroup.ts#L152">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2107,7 +2107,7 @@ A list of the EC2 subnet IDs for the subnet group.
 A map of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="ReplicationSubnetGroupState-vpcId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationSubnetGroup.ts#L156">property <b>vpcId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationSubnetGroup.ts#L156">property <b>vpcId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpcId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2115,7 +2115,7 @@ A map of tags to assign to the resource.
 The ID of the VPC the subnet group is in.
 
 <h3 class="pdoc-module-header" id="ReplicationTaskArgs" data-link-title="ReplicationTaskArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationTask.ts#L222">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationTask.ts#L222">
         interface <strong>ReplicationTaskArgs</strong>
     </a>
 </h3>
@@ -2125,7 +2125,7 @@ The ID of the VPC the subnet group is in.
 The set of arguments for constructing a ReplicationTask resource.
 
 <h4 class="pdoc-member-header" id="ReplicationTaskArgs-cdcStartTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationTask.ts#L226">property <b>cdcStartTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationTask.ts#L226">property <b>cdcStartTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cdcStartTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2133,7 +2133,7 @@ The set of arguments for constructing a ReplicationTask resource.
 The Unix timestamp integer for the start of the Change Data Capture (CDC) operation.
 
 <h4 class="pdoc-member-header" id="ReplicationTaskArgs-migrationType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationTask.ts#L230">property <b>migrationType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationTask.ts#L230">property <b>migrationType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>migrationType: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2141,7 +2141,7 @@ The Unix timestamp integer for the start of the Change Data Capture (CDC) operat
 The migration type. Can be one of `full-load | cdc | full-load-and-cdc`.
 
 <h4 class="pdoc-member-header" id="ReplicationTaskArgs-replicationInstanceArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationTask.ts#L234">property <b>replicationInstanceArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationTask.ts#L234">property <b>replicationInstanceArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>replicationInstanceArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2149,7 +2149,7 @@ The migration type. Can be one of `full-load | cdc | full-load-and-cdc`.
 The Amazon Resource Name (ARN) of the replication instance.
 
 <h4 class="pdoc-member-header" id="ReplicationTaskArgs-replicationTaskId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationTask.ts#L238">property <b>replicationTaskId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationTask.ts#L238">property <b>replicationTaskId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>replicationTaskId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2157,7 +2157,7 @@ The Amazon Resource Name (ARN) of the replication instance.
 The replication task identifier.
 
 <h4 class="pdoc-member-header" id="ReplicationTaskArgs-replicationTaskSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationTask.ts#L242">property <b>replicationTaskSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationTask.ts#L242">property <b>replicationTaskSettings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>replicationTaskSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2165,7 +2165,7 @@ The replication task identifier.
 An escaped JSON string that contains the task settings. For a complete list of task settings, see [Task Settings for AWS Database Migration Service Tasks](http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.CustomizingTasks.TaskSettings.html).
 
 <h4 class="pdoc-member-header" id="ReplicationTaskArgs-sourceEndpointArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationTask.ts#L246">property <b>sourceEndpointArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationTask.ts#L246">property <b>sourceEndpointArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceEndpointArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2173,7 +2173,7 @@ An escaped JSON string that contains the task settings. For a complete list of t
 The Amazon Resource Name (ARN) string that uniquely identifies the source endpoint.
 
 <h4 class="pdoc-member-header" id="ReplicationTaskArgs-tableMappings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationTask.ts#L250">property <b>tableMappings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationTask.ts#L250">property <b>tableMappings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tableMappings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2181,7 +2181,7 @@ The Amazon Resource Name (ARN) string that uniquely identifies the source endpoi
 An escaped JSON string that contains the table mappings. For information on table mapping see [Using Table Mapping with an AWS Database Migration Service Task to Select and Filter Data](http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.CustomizingTasks.TableMapping.html)
 
 <h4 class="pdoc-member-header" id="ReplicationTaskArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationTask.ts#L254">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationTask.ts#L254">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2189,7 +2189,7 @@ An escaped JSON string that contains the table mappings. For information on tabl
 A map of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="ReplicationTaskArgs-targetEndpointArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationTask.ts#L258">property <b>targetEndpointArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationTask.ts#L258">property <b>targetEndpointArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetEndpointArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2197,7 +2197,7 @@ A map of tags to assign to the resource.
 The Amazon Resource Name (ARN) string that uniquely identifies the target endpoint.
 
 <h3 class="pdoc-module-header" id="ReplicationTaskState" data-link-title="ReplicationTaskState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationTask.ts#L176">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationTask.ts#L176">
         interface <strong>ReplicationTaskState</strong>
     </a>
 </h3>
@@ -2207,7 +2207,7 @@ The Amazon Resource Name (ARN) string that uniquely identifies the target endpoi
 Input properties used for looking up and filtering ReplicationTask resources.
 
 <h4 class="pdoc-member-header" id="ReplicationTaskState-cdcStartTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationTask.ts#L180">property <b>cdcStartTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationTask.ts#L180">property <b>cdcStartTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>cdcStartTime?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2215,7 +2215,7 @@ Input properties used for looking up and filtering ReplicationTask resources.
 The Unix timestamp integer for the start of the Change Data Capture (CDC) operation.
 
 <h4 class="pdoc-member-header" id="ReplicationTaskState-migrationType">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationTask.ts#L184">property <b>migrationType</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationTask.ts#L184">property <b>migrationType</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>migrationType?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2223,7 +2223,7 @@ The Unix timestamp integer for the start of the Change Data Capture (CDC) operat
 The migration type. Can be one of `full-load | cdc | full-load-and-cdc`.
 
 <h4 class="pdoc-member-header" id="ReplicationTaskState-replicationInstanceArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationTask.ts#L188">property <b>replicationInstanceArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationTask.ts#L188">property <b>replicationInstanceArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>replicationInstanceArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2231,7 +2231,7 @@ The migration type. Can be one of `full-load | cdc | full-load-and-cdc`.
 The Amazon Resource Name (ARN) of the replication instance.
 
 <h4 class="pdoc-member-header" id="ReplicationTaskState-replicationTaskArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationTask.ts#L192">property <b>replicationTaskArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationTask.ts#L192">property <b>replicationTaskArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>replicationTaskArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2239,7 +2239,7 @@ The Amazon Resource Name (ARN) of the replication instance.
 The Amazon Resource Name (ARN) for the replication task.
 
 <h4 class="pdoc-member-header" id="ReplicationTaskState-replicationTaskId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationTask.ts#L196">property <b>replicationTaskId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationTask.ts#L196">property <b>replicationTaskId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>replicationTaskId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2247,7 +2247,7 @@ The Amazon Resource Name (ARN) for the replication task.
 The replication task identifier.
 
 <h4 class="pdoc-member-header" id="ReplicationTaskState-replicationTaskSettings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationTask.ts#L200">property <b>replicationTaskSettings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationTask.ts#L200">property <b>replicationTaskSettings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>replicationTaskSettings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2255,7 +2255,7 @@ The replication task identifier.
 An escaped JSON string that contains the task settings. For a complete list of task settings, see [Task Settings for AWS Database Migration Service Tasks](http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.CustomizingTasks.TaskSettings.html).
 
 <h4 class="pdoc-member-header" id="ReplicationTaskState-sourceEndpointArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationTask.ts#L204">property <b>sourceEndpointArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationTask.ts#L204">property <b>sourceEndpointArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>sourceEndpointArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2263,7 +2263,7 @@ An escaped JSON string that contains the task settings. For a complete list of t
 The Amazon Resource Name (ARN) string that uniquely identifies the source endpoint.
 
 <h4 class="pdoc-member-header" id="ReplicationTaskState-tableMappings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationTask.ts#L208">property <b>tableMappings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationTask.ts#L208">property <b>tableMappings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tableMappings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -2271,7 +2271,7 @@ The Amazon Resource Name (ARN) string that uniquely identifies the source endpoi
 An escaped JSON string that contains the table mappings. For information on table mapping see [Using Table Mapping with an AWS Database Migration Service Task to Select and Filter Data](http://docs.aws.amazon.com/dms/latest/userguide/CHAP_Tasks.CustomizingTasks.TableMapping.html)
 
 <h4 class="pdoc-member-header" id="ReplicationTaskState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationTask.ts#L212">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationTask.ts#L212">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -2279,7 +2279,7 @@ An escaped JSON string that contains the table mappings. For information on tabl
 A map of tags to assign to the resource.
 
 <h4 class="pdoc-member-header" id="ReplicationTaskState-targetEndpointArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/dms/replicationTask.ts#L216">property <b>targetEndpointArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/dms/replicationTask.ts#L216">property <b>targetEndpointArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>targetEndpointArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
