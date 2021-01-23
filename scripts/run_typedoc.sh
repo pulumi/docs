@@ -90,6 +90,7 @@ REPOS=(
     "cloud,pulumi-cloud/api"
     "cloudamqp,pulumi-cloudamqp,sdk/nodejs"
     "cloudflare,pulumi-cloudflare,sdk/nodejs"
+    "cloudinit,pulumi-cloudinit,sdk/nodejs"
     "consul,pulumi-consul,sdk/nodejs"
     "datadog,pulumi-datadog,sdk/nodejs"
     "digitalocean,pulumi-digitalocean,sdk/nodejs"

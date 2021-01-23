@@ -21,6 +21,7 @@ TOOLS_REPOS=(
     "pulumi-cloud"
     "pulumi-cloudamqp"
     "pulumi-cloudflare"
+    "pulumi-cloudinit"
     "pulumi-consul"
     "pulumi-datadog"
     "pulumi-digitalocean"
