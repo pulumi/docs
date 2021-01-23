@@ -11,8 +11,10 @@ meta_desc: "Documentation for the aws.elasticache.ReplicationGroup resource with
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Provides an ElastiCache Replication Group resource.
-For working with Memcached or single primary Redis instances (Cluster Mode Disabled), see the
-`aws.elasticache.Cluster` resource.
+
+For working with a [Memcached cluster](https://docs.aws.amazon.com/AmazonElastiCache/latest/mem-ug/WhatIs.html) or a
+[single-node Redis instance (Cluster Mode Disabled)](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/WhatIs.html),
+see the `aws.elasticache.Cluster` resource.
 
 > **Note:** When you change an attribute, such as `engine_version`, by
 default the ElastiCache API applies it in the next maintenance window. Because
@@ -21,6 +23,11 @@ actual modification has not yet taken place. You can use the
 `apply_immediately` flag to instruct the service to apply the change
 immediately. Using `apply_immediately` can result in a brief downtime as
 servers reboots.
+See the AWS Documentation on
+[Modifying an ElastiCache Cache Cluster](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Clusters.Modify.html)
+for more information.
+
+> **Note:** Any attribute changes that re-create the resource will be applied immediately, regardless of the value of `apply_immediately`.
 
 > **Note:** Be aware of the terminology collision around "cluster" for `aws.elasticache.ReplicationGroup`. For example, it is possible to create a ["Cluster Mode Disabled [Redis] Cluster"](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Clusters.Create.CON.Redis.html). With "Cluster Mode Enabled", the data will be stored in shards (called "node groups"). See [Redis Cluster Configuration](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/cluster-create-determine-requirements.html#redis-cluster-configuration) for a diagram of the differences. To enable cluster mode, use a parameter group that has cluster mode enabled. The default parameter groups provided by AWS end with ".cluster.on", for example `default.redis6.x.cluster.on`.
 
@@ -641,9 +648,8 @@ SNS topic to send ElastiCache notifications to. Example:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}A single-element string list containing an
-Amazon Resource Name (ARN) of a Redis RDB snapshot file stored in Amazon S3.
-Example: `arn:aws:s3:::my_bucket/snapshot1.rdb`
+    <dd>{{% md %}}A list of
+Amazon Resource Names (ARNs) that identify Redis RDB snapshot files stored in Amazon S3. The names object names cannot contain any commas.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -938,9 +944,8 @@ SNS topic to send ElastiCache notifications to. Example:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}A single-element string list containing an
-Amazon Resource Name (ARN) of a Redis RDB snapshot file stored in Amazon S3.
-Example: `arn:aws:s3:::my_bucket/snapshot1.rdb`
+    <dd>{{% md %}}A list of
+Amazon Resource Names (ARNs) that identify Redis RDB snapshot files stored in Amazon S3. The names object names cannot contain any commas.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1235,9 +1240,8 @@ SNS topic to send ElastiCache notifications to. Example:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}A single-element string list containing an
-Amazon Resource Name (ARN) of a Redis RDB snapshot file stored in Amazon S3.
-Example: `arn:aws:s3:::my_bucket/snapshot1.rdb`
+    <dd>{{% md %}}A list of
+Amazon Resource Names (ARNs) that identify Redis RDB snapshot files stored in Amazon S3. The names object names cannot contain any commas.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1532,9 +1536,8 @@ SNS topic to send ElastiCache notifications to. Example:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}A single-element string list containing an
-Amazon Resource Name (ARN) of a Redis RDB snapshot file stored in Amazon S3.
-Example: `arn:aws:s3:::my_bucket/snapshot1.rdb`
+    <dd>{{% md %}}A list of
+Amazon Resource Names (ARNs) that identify Redis RDB snapshot files stored in Amazon S3. The names object names cannot contain any commas.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1616,6 +1619,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="arn_csharp">
+<a href="#arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the created ElastiCache Replication Group.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="clusterenabled_csharp">
 <a href="#clusterenabled_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Enabled</a>
 </span>
@@ -1679,6 +1692,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-"
+            title="">
+        <span id="arn_go">
+<a href="#arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the created ElastiCache Replication Group.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="clusterenabled_go">
@@ -1746,6 +1769,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="arn_nodejs">
+<a href="#arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the created ElastiCache Replication Group.
+{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="clusterenabled_nodejs">
 <a href="#clusterenabled_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Enabled</a>
 </span>
@@ -1809,6 +1842,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language python %}}
 <dl class="resources-properties">
 
+    <dt class="property-"
+            title="">
+        <span id="arn_python">
+<a href="#arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the created ElastiCache Replication Group.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="cluster_enabled_python">
@@ -1884,7 +1927,7 @@ Get an existing ReplicationGroup resource's state with the given name, ID, and o
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">apply_immediately</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">at_rest_encryption_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">auth_token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">auto_minor_version_upgrade</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">automatic_failover_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">availability_zones</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">cluster_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">cluster_mode</span><span class="p">:</span> <span class="nx">Optional[ReplicationGroupClusterModeArgs]</span> = None<span class="p">, </span><span class="nx">configuration_endpoint_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">engine</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">engine_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">final_snapshot_identifier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kms_key_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">maintenance_window</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">member_clusters</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">node_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notification_topic_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">number_cache_clusters</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">parameter_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">primary_endpoint_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">reader_endpoint_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">replication_group_description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">replication_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_group_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">security_group_names</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">snapshot_arns</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">snapshot_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">snapshot_retention_limit</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">snapshot_window</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnet_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">transit_encryption_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> ReplicationGroup</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">apply_immediately</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">at_rest_encryption_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">auth_token</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">auto_minor_version_upgrade</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">automatic_failover_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">availability_zones</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">cluster_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">cluster_mode</span><span class="p">:</span> <span class="nx">Optional[ReplicationGroupClusterModeArgs]</span> = None<span class="p">, </span><span class="nx">configuration_endpoint_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">engine</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">engine_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">final_snapshot_identifier</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">kms_key_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">maintenance_window</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">member_clusters</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">node_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">notification_topic_arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">number_cache_clusters</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">parameter_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">port</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">primary_endpoint_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">reader_endpoint_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">replication_group_description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">replication_group_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">security_group_ids</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">security_group_names</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">snapshot_arns</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">snapshot_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">snapshot_retention_limit</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">snapshot_window</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">subnet_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">transit_encryption_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">) -&gt;</span> ReplicationGroup</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -2006,6 +2049,16 @@ The following state arguments are supported:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether any modifications are applied immediately, or during the next maintenance window. Default is `false`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_arn_csharp">
+<a href="#state_arn_csharp" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the created ElastiCache Replication Group.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2269,9 +2322,8 @@ SNS topic to send ElastiCache notifications to. Example:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}A single-element string list containing an
-Amazon Resource Name (ARN) of a Redis RDB snapshot file stored in Amazon S3.
-Example: `arn:aws:s3:::my_bucket/snapshot1.rdb`
+    <dd>{{% md %}}A list of
+Amazon Resource Names (ARNs) that identify Redis RDB snapshot files stored in Amazon S3. The names object names cannot contain any commas.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2353,6 +2405,16 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether any modifications are applied immediately, or during the next maintenance window. Default is `false`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_arn_go">
+<a href="#state_arn_go" style="color: inherit; text-decoration: inherit;">Arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the created ElastiCache Replication Group.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2616,9 +2678,8 @@ SNS topic to send ElastiCache notifications to. Example:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}A single-element string list containing an
-Amazon Resource Name (ARN) of a Redis RDB snapshot file stored in Amazon S3.
-Example: `arn:aws:s3:::my_bucket/snapshot1.rdb`
+    <dd>{{% md %}}A list of
+Amazon Resource Names (ARNs) that identify Redis RDB snapshot files stored in Amazon S3. The names object names cannot contain any commas.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2700,6 +2761,16 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Specifies whether any modifications are applied immediately, or during the next maintenance window. Default is `false`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_arn_nodejs">
+<a href="#state_arn_nodejs" style="color: inherit; text-decoration: inherit;">arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the created ElastiCache Replication Group.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2963,9 +3034,8 @@ SNS topic to send ElastiCache notifications to. Example:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}A single-element string list containing an
-Amazon Resource Name (ARN) of a Redis RDB snapshot file stored in Amazon S3.
-Example: `arn:aws:s3:::my_bucket/snapshot1.rdb`
+    <dd>{{% md %}}A list of
+Amazon Resource Names (ARNs) that identify Redis RDB snapshot files stored in Amazon S3. The names object names cannot contain any commas.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3047,6 +3117,16 @@ begin taking a daily snapshot of your cache cluster. The minimum snapshot window
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether any modifications are applied immediately, or during the next maintenance window. Default is `false`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_arn_python">
+<a href="#state_arn_python" style="color: inherit; text-decoration: inherit;">arn</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Amazon Resource Name (ARN) of the created ElastiCache Replication Group.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -3310,9 +3390,8 @@ SNS topic to send ElastiCache notifications to. Example:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}A single-element string list containing an
-Amazon Resource Name (ARN) of a Redis RDB snapshot file stored in Amazon S3.
-Example: `arn:aws:s3:::my_bucket/snapshot1.rdb`
+    <dd>{{% md %}}A list of
+Amazon Resource Names (ARNs) that identify Redis RDB snapshot files stored in Amazon S3. The names object names cannot contain any commas.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">

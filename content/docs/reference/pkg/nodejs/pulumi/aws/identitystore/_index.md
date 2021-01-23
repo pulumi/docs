@@ -3,7 +3,7 @@ title: "Module identitystore"
 title_tag: "Module identitystore | Package @pulumi/aws | Node.js SDK"
 linktitle: "identitystore"
 meta_desc: "Explore members of the identitystore module in the @pulumi/aws package."
-git_sha: "a9e42c93f0706bcf9d8cdca4801c68e27a01c41d"
+git_sha: "b08a8bf97426301e20cfb4790eaddfd5bb8cd655"
 block_external_search_index: true
 ---
 
@@ -34,7 +34,7 @@ block_external_search_index: true
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getGroup" data-link-title="getGroup">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/identitystore/getGroup.ts#L11">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/identitystore/getGroup.ts#L11">
         Function <strong>getGroup</strong>
     </a>
 </h3>
@@ -46,7 +46,7 @@ block_external_search_index: true
 Use this data source to get an Identity Store Group.
 
 <h3 class="pdoc-module-header" id="getUser" data-link-title="getUser">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/identitystore/getUser.ts#L11">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/identitystore/getUser.ts#L11">
         Function <strong>getUser</strong>
     </a>
 </h3>
@@ -60,7 +60,7 @@ Use this data source to get an Identity Store User.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="GetGroupArgs" data-link-title="GetGroupArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/identitystore/getGroup.ts#L29">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/identitystore/getGroup.ts#L29">
         interface <strong>GetGroupArgs</strong>
     </a>
 </h3>
@@ -70,7 +70,7 @@ Use this data source to get an Identity Store User.
 A collection of arguments for invoking getGroup.
 
 <h4 class="pdoc-member-header" id="GetGroupArgs-filters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/identitystore/getGroup.ts#L33">property <b>filters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/identitystore/getGroup.ts#L33">property <b>filters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filters: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetGroupFilter'>GetGroupFilter</a>[];</code></pre>
@@ -78,7 +78,7 @@ A collection of arguments for invoking getGroup.
 Configuration block(s) for filtering. Currently, the AWS Identity Store API supports only 1 filter. Detailed below.
 
 <h4 class="pdoc-member-header" id="GetGroupArgs-groupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/identitystore/getGroup.ts#L37">property <b>groupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/identitystore/getGroup.ts#L37">property <b>groupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -86,7 +86,7 @@ Configuration block(s) for filtering. Currently, the AWS Identity Store API supp
 The identifier for a group in the Identity Store.
 
 <h4 class="pdoc-member-header" id="GetGroupArgs-identityStoreId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/identitystore/getGroup.ts#L41">property <b>identityStoreId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/identitystore/getGroup.ts#L41">property <b>identityStoreId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>identityStoreId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -94,7 +94,7 @@ The identifier for a group in the Identity Store.
 The Identity Store ID associated with the Single Sign-On Instance.
 
 <h3 class="pdoc-module-header" id="GetGroupResult" data-link-title="GetGroupResult">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/identitystore/getGroup.ts#L47">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/identitystore/getGroup.ts#L47">
         interface <strong>GetGroupResult</strong>
     </a>
 </h3>
@@ -104,7 +104,7 @@ The Identity Store ID associated with the Single Sign-On Instance.
 A collection of values returned by getGroup.
 
 <h4 class="pdoc-member-header" id="GetGroupResult-displayName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/identitystore/getGroup.ts#L51">property <b>displayName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/identitystore/getGroup.ts#L51">property <b>displayName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>displayName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -112,17 +112,17 @@ A collection of values returned by getGroup.
 The group's display name value.
 
 <h4 class="pdoc-member-header" id="GetGroupResult-filters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/identitystore/getGroup.ts#L52">property <b>filters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/identitystore/getGroup.ts#L52">property <b>filters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filters: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetGroupFilter'>GetGroupFilter</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetGroupResult-groupId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/identitystore/getGroup.ts#L53">property <b>groupId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/identitystore/getGroup.ts#L53">property <b>groupId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>groupId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetGroupResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/identitystore/getGroup.ts#L57">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/identitystore/getGroup.ts#L57">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -130,12 +130,12 @@ The group's display name value.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetGroupResult-identityStoreId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/identitystore/getGroup.ts#L58">property <b>identityStoreId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/identitystore/getGroup.ts#L58">property <b>identityStoreId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>identityStoreId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetUserArgs" data-link-title="GetUserArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/identitystore/getUser.ts#L29">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/identitystore/getUser.ts#L29">
         interface <strong>GetUserArgs</strong>
     </a>
 </h3>
@@ -145,7 +145,7 @@ The provider-assigned unique ID for this managed resource.
 A collection of arguments for invoking getUser.
 
 <h4 class="pdoc-member-header" id="GetUserArgs-filters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/identitystore/getUser.ts#L33">property <b>filters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/identitystore/getUser.ts#L33">property <b>filters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filters: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#GetUserFilter'>GetUserFilter</a>[];</code></pre>
@@ -153,7 +153,7 @@ A collection of arguments for invoking getUser.
 Configuration block(s) for filtering. Currently, the AWS Identity Store API supports only 1 filter. Detailed below.
 
 <h4 class="pdoc-member-header" id="GetUserArgs-identityStoreId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/identitystore/getUser.ts#L37">property <b>identityStoreId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/identitystore/getUser.ts#L37">property <b>identityStoreId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>identityStoreId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -161,7 +161,7 @@ Configuration block(s) for filtering. Currently, the AWS Identity Store API supp
 The Identity Store ID associated with the Single Sign-On Instance.
 
 <h4 class="pdoc-member-header" id="GetUserArgs-userId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/identitystore/getUser.ts#L41">property <b>userId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/identitystore/getUser.ts#L41">property <b>userId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userId?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -169,7 +169,7 @@ The Identity Store ID associated with the Single Sign-On Instance.
 The identifier for a user in the Identity Store.
 
 <h3 class="pdoc-module-header" id="GetUserResult" data-link-title="GetUserResult">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/identitystore/getUser.ts#L47">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/identitystore/getUser.ts#L47">
         interface <strong>GetUserResult</strong>
     </a>
 </h3>
@@ -179,12 +179,12 @@ The identifier for a user in the Identity Store.
 A collection of values returned by getUser.
 
 <h4 class="pdoc-member-header" id="GetUserResult-filters">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/identitystore/getUser.ts#L48">property <b>filters</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/identitystore/getUser.ts#L48">property <b>filters</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>filters: <a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#GetUserFilter'>GetUserFilter</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetUserResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/identitystore/getUser.ts#L52">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/identitystore/getUser.ts#L52">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -192,17 +192,17 @@ A collection of values returned by getUser.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetUserResult-identityStoreId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/identitystore/getUser.ts#L53">property <b>identityStoreId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/identitystore/getUser.ts#L53">property <b>identityStoreId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>identityStoreId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetUserResult-userId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/identitystore/getUser.ts#L54">property <b>userId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/identitystore/getUser.ts#L54">property <b>userId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetUserResult-userName">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/a9e42c93f0706bcf9d8cdca4801c68e27a01c41d/sdk/nodejs/identitystore/getUser.ts#L58">property <b>userName</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/identitystore/getUser.ts#L58">property <b>userName</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>userName: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>

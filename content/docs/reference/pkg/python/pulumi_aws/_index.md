@@ -133,6 +133,7 @@ is encrypted.</p></li>
 not a provisioned IOPS image, otherwise the supported IOPS count.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">block_device_mappings.#.ebs.snapshot_id</span></code> - The ID of the snapshot.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">block_device_mappings.#.ebs.volume_size</span></code> - The size of the volume, in GiB.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">block_device_mappings.#.ebs.throughput</span></code> - The throughput that the EBS volume supports, in MiB/s.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">block_device_mappings.#.ebs.volume_type</span></code> - The volume type.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">block_device_mappings.#.no_device</span></code> - Suppresses the specified device
 included in the block device mapping of the AMI.</p></li>

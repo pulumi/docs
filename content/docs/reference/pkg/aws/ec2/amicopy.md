@@ -2297,6 +2297,16 @@ snapshot.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="throughput_csharp">
+<a href="#throughput_csharp" style="color: inherit; text-decoration: inherit;">Throughput</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The throughput that the EBS volume supports, in MiB/s. Only valid for `volume_type` of `gp3`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="volumesize_csharp">
 <a href="#volumesize_csharp" style="color: inherit; text-decoration: inherit;">Volume<wbr>Size</a>
 </span>
@@ -2315,8 +2325,7 @@ as the selected snapshot.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of EBS volume to create. Can be one of "standard" (the
-default), "io1", "io2" or "gp2".
+    <dd>{{% md %}}The type of EBS volume to create. Can be `standard`, `gp2`, `gp3`, `io1`, `io2`, `sc1` or `st1` (Default: `standard`).
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -2380,6 +2389,16 @@ snapshot.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="throughput_go">
+<a href="#throughput_go" style="color: inherit; text-decoration: inherit;">Throughput</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The throughput that the EBS volume supports, in MiB/s. Only valid for `volume_type` of `gp3`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="volumesize_go">
 <a href="#volumesize_go" style="color: inherit; text-decoration: inherit;">Volume<wbr>Size</a>
 </span>
@@ -2398,8 +2417,7 @@ as the selected snapshot.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of EBS volume to create. Can be one of "standard" (the
-default), "io1", "io2" or "gp2".
+    <dd>{{% md %}}The type of EBS volume to create. Can be `standard`, `gp2`, `gp3`, `io1`, `io2`, `sc1` or `st1` (Default: `standard`).
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -2463,6 +2481,16 @@ snapshot.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="throughput_nodejs">
+<a href="#throughput_nodejs" style="color: inherit; text-decoration: inherit;">throughput</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The throughput that the EBS volume supports, in MiB/s. Only valid for `volume_type` of `gp3`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="volumesize_nodejs">
 <a href="#volumesize_nodejs" style="color: inherit; text-decoration: inherit;">volume<wbr>Size</a>
 </span>
@@ -2481,8 +2509,7 @@ as the selected snapshot.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of EBS volume to create. Can be one of "standard" (the
-default), "io1", "io2" or "gp2".
+    <dd>{{% md %}}The type of EBS volume to create. Can be `standard`, `gp2`, `gp3`, `io1`, `io2`, `sc1` or `st1` (Default: `standard`).
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
@@ -2546,6 +2573,16 @@ snapshot.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="throughput_python">
+<a href="#throughput_python" style="color: inherit; text-decoration: inherit;">throughput</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The throughput that the EBS volume supports, in MiB/s. Only valid for `volume_type` of `gp3`.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="volume_size_python">
 <a href="#volume_size_python" style="color: inherit; text-decoration: inherit;">volume_<wbr>size</a>
 </span>
@@ -2564,8 +2601,7 @@ as the selected snapshot.
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of EBS volume to create. Can be one of "standard" (the
-default), "io1", "io2" or "gp2".
+    <dd>{{% md %}}The type of EBS volume to create. Can be `standard`, `gp2`, `gp3`, `io1`, `io2`, `sc1` or `st1` (Default: `standard`).
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}

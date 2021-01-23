@@ -574,6 +574,7 @@ is encrypted.
 not a provisioned IOPS image, otherwise the supported IOPS count.
 * `block_device_mappings.#.ebs.snapshot_id` - The ID of the snapshot.
 * `block_device_mappings.#.ebs.volume_size` - The size of the volume, in GiB.
+* `block_device_mappings.#.ebs.throughput` - The throughput that the EBS volume supports, in MiB/s.
 * `block_device_mappings.#.ebs.volume_type` - The volume type.
 * `block_device_mappings.#.no_device` - Suppresses the specified device
 included in the block device mapping of the AMI.
@@ -912,6 +913,7 @@ is encrypted.
 not a provisioned IOPS image, otherwise the supported IOPS count.
 * `block_device_mappings.#.ebs.snapshot_id` - The ID of the snapshot.
 * `block_device_mappings.#.ebs.volume_size` - The size of the volume, in GiB.
+* `block_device_mappings.#.ebs.throughput` - The throughput that the EBS volume supports, in MiB/s.
 * `block_device_mappings.#.ebs.volume_type` - The volume type.
 * `block_device_mappings.#.no_device` - Suppresses the specified device
 included in the block device mapping of the AMI.
@@ -1250,6 +1252,7 @@ is encrypted.
 not a provisioned IOPS image, otherwise the supported IOPS count.
 * `block_device_mappings.#.ebs.snapshot_id` - The ID of the snapshot.
 * `block_device_mappings.#.ebs.volume_size` - The size of the volume, in GiB.
+* `block_device_mappings.#.ebs.throughput` - The throughput that the EBS volume supports, in MiB/s.
 * `block_device_mappings.#.ebs.volume_type` - The volume type.
 * `block_device_mappings.#.no_device` - Suppresses the specified device
 included in the block device mapping of the AMI.
@@ -1588,6 +1591,7 @@ is encrypted.
 not a provisioned IOPS image, otherwise the supported IOPS count.
 * `block_device_mappings.#.ebs.snapshot_id` - The ID of the snapshot.
 * `block_device_mappings.#.ebs.volume_size` - The size of the volume, in GiB.
+* `block_device_mappings.#.ebs.throughput` - The throughput that the EBS volume supports, in MiB/s.
 * `block_device_mappings.#.ebs.volume_type` - The volume type.
 * `block_device_mappings.#.no_device` - Suppresses the specified device
 included in the block device mapping of the AMI.

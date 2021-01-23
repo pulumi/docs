@@ -373,7 +373,7 @@ The DataLakeSettings resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of ARNs of AWS Lake Formation principals (IAM users or roles).
+    <dd>{{% md %}}Set of ARNs of AWS Lake Formation principals (IAM users or roles).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -429,7 +429,7 @@ The DataLakeSettings resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of ARNs of AWS Lake Formation principals (IAM users or roles).
+    <dd>{{% md %}}Set of ARNs of AWS Lake Formation principals (IAM users or roles).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -485,7 +485,7 @@ The DataLakeSettings resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of ARNs of AWS Lake Formation principals (IAM users or roles).
+    <dd>{{% md %}}Set of ARNs of AWS Lake Formation principals (IAM users or roles).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -541,7 +541,7 @@ The DataLakeSettings resource accepts the following [input]({{< relref "/docs/in
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of ARNs of AWS Lake Formation principals (IAM users or roles).
+    <dd>{{% md %}}Set of ARNs of AWS Lake Formation principals (IAM users or roles).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -787,7 +787,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
-    <dd>{{% md %}}List of ARNs of AWS Lake Formation principals (IAM users or roles).
+    <dd>{{% md %}}Set of ARNs of AWS Lake Formation principals (IAM users or roles).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -843,7 +843,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">[]string</span>
     </dt>
-    <dd>{{% md %}}List of ARNs of AWS Lake Formation principals (IAM users or roles).
+    <dd>{{% md %}}Set of ARNs of AWS Lake Formation principals (IAM users or roles).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -899,7 +899,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string[]</span>
     </dt>
-    <dd>{{% md %}}List of ARNs of AWS Lake Formation principals (IAM users or roles).
+    <dd>{{% md %}}Set of ARNs of AWS Lake Formation principals (IAM users or roles).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -955,7 +955,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">Sequence[str]</span>
     </dt>
-    <dd>{{% md %}}List of ARNs of AWS Lake Formation principals (IAM users or roles).
+    <dd>{{% md %}}Set of ARNs of AWS Lake Formation principals (IAM users or roles).
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">

@@ -698,11 +698,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp when the instance was created.
-* `availability_zone`
-* `blueprint_id`
-* `bundle_id`
-* `key_pair_name`
-* `user_data`
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -713,15 +708,26 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="ipv6address_csharp">
 <a href="#ipv6address_csharp" style="color: inherit; text-decoration: inherit;">Ipv6Address</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(**Deprecated**) The first IPv6 address of the Lightsail instance. Use `ipv6_addresses` attribute instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `ipv6_addresses` attribute instead{{% /md %}}</p></dd>
+    <dt class="property-"
+            title="">
+        <span id="ipv6addresses_csharp">
+<a href="#ipv6addresses_csharp" style="color: inherit; text-decoration: inherit;">Ipv6Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of IPv6 addresses for the Lightsail instance.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="isstaticip_csharp">
@@ -801,11 +807,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp when the instance was created.
-* `availability_zone`
-* `blueprint_id`
-* `bundle_id`
-* `key_pair_name`
-* `user_data`
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -816,15 +817,26 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="ipv6address_go">
 <a href="#ipv6address_go" style="color: inherit; text-decoration: inherit;">Ipv6Address</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(**Deprecated**) The first IPv6 address of the Lightsail instance. Use `ipv6_addresses` attribute instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `ipv6_addresses` attribute instead{{% /md %}}</p></dd>
+    <dt class="property-"
+            title="">
+        <span id="ipv6addresses_go">
+<a href="#ipv6addresses_go" style="color: inherit; text-decoration: inherit;">Ipv6Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}List of IPv6 addresses for the Lightsail instance.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="isstaticip_go">
@@ -904,11 +916,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp when the instance was created.
-* `availability_zone`
-* `blueprint_id`
-* `bundle_id`
-* `key_pair_name`
-* `user_data`
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -919,15 +926,26 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="ipv6address_nodejs">
 <a href="#ipv6address_nodejs" style="color: inherit; text-decoration: inherit;">ipv6Address</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(**Deprecated**) The first IPv6 address of the Lightsail instance. Use `ipv6_addresses` attribute instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `ipv6_addresses` attribute instead{{% /md %}}</p></dd>
+    <dt class="property-"
+            title="">
+        <span id="ipv6addresses_nodejs">
+<a href="#ipv6addresses_nodejs" style="color: inherit; text-decoration: inherit;">ipv6Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}List of IPv6 addresses for the Lightsail instance.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="isstaticip_nodejs">
@@ -1007,11 +1025,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The timestamp when the instance was created.
-* `availability_zone`
-* `blueprint_id`
-* `bundle_id`
-* `key_pair_name`
-* `user_data`
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -1022,15 +1035,26 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
+    <dt class="property- property-deprecated"
+            title=", Deprecated">
         <span id="ipv6_address_python">
 <a href="#ipv6_address_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(**Deprecated**) The first IPv6 address of the Lightsail instance. Use `ipv6_addresses` attribute instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `ipv6_addresses` attribute instead{{% /md %}}</p></dd>
+    <dt class="property-"
+            title="">
+        <span id="ipv6_addresses_python">
+<a href="#ipv6_addresses_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}List of IPv6 addresses for the Lightsail instance.
+{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="is_static_ip_python">
@@ -1092,7 +1116,7 @@ Get an existing Instance resource's state with the given name, ID, and optional 
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">availability_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">blueprint_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bundle_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cpu_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">created_at</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ipv6_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">is_static_ip</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">key_pair_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">public_ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ram_size</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Instance</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">arn</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">availability_zone</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">blueprint_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bundle_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cpu_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">created_at</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ipv6_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ipv6_addresses</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">is_static_ip</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">key_pair_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">private_ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">public_ip_address</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ram_size</span><span class="p">:</span> <span class="nx">Optional[float]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">user_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">username</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> Instance</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1264,21 +1288,27 @@ instance (see list below)
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp when the instance was created.
-* `availability_zone`
-* `blueprint_id`
-* `bundle_id`
-* `key_pair_name`
-* `user_data`
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_ipv6address_csharp">
 <a href="#state_ipv6address_csharp" style="color: inherit; text-decoration: inherit;">Ipv6Address</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(**Deprecated**) The first IPv6 address of the Lightsail instance. Use `ipv6_addresses` attribute instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `ipv6_addresses` attribute instead{{% /md %}}</p></dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_ipv6addresses_csharp">
+<a href="#state_ipv6addresses_csharp" style="color: inherit; text-decoration: inherit;">Ipv6Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of IPv6 addresses for the Lightsail instance.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_isstaticip_csharp">
@@ -1430,21 +1460,27 @@ instance (see list below)
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp when the instance was created.
-* `availability_zone`
-* `blueprint_id`
-* `bundle_id`
-* `key_pair_name`
-* `user_data`
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_ipv6address_go">
 <a href="#state_ipv6address_go" style="color: inherit; text-decoration: inherit;">Ipv6Address</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(**Deprecated**) The first IPv6 address of the Lightsail instance. Use `ipv6_addresses` attribute instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `ipv6_addresses` attribute instead{{% /md %}}</p></dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_ipv6addresses_go">
+<a href="#state_ipv6addresses_go" style="color: inherit; text-decoration: inherit;">Ipv6Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}List of IPv6 addresses for the Lightsail instance.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_isstaticip_go">
@@ -1596,21 +1632,27 @@ instance (see list below)
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The timestamp when the instance was created.
-* `availability_zone`
-* `blueprint_id`
-* `bundle_id`
-* `key_pair_name`
-* `user_data`
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_ipv6address_nodejs">
 <a href="#state_ipv6address_nodejs" style="color: inherit; text-decoration: inherit;">ipv6Address</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(**Deprecated**) The first IPv6 address of the Lightsail instance. Use `ipv6_addresses` attribute instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `ipv6_addresses` attribute instead{{% /md %}}</p></dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_ipv6addresses_nodejs">
+<a href="#state_ipv6addresses_nodejs" style="color: inherit; text-decoration: inherit;">ipv6Addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}List of IPv6 addresses for the Lightsail instance.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_isstaticip_nodejs">
@@ -1762,21 +1804,27 @@ instance (see list below)
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The timestamp when the instance was created.
-* `availability_zone`
-* `blueprint_id`
-* `bundle_id`
-* `key_pair_name`
-* `user_data`
 {{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
+    <dt class="property-optional property-deprecated"
+            title="Optional, Deprecated">
         <span id="state_ipv6_address_python">
 <a href="#state_ipv6_address_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>address</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}(**Deprecated**) The first IPv6 address of the Lightsail instance. Use `ipv6_addresses` attribute instead.
+{{% /md %}}<p class="property-message">Deprecated: {{% md %}}use `ipv6_addresses` attribute instead{{% /md %}}</p></dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_ipv6_addresses_python">
+<a href="#state_ipv6_addresses_python" style="color: inherit; text-decoration: inherit;">ipv6_<wbr>addresses</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}List of IPv6 addresses for the Lightsail instance.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_is_static_ip_python">

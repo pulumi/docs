@@ -34,7 +34,7 @@ class MyStack : Stack
         var testRestApiPolicy = new Aws.ApiGateway.RestApiPolicy("testRestApiPolicy", new Aws.ApiGateway.RestApiPolicyArgs
         {
             RestApiId = testRestApi.Id,
-            Policy = testRestApi.Arn.Apply(arn => @$"{{
+            Policy = testRestApi.ExecutionArn.Apply(executionArn => @$"{{
   ""Version"": ""2012-10-17"",
   ""Statement"": [
     {{
@@ -43,7 +43,7 @@ class MyStack : Stack
         ""AWS"": ""*""
       }},
       ""Action"": ""execute-api:Invoke"",
-      ""Resource"": ""{arn}"",
+      ""Resource"": ""{executionArn}"",
       ""Condition"": {{
         ""IpAddress"": {{
           ""aws:SourceIp"": ""123.123.123.123/32""
@@ -80,8 +80,8 @@ func main() {
 		}
 		_, err = apigateway.NewRestApiPolicy(ctx, "testRestApiPolicy", &apigateway.RestApiPolicyArgs{
 			RestApiId: testRestApi.ID(),
-			Policy: testRestApi.Arn.ApplyT(func(arn string) (string, error) {
-				return fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Effect\": \"Allow\",\n", "      \"Principal\": {\n", "        \"AWS\": \"*\"\n", "      },\n", "      \"Action\": \"execute-api:Invoke\",\n", "      \"Resource\": \"", arn, "\",\n", "      \"Condition\": {\n", "        \"IpAddress\": {\n", "          \"aws:SourceIp\": \"123.123.123.123/32\"\n", "        }\n", "      }\n", "    }\n", "  ]\n", "}\n"), nil
+			Policy: testRestApi.ExecutionArn.ApplyT(func(executionArn string) (string, error) {
+				return fmt.Sprintf("%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v%v", "{\n", "  \"Version\": \"2012-10-17\",\n", "  \"Statement\": [\n", "    {\n", "      \"Effect\": \"Allow\",\n", "      \"Principal\": {\n", "        \"AWS\": \"*\"\n", "      },\n", "      \"Action\": \"execute-api:Invoke\",\n", "      \"Resource\": \"", executionArn, "\",\n", "      \"Condition\": {\n", "        \"IpAddress\": {\n", "          \"aws:SourceIp\": \"123.123.123.123/32\"\n", "        }\n", "      }\n", "    }\n", "  ]\n", "}\n"), nil
 			}).(pulumi.StringOutput),
 		})
 		if err != nil {
@@ -102,7 +102,7 @@ import pulumi_aws as aws
 test_rest_api = aws.apigateway.RestApi("testRestApi")
 test_rest_api_policy = aws.apigateway.RestApiPolicy("testRestApiPolicy",
     rest_api_id=test_rest_api.id,
-    policy=test_rest_api.arn.apply(lambda arn: f"""{{
+    policy=test_rest_api.execution_arn.apply(lambda execution_arn: f"""{{
   "Version": "2012-10-17",
   "Statement": [
     {{
@@ -111,7 +111,7 @@ test_rest_api_policy = aws.apigateway.RestApiPolicy("testRestApiPolicy",
         "AWS": "*"
       }},
       "Action": "execute-api:Invoke",
-      "Resource": "{arn}",
+      "Resource": "{execution_arn}",
       "Condition": {{
         "IpAddress": {{
           "aws:SourceIp": "123.123.123.123/32"
@@ -143,7 +143,7 @@ const testRestApiPolicy = new aws.apigateway.RestApiPolicy("testRestApiPolicy", 
         "AWS": "*"
       },
       "Action": "execute-api:Invoke",
-      "Resource": "${testRestApi.arn}",
+      "Resource": "${testRestApi.executionArn}",
       "Condition": {
         "IpAddress": {
           "aws:SourceIp": "123.123.123.123/32"

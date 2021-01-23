@@ -929,7 +929,8 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domaincognitooptions">Domain<wbr>Cognito<wbr>Options<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Options for authenticating Kibana with Cognito. See below.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="domainendpointoptions_csharp">
@@ -1087,7 +1088,8 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domaincognitooptions">Domain<wbr>Cognito<wbr>Options</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Options for authenticating Kibana with Cognito. See below.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="domainendpointoptions_go">
@@ -1245,7 +1247,8 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domaincognitooptions">Domain<wbr>Cognito<wbr>Options</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Options for authenticating Kibana with Cognito. See below.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="domainendpointoptions_nodejs">
@@ -1403,7 +1406,8 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domaincognitooptions">Domain<wbr>Cognito<wbr>Options<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Options for authenticating Kibana with Cognito. See below.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="domain_endpoint_options_python">
@@ -1929,7 +1933,8 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domaincognitooptions">Domain<wbr>Cognito<wbr>Options<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Options for authenticating Kibana with Cognito. See below.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_domainendpointoptions_csharp">
@@ -2129,7 +2134,8 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domaincognitooptions">Domain<wbr>Cognito<wbr>Options</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Options for authenticating Kibana with Cognito. See below.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_domainendpointoptions_go">
@@ -2329,7 +2335,8 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domaincognitooptions">Domain<wbr>Cognito<wbr>Options</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Options for authenticating Kibana with Cognito. See below.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_domainendpointoptions_nodejs">
@@ -2529,7 +2536,8 @@ domain on every apply.
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#domaincognitooptions">Domain<wbr>Cognito<wbr>Options<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Options for authenticating Kibana with Cognito. See below.
+{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="state_domain_endpoint_options_python">
