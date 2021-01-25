@@ -28,10 +28,18 @@ class MyStack : Stack
     {
         var hanaInstance = new AzureNextGen.HanaOnAzure.V20171103Preview.HanaInstance("hanaInstance", new AzureNextGen.HanaOnAzure.V20171103Preview.HanaInstanceArgs
         {
+            HanaInstanceId = "00000000-0000-0000-0000-000000000000",
             HanaInstanceName = "myHanaInstance",
+            HardwareProfile = new AzureNextGen.HanaOnAzure.V20171103Preview.Inputs.HardwareProfileArgs
+            {
+                HanaInstanceSize = "S72",
+                HardwareType = "Cisco_UCS",
+            },
+            HwRevision = "Rev 3",
             Location = "westus",
             NetworkProfile = new AzureNextGen.HanaOnAzure.V20171103Preview.Inputs.NetworkProfileArgs
             {
+                CircuitId = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.Network/expressRouteCircuit",
                 NetworkInterfaces = 
                 {
                     new AzureNextGen.HanaOnAzure.V20171103Preview.Inputs.IpAddressArgs
@@ -43,11 +51,23 @@ class MyStack : Stack
             OsProfile = new AzureNextGen.HanaOnAzure.V20171103Preview.Inputs.OSProfileArgs
             {
                 ComputerName = "myComputerName",
+                OsType = "SUSE",
                 SshPublicKey = "AAAAB3NzaC1yc2EAAAABJQAAAQB/nAmOjTmezNUDKYvEeIRf2YnwM9/uUG1d0BYsc8/tRtx+RGi7N2lUbp728MXGwdnL9od4cItzky/zVdLZE2cycOa18xBK9cOWmcKS0A8FYBxEQWJ/q9YVUgZbFKfYGaGQxsER+A0w/fX8ALuk78ktP31K69LcQgxIsl7rNzxsoOQKJ/CIxOGMMxczYTiEoLvQhapFQMs3FL96didKr/QbrfB1WT6s3838SEaXfgZvLef1YB2xmfhbT9OXFE3FXvh2UPBfN+ffE7iiayQf/2XR+8j4N4bW30DiPtOQLGUrH1y5X/rpNZNlWW2+jGIxqZtgWg7lTy3mXy5x836Sj/6L",
+                Version = "12 SP1",
             },
             PartnerNodeId = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.HanaOnAzure/hanaInstances/myHanaInstance2",
+            PowerState = "started",
+            ProvisioningState = "Succeeded",
+            ProximityPlacementGroup = "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.Compute/proximityPlacementGroups/myplacementgroup",
             ResourceGroupName = "myResourceGroup",
-            StorageProfile = ,
+            StorageProfile = new AzureNextGen.HanaOnAzure.V20171103Preview.Inputs.StorageProfileArgs
+            {
+                NfsIpAddress = "200.200.200.200",
+            },
+            Tags = 
+            {
+                { "key", "value" },
+            },
         });
     }
 
@@ -70,9 +90,16 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := hanaonazure.NewHanaInstance(ctx, "hanaInstance", &hanaonazure.HanaInstanceArgs{
+			HanaInstanceId:   pulumi.String("00000000-0000-0000-0000-000000000000"),
 			HanaInstanceName: pulumi.String("myHanaInstance"),
-			Location:         pulumi.String("westus"),
+			HardwareProfile: &hanaonazure.HardwareProfileArgs{
+				HanaInstanceSize: pulumi.String("S72"),
+				HardwareType:     pulumi.String("Cisco_UCS"),
+			},
+			HwRevision: pulumi.String("Rev 3"),
+			Location:   pulumi.String("westus"),
 			NetworkProfile: &hanaonazure.NetworkProfileArgs{
+				CircuitId: pulumi.String("/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.Network/expressRouteCircuit"),
 				NetworkInterfaces: hanaonazure.IpAddressArray{
 					&hanaonazure.IpAddressArgs{
 						IpAddress: pulumi.String("100.100.100.100"),
@@ -81,11 +108,21 @@ func main() {
 			},
 			OsProfile: &hanaonazure.OSProfileArgs{
 				ComputerName: pulumi.String("myComputerName"),
+				OsType:       pulumi.String("SUSE"),
 				SshPublicKey: pulumi.String("AAAAB3NzaC1yc2EAAAABJQAAAQB/nAmOjTmezNUDKYvEeIRf2YnwM9/uUG1d0BYsc8/tRtx+RGi7N2lUbp728MXGwdnL9od4cItzky/zVdLZE2cycOa18xBK9cOWmcKS0A8FYBxEQWJ/q9YVUgZbFKfYGaGQxsER+A0w/fX8ALuk78ktP31K69LcQgxIsl7rNzxsoOQKJ/CIxOGMMxczYTiEoLvQhapFQMs3FL96didKr/QbrfB1WT6s3838SEaXfgZvLef1YB2xmfhbT9OXFE3FXvh2UPBfN+ffE7iiayQf/2XR+8j4N4bW30DiPtOQLGUrH1y5X/rpNZNlWW2+jGIxqZtgWg7lTy3mXy5x836Sj/6L"),
+				Version:      pulumi.String("12 SP1"),
 			},
-			PartnerNodeId:     pulumi.String("/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.HanaOnAzure/hanaInstances/myHanaInstance2"),
-			ResourceGroupName: pulumi.String("myResourceGroup"),
-			StorageProfile:    nil,
+			PartnerNodeId:           pulumi.String("/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.HanaOnAzure/hanaInstances/myHanaInstance2"),
+			PowerState:              pulumi.String("started"),
+			ProvisioningState:       pulumi.String("Succeeded"),
+			ProximityPlacementGroup: pulumi.String("/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.Compute/proximityPlacementGroups/myplacementgroup"),
+			ResourceGroupName:       pulumi.String("myResourceGroup"),
+			StorageProfile: &hanaonazure.StorageProfileArgs{
+				NfsIpAddress: pulumi.String("200.200.200.200"),
+			},
+			Tags: pulumi.StringMap{
+				"key": pulumi.String("value"),
+			},
 		})
 		if err != nil {
 			return err
@@ -105,20 +142,37 @@ import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
 hana_instance = azure_nextgen.hanaonazure.v20171103preview.HanaInstance("hanaInstance",
+    hana_instance_id="00000000-0000-0000-0000-000000000000",
     hana_instance_name="myHanaInstance",
+    hardware_profile=azure_nextgen.hanaonazure.v20171103preview.HardwareProfileArgs(
+        hana_instance_size="S72",
+        hardware_type="Cisco_UCS",
+    ),
+    hw_revision="Rev 3",
     location="westus",
     network_profile=azure_nextgen.hanaonazure.v20171103preview.NetworkProfileArgs(
+        circuit_id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.Network/expressRouteCircuit",
         network_interfaces=[azure_nextgen.hanaonazure.v20171103preview.IpAddressArgs(
             ip_address="100.100.100.100",
         )],
     ),
     os_profile=azure_nextgen.hanaonazure.v20171103preview.OSProfileArgs(
         computer_name="myComputerName",
+        os_type="SUSE",
         ssh_public_key="AAAAB3NzaC1yc2EAAAABJQAAAQB/nAmOjTmezNUDKYvEeIRf2YnwM9/uUG1d0BYsc8/tRtx+RGi7N2lUbp728MXGwdnL9od4cItzky/zVdLZE2cycOa18xBK9cOWmcKS0A8FYBxEQWJ/q9YVUgZbFKfYGaGQxsER+A0w/fX8ALuk78ktP31K69LcQgxIsl7rNzxsoOQKJ/CIxOGMMxczYTiEoLvQhapFQMs3FL96didKr/QbrfB1WT6s3838SEaXfgZvLef1YB2xmfhbT9OXFE3FXvh2UPBfN+ffE7iiayQf/2XR+8j4N4bW30DiPtOQLGUrH1y5X/rpNZNlWW2+jGIxqZtgWg7lTy3mXy5x836Sj/6L",
+        version="12 SP1",
     ),
     partner_node_id="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.HanaOnAzure/hanaInstances/myHanaInstance2",
+    power_state="started",
+    provisioning_state="Succeeded",
+    proximity_placement_group="/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.Compute/proximityPlacementGroups/myplacementgroup",
     resource_group_name="myResourceGroup",
-    storage_profile=azure_nextgen.hanaonazure.v20171103preview.StorageProfileArgs())
+    storage_profile=azure_nextgen.hanaonazure.v20171103preview.StorageProfileArgs(
+        nfs_ip_address="200.200.200.200",
+    ),
+    tags={
+        "key": "value",
+    })
 
 ```
 
@@ -131,20 +185,37 @@ import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const hanaInstance = new azure_nextgen.hanaonazure.v20171103preview.HanaInstance("hanaInstance", {
+    hanaInstanceId: "00000000-0000-0000-0000-000000000000",
     hanaInstanceName: "myHanaInstance",
+    hardwareProfile: {
+        hanaInstanceSize: "S72",
+        hardwareType: "Cisco_UCS",
+    },
+    hwRevision: "Rev 3",
     location: "westus",
     networkProfile: {
+        circuitId: "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.Network/expressRouteCircuit",
         networkInterfaces: [{
             ipAddress: "100.100.100.100",
         }],
     },
     osProfile: {
         computerName: "myComputerName",
+        osType: "SUSE",
         sshPublicKey: "AAAAB3NzaC1yc2EAAAABJQAAAQB/nAmOjTmezNUDKYvEeIRf2YnwM9/uUG1d0BYsc8/tRtx+RGi7N2lUbp728MXGwdnL9od4cItzky/zVdLZE2cycOa18xBK9cOWmcKS0A8FYBxEQWJ/q9YVUgZbFKfYGaGQxsER+A0w/fX8ALuk78ktP31K69LcQgxIsl7rNzxsoOQKJ/CIxOGMMxczYTiEoLvQhapFQMs3FL96didKr/QbrfB1WT6s3838SEaXfgZvLef1YB2xmfhbT9OXFE3FXvh2UPBfN+ffE7iiayQf/2XR+8j4N4bW30DiPtOQLGUrH1y5X/rpNZNlWW2+jGIxqZtgWg7lTy3mXy5x836Sj/6L",
+        version: "12 SP1",
     },
     partnerNodeId: "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.HanaOnAzure/hanaInstances/myHanaInstance2",
+    powerState: "started",
+    provisioningState: "Succeeded",
+    proximityPlacementGroup: "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.Compute/proximityPlacementGroups/myplacementgroup",
     resourceGroupName: "myResourceGroup",
-    storageProfile: {},
+    storageProfile: {
+        nfsIpAddress: "200.200.200.200",
+    },
+    tags: {
+        key: "value",
+    },
 });
 
 ```
@@ -163,7 +234,7 @@ const hanaInstance = new azure_nextgen.hanaonazure.v20171103preview.HanaInstance
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">HanaInstance</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">hana_instance_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_profile</span><span class="p">:</span> <span class="nx">Optional[NetworkProfileArgs]</span> = None<span class="p">, </span><span class="nx">os_profile</span><span class="p">:</span> <span class="nx">Optional[OSProfileArgs]</span> = None<span class="p">, </span><span class="nx">partner_node_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_profile</span><span class="p">:</span> <span class="nx">Optional[StorageProfileArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">HanaInstance</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">hana_instance_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hana_instance_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">hardware_profile</span><span class="p">:</span> <span class="nx">Optional[HardwareProfileArgs]</span> = None<span class="p">, </span><span class="nx">hw_revision</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_profile</span><span class="p">:</span> <span class="nx">Optional[NetworkProfileArgs]</span> = None<span class="p">, </span><span class="nx">os_profile</span><span class="p">:</span> <span class="nx">Optional[OSProfileArgs]</span> = None<span class="p">, </span><span class="nx">partner_node_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">power_state</span><span class="p">:</span> <span class="nx">Optional[Union[str, HanaInstancePowerStateEnum]]</span> = None<span class="p">, </span><span class="nx">provisioning_state</span><span class="p">:</span> <span class="nx">Optional[Union[str, HanaProvisioningStatesEnum]]</span> = None<span class="p">, </span><span class="nx">proximity_placement_group</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_profile</span><span class="p">:</span> <span class="nx">Optional[StorageProfileArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -354,6 +425,33 @@ The HanaInstance resource accepts the following [input]({{< relref "/docs/intro/
     <dd>{{% md %}}Name of the resource group.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="hanainstanceid_csharp">
+<a href="#hanainstanceid_csharp" style="color: inherit; text-decoration: inherit;">Hana<wbr>Instance<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the HANA instance unique ID.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="hardwareprofile_csharp">
+<a href="#hardwareprofile_csharp" style="color: inherit; text-decoration: inherit;">Hardware<wbr>Profile</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#hardwareprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hana<wbr>On<wbr>Azure.<wbr>Inputs.<wbr>Hardware<wbr>Profile<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the hardware settings for the HANA instance.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="hwrevision_csharp">
+<a href="#hwrevision_csharp" style="color: inherit; text-decoration: inherit;">Hw<wbr>Revision</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Hardware revision of a HANA instance{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="location_csharp">
 <a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
 </span>
@@ -390,6 +488,33 @@ The HanaInstance resource accepts the following [input]({{< relref "/docs/intro/
     <dd>{{% md %}}ARM ID of another HanaInstance that will share a network with this HanaInstance{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="powerstate_csharp">
+<a href="#powerstate_csharp" style="color: inherit; text-decoration: inherit;">Power<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#hanainstancepowerstateenum">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hana<wbr>On<wbr>Azure.<wbr>Hana<wbr>Instance<wbr>Power<wbr>State<wbr>Enum</a></span>
+    </dt>
+    <dd>{{% md %}}Resource power state{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="provisioningstate_csharp">
+<a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#hanaprovisioningstatesenum">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hana<wbr>On<wbr>Azure.<wbr>Hana<wbr>Provisioning<wbr>States<wbr>Enum</a></span>
+    </dt>
+    <dd>{{% md %}}State of provisioning of the HanaInstance{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="proximityplacementgroup_csharp">
+<a href="#proximityplacementgroup_csharp" style="color: inherit; text-decoration: inherit;">Proximity<wbr>Placement<wbr>Group</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource proximity placement group{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="storageprofile_csharp">
 <a href="#storageprofile_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Profile</a>
 </span>
@@ -397,6 +522,15 @@ The HanaInstance resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#storageprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hana<wbr>On<wbr>Azure.<wbr>Inputs.<wbr>Storage<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the storage settings for the HANA instance disks.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tags_csharp">
+<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -421,6 +555,33 @@ The HanaInstance resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource group.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="hanainstanceid_go">
+<a href="#hanainstanceid_go" style="color: inherit; text-decoration: inherit;">Hana<wbr>Instance<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the HANA instance unique ID.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="hardwareprofile_go">
+<a href="#hardwareprofile_go" style="color: inherit; text-decoration: inherit;">Hardware<wbr>Profile</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#hardwareprofile">Hardware<wbr>Profile</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the hardware settings for the HANA instance.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="hwrevision_go">
+<a href="#hwrevision_go" style="color: inherit; text-decoration: inherit;">Hw<wbr>Revision</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Hardware revision of a HANA instance{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="location_go">
@@ -459,6 +620,33 @@ The HanaInstance resource accepts the following [input]({{< relref "/docs/intro/
     <dd>{{% md %}}ARM ID of another HanaInstance that will share a network with this HanaInstance{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="powerstate_go">
+<a href="#powerstate_go" style="color: inherit; text-decoration: inherit;">Power<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#hanainstancepowerstateenum">Hana<wbr>Instance<wbr>Power<wbr>State<wbr>Enum</a></span>
+    </dt>
+    <dd>{{% md %}}Resource power state{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="provisioningstate_go">
+<a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#hanaprovisioningstatesenum">Hana<wbr>Provisioning<wbr>States<wbr>Enum</a></span>
+    </dt>
+    <dd>{{% md %}}State of provisioning of the HanaInstance{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="proximityplacementgroup_go">
+<a href="#proximityplacementgroup_go" style="color: inherit; text-decoration: inherit;">Proximity<wbr>Placement<wbr>Group</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource proximity placement group{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="storageprofile_go">
 <a href="#storageprofile_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Profile</a>
 </span>
@@ -466,6 +654,15 @@ The HanaInstance resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#storageprofile">Storage<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}Specifies the storage settings for the HANA instance disks.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tags_go">
+<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -490,6 +687,33 @@ The HanaInstance resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Name of the resource group.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="hanainstanceid_nodejs">
+<a href="#hanainstanceid_nodejs" style="color: inherit; text-decoration: inherit;">hana<wbr>Instance<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the HANA instance unique ID.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="hardwareprofile_nodejs">
+<a href="#hardwareprofile_nodejs" style="color: inherit; text-decoration: inherit;">hardware<wbr>Profile</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#hardwareprofile">Hardware<wbr>Profile</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the hardware settings for the HANA instance.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="hwrevision_nodejs">
+<a href="#hwrevision_nodejs" style="color: inherit; text-decoration: inherit;">hw<wbr>Revision</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Hardware revision of a HANA instance{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="location_nodejs">
@@ -528,6 +752,33 @@ The HanaInstance resource accepts the following [input]({{< relref "/docs/intro/
     <dd>{{% md %}}ARM ID of another HanaInstance that will share a network with this HanaInstance{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="powerstate_nodejs">
+<a href="#powerstate_nodejs" style="color: inherit; text-decoration: inherit;">power<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#hanainstancepowerstateenum">Hana<wbr>Instance<wbr>Power<wbr>State<wbr>Enum</a></span>
+    </dt>
+    <dd>{{% md %}}Resource power state{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="provisioningstate_nodejs">
+<a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#hanaprovisioningstatesenum">Hana<wbr>Provisioning<wbr>States<wbr>Enum</a></span>
+    </dt>
+    <dd>{{% md %}}State of provisioning of the HanaInstance{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="proximityplacementgroup_nodejs">
+<a href="#proximityplacementgroup_nodejs" style="color: inherit; text-decoration: inherit;">proximity<wbr>Placement<wbr>Group</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource proximity placement group{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="storageprofile_nodejs">
 <a href="#storageprofile_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Profile</a>
 </span>
@@ -535,6 +786,15 @@ The HanaInstance resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#storageprofile">Storage<wbr>Profile</a></span>
     </dt>
     <dd>{{% md %}}Specifies the storage settings for the HANA instance disks.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tags_nodejs">
+<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -559,6 +819,33 @@ The HanaInstance resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Name of the resource group.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="hana_instance_id_python">
+<a href="#hana_instance_id_python" style="color: inherit; text-decoration: inherit;">hana_<wbr>instance_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the HANA instance unique ID.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="hardware_profile_python">
+<a href="#hardware_profile_python" style="color: inherit; text-decoration: inherit;">hardware_<wbr>profile</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#hardwareprofile">Hardware<wbr>Profile<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the hardware settings for the HANA instance.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="hw_revision_python">
+<a href="#hw_revision_python" style="color: inherit; text-decoration: inherit;">hw_<wbr>revision</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Hardware revision of a HANA instance{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="location_python">
@@ -597,6 +884,33 @@ The HanaInstance resource accepts the following [input]({{< relref "/docs/intro/
     <dd>{{% md %}}ARM ID of another HanaInstance that will share a network with this HanaInstance{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="power_state_python">
+<a href="#power_state_python" style="color: inherit; text-decoration: inherit;">power_<wbr>state</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str | <a href="#hanainstancepowerstateenum">Hana<wbr>Instance<wbr>Power<wbr>State<wbr>Enum</a></span>
+    </dt>
+    <dd>{{% md %}}Resource power state{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="provisioning_state_python">
+<a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str | <a href="#hanaprovisioningstatesenum">Hana<wbr>Provisioning<wbr>States<wbr>Enum</a></span>
+    </dt>
+    <dd>{{% md %}}State of provisioning of the HanaInstance{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="proximity_placement_group_python">
+<a href="#proximity_placement_group_python" style="color: inherit; text-decoration: inherit;">proximity_<wbr>placement_<wbr>group</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Resource proximity placement group{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="storage_profile_python">
 <a href="#storage_profile_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>profile</a>
 </span>
@@ -604,6 +918,15 @@ The HanaInstance resource accepts the following [input]({{< relref "/docs/intro/
         <span class="property-type"><a href="#storageprofile">Storage<wbr>Profile<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Specifies the storage settings for the HANA instance disks.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tags_python">
+<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -617,24 +940,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-"
-            title="">
-        <span id="hanainstanceid_csharp">
-<a href="#hanainstanceid_csharp" style="color: inherit; text-decoration: inherit;">Hana<wbr>Instance<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the HANA instance unique ID.{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="hwrevision_csharp">
-<a href="#hwrevision_csharp" style="color: inherit; text-decoration: inherit;">Hw<wbr>Revision</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Hardware revision of a HANA instance{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="id_csharp">
@@ -655,42 +960,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Resource name{{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="powerstate_csharp">
-<a href="#powerstate_csharp" style="color: inherit; text-decoration: inherit;">Power<wbr>State</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource power state{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="provisioningstate_csharp">
-<a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}State of provisioning of the HanaInstance{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="proximityplacementgroup_csharp">
-<a href="#proximityplacementgroup_csharp" style="color: inherit; text-decoration: inherit;">Proximity<wbr>Placement<wbr>Group</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource proximity placement group{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="tags_csharp">
-<a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Dictionary&lt;string, string&gt;</span>
-    </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
@@ -698,39 +967,12 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource type{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="hardwareprofile_csharp">
-<a href="#hardwareprofile_csharp" style="color: inherit; text-decoration: inherit;">Hardware<wbr>Profile</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hardwareprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hana<wbr>On<wbr>Azure.<wbr>Outputs.<wbr>Hardware<wbr>Profile<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Specifies the hardware settings for the HANA instance.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-"
-            title="">
-        <span id="hanainstanceid_go">
-<a href="#hanainstanceid_go" style="color: inherit; text-decoration: inherit;">Hana<wbr>Instance<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the HANA instance unique ID.{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="hwrevision_go">
-<a href="#hwrevision_go" style="color: inherit; text-decoration: inherit;">Hw<wbr>Revision</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Hardware revision of a HANA instance{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="id_go">
@@ -751,42 +993,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Resource name{{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="powerstate_go">
-<a href="#powerstate_go" style="color: inherit; text-decoration: inherit;">Power<wbr>State</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource power state{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="provisioningstate_go">
-<a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}State of provisioning of the HanaInstance{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="proximityplacementgroup_go">
-<a href="#proximityplacementgroup_go" style="color: inherit; text-decoration: inherit;">Proximity<wbr>Placement<wbr>Group</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource proximity placement group{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="tags_go">
-<a href="#tags_go" style="color: inherit; text-decoration: inherit;">Tags</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">map[string]string</span>
-    </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
@@ -794,39 +1000,12 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource type{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="hardwareprofile_go">
-<a href="#hardwareprofile_go" style="color: inherit; text-decoration: inherit;">Hardware<wbr>Profile</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hardwareprofileresponse">Hardware<wbr>Profile<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Specifies the hardware settings for the HANA instance.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-"
-            title="">
-        <span id="hanainstanceid_nodejs">
-<a href="#hanainstanceid_nodejs" style="color: inherit; text-decoration: inherit;">hana<wbr>Instance<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies the HANA instance unique ID.{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="hwrevision_nodejs">
-<a href="#hwrevision_nodejs" style="color: inherit; text-decoration: inherit;">hw<wbr>Revision</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Hardware revision of a HANA instance{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="id_nodejs">
@@ -847,42 +1026,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Resource name{{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="powerstate_nodejs">
-<a href="#powerstate_nodejs" style="color: inherit; text-decoration: inherit;">power<wbr>State</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource power state{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="provisioningstate_nodejs">
-<a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}State of provisioning of the HanaInstance{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="proximityplacementgroup_nodejs">
-<a href="#proximityplacementgroup_nodejs" style="color: inherit; text-decoration: inherit;">proximity<wbr>Placement<wbr>Group</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource proximity placement group{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="tags_nodejs">
-<a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">{[key: string]: string}</span>
-    </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
@@ -890,39 +1033,12 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource type{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="hardwareprofile_nodejs">
-<a href="#hardwareprofile_nodejs" style="color: inherit; text-decoration: inherit;">hardware<wbr>Profile</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hardwareprofileresponse">Hardware<wbr>Profile<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Specifies the hardware settings for the HANA instance.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-"
-            title="">
-        <span id="hana_instance_id_python">
-<a href="#hana_instance_id_python" style="color: inherit; text-decoration: inherit;">hana_<wbr>instance_<wbr>id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Specifies the HANA instance unique ID.{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="hw_revision_python">
-<a href="#hw_revision_python" style="color: inherit; text-decoration: inherit;">hw_<wbr>revision</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Hardware revision of a HANA instance{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="id_python">
@@ -943,42 +1059,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Resource name{{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="power_state_python">
-<a href="#power_state_python" style="color: inherit; text-decoration: inherit;">power_<wbr>state</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource power state{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="provisioning_state_python">
-<a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}State of provisioning of the HanaInstance{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="proximity_placement_group_python">
-<a href="#proximity_placement_group_python" style="color: inherit; text-decoration: inherit;">proximity_<wbr>placement_<wbr>group</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource proximity placement group{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="tags_python">
-<a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Mapping[str, str]</span>
-    </dt>
-    <dd>{{% md %}}Resource tags{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
@@ -986,15 +1066,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource type{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="hardware_profile_python">
-<a href="#hardware_profile_python" style="color: inherit; text-decoration: inherit;">hardware_<wbr>profile</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#hardwareprofileresponse">Hardware<wbr>Profile<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Specifies the hardware settings for the HANA instance.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1240,13 +1311,663 @@ All [input](#inputs) properties are implicitly available as output properties. A
 </dl>
 {{% /choosable %}}
 
+<h4 id="hanahardwaretypenamesenum">Hana<wbr>Hardware<wbr>Type<wbr>Names<wbr>Enum</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Cisco_UCS</dt>
+    <dd>Cisco_UCS</dd>
+    <dt>HPE</dt>
+    <dd>HPE</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Hana<wbr>Hardware<wbr>Type<wbr>Names<wbr>Enum_Cisco_UCS</dt>
+    <dd>Cisco_UCS</dd>
+    <dt>Hana<wbr>Hardware<wbr>Type<wbr>Names<wbr>Enum<wbr>HPE</dt>
+    <dd>HPE</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Cisco_UCS</dt>
+    <dd>Cisco_UCS</dd>
+    <dt>HPE</dt>
+    <dd>HPE</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>CISCO_UCS</dt>
+    <dd>Cisco_UCS</dd>
+    <dt>HPE</dt>
+    <dd>HPE</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="hanainstancepowerstateenum">Hana<wbr>Instance<wbr>Power<wbr>State<wbr>Enum</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Starting</dt>
+    <dd>starting</dd>
+    <dt>Started</dt>
+    <dd>started</dd>
+    <dt>Stopping</dt>
+    <dd>stopping</dd>
+    <dt>Stopped</dt>
+    <dd>stopped</dd>
+    <dt>Restarting</dt>
+    <dd>restarting</dd>
+    <dt>Unknown</dt>
+    <dd>unknown</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Hana<wbr>Instance<wbr>Power<wbr>State<wbr>Enum<wbr>Starting</dt>
+    <dd>starting</dd>
+    <dt>Hana<wbr>Instance<wbr>Power<wbr>State<wbr>Enum<wbr>Started</dt>
+    <dd>started</dd>
+    <dt>Hana<wbr>Instance<wbr>Power<wbr>State<wbr>Enum<wbr>Stopping</dt>
+    <dd>stopping</dd>
+    <dt>Hana<wbr>Instance<wbr>Power<wbr>State<wbr>Enum<wbr>Stopped</dt>
+    <dd>stopped</dd>
+    <dt>Hana<wbr>Instance<wbr>Power<wbr>State<wbr>Enum<wbr>Restarting</dt>
+    <dd>restarting</dd>
+    <dt>Hana<wbr>Instance<wbr>Power<wbr>State<wbr>Enum<wbr>Unknown</dt>
+    <dd>unknown</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Starting</dt>
+    <dd>starting</dd>
+    <dt>Started</dt>
+    <dd>started</dd>
+    <dt>Stopping</dt>
+    <dd>stopping</dd>
+    <dt>Stopped</dt>
+    <dd>stopped</dd>
+    <dt>Restarting</dt>
+    <dd>restarting</dd>
+    <dt>Unknown</dt>
+    <dd>unknown</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>STARTING</dt>
+    <dd>starting</dd>
+    <dt>STARTED</dt>
+    <dd>started</dd>
+    <dt>STOPPING</dt>
+    <dd>stopping</dd>
+    <dt>STOPPED</dt>
+    <dd>stopped</dd>
+    <dt>RESTARTING</dt>
+    <dd>restarting</dd>
+    <dt>UNKNOWN</dt>
+    <dd>unknown</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="hanainstancesizenamesenum">Hana<wbr>Instance<wbr>Size<wbr>Names<wbr>Enum</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>S72m</dt>
+    <dd>S72m</dd>
+    <dt>S144m</dt>
+    <dd>S144m</dd>
+    <dt>S72</dt>
+    <dd>S72</dd>
+    <dt>S144</dt>
+    <dd>S144</dd>
+    <dt>S192</dt>
+    <dd>S192</dd>
+    <dt>S192m</dt>
+    <dd>S192m</dd>
+    <dt>S192xm</dt>
+    <dd>S192xm</dd>
+    <dt>S96</dt>
+    <dd>S96</dd>
+    <dt>S112</dt>
+    <dd>S112</dd>
+    <dt>S224</dt>
+    <dd>S224</dd>
+    <dt>S224m</dt>
+    <dd>S224m</dd>
+    <dt>S224om</dt>
+    <dd>S224om</dd>
+    <dt>S224oo</dt>
+    <dd>S224oo</dd>
+    <dt>S224oom</dt>
+    <dd>S224oom</dd>
+    <dt>S224ooo</dt>
+    <dd>S224ooo</dd>
+    <dt>S384</dt>
+    <dd>S384</dd>
+    <dt>S384m</dt>
+    <dd>S384m</dd>
+    <dt>S384xm</dt>
+    <dd>S384xm</dd>
+    <dt>S384xxm</dt>
+    <dd>S384xxm</dd>
+    <dt>S448</dt>
+    <dd>S448</dd>
+    <dt>S448m</dt>
+    <dd>S448m</dd>
+    <dt>S448om</dt>
+    <dd>S448om</dd>
+    <dt>S448oo</dt>
+    <dd>S448oo</dd>
+    <dt>S448oom</dt>
+    <dd>S448oom</dd>
+    <dt>S448ooo</dt>
+    <dd>S448ooo</dd>
+    <dt>S576m</dt>
+    <dd>S576m</dd>
+    <dt>S576xm</dt>
+    <dd>S576xm</dd>
+    <dt>S672</dt>
+    <dd>S672</dd>
+    <dt>S672m</dt>
+    <dd>S672m</dd>
+    <dt>S672om</dt>
+    <dd>S672om</dd>
+    <dt>S672oo</dt>
+    <dd>S672oo</dd>
+    <dt>S672oom</dt>
+    <dd>S672oom</dd>
+    <dt>S672ooo</dt>
+    <dd>S672ooo</dd>
+    <dt>S768</dt>
+    <dd>S768</dd>
+    <dt>S768m</dt>
+    <dd>S768m</dd>
+    <dt>S768xm</dt>
+    <dd>S768xm</dd>
+    <dt>S896</dt>
+    <dd>S896</dd>
+    <dt>S896m</dt>
+    <dd>S896m</dd>
+    <dt>S896om</dt>
+    <dd>S896om</dd>
+    <dt>S896oo</dt>
+    <dd>S896oo</dd>
+    <dt>S896oom</dt>
+    <dd>S896oom</dd>
+    <dt>S896ooo</dt>
+    <dd>S896ooo</dd>
+    <dt>S960m</dt>
+    <dd>S960m</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Hana<wbr>Instance<wbr>Size<wbr>Names<wbr>Enum<wbr>S72m</dt>
+    <dd>S72m</dd>
+    <dt>Hana<wbr>Instance<wbr>Size<wbr>Names<wbr>Enum<wbr>S144m</dt>
+    <dd>S144m</dd>
+    <dt>Hana<wbr>Instance<wbr>Size<wbr>Names<wbr>Enum<wbr>S72</dt>
+    <dd>S72</dd>
+    <dt>Hana<wbr>Instance<wbr>Size<wbr>Names<wbr>Enum<wbr>S144</dt>
+    <dd>S144</dd>
+    <dt>Hana<wbr>Instance<wbr>Size<wbr>Names<wbr>Enum<wbr>S192</dt>
+    <dd>S192</dd>
+    <dt>Hana<wbr>Instance<wbr>Size<wbr>Names<wbr>Enum<wbr>S192m</dt>
+    <dd>S192m</dd>
+    <dt>Hana<wbr>Instance<wbr>Size<wbr>Names<wbr>Enum<wbr>S192xm</dt>
+    <dd>S192xm</dd>
+    <dt>Hana<wbr>Instance<wbr>Size<wbr>Names<wbr>Enum<wbr>S96</dt>
+    <dd>S96</dd>
+    <dt>Hana<wbr>Instance<wbr>Size<wbr>Names<wbr>Enum<wbr>S112</dt>
+    <dd>S112</dd>
+    <dt>Hana<wbr>Instance<wbr>Size<wbr>Names<wbr>Enum<wbr>S224</dt>
+    <dd>S224</dd>
+    <dt>Hana<wbr>Instance<wbr>Size<wbr>Names<wbr>Enum<wbr>S224m</dt>
+    <dd>S224m</dd>
+    <dt>Hana<wbr>Instance<wbr>Size<wbr>Names<wbr>Enum<wbr>S224om</dt>
+    <dd>S224om</dd>
+    <dt>Hana<wbr>Instance<wbr>Size<wbr>Names<wbr>Enum<wbr>S224oo</dt>
+    <dd>S224oo</dd>
+    <dt>Hana<wbr>Instance<wbr>Size<wbr>Names<wbr>Enum<wbr>S224oom</dt>
+    <dd>S224oom</dd>
+    <dt>Hana<wbr>Instance<wbr>Size<wbr>Names<wbr>Enum<wbr>S224ooo</dt>
+    <dd>S224ooo</dd>
+    <dt>Hana<wbr>Instance<wbr>Size<wbr>Names<wbr>Enum<wbr>S384</dt>
+    <dd>S384</dd>
+    <dt>Hana<wbr>Instance<wbr>Size<wbr>Names<wbr>Enum<wbr>S384m</dt>
+    <dd>S384m</dd>
+    <dt>Hana<wbr>Instance<wbr>Size<wbr>Names<wbr>Enum<wbr>S384xm</dt>
+    <dd>S384xm</dd>
+    <dt>Hana<wbr>Instance<wbr>Size<wbr>Names<wbr>Enum<wbr>S384xxm</dt>
+    <dd>S384xxm</dd>
+    <dt>Hana<wbr>Instance<wbr>Size<wbr>Names<wbr>Enum<wbr>S448</dt>
+    <dd>S448</dd>
+    <dt>Hana<wbr>Instance<wbr>Size<wbr>Names<wbr>Enum<wbr>S448m</dt>
+    <dd>S448m</dd>
+    <dt>Hana<wbr>Instance<wbr>Size<wbr>Names<wbr>Enum<wbr>S448om</dt>
+    <dd>S448om</dd>
+    <dt>Hana<wbr>Instance<wbr>Size<wbr>Names<wbr>Enum<wbr>S448oo</dt>
+    <dd>S448oo</dd>
+    <dt>Hana<wbr>Instance<wbr>Size<wbr>Names<wbr>Enum<wbr>S448oom</dt>
+    <dd>S448oom</dd>
+    <dt>Hana<wbr>Instance<wbr>Size<wbr>Names<wbr>Enum<wbr>S448ooo</dt>
+    <dd>S448ooo</dd>
+    <dt>Hana<wbr>Instance<wbr>Size<wbr>Names<wbr>Enum<wbr>S576m</dt>
+    <dd>S576m</dd>
+    <dt>Hana<wbr>Instance<wbr>Size<wbr>Names<wbr>Enum<wbr>S576xm</dt>
+    <dd>S576xm</dd>
+    <dt>Hana<wbr>Instance<wbr>Size<wbr>Names<wbr>Enum<wbr>S672</dt>
+    <dd>S672</dd>
+    <dt>Hana<wbr>Instance<wbr>Size<wbr>Names<wbr>Enum<wbr>S672m</dt>
+    <dd>S672m</dd>
+    <dt>Hana<wbr>Instance<wbr>Size<wbr>Names<wbr>Enum<wbr>S672om</dt>
+    <dd>S672om</dd>
+    <dt>Hana<wbr>Instance<wbr>Size<wbr>Names<wbr>Enum<wbr>S672oo</dt>
+    <dd>S672oo</dd>
+    <dt>Hana<wbr>Instance<wbr>Size<wbr>Names<wbr>Enum<wbr>S672oom</dt>
+    <dd>S672oom</dd>
+    <dt>Hana<wbr>Instance<wbr>Size<wbr>Names<wbr>Enum<wbr>S672ooo</dt>
+    <dd>S672ooo</dd>
+    <dt>Hana<wbr>Instance<wbr>Size<wbr>Names<wbr>Enum<wbr>S768</dt>
+    <dd>S768</dd>
+    <dt>Hana<wbr>Instance<wbr>Size<wbr>Names<wbr>Enum<wbr>S768m</dt>
+    <dd>S768m</dd>
+    <dt>Hana<wbr>Instance<wbr>Size<wbr>Names<wbr>Enum<wbr>S768xm</dt>
+    <dd>S768xm</dd>
+    <dt>Hana<wbr>Instance<wbr>Size<wbr>Names<wbr>Enum<wbr>S896</dt>
+    <dd>S896</dd>
+    <dt>Hana<wbr>Instance<wbr>Size<wbr>Names<wbr>Enum<wbr>S896m</dt>
+    <dd>S896m</dd>
+    <dt>Hana<wbr>Instance<wbr>Size<wbr>Names<wbr>Enum<wbr>S896om</dt>
+    <dd>S896om</dd>
+    <dt>Hana<wbr>Instance<wbr>Size<wbr>Names<wbr>Enum<wbr>S896oo</dt>
+    <dd>S896oo</dd>
+    <dt>Hana<wbr>Instance<wbr>Size<wbr>Names<wbr>Enum<wbr>S896oom</dt>
+    <dd>S896oom</dd>
+    <dt>Hana<wbr>Instance<wbr>Size<wbr>Names<wbr>Enum<wbr>S896ooo</dt>
+    <dd>S896ooo</dd>
+    <dt>Hana<wbr>Instance<wbr>Size<wbr>Names<wbr>Enum<wbr>S960m</dt>
+    <dd>S960m</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>S72m</dt>
+    <dd>S72m</dd>
+    <dt>S144m</dt>
+    <dd>S144m</dd>
+    <dt>S72</dt>
+    <dd>S72</dd>
+    <dt>S144</dt>
+    <dd>S144</dd>
+    <dt>S192</dt>
+    <dd>S192</dd>
+    <dt>S192m</dt>
+    <dd>S192m</dd>
+    <dt>S192xm</dt>
+    <dd>S192xm</dd>
+    <dt>S96</dt>
+    <dd>S96</dd>
+    <dt>S112</dt>
+    <dd>S112</dd>
+    <dt>S224</dt>
+    <dd>S224</dd>
+    <dt>S224m</dt>
+    <dd>S224m</dd>
+    <dt>S224om</dt>
+    <dd>S224om</dd>
+    <dt>S224oo</dt>
+    <dd>S224oo</dd>
+    <dt>S224oom</dt>
+    <dd>S224oom</dd>
+    <dt>S224ooo</dt>
+    <dd>S224ooo</dd>
+    <dt>S384</dt>
+    <dd>S384</dd>
+    <dt>S384m</dt>
+    <dd>S384m</dd>
+    <dt>S384xm</dt>
+    <dd>S384xm</dd>
+    <dt>S384xxm</dt>
+    <dd>S384xxm</dd>
+    <dt>S448</dt>
+    <dd>S448</dd>
+    <dt>S448m</dt>
+    <dd>S448m</dd>
+    <dt>S448om</dt>
+    <dd>S448om</dd>
+    <dt>S448oo</dt>
+    <dd>S448oo</dd>
+    <dt>S448oom</dt>
+    <dd>S448oom</dd>
+    <dt>S448ooo</dt>
+    <dd>S448ooo</dd>
+    <dt>S576m</dt>
+    <dd>S576m</dd>
+    <dt>S576xm</dt>
+    <dd>S576xm</dd>
+    <dt>S672</dt>
+    <dd>S672</dd>
+    <dt>S672m</dt>
+    <dd>S672m</dd>
+    <dt>S672om</dt>
+    <dd>S672om</dd>
+    <dt>S672oo</dt>
+    <dd>S672oo</dd>
+    <dt>S672oom</dt>
+    <dd>S672oom</dd>
+    <dt>S672ooo</dt>
+    <dd>S672ooo</dd>
+    <dt>S768</dt>
+    <dd>S768</dd>
+    <dt>S768m</dt>
+    <dd>S768m</dd>
+    <dt>S768xm</dt>
+    <dd>S768xm</dd>
+    <dt>S896</dt>
+    <dd>S896</dd>
+    <dt>S896m</dt>
+    <dd>S896m</dd>
+    <dt>S896om</dt>
+    <dd>S896om</dd>
+    <dt>S896oo</dt>
+    <dd>S896oo</dd>
+    <dt>S896oom</dt>
+    <dd>S896oom</dd>
+    <dt>S896ooo</dt>
+    <dd>S896ooo</dd>
+    <dt>S960m</dt>
+    <dd>S960m</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>S72M</dt>
+    <dd>S72m</dd>
+    <dt>S144M</dt>
+    <dd>S144m</dd>
+    <dt>S72</dt>
+    <dd>S72</dd>
+    <dt>S144</dt>
+    <dd>S144</dd>
+    <dt>S192</dt>
+    <dd>S192</dd>
+    <dt>S192M</dt>
+    <dd>S192m</dd>
+    <dt>S192XM</dt>
+    <dd>S192xm</dd>
+    <dt>S96</dt>
+    <dd>S96</dd>
+    <dt>S112</dt>
+    <dd>S112</dd>
+    <dt>S224</dt>
+    <dd>S224</dd>
+    <dt>S224M</dt>
+    <dd>S224m</dd>
+    <dt>S224OM</dt>
+    <dd>S224om</dd>
+    <dt>S224OO</dt>
+    <dd>S224oo</dd>
+    <dt>S224OOM</dt>
+    <dd>S224oom</dd>
+    <dt>S224OOO</dt>
+    <dd>S224ooo</dd>
+    <dt>S384</dt>
+    <dd>S384</dd>
+    <dt>S384M</dt>
+    <dd>S384m</dd>
+    <dt>S384XM</dt>
+    <dd>S384xm</dd>
+    <dt>S384XXM</dt>
+    <dd>S384xxm</dd>
+    <dt>S448</dt>
+    <dd>S448</dd>
+    <dt>S448M</dt>
+    <dd>S448m</dd>
+    <dt>S448OM</dt>
+    <dd>S448om</dd>
+    <dt>S448OO</dt>
+    <dd>S448oo</dd>
+    <dt>S448OOM</dt>
+    <dd>S448oom</dd>
+    <dt>S448OOO</dt>
+    <dd>S448ooo</dd>
+    <dt>S576M</dt>
+    <dd>S576m</dd>
+    <dt>S576XM</dt>
+    <dd>S576xm</dd>
+    <dt>S672</dt>
+    <dd>S672</dd>
+    <dt>S672M</dt>
+    <dd>S672m</dd>
+    <dt>S672OM</dt>
+    <dd>S672om</dd>
+    <dt>S672OO</dt>
+    <dd>S672oo</dd>
+    <dt>S672OOM</dt>
+    <dd>S672oom</dd>
+    <dt>S672OOO</dt>
+    <dd>S672ooo</dd>
+    <dt>S768</dt>
+    <dd>S768</dd>
+    <dt>S768M</dt>
+    <dd>S768m</dd>
+    <dt>S768XM</dt>
+    <dd>S768xm</dd>
+    <dt>S896</dt>
+    <dd>S896</dd>
+    <dt>S896M</dt>
+    <dd>S896m</dd>
+    <dt>S896OM</dt>
+    <dd>S896om</dd>
+    <dt>S896OO</dt>
+    <dd>S896oo</dd>
+    <dt>S896OOM</dt>
+    <dd>S896oom</dd>
+    <dt>S896OOO</dt>
+    <dd>S896ooo</dd>
+    <dt>S960M</dt>
+    <dd>S960m</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="hanaprovisioningstatesenum">Hana<wbr>Provisioning<wbr>States<wbr>Enum</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Accepted</dt>
+    <dd>Accepted</dd>
+    <dt>Creating</dt>
+    <dd>Creating</dd>
+    <dt>Updating</dt>
+    <dd>Updating</dd>
+    <dt>Failed</dt>
+    <dd>Failed</dd>
+    <dt>Succeeded</dt>
+    <dd>Succeeded</dd>
+    <dt>Deleting</dt>
+    <dd>Deleting</dd>
+    <dt>Migrating</dt>
+    <dd>Migrating</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Hana<wbr>Provisioning<wbr>States<wbr>Enum<wbr>Accepted</dt>
+    <dd>Accepted</dd>
+    <dt>Hana<wbr>Provisioning<wbr>States<wbr>Enum<wbr>Creating</dt>
+    <dd>Creating</dd>
+    <dt>Hana<wbr>Provisioning<wbr>States<wbr>Enum<wbr>Updating</dt>
+    <dd>Updating</dd>
+    <dt>Hana<wbr>Provisioning<wbr>States<wbr>Enum<wbr>Failed</dt>
+    <dd>Failed</dd>
+    <dt>Hana<wbr>Provisioning<wbr>States<wbr>Enum<wbr>Succeeded</dt>
+    <dd>Succeeded</dd>
+    <dt>Hana<wbr>Provisioning<wbr>States<wbr>Enum<wbr>Deleting</dt>
+    <dd>Deleting</dd>
+    <dt>Hana<wbr>Provisioning<wbr>States<wbr>Enum<wbr>Migrating</dt>
+    <dd>Migrating</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Accepted</dt>
+    <dd>Accepted</dd>
+    <dt>Creating</dt>
+    <dd>Creating</dd>
+    <dt>Updating</dt>
+    <dd>Updating</dd>
+    <dt>Failed</dt>
+    <dd>Failed</dd>
+    <dt>Succeeded</dt>
+    <dd>Succeeded</dd>
+    <dt>Deleting</dt>
+    <dd>Deleting</dd>
+    <dt>Migrating</dt>
+    <dd>Migrating</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>ACCEPTED</dt>
+    <dd>Accepted</dd>
+    <dt>CREATING</dt>
+    <dd>Creating</dd>
+    <dt>UPDATING</dt>
+    <dd>Updating</dd>
+    <dt>FAILED</dt>
+    <dd>Failed</dd>
+    <dt>SUCCEEDED</dt>
+    <dd>Succeeded</dd>
+    <dt>DELETING</dt>
+    <dd>Deleting</dd>
+    <dt>MIGRATING</dt>
+    <dd>Migrating</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="hardwareprofile">Hardware<wbr>Profile</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="hanainstancesize_csharp">
+<a href="#hanainstancesize_csharp" style="color: inherit; text-decoration: inherit;">Hana<wbr>Instance<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#hanainstancesizenamesenum">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hana<wbr>On<wbr>Azure.<wbr>Hana<wbr>Instance<wbr>Size<wbr>Names<wbr>Enum</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the HANA instance SKU.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="hardwaretype_csharp">
+<a href="#hardwaretype_csharp" style="color: inherit; text-decoration: inherit;">Hardware<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#hanahardwaretypenamesenum">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Hana<wbr>On<wbr>Azure.<wbr>Hana<wbr>Hardware<wbr>Type<wbr>Names<wbr>Enum</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the hardware type (vendor and/or their product name){{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="hanainstancesize_go">
+<a href="#hanainstancesize_go" style="color: inherit; text-decoration: inherit;">Hana<wbr>Instance<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#hanainstancesizenamesenum">Hana<wbr>Instance<wbr>Size<wbr>Names<wbr>Enum</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the HANA instance SKU.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="hardwaretype_go">
+<a href="#hardwaretype_go" style="color: inherit; text-decoration: inherit;">Hardware<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#hanahardwaretypenamesenum">Hana<wbr>Hardware<wbr>Type<wbr>Names<wbr>Enum</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the hardware type (vendor and/or their product name){{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="hanainstancesize_nodejs">
+<a href="#hanainstancesize_nodejs" style="color: inherit; text-decoration: inherit;">hana<wbr>Instance<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#hanainstancesizenamesenum">Hana<wbr>Instance<wbr>Size<wbr>Names<wbr>Enum</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the HANA instance SKU.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="hardwaretype_nodejs">
+<a href="#hardwaretype_nodejs" style="color: inherit; text-decoration: inherit;">hardware<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#hanahardwaretypenamesenum">Hana<wbr>Hardware<wbr>Type<wbr>Names<wbr>Enum</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the hardware type (vendor and/or their product name){{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="hana_instance_size_python">
+<a href="#hana_instance_size_python" style="color: inherit; text-decoration: inherit;">hana_<wbr>instance_<wbr>size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str | <a href="#hanainstancesizenamesenum">Hana<wbr>Instance<wbr>Size<wbr>Names<wbr>Enum</a></span>
+    </dt>
+    <dd>{{% md %}}Specifies the HANA instance SKU.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="hardware_type_python">
+<a href="#hardware_type_python" style="color: inherit; text-decoration: inherit;">hardware_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str | <a href="#hanahardwaretypenamesenum">Hana<wbr>Hardware<wbr>Type<wbr>Names<wbr>Enum</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the hardware type (vendor and/or their product name){{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
 <h4 id="hardwareprofileresponse">Hardware<wbr>Profile<wbr>Response</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="hanainstancesize_csharp">
 <a href="#hanainstancesize_csharp" style="color: inherit; text-decoration: inherit;">Hana<wbr>Instance<wbr>Size</a>
 </span>
@@ -1254,8 +1975,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the HANA instance SKU.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="hardwaretype_csharp">
 <a href="#hardwaretype_csharp" style="color: inherit; text-decoration: inherit;">Hardware<wbr>Type</a>
 </span>
@@ -1269,8 +1990,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="hanainstancesize_go">
 <a href="#hanainstancesize_go" style="color: inherit; text-decoration: inherit;">Hana<wbr>Instance<wbr>Size</a>
 </span>
@@ -1278,8 +1999,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the HANA instance SKU.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="hardwaretype_go">
 <a href="#hardwaretype_go" style="color: inherit; text-decoration: inherit;">Hardware<wbr>Type</a>
 </span>
@@ -1293,8 +2014,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="hanainstancesize_nodejs">
 <a href="#hanainstancesize_nodejs" style="color: inherit; text-decoration: inherit;">hana<wbr>Instance<wbr>Size</a>
 </span>
@@ -1302,8 +2023,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the HANA instance SKU.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="hardwaretype_nodejs">
 <a href="#hardwaretype_nodejs" style="color: inherit; text-decoration: inherit;">hardware<wbr>Type</a>
 </span>
@@ -1317,8 +2038,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="hana_instance_size_python">
 <a href="#hana_instance_size_python" style="color: inherit; text-decoration: inherit;">hana_<wbr>instance_<wbr>size</a>
 </span>
@@ -1326,8 +2047,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the HANA instance SKU.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="hardware_type_python">
 <a href="#hardware_type_python" style="color: inherit; text-decoration: inherit;">hardware_<wbr>type</a>
 </span>
@@ -1469,6 +2190,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
+        <span id="circuitid_csharp">
+<a href="#circuitid_csharp" style="color: inherit; text-decoration: inherit;">Circuit<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the circuit id for connecting to express route.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="networkinterfaces_csharp">
 <a href="#networkinterfaces_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Interfaces</a>
 </span>
@@ -1482,6 +2212,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="circuitid_go">
+<a href="#circuitid_go" style="color: inherit; text-decoration: inherit;">Circuit<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the circuit id for connecting to express route.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="networkinterfaces_go">
@@ -1499,6 +2238,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
+        <span id="circuitid_nodejs">
+<a href="#circuitid_nodejs" style="color: inherit; text-decoration: inherit;">circuit<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the circuit id for connecting to express route.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="networkinterfaces_nodejs">
 <a href="#networkinterfaces_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Interfaces</a>
 </span>
@@ -1512,6 +2260,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language python %}}
 <dl class="resources-properties">
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="circuit_id_python">
+<a href="#circuit_id_python" style="color: inherit; text-decoration: inherit;">circuit_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the circuit id for connecting to express route.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="network_interfaces_python">
@@ -1529,8 +2286,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="circuitid_csharp">
 <a href="#circuitid_csharp" style="color: inherit; text-decoration: inherit;">Circuit<wbr>Id</a>
 </span>
@@ -1553,8 +2310,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="circuitid_go">
 <a href="#circuitid_go" style="color: inherit; text-decoration: inherit;">Circuit<wbr>Id</a>
 </span>
@@ -1577,8 +2334,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="circuitid_nodejs">
 <a href="#circuitid_nodejs" style="color: inherit; text-decoration: inherit;">circuit<wbr>Id</a>
 </span>
@@ -1601,8 +2358,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="circuit_id_python">
 <a href="#circuit_id_python" style="color: inherit; text-decoration: inherit;">circuit_<wbr>id</a>
 </span>
@@ -1638,6 +2395,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Specifies the host OS name of the HANA instance.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="ostype_csharp">
+<a href="#ostype_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}This property allows you to specify the type of the OS.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="sshpublickey_csharp">
 <a href="#sshpublickey_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Public<wbr>Key</a>
 </span>
@@ -1645,6 +2411,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the SSH public key used to access the operating system.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="version_csharp">
+<a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies version of operating system.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1662,6 +2437,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Specifies the host OS name of the HANA instance.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="ostype_go">
+<a href="#ostype_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}This property allows you to specify the type of the OS.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="sshpublickey_go">
 <a href="#sshpublickey_go" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Public<wbr>Key</a>
 </span>
@@ -1669,6 +2453,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the SSH public key used to access the operating system.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="version_go">
+<a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies version of operating system.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1686,6 +2479,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Specifies the host OS name of the HANA instance.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="ostype_nodejs">
+<a href="#ostype_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}This property allows you to specify the type of the OS.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="sshpublickey_nodejs">
 <a href="#sshpublickey_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Public<wbr>Key</a>
 </span>
@@ -1693,6 +2495,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the SSH public key used to access the operating system.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="version_nodejs">
+<a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies version of operating system.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1710,6 +2521,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Specifies the host OS name of the HANA instance.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="os_type_python">
+<a href="#os_type_python" style="color: inherit; text-decoration: inherit;">os_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}This property allows you to specify the type of the OS.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="ssh_public_key_python">
 <a href="#ssh_public_key_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>public_<wbr>key</a>
 </span>
@@ -1717,6 +2537,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the SSH public key used to access the operating system.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="version_python">
+<a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies version of operating system.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1725,24 +2554,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="ostype_csharp">
-<a href="#ostype_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}This property allows you to specify the type of the OS.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="version_csharp">
-<a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies version of operating system.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="computername_csharp">
@@ -1754,6 +2565,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Specifies the host OS name of the HANA instance.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="ostype_csharp">
+<a href="#ostype_csharp" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}This property allows you to specify the type of the OS.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="sshpublickey_csharp">
 <a href="#sshpublickey_csharp" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Public<wbr>Key</a>
 </span>
@@ -1761,30 +2581,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the SSH public key used to access the operating system.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="version_csharp">
+<a href="#version_csharp" style="color: inherit; text-decoration: inherit;">Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies version of operating system.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="ostype_go">
-<a href="#ostype_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}This property allows you to specify the type of the OS.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="version_go">
-<a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies version of operating system.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="computername_go">
@@ -1796,6 +2607,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Specifies the host OS name of the HANA instance.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="ostype_go">
+<a href="#ostype_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}This property allows you to specify the type of the OS.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="sshpublickey_go">
 <a href="#sshpublickey_go" style="color: inherit; text-decoration: inherit;">Ssh<wbr>Public<wbr>Key</a>
 </span>
@@ -1803,30 +2623,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the SSH public key used to access the operating system.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="version_go">
+<a href="#version_go" style="color: inherit; text-decoration: inherit;">Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies version of operating system.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="ostype_nodejs">
-<a href="#ostype_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}This property allows you to specify the type of the OS.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="version_nodejs">
-<a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Specifies version of operating system.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="computername_nodejs">
@@ -1838,6 +2649,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Specifies the host OS name of the HANA instance.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="ostype_nodejs">
+<a href="#ostype_nodejs" style="color: inherit; text-decoration: inherit;">os<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}This property allows you to specify the type of the OS.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="sshpublickey_nodejs">
 <a href="#sshpublickey_nodejs" style="color: inherit; text-decoration: inherit;">ssh<wbr>Public<wbr>Key</a>
 </span>
@@ -1845,30 +2665,21 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the SSH public key used to access the operating system.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="version_nodejs">
+<a href="#version_nodejs" style="color: inherit; text-decoration: inherit;">version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies version of operating system.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="os_type_python">
-<a href="#os_type_python" style="color: inherit; text-decoration: inherit;">os_<wbr>type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}This property allows you to specify the type of the OS.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="version_python">
-<a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Specifies version of operating system.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="computer_name_python">
@@ -1880,6 +2691,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Specifies the host OS name of the HANA instance.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="os_type_python">
+<a href="#os_type_python" style="color: inherit; text-decoration: inherit;">os_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}This property allows you to specify the type of the OS.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="ssh_public_key_python">
 <a href="#ssh_public_key_python" style="color: inherit; text-decoration: inherit;">ssh_<wbr>public_<wbr>key</a>
 </span>
@@ -1887,6 +2707,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the SSH public key used to access the operating system.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="version_python">
+<a href="#version_python" style="color: inherit; text-decoration: inherit;">version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies version of operating system.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1895,6 +2724,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="nfsipaddress_csharp">
+<a href="#nfsipaddress_csharp" style="color: inherit; text-decoration: inherit;">Nfs<wbr>Ip<wbr>Address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}IP Address to connect to storage.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="osdisks_csharp">
@@ -1912,6 +2750,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
+        <span id="nfsipaddress_go">
+<a href="#nfsipaddress_go" style="color: inherit; text-decoration: inherit;">Nfs<wbr>Ip<wbr>Address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}IP Address to connect to storage.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="osdisks_go">
 <a href="#osdisks_go" style="color: inherit; text-decoration: inherit;">Os<wbr>Disks</a>
 </span>
@@ -1925,6 +2772,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
+    <dt class="property-optional"
+            title="Optional">
+        <span id="nfsipaddress_nodejs">
+<a href="#nfsipaddress_nodejs" style="color: inherit; text-decoration: inherit;">nfs<wbr>Ip<wbr>Address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}IP Address to connect to storage.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="osdisks_nodejs">
@@ -1942,6 +2798,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-optional"
             title="Optional">
+        <span id="nfs_ip_address_python">
+<a href="#nfs_ip_address_python" style="color: inherit; text-decoration: inherit;">nfs_<wbr>ip_<wbr>address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}IP Address to connect to storage.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="os_disks_python">
 <a href="#os_disks_python" style="color: inherit; text-decoration: inherit;">os_<wbr>disks</a>
 </span>
@@ -1957,8 +2822,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="nfsipaddress_csharp">
 <a href="#nfsipaddress_csharp" style="color: inherit; text-decoration: inherit;">Nfs<wbr>Ip<wbr>Address</a>
 </span>
@@ -1981,8 +2846,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="nfsipaddress_go">
 <a href="#nfsipaddress_go" style="color: inherit; text-decoration: inherit;">Nfs<wbr>Ip<wbr>Address</a>
 </span>
@@ -2005,8 +2870,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="nfsipaddress_nodejs">
 <a href="#nfsipaddress_nodejs" style="color: inherit; text-decoration: inherit;">nfs<wbr>Ip<wbr>Address</a>
 </span>
@@ -2029,8 +2894,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
+    <dt class="property-optional"
+            title="Optional">
         <span id="nfs_ip_address_python">
 <a href="#nfs_ip_address_python" style="color: inherit; text-decoration: inherit;">nfs_<wbr>ip_<wbr>address</a>
 </span>

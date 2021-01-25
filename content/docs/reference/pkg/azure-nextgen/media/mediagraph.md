@@ -2683,7 +2683,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:media/v20200201preview:MediaGraph SampleMediaGraph <Azure resource ID> 
+$ pulumi import azure-nextgen:media/v20200201preview:MediaGraph SampleMediaGraph /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Media/mediaServices/{accountName}/mediaGraphs/{mediaGraphName} 
 ```
 
 

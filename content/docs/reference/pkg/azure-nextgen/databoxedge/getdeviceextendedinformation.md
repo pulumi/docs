@@ -191,6 +191,42 @@ The following output properties are available:
     <dd>{{% md %}}The hierarchical type of the object.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="channelintegritykeyname_csharp">
+<a href="#channelintegritykeyname_csharp" style="color: inherit; text-decoration: inherit;">Channel<wbr>Integrity<wbr>Key<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of Channel Integrity Key stored in the Client Key Vault{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="channelintegritykeyversion_csharp">
+<a href="#channelintegritykeyversion_csharp" style="color: inherit; text-decoration: inherit;">Channel<wbr>Integrity<wbr>Key<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The version of Channel Integrity Key stored in the Client Key Vault{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="clientsecretstoreid_csharp">
+<a href="#clientsecretstoreid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret<wbr>Store<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Key Vault ARM Id for client secrets{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="clientsecretstoreurl_csharp">
+<a href="#clientsecretstoreurl_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret<wbr>Store<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The url to access the Client Key Vault{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="encryptionkey_csharp">
 <a href="#encryptionkey_csharp" style="color: inherit; text-decoration: inherit;">Encryption<wbr>Key</a>
 </span>
@@ -249,6 +285,42 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The hierarchical type of the object.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="channelintegritykeyname_go">
+<a href="#channelintegritykeyname_go" style="color: inherit; text-decoration: inherit;">Channel<wbr>Integrity<wbr>Key<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of Channel Integrity Key stored in the Client Key Vault{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="channelintegritykeyversion_go">
+<a href="#channelintegritykeyversion_go" style="color: inherit; text-decoration: inherit;">Channel<wbr>Integrity<wbr>Key<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The version of Channel Integrity Key stored in the Client Key Vault{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="clientsecretstoreid_go">
+<a href="#clientsecretstoreid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret<wbr>Store<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Key Vault ARM Id for client secrets{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="clientsecretstoreurl_go">
+<a href="#clientsecretstoreurl_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Secret<wbr>Store<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The url to access the Client Key Vault{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="encryptionkey_go">
@@ -311,6 +383,42 @@ The following output properties are available:
     <dd>{{% md %}}The hierarchical type of the object.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="channelintegritykeyname_nodejs">
+<a href="#channelintegritykeyname_nodejs" style="color: inherit; text-decoration: inherit;">channel<wbr>Integrity<wbr>Key<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of Channel Integrity Key stored in the Client Key Vault{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="channelintegritykeyversion_nodejs">
+<a href="#channelintegritykeyversion_nodejs" style="color: inherit; text-decoration: inherit;">channel<wbr>Integrity<wbr>Key<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The version of Channel Integrity Key stored in the Client Key Vault{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="clientsecretstoreid_nodejs">
+<a href="#clientsecretstoreid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Secret<wbr>Store<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Key Vault ARM Id for client secrets{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="clientsecretstoreurl_nodejs">
+<a href="#clientsecretstoreurl_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Secret<wbr>Store<wbr>Url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The url to access the Client Key Vault{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="encryptionkey_nodejs">
 <a href="#encryptionkey_nodejs" style="color: inherit; text-decoration: inherit;">encryption<wbr>Key</a>
 </span>
@@ -369,6 +477,42 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The hierarchical type of the object.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="channel_integrity_key_name_python">
+<a href="#channel_integrity_key_name_python" style="color: inherit; text-decoration: inherit;">channel_<wbr>integrity_<wbr>key_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of Channel Integrity Key stored in the Client Key Vault{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="channel_integrity_key_version_python">
+<a href="#channel_integrity_key_version_python" style="color: inherit; text-decoration: inherit;">channel_<wbr>integrity_<wbr>key_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The version of Channel Integrity Key stored in the Client Key Vault{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="client_secret_store_id_python">
+<a href="#client_secret_store_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret_<wbr>store_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Key Vault ARM Id for client secrets{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="client_secret_store_url_python">
+<a href="#client_secret_store_url_python" style="color: inherit; text-decoration: inherit;">client_<wbr>secret_<wbr>store_<wbr>url</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The url to access the Client Key Vault{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="encryption_key_python">

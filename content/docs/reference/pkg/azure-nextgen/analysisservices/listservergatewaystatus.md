@@ -159,9 +159,9 @@ The following output properties are available:
 <a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Live message of list gateway.{{% /md %}}</dd>
+    <dd>{{% md %}}Live message of list gateway. Status: 0 - Live{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -174,9 +174,9 @@ The following output properties are available:
 <a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Live message of list gateway.{{% /md %}}</dd>
+    <dd>{{% md %}}Live message of list gateway. Status: 0 - Live{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -189,9 +189,9 @@ The following output properties are available:
 <a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Live message of list gateway.{{% /md %}}</dd>
+    <dd>{{% md %}}Live message of list gateway. Status: 0 - Live{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -204,9 +204,9 @@ The following output properties are available:
 <a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Live message of list gateway.{{% /md %}}</dd>
+    <dd>{{% md %}}Live message of list gateway. Status: 0 - Live{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 

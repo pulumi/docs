@@ -1060,6 +1060,109 @@ private IP address shall be allocated from the subnet specified in subnetRef.{{%
 </dl>
 {{% /choosable %}}
 
+<h4 id="loadbalancernatrulereferenceresponse">Load<wbr>Balancer<wbr>Nat<wbr>Rule<wbr>Reference<wbr>Response</h4>
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="sourcearmresourceid_csharp">
+<a href="#sourcearmresourceid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Arm<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Gets the ARM resource ID of the tracked resource being referenced.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Gets the name of the proxy resource on the target side.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="sourcearmresourceid_go">
+<a href="#sourcearmresourceid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Arm<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Gets the ARM resource ID of the tracked resource being referenced.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Gets the name of the proxy resource on the target side.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="sourcearmresourceid_nodejs">
+<a href="#sourcearmresourceid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Arm<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Gets the ARM resource ID of the tracked resource being referenced.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Gets the name of the proxy resource on the target side.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="source_arm_resource_id_python">
+<a href="#source_arm_resource_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>arm_<wbr>resource_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Gets the ARM resource ID of the tracked resource being referenced.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Gets the name of the proxy resource on the target side.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
 <h4 id="loadbalancerresourcesettingsresponse">Load<wbr>Balancer<wbr>Resource<wbr>Settings<wbr>Response</h4>
 
 
@@ -2487,15 +2590,6 @@ the dependent resource.{{% /md %}}</dd>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines the MoveResource states.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="targetid_csharp">
-<a href="#targetid_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Gets the Target ARM Id of the resource.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="errors_csharp">
@@ -2529,15 +2623,6 @@ the dependent resource.{{% /md %}}</dd>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines the MoveResource states.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="targetid_go">
-<a href="#targetid_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Gets the Target ARM Id of the resource.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="errors_go">
@@ -2571,15 +2656,6 @@ the dependent resource.{{% /md %}}</dd>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Defines the MoveResource states.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="targetid_nodejs">
-<a href="#targetid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Gets the Target ARM Id of the resource.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="errors_nodejs">
@@ -2613,15 +2689,6 @@ the dependent resource.{{% /md %}}</dd>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Defines the MoveResource states.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="target_id_python">
-<a href="#target_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Gets the Target ARM Id of the resource.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="errors_python">
@@ -2906,6 +2973,15 @@ the dependent resource.{{% /md %}}</dd>
     <dd>{{% md %}}Gets or sets the references of the load balancer backend address pools.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="loadbalancernatrules_csharp">
+<a href="#loadbalancernatrules_csharp" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Nat<wbr>Rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loadbalancernatrulereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Load<wbr>Balancer<wbr>Nat<wbr>Rule<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the references of the load balancer NAT rules.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -2942,6 +3018,15 @@ the dependent resource.{{% /md %}}</dd>
     <dd>{{% md %}}Gets or sets the private IP address allocation method.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="publicip_csharp">
+<a href="#publicip_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#publicipreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Public<wbr>Ip<wbr>Reference<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Defines reference to a public IP.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="subnet_csharp">
 <a href="#subnet_csharp" style="color: inherit; text-decoration: inherit;">Subnet</a>
 </span>
@@ -2964,6 +3049,15 @@ the dependent resource.{{% /md %}}</dd>
         <span class="property-type"><a href="#loadbalancerbackendaddresspoolreferenceresponse">[]Load<wbr>Balancer<wbr>Backend<wbr>Address<wbr>Pool<wbr>Reference<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the references of the load balancer backend address pools.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="loadbalancernatrules_go">
+<a href="#loadbalancernatrules_go" style="color: inherit; text-decoration: inherit;">Load<wbr>Balancer<wbr>Nat<wbr>Rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loadbalancernatrulereferenceresponse">[]Load<wbr>Balancer<wbr>Nat<wbr>Rule<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the references of the load balancer NAT rules.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
@@ -3002,6 +3096,15 @@ the dependent resource.{{% /md %}}</dd>
     <dd>{{% md %}}Gets or sets the private IP address allocation method.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="publicip_go">
+<a href="#publicip_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Ip</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#publicipreferenceresponse">Public<wbr>Ip<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Defines reference to a public IP.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="subnet_go">
 <a href="#subnet_go" style="color: inherit; text-decoration: inherit;">Subnet</a>
 </span>
@@ -3024,6 +3127,15 @@ the dependent resource.{{% /md %}}</dd>
         <span class="property-type"><a href="#loadbalancerbackendaddresspoolreferenceresponse">Load<wbr>Balancer<wbr>Backend<wbr>Address<wbr>Pool<wbr>Reference<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the references of the load balancer backend address pools.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="loadbalancernatrules_nodejs">
+<a href="#loadbalancernatrules_nodejs" style="color: inherit; text-decoration: inherit;">load<wbr>Balancer<wbr>Nat<wbr>Rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loadbalancernatrulereferenceresponse">Load<wbr>Balancer<wbr>Nat<wbr>Rule<wbr>Reference<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the references of the load balancer NAT rules.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="name_nodejs">
@@ -3062,6 +3174,15 @@ the dependent resource.{{% /md %}}</dd>
     <dd>{{% md %}}Gets or sets the private IP address allocation method.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="publicip_nodejs">
+<a href="#publicip_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Ip</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#publicipreferenceresponse">Public<wbr>Ip<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Defines reference to a public IP.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="subnet_nodejs">
 <a href="#subnet_nodejs" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span>
@@ -3084,6 +3205,15 @@ the dependent resource.{{% /md %}}</dd>
         <span class="property-type"><a href="#loadbalancerbackendaddresspoolreferenceresponse">Sequence[Load<wbr>Balancer<wbr>Backend<wbr>Address<wbr>Pool<wbr>Reference<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}Gets or sets the references of the load balancer backend address pools.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="load_balancer_nat_rules_python">
+<a href="#load_balancer_nat_rules_python" style="color: inherit; text-decoration: inherit;">load_<wbr>balancer_<wbr>nat_<wbr>rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#loadbalancernatrulereferenceresponse">Sequence[Load<wbr>Balancer<wbr>Nat<wbr>Rule<wbr>Reference<wbr>Response<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Gets or sets the references of the load balancer NAT rules.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
@@ -3122,6 +3252,15 @@ the dependent resource.{{% /md %}}</dd>
     <dd>{{% md %}}Gets or sets the private IP address allocation method.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="public_ip_python">
+<a href="#public_ip_python" style="color: inherit; text-decoration: inherit;">public_<wbr>ip</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#publicipreferenceresponse">Public<wbr>Ip<wbr>Reference<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Defines reference to a public IP.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="subnet_python">
 <a href="#subnet_python" style="color: inherit; text-decoration: inherit;">subnet</a>
 </span>
@@ -3129,6 +3268,73 @@ the dependent resource.{{% /md %}}</dd>
         <span class="property-type"><a href="#subnetreferenceresponse">Subnet<wbr>Reference<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Defines reference to subnet.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="nsgreferenceresponse">Nsg<wbr>Reference<wbr>Response</h4>
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="sourcearmresourceid_csharp">
+<a href="#sourcearmresourceid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Arm<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Gets the ARM resource ID of the tracked resource being referenced.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="sourcearmresourceid_go">
+<a href="#sourcearmresourceid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Arm<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Gets the ARM resource ID of the tracked resource being referenced.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="sourcearmresourceid_nodejs">
+<a href="#sourcearmresourceid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Arm<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Gets the ARM resource ID of the tracked resource being referenced.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="source_arm_resource_id_python">
+<a href="#source_arm_resource_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>arm_<wbr>resource_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Gets the ARM resource ID of the tracked resource being referenced.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -3598,7 +3804,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="fqdn_csharp">
-<a href="#fqdn_csharp" style="color: inherit; text-decoration: inherit;">FQDN</a>
+<a href="#fqdn_csharp" style="color: inherit; text-decoration: inherit;">Fqdn</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -3658,7 +3864,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="fqdn_go">
-<a href="#fqdn_go" style="color: inherit; text-decoration: inherit;">FQDN</a>
+<a href="#fqdn_go" style="color: inherit; text-decoration: inherit;">Fqdn</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -3718,7 +3924,7 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="fqdn_nodejs">
-<a href="#fqdn_nodejs" style="color: inherit; text-decoration: inherit;">f<wbr>QDN</a>
+<a href="#fqdn_nodejs" style="color: inherit; text-decoration: inherit;">fqdn</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -3777,8 +3983,8 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd>
     <dd>{{% md %}}Gets or sets the domain name label.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="f_qdn_python">
-<a href="#f_qdn_python" style="color: inherit; text-decoration: inherit;">f_<wbr>qdn</a>
+        <span id="fqdn_python">
+<a href="#fqdn_python" style="color: inherit; text-decoration: inherit;">fqdn</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -3811,6 +4017,73 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets public IP zones.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="publicipreferenceresponse">Public<wbr>Ip<wbr>Reference<wbr>Response</h4>
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="sourcearmresourceid_csharp">
+<a href="#sourcearmresourceid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Arm<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Gets the ARM resource ID of the tracked resource being referenced.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="sourcearmresourceid_go">
+<a href="#sourcearmresourceid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Arm<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Gets the ARM resource ID of the tracked resource being referenced.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="sourcearmresourceid_nodejs">
+<a href="#sourcearmresourceid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Arm<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Gets the ARM resource ID of the tracked resource being referenced.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="source_arm_resource_id_python">
+<a href="#source_arm_resource_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>arm_<wbr>resource_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Gets the ARM resource ID of the tracked resource being referenced.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4285,6 +4558,15 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the Subnet name.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="networksecuritygroup_csharp">
+<a href="#networksecuritygroup_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Security<wbr>Group</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#nsgreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Migrate.<wbr>Inputs.<wbr>Nsg<wbr>Reference<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Defines reference to NSG.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4309,6 +4591,15 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the Subnet name.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="networksecuritygroup_go">
+<a href="#networksecuritygroup_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Security<wbr>Group</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#nsgreferenceresponse">Nsg<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Defines reference to NSG.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4333,6 +4624,15 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd>
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Gets or sets the Subnet name.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="networksecuritygroup_nodejs">
+<a href="#networksecuritygroup_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Security<wbr>Group</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#nsgreferenceresponse">Nsg<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Defines reference to NSG.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4357,6 +4657,15 @@ rule, specifies where network traffic originates from.{{% /md %}}</dd>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the Subnet name.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="network_security_group_python">
+<a href="#network_security_group_python" style="color: inherit; text-decoration: inherit;">network_<wbr>security_<wbr>group</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#nsgreferenceresponse">Nsg<wbr>Reference<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Defines reference to NSG.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 

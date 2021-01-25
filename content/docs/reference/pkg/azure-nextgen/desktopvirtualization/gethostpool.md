@@ -310,15 +310,6 @@ The following output properties are available:
     <dd>{{% md %}}Path to Azure KeyVault storing the secret used for communication to ADFS.{{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="ssocontext_csharp">
-<a href="#ssocontext_csharp" style="color: inherit; text-decoration: inherit;">Sso<wbr>Context</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Path to keyvault containing ssoContext secret.{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
         <span id="ssosecrettype_csharp">
 <a href="#ssosecrettype_csharp" style="color: inherit; text-decoration: inherit;">Sso<wbr>Secret<wbr>Type</a>
 </span>
@@ -530,15 +521,6 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to Azure KeyVault storing the secret used for communication to ADFS.{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="ssocontext_go">
-<a href="#ssocontext_go" style="color: inherit; text-decoration: inherit;">Sso<wbr>Context</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Path to keyvault containing ssoContext secret.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="ssosecrettype_go">
@@ -754,15 +736,6 @@ The following output properties are available:
     <dd>{{% md %}}Path to Azure KeyVault storing the secret used for communication to ADFS.{{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="ssocontext_nodejs">
-<a href="#ssocontext_nodejs" style="color: inherit; text-decoration: inherit;">sso<wbr>Context</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Path to keyvault containing ssoContext secret.{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
         <span id="ssosecrettype_nodejs">
 <a href="#ssosecrettype_nodejs" style="color: inherit; text-decoration: inherit;">sso<wbr>Secret<wbr>Type</a>
 </span>
@@ -974,15 +947,6 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Path to Azure KeyVault storing the secret used for communication to ADFS.{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="sso_context_python">
-<a href="#sso_context_python" style="color: inherit; text-decoration: inherit;">sso_<wbr>context</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Path to keyvault containing ssoContext secret.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="sso_secret_type_python">

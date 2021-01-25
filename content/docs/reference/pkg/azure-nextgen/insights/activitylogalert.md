@@ -1535,7 +1535,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:insights/latest:ActivityLogAlert SampleActivityLogAlert /subscriptions/187f412d-1758-44d9-b052-169e2564721d/resourceGroups/Default-NotificationRules/providers/microsoft.insights/activityLogAlerts/SampleActivityLogAlert 
+$ pulumi import azure-nextgen:insights/latest:ActivityLogAlert SampleActivityLogAlert /subscriptions/187f412d-1758-44d9-b052-169e2564721d/resourceGroups/Default-ActivityLogAlerts/providers/microsoft.insights/activityLogAlerts/SampleActivityLogAlert 
 ```
 
 

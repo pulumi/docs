@@ -12,6 +12,13 @@ meta_desc: "Documentation for the azure-nextgen.compute.VirtualMachineExtension 
 
 Describes a Virtual Machine Extension.
 Latest API Version: 2020-06-01.
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:compute/latest:VirtualMachineExtension myresource1 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/virtualMachines/{vmName}/extensions/{vmExtensionName} 
+```
 
 
 

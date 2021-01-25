@@ -323,7 +323,7 @@ The following output properties are available:
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefileshareprotecteditemresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Outputs.<wbr>Azure<wbr>Fileshare<wbr>Protected<wbr>Item<wbr>Response</a> | <a href="#azureiaasvmprotecteditemresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Outputs.<wbr>Azure<wbr>Iaa<wbr>SVMProtected<wbr>Item<wbr>Response</a> | <a href="#azuresqlprotecteditemresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Outputs.<wbr>Azure<wbr>Sql<wbr>Protected<wbr>Item<wbr>Response</a> | <a href="#azurevmworkloadprotecteditemresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Outputs.<wbr>Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Response</a> | <a href="#dpmprotecteditemresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Outputs.<wbr>DPMProtected<wbr>Item<wbr>Response</a> | <a href="#genericprotecteditemresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Outputs.<wbr>Generic<wbr>Protected<wbr>Item<wbr>Response</a> | <a href="#mabfilefolderprotecteditemresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Outputs.<wbr>Mab<wbr>File<wbr>Folder<wbr>Protected<wbr>Item<wbr>Response</a></span>
+        <span class="property-type"><a href="#azurefileshareprotecteditemresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Outputs.<wbr>Azure<wbr>Fileshare<wbr>Protected<wbr>Item<wbr>Response</a> | <a href="#azureiaasclassiccomputevmprotecteditemresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Outputs.<wbr>Azure<wbr>Iaa<wbr>SClassic<wbr>Compute<wbr>VMProtected<wbr>Item<wbr>Response</a> | <a href="#azureiaascomputevmprotecteditemresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Outputs.<wbr>Azure<wbr>Iaa<wbr>SCompute<wbr>VMProtected<wbr>Item<wbr>Response</a> | <a href="#azureiaasvmprotecteditemresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Outputs.<wbr>Azure<wbr>Iaa<wbr>SVMProtected<wbr>Item<wbr>Response</a> | <a href="#azuresqlprotecteditemresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Outputs.<wbr>Azure<wbr>Sql<wbr>Protected<wbr>Item<wbr>Response</a> | <a href="#azurevmworkloadprotecteditemresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Outputs.<wbr>Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Response</a> | <a href="#azurevmworkloadsapasedatabaseprotecteditemresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Outputs.<wbr>Azure<wbr>Vm<wbr>Workload<wbr>SAPAse<wbr>Database<wbr>Protected<wbr>Item<wbr>Response</a> | <a href="#azurevmworkloadsaphanadatabaseprotecteditemresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Outputs.<wbr>Azure<wbr>Vm<wbr>Workload<wbr>SAPHana<wbr>Database<wbr>Protected<wbr>Item<wbr>Response</a> | <a href="#azurevmworkloadsqldatabaseprotecteditemresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Outputs.<wbr>Azure<wbr>Vm<wbr>Workload<wbr>SQLDatabase<wbr>Protected<wbr>Item<wbr>Response</a> | <a href="#dpmprotecteditemresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Outputs.<wbr>DPMProtected<wbr>Item<wbr>Response</a> | <a href="#genericprotecteditemresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Outputs.<wbr>Generic<wbr>Protected<wbr>Item<wbr>Response</a> | <a href="#mabfilefolderprotecteditemresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Outputs.<wbr>Mab<wbr>File<wbr>Folder<wbr>Protected<wbr>Item<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}ProtectedItemResource properties{{% /md %}}</dd>
     <dt class="property-"
@@ -392,7 +392,7 @@ The following output properties are available:
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefileshareprotecteditemresponse">Azure<wbr>Fileshare<wbr>Protected<wbr>Item<wbr>Response</a> | <a href="#azureiaasvmprotecteditemresponse">Azure<wbr>Iaa<wbr>SVMProtected<wbr>Item<wbr>Response</a> | <a href="#azuresqlprotecteditemresponse">Azure<wbr>Sql<wbr>Protected<wbr>Item<wbr>Response</a> | <a href="#azurevmworkloadprotecteditemresponse">Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Response</a> | <a href="#dpmprotecteditemresponse">DPMProtected<wbr>Item<wbr>Response</a> | <a href="#genericprotecteditemresponse">Generic<wbr>Protected<wbr>Item<wbr>Response</a> | <a href="#mabfilefolderprotecteditemresponse">Mab<wbr>File<wbr>Folder<wbr>Protected<wbr>Item<wbr>Response</a></span>
+        <span class="property-type"><a href="#azurefileshareprotecteditemresponse">Azure<wbr>Fileshare<wbr>Protected<wbr>Item<wbr>Response</a> | <a href="#azureiaasclassiccomputevmprotecteditemresponse">Azure<wbr>Iaa<wbr>SClassic<wbr>Compute<wbr>VMProtected<wbr>Item<wbr>Response</a> | <a href="#azureiaascomputevmprotecteditemresponse">Azure<wbr>Iaa<wbr>SCompute<wbr>VMProtected<wbr>Item<wbr>Response</a> | <a href="#azureiaasvmprotecteditemresponse">Azure<wbr>Iaa<wbr>SVMProtected<wbr>Item<wbr>Response</a> | <a href="#azuresqlprotecteditemresponse">Azure<wbr>Sql<wbr>Protected<wbr>Item<wbr>Response</a> | <a href="#azurevmworkloadprotecteditemresponse">Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Response</a> | <a href="#azurevmworkloadsapasedatabaseprotecteditemresponse">Azure<wbr>Vm<wbr>Workload<wbr>SAPAse<wbr>Database<wbr>Protected<wbr>Item<wbr>Response</a> | <a href="#azurevmworkloadsaphanadatabaseprotecteditemresponse">Azure<wbr>Vm<wbr>Workload<wbr>SAPHana<wbr>Database<wbr>Protected<wbr>Item<wbr>Response</a> | <a href="#azurevmworkloadsqldatabaseprotecteditemresponse">Azure<wbr>Vm<wbr>Workload<wbr>SQLDatabase<wbr>Protected<wbr>Item<wbr>Response</a> | <a href="#dpmprotecteditemresponse">DPMProtected<wbr>Item<wbr>Response</a> | <a href="#genericprotecteditemresponse">Generic<wbr>Protected<wbr>Item<wbr>Response</a> | <a href="#mabfilefolderprotecteditemresponse">Mab<wbr>File<wbr>Folder<wbr>Protected<wbr>Item<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}ProtectedItemResource properties{{% /md %}}</dd>
     <dt class="property-"
@@ -461,7 +461,7 @@ The following output properties are available:
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefileshareprotecteditemresponse">Azure<wbr>Fileshare<wbr>Protected<wbr>Item<wbr>Response</a> | <a href="#azureiaasvmprotecteditemresponse">Azure<wbr>Iaa<wbr>SVMProtected<wbr>Item<wbr>Response</a> | <a href="#azuresqlprotecteditemresponse">Azure<wbr>Sql<wbr>Protected<wbr>Item<wbr>Response</a> | <a href="#azurevmworkloadprotecteditemresponse">Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Response</a> | <a href="#dpmprotecteditemresponse">DPMProtected<wbr>Item<wbr>Response</a> | <a href="#genericprotecteditemresponse">Generic<wbr>Protected<wbr>Item<wbr>Response</a> | <a href="#mabfilefolderprotecteditemresponse">Mab<wbr>File<wbr>Folder<wbr>Protected<wbr>Item<wbr>Response</a></span>
+        <span class="property-type"><a href="#azurefileshareprotecteditemresponse">Azure<wbr>Fileshare<wbr>Protected<wbr>Item<wbr>Response</a> | <a href="#azureiaasclassiccomputevmprotecteditemresponse">Azure<wbr>Iaa<wbr>SClassic<wbr>Compute<wbr>VMProtected<wbr>Item<wbr>Response</a> | <a href="#azureiaascomputevmprotecteditemresponse">Azure<wbr>Iaa<wbr>SCompute<wbr>VMProtected<wbr>Item<wbr>Response</a> | <a href="#azureiaasvmprotecteditemresponse">Azure<wbr>Iaa<wbr>SVMProtected<wbr>Item<wbr>Response</a> | <a href="#azuresqlprotecteditemresponse">Azure<wbr>Sql<wbr>Protected<wbr>Item<wbr>Response</a> | <a href="#azurevmworkloadprotecteditemresponse">Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Response</a> | <a href="#azurevmworkloadsapasedatabaseprotecteditemresponse">Azure<wbr>Vm<wbr>Workload<wbr>SAPAse<wbr>Database<wbr>Protected<wbr>Item<wbr>Response</a> | <a href="#azurevmworkloadsaphanadatabaseprotecteditemresponse">Azure<wbr>Vm<wbr>Workload<wbr>SAPHana<wbr>Database<wbr>Protected<wbr>Item<wbr>Response</a> | <a href="#azurevmworkloadsqldatabaseprotecteditemresponse">Azure<wbr>Vm<wbr>Workload<wbr>SQLDatabase<wbr>Protected<wbr>Item<wbr>Response</a> | <a href="#dpmprotecteditemresponse">DPMProtected<wbr>Item<wbr>Response</a> | <a href="#genericprotecteditemresponse">Generic<wbr>Protected<wbr>Item<wbr>Response</a> | <a href="#mabfilefolderprotecteditemresponse">Mab<wbr>File<wbr>Folder<wbr>Protected<wbr>Item<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}ProtectedItemResource properties{{% /md %}}</dd>
     <dt class="property-"
@@ -530,7 +530,7 @@ The following output properties are available:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurefileshareprotecteditemresponse">Azure<wbr>Fileshare<wbr>Protected<wbr>Item<wbr>Response</a> | <a href="#azureiaasvmprotecteditemresponse">Azure<wbr>Iaa<wbr>SVMProtected<wbr>Item<wbr>Response</a> | <a href="#azuresqlprotecteditemresponse">Azure<wbr>Sql<wbr>Protected<wbr>Item<wbr>Response</a> | <a href="#azurevmworkloadprotecteditemresponse">Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Response</a> | <a href="#dpmprotecteditemresponse">DPMProtected<wbr>Item<wbr>Response</a> | <a href="#genericprotecteditemresponse">Generic<wbr>Protected<wbr>Item<wbr>Response</a> | <a href="#mabfilefolderprotecteditemresponse">Mab<wbr>File<wbr>Folder<wbr>Protected<wbr>Item<wbr>Response</a></span>
+        <span class="property-type"><a href="#azurefileshareprotecteditemresponse">Azure<wbr>Fileshare<wbr>Protected<wbr>Item<wbr>Response</a> | <a href="#azureiaasclassiccomputevmprotecteditemresponse">Azure<wbr>Iaa<wbr>SClassic<wbr>Compute<wbr>VMProtected<wbr>Item<wbr>Response</a> | <a href="#azureiaascomputevmprotecteditemresponse">Azure<wbr>Iaa<wbr>SCompute<wbr>VMProtected<wbr>Item<wbr>Response</a> | <a href="#azureiaasvmprotecteditemresponse">Azure<wbr>Iaa<wbr>SVMProtected<wbr>Item<wbr>Response</a> | <a href="#azuresqlprotecteditemresponse">Azure<wbr>Sql<wbr>Protected<wbr>Item<wbr>Response</a> | <a href="#azurevmworkloadprotecteditemresponse">Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Response</a> | <a href="#azurevmworkloadsapasedatabaseprotecteditemresponse">Azure<wbr>Vm<wbr>Workload<wbr>SAPAse<wbr>Database<wbr>Protected<wbr>Item<wbr>Response</a> | <a href="#azurevmworkloadsaphanadatabaseprotecteditemresponse">Azure<wbr>Vm<wbr>Workload<wbr>SAPHana<wbr>Database<wbr>Protected<wbr>Item<wbr>Response</a> | <a href="#azurevmworkloadsqldatabaseprotecteditemresponse">Azure<wbr>Vm<wbr>Workload<wbr>SQLDatabase<wbr>Protected<wbr>Item<wbr>Response</a> | <a href="#dpmprotecteditemresponse">DPMProtected<wbr>Item<wbr>Response</a> | <a href="#genericprotecteditemresponse">Generic<wbr>Protected<wbr>Item<wbr>Response</a> | <a href="#mabfilefolderprotecteditemresponse">Mab<wbr>File<wbr>Folder<wbr>Protected<wbr>Item<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}ProtectedItemResource properties{{% /md %}}</dd>
     <dt class="property-"
@@ -1528,6 +1528,1868 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workload_type_python">
+<a href="#workload_type_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="azureiaasclassiccomputevmprotecteditemresponse">Azure<wbr>Iaa<wbr>SClassic<wbr>Compute<wbr>VMProtected<wbr>Item<wbr>Response</h4>
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backupmanagementtype_csharp">
+<a href="#backupmanagementtype_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Management<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backupsetname_csharp">
+<a href="#backupsetname_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Set<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="containername_csharp">
+<a href="#containername_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Unique name of container{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="createmode_csharp">
+<a href="#createmode_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deferreddeletetimeinutc_csharp">
+<a href="#deferreddeletetimeinutc_csharp" style="color: inherit; text-decoration: inherit;">Deferred<wbr>Delete<wbr>Time<wbr>In<wbr>UTC</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deferreddeletetimeremaining_csharp">
+<a href="#deferreddeletetimeremaining_csharp" style="color: inherit; text-decoration: inherit;">Deferred<wbr>Delete<wbr>Time<wbr>Remaining</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="extendedinfo_csharp">
+<a href="#extendedinfo_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#azureiaasvmprotecteditemextendedinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Iaa<wbr>SVMProtected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="extendedproperties_csharp">
+<a href="#extendedproperties_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#extendedpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Extended<wbr>Properties<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Extended Properties for Azure IaasVM Backup.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="friendlyname_csharp">
+<a href="#friendlyname_csharp" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Friendly name of the VM represented by this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="healthdetails_csharp">
+<a href="#healthdetails_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#azureiaasvmhealthdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Iaa<wbr>SVMHealth<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Health details on this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="healthstatus_csharp">
+<a href="#healthstatus_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Health status of protected item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="isdeferreddeletescheduleupcoming_csharp">
+<a href="#isdeferreddeletescheduleupcoming_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Deferred<wbr>Delete<wbr>Schedule<wbr>Upcoming</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="isrehydrate_csharp">
+<a href="#isrehydrate_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Rehydrate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="isscheduledfordeferreddelete_csharp">
+<a href="#isscheduledfordeferreddelete_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Scheduled<wbr>For<wbr>Deferred<wbr>Delete</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kpishealths_csharp">
+<a href="#kpishealths_csharp" style="color: inherit; text-decoration: inherit;">Kpis<wbr>Healths</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>KPIResource<wbr>Health<wbr>Details<wbr>Response<wbr>Args&gt;</span>
+    </dt>
+    <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastbackupstatus_csharp">
+<a href="#lastbackupstatus_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Backup<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Last backup operation status.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastbackuptime_csharp">
+<a href="#lastbackuptime_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Backup<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Timestamp of the last backup operation on this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastrecoverypoint_csharp">
+<a href="#lastrecoverypoint_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Recovery<wbr>Point</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="policyid_csharp">
+<a href="#policyid_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protecteditemdataid_csharp">
+<a href="#protecteditemdataid_csharp" style="color: inherit; text-decoration: inherit;">Protected<wbr>Item<wbr>Data<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Data ID of the protected item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protectionstate_csharp">
+<a href="#protectionstate_csharp" style="color: inherit; text-decoration: inherit;">Protection<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protectionstatus_csharp">
+<a href="#protectionstatus_csharp" style="color: inherit; text-decoration: inherit;">Protection<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Backup status of this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sourceresourceid_csharp">
+<a href="#sourceresourceid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="virtualmachineid_csharp">
+<a href="#virtualmachineid_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Fully qualified ARM ID of the virtual machine represented by this item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workloadtype_csharp">
+<a href="#workloadtype_csharp" style="color: inherit; text-decoration: inherit;">Workload<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backupmanagementtype_go">
+<a href="#backupmanagementtype_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Management<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backupsetname_go">
+<a href="#backupsetname_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Set<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="containername_go">
+<a href="#containername_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Unique name of container{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="createmode_go">
+<a href="#createmode_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deferreddeletetimeinutc_go">
+<a href="#deferreddeletetimeinutc_go" style="color: inherit; text-decoration: inherit;">Deferred<wbr>Delete<wbr>Time<wbr>In<wbr>UTC</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deferreddeletetimeremaining_go">
+<a href="#deferreddeletetimeremaining_go" style="color: inherit; text-decoration: inherit;">Deferred<wbr>Delete<wbr>Time<wbr>Remaining</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="extendedinfo_go">
+<a href="#extendedinfo_go" style="color: inherit; text-decoration: inherit;">Extended<wbr>Info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#azureiaasvmprotecteditemextendedinforesponse">Azure<wbr>Iaa<wbr>SVMProtected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="extendedproperties_go">
+<a href="#extendedproperties_go" style="color: inherit; text-decoration: inherit;">Extended<wbr>Properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#extendedpropertiesresponse">Extended<wbr>Properties<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Extended Properties for Azure IaasVM Backup.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="friendlyname_go">
+<a href="#friendlyname_go" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Friendly name of the VM represented by this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="healthdetails_go">
+<a href="#healthdetails_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#azureiaasvmhealthdetailsresponse">[]Azure<wbr>Iaa<wbr>SVMHealth<wbr>Details<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Health details on this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="healthstatus_go">
+<a href="#healthstatus_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Health status of protected item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="isdeferreddeletescheduleupcoming_go">
+<a href="#isdeferreddeletescheduleupcoming_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Deferred<wbr>Delete<wbr>Schedule<wbr>Upcoming</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="isrehydrate_go">
+<a href="#isrehydrate_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Rehydrate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="isscheduledfordeferreddelete_go">
+<a href="#isscheduledfordeferreddelete_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Scheduled<wbr>For<wbr>Deferred<wbr>Delete</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kpishealths_go">
+<a href="#kpishealths_go" style="color: inherit; text-decoration: inherit;">Kpis<wbr>Healths</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]KPIResource<wbr>Health<wbr>Details<wbr>Response</span>
+    </dt>
+    <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastbackupstatus_go">
+<a href="#lastbackupstatus_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Backup<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Last backup operation status.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastbackuptime_go">
+<a href="#lastbackuptime_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Backup<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Timestamp of the last backup operation on this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastrecoverypoint_go">
+<a href="#lastrecoverypoint_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Recovery<wbr>Point</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="policyid_go">
+<a href="#policyid_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protecteditemdataid_go">
+<a href="#protecteditemdataid_go" style="color: inherit; text-decoration: inherit;">Protected<wbr>Item<wbr>Data<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Data ID of the protected item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protectionstate_go">
+<a href="#protectionstate_go" style="color: inherit; text-decoration: inherit;">Protection<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protectionstatus_go">
+<a href="#protectionstatus_go" style="color: inherit; text-decoration: inherit;">Protection<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Backup status of this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sourceresourceid_go">
+<a href="#sourceresourceid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="virtualmachineid_go">
+<a href="#virtualmachineid_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Fully qualified ARM ID of the virtual machine represented by this item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workloadtype_go">
+<a href="#workloadtype_go" style="color: inherit; text-decoration: inherit;">Workload<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backupmanagementtype_nodejs">
+<a href="#backupmanagementtype_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backupsetname_nodejs">
+<a href="#backupsetname_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Set<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="containername_nodejs">
+<a href="#containername_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Unique name of container{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="createmode_nodejs">
+<a href="#createmode_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deferreddeletetimeinutc_nodejs">
+<a href="#deferreddeletetimeinutc_nodejs" style="color: inherit; text-decoration: inherit;">deferred<wbr>Delete<wbr>Time<wbr>In<wbr>UTC</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deferreddeletetimeremaining_nodejs">
+<a href="#deferreddeletetimeremaining_nodejs" style="color: inherit; text-decoration: inherit;">deferred<wbr>Delete<wbr>Time<wbr>Remaining</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="extendedinfo_nodejs">
+<a href="#extendedinfo_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#azureiaasvmprotecteditemextendedinforesponse">Azure<wbr>Iaa<wbr>SVMProtected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="extendedproperties_nodejs">
+<a href="#extendedproperties_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#extendedpropertiesresponse">Extended<wbr>Properties<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Extended Properties for Azure IaasVM Backup.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="friendlyname_nodejs">
+<a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Friendly name of the VM represented by this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="healthdetails_nodejs">
+<a href="#healthdetails_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#azureiaasvmhealthdetailsresponse">Azure<wbr>Iaa<wbr>SVMHealth<wbr>Details<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}Health details on this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="healthstatus_nodejs">
+<a href="#healthstatus_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Health status of protected item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="isdeferreddeletescheduleupcoming_nodejs">
+<a href="#isdeferreddeletescheduleupcoming_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Deferred<wbr>Delete<wbr>Schedule<wbr>Upcoming</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="isrehydrate_nodejs">
+<a href="#isrehydrate_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Rehydrate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="isscheduledfordeferreddelete_nodejs">
+<a href="#isscheduledfordeferreddelete_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Scheduled<wbr>For<wbr>Deferred<wbr>Delete</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kpishealths_nodejs">
+<a href="#kpishealths_nodejs" style="color: inherit; text-decoration: inherit;">kpis<wbr>Healths</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: KPIResource<wbr>Health<wbr>Details<wbr>Response}</span>
+    </dt>
+    <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastbackupstatus_nodejs">
+<a href="#lastbackupstatus_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Backup<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Last backup operation status.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastbackuptime_nodejs">
+<a href="#lastbackuptime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Backup<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Timestamp of the last backup operation on this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastrecoverypoint_nodejs">
+<a href="#lastrecoverypoint_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Recovery<wbr>Point</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="policyid_nodejs">
+<a href="#policyid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protecteditemdataid_nodejs">
+<a href="#protecteditemdataid_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Item<wbr>Data<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Data ID of the protected item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protectionstate_nodejs">
+<a href="#protectionstate_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protectionstatus_nodejs">
+<a href="#protectionstatus_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Backup status of this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sourceresourceid_nodejs">
+<a href="#sourceresourceid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="virtualmachineid_nodejs">
+<a href="#virtualmachineid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Fully qualified ARM ID of the virtual machine represented by this item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workloadtype_nodejs">
+<a href="#workloadtype_nodejs" style="color: inherit; text-decoration: inherit;">workload<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backup_management_type_python">
+<a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backup_set_name_python">
+<a href="#backup_set_name_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>set_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="container_name_python">
+<a href="#container_name_python" style="color: inherit; text-decoration: inherit;">container_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Unique name of container{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="create_mode_python">
+<a href="#create_mode_python" style="color: inherit; text-decoration: inherit;">create_<wbr>mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deferred_delete_time_in_utc_python">
+<a href="#deferred_delete_time_in_utc_python" style="color: inherit; text-decoration: inherit;">deferred_<wbr>delete_<wbr>time_<wbr>in_<wbr>utc</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deferred_delete_time_remaining_python">
+<a href="#deferred_delete_time_remaining_python" style="color: inherit; text-decoration: inherit;">deferred_<wbr>delete_<wbr>time_<wbr>remaining</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="extended_info_python">
+<a href="#extended_info_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#azureiaasvmprotecteditemextendedinforesponse">Azure<wbr>Iaa<wbr>SVMProtected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="extended_properties_python">
+<a href="#extended_properties_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#extendedpropertiesresponse">Extended<wbr>Properties<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Extended Properties for Azure IaasVM Backup.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="friendly_name_python">
+<a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Friendly name of the VM represented by this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="health_details_python">
+<a href="#health_details_python" style="color: inherit; text-decoration: inherit;">health_<wbr>details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#azureiaasvmhealthdetailsresponse">Sequence[Azure<wbr>Iaa<wbr>SVMHealth<wbr>Details<wbr>Response<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Health details on this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="health_status_python">
+<a href="#health_status_python" style="color: inherit; text-decoration: inherit;">health_<wbr>status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Health status of protected item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="is_deferred_delete_schedule_upcoming_python">
+<a href="#is_deferred_delete_schedule_upcoming_python" style="color: inherit; text-decoration: inherit;">is_<wbr>deferred_<wbr>delete_<wbr>schedule_<wbr>upcoming</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="is_rehydrate_python">
+<a href="#is_rehydrate_python" style="color: inherit; text-decoration: inherit;">is_<wbr>rehydrate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="is_scheduled_for_deferred_delete_python">
+<a href="#is_scheduled_for_deferred_delete_python" style="color: inherit; text-decoration: inherit;">is_<wbr>scheduled_<wbr>for_<wbr>deferred_<wbr>delete</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kpis_healths_python">
+<a href="#kpis_healths_python" style="color: inherit; text-decoration: inherit;">kpis_<wbr>healths</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, KPIResource<wbr>Health<wbr>Details<wbr>Response<wbr>Args]</span>
+    </dt>
+    <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="last_backup_status_python">
+<a href="#last_backup_status_python" style="color: inherit; text-decoration: inherit;">last_<wbr>backup_<wbr>status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Last backup operation status.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="last_backup_time_python">
+<a href="#last_backup_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>backup_<wbr>time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Timestamp of the last backup operation on this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="last_recovery_point_python">
+<a href="#last_recovery_point_python" style="color: inherit; text-decoration: inherit;">last_<wbr>recovery_<wbr>point</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="policy_id_python">
+<a href="#policy_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protected_item_data_id_python">
+<a href="#protected_item_data_id_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>item_<wbr>data_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Data ID of the protected item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protection_state_python">
+<a href="#protection_state_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>state</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protection_status_python">
+<a href="#protection_status_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Backup status of this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="source_resource_id_python">
+<a href="#source_resource_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>resource_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="virtual_machine_id_python">
+<a href="#virtual_machine_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Fully qualified ARM ID of the virtual machine represented by this item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workload_type_python">
+<a href="#workload_type_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="azureiaascomputevmprotecteditemresponse">Azure<wbr>Iaa<wbr>SCompute<wbr>VMProtected<wbr>Item<wbr>Response</h4>
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backupmanagementtype_csharp">
+<a href="#backupmanagementtype_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Management<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backupsetname_csharp">
+<a href="#backupsetname_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Set<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="containername_csharp">
+<a href="#containername_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Unique name of container{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="createmode_csharp">
+<a href="#createmode_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deferreddeletetimeinutc_csharp">
+<a href="#deferreddeletetimeinutc_csharp" style="color: inherit; text-decoration: inherit;">Deferred<wbr>Delete<wbr>Time<wbr>In<wbr>UTC</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deferreddeletetimeremaining_csharp">
+<a href="#deferreddeletetimeremaining_csharp" style="color: inherit; text-decoration: inherit;">Deferred<wbr>Delete<wbr>Time<wbr>Remaining</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="extendedinfo_csharp">
+<a href="#extendedinfo_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#azureiaasvmprotecteditemextendedinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Iaa<wbr>SVMProtected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="extendedproperties_csharp">
+<a href="#extendedproperties_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#extendedpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Extended<wbr>Properties<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Extended Properties for Azure IaasVM Backup.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="friendlyname_csharp">
+<a href="#friendlyname_csharp" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Friendly name of the VM represented by this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="healthdetails_csharp">
+<a href="#healthdetails_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#azureiaasvmhealthdetailsresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Iaa<wbr>SVMHealth<wbr>Details<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Health details on this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="healthstatus_csharp">
+<a href="#healthstatus_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Health status of protected item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="isdeferreddeletescheduleupcoming_csharp">
+<a href="#isdeferreddeletescheduleupcoming_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Deferred<wbr>Delete<wbr>Schedule<wbr>Upcoming</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="isrehydrate_csharp">
+<a href="#isrehydrate_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Rehydrate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="isscheduledfordeferreddelete_csharp">
+<a href="#isscheduledfordeferreddelete_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Scheduled<wbr>For<wbr>Deferred<wbr>Delete</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kpishealths_csharp">
+<a href="#kpishealths_csharp" style="color: inherit; text-decoration: inherit;">Kpis<wbr>Healths</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>KPIResource<wbr>Health<wbr>Details<wbr>Response<wbr>Args&gt;</span>
+    </dt>
+    <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastbackupstatus_csharp">
+<a href="#lastbackupstatus_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Backup<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Last backup operation status.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastbackuptime_csharp">
+<a href="#lastbackuptime_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Backup<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Timestamp of the last backup operation on this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastrecoverypoint_csharp">
+<a href="#lastrecoverypoint_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Recovery<wbr>Point</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="policyid_csharp">
+<a href="#policyid_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protecteditemdataid_csharp">
+<a href="#protecteditemdataid_csharp" style="color: inherit; text-decoration: inherit;">Protected<wbr>Item<wbr>Data<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Data ID of the protected item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protectionstate_csharp">
+<a href="#protectionstate_csharp" style="color: inherit; text-decoration: inherit;">Protection<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protectionstatus_csharp">
+<a href="#protectionstatus_csharp" style="color: inherit; text-decoration: inherit;">Protection<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Backup status of this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sourceresourceid_csharp">
+<a href="#sourceresourceid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="virtualmachineid_csharp">
+<a href="#virtualmachineid_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Fully qualified ARM ID of the virtual machine represented by this item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workloadtype_csharp">
+<a href="#workloadtype_csharp" style="color: inherit; text-decoration: inherit;">Workload<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backupmanagementtype_go">
+<a href="#backupmanagementtype_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Management<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backupsetname_go">
+<a href="#backupsetname_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Set<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="containername_go">
+<a href="#containername_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Unique name of container{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="createmode_go">
+<a href="#createmode_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deferreddeletetimeinutc_go">
+<a href="#deferreddeletetimeinutc_go" style="color: inherit; text-decoration: inherit;">Deferred<wbr>Delete<wbr>Time<wbr>In<wbr>UTC</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deferreddeletetimeremaining_go">
+<a href="#deferreddeletetimeremaining_go" style="color: inherit; text-decoration: inherit;">Deferred<wbr>Delete<wbr>Time<wbr>Remaining</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="extendedinfo_go">
+<a href="#extendedinfo_go" style="color: inherit; text-decoration: inherit;">Extended<wbr>Info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#azureiaasvmprotecteditemextendedinforesponse">Azure<wbr>Iaa<wbr>SVMProtected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="extendedproperties_go">
+<a href="#extendedproperties_go" style="color: inherit; text-decoration: inherit;">Extended<wbr>Properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#extendedpropertiesresponse">Extended<wbr>Properties<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Extended Properties for Azure IaasVM Backup.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="friendlyname_go">
+<a href="#friendlyname_go" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Friendly name of the VM represented by this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="healthdetails_go">
+<a href="#healthdetails_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#azureiaasvmhealthdetailsresponse">[]Azure<wbr>Iaa<wbr>SVMHealth<wbr>Details<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Health details on this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="healthstatus_go">
+<a href="#healthstatus_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Health status of protected item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="isdeferreddeletescheduleupcoming_go">
+<a href="#isdeferreddeletescheduleupcoming_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Deferred<wbr>Delete<wbr>Schedule<wbr>Upcoming</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="isrehydrate_go">
+<a href="#isrehydrate_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Rehydrate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="isscheduledfordeferreddelete_go">
+<a href="#isscheduledfordeferreddelete_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Scheduled<wbr>For<wbr>Deferred<wbr>Delete</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kpishealths_go">
+<a href="#kpishealths_go" style="color: inherit; text-decoration: inherit;">Kpis<wbr>Healths</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]KPIResource<wbr>Health<wbr>Details<wbr>Response</span>
+    </dt>
+    <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastbackupstatus_go">
+<a href="#lastbackupstatus_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Backup<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Last backup operation status.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastbackuptime_go">
+<a href="#lastbackuptime_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Backup<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Timestamp of the last backup operation on this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastrecoverypoint_go">
+<a href="#lastrecoverypoint_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Recovery<wbr>Point</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="policyid_go">
+<a href="#policyid_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protecteditemdataid_go">
+<a href="#protecteditemdataid_go" style="color: inherit; text-decoration: inherit;">Protected<wbr>Item<wbr>Data<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Data ID of the protected item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protectionstate_go">
+<a href="#protectionstate_go" style="color: inherit; text-decoration: inherit;">Protection<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protectionstatus_go">
+<a href="#protectionstatus_go" style="color: inherit; text-decoration: inherit;">Protection<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Backup status of this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sourceresourceid_go">
+<a href="#sourceresourceid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="virtualmachineid_go">
+<a href="#virtualmachineid_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Fully qualified ARM ID of the virtual machine represented by this item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workloadtype_go">
+<a href="#workloadtype_go" style="color: inherit; text-decoration: inherit;">Workload<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backupmanagementtype_nodejs">
+<a href="#backupmanagementtype_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backupsetname_nodejs">
+<a href="#backupsetname_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Set<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="containername_nodejs">
+<a href="#containername_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Unique name of container{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="createmode_nodejs">
+<a href="#createmode_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deferreddeletetimeinutc_nodejs">
+<a href="#deferreddeletetimeinutc_nodejs" style="color: inherit; text-decoration: inherit;">deferred<wbr>Delete<wbr>Time<wbr>In<wbr>UTC</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deferreddeletetimeremaining_nodejs">
+<a href="#deferreddeletetimeremaining_nodejs" style="color: inherit; text-decoration: inherit;">deferred<wbr>Delete<wbr>Time<wbr>Remaining</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="extendedinfo_nodejs">
+<a href="#extendedinfo_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#azureiaasvmprotecteditemextendedinforesponse">Azure<wbr>Iaa<wbr>SVMProtected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="extendedproperties_nodejs">
+<a href="#extendedproperties_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#extendedpropertiesresponse">Extended<wbr>Properties<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Extended Properties for Azure IaasVM Backup.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="friendlyname_nodejs">
+<a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Friendly name of the VM represented by this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="healthdetails_nodejs">
+<a href="#healthdetails_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#azureiaasvmhealthdetailsresponse">Azure<wbr>Iaa<wbr>SVMHealth<wbr>Details<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}Health details on this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="healthstatus_nodejs">
+<a href="#healthstatus_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Health status of protected item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="isdeferreddeletescheduleupcoming_nodejs">
+<a href="#isdeferreddeletescheduleupcoming_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Deferred<wbr>Delete<wbr>Schedule<wbr>Upcoming</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="isrehydrate_nodejs">
+<a href="#isrehydrate_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Rehydrate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="isscheduledfordeferreddelete_nodejs">
+<a href="#isscheduledfordeferreddelete_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Scheduled<wbr>For<wbr>Deferred<wbr>Delete</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kpishealths_nodejs">
+<a href="#kpishealths_nodejs" style="color: inherit; text-decoration: inherit;">kpis<wbr>Healths</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: KPIResource<wbr>Health<wbr>Details<wbr>Response}</span>
+    </dt>
+    <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastbackupstatus_nodejs">
+<a href="#lastbackupstatus_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Backup<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Last backup operation status.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastbackuptime_nodejs">
+<a href="#lastbackuptime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Backup<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Timestamp of the last backup operation on this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastrecoverypoint_nodejs">
+<a href="#lastrecoverypoint_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Recovery<wbr>Point</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="policyid_nodejs">
+<a href="#policyid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protecteditemdataid_nodejs">
+<a href="#protecteditemdataid_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Item<wbr>Data<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Data ID of the protected item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protectionstate_nodejs">
+<a href="#protectionstate_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protectionstatus_nodejs">
+<a href="#protectionstatus_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Backup status of this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sourceresourceid_nodejs">
+<a href="#sourceresourceid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="virtualmachineid_nodejs">
+<a href="#virtualmachineid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Fully qualified ARM ID of the virtual machine represented by this item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workloadtype_nodejs">
+<a href="#workloadtype_nodejs" style="color: inherit; text-decoration: inherit;">workload<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backup_management_type_python">
+<a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backup_set_name_python">
+<a href="#backup_set_name_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>set_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="container_name_python">
+<a href="#container_name_python" style="color: inherit; text-decoration: inherit;">container_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Unique name of container{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="create_mode_python">
+<a href="#create_mode_python" style="color: inherit; text-decoration: inherit;">create_<wbr>mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deferred_delete_time_in_utc_python">
+<a href="#deferred_delete_time_in_utc_python" style="color: inherit; text-decoration: inherit;">deferred_<wbr>delete_<wbr>time_<wbr>in_<wbr>utc</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deferred_delete_time_remaining_python">
+<a href="#deferred_delete_time_remaining_python" style="color: inherit; text-decoration: inherit;">deferred_<wbr>delete_<wbr>time_<wbr>remaining</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="extended_info_python">
+<a href="#extended_info_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#azureiaasvmprotecteditemextendedinforesponse">Azure<wbr>Iaa<wbr>SVMProtected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="extended_properties_python">
+<a href="#extended_properties_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#extendedpropertiesresponse">Extended<wbr>Properties<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Extended Properties for Azure IaasVM Backup.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="friendly_name_python">
+<a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Friendly name of the VM represented by this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="health_details_python">
+<a href="#health_details_python" style="color: inherit; text-decoration: inherit;">health_<wbr>details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#azureiaasvmhealthdetailsresponse">Sequence[Azure<wbr>Iaa<wbr>SVMHealth<wbr>Details<wbr>Response<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Health details on this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="health_status_python">
+<a href="#health_status_python" style="color: inherit; text-decoration: inherit;">health_<wbr>status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Health status of protected item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="is_deferred_delete_schedule_upcoming_python">
+<a href="#is_deferred_delete_schedule_upcoming_python" style="color: inherit; text-decoration: inherit;">is_<wbr>deferred_<wbr>delete_<wbr>schedule_<wbr>upcoming</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="is_rehydrate_python">
+<a href="#is_rehydrate_python" style="color: inherit; text-decoration: inherit;">is_<wbr>rehydrate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="is_scheduled_for_deferred_delete_python">
+<a href="#is_scheduled_for_deferred_delete_python" style="color: inherit; text-decoration: inherit;">is_<wbr>scheduled_<wbr>for_<wbr>deferred_<wbr>delete</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kpis_healths_python">
+<a href="#kpis_healths_python" style="color: inherit; text-decoration: inherit;">kpis_<wbr>healths</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, KPIResource<wbr>Health<wbr>Details<wbr>Response<wbr>Args]</span>
+    </dt>
+    <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="last_backup_status_python">
+<a href="#last_backup_status_python" style="color: inherit; text-decoration: inherit;">last_<wbr>backup_<wbr>status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Last backup operation status.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="last_backup_time_python">
+<a href="#last_backup_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>backup_<wbr>time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Timestamp of the last backup operation on this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="last_recovery_point_python">
+<a href="#last_recovery_point_python" style="color: inherit; text-decoration: inherit;">last_<wbr>recovery_<wbr>point</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="policy_id_python">
+<a href="#policy_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protected_item_data_id_python">
+<a href="#protected_item_data_id_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>item_<wbr>data_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Data ID of the protected item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protection_state_python">
+<a href="#protection_state_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>state</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protection_status_python">
+<a href="#protection_status_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Backup status of this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="source_resource_id_python">
+<a href="#source_resource_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>resource_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="virtual_machine_id_python">
+<a href="#virtual_machine_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Fully qualified ARM ID of the virtual machine represented by this item.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="workload_type_python">
@@ -3671,6 +5533,2907 @@ The following output properties are available:
 {{% /choosable %}}
 
 <h4 id="azurevmworkloadprotecteditemresponse">Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Response</h4>
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backupmanagementtype_csharp">
+<a href="#backupmanagementtype_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Management<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backupsetname_csharp">
+<a href="#backupsetname_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Set<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="containername_csharp">
+<a href="#containername_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Unique name of container{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="createmode_csharp">
+<a href="#createmode_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deferreddeletetimeinutc_csharp">
+<a href="#deferreddeletetimeinutc_csharp" style="color: inherit; text-decoration: inherit;">Deferred<wbr>Delete<wbr>Time<wbr>In<wbr>UTC</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deferreddeletetimeremaining_csharp">
+<a href="#deferreddeletetimeremaining_csharp" style="color: inherit; text-decoration: inherit;">Deferred<wbr>Delete<wbr>Time<wbr>Remaining</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="extendedinfo_csharp">
+<a href="#extendedinfo_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#azurevmworkloadprotecteditemextendedinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="friendlyname_csharp">
+<a href="#friendlyname_csharp" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Friendly name of the DB represented by this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="isdeferreddeletescheduleupcoming_csharp">
+<a href="#isdeferreddeletescheduleupcoming_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Deferred<wbr>Delete<wbr>Schedule<wbr>Upcoming</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="isrehydrate_csharp">
+<a href="#isrehydrate_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Rehydrate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="isscheduledfordeferreddelete_csharp">
+<a href="#isscheduledfordeferreddelete_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Scheduled<wbr>For<wbr>Deferred<wbr>Delete</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kpishealths_csharp">
+<a href="#kpishealths_csharp" style="color: inherit; text-decoration: inherit;">Kpis<wbr>Healths</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>KPIResource<wbr>Health<wbr>Details<wbr>Response<wbr>Args&gt;</span>
+    </dt>
+    <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastbackuperrordetail_csharp">
+<a href="#lastbackuperrordetail_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Backup<wbr>Error<wbr>Detail</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#errordetailresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Error<wbr>Detail<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Error details in last backup{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastbackupstatus_csharp">
+<a href="#lastbackupstatus_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Backup<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Last backup operation status. Possible values: Healthy, Unhealthy.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastbackuptime_csharp">
+<a href="#lastbackuptime_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Backup<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Timestamp of the last backup operation on this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastrecoverypoint_csharp">
+<a href="#lastrecoverypoint_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Recovery<wbr>Point</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="parentname_csharp">
+<a href="#parentname_csharp" style="color: inherit; text-decoration: inherit;">Parent<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Parent name of the DB such as Instance or Availability Group.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="parenttype_csharp">
+<a href="#parenttype_csharp" style="color: inherit; text-decoration: inherit;">Parent<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Parent type of protected item, example: for a DB, standalone server or distributed{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="policyid_csharp">
+<a href="#policyid_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protecteditemdatasourceid_csharp">
+<a href="#protecteditemdatasourceid_csharp" style="color: inherit; text-decoration: inherit;">Protected<wbr>Item<wbr>Data<wbr>Source<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Data ID of the protected item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protecteditemhealthstatus_csharp">
+<a href="#protecteditemhealthstatus_csharp" style="color: inherit; text-decoration: inherit;">Protected<wbr>Item<wbr>Health<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Health status of the backup item, evaluated based on last heartbeat received{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protectionstate_csharp">
+<a href="#protectionstate_csharp" style="color: inherit; text-decoration: inherit;">Protection<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protectionstatus_csharp">
+<a href="#protectionstatus_csharp" style="color: inherit; text-decoration: inherit;">Protection<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Backup status of this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="servername_csharp">
+<a href="#servername_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Host/Cluster Name for instance or AG{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sourceresourceid_csharp">
+<a href="#sourceresourceid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workloadtype_csharp">
+<a href="#workloadtype_csharp" style="color: inherit; text-decoration: inherit;">Workload<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backupmanagementtype_go">
+<a href="#backupmanagementtype_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Management<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backupsetname_go">
+<a href="#backupsetname_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Set<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="containername_go">
+<a href="#containername_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Unique name of container{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="createmode_go">
+<a href="#createmode_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deferreddeletetimeinutc_go">
+<a href="#deferreddeletetimeinutc_go" style="color: inherit; text-decoration: inherit;">Deferred<wbr>Delete<wbr>Time<wbr>In<wbr>UTC</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deferreddeletetimeremaining_go">
+<a href="#deferreddeletetimeremaining_go" style="color: inherit; text-decoration: inherit;">Deferred<wbr>Delete<wbr>Time<wbr>Remaining</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="extendedinfo_go">
+<a href="#extendedinfo_go" style="color: inherit; text-decoration: inherit;">Extended<wbr>Info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#azurevmworkloadprotecteditemextendedinforesponse">Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="friendlyname_go">
+<a href="#friendlyname_go" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Friendly name of the DB represented by this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="isdeferreddeletescheduleupcoming_go">
+<a href="#isdeferreddeletescheduleupcoming_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Deferred<wbr>Delete<wbr>Schedule<wbr>Upcoming</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="isrehydrate_go">
+<a href="#isrehydrate_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Rehydrate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="isscheduledfordeferreddelete_go">
+<a href="#isscheduledfordeferreddelete_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Scheduled<wbr>For<wbr>Deferred<wbr>Delete</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kpishealths_go">
+<a href="#kpishealths_go" style="color: inherit; text-decoration: inherit;">Kpis<wbr>Healths</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]KPIResource<wbr>Health<wbr>Details<wbr>Response</span>
+    </dt>
+    <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastbackuperrordetail_go">
+<a href="#lastbackuperrordetail_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Backup<wbr>Error<wbr>Detail</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#errordetailresponse">Error<wbr>Detail<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Error details in last backup{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastbackupstatus_go">
+<a href="#lastbackupstatus_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Backup<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Last backup operation status. Possible values: Healthy, Unhealthy.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastbackuptime_go">
+<a href="#lastbackuptime_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Backup<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Timestamp of the last backup operation on this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastrecoverypoint_go">
+<a href="#lastrecoverypoint_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Recovery<wbr>Point</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="parentname_go">
+<a href="#parentname_go" style="color: inherit; text-decoration: inherit;">Parent<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Parent name of the DB such as Instance or Availability Group.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="parenttype_go">
+<a href="#parenttype_go" style="color: inherit; text-decoration: inherit;">Parent<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Parent type of protected item, example: for a DB, standalone server or distributed{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="policyid_go">
+<a href="#policyid_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protecteditemdatasourceid_go">
+<a href="#protecteditemdatasourceid_go" style="color: inherit; text-decoration: inherit;">Protected<wbr>Item<wbr>Data<wbr>Source<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Data ID of the protected item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protecteditemhealthstatus_go">
+<a href="#protecteditemhealthstatus_go" style="color: inherit; text-decoration: inherit;">Protected<wbr>Item<wbr>Health<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Health status of the backup item, evaluated based on last heartbeat received{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protectionstate_go">
+<a href="#protectionstate_go" style="color: inherit; text-decoration: inherit;">Protection<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protectionstatus_go">
+<a href="#protectionstatus_go" style="color: inherit; text-decoration: inherit;">Protection<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Backup status of this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="servername_go">
+<a href="#servername_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Host/Cluster Name for instance or AG{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sourceresourceid_go">
+<a href="#sourceresourceid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workloadtype_go">
+<a href="#workloadtype_go" style="color: inherit; text-decoration: inherit;">Workload<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backupmanagementtype_nodejs">
+<a href="#backupmanagementtype_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backupsetname_nodejs">
+<a href="#backupsetname_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Set<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="containername_nodejs">
+<a href="#containername_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Unique name of container{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="createmode_nodejs">
+<a href="#createmode_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deferreddeletetimeinutc_nodejs">
+<a href="#deferreddeletetimeinutc_nodejs" style="color: inherit; text-decoration: inherit;">deferred<wbr>Delete<wbr>Time<wbr>In<wbr>UTC</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deferreddeletetimeremaining_nodejs">
+<a href="#deferreddeletetimeremaining_nodejs" style="color: inherit; text-decoration: inherit;">deferred<wbr>Delete<wbr>Time<wbr>Remaining</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="extendedinfo_nodejs">
+<a href="#extendedinfo_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#azurevmworkloadprotecteditemextendedinforesponse">Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="friendlyname_nodejs">
+<a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Friendly name of the DB represented by this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="isdeferreddeletescheduleupcoming_nodejs">
+<a href="#isdeferreddeletescheduleupcoming_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Deferred<wbr>Delete<wbr>Schedule<wbr>Upcoming</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="isrehydrate_nodejs">
+<a href="#isrehydrate_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Rehydrate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="isscheduledfordeferreddelete_nodejs">
+<a href="#isscheduledfordeferreddelete_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Scheduled<wbr>For<wbr>Deferred<wbr>Delete</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kpishealths_nodejs">
+<a href="#kpishealths_nodejs" style="color: inherit; text-decoration: inherit;">kpis<wbr>Healths</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: KPIResource<wbr>Health<wbr>Details<wbr>Response}</span>
+    </dt>
+    <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastbackuperrordetail_nodejs">
+<a href="#lastbackuperrordetail_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Backup<wbr>Error<wbr>Detail</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#errordetailresponse">Error<wbr>Detail<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Error details in last backup{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastbackupstatus_nodejs">
+<a href="#lastbackupstatus_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Backup<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Last backup operation status. Possible values: Healthy, Unhealthy.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastbackuptime_nodejs">
+<a href="#lastbackuptime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Backup<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Timestamp of the last backup operation on this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastrecoverypoint_nodejs">
+<a href="#lastrecoverypoint_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Recovery<wbr>Point</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="parentname_nodejs">
+<a href="#parentname_nodejs" style="color: inherit; text-decoration: inherit;">parent<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Parent name of the DB such as Instance or Availability Group.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="parenttype_nodejs">
+<a href="#parenttype_nodejs" style="color: inherit; text-decoration: inherit;">parent<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Parent type of protected item, example: for a DB, standalone server or distributed{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="policyid_nodejs">
+<a href="#policyid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protecteditemdatasourceid_nodejs">
+<a href="#protecteditemdatasourceid_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Item<wbr>Data<wbr>Source<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Data ID of the protected item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protecteditemhealthstatus_nodejs">
+<a href="#protecteditemhealthstatus_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Item<wbr>Health<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Health status of the backup item, evaluated based on last heartbeat received{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protectionstate_nodejs">
+<a href="#protectionstate_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protectionstatus_nodejs">
+<a href="#protectionstatus_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Backup status of this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="servername_nodejs">
+<a href="#servername_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Host/Cluster Name for instance or AG{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sourceresourceid_nodejs">
+<a href="#sourceresourceid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workloadtype_nodejs">
+<a href="#workloadtype_nodejs" style="color: inherit; text-decoration: inherit;">workload<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backup_management_type_python">
+<a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backup_set_name_python">
+<a href="#backup_set_name_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>set_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="container_name_python">
+<a href="#container_name_python" style="color: inherit; text-decoration: inherit;">container_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Unique name of container{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="create_mode_python">
+<a href="#create_mode_python" style="color: inherit; text-decoration: inherit;">create_<wbr>mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deferred_delete_time_in_utc_python">
+<a href="#deferred_delete_time_in_utc_python" style="color: inherit; text-decoration: inherit;">deferred_<wbr>delete_<wbr>time_<wbr>in_<wbr>utc</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deferred_delete_time_remaining_python">
+<a href="#deferred_delete_time_remaining_python" style="color: inherit; text-decoration: inherit;">deferred_<wbr>delete_<wbr>time_<wbr>remaining</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="extended_info_python">
+<a href="#extended_info_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#azurevmworkloadprotecteditemextendedinforesponse">Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="friendly_name_python">
+<a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Friendly name of the DB represented by this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="is_deferred_delete_schedule_upcoming_python">
+<a href="#is_deferred_delete_schedule_upcoming_python" style="color: inherit; text-decoration: inherit;">is_<wbr>deferred_<wbr>delete_<wbr>schedule_<wbr>upcoming</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="is_rehydrate_python">
+<a href="#is_rehydrate_python" style="color: inherit; text-decoration: inherit;">is_<wbr>rehydrate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="is_scheduled_for_deferred_delete_python">
+<a href="#is_scheduled_for_deferred_delete_python" style="color: inherit; text-decoration: inherit;">is_<wbr>scheduled_<wbr>for_<wbr>deferred_<wbr>delete</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kpis_healths_python">
+<a href="#kpis_healths_python" style="color: inherit; text-decoration: inherit;">kpis_<wbr>healths</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, KPIResource<wbr>Health<wbr>Details<wbr>Response<wbr>Args]</span>
+    </dt>
+    <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="last_backup_error_detail_python">
+<a href="#last_backup_error_detail_python" style="color: inherit; text-decoration: inherit;">last_<wbr>backup_<wbr>error_<wbr>detail</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#errordetailresponse">Error<wbr>Detail<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Error details in last backup{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="last_backup_status_python">
+<a href="#last_backup_status_python" style="color: inherit; text-decoration: inherit;">last_<wbr>backup_<wbr>status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Last backup operation status. Possible values: Healthy, Unhealthy.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="last_backup_time_python">
+<a href="#last_backup_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>backup_<wbr>time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Timestamp of the last backup operation on this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="last_recovery_point_python">
+<a href="#last_recovery_point_python" style="color: inherit; text-decoration: inherit;">last_<wbr>recovery_<wbr>point</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="parent_name_python">
+<a href="#parent_name_python" style="color: inherit; text-decoration: inherit;">parent_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Parent name of the DB such as Instance or Availability Group.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="parent_type_python">
+<a href="#parent_type_python" style="color: inherit; text-decoration: inherit;">parent_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Parent type of protected item, example: for a DB, standalone server or distributed{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="policy_id_python">
+<a href="#policy_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protected_item_data_source_id_python">
+<a href="#protected_item_data_source_id_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>item_<wbr>data_<wbr>source_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Data ID of the protected item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protected_item_health_status_python">
+<a href="#protected_item_health_status_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>item_<wbr>health_<wbr>status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Health status of the backup item, evaluated based on last heartbeat received{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protection_state_python">
+<a href="#protection_state_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>state</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protection_status_python">
+<a href="#protection_status_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Backup status of this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="server_name_python">
+<a href="#server_name_python" style="color: inherit; text-decoration: inherit;">server_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Host/Cluster Name for instance or AG{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="source_resource_id_python">
+<a href="#source_resource_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>resource_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workload_type_python">
+<a href="#workload_type_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="azurevmworkloadsapasedatabaseprotecteditemresponse">Azure<wbr>Vm<wbr>Workload<wbr>SAPAse<wbr>Database<wbr>Protected<wbr>Item<wbr>Response</h4>
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backupmanagementtype_csharp">
+<a href="#backupmanagementtype_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Management<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backupsetname_csharp">
+<a href="#backupsetname_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Set<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="containername_csharp">
+<a href="#containername_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Unique name of container{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="createmode_csharp">
+<a href="#createmode_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deferreddeletetimeinutc_csharp">
+<a href="#deferreddeletetimeinutc_csharp" style="color: inherit; text-decoration: inherit;">Deferred<wbr>Delete<wbr>Time<wbr>In<wbr>UTC</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deferreddeletetimeremaining_csharp">
+<a href="#deferreddeletetimeremaining_csharp" style="color: inherit; text-decoration: inherit;">Deferred<wbr>Delete<wbr>Time<wbr>Remaining</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="extendedinfo_csharp">
+<a href="#extendedinfo_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#azurevmworkloadprotecteditemextendedinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="friendlyname_csharp">
+<a href="#friendlyname_csharp" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Friendly name of the DB represented by this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="isdeferreddeletescheduleupcoming_csharp">
+<a href="#isdeferreddeletescheduleupcoming_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Deferred<wbr>Delete<wbr>Schedule<wbr>Upcoming</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="isrehydrate_csharp">
+<a href="#isrehydrate_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Rehydrate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="isscheduledfordeferreddelete_csharp">
+<a href="#isscheduledfordeferreddelete_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Scheduled<wbr>For<wbr>Deferred<wbr>Delete</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kpishealths_csharp">
+<a href="#kpishealths_csharp" style="color: inherit; text-decoration: inherit;">Kpis<wbr>Healths</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>KPIResource<wbr>Health<wbr>Details<wbr>Response<wbr>Args&gt;</span>
+    </dt>
+    <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastbackuperrordetail_csharp">
+<a href="#lastbackuperrordetail_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Backup<wbr>Error<wbr>Detail</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#errordetailresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Error<wbr>Detail<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Error details in last backup{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastbackupstatus_csharp">
+<a href="#lastbackupstatus_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Backup<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Last backup operation status. Possible values: Healthy, Unhealthy.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastbackuptime_csharp">
+<a href="#lastbackuptime_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Backup<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Timestamp of the last backup operation on this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastrecoverypoint_csharp">
+<a href="#lastrecoverypoint_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Recovery<wbr>Point</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="parentname_csharp">
+<a href="#parentname_csharp" style="color: inherit; text-decoration: inherit;">Parent<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Parent name of the DB such as Instance or Availability Group.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="parenttype_csharp">
+<a href="#parenttype_csharp" style="color: inherit; text-decoration: inherit;">Parent<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Parent type of protected item, example: for a DB, standalone server or distributed{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="policyid_csharp">
+<a href="#policyid_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protecteditemdatasourceid_csharp">
+<a href="#protecteditemdatasourceid_csharp" style="color: inherit; text-decoration: inherit;">Protected<wbr>Item<wbr>Data<wbr>Source<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Data ID of the protected item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protecteditemhealthstatus_csharp">
+<a href="#protecteditemhealthstatus_csharp" style="color: inherit; text-decoration: inherit;">Protected<wbr>Item<wbr>Health<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Health status of the backup item, evaluated based on last heartbeat received{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protectionstate_csharp">
+<a href="#protectionstate_csharp" style="color: inherit; text-decoration: inherit;">Protection<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protectionstatus_csharp">
+<a href="#protectionstatus_csharp" style="color: inherit; text-decoration: inherit;">Protection<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Backup status of this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="servername_csharp">
+<a href="#servername_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Host/Cluster Name for instance or AG{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sourceresourceid_csharp">
+<a href="#sourceresourceid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workloadtype_csharp">
+<a href="#workloadtype_csharp" style="color: inherit; text-decoration: inherit;">Workload<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backupmanagementtype_go">
+<a href="#backupmanagementtype_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Management<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backupsetname_go">
+<a href="#backupsetname_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Set<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="containername_go">
+<a href="#containername_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Unique name of container{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="createmode_go">
+<a href="#createmode_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deferreddeletetimeinutc_go">
+<a href="#deferreddeletetimeinutc_go" style="color: inherit; text-decoration: inherit;">Deferred<wbr>Delete<wbr>Time<wbr>In<wbr>UTC</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deferreddeletetimeremaining_go">
+<a href="#deferreddeletetimeremaining_go" style="color: inherit; text-decoration: inherit;">Deferred<wbr>Delete<wbr>Time<wbr>Remaining</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="extendedinfo_go">
+<a href="#extendedinfo_go" style="color: inherit; text-decoration: inherit;">Extended<wbr>Info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#azurevmworkloadprotecteditemextendedinforesponse">Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="friendlyname_go">
+<a href="#friendlyname_go" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Friendly name of the DB represented by this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="isdeferreddeletescheduleupcoming_go">
+<a href="#isdeferreddeletescheduleupcoming_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Deferred<wbr>Delete<wbr>Schedule<wbr>Upcoming</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="isrehydrate_go">
+<a href="#isrehydrate_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Rehydrate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="isscheduledfordeferreddelete_go">
+<a href="#isscheduledfordeferreddelete_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Scheduled<wbr>For<wbr>Deferred<wbr>Delete</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kpishealths_go">
+<a href="#kpishealths_go" style="color: inherit; text-decoration: inherit;">Kpis<wbr>Healths</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]KPIResource<wbr>Health<wbr>Details<wbr>Response</span>
+    </dt>
+    <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastbackuperrordetail_go">
+<a href="#lastbackuperrordetail_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Backup<wbr>Error<wbr>Detail</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#errordetailresponse">Error<wbr>Detail<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Error details in last backup{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastbackupstatus_go">
+<a href="#lastbackupstatus_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Backup<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Last backup operation status. Possible values: Healthy, Unhealthy.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastbackuptime_go">
+<a href="#lastbackuptime_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Backup<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Timestamp of the last backup operation on this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastrecoverypoint_go">
+<a href="#lastrecoverypoint_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Recovery<wbr>Point</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="parentname_go">
+<a href="#parentname_go" style="color: inherit; text-decoration: inherit;">Parent<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Parent name of the DB such as Instance or Availability Group.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="parenttype_go">
+<a href="#parenttype_go" style="color: inherit; text-decoration: inherit;">Parent<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Parent type of protected item, example: for a DB, standalone server or distributed{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="policyid_go">
+<a href="#policyid_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protecteditemdatasourceid_go">
+<a href="#protecteditemdatasourceid_go" style="color: inherit; text-decoration: inherit;">Protected<wbr>Item<wbr>Data<wbr>Source<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Data ID of the protected item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protecteditemhealthstatus_go">
+<a href="#protecteditemhealthstatus_go" style="color: inherit; text-decoration: inherit;">Protected<wbr>Item<wbr>Health<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Health status of the backup item, evaluated based on last heartbeat received{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protectionstate_go">
+<a href="#protectionstate_go" style="color: inherit; text-decoration: inherit;">Protection<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protectionstatus_go">
+<a href="#protectionstatus_go" style="color: inherit; text-decoration: inherit;">Protection<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Backup status of this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="servername_go">
+<a href="#servername_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Host/Cluster Name for instance or AG{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sourceresourceid_go">
+<a href="#sourceresourceid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workloadtype_go">
+<a href="#workloadtype_go" style="color: inherit; text-decoration: inherit;">Workload<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backupmanagementtype_nodejs">
+<a href="#backupmanagementtype_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backupsetname_nodejs">
+<a href="#backupsetname_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Set<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="containername_nodejs">
+<a href="#containername_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Unique name of container{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="createmode_nodejs">
+<a href="#createmode_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deferreddeletetimeinutc_nodejs">
+<a href="#deferreddeletetimeinutc_nodejs" style="color: inherit; text-decoration: inherit;">deferred<wbr>Delete<wbr>Time<wbr>In<wbr>UTC</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deferreddeletetimeremaining_nodejs">
+<a href="#deferreddeletetimeremaining_nodejs" style="color: inherit; text-decoration: inherit;">deferred<wbr>Delete<wbr>Time<wbr>Remaining</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="extendedinfo_nodejs">
+<a href="#extendedinfo_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#azurevmworkloadprotecteditemextendedinforesponse">Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="friendlyname_nodejs">
+<a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Friendly name of the DB represented by this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="isdeferreddeletescheduleupcoming_nodejs">
+<a href="#isdeferreddeletescheduleupcoming_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Deferred<wbr>Delete<wbr>Schedule<wbr>Upcoming</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="isrehydrate_nodejs">
+<a href="#isrehydrate_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Rehydrate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="isscheduledfordeferreddelete_nodejs">
+<a href="#isscheduledfordeferreddelete_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Scheduled<wbr>For<wbr>Deferred<wbr>Delete</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kpishealths_nodejs">
+<a href="#kpishealths_nodejs" style="color: inherit; text-decoration: inherit;">kpis<wbr>Healths</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: KPIResource<wbr>Health<wbr>Details<wbr>Response}</span>
+    </dt>
+    <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastbackuperrordetail_nodejs">
+<a href="#lastbackuperrordetail_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Backup<wbr>Error<wbr>Detail</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#errordetailresponse">Error<wbr>Detail<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Error details in last backup{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastbackupstatus_nodejs">
+<a href="#lastbackupstatus_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Backup<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Last backup operation status. Possible values: Healthy, Unhealthy.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastbackuptime_nodejs">
+<a href="#lastbackuptime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Backup<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Timestamp of the last backup operation on this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastrecoverypoint_nodejs">
+<a href="#lastrecoverypoint_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Recovery<wbr>Point</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="parentname_nodejs">
+<a href="#parentname_nodejs" style="color: inherit; text-decoration: inherit;">parent<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Parent name of the DB such as Instance or Availability Group.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="parenttype_nodejs">
+<a href="#parenttype_nodejs" style="color: inherit; text-decoration: inherit;">parent<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Parent type of protected item, example: for a DB, standalone server or distributed{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="policyid_nodejs">
+<a href="#policyid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protecteditemdatasourceid_nodejs">
+<a href="#protecteditemdatasourceid_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Item<wbr>Data<wbr>Source<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Data ID of the protected item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protecteditemhealthstatus_nodejs">
+<a href="#protecteditemhealthstatus_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Item<wbr>Health<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Health status of the backup item, evaluated based on last heartbeat received{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protectionstate_nodejs">
+<a href="#protectionstate_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protectionstatus_nodejs">
+<a href="#protectionstatus_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Backup status of this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="servername_nodejs">
+<a href="#servername_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Host/Cluster Name for instance or AG{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sourceresourceid_nodejs">
+<a href="#sourceresourceid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workloadtype_nodejs">
+<a href="#workloadtype_nodejs" style="color: inherit; text-decoration: inherit;">workload<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backup_management_type_python">
+<a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backup_set_name_python">
+<a href="#backup_set_name_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>set_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="container_name_python">
+<a href="#container_name_python" style="color: inherit; text-decoration: inherit;">container_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Unique name of container{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="create_mode_python">
+<a href="#create_mode_python" style="color: inherit; text-decoration: inherit;">create_<wbr>mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deferred_delete_time_in_utc_python">
+<a href="#deferred_delete_time_in_utc_python" style="color: inherit; text-decoration: inherit;">deferred_<wbr>delete_<wbr>time_<wbr>in_<wbr>utc</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deferred_delete_time_remaining_python">
+<a href="#deferred_delete_time_remaining_python" style="color: inherit; text-decoration: inherit;">deferred_<wbr>delete_<wbr>time_<wbr>remaining</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="extended_info_python">
+<a href="#extended_info_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#azurevmworkloadprotecteditemextendedinforesponse">Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="friendly_name_python">
+<a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Friendly name of the DB represented by this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="is_deferred_delete_schedule_upcoming_python">
+<a href="#is_deferred_delete_schedule_upcoming_python" style="color: inherit; text-decoration: inherit;">is_<wbr>deferred_<wbr>delete_<wbr>schedule_<wbr>upcoming</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="is_rehydrate_python">
+<a href="#is_rehydrate_python" style="color: inherit; text-decoration: inherit;">is_<wbr>rehydrate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="is_scheduled_for_deferred_delete_python">
+<a href="#is_scheduled_for_deferred_delete_python" style="color: inherit; text-decoration: inherit;">is_<wbr>scheduled_<wbr>for_<wbr>deferred_<wbr>delete</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kpis_healths_python">
+<a href="#kpis_healths_python" style="color: inherit; text-decoration: inherit;">kpis_<wbr>healths</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, KPIResource<wbr>Health<wbr>Details<wbr>Response<wbr>Args]</span>
+    </dt>
+    <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="last_backup_error_detail_python">
+<a href="#last_backup_error_detail_python" style="color: inherit; text-decoration: inherit;">last_<wbr>backup_<wbr>error_<wbr>detail</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#errordetailresponse">Error<wbr>Detail<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Error details in last backup{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="last_backup_status_python">
+<a href="#last_backup_status_python" style="color: inherit; text-decoration: inherit;">last_<wbr>backup_<wbr>status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Last backup operation status. Possible values: Healthy, Unhealthy.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="last_backup_time_python">
+<a href="#last_backup_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>backup_<wbr>time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Timestamp of the last backup operation on this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="last_recovery_point_python">
+<a href="#last_recovery_point_python" style="color: inherit; text-decoration: inherit;">last_<wbr>recovery_<wbr>point</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="parent_name_python">
+<a href="#parent_name_python" style="color: inherit; text-decoration: inherit;">parent_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Parent name of the DB such as Instance or Availability Group.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="parent_type_python">
+<a href="#parent_type_python" style="color: inherit; text-decoration: inherit;">parent_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Parent type of protected item, example: for a DB, standalone server or distributed{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="policy_id_python">
+<a href="#policy_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protected_item_data_source_id_python">
+<a href="#protected_item_data_source_id_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>item_<wbr>data_<wbr>source_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Data ID of the protected item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protected_item_health_status_python">
+<a href="#protected_item_health_status_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>item_<wbr>health_<wbr>status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Health status of the backup item, evaluated based on last heartbeat received{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protection_state_python">
+<a href="#protection_state_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>state</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protection_status_python">
+<a href="#protection_status_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Backup status of this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="server_name_python">
+<a href="#server_name_python" style="color: inherit; text-decoration: inherit;">server_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Host/Cluster Name for instance or AG{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="source_resource_id_python">
+<a href="#source_resource_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>resource_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workload_type_python">
+<a href="#workload_type_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="azurevmworkloadsaphanadatabaseprotecteditemresponse">Azure<wbr>Vm<wbr>Workload<wbr>SAPHana<wbr>Database<wbr>Protected<wbr>Item<wbr>Response</h4>
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backupmanagementtype_csharp">
+<a href="#backupmanagementtype_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Management<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backupsetname_csharp">
+<a href="#backupsetname_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Set<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="containername_csharp">
+<a href="#containername_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Unique name of container{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="createmode_csharp">
+<a href="#createmode_csharp" style="color: inherit; text-decoration: inherit;">Create<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deferreddeletetimeinutc_csharp">
+<a href="#deferreddeletetimeinutc_csharp" style="color: inherit; text-decoration: inherit;">Deferred<wbr>Delete<wbr>Time<wbr>In<wbr>UTC</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deferreddeletetimeremaining_csharp">
+<a href="#deferreddeletetimeremaining_csharp" style="color: inherit; text-decoration: inherit;">Deferred<wbr>Delete<wbr>Time<wbr>Remaining</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="extendedinfo_csharp">
+<a href="#extendedinfo_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#azurevmworkloadprotecteditemextendedinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="friendlyname_csharp">
+<a href="#friendlyname_csharp" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Friendly name of the DB represented by this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="isdeferreddeletescheduleupcoming_csharp">
+<a href="#isdeferreddeletescheduleupcoming_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Deferred<wbr>Delete<wbr>Schedule<wbr>Upcoming</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="isrehydrate_csharp">
+<a href="#isrehydrate_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Rehydrate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="isscheduledfordeferreddelete_csharp">
+<a href="#isscheduledfordeferreddelete_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Scheduled<wbr>For<wbr>Deferred<wbr>Delete</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kpishealths_csharp">
+<a href="#kpishealths_csharp" style="color: inherit; text-decoration: inherit;">Kpis<wbr>Healths</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>KPIResource<wbr>Health<wbr>Details<wbr>Response<wbr>Args&gt;</span>
+    </dt>
+    <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastbackuperrordetail_csharp">
+<a href="#lastbackuperrordetail_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Backup<wbr>Error<wbr>Detail</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#errordetailresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Error<wbr>Detail<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Error details in last backup{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastbackupstatus_csharp">
+<a href="#lastbackupstatus_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Backup<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Last backup operation status. Possible values: Healthy, Unhealthy.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastbackuptime_csharp">
+<a href="#lastbackuptime_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Backup<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Timestamp of the last backup operation on this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastrecoverypoint_csharp">
+<a href="#lastrecoverypoint_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Recovery<wbr>Point</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="parentname_csharp">
+<a href="#parentname_csharp" style="color: inherit; text-decoration: inherit;">Parent<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Parent name of the DB such as Instance or Availability Group.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="parenttype_csharp">
+<a href="#parenttype_csharp" style="color: inherit; text-decoration: inherit;">Parent<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Parent type of protected item, example: for a DB, standalone server or distributed{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="policyid_csharp">
+<a href="#policyid_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protecteditemdatasourceid_csharp">
+<a href="#protecteditemdatasourceid_csharp" style="color: inherit; text-decoration: inherit;">Protected<wbr>Item<wbr>Data<wbr>Source<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Data ID of the protected item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protecteditemhealthstatus_csharp">
+<a href="#protecteditemhealthstatus_csharp" style="color: inherit; text-decoration: inherit;">Protected<wbr>Item<wbr>Health<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Health status of the backup item, evaluated based on last heartbeat received{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protectionstate_csharp">
+<a href="#protectionstate_csharp" style="color: inherit; text-decoration: inherit;">Protection<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protectionstatus_csharp">
+<a href="#protectionstatus_csharp" style="color: inherit; text-decoration: inherit;">Protection<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Backup status of this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="servername_csharp">
+<a href="#servername_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Host/Cluster Name for instance or AG{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sourceresourceid_csharp">
+<a href="#sourceresourceid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workloadtype_csharp">
+<a href="#workloadtype_csharp" style="color: inherit; text-decoration: inherit;">Workload<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backupmanagementtype_go">
+<a href="#backupmanagementtype_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Management<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backupsetname_go">
+<a href="#backupsetname_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Set<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="containername_go">
+<a href="#containername_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Unique name of container{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="createmode_go">
+<a href="#createmode_go" style="color: inherit; text-decoration: inherit;">Create<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deferreddeletetimeinutc_go">
+<a href="#deferreddeletetimeinutc_go" style="color: inherit; text-decoration: inherit;">Deferred<wbr>Delete<wbr>Time<wbr>In<wbr>UTC</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deferreddeletetimeremaining_go">
+<a href="#deferreddeletetimeremaining_go" style="color: inherit; text-decoration: inherit;">Deferred<wbr>Delete<wbr>Time<wbr>Remaining</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="extendedinfo_go">
+<a href="#extendedinfo_go" style="color: inherit; text-decoration: inherit;">Extended<wbr>Info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#azurevmworkloadprotecteditemextendedinforesponse">Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="friendlyname_go">
+<a href="#friendlyname_go" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Friendly name of the DB represented by this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="isdeferreddeletescheduleupcoming_go">
+<a href="#isdeferreddeletescheduleupcoming_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Deferred<wbr>Delete<wbr>Schedule<wbr>Upcoming</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="isrehydrate_go">
+<a href="#isrehydrate_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Rehydrate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="isscheduledfordeferreddelete_go">
+<a href="#isscheduledfordeferreddelete_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Scheduled<wbr>For<wbr>Deferred<wbr>Delete</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kpishealths_go">
+<a href="#kpishealths_go" style="color: inherit; text-decoration: inherit;">Kpis<wbr>Healths</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]KPIResource<wbr>Health<wbr>Details<wbr>Response</span>
+    </dt>
+    <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastbackuperrordetail_go">
+<a href="#lastbackuperrordetail_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Backup<wbr>Error<wbr>Detail</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#errordetailresponse">Error<wbr>Detail<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Error details in last backup{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastbackupstatus_go">
+<a href="#lastbackupstatus_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Backup<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Last backup operation status. Possible values: Healthy, Unhealthy.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastbackuptime_go">
+<a href="#lastbackuptime_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Backup<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Timestamp of the last backup operation on this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastrecoverypoint_go">
+<a href="#lastrecoverypoint_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Recovery<wbr>Point</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="parentname_go">
+<a href="#parentname_go" style="color: inherit; text-decoration: inherit;">Parent<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Parent name of the DB such as Instance or Availability Group.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="parenttype_go">
+<a href="#parenttype_go" style="color: inherit; text-decoration: inherit;">Parent<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Parent type of protected item, example: for a DB, standalone server or distributed{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="policyid_go">
+<a href="#policyid_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protecteditemdatasourceid_go">
+<a href="#protecteditemdatasourceid_go" style="color: inherit; text-decoration: inherit;">Protected<wbr>Item<wbr>Data<wbr>Source<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Data ID of the protected item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protecteditemhealthstatus_go">
+<a href="#protecteditemhealthstatus_go" style="color: inherit; text-decoration: inherit;">Protected<wbr>Item<wbr>Health<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Health status of the backup item, evaluated based on last heartbeat received{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protectionstate_go">
+<a href="#protectionstate_go" style="color: inherit; text-decoration: inherit;">Protection<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protectionstatus_go">
+<a href="#protectionstatus_go" style="color: inherit; text-decoration: inherit;">Protection<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Backup status of this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="servername_go">
+<a href="#servername_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Host/Cluster Name for instance or AG{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sourceresourceid_go">
+<a href="#sourceresourceid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workloadtype_go">
+<a href="#workloadtype_go" style="color: inherit; text-decoration: inherit;">Workload<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backupmanagementtype_nodejs">
+<a href="#backupmanagementtype_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backupsetname_nodejs">
+<a href="#backupsetname_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Set<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="containername_nodejs">
+<a href="#containername_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Unique name of container{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="createmode_nodejs">
+<a href="#createmode_nodejs" style="color: inherit; text-decoration: inherit;">create<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deferreddeletetimeinutc_nodejs">
+<a href="#deferreddeletetimeinutc_nodejs" style="color: inherit; text-decoration: inherit;">deferred<wbr>Delete<wbr>Time<wbr>In<wbr>UTC</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deferreddeletetimeremaining_nodejs">
+<a href="#deferreddeletetimeremaining_nodejs" style="color: inherit; text-decoration: inherit;">deferred<wbr>Delete<wbr>Time<wbr>Remaining</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="extendedinfo_nodejs">
+<a href="#extendedinfo_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#azurevmworkloadprotecteditemextendedinforesponse">Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="friendlyname_nodejs">
+<a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Friendly name of the DB represented by this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="isdeferreddeletescheduleupcoming_nodejs">
+<a href="#isdeferreddeletescheduleupcoming_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Deferred<wbr>Delete<wbr>Schedule<wbr>Upcoming</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="isrehydrate_nodejs">
+<a href="#isrehydrate_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Rehydrate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="isscheduledfordeferreddelete_nodejs">
+<a href="#isscheduledfordeferreddelete_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Scheduled<wbr>For<wbr>Deferred<wbr>Delete</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kpishealths_nodejs">
+<a href="#kpishealths_nodejs" style="color: inherit; text-decoration: inherit;">kpis<wbr>Healths</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: KPIResource<wbr>Health<wbr>Details<wbr>Response}</span>
+    </dt>
+    <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastbackuperrordetail_nodejs">
+<a href="#lastbackuperrordetail_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Backup<wbr>Error<wbr>Detail</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#errordetailresponse">Error<wbr>Detail<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Error details in last backup{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastbackupstatus_nodejs">
+<a href="#lastbackupstatus_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Backup<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Last backup operation status. Possible values: Healthy, Unhealthy.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastbackuptime_nodejs">
+<a href="#lastbackuptime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Backup<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Timestamp of the last backup operation on this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastrecoverypoint_nodejs">
+<a href="#lastrecoverypoint_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Recovery<wbr>Point</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="parentname_nodejs">
+<a href="#parentname_nodejs" style="color: inherit; text-decoration: inherit;">parent<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Parent name of the DB such as Instance or Availability Group.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="parenttype_nodejs">
+<a href="#parenttype_nodejs" style="color: inherit; text-decoration: inherit;">parent<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Parent type of protected item, example: for a DB, standalone server or distributed{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="policyid_nodejs">
+<a href="#policyid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protecteditemdatasourceid_nodejs">
+<a href="#protecteditemdatasourceid_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Item<wbr>Data<wbr>Source<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Data ID of the protected item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protecteditemhealthstatus_nodejs">
+<a href="#protecteditemhealthstatus_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Item<wbr>Health<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Health status of the backup item, evaluated based on last heartbeat received{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protectionstate_nodejs">
+<a href="#protectionstate_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protectionstatus_nodejs">
+<a href="#protectionstatus_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Backup status of this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="servername_nodejs">
+<a href="#servername_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Host/Cluster Name for instance or AG{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sourceresourceid_nodejs">
+<a href="#sourceresourceid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workloadtype_nodejs">
+<a href="#workloadtype_nodejs" style="color: inherit; text-decoration: inherit;">workload<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backup_management_type_python">
+<a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backup_set_name_python">
+<a href="#backup_set_name_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>set_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Name of the backup set the backup item belongs to{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="container_name_python">
+<a href="#container_name_python" style="color: inherit; text-decoration: inherit;">container_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Unique name of container{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="create_mode_python">
+<a href="#create_mode_python" style="color: inherit; text-decoration: inherit;">create_<wbr>mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Create mode to indicate recovery of existing soft deleted data source or creation of new data source.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deferred_delete_time_in_utc_python">
+<a href="#deferred_delete_time_in_utc_python" style="color: inherit; text-decoration: inherit;">deferred_<wbr>delete_<wbr>time_<wbr>in_<wbr>utc</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Time for deferred deletion in UTC{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deferred_delete_time_remaining_python">
+<a href="#deferred_delete_time_remaining_python" style="color: inherit; text-decoration: inherit;">deferred_<wbr>delete_<wbr>time_<wbr>remaining</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Time remaining before the DS marked for deferred delete is permanently deleted{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="extended_info_python">
+<a href="#extended_info_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#azurevmworkloadprotecteditemextendedinforesponse">Azure<wbr>Vm<wbr>Workload<wbr>Protected<wbr>Item<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Additional information for this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="friendly_name_python">
+<a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Friendly name of the DB represented by this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="is_deferred_delete_schedule_upcoming_python">
+<a href="#is_deferred_delete_schedule_upcoming_python" style="color: inherit; text-decoration: inherit;">is_<wbr>deferred_<wbr>delete_<wbr>schedule_<wbr>upcoming</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag to identify whether the deferred deleted DS is to be purged soon{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="is_rehydrate_python">
+<a href="#is_rehydrate_python" style="color: inherit; text-decoration: inherit;">is_<wbr>rehydrate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag to identify that deferred deleted DS is to be moved into Pause state{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="is_scheduled_for_deferred_delete_python">
+<a href="#is_scheduled_for_deferred_delete_python" style="color: inherit; text-decoration: inherit;">is_<wbr>scheduled_<wbr>for_<wbr>deferred_<wbr>delete</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Flag to identify whether the DS is scheduled for deferred delete{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kpis_healths_python">
+<a href="#kpis_healths_python" style="color: inherit; text-decoration: inherit;">kpis_<wbr>healths</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, KPIResource<wbr>Health<wbr>Details<wbr>Response<wbr>Args]</span>
+    </dt>
+    <dd>{{% md %}}Health details of different KPIs{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="last_backup_error_detail_python">
+<a href="#last_backup_error_detail_python" style="color: inherit; text-decoration: inherit;">last_<wbr>backup_<wbr>error_<wbr>detail</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#errordetailresponse">Error<wbr>Detail<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Error details in last backup{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="last_backup_status_python">
+<a href="#last_backup_status_python" style="color: inherit; text-decoration: inherit;">last_<wbr>backup_<wbr>status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Last backup operation status. Possible values: Healthy, Unhealthy.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="last_backup_time_python">
+<a href="#last_backup_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>backup_<wbr>time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Timestamp of the last backup operation on this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="last_recovery_point_python">
+<a href="#last_recovery_point_python" style="color: inherit; text-decoration: inherit;">last_<wbr>recovery_<wbr>point</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Timestamp when the last (latest) backup copy was created for this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="parent_name_python">
+<a href="#parent_name_python" style="color: inherit; text-decoration: inherit;">parent_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Parent name of the DB such as Instance or Availability Group.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="parent_type_python">
+<a href="#parent_type_python" style="color: inherit; text-decoration: inherit;">parent_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Parent type of protected item, example: for a DB, standalone server or distributed{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="policy_id_python">
+<a href="#policy_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protected_item_data_source_id_python">
+<a href="#protected_item_data_source_id_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>item_<wbr>data_<wbr>source_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Data ID of the protected item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protected_item_health_status_python">
+<a href="#protected_item_health_status_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>item_<wbr>health_<wbr>status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Health status of the backup item, evaluated based on last heartbeat received{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protection_state_python">
+<a href="#protection_state_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>state</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protection_status_python">
+<a href="#protection_status_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Backup status of this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="server_name_python">
+<a href="#server_name_python" style="color: inherit; text-decoration: inherit;">server_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Host/Cluster Name for instance or AG{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="source_resource_id_python">
+<a href="#source_resource_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>resource_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workload_type_python">
+<a href="#workload_type_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Type of workload this item represents.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="azurevmworkloadsqldatabaseprotecteditemresponse">Azure<wbr>Vm<wbr>Workload<wbr>SQLDatabase<wbr>Protected<wbr>Item<wbr>Response</h4>
 
 
 

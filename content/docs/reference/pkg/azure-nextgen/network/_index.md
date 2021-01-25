@@ -46,6 +46,7 @@ Explore the resources and functions of the network module in the Azure NextGen p
     <li><a href="loadbalancerbackendaddresspool" title="LoadBalancerBackendAddressPool"><span class="symbol resource"></span>LoadBalancerBackendAddressPool</a></li>
     <li><a href="localnetworkgateway" title="LocalNetworkGateway"><span class="symbol resource"></span>LocalNetworkGateway</a></li>
     <li><a href="natgateway" title="NatGateway"><span class="symbol resource"></span>NatGateway</a></li>
+    <li><a href="natrule" title="NatRule"><span class="symbol resource"></span>NatRule</a></li>
     <li><a href="networkexperimentprofile" title="NetworkExperimentProfile"><span class="symbol resource"></span>NetworkExperimentProfile</a></li>
     <li><a href="networkinterface" title="NetworkInterface"><span class="symbol resource"></span>NetworkInterface</a></li>
     <li><a href="networkinterfacetapconfiguration" title="NetworkInterfaceTapConfiguration"><span class="symbol resource"></span>NetworkInterfaceTapConfiguration</a></li>
@@ -140,6 +141,7 @@ Explore the resources and functions of the network module in the Azure NextGen p
     <li><a href="getloadbalancerbackendaddresspool" title="GetLoadBalancerBackendAddressPool"><span class="symbol function"></span>GetLoadBalancerBackendAddressPool</a></li>
     <li><a href="getlocalnetworkgateway" title="GetLocalNetworkGateway"><span class="symbol function"></span>GetLocalNetworkGateway</a></li>
     <li><a href="getnatgateway" title="GetNatGateway"><span class="symbol function"></span>GetNatGateway</a></li>
+    <li><a href="getnatrule" title="GetNatRule"><span class="symbol function"></span>GetNatRule</a></li>
     <li><a href="getnetworkexperimentprofile" title="GetNetworkExperimentProfile"><span class="symbol function"></span>GetNetworkExperimentProfile</a></li>
     <li><a href="getnetworkinterface" title="GetNetworkInterface"><span class="symbol function"></span>GetNetworkInterface</a></li>
     <li><a href="getnetworkinterfacetapconfiguration" title="GetNetworkInterfaceTapConfiguration"><span class="symbol function"></span>GetNetworkInterfaceTapConfiguration</a></li>
@@ -207,7 +209,7 @@ Explore the resources and functions of the network module in the Azure NextGen p
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.4.0</dd>
+	<dd>0.5.0</dd>
 </dl>
 
 

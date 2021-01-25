@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.automation.Connection resource w
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Definition of the connection.
-Latest API Version: 2015-10-31.
+Latest API Version: 2019-06-01.
 
 {{% examples %}}
 ## Example Usage

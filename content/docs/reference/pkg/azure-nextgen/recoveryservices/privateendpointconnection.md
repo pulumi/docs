@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.recoveryservices.PrivateEndpoint
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Private Endpoint Connection Response Properties
-Latest API Version: 2020-10-01.
+Latest API Version: 2020-12-01.
 
 {{% examples %}}
 ## Example Usage

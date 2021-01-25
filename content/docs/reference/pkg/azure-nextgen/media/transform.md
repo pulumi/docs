@@ -707,6 +707,464 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+<h4 id="aacaudio">Aac<wbr>Audio</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="bitrate_csharp">
+<a href="#bitrate_csharp" style="color: inherit; text-decoration: inherit;">Bitrate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The bitrate, in bits per second, of the output encoded audio.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="channels_csharp">
+<a href="#channels_csharp" style="color: inherit; text-decoration: inherit;">Channels</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of channels in the audio.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="label_csharp">
+<a href="#label_csharp" style="color: inherit; text-decoration: inherit;">Label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An optional label for the codec. The label can be used to control muxing behavior.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="profile_csharp">
+<a href="#profile_csharp" style="color: inherit; text-decoration: inherit;">Profile</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#aacaudioprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Aac<wbr>Audio<wbr>Profile</a></span>
+    </dt>
+    <dd>{{% md %}}The encoding profile to be used when encoding audio with AAC.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="samplingrate_csharp">
+<a href="#samplingrate_csharp" style="color: inherit; text-decoration: inherit;">Sampling<wbr>Rate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The sampling rate to use for encoding in hertz.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="bitrate_go">
+<a href="#bitrate_go" style="color: inherit; text-decoration: inherit;">Bitrate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The bitrate, in bits per second, of the output encoded audio.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="channels_go">
+<a href="#channels_go" style="color: inherit; text-decoration: inherit;">Channels</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of channels in the audio.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="label_go">
+<a href="#label_go" style="color: inherit; text-decoration: inherit;">Label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An optional label for the codec. The label can be used to control muxing behavior.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="profile_go">
+<a href="#profile_go" style="color: inherit; text-decoration: inherit;">Profile</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#aacaudioprofile">Aac<wbr>Audio<wbr>Profile</a></span>
+    </dt>
+    <dd>{{% md %}}The encoding profile to be used when encoding audio with AAC.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="samplingrate_go">
+<a href="#samplingrate_go" style="color: inherit; text-decoration: inherit;">Sampling<wbr>Rate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The sampling rate to use for encoding in hertz.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="bitrate_nodejs">
+<a href="#bitrate_nodejs" style="color: inherit; text-decoration: inherit;">bitrate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The bitrate, in bits per second, of the output encoded audio.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="channels_nodejs">
+<a href="#channels_nodejs" style="color: inherit; text-decoration: inherit;">channels</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The number of channels in the audio.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="label_nodejs">
+<a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An optional label for the codec. The label can be used to control muxing behavior.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="profile_nodejs">
+<a href="#profile_nodejs" style="color: inherit; text-decoration: inherit;">profile</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#aacaudioprofile">Aac<wbr>Audio<wbr>Profile</a></span>
+    </dt>
+    <dd>{{% md %}}The encoding profile to be used when encoding audio with AAC.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="samplingrate_nodejs">
+<a href="#samplingrate_nodejs" style="color: inherit; text-decoration: inherit;">sampling<wbr>Rate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The sampling rate to use for encoding in hertz.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="bitrate_python">
+<a href="#bitrate_python" style="color: inherit; text-decoration: inherit;">bitrate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The bitrate, in bits per second, of the output encoded audio.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="channels_python">
+<a href="#channels_python" style="color: inherit; text-decoration: inherit;">channels</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of channels in the audio.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="label_python">
+<a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}An optional label for the codec. The label can be used to control muxing behavior.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="profile_python">
+<a href="#profile_python" style="color: inherit; text-decoration: inherit;">profile</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str | <a href="#aacaudioprofile">Aac<wbr>Audio<wbr>Profile</a></span>
+    </dt>
+    <dd>{{% md %}}The encoding profile to be used when encoding audio with AAC.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sampling_rate_python">
+<a href="#sampling_rate_python" style="color: inherit; text-decoration: inherit;">sampling_<wbr>rate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The sampling rate to use for encoding in hertz.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="aacaudioprofile">Aac<wbr>Audio<wbr>Profile</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Aac<wbr>Lc</dt>
+    <dd>AacLc{{% md %}}Specifies that the output audio is to be encoded into AAC Low Complexity profile (AAC-LC).{{% /md %}}</dd>
+    <dt>He<wbr>Aac<wbr>V1</dt>
+    <dd>HeAacV1{{% md %}}Specifies that the output audio is to be encoded into HE-AAC v1 profile.{{% /md %}}</dd>
+    <dt>He<wbr>Aac<wbr>V2</dt>
+    <dd>HeAacV2{{% md %}}Specifies that the output audio is to be encoded into HE-AAC v2 profile.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Aac<wbr>Audio<wbr>Profile<wbr>Aac<wbr>Lc</dt>
+    <dd>AacLc{{% md %}}Specifies that the output audio is to be encoded into AAC Low Complexity profile (AAC-LC).{{% /md %}}</dd>
+    <dt>Aac<wbr>Audio<wbr>Profile<wbr>He<wbr>Aac<wbr>V1</dt>
+    <dd>HeAacV1{{% md %}}Specifies that the output audio is to be encoded into HE-AAC v1 profile.{{% /md %}}</dd>
+    <dt>Aac<wbr>Audio<wbr>Profile<wbr>He<wbr>Aac<wbr>V2</dt>
+    <dd>HeAacV2{{% md %}}Specifies that the output audio is to be encoded into HE-AAC v2 profile.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Aac<wbr>Lc</dt>
+    <dd>AacLc{{% md %}}Specifies that the output audio is to be encoded into AAC Low Complexity profile (AAC-LC).{{% /md %}}</dd>
+    <dt>He<wbr>Aac<wbr>V1</dt>
+    <dd>HeAacV1{{% md %}}Specifies that the output audio is to be encoded into HE-AAC v1 profile.{{% /md %}}</dd>
+    <dt>He<wbr>Aac<wbr>V2</dt>
+    <dd>HeAacV2{{% md %}}Specifies that the output audio is to be encoded into HE-AAC v2 profile.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>AAC_LC</dt>
+    <dd>AacLc{{% md %}}Specifies that the output audio is to be encoded into AAC Low Complexity profile (AAC-LC).{{% /md %}}</dd>
+    <dt>HE_AAC_V1</dt>
+    <dd>HeAacV1{{% md %}}Specifies that the output audio is to be encoded into HE-AAC v1 profile.{{% /md %}}</dd>
+    <dt>HE_AAC_V2</dt>
+    <dd>HeAacV2{{% md %}}Specifies that the output audio is to be encoded into HE-AAC v2 profile.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="aacaudioresponse">Aac<wbr>Audio<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="bitrate_csharp">
+<a href="#bitrate_csharp" style="color: inherit; text-decoration: inherit;">Bitrate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The bitrate, in bits per second, of the output encoded audio.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="channels_csharp">
+<a href="#channels_csharp" style="color: inherit; text-decoration: inherit;">Channels</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of channels in the audio.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="label_csharp">
+<a href="#label_csharp" style="color: inherit; text-decoration: inherit;">Label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An optional label for the codec. The label can be used to control muxing behavior.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="profile_csharp">
+<a href="#profile_csharp" style="color: inherit; text-decoration: inherit;">Profile</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The encoding profile to be used when encoding audio with AAC.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="samplingrate_csharp">
+<a href="#samplingrate_csharp" style="color: inherit; text-decoration: inherit;">Sampling<wbr>Rate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The sampling rate to use for encoding in hertz.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="bitrate_go">
+<a href="#bitrate_go" style="color: inherit; text-decoration: inherit;">Bitrate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The bitrate, in bits per second, of the output encoded audio.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="channels_go">
+<a href="#channels_go" style="color: inherit; text-decoration: inherit;">Channels</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of channels in the audio.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="label_go">
+<a href="#label_go" style="color: inherit; text-decoration: inherit;">Label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An optional label for the codec. The label can be used to control muxing behavior.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="profile_go">
+<a href="#profile_go" style="color: inherit; text-decoration: inherit;">Profile</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The encoding profile to be used when encoding audio with AAC.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="samplingrate_go">
+<a href="#samplingrate_go" style="color: inherit; text-decoration: inherit;">Sampling<wbr>Rate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The sampling rate to use for encoding in hertz.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="bitrate_nodejs">
+<a href="#bitrate_nodejs" style="color: inherit; text-decoration: inherit;">bitrate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The bitrate, in bits per second, of the output encoded audio.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="channels_nodejs">
+<a href="#channels_nodejs" style="color: inherit; text-decoration: inherit;">channels</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The number of channels in the audio.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="label_nodejs">
+<a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An optional label for the codec. The label can be used to control muxing behavior.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="profile_nodejs">
+<a href="#profile_nodejs" style="color: inherit; text-decoration: inherit;">profile</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The encoding profile to be used when encoding audio with AAC.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="samplingrate_nodejs">
+<a href="#samplingrate_nodejs" style="color: inherit; text-decoration: inherit;">sampling<wbr>Rate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The sampling rate to use for encoding in hertz.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="bitrate_python">
+<a href="#bitrate_python" style="color: inherit; text-decoration: inherit;">bitrate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The bitrate, in bits per second, of the output encoded audio.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="channels_python">
+<a href="#channels_python" style="color: inherit; text-decoration: inherit;">channels</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of channels in the audio.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="label_python">
+<a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}An optional label for the codec. The label can be used to control muxing behavior.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="profile_python">
+<a href="#profile_python" style="color: inherit; text-decoration: inherit;">profile</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The encoding profile to be used when encoding audio with AAC.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sampling_rate_python">
+<a href="#sampling_rate_python" style="color: inherit; text-decoration: inherit;">sampling_<wbr>rate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The sampling rate to use for encoding in hertz.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
 <h4 id="analysisresolution">Analysis<wbr>Resolution</h4>
 
 {{% choosable language csharp %}}
@@ -2637,6 +3095,44 @@ All [input](#inputs) properties are implicitly available as output properties. A
 </dl>
 {{% /choosable %}}
 
+<h4 id="entropymode">Entropy<wbr>Mode</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Cabac</dt>
+    <dd>Cabac{{% md %}}Context Adaptive Binary Arithmetic Coder (CABAC) entropy encoding.{{% /md %}}</dd>
+    <dt>Cavlc</dt>
+    <dd>Cavlc{{% md %}}Context Adaptive Variable Length Coder (CAVLC) entropy encoding.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Entropy<wbr>Mode<wbr>Cabac</dt>
+    <dd>Cabac{{% md %}}Context Adaptive Binary Arithmetic Coder (CABAC) entropy encoding.{{% /md %}}</dd>
+    <dt>Entropy<wbr>Mode<wbr>Cavlc</dt>
+    <dd>Cavlc{{% md %}}Context Adaptive Variable Length Coder (CAVLC) entropy encoding.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Cabac</dt>
+    <dd>Cabac{{% md %}}Context Adaptive Binary Arithmetic Coder (CABAC) entropy encoding.{{% /md %}}</dd>
+    <dt>Cavlc</dt>
+    <dd>Cavlc{{% md %}}Context Adaptive Variable Length Coder (CAVLC) entropy encoding.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>CABAC</dt>
+    <dd>Cabac{{% md %}}Context Adaptive Binary Arithmetic Coder (CABAC) entropy encoding.{{% /md %}}</dd>
+    <dt>CAVLC</dt>
+    <dd>Cavlc{{% md %}}Context Adaptive Variable Length Coder (CAVLC) entropy encoding.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
 <h4 id="facedetectorpreset">Face<wbr>Detector<wbr>Preset</h4>
 
 {{% choosable language csharp %}}
@@ -3173,6 +3669,2016 @@ All [input](#inputs) properties are implicitly available as output properties. A
 </dl>
 {{% /choosable %}}
 
+<h4 id="h264complexity">H264Complexity</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Speed</dt>
+    <dd>Speed{{% md %}}Tells the encoder to use settings that are optimized for faster encoding. Quality is sacrificed to decrease encoding time.{{% /md %}}</dd>
+    <dt>Balanced</dt>
+    <dd>Balanced{{% md %}}Tells the encoder to use settings that achieve a balance between speed and quality.{{% /md %}}</dd>
+    <dt>Quality</dt>
+    <dd>Quality{{% md %}}Tells the encoder to use settings that are optimized to produce higher quality output at the expense of slower overall encode time.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>H264Complexity<wbr>Speed</dt>
+    <dd>Speed{{% md %}}Tells the encoder to use settings that are optimized for faster encoding. Quality is sacrificed to decrease encoding time.{{% /md %}}</dd>
+    <dt>H264Complexity<wbr>Balanced</dt>
+    <dd>Balanced{{% md %}}Tells the encoder to use settings that achieve a balance between speed and quality.{{% /md %}}</dd>
+    <dt>H264Complexity<wbr>Quality</dt>
+    <dd>Quality{{% md %}}Tells the encoder to use settings that are optimized to produce higher quality output at the expense of slower overall encode time.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Speed</dt>
+    <dd>Speed{{% md %}}Tells the encoder to use settings that are optimized for faster encoding. Quality is sacrificed to decrease encoding time.{{% /md %}}</dd>
+    <dt>Balanced</dt>
+    <dd>Balanced{{% md %}}Tells the encoder to use settings that achieve a balance between speed and quality.{{% /md %}}</dd>
+    <dt>Quality</dt>
+    <dd>Quality{{% md %}}Tells the encoder to use settings that are optimized to produce higher quality output at the expense of slower overall encode time.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>SPEED</dt>
+    <dd>Speed{{% md %}}Tells the encoder to use settings that are optimized for faster encoding. Quality is sacrificed to decrease encoding time.{{% /md %}}</dd>
+    <dt>BALANCED</dt>
+    <dd>Balanced{{% md %}}Tells the encoder to use settings that achieve a balance between speed and quality.{{% /md %}}</dd>
+    <dt>QUALITY</dt>
+    <dd>Quality{{% md %}}Tells the encoder to use settings that are optimized to produce higher quality output at the expense of slower overall encode time.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="h264layer">H264Layer</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="bitrate_csharp">
+<a href="#bitrate_csharp" style="color: inherit; text-decoration: inherit;">Bitrate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The average bitrate in bits per second at which to encode the input video when generating this layer. This is a required field.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="adaptivebframe_csharp">
+<a href="#adaptivebframe_csharp" style="color: inherit; text-decoration: inherit;">Adaptive<wbr>BFrame</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether or not adaptive B-frames are to be used when encoding this layer. If not specified, the encoder will turn it on whenever the video profile permits its use.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="bframes_csharp">
+<a href="#bframes_csharp" style="color: inherit; text-decoration: inherit;">BFrames</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of B-frames to be used when encoding this layer.  If not specified, the encoder chooses an appropriate number based on the video profile and level.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="bufferwindow_csharp">
+<a href="#bufferwindow_csharp" style="color: inherit; text-decoration: inherit;">Buffer<wbr>Window</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The VBV buffer window length. The value should be in ISO 8601 format. The value should be in the range [0.1-100] seconds. The default is 5 seconds (for example, PT5S).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="entropymode_csharp">
+<a href="#entropymode_csharp" style="color: inherit; text-decoration: inherit;">Entropy<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#entropymode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Entropy<wbr>Mode</a></span>
+    </dt>
+    <dd>{{% md %}}The entropy mode to be used for this layer. If not specified, the encoder chooses the mode that is appropriate for the profile and level.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="framerate_csharp">
+<a href="#framerate_csharp" style="color: inherit; text-decoration: inherit;">Frame<wbr>Rate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The frame rate (in frames per second) at which to encode this layer. The value can be in the form of M/N where M and N are integers (For example, 30000/1001), or in the form of a number (For example, 30, or 29.97). The encoder enforces constraints on allowed frame rates based on the profile and level. If it is not specified, the encoder will use the same frame rate as the input video.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="height_csharp">
+<a href="#height_csharp" style="color: inherit; text-decoration: inherit;">Height</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The height of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in height as the input.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="label_csharp">
+<a href="#label_csharp" style="color: inherit; text-decoration: inherit;">Label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The alphanumeric label for this layer, which can be used in multiplexing different video and audio layers, or in naming the output file.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="level_csharp">
+<a href="#level_csharp" style="color: inherit; text-decoration: inherit;">Level</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}We currently support Level up to 6.2. The value can be Auto, or a number that matches the H.264 profile. If not specified, the default is Auto, which lets the encoder choose the Level that is appropriate for this layer.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxbitrate_csharp">
+<a href="#maxbitrate_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Bitrate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum bitrate (in bits per second), at which the VBV buffer should be assumed to refill. If not specified, defaults to the same value as bitrate.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="profile_csharp">
+<a href="#profile_csharp" style="color: inherit; text-decoration: inherit;">Profile</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#h264videoprofile">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>H264Video<wbr>Profile</a></span>
+    </dt>
+    <dd>{{% md %}}We currently support Baseline, Main, High, High422, High444. Default is Auto.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="referenceframes_csharp">
+<a href="#referenceframes_csharp" style="color: inherit; text-decoration: inherit;">Reference<wbr>Frames</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of reference frames to be used when encoding this layer. If not specified, the encoder determines an appropriate number based on the encoder complexity setting.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="slices_csharp">
+<a href="#slices_csharp" style="color: inherit; text-decoration: inherit;">Slices</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of slices to be used when encoding this layer. If not specified, default is zero, which means that encoder will use a single slice for each frame.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="width_csharp">
+<a href="#width_csharp" style="color: inherit; text-decoration: inherit;">Width</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The width of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in width as the input.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="bitrate_go">
+<a href="#bitrate_go" style="color: inherit; text-decoration: inherit;">Bitrate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The average bitrate in bits per second at which to encode the input video when generating this layer. This is a required field.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="adaptivebframe_go">
+<a href="#adaptivebframe_go" style="color: inherit; text-decoration: inherit;">Adaptive<wbr>BFrame</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether or not adaptive B-frames are to be used when encoding this layer. If not specified, the encoder will turn it on whenever the video profile permits its use.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="bframes_go">
+<a href="#bframes_go" style="color: inherit; text-decoration: inherit;">BFrames</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of B-frames to be used when encoding this layer.  If not specified, the encoder chooses an appropriate number based on the video profile and level.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="bufferwindow_go">
+<a href="#bufferwindow_go" style="color: inherit; text-decoration: inherit;">Buffer<wbr>Window</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The VBV buffer window length. The value should be in ISO 8601 format. The value should be in the range [0.1-100] seconds. The default is 5 seconds (for example, PT5S).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="entropymode_go">
+<a href="#entropymode_go" style="color: inherit; text-decoration: inherit;">Entropy<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#entropymode">Entropy<wbr>Mode</a></span>
+    </dt>
+    <dd>{{% md %}}The entropy mode to be used for this layer. If not specified, the encoder chooses the mode that is appropriate for the profile and level.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="framerate_go">
+<a href="#framerate_go" style="color: inherit; text-decoration: inherit;">Frame<wbr>Rate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The frame rate (in frames per second) at which to encode this layer. The value can be in the form of M/N where M and N are integers (For example, 30000/1001), or in the form of a number (For example, 30, or 29.97). The encoder enforces constraints on allowed frame rates based on the profile and level. If it is not specified, the encoder will use the same frame rate as the input video.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="height_go">
+<a href="#height_go" style="color: inherit; text-decoration: inherit;">Height</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The height of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in height as the input.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="label_go">
+<a href="#label_go" style="color: inherit; text-decoration: inherit;">Label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The alphanumeric label for this layer, which can be used in multiplexing different video and audio layers, or in naming the output file.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="level_go">
+<a href="#level_go" style="color: inherit; text-decoration: inherit;">Level</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}We currently support Level up to 6.2. The value can be Auto, or a number that matches the H.264 profile. If not specified, the default is Auto, which lets the encoder choose the Level that is appropriate for this layer.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxbitrate_go">
+<a href="#maxbitrate_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Bitrate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum bitrate (in bits per second), at which the VBV buffer should be assumed to refill. If not specified, defaults to the same value as bitrate.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="profile_go">
+<a href="#profile_go" style="color: inherit; text-decoration: inherit;">Profile</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#h264videoprofile">H264Video<wbr>Profile</a></span>
+    </dt>
+    <dd>{{% md %}}We currently support Baseline, Main, High, High422, High444. Default is Auto.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="referenceframes_go">
+<a href="#referenceframes_go" style="color: inherit; text-decoration: inherit;">Reference<wbr>Frames</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of reference frames to be used when encoding this layer. If not specified, the encoder determines an appropriate number based on the encoder complexity setting.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="slices_go">
+<a href="#slices_go" style="color: inherit; text-decoration: inherit;">Slices</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of slices to be used when encoding this layer. If not specified, default is zero, which means that encoder will use a single slice for each frame.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="width_go">
+<a href="#width_go" style="color: inherit; text-decoration: inherit;">Width</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The width of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in width as the input.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="bitrate_nodejs">
+<a href="#bitrate_nodejs" style="color: inherit; text-decoration: inherit;">bitrate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The average bitrate in bits per second at which to encode the input video when generating this layer. This is a required field.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="adaptivebframe_nodejs">
+<a href="#adaptivebframe_nodejs" style="color: inherit; text-decoration: inherit;">adaptive<wbr>BFrame</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether or not adaptive B-frames are to be used when encoding this layer. If not specified, the encoder will turn it on whenever the video profile permits its use.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="bframes_nodejs">
+<a href="#bframes_nodejs" style="color: inherit; text-decoration: inherit;">b<wbr>Frames</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The number of B-frames to be used when encoding this layer.  If not specified, the encoder chooses an appropriate number based on the video profile and level.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="bufferwindow_nodejs">
+<a href="#bufferwindow_nodejs" style="color: inherit; text-decoration: inherit;">buffer<wbr>Window</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The VBV buffer window length. The value should be in ISO 8601 format. The value should be in the range [0.1-100] seconds. The default is 5 seconds (for example, PT5S).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="entropymode_nodejs">
+<a href="#entropymode_nodejs" style="color: inherit; text-decoration: inherit;">entropy<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#entropymode">Entropy<wbr>Mode</a></span>
+    </dt>
+    <dd>{{% md %}}The entropy mode to be used for this layer. If not specified, the encoder chooses the mode that is appropriate for the profile and level.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="framerate_nodejs">
+<a href="#framerate_nodejs" style="color: inherit; text-decoration: inherit;">frame<wbr>Rate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The frame rate (in frames per second) at which to encode this layer. The value can be in the form of M/N where M and N are integers (For example, 30000/1001), or in the form of a number (For example, 30, or 29.97). The encoder enforces constraints on allowed frame rates based on the profile and level. If it is not specified, the encoder will use the same frame rate as the input video.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="height_nodejs">
+<a href="#height_nodejs" style="color: inherit; text-decoration: inherit;">height</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The height of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in height as the input.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="label_nodejs">
+<a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The alphanumeric label for this layer, which can be used in multiplexing different video and audio layers, or in naming the output file.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="level_nodejs">
+<a href="#level_nodejs" style="color: inherit; text-decoration: inherit;">level</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}We currently support Level up to 6.2. The value can be Auto, or a number that matches the H.264 profile. If not specified, the default is Auto, which lets the encoder choose the Level that is appropriate for this layer.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxbitrate_nodejs">
+<a href="#maxbitrate_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Bitrate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The maximum bitrate (in bits per second), at which the VBV buffer should be assumed to refill. If not specified, defaults to the same value as bitrate.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="profile_nodejs">
+<a href="#profile_nodejs" style="color: inherit; text-decoration: inherit;">profile</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#h264videoprofile">H264Video<wbr>Profile</a></span>
+    </dt>
+    <dd>{{% md %}}We currently support Baseline, Main, High, High422, High444. Default is Auto.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="referenceframes_nodejs">
+<a href="#referenceframes_nodejs" style="color: inherit; text-decoration: inherit;">reference<wbr>Frames</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The number of reference frames to be used when encoding this layer. If not specified, the encoder determines an appropriate number based on the encoder complexity setting.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="slices_nodejs">
+<a href="#slices_nodejs" style="color: inherit; text-decoration: inherit;">slices</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The number of slices to be used when encoding this layer. If not specified, default is zero, which means that encoder will use a single slice for each frame.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="width_nodejs">
+<a href="#width_nodejs" style="color: inherit; text-decoration: inherit;">width</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The width of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in width as the input.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="bitrate_python">
+<a href="#bitrate_python" style="color: inherit; text-decoration: inherit;">bitrate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The average bitrate in bits per second at which to encode the input video when generating this layer. This is a required field.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="adaptive_b_frame_python">
+<a href="#adaptive_b_frame_python" style="color: inherit; text-decoration: inherit;">adaptive_<wbr>b_<wbr>frame</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether or not adaptive B-frames are to be used when encoding this layer. If not specified, the encoder will turn it on whenever the video profile permits its use.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="b_frames_python">
+<a href="#b_frames_python" style="color: inherit; text-decoration: inherit;">b_<wbr>frames</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of B-frames to be used when encoding this layer.  If not specified, the encoder chooses an appropriate number based on the video profile and level.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="buffer_window_python">
+<a href="#buffer_window_python" style="color: inherit; text-decoration: inherit;">buffer_<wbr>window</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The VBV buffer window length. The value should be in ISO 8601 format. The value should be in the range [0.1-100] seconds. The default is 5 seconds (for example, PT5S).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="entropy_mode_python">
+<a href="#entropy_mode_python" style="color: inherit; text-decoration: inherit;">entropy_<wbr>mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str | <a href="#entropymode">Entropy<wbr>Mode</a></span>
+    </dt>
+    <dd>{{% md %}}The entropy mode to be used for this layer. If not specified, the encoder chooses the mode that is appropriate for the profile and level.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="frame_rate_python">
+<a href="#frame_rate_python" style="color: inherit; text-decoration: inherit;">frame_<wbr>rate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The frame rate (in frames per second) at which to encode this layer. The value can be in the form of M/N where M and N are integers (For example, 30000/1001), or in the form of a number (For example, 30, or 29.97). The encoder enforces constraints on allowed frame rates based on the profile and level. If it is not specified, the encoder will use the same frame rate as the input video.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="height_python">
+<a href="#height_python" style="color: inherit; text-decoration: inherit;">height</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The height of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in height as the input.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="label_python">
+<a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The alphanumeric label for this layer, which can be used in multiplexing different video and audio layers, or in naming the output file.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="level_python">
+<a href="#level_python" style="color: inherit; text-decoration: inherit;">level</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}We currently support Level up to 6.2. The value can be Auto, or a number that matches the H.264 profile. If not specified, the default is Auto, which lets the encoder choose the Level that is appropriate for this layer.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="max_bitrate_python">
+<a href="#max_bitrate_python" style="color: inherit; text-decoration: inherit;">max_<wbr>bitrate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum bitrate (in bits per second), at which the VBV buffer should be assumed to refill. If not specified, defaults to the same value as bitrate.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="profile_python">
+<a href="#profile_python" style="color: inherit; text-decoration: inherit;">profile</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str | <a href="#h264videoprofile">H264Video<wbr>Profile</a></span>
+    </dt>
+    <dd>{{% md %}}We currently support Baseline, Main, High, High422, High444. Default is Auto.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="reference_frames_python">
+<a href="#reference_frames_python" style="color: inherit; text-decoration: inherit;">reference_<wbr>frames</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of reference frames to be used when encoding this layer. If not specified, the encoder determines an appropriate number based on the encoder complexity setting.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="slices_python">
+<a href="#slices_python" style="color: inherit; text-decoration: inherit;">slices</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of slices to be used when encoding this layer. If not specified, default is zero, which means that encoder will use a single slice for each frame.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="width_python">
+<a href="#width_python" style="color: inherit; text-decoration: inherit;">width</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The width of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in width as the input.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="h264layerresponse">H264Layer<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="bitrate_csharp">
+<a href="#bitrate_csharp" style="color: inherit; text-decoration: inherit;">Bitrate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The average bitrate in bits per second at which to encode the input video when generating this layer. This is a required field.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="adaptivebframe_csharp">
+<a href="#adaptivebframe_csharp" style="color: inherit; text-decoration: inherit;">Adaptive<wbr>BFrame</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether or not adaptive B-frames are to be used when encoding this layer. If not specified, the encoder will turn it on whenever the video profile permits its use.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="bframes_csharp">
+<a href="#bframes_csharp" style="color: inherit; text-decoration: inherit;">BFrames</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of B-frames to be used when encoding this layer.  If not specified, the encoder chooses an appropriate number based on the video profile and level.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="bufferwindow_csharp">
+<a href="#bufferwindow_csharp" style="color: inherit; text-decoration: inherit;">Buffer<wbr>Window</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The VBV buffer window length. The value should be in ISO 8601 format. The value should be in the range [0.1-100] seconds. The default is 5 seconds (for example, PT5S).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="entropymode_csharp">
+<a href="#entropymode_csharp" style="color: inherit; text-decoration: inherit;">Entropy<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The entropy mode to be used for this layer. If not specified, the encoder chooses the mode that is appropriate for the profile and level.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="framerate_csharp">
+<a href="#framerate_csharp" style="color: inherit; text-decoration: inherit;">Frame<wbr>Rate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The frame rate (in frames per second) at which to encode this layer. The value can be in the form of M/N where M and N are integers (For example, 30000/1001), or in the form of a number (For example, 30, or 29.97). The encoder enforces constraints on allowed frame rates based on the profile and level. If it is not specified, the encoder will use the same frame rate as the input video.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="height_csharp">
+<a href="#height_csharp" style="color: inherit; text-decoration: inherit;">Height</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The height of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in height as the input.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="label_csharp">
+<a href="#label_csharp" style="color: inherit; text-decoration: inherit;">Label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The alphanumeric label for this layer, which can be used in multiplexing different video and audio layers, or in naming the output file.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="level_csharp">
+<a href="#level_csharp" style="color: inherit; text-decoration: inherit;">Level</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}We currently support Level up to 6.2. The value can be Auto, or a number that matches the H.264 profile. If not specified, the default is Auto, which lets the encoder choose the Level that is appropriate for this layer.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxbitrate_csharp">
+<a href="#maxbitrate_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Bitrate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum bitrate (in bits per second), at which the VBV buffer should be assumed to refill. If not specified, defaults to the same value as bitrate.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="profile_csharp">
+<a href="#profile_csharp" style="color: inherit; text-decoration: inherit;">Profile</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}We currently support Baseline, Main, High, High422, High444. Default is Auto.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="referenceframes_csharp">
+<a href="#referenceframes_csharp" style="color: inherit; text-decoration: inherit;">Reference<wbr>Frames</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of reference frames to be used when encoding this layer. If not specified, the encoder determines an appropriate number based on the encoder complexity setting.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="slices_csharp">
+<a href="#slices_csharp" style="color: inherit; text-decoration: inherit;">Slices</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of slices to be used when encoding this layer. If not specified, default is zero, which means that encoder will use a single slice for each frame.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="width_csharp">
+<a href="#width_csharp" style="color: inherit; text-decoration: inherit;">Width</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The width of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in width as the input.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="bitrate_go">
+<a href="#bitrate_go" style="color: inherit; text-decoration: inherit;">Bitrate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The average bitrate in bits per second at which to encode the input video when generating this layer. This is a required field.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="adaptivebframe_go">
+<a href="#adaptivebframe_go" style="color: inherit; text-decoration: inherit;">Adaptive<wbr>BFrame</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether or not adaptive B-frames are to be used when encoding this layer. If not specified, the encoder will turn it on whenever the video profile permits its use.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="bframes_go">
+<a href="#bframes_go" style="color: inherit; text-decoration: inherit;">BFrames</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of B-frames to be used when encoding this layer.  If not specified, the encoder chooses an appropriate number based on the video profile and level.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="bufferwindow_go">
+<a href="#bufferwindow_go" style="color: inherit; text-decoration: inherit;">Buffer<wbr>Window</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The VBV buffer window length. The value should be in ISO 8601 format. The value should be in the range [0.1-100] seconds. The default is 5 seconds (for example, PT5S).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="entropymode_go">
+<a href="#entropymode_go" style="color: inherit; text-decoration: inherit;">Entropy<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The entropy mode to be used for this layer. If not specified, the encoder chooses the mode that is appropriate for the profile and level.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="framerate_go">
+<a href="#framerate_go" style="color: inherit; text-decoration: inherit;">Frame<wbr>Rate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The frame rate (in frames per second) at which to encode this layer. The value can be in the form of M/N where M and N are integers (For example, 30000/1001), or in the form of a number (For example, 30, or 29.97). The encoder enforces constraints on allowed frame rates based on the profile and level. If it is not specified, the encoder will use the same frame rate as the input video.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="height_go">
+<a href="#height_go" style="color: inherit; text-decoration: inherit;">Height</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The height of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in height as the input.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="label_go">
+<a href="#label_go" style="color: inherit; text-decoration: inherit;">Label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The alphanumeric label for this layer, which can be used in multiplexing different video and audio layers, or in naming the output file.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="level_go">
+<a href="#level_go" style="color: inherit; text-decoration: inherit;">Level</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}We currently support Level up to 6.2. The value can be Auto, or a number that matches the H.264 profile. If not specified, the default is Auto, which lets the encoder choose the Level that is appropriate for this layer.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxbitrate_go">
+<a href="#maxbitrate_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Bitrate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum bitrate (in bits per second), at which the VBV buffer should be assumed to refill. If not specified, defaults to the same value as bitrate.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="profile_go">
+<a href="#profile_go" style="color: inherit; text-decoration: inherit;">Profile</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}We currently support Baseline, Main, High, High422, High444. Default is Auto.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="referenceframes_go">
+<a href="#referenceframes_go" style="color: inherit; text-decoration: inherit;">Reference<wbr>Frames</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of reference frames to be used when encoding this layer. If not specified, the encoder determines an appropriate number based on the encoder complexity setting.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="slices_go">
+<a href="#slices_go" style="color: inherit; text-decoration: inherit;">Slices</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of slices to be used when encoding this layer. If not specified, default is zero, which means that encoder will use a single slice for each frame.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="width_go">
+<a href="#width_go" style="color: inherit; text-decoration: inherit;">Width</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The width of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in width as the input.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="bitrate_nodejs">
+<a href="#bitrate_nodejs" style="color: inherit; text-decoration: inherit;">bitrate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The average bitrate in bits per second at which to encode the input video when generating this layer. This is a required field.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="adaptivebframe_nodejs">
+<a href="#adaptivebframe_nodejs" style="color: inherit; text-decoration: inherit;">adaptive<wbr>BFrame</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether or not adaptive B-frames are to be used when encoding this layer. If not specified, the encoder will turn it on whenever the video profile permits its use.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="bframes_nodejs">
+<a href="#bframes_nodejs" style="color: inherit; text-decoration: inherit;">b<wbr>Frames</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The number of B-frames to be used when encoding this layer.  If not specified, the encoder chooses an appropriate number based on the video profile and level.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="bufferwindow_nodejs">
+<a href="#bufferwindow_nodejs" style="color: inherit; text-decoration: inherit;">buffer<wbr>Window</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The VBV buffer window length. The value should be in ISO 8601 format. The value should be in the range [0.1-100] seconds. The default is 5 seconds (for example, PT5S).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="entropymode_nodejs">
+<a href="#entropymode_nodejs" style="color: inherit; text-decoration: inherit;">entropy<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The entropy mode to be used for this layer. If not specified, the encoder chooses the mode that is appropriate for the profile and level.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="framerate_nodejs">
+<a href="#framerate_nodejs" style="color: inherit; text-decoration: inherit;">frame<wbr>Rate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The frame rate (in frames per second) at which to encode this layer. The value can be in the form of M/N where M and N are integers (For example, 30000/1001), or in the form of a number (For example, 30, or 29.97). The encoder enforces constraints on allowed frame rates based on the profile and level. If it is not specified, the encoder will use the same frame rate as the input video.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="height_nodejs">
+<a href="#height_nodejs" style="color: inherit; text-decoration: inherit;">height</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The height of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in height as the input.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="label_nodejs">
+<a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The alphanumeric label for this layer, which can be used in multiplexing different video and audio layers, or in naming the output file.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="level_nodejs">
+<a href="#level_nodejs" style="color: inherit; text-decoration: inherit;">level</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}We currently support Level up to 6.2. The value can be Auto, or a number that matches the H.264 profile. If not specified, the default is Auto, which lets the encoder choose the Level that is appropriate for this layer.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxbitrate_nodejs">
+<a href="#maxbitrate_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Bitrate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The maximum bitrate (in bits per second), at which the VBV buffer should be assumed to refill. If not specified, defaults to the same value as bitrate.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="profile_nodejs">
+<a href="#profile_nodejs" style="color: inherit; text-decoration: inherit;">profile</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}We currently support Baseline, Main, High, High422, High444. Default is Auto.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="referenceframes_nodejs">
+<a href="#referenceframes_nodejs" style="color: inherit; text-decoration: inherit;">reference<wbr>Frames</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The number of reference frames to be used when encoding this layer. If not specified, the encoder determines an appropriate number based on the encoder complexity setting.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="slices_nodejs">
+<a href="#slices_nodejs" style="color: inherit; text-decoration: inherit;">slices</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The number of slices to be used when encoding this layer. If not specified, default is zero, which means that encoder will use a single slice for each frame.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="width_nodejs">
+<a href="#width_nodejs" style="color: inherit; text-decoration: inherit;">width</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The width of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in width as the input.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="bitrate_python">
+<a href="#bitrate_python" style="color: inherit; text-decoration: inherit;">bitrate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The average bitrate in bits per second at which to encode the input video when generating this layer. This is a required field.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="adaptive_b_frame_python">
+<a href="#adaptive_b_frame_python" style="color: inherit; text-decoration: inherit;">adaptive_<wbr>b_<wbr>frame</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether or not adaptive B-frames are to be used when encoding this layer. If not specified, the encoder will turn it on whenever the video profile permits its use.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="b_frames_python">
+<a href="#b_frames_python" style="color: inherit; text-decoration: inherit;">b_<wbr>frames</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of B-frames to be used when encoding this layer.  If not specified, the encoder chooses an appropriate number based on the video profile and level.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="buffer_window_python">
+<a href="#buffer_window_python" style="color: inherit; text-decoration: inherit;">buffer_<wbr>window</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The VBV buffer window length. The value should be in ISO 8601 format. The value should be in the range [0.1-100] seconds. The default is 5 seconds (for example, PT5S).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="entropy_mode_python">
+<a href="#entropy_mode_python" style="color: inherit; text-decoration: inherit;">entropy_<wbr>mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The entropy mode to be used for this layer. If not specified, the encoder chooses the mode that is appropriate for the profile and level.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="frame_rate_python">
+<a href="#frame_rate_python" style="color: inherit; text-decoration: inherit;">frame_<wbr>rate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The frame rate (in frames per second) at which to encode this layer. The value can be in the form of M/N where M and N are integers (For example, 30000/1001), or in the form of a number (For example, 30, or 29.97). The encoder enforces constraints on allowed frame rates based on the profile and level. If it is not specified, the encoder will use the same frame rate as the input video.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="height_python">
+<a href="#height_python" style="color: inherit; text-decoration: inherit;">height</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The height of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in height as the input.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="label_python">
+<a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The alphanumeric label for this layer, which can be used in multiplexing different video and audio layers, or in naming the output file.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="level_python">
+<a href="#level_python" style="color: inherit; text-decoration: inherit;">level</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}We currently support Level up to 6.2. The value can be Auto, or a number that matches the H.264 profile. If not specified, the default is Auto, which lets the encoder choose the Level that is appropriate for this layer.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="max_bitrate_python">
+<a href="#max_bitrate_python" style="color: inherit; text-decoration: inherit;">max_<wbr>bitrate</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum bitrate (in bits per second), at which the VBV buffer should be assumed to refill. If not specified, defaults to the same value as bitrate.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="profile_python">
+<a href="#profile_python" style="color: inherit; text-decoration: inherit;">profile</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}We currently support Baseline, Main, High, High422, High444. Default is Auto.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="reference_frames_python">
+<a href="#reference_frames_python" style="color: inherit; text-decoration: inherit;">reference_<wbr>frames</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of reference frames to be used when encoding this layer. If not specified, the encoder determines an appropriate number based on the encoder complexity setting.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="slices_python">
+<a href="#slices_python" style="color: inherit; text-decoration: inherit;">slices</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of slices to be used when encoding this layer. If not specified, default is zero, which means that encoder will use a single slice for each frame.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="width_python">
+<a href="#width_python" style="color: inherit; text-decoration: inherit;">width</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The width of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in width as the input.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="h264video">H264Video</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="complexity_csharp">
+<a href="#complexity_csharp" style="color: inherit; text-decoration: inherit;">Complexity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#h264complexity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>H264Complexity</a></span>
+    </dt>
+    <dd>{{% md %}}Tells the encoder how to choose its encoding settings. The default value is Balanced.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keyframeinterval_csharp">
+<a href="#keyframeinterval_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Frame<wbr>Interval</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The distance between two key frames. The value should be non-zero in the range [0.5, 20] seconds, specified in ISO 8601 format. The default is 2 seconds(PT2S). Note that this setting is ignored if VideoSyncMode.Passthrough is set, where the KeyFrameInterval value will follow the input source setting.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="label_csharp">
+<a href="#label_csharp" style="color: inherit; text-decoration: inherit;">Label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An optional label for the codec. The label can be used to control muxing behavior.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="layers_csharp">
+<a href="#layers_csharp" style="color: inherit; text-decoration: inherit;">Layers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#h264layer">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>H264Layer<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The collection of output H.264 layers to be produced by the encoder.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scenechangedetection_csharp">
+<a href="#scenechangedetection_csharp" style="color: inherit; text-decoration: inherit;">Scene<wbr>Change<wbr>Detection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether or not the encoder should insert key frames at scene changes. If not specified, the default is false. This flag should be set to true only when the encoder is being configured to produce a single output video.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="stretchmode_csharp">
+<a href="#stretchmode_csharp" style="color: inherit; text-decoration: inherit;">Stretch<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#stretchmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Stretch<wbr>Mode</a></span>
+    </dt>
+    <dd>{{% md %}}The resizing mode - how the input video will be resized to fit the desired output resolution(s). Default is AutoSize{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="syncmode_csharp">
+<a href="#syncmode_csharp" style="color: inherit; text-decoration: inherit;">Sync<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#videosyncmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Video<wbr>Sync<wbr>Mode</a></span>
+    </dt>
+    <dd>{{% md %}}The Video Sync Mode{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="complexity_go">
+<a href="#complexity_go" style="color: inherit; text-decoration: inherit;">Complexity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#h264complexity">H264Complexity</a></span>
+    </dt>
+    <dd>{{% md %}}Tells the encoder how to choose its encoding settings. The default value is Balanced.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keyframeinterval_go">
+<a href="#keyframeinterval_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Frame<wbr>Interval</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The distance between two key frames. The value should be non-zero in the range [0.5, 20] seconds, specified in ISO 8601 format. The default is 2 seconds(PT2S). Note that this setting is ignored if VideoSyncMode.Passthrough is set, where the KeyFrameInterval value will follow the input source setting.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="label_go">
+<a href="#label_go" style="color: inherit; text-decoration: inherit;">Label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An optional label for the codec. The label can be used to control muxing behavior.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="layers_go">
+<a href="#layers_go" style="color: inherit; text-decoration: inherit;">Layers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#h264layer">[]H264Layer</a></span>
+    </dt>
+    <dd>{{% md %}}The collection of output H.264 layers to be produced by the encoder.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scenechangedetection_go">
+<a href="#scenechangedetection_go" style="color: inherit; text-decoration: inherit;">Scene<wbr>Change<wbr>Detection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether or not the encoder should insert key frames at scene changes. If not specified, the default is false. This flag should be set to true only when the encoder is being configured to produce a single output video.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="stretchmode_go">
+<a href="#stretchmode_go" style="color: inherit; text-decoration: inherit;">Stretch<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#stretchmode">Stretch<wbr>Mode</a></span>
+    </dt>
+    <dd>{{% md %}}The resizing mode - how the input video will be resized to fit the desired output resolution(s). Default is AutoSize{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="syncmode_go">
+<a href="#syncmode_go" style="color: inherit; text-decoration: inherit;">Sync<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#videosyncmode">Video<wbr>Sync<wbr>Mode</a></span>
+    </dt>
+    <dd>{{% md %}}The Video Sync Mode{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="complexity_nodejs">
+<a href="#complexity_nodejs" style="color: inherit; text-decoration: inherit;">complexity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#h264complexity">H264Complexity</a></span>
+    </dt>
+    <dd>{{% md %}}Tells the encoder how to choose its encoding settings. The default value is Balanced.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keyframeinterval_nodejs">
+<a href="#keyframeinterval_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Frame<wbr>Interval</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The distance between two key frames. The value should be non-zero in the range [0.5, 20] seconds, specified in ISO 8601 format. The default is 2 seconds(PT2S). Note that this setting is ignored if VideoSyncMode.Passthrough is set, where the KeyFrameInterval value will follow the input source setting.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="label_nodejs">
+<a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An optional label for the codec. The label can be used to control muxing behavior.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="layers_nodejs">
+<a href="#layers_nodejs" style="color: inherit; text-decoration: inherit;">layers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#h264layer">H264Layer[]</a></span>
+    </dt>
+    <dd>{{% md %}}The collection of output H.264 layers to be produced by the encoder.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scenechangedetection_nodejs">
+<a href="#scenechangedetection_nodejs" style="color: inherit; text-decoration: inherit;">scene<wbr>Change<wbr>Detection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether or not the encoder should insert key frames at scene changes. If not specified, the default is false. This flag should be set to true only when the encoder is being configured to produce a single output video.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="stretchmode_nodejs">
+<a href="#stretchmode_nodejs" style="color: inherit; text-decoration: inherit;">stretch<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#stretchmode">Stretch<wbr>Mode</a></span>
+    </dt>
+    <dd>{{% md %}}The resizing mode - how the input video will be resized to fit the desired output resolution(s). Default is AutoSize{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="syncmode_nodejs">
+<a href="#syncmode_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#videosyncmode">Video<wbr>Sync<wbr>Mode</a></span>
+    </dt>
+    <dd>{{% md %}}The Video Sync Mode{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="complexity_python">
+<a href="#complexity_python" style="color: inherit; text-decoration: inherit;">complexity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str | <a href="#h264complexity">H264Complexity</a></span>
+    </dt>
+    <dd>{{% md %}}Tells the encoder how to choose its encoding settings. The default value is Balanced.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="key_frame_interval_python">
+<a href="#key_frame_interval_python" style="color: inherit; text-decoration: inherit;">key_<wbr>frame_<wbr>interval</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The distance between two key frames. The value should be non-zero in the range [0.5, 20] seconds, specified in ISO 8601 format. The default is 2 seconds(PT2S). Note that this setting is ignored if VideoSyncMode.Passthrough is set, where the KeyFrameInterval value will follow the input source setting.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="label_python">
+<a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}An optional label for the codec. The label can be used to control muxing behavior.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="layers_python">
+<a href="#layers_python" style="color: inherit; text-decoration: inherit;">layers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#h264layer">Sequence[H264Layer<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}The collection of output H.264 layers to be produced by the encoder.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scene_change_detection_python">
+<a href="#scene_change_detection_python" style="color: inherit; text-decoration: inherit;">scene_<wbr>change_<wbr>detection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether or not the encoder should insert key frames at scene changes. If not specified, the default is false. This flag should be set to true only when the encoder is being configured to produce a single output video.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="stretch_mode_python">
+<a href="#stretch_mode_python" style="color: inherit; text-decoration: inherit;">stretch_<wbr>mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str | <a href="#stretchmode">Stretch<wbr>Mode</a></span>
+    </dt>
+    <dd>{{% md %}}The resizing mode - how the input video will be resized to fit the desired output resolution(s). Default is AutoSize{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sync_mode_python">
+<a href="#sync_mode_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str | <a href="#videosyncmode">Video<wbr>Sync<wbr>Mode</a></span>
+    </dt>
+    <dd>{{% md %}}The Video Sync Mode{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="h264videoprofile">H264Video<wbr>Profile</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Auto</dt>
+    <dd>Auto{{% md %}}Tells the encoder to automatically determine the appropriate H.264 profile.{{% /md %}}</dd>
+    <dt>Baseline</dt>
+    <dd>Baseline{{% md %}}Baseline profile{{% /md %}}</dd>
+    <dt>Main</dt>
+    <dd>Main{{% md %}}Main profile{{% /md %}}</dd>
+    <dt>High</dt>
+    <dd>High{{% md %}}High profile.{{% /md %}}</dd>
+    <dt>High422</dt>
+    <dd>High422{{% md %}}High 4:2:2 profile.{{% /md %}}</dd>
+    <dt>High444</dt>
+    <dd>High444{{% md %}}High 4:4:4 predictive profile.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>H264Video<wbr>Profile<wbr>Auto</dt>
+    <dd>Auto{{% md %}}Tells the encoder to automatically determine the appropriate H.264 profile.{{% /md %}}</dd>
+    <dt>H264Video<wbr>Profile<wbr>Baseline</dt>
+    <dd>Baseline{{% md %}}Baseline profile{{% /md %}}</dd>
+    <dt>H264Video<wbr>Profile<wbr>Main</dt>
+    <dd>Main{{% md %}}Main profile{{% /md %}}</dd>
+    <dt>H264Video<wbr>Profile<wbr>High</dt>
+    <dd>High{{% md %}}High profile.{{% /md %}}</dd>
+    <dt>H264Video<wbr>Profile<wbr>High422</dt>
+    <dd>High422{{% md %}}High 4:2:2 profile.{{% /md %}}</dd>
+    <dt>H264Video<wbr>Profile<wbr>High444</dt>
+    <dd>High444{{% md %}}High 4:4:4 predictive profile.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Auto</dt>
+    <dd>Auto{{% md %}}Tells the encoder to automatically determine the appropriate H.264 profile.{{% /md %}}</dd>
+    <dt>Baseline</dt>
+    <dd>Baseline{{% md %}}Baseline profile{{% /md %}}</dd>
+    <dt>Main</dt>
+    <dd>Main{{% md %}}Main profile{{% /md %}}</dd>
+    <dt>High</dt>
+    <dd>High{{% md %}}High profile.{{% /md %}}</dd>
+    <dt>High422</dt>
+    <dd>High422{{% md %}}High 4:2:2 profile.{{% /md %}}</dd>
+    <dt>High444</dt>
+    <dd>High444{{% md %}}High 4:4:4 predictive profile.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>AUTO</dt>
+    <dd>Auto{{% md %}}Tells the encoder to automatically determine the appropriate H.264 profile.{{% /md %}}</dd>
+    <dt>BASELINE</dt>
+    <dd>Baseline{{% md %}}Baseline profile{{% /md %}}</dd>
+    <dt>MAIN</dt>
+    <dd>Main{{% md %}}Main profile{{% /md %}}</dd>
+    <dt>HIGH</dt>
+    <dd>High{{% md %}}High profile.{{% /md %}}</dd>
+    <dt>HIGH422</dt>
+    <dd>High422{{% md %}}High 4:2:2 profile.{{% /md %}}</dd>
+    <dt>HIGH444</dt>
+    <dd>High444{{% md %}}High 4:4:4 predictive profile.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="h264videoresponse">H264Video<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="complexity_csharp">
+<a href="#complexity_csharp" style="color: inherit; text-decoration: inherit;">Complexity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Tells the encoder how to choose its encoding settings. The default value is Balanced.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keyframeinterval_csharp">
+<a href="#keyframeinterval_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Frame<wbr>Interval</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The distance between two key frames. The value should be non-zero in the range [0.5, 20] seconds, specified in ISO 8601 format. The default is 2 seconds(PT2S). Note that this setting is ignored if VideoSyncMode.Passthrough is set, where the KeyFrameInterval value will follow the input source setting.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="label_csharp">
+<a href="#label_csharp" style="color: inherit; text-decoration: inherit;">Label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An optional label for the codec. The label can be used to control muxing behavior.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="layers_csharp">
+<a href="#layers_csharp" style="color: inherit; text-decoration: inherit;">Layers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#h264layerresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>H264Layer<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The collection of output H.264 layers to be produced by the encoder.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scenechangedetection_csharp">
+<a href="#scenechangedetection_csharp" style="color: inherit; text-decoration: inherit;">Scene<wbr>Change<wbr>Detection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether or not the encoder should insert key frames at scene changes. If not specified, the default is false. This flag should be set to true only when the encoder is being configured to produce a single output video.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="stretchmode_csharp">
+<a href="#stretchmode_csharp" style="color: inherit; text-decoration: inherit;">Stretch<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resizing mode - how the input video will be resized to fit the desired output resolution(s). Default is AutoSize{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="syncmode_csharp">
+<a href="#syncmode_csharp" style="color: inherit; text-decoration: inherit;">Sync<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Video Sync Mode{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="complexity_go">
+<a href="#complexity_go" style="color: inherit; text-decoration: inherit;">Complexity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Tells the encoder how to choose its encoding settings. The default value is Balanced.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keyframeinterval_go">
+<a href="#keyframeinterval_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Frame<wbr>Interval</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The distance between two key frames. The value should be non-zero in the range [0.5, 20] seconds, specified in ISO 8601 format. The default is 2 seconds(PT2S). Note that this setting is ignored if VideoSyncMode.Passthrough is set, where the KeyFrameInterval value will follow the input source setting.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="label_go">
+<a href="#label_go" style="color: inherit; text-decoration: inherit;">Label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An optional label for the codec. The label can be used to control muxing behavior.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="layers_go">
+<a href="#layers_go" style="color: inherit; text-decoration: inherit;">Layers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#h264layerresponse">[]H264Layer<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The collection of output H.264 layers to be produced by the encoder.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scenechangedetection_go">
+<a href="#scenechangedetection_go" style="color: inherit; text-decoration: inherit;">Scene<wbr>Change<wbr>Detection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether or not the encoder should insert key frames at scene changes. If not specified, the default is false. This flag should be set to true only when the encoder is being configured to produce a single output video.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="stretchmode_go">
+<a href="#stretchmode_go" style="color: inherit; text-decoration: inherit;">Stretch<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resizing mode - how the input video will be resized to fit the desired output resolution(s). Default is AutoSize{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="syncmode_go">
+<a href="#syncmode_go" style="color: inherit; text-decoration: inherit;">Sync<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Video Sync Mode{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="complexity_nodejs">
+<a href="#complexity_nodejs" style="color: inherit; text-decoration: inherit;">complexity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Tells the encoder how to choose its encoding settings. The default value is Balanced.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keyframeinterval_nodejs">
+<a href="#keyframeinterval_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Frame<wbr>Interval</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The distance between two key frames. The value should be non-zero in the range [0.5, 20] seconds, specified in ISO 8601 format. The default is 2 seconds(PT2S). Note that this setting is ignored if VideoSyncMode.Passthrough is set, where the KeyFrameInterval value will follow the input source setting.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="label_nodejs">
+<a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An optional label for the codec. The label can be used to control muxing behavior.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="layers_nodejs">
+<a href="#layers_nodejs" style="color: inherit; text-decoration: inherit;">layers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#h264layerresponse">H264Layer<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}The collection of output H.264 layers to be produced by the encoder.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scenechangedetection_nodejs">
+<a href="#scenechangedetection_nodejs" style="color: inherit; text-decoration: inherit;">scene<wbr>Change<wbr>Detection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether or not the encoder should insert key frames at scene changes. If not specified, the default is false. This flag should be set to true only when the encoder is being configured to produce a single output video.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="stretchmode_nodejs">
+<a href="#stretchmode_nodejs" style="color: inherit; text-decoration: inherit;">stretch<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resizing mode - how the input video will be resized to fit the desired output resolution(s). Default is AutoSize{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="syncmode_nodejs">
+<a href="#syncmode_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Video Sync Mode{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="complexity_python">
+<a href="#complexity_python" style="color: inherit; text-decoration: inherit;">complexity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Tells the encoder how to choose its encoding settings. The default value is Balanced.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="key_frame_interval_python">
+<a href="#key_frame_interval_python" style="color: inherit; text-decoration: inherit;">key_<wbr>frame_<wbr>interval</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The distance between two key frames. The value should be non-zero in the range [0.5, 20] seconds, specified in ISO 8601 format. The default is 2 seconds(PT2S). Note that this setting is ignored if VideoSyncMode.Passthrough is set, where the KeyFrameInterval value will follow the input source setting.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="label_python">
+<a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}An optional label for the codec. The label can be used to control muxing behavior.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="layers_python">
+<a href="#layers_python" style="color: inherit; text-decoration: inherit;">layers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#h264layerresponse">Sequence[H264Layer<wbr>Response<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}The collection of output H.264 layers to be produced by the encoder.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scene_change_detection_python">
+<a href="#scene_change_detection_python" style="color: inherit; text-decoration: inherit;">scene_<wbr>change_<wbr>detection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether or not the encoder should insert key frames at scene changes. If not specified, the default is false. This flag should be set to true only when the encoder is being configured to produce a single output video.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="stretch_mode_python">
+<a href="#stretch_mode_python" style="color: inherit; text-decoration: inherit;">stretch_<wbr>mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The resizing mode - how the input video will be resized to fit the desired output resolution(s). Default is AutoSize{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sync_mode_python">
+<a href="#sync_mode_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Video Sync Mode{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="image">Image</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="start_csharp">
+<a href="#start_csharp" style="color: inherit; text-decoration: inherit;">Start</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The position in the input video from where to start generating thumbnails. The value can be in ISO 8601 format (For example, PT05S to start at 5 seconds), or a frame count (For example, 10 to start at the 10th frame), or a relative value to stream duration (For example, 10% to start at 10% of stream duration). Also supports a macro {Best}, which tells the encoder to select the best thumbnail from the first few seconds of the video and will only produce one thumbnail, no matter what other settings are for Step and Range. The default value is macro {Best}.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keyframeinterval_csharp">
+<a href="#keyframeinterval_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Frame<wbr>Interval</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The distance between two key frames. The value should be non-zero in the range [0.5, 20] seconds, specified in ISO 8601 format. The default is 2 seconds(PT2S). Note that this setting is ignored if VideoSyncMode.Passthrough is set, where the KeyFrameInterval value will follow the input source setting.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="label_csharp">
+<a href="#label_csharp" style="color: inherit; text-decoration: inherit;">Label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An optional label for the codec. The label can be used to control muxing behavior.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="range_csharp">
+<a href="#range_csharp" style="color: inherit; text-decoration: inherit;">Range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The position relative to transform preset start time in the input video at which to stop generating thumbnails. The value can be in ISO 8601 format (For example, PT5M30S to stop at 5 minutes and 30 seconds from start time), or a frame count (For example, 300 to stop at the 300th frame from the frame at start time. If this value is 1, it means only producing one thumbnail at start time), or a relative value to the stream duration (For example, 50% to stop at half of stream duration from start time). The default value is 100%, which means to stop at the end of the stream.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="step_csharp">
+<a href="#step_csharp" style="color: inherit; text-decoration: inherit;">Step</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The intervals at which thumbnails are generated. The value can be in ISO 8601 format (For example, PT05S for one image every 5 seconds), or a frame count (For example, 30 for one image every 30 frames), or a relative value to stream duration (For example, 10% for one image every 10% of stream duration). Note: Step value will affect the first generated thumbnail, which may not be exactly the one specified at transform preset start time. This is due to the encoder, which tries to select the best thumbnail between start time and Step position from start time as the first output. As the default value is 10%, it means if stream has long duration, the first generated thumbnail might be far away from the one specified at start time. Try to select reasonable value for Step if the first thumbnail is expected close to start time, or set Range value at 1 if only one thumbnail is needed at start time.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="stretchmode_csharp">
+<a href="#stretchmode_csharp" style="color: inherit; text-decoration: inherit;">Stretch<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#stretchmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Stretch<wbr>Mode</a></span>
+    </dt>
+    <dd>{{% md %}}The resizing mode - how the input video will be resized to fit the desired output resolution(s). Default is AutoSize{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="syncmode_csharp">
+<a href="#syncmode_csharp" style="color: inherit; text-decoration: inherit;">Sync<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#videosyncmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Video<wbr>Sync<wbr>Mode</a></span>
+    </dt>
+    <dd>{{% md %}}The Video Sync Mode{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="start_go">
+<a href="#start_go" style="color: inherit; text-decoration: inherit;">Start</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The position in the input video from where to start generating thumbnails. The value can be in ISO 8601 format (For example, PT05S to start at 5 seconds), or a frame count (For example, 10 to start at the 10th frame), or a relative value to stream duration (For example, 10% to start at 10% of stream duration). Also supports a macro {Best}, which tells the encoder to select the best thumbnail from the first few seconds of the video and will only produce one thumbnail, no matter what other settings are for Step and Range. The default value is macro {Best}.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keyframeinterval_go">
+<a href="#keyframeinterval_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Frame<wbr>Interval</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The distance between two key frames. The value should be non-zero in the range [0.5, 20] seconds, specified in ISO 8601 format. The default is 2 seconds(PT2S). Note that this setting is ignored if VideoSyncMode.Passthrough is set, where the KeyFrameInterval value will follow the input source setting.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="label_go">
+<a href="#label_go" style="color: inherit; text-decoration: inherit;">Label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An optional label for the codec. The label can be used to control muxing behavior.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="range_go">
+<a href="#range_go" style="color: inherit; text-decoration: inherit;">Range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The position relative to transform preset start time in the input video at which to stop generating thumbnails. The value can be in ISO 8601 format (For example, PT5M30S to stop at 5 minutes and 30 seconds from start time), or a frame count (For example, 300 to stop at the 300th frame from the frame at start time. If this value is 1, it means only producing one thumbnail at start time), or a relative value to the stream duration (For example, 50% to stop at half of stream duration from start time). The default value is 100%, which means to stop at the end of the stream.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="step_go">
+<a href="#step_go" style="color: inherit; text-decoration: inherit;">Step</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The intervals at which thumbnails are generated. The value can be in ISO 8601 format (For example, PT05S for one image every 5 seconds), or a frame count (For example, 30 for one image every 30 frames), or a relative value to stream duration (For example, 10% for one image every 10% of stream duration). Note: Step value will affect the first generated thumbnail, which may not be exactly the one specified at transform preset start time. This is due to the encoder, which tries to select the best thumbnail between start time and Step position from start time as the first output. As the default value is 10%, it means if stream has long duration, the first generated thumbnail might be far away from the one specified at start time. Try to select reasonable value for Step if the first thumbnail is expected close to start time, or set Range value at 1 if only one thumbnail is needed at start time.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="stretchmode_go">
+<a href="#stretchmode_go" style="color: inherit; text-decoration: inherit;">Stretch<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#stretchmode">Stretch<wbr>Mode</a></span>
+    </dt>
+    <dd>{{% md %}}The resizing mode - how the input video will be resized to fit the desired output resolution(s). Default is AutoSize{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="syncmode_go">
+<a href="#syncmode_go" style="color: inherit; text-decoration: inherit;">Sync<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#videosyncmode">Video<wbr>Sync<wbr>Mode</a></span>
+    </dt>
+    <dd>{{% md %}}The Video Sync Mode{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="start_nodejs">
+<a href="#start_nodejs" style="color: inherit; text-decoration: inherit;">start</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The position in the input video from where to start generating thumbnails. The value can be in ISO 8601 format (For example, PT05S to start at 5 seconds), or a frame count (For example, 10 to start at the 10th frame), or a relative value to stream duration (For example, 10% to start at 10% of stream duration). Also supports a macro {Best}, which tells the encoder to select the best thumbnail from the first few seconds of the video and will only produce one thumbnail, no matter what other settings are for Step and Range. The default value is macro {Best}.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keyframeinterval_nodejs">
+<a href="#keyframeinterval_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Frame<wbr>Interval</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The distance between two key frames. The value should be non-zero in the range [0.5, 20] seconds, specified in ISO 8601 format. The default is 2 seconds(PT2S). Note that this setting is ignored if VideoSyncMode.Passthrough is set, where the KeyFrameInterval value will follow the input source setting.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="label_nodejs">
+<a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An optional label for the codec. The label can be used to control muxing behavior.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="range_nodejs">
+<a href="#range_nodejs" style="color: inherit; text-decoration: inherit;">range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The position relative to transform preset start time in the input video at which to stop generating thumbnails. The value can be in ISO 8601 format (For example, PT5M30S to stop at 5 minutes and 30 seconds from start time), or a frame count (For example, 300 to stop at the 300th frame from the frame at start time. If this value is 1, it means only producing one thumbnail at start time), or a relative value to the stream duration (For example, 50% to stop at half of stream duration from start time). The default value is 100%, which means to stop at the end of the stream.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="step_nodejs">
+<a href="#step_nodejs" style="color: inherit; text-decoration: inherit;">step</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The intervals at which thumbnails are generated. The value can be in ISO 8601 format (For example, PT05S for one image every 5 seconds), or a frame count (For example, 30 for one image every 30 frames), or a relative value to stream duration (For example, 10% for one image every 10% of stream duration). Note: Step value will affect the first generated thumbnail, which may not be exactly the one specified at transform preset start time. This is due to the encoder, which tries to select the best thumbnail between start time and Step position from start time as the first output. As the default value is 10%, it means if stream has long duration, the first generated thumbnail might be far away from the one specified at start time. Try to select reasonable value for Step if the first thumbnail is expected close to start time, or set Range value at 1 if only one thumbnail is needed at start time.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="stretchmode_nodejs">
+<a href="#stretchmode_nodejs" style="color: inherit; text-decoration: inherit;">stretch<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#stretchmode">Stretch<wbr>Mode</a></span>
+    </dt>
+    <dd>{{% md %}}The resizing mode - how the input video will be resized to fit the desired output resolution(s). Default is AutoSize{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="syncmode_nodejs">
+<a href="#syncmode_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#videosyncmode">Video<wbr>Sync<wbr>Mode</a></span>
+    </dt>
+    <dd>{{% md %}}The Video Sync Mode{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="start_python">
+<a href="#start_python" style="color: inherit; text-decoration: inherit;">start</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The position in the input video from where to start generating thumbnails. The value can be in ISO 8601 format (For example, PT05S to start at 5 seconds), or a frame count (For example, 10 to start at the 10th frame), or a relative value to stream duration (For example, 10% to start at 10% of stream duration). Also supports a macro {Best}, which tells the encoder to select the best thumbnail from the first few seconds of the video and will only produce one thumbnail, no matter what other settings are for Step and Range. The default value is macro {Best}.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="key_frame_interval_python">
+<a href="#key_frame_interval_python" style="color: inherit; text-decoration: inherit;">key_<wbr>frame_<wbr>interval</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The distance between two key frames. The value should be non-zero in the range [0.5, 20] seconds, specified in ISO 8601 format. The default is 2 seconds(PT2S). Note that this setting is ignored if VideoSyncMode.Passthrough is set, where the KeyFrameInterval value will follow the input source setting.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="label_python">
+<a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}An optional label for the codec. The label can be used to control muxing behavior.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="range_python">
+<a href="#range_python" style="color: inherit; text-decoration: inherit;">range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The position relative to transform preset start time in the input video at which to stop generating thumbnails. The value can be in ISO 8601 format (For example, PT5M30S to stop at 5 minutes and 30 seconds from start time), or a frame count (For example, 300 to stop at the 300th frame from the frame at start time. If this value is 1, it means only producing one thumbnail at start time), or a relative value to the stream duration (For example, 50% to stop at half of stream duration from start time). The default value is 100%, which means to stop at the end of the stream.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="step_python">
+<a href="#step_python" style="color: inherit; text-decoration: inherit;">step</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The intervals at which thumbnails are generated. The value can be in ISO 8601 format (For example, PT05S for one image every 5 seconds), or a frame count (For example, 30 for one image every 30 frames), or a relative value to stream duration (For example, 10% for one image every 10% of stream duration). Note: Step value will affect the first generated thumbnail, which may not be exactly the one specified at transform preset start time. This is due to the encoder, which tries to select the best thumbnail between start time and Step position from start time as the first output. As the default value is 10%, it means if stream has long duration, the first generated thumbnail might be far away from the one specified at start time. Try to select reasonable value for Step if the first thumbnail is expected close to start time, or set Range value at 1 if only one thumbnail is needed at start time.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="stretch_mode_python">
+<a href="#stretch_mode_python" style="color: inherit; text-decoration: inherit;">stretch_<wbr>mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str | <a href="#stretchmode">Stretch<wbr>Mode</a></span>
+    </dt>
+    <dd>{{% md %}}The resizing mode - how the input video will be resized to fit the desired output resolution(s). Default is AutoSize{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sync_mode_python">
+<a href="#sync_mode_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str | <a href="#videosyncmode">Video<wbr>Sync<wbr>Mode</a></span>
+    </dt>
+    <dd>{{% md %}}The Video Sync Mode{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
 <h4 id="imageformat">Image<wbr>Format</h4>
 
 {{% choosable language csharp %}}
@@ -3294,6 +5800,1690 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The pattern of the file names for the generated output files. The following macros are supported in the file name: {Basename} - An expansion macro that will use the name of the input video file. If the base name(the file suffix is not included) of the input video file is less than 32 characters long, the base name of input video files will be used. If the length of base name of the input video file exceeds 32 characters, the base name is truncated to the first 32 characters in total length. {Extension} - The appropriate extension for this format. {Label} - The label assigned to the codec/layer. {Index} - A unique index for thumbnails. Only applicable to thumbnails. {Bitrate} - The audio/video bitrate. Not applicable to thumbnails. {Codec} - The type of the audio/video codec. Any unsubstituted macros will be collapsed and removed from the filename.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="imageresponse">Image<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="start_csharp">
+<a href="#start_csharp" style="color: inherit; text-decoration: inherit;">Start</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The position in the input video from where to start generating thumbnails. The value can be in ISO 8601 format (For example, PT05S to start at 5 seconds), or a frame count (For example, 10 to start at the 10th frame), or a relative value to stream duration (For example, 10% to start at 10% of stream duration). Also supports a macro {Best}, which tells the encoder to select the best thumbnail from the first few seconds of the video and will only produce one thumbnail, no matter what other settings are for Step and Range. The default value is macro {Best}.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keyframeinterval_csharp">
+<a href="#keyframeinterval_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Frame<wbr>Interval</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The distance between two key frames. The value should be non-zero in the range [0.5, 20] seconds, specified in ISO 8601 format. The default is 2 seconds(PT2S). Note that this setting is ignored if VideoSyncMode.Passthrough is set, where the KeyFrameInterval value will follow the input source setting.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="label_csharp">
+<a href="#label_csharp" style="color: inherit; text-decoration: inherit;">Label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An optional label for the codec. The label can be used to control muxing behavior.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="range_csharp">
+<a href="#range_csharp" style="color: inherit; text-decoration: inherit;">Range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The position relative to transform preset start time in the input video at which to stop generating thumbnails. The value can be in ISO 8601 format (For example, PT5M30S to stop at 5 minutes and 30 seconds from start time), or a frame count (For example, 300 to stop at the 300th frame from the frame at start time. If this value is 1, it means only producing one thumbnail at start time), or a relative value to the stream duration (For example, 50% to stop at half of stream duration from start time). The default value is 100%, which means to stop at the end of the stream.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="step_csharp">
+<a href="#step_csharp" style="color: inherit; text-decoration: inherit;">Step</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The intervals at which thumbnails are generated. The value can be in ISO 8601 format (For example, PT05S for one image every 5 seconds), or a frame count (For example, 30 for one image every 30 frames), or a relative value to stream duration (For example, 10% for one image every 10% of stream duration). Note: Step value will affect the first generated thumbnail, which may not be exactly the one specified at transform preset start time. This is due to the encoder, which tries to select the best thumbnail between start time and Step position from start time as the first output. As the default value is 10%, it means if stream has long duration, the first generated thumbnail might be far away from the one specified at start time. Try to select reasonable value for Step if the first thumbnail is expected close to start time, or set Range value at 1 if only one thumbnail is needed at start time.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="stretchmode_csharp">
+<a href="#stretchmode_csharp" style="color: inherit; text-decoration: inherit;">Stretch<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resizing mode - how the input video will be resized to fit the desired output resolution(s). Default is AutoSize{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="syncmode_csharp">
+<a href="#syncmode_csharp" style="color: inherit; text-decoration: inherit;">Sync<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Video Sync Mode{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="start_go">
+<a href="#start_go" style="color: inherit; text-decoration: inherit;">Start</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The position in the input video from where to start generating thumbnails. The value can be in ISO 8601 format (For example, PT05S to start at 5 seconds), or a frame count (For example, 10 to start at the 10th frame), or a relative value to stream duration (For example, 10% to start at 10% of stream duration). Also supports a macro {Best}, which tells the encoder to select the best thumbnail from the first few seconds of the video and will only produce one thumbnail, no matter what other settings are for Step and Range. The default value is macro {Best}.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keyframeinterval_go">
+<a href="#keyframeinterval_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Frame<wbr>Interval</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The distance between two key frames. The value should be non-zero in the range [0.5, 20] seconds, specified in ISO 8601 format. The default is 2 seconds(PT2S). Note that this setting is ignored if VideoSyncMode.Passthrough is set, where the KeyFrameInterval value will follow the input source setting.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="label_go">
+<a href="#label_go" style="color: inherit; text-decoration: inherit;">Label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An optional label for the codec. The label can be used to control muxing behavior.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="range_go">
+<a href="#range_go" style="color: inherit; text-decoration: inherit;">Range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The position relative to transform preset start time in the input video at which to stop generating thumbnails. The value can be in ISO 8601 format (For example, PT5M30S to stop at 5 minutes and 30 seconds from start time), or a frame count (For example, 300 to stop at the 300th frame from the frame at start time. If this value is 1, it means only producing one thumbnail at start time), or a relative value to the stream duration (For example, 50% to stop at half of stream duration from start time). The default value is 100%, which means to stop at the end of the stream.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="step_go">
+<a href="#step_go" style="color: inherit; text-decoration: inherit;">Step</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The intervals at which thumbnails are generated. The value can be in ISO 8601 format (For example, PT05S for one image every 5 seconds), or a frame count (For example, 30 for one image every 30 frames), or a relative value to stream duration (For example, 10% for one image every 10% of stream duration). Note: Step value will affect the first generated thumbnail, which may not be exactly the one specified at transform preset start time. This is due to the encoder, which tries to select the best thumbnail between start time and Step position from start time as the first output. As the default value is 10%, it means if stream has long duration, the first generated thumbnail might be far away from the one specified at start time. Try to select reasonable value for Step if the first thumbnail is expected close to start time, or set Range value at 1 if only one thumbnail is needed at start time.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="stretchmode_go">
+<a href="#stretchmode_go" style="color: inherit; text-decoration: inherit;">Stretch<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resizing mode - how the input video will be resized to fit the desired output resolution(s). Default is AutoSize{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="syncmode_go">
+<a href="#syncmode_go" style="color: inherit; text-decoration: inherit;">Sync<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Video Sync Mode{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="start_nodejs">
+<a href="#start_nodejs" style="color: inherit; text-decoration: inherit;">start</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The position in the input video from where to start generating thumbnails. The value can be in ISO 8601 format (For example, PT05S to start at 5 seconds), or a frame count (For example, 10 to start at the 10th frame), or a relative value to stream duration (For example, 10% to start at 10% of stream duration). Also supports a macro {Best}, which tells the encoder to select the best thumbnail from the first few seconds of the video and will only produce one thumbnail, no matter what other settings are for Step and Range. The default value is macro {Best}.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keyframeinterval_nodejs">
+<a href="#keyframeinterval_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Frame<wbr>Interval</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The distance between two key frames. The value should be non-zero in the range [0.5, 20] seconds, specified in ISO 8601 format. The default is 2 seconds(PT2S). Note that this setting is ignored if VideoSyncMode.Passthrough is set, where the KeyFrameInterval value will follow the input source setting.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="label_nodejs">
+<a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An optional label for the codec. The label can be used to control muxing behavior.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="range_nodejs">
+<a href="#range_nodejs" style="color: inherit; text-decoration: inherit;">range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The position relative to transform preset start time in the input video at which to stop generating thumbnails. The value can be in ISO 8601 format (For example, PT5M30S to stop at 5 minutes and 30 seconds from start time), or a frame count (For example, 300 to stop at the 300th frame from the frame at start time. If this value is 1, it means only producing one thumbnail at start time), or a relative value to the stream duration (For example, 50% to stop at half of stream duration from start time). The default value is 100%, which means to stop at the end of the stream.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="step_nodejs">
+<a href="#step_nodejs" style="color: inherit; text-decoration: inherit;">step</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The intervals at which thumbnails are generated. The value can be in ISO 8601 format (For example, PT05S for one image every 5 seconds), or a frame count (For example, 30 for one image every 30 frames), or a relative value to stream duration (For example, 10% for one image every 10% of stream duration). Note: Step value will affect the first generated thumbnail, which may not be exactly the one specified at transform preset start time. This is due to the encoder, which tries to select the best thumbnail between start time and Step position from start time as the first output. As the default value is 10%, it means if stream has long duration, the first generated thumbnail might be far away from the one specified at start time. Try to select reasonable value for Step if the first thumbnail is expected close to start time, or set Range value at 1 if only one thumbnail is needed at start time.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="stretchmode_nodejs">
+<a href="#stretchmode_nodejs" style="color: inherit; text-decoration: inherit;">stretch<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resizing mode - how the input video will be resized to fit the desired output resolution(s). Default is AutoSize{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="syncmode_nodejs">
+<a href="#syncmode_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Video Sync Mode{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="start_python">
+<a href="#start_python" style="color: inherit; text-decoration: inherit;">start</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The position in the input video from where to start generating thumbnails. The value can be in ISO 8601 format (For example, PT05S to start at 5 seconds), or a frame count (For example, 10 to start at the 10th frame), or a relative value to stream duration (For example, 10% to start at 10% of stream duration). Also supports a macro {Best}, which tells the encoder to select the best thumbnail from the first few seconds of the video and will only produce one thumbnail, no matter what other settings are for Step and Range. The default value is macro {Best}.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="key_frame_interval_python">
+<a href="#key_frame_interval_python" style="color: inherit; text-decoration: inherit;">key_<wbr>frame_<wbr>interval</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The distance between two key frames. The value should be non-zero in the range [0.5, 20] seconds, specified in ISO 8601 format. The default is 2 seconds(PT2S). Note that this setting is ignored if VideoSyncMode.Passthrough is set, where the KeyFrameInterval value will follow the input source setting.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="label_python">
+<a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}An optional label for the codec. The label can be used to control muxing behavior.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="range_python">
+<a href="#range_python" style="color: inherit; text-decoration: inherit;">range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The position relative to transform preset start time in the input video at which to stop generating thumbnails. The value can be in ISO 8601 format (For example, PT5M30S to stop at 5 minutes and 30 seconds from start time), or a frame count (For example, 300 to stop at the 300th frame from the frame at start time. If this value is 1, it means only producing one thumbnail at start time), or a relative value to the stream duration (For example, 50% to stop at half of stream duration from start time). The default value is 100%, which means to stop at the end of the stream.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="step_python">
+<a href="#step_python" style="color: inherit; text-decoration: inherit;">step</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The intervals at which thumbnails are generated. The value can be in ISO 8601 format (For example, PT05S for one image every 5 seconds), or a frame count (For example, 30 for one image every 30 frames), or a relative value to stream duration (For example, 10% for one image every 10% of stream duration). Note: Step value will affect the first generated thumbnail, which may not be exactly the one specified at transform preset start time. This is due to the encoder, which tries to select the best thumbnail between start time and Step position from start time as the first output. As the default value is 10%, it means if stream has long duration, the first generated thumbnail might be far away from the one specified at start time. Try to select reasonable value for Step if the first thumbnail is expected close to start time, or set Range value at 1 if only one thumbnail is needed at start time.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="stretch_mode_python">
+<a href="#stretch_mode_python" style="color: inherit; text-decoration: inherit;">stretch_<wbr>mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The resizing mode - how the input video will be resized to fit the desired output resolution(s). Default is AutoSize{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sync_mode_python">
+<a href="#sync_mode_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Video Sync Mode{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="insightstype">Insights<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Audio<wbr>Insights<wbr>Only</dt>
+    <dd>AudioInsightsOnly{{% md %}}Generate audio only insights. Ignore video even if present. Fails if no audio is present.{{% /md %}}</dd>
+    <dt>Video<wbr>Insights<wbr>Only</dt>
+    <dd>VideoInsightsOnly{{% md %}}Generate video only insights. Ignore audio if present. Fails if no video is present.{{% /md %}}</dd>
+    <dt>All<wbr>Insights</dt>
+    <dd>AllInsights{{% md %}}Generate both audio and video insights. Fails if either audio or video Insights fail.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Insights<wbr>Type<wbr>Audio<wbr>Insights<wbr>Only</dt>
+    <dd>AudioInsightsOnly{{% md %}}Generate audio only insights. Ignore video even if present. Fails if no audio is present.{{% /md %}}</dd>
+    <dt>Insights<wbr>Type<wbr>Video<wbr>Insights<wbr>Only</dt>
+    <dd>VideoInsightsOnly{{% md %}}Generate video only insights. Ignore audio if present. Fails if no video is present.{{% /md %}}</dd>
+    <dt>Insights<wbr>Type<wbr>All<wbr>Insights</dt>
+    <dd>AllInsights{{% md %}}Generate both audio and video insights. Fails if either audio or video Insights fail.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Audio<wbr>Insights<wbr>Only</dt>
+    <dd>AudioInsightsOnly{{% md %}}Generate audio only insights. Ignore video even if present. Fails if no audio is present.{{% /md %}}</dd>
+    <dt>Video<wbr>Insights<wbr>Only</dt>
+    <dd>VideoInsightsOnly{{% md %}}Generate video only insights. Ignore audio if present. Fails if no video is present.{{% /md %}}</dd>
+    <dt>All<wbr>Insights</dt>
+    <dd>AllInsights{{% md %}}Generate both audio and video insights. Fails if either audio or video Insights fail.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>AUDIO_INSIGHTS_ONLY</dt>
+    <dd>AudioInsightsOnly{{% md %}}Generate audio only insights. Ignore video even if present. Fails if no audio is present.{{% /md %}}</dd>
+    <dt>VIDEO_INSIGHTS_ONLY</dt>
+    <dd>VideoInsightsOnly{{% md %}}Generate video only insights. Ignore audio if present. Fails if no video is present.{{% /md %}}</dd>
+    <dt>ALL_INSIGHTS</dt>
+    <dd>AllInsights{{% md %}}Generate both audio and video insights. Fails if either audio or video Insights fail.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="jpgformat">Jpg<wbr>Format</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="filenamepattern_csharp">
+<a href="#filenamepattern_csharp" style="color: inherit; text-decoration: inherit;">Filename<wbr>Pattern</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The pattern of the file names for the generated output files. The following macros are supported in the file name: {Basename} - An expansion macro that will use the name of the input video file. If the base name(the file suffix is not included) of the input video file is less than 32 characters long, the base name of input video files will be used. If the length of base name of the input video file exceeds 32 characters, the base name is truncated to the first 32 characters in total length. {Extension} - The appropriate extension for this format. {Label} - The label assigned to the codec/layer. {Index} - A unique index for thumbnails. Only applicable to thumbnails. {Bitrate} - The audio/video bitrate. Not applicable to thumbnails. {Codec} - The type of the audio/video codec. Any unsubstituted macros will be collapsed and removed from the filename.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="filenamepattern_go">
+<a href="#filenamepattern_go" style="color: inherit; text-decoration: inherit;">Filename<wbr>Pattern</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The pattern of the file names for the generated output files. The following macros are supported in the file name: {Basename} - An expansion macro that will use the name of the input video file. If the base name(the file suffix is not included) of the input video file is less than 32 characters long, the base name of input video files will be used. If the length of base name of the input video file exceeds 32 characters, the base name is truncated to the first 32 characters in total length. {Extension} - The appropriate extension for this format. {Label} - The label assigned to the codec/layer. {Index} - A unique index for thumbnails. Only applicable to thumbnails. {Bitrate} - The audio/video bitrate. Not applicable to thumbnails. {Codec} - The type of the audio/video codec. Any unsubstituted macros will be collapsed and removed from the filename.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="filenamepattern_nodejs">
+<a href="#filenamepattern_nodejs" style="color: inherit; text-decoration: inherit;">filename<wbr>Pattern</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The pattern of the file names for the generated output files. The following macros are supported in the file name: {Basename} - An expansion macro that will use the name of the input video file. If the base name(the file suffix is not included) of the input video file is less than 32 characters long, the base name of input video files will be used. If the length of base name of the input video file exceeds 32 characters, the base name is truncated to the first 32 characters in total length. {Extension} - The appropriate extension for this format. {Label} - The label assigned to the codec/layer. {Index} - A unique index for thumbnails. Only applicable to thumbnails. {Bitrate} - The audio/video bitrate. Not applicable to thumbnails. {Codec} - The type of the audio/video codec. Any unsubstituted macros will be collapsed and removed from the filename.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="filename_pattern_python">
+<a href="#filename_pattern_python" style="color: inherit; text-decoration: inherit;">filename_<wbr>pattern</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The pattern of the file names for the generated output files. The following macros are supported in the file name: {Basename} - An expansion macro that will use the name of the input video file. If the base name(the file suffix is not included) of the input video file is less than 32 characters long, the base name of input video files will be used. If the length of base name of the input video file exceeds 32 characters, the base name is truncated to the first 32 characters in total length. {Extension} - The appropriate extension for this format. {Label} - The label assigned to the codec/layer. {Index} - A unique index for thumbnails. Only applicable to thumbnails. {Bitrate} - The audio/video bitrate. Not applicable to thumbnails. {Codec} - The type of the audio/video codec. Any unsubstituted macros will be collapsed and removed from the filename.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="jpgformatresponse">Jpg<wbr>Format<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="filenamepattern_csharp">
+<a href="#filenamepattern_csharp" style="color: inherit; text-decoration: inherit;">Filename<wbr>Pattern</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The pattern of the file names for the generated output files. The following macros are supported in the file name: {Basename} - An expansion macro that will use the name of the input video file. If the base name(the file suffix is not included) of the input video file is less than 32 characters long, the base name of input video files will be used. If the length of base name of the input video file exceeds 32 characters, the base name is truncated to the first 32 characters in total length. {Extension} - The appropriate extension for this format. {Label} - The label assigned to the codec/layer. {Index} - A unique index for thumbnails. Only applicable to thumbnails. {Bitrate} - The audio/video bitrate. Not applicable to thumbnails. {Codec} - The type of the audio/video codec. Any unsubstituted macros will be collapsed and removed from the filename.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="filenamepattern_go">
+<a href="#filenamepattern_go" style="color: inherit; text-decoration: inherit;">Filename<wbr>Pattern</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The pattern of the file names for the generated output files. The following macros are supported in the file name: {Basename} - An expansion macro that will use the name of the input video file. If the base name(the file suffix is not included) of the input video file is less than 32 characters long, the base name of input video files will be used. If the length of base name of the input video file exceeds 32 characters, the base name is truncated to the first 32 characters in total length. {Extension} - The appropriate extension for this format. {Label} - The label assigned to the codec/layer. {Index} - A unique index for thumbnails. Only applicable to thumbnails. {Bitrate} - The audio/video bitrate. Not applicable to thumbnails. {Codec} - The type of the audio/video codec. Any unsubstituted macros will be collapsed and removed from the filename.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="filenamepattern_nodejs">
+<a href="#filenamepattern_nodejs" style="color: inherit; text-decoration: inherit;">filename<wbr>Pattern</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The pattern of the file names for the generated output files. The following macros are supported in the file name: {Basename} - An expansion macro that will use the name of the input video file. If the base name(the file suffix is not included) of the input video file is less than 32 characters long, the base name of input video files will be used. If the length of base name of the input video file exceeds 32 characters, the base name is truncated to the first 32 characters in total length. {Extension} - The appropriate extension for this format. {Label} - The label assigned to the codec/layer. {Index} - A unique index for thumbnails. Only applicable to thumbnails. {Bitrate} - The audio/video bitrate. Not applicable to thumbnails. {Codec} - The type of the audio/video codec. Any unsubstituted macros will be collapsed and removed from the filename.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="filename_pattern_python">
+<a href="#filename_pattern_python" style="color: inherit; text-decoration: inherit;">filename_<wbr>pattern</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The pattern of the file names for the generated output files. The following macros are supported in the file name: {Basename} - An expansion macro that will use the name of the input video file. If the base name(the file suffix is not included) of the input video file is less than 32 characters long, the base name of input video files will be used. If the length of base name of the input video file exceeds 32 characters, the base name is truncated to the first 32 characters in total length. {Extension} - The appropriate extension for this format. {Label} - The label assigned to the codec/layer. {Index} - A unique index for thumbnails. Only applicable to thumbnails. {Bitrate} - The audio/video bitrate. Not applicable to thumbnails. {Codec} - The type of the audio/video codec. Any unsubstituted macros will be collapsed and removed from the filename.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="jpgimage">Jpg<wbr>Image</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="start_csharp">
+<a href="#start_csharp" style="color: inherit; text-decoration: inherit;">Start</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The position in the input video from where to start generating thumbnails. The value can be in ISO 8601 format (For example, PT05S to start at 5 seconds), or a frame count (For example, 10 to start at the 10th frame), or a relative value to stream duration (For example, 10% to start at 10% of stream duration). Also supports a macro {Best}, which tells the encoder to select the best thumbnail from the first few seconds of the video and will only produce one thumbnail, no matter what other settings are for Step and Range. The default value is macro {Best}.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keyframeinterval_csharp">
+<a href="#keyframeinterval_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Frame<wbr>Interval</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The distance between two key frames. The value should be non-zero in the range [0.5, 20] seconds, specified in ISO 8601 format. The default is 2 seconds(PT2S). Note that this setting is ignored if VideoSyncMode.Passthrough is set, where the KeyFrameInterval value will follow the input source setting.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="label_csharp">
+<a href="#label_csharp" style="color: inherit; text-decoration: inherit;">Label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An optional label for the codec. The label can be used to control muxing behavior.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="layers_csharp">
+<a href="#layers_csharp" style="color: inherit; text-decoration: inherit;">Layers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#jpglayer">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Jpg<wbr>Layer<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A collection of output JPEG image layers to be produced by the encoder.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="range_csharp">
+<a href="#range_csharp" style="color: inherit; text-decoration: inherit;">Range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The position relative to transform preset start time in the input video at which to stop generating thumbnails. The value can be in ISO 8601 format (For example, PT5M30S to stop at 5 minutes and 30 seconds from start time), or a frame count (For example, 300 to stop at the 300th frame from the frame at start time. If this value is 1, it means only producing one thumbnail at start time), or a relative value to the stream duration (For example, 50% to stop at half of stream duration from start time). The default value is 100%, which means to stop at the end of the stream.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="spritecolumn_csharp">
+<a href="#spritecolumn_csharp" style="color: inherit; text-decoration: inherit;">Sprite<wbr>Column</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Sets the number of columns used in thumbnail sprite image.  The number of rows are automatically calculated and a VTT file is generated with the coordinate mappings for each thumbnail in the sprite. Note: this value should be a positive integer and a proper value is recommended so that the output image resolution will not go beyond JPEG maximum pixel resolution limit 65535x65535.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="step_csharp">
+<a href="#step_csharp" style="color: inherit; text-decoration: inherit;">Step</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The intervals at which thumbnails are generated. The value can be in ISO 8601 format (For example, PT05S for one image every 5 seconds), or a frame count (For example, 30 for one image every 30 frames), or a relative value to stream duration (For example, 10% for one image every 10% of stream duration). Note: Step value will affect the first generated thumbnail, which may not be exactly the one specified at transform preset start time. This is due to the encoder, which tries to select the best thumbnail between start time and Step position from start time as the first output. As the default value is 10%, it means if stream has long duration, the first generated thumbnail might be far away from the one specified at start time. Try to select reasonable value for Step if the first thumbnail is expected close to start time, or set Range value at 1 if only one thumbnail is needed at start time.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="stretchmode_csharp">
+<a href="#stretchmode_csharp" style="color: inherit; text-decoration: inherit;">Stretch<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#stretchmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Stretch<wbr>Mode</a></span>
+    </dt>
+    <dd>{{% md %}}The resizing mode - how the input video will be resized to fit the desired output resolution(s). Default is AutoSize{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="syncmode_csharp">
+<a href="#syncmode_csharp" style="color: inherit; text-decoration: inherit;">Sync<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#videosyncmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Video<wbr>Sync<wbr>Mode</a></span>
+    </dt>
+    <dd>{{% md %}}The Video Sync Mode{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="start_go">
+<a href="#start_go" style="color: inherit; text-decoration: inherit;">Start</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The position in the input video from where to start generating thumbnails. The value can be in ISO 8601 format (For example, PT05S to start at 5 seconds), or a frame count (For example, 10 to start at the 10th frame), or a relative value to stream duration (For example, 10% to start at 10% of stream duration). Also supports a macro {Best}, which tells the encoder to select the best thumbnail from the first few seconds of the video and will only produce one thumbnail, no matter what other settings are for Step and Range. The default value is macro {Best}.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keyframeinterval_go">
+<a href="#keyframeinterval_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Frame<wbr>Interval</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The distance between two key frames. The value should be non-zero in the range [0.5, 20] seconds, specified in ISO 8601 format. The default is 2 seconds(PT2S). Note that this setting is ignored if VideoSyncMode.Passthrough is set, where the KeyFrameInterval value will follow the input source setting.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="label_go">
+<a href="#label_go" style="color: inherit; text-decoration: inherit;">Label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An optional label for the codec. The label can be used to control muxing behavior.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="layers_go">
+<a href="#layers_go" style="color: inherit; text-decoration: inherit;">Layers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#jpglayer">[]Jpg<wbr>Layer</a></span>
+    </dt>
+    <dd>{{% md %}}A collection of output JPEG image layers to be produced by the encoder.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="range_go">
+<a href="#range_go" style="color: inherit; text-decoration: inherit;">Range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The position relative to transform preset start time in the input video at which to stop generating thumbnails. The value can be in ISO 8601 format (For example, PT5M30S to stop at 5 minutes and 30 seconds from start time), or a frame count (For example, 300 to stop at the 300th frame from the frame at start time. If this value is 1, it means only producing one thumbnail at start time), or a relative value to the stream duration (For example, 50% to stop at half of stream duration from start time). The default value is 100%, which means to stop at the end of the stream.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="spritecolumn_go">
+<a href="#spritecolumn_go" style="color: inherit; text-decoration: inherit;">Sprite<wbr>Column</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Sets the number of columns used in thumbnail sprite image.  The number of rows are automatically calculated and a VTT file is generated with the coordinate mappings for each thumbnail in the sprite. Note: this value should be a positive integer and a proper value is recommended so that the output image resolution will not go beyond JPEG maximum pixel resolution limit 65535x65535.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="step_go">
+<a href="#step_go" style="color: inherit; text-decoration: inherit;">Step</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The intervals at which thumbnails are generated. The value can be in ISO 8601 format (For example, PT05S for one image every 5 seconds), or a frame count (For example, 30 for one image every 30 frames), or a relative value to stream duration (For example, 10% for one image every 10% of stream duration). Note: Step value will affect the first generated thumbnail, which may not be exactly the one specified at transform preset start time. This is due to the encoder, which tries to select the best thumbnail between start time and Step position from start time as the first output. As the default value is 10%, it means if stream has long duration, the first generated thumbnail might be far away from the one specified at start time. Try to select reasonable value for Step if the first thumbnail is expected close to start time, or set Range value at 1 if only one thumbnail is needed at start time.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="stretchmode_go">
+<a href="#stretchmode_go" style="color: inherit; text-decoration: inherit;">Stretch<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#stretchmode">Stretch<wbr>Mode</a></span>
+    </dt>
+    <dd>{{% md %}}The resizing mode - how the input video will be resized to fit the desired output resolution(s). Default is AutoSize{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="syncmode_go">
+<a href="#syncmode_go" style="color: inherit; text-decoration: inherit;">Sync<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#videosyncmode">Video<wbr>Sync<wbr>Mode</a></span>
+    </dt>
+    <dd>{{% md %}}The Video Sync Mode{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="start_nodejs">
+<a href="#start_nodejs" style="color: inherit; text-decoration: inherit;">start</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The position in the input video from where to start generating thumbnails. The value can be in ISO 8601 format (For example, PT05S to start at 5 seconds), or a frame count (For example, 10 to start at the 10th frame), or a relative value to stream duration (For example, 10% to start at 10% of stream duration). Also supports a macro {Best}, which tells the encoder to select the best thumbnail from the first few seconds of the video and will only produce one thumbnail, no matter what other settings are for Step and Range. The default value is macro {Best}.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keyframeinterval_nodejs">
+<a href="#keyframeinterval_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Frame<wbr>Interval</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The distance between two key frames. The value should be non-zero in the range [0.5, 20] seconds, specified in ISO 8601 format. The default is 2 seconds(PT2S). Note that this setting is ignored if VideoSyncMode.Passthrough is set, where the KeyFrameInterval value will follow the input source setting.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="label_nodejs">
+<a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An optional label for the codec. The label can be used to control muxing behavior.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="layers_nodejs">
+<a href="#layers_nodejs" style="color: inherit; text-decoration: inherit;">layers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#jpglayer">Jpg<wbr>Layer[]</a></span>
+    </dt>
+    <dd>{{% md %}}A collection of output JPEG image layers to be produced by the encoder.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="range_nodejs">
+<a href="#range_nodejs" style="color: inherit; text-decoration: inherit;">range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The position relative to transform preset start time in the input video at which to stop generating thumbnails. The value can be in ISO 8601 format (For example, PT5M30S to stop at 5 minutes and 30 seconds from start time), or a frame count (For example, 300 to stop at the 300th frame from the frame at start time. If this value is 1, it means only producing one thumbnail at start time), or a relative value to the stream duration (For example, 50% to stop at half of stream duration from start time). The default value is 100%, which means to stop at the end of the stream.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="spritecolumn_nodejs">
+<a href="#spritecolumn_nodejs" style="color: inherit; text-decoration: inherit;">sprite<wbr>Column</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Sets the number of columns used in thumbnail sprite image.  The number of rows are automatically calculated and a VTT file is generated with the coordinate mappings for each thumbnail in the sprite. Note: this value should be a positive integer and a proper value is recommended so that the output image resolution will not go beyond JPEG maximum pixel resolution limit 65535x65535.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="step_nodejs">
+<a href="#step_nodejs" style="color: inherit; text-decoration: inherit;">step</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The intervals at which thumbnails are generated. The value can be in ISO 8601 format (For example, PT05S for one image every 5 seconds), or a frame count (For example, 30 for one image every 30 frames), or a relative value to stream duration (For example, 10% for one image every 10% of stream duration). Note: Step value will affect the first generated thumbnail, which may not be exactly the one specified at transform preset start time. This is due to the encoder, which tries to select the best thumbnail between start time and Step position from start time as the first output. As the default value is 10%, it means if stream has long duration, the first generated thumbnail might be far away from the one specified at start time. Try to select reasonable value for Step if the first thumbnail is expected close to start time, or set Range value at 1 if only one thumbnail is needed at start time.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="stretchmode_nodejs">
+<a href="#stretchmode_nodejs" style="color: inherit; text-decoration: inherit;">stretch<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#stretchmode">Stretch<wbr>Mode</a></span>
+    </dt>
+    <dd>{{% md %}}The resizing mode - how the input video will be resized to fit the desired output resolution(s). Default is AutoSize{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="syncmode_nodejs">
+<a href="#syncmode_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#videosyncmode">Video<wbr>Sync<wbr>Mode</a></span>
+    </dt>
+    <dd>{{% md %}}The Video Sync Mode{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="start_python">
+<a href="#start_python" style="color: inherit; text-decoration: inherit;">start</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The position in the input video from where to start generating thumbnails. The value can be in ISO 8601 format (For example, PT05S to start at 5 seconds), or a frame count (For example, 10 to start at the 10th frame), or a relative value to stream duration (For example, 10% to start at 10% of stream duration). Also supports a macro {Best}, which tells the encoder to select the best thumbnail from the first few seconds of the video and will only produce one thumbnail, no matter what other settings are for Step and Range. The default value is macro {Best}.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="key_frame_interval_python">
+<a href="#key_frame_interval_python" style="color: inherit; text-decoration: inherit;">key_<wbr>frame_<wbr>interval</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The distance between two key frames. The value should be non-zero in the range [0.5, 20] seconds, specified in ISO 8601 format. The default is 2 seconds(PT2S). Note that this setting is ignored if VideoSyncMode.Passthrough is set, where the KeyFrameInterval value will follow the input source setting.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="label_python">
+<a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}An optional label for the codec. The label can be used to control muxing behavior.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="layers_python">
+<a href="#layers_python" style="color: inherit; text-decoration: inherit;">layers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#jpglayer">Sequence[Jpg<wbr>Layer<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}A collection of output JPEG image layers to be produced by the encoder.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="range_python">
+<a href="#range_python" style="color: inherit; text-decoration: inherit;">range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The position relative to transform preset start time in the input video at which to stop generating thumbnails. The value can be in ISO 8601 format (For example, PT5M30S to stop at 5 minutes and 30 seconds from start time), or a frame count (For example, 300 to stop at the 300th frame from the frame at start time. If this value is 1, it means only producing one thumbnail at start time), or a relative value to the stream duration (For example, 50% to stop at half of stream duration from start time). The default value is 100%, which means to stop at the end of the stream.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sprite_column_python">
+<a href="#sprite_column_python" style="color: inherit; text-decoration: inherit;">sprite_<wbr>column</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Sets the number of columns used in thumbnail sprite image.  The number of rows are automatically calculated and a VTT file is generated with the coordinate mappings for each thumbnail in the sprite. Note: this value should be a positive integer and a proper value is recommended so that the output image resolution will not go beyond JPEG maximum pixel resolution limit 65535x65535.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="step_python">
+<a href="#step_python" style="color: inherit; text-decoration: inherit;">step</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The intervals at which thumbnails are generated. The value can be in ISO 8601 format (For example, PT05S for one image every 5 seconds), or a frame count (For example, 30 for one image every 30 frames), or a relative value to stream duration (For example, 10% for one image every 10% of stream duration). Note: Step value will affect the first generated thumbnail, which may not be exactly the one specified at transform preset start time. This is due to the encoder, which tries to select the best thumbnail between start time and Step position from start time as the first output. As the default value is 10%, it means if stream has long duration, the first generated thumbnail might be far away from the one specified at start time. Try to select reasonable value for Step if the first thumbnail is expected close to start time, or set Range value at 1 if only one thumbnail is needed at start time.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="stretch_mode_python">
+<a href="#stretch_mode_python" style="color: inherit; text-decoration: inherit;">stretch_<wbr>mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str | <a href="#stretchmode">Stretch<wbr>Mode</a></span>
+    </dt>
+    <dd>{{% md %}}The resizing mode - how the input video will be resized to fit the desired output resolution(s). Default is AutoSize{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sync_mode_python">
+<a href="#sync_mode_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str | <a href="#videosyncmode">Video<wbr>Sync<wbr>Mode</a></span>
+    </dt>
+    <dd>{{% md %}}The Video Sync Mode{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="jpgimageresponse">Jpg<wbr>Image<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="start_csharp">
+<a href="#start_csharp" style="color: inherit; text-decoration: inherit;">Start</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The position in the input video from where to start generating thumbnails. The value can be in ISO 8601 format (For example, PT05S to start at 5 seconds), or a frame count (For example, 10 to start at the 10th frame), or a relative value to stream duration (For example, 10% to start at 10% of stream duration). Also supports a macro {Best}, which tells the encoder to select the best thumbnail from the first few seconds of the video and will only produce one thumbnail, no matter what other settings are for Step and Range. The default value is macro {Best}.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keyframeinterval_csharp">
+<a href="#keyframeinterval_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Frame<wbr>Interval</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The distance between two key frames. The value should be non-zero in the range [0.5, 20] seconds, specified in ISO 8601 format. The default is 2 seconds(PT2S). Note that this setting is ignored if VideoSyncMode.Passthrough is set, where the KeyFrameInterval value will follow the input source setting.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="label_csharp">
+<a href="#label_csharp" style="color: inherit; text-decoration: inherit;">Label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An optional label for the codec. The label can be used to control muxing behavior.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="layers_csharp">
+<a href="#layers_csharp" style="color: inherit; text-decoration: inherit;">Layers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#jpglayerresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Jpg<wbr>Layer<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A collection of output JPEG image layers to be produced by the encoder.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="range_csharp">
+<a href="#range_csharp" style="color: inherit; text-decoration: inherit;">Range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The position relative to transform preset start time in the input video at which to stop generating thumbnails. The value can be in ISO 8601 format (For example, PT5M30S to stop at 5 minutes and 30 seconds from start time), or a frame count (For example, 300 to stop at the 300th frame from the frame at start time. If this value is 1, it means only producing one thumbnail at start time), or a relative value to the stream duration (For example, 50% to stop at half of stream duration from start time). The default value is 100%, which means to stop at the end of the stream.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="spritecolumn_csharp">
+<a href="#spritecolumn_csharp" style="color: inherit; text-decoration: inherit;">Sprite<wbr>Column</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Sets the number of columns used in thumbnail sprite image.  The number of rows are automatically calculated and a VTT file is generated with the coordinate mappings for each thumbnail in the sprite. Note: this value should be a positive integer and a proper value is recommended so that the output image resolution will not go beyond JPEG maximum pixel resolution limit 65535x65535.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="step_csharp">
+<a href="#step_csharp" style="color: inherit; text-decoration: inherit;">Step</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The intervals at which thumbnails are generated. The value can be in ISO 8601 format (For example, PT05S for one image every 5 seconds), or a frame count (For example, 30 for one image every 30 frames), or a relative value to stream duration (For example, 10% for one image every 10% of stream duration). Note: Step value will affect the first generated thumbnail, which may not be exactly the one specified at transform preset start time. This is due to the encoder, which tries to select the best thumbnail between start time and Step position from start time as the first output. As the default value is 10%, it means if stream has long duration, the first generated thumbnail might be far away from the one specified at start time. Try to select reasonable value for Step if the first thumbnail is expected close to start time, or set Range value at 1 if only one thumbnail is needed at start time.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="stretchmode_csharp">
+<a href="#stretchmode_csharp" style="color: inherit; text-decoration: inherit;">Stretch<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resizing mode - how the input video will be resized to fit the desired output resolution(s). Default is AutoSize{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="syncmode_csharp">
+<a href="#syncmode_csharp" style="color: inherit; text-decoration: inherit;">Sync<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Video Sync Mode{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="start_go">
+<a href="#start_go" style="color: inherit; text-decoration: inherit;">Start</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The position in the input video from where to start generating thumbnails. The value can be in ISO 8601 format (For example, PT05S to start at 5 seconds), or a frame count (For example, 10 to start at the 10th frame), or a relative value to stream duration (For example, 10% to start at 10% of stream duration). Also supports a macro {Best}, which tells the encoder to select the best thumbnail from the first few seconds of the video and will only produce one thumbnail, no matter what other settings are for Step and Range. The default value is macro {Best}.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keyframeinterval_go">
+<a href="#keyframeinterval_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Frame<wbr>Interval</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The distance between two key frames. The value should be non-zero in the range [0.5, 20] seconds, specified in ISO 8601 format. The default is 2 seconds(PT2S). Note that this setting is ignored if VideoSyncMode.Passthrough is set, where the KeyFrameInterval value will follow the input source setting.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="label_go">
+<a href="#label_go" style="color: inherit; text-decoration: inherit;">Label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An optional label for the codec. The label can be used to control muxing behavior.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="layers_go">
+<a href="#layers_go" style="color: inherit; text-decoration: inherit;">Layers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#jpglayerresponse">[]Jpg<wbr>Layer<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}A collection of output JPEG image layers to be produced by the encoder.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="range_go">
+<a href="#range_go" style="color: inherit; text-decoration: inherit;">Range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The position relative to transform preset start time in the input video at which to stop generating thumbnails. The value can be in ISO 8601 format (For example, PT5M30S to stop at 5 minutes and 30 seconds from start time), or a frame count (For example, 300 to stop at the 300th frame from the frame at start time. If this value is 1, it means only producing one thumbnail at start time), or a relative value to the stream duration (For example, 50% to stop at half of stream duration from start time). The default value is 100%, which means to stop at the end of the stream.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="spritecolumn_go">
+<a href="#spritecolumn_go" style="color: inherit; text-decoration: inherit;">Sprite<wbr>Column</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Sets the number of columns used in thumbnail sprite image.  The number of rows are automatically calculated and a VTT file is generated with the coordinate mappings for each thumbnail in the sprite. Note: this value should be a positive integer and a proper value is recommended so that the output image resolution will not go beyond JPEG maximum pixel resolution limit 65535x65535.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="step_go">
+<a href="#step_go" style="color: inherit; text-decoration: inherit;">Step</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The intervals at which thumbnails are generated. The value can be in ISO 8601 format (For example, PT05S for one image every 5 seconds), or a frame count (For example, 30 for one image every 30 frames), or a relative value to stream duration (For example, 10% for one image every 10% of stream duration). Note: Step value will affect the first generated thumbnail, which may not be exactly the one specified at transform preset start time. This is due to the encoder, which tries to select the best thumbnail between start time and Step position from start time as the first output. As the default value is 10%, it means if stream has long duration, the first generated thumbnail might be far away from the one specified at start time. Try to select reasonable value for Step if the first thumbnail is expected close to start time, or set Range value at 1 if only one thumbnail is needed at start time.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="stretchmode_go">
+<a href="#stretchmode_go" style="color: inherit; text-decoration: inherit;">Stretch<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resizing mode - how the input video will be resized to fit the desired output resolution(s). Default is AutoSize{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="syncmode_go">
+<a href="#syncmode_go" style="color: inherit; text-decoration: inherit;">Sync<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Video Sync Mode{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="start_nodejs">
+<a href="#start_nodejs" style="color: inherit; text-decoration: inherit;">start</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The position in the input video from where to start generating thumbnails. The value can be in ISO 8601 format (For example, PT05S to start at 5 seconds), or a frame count (For example, 10 to start at the 10th frame), or a relative value to stream duration (For example, 10% to start at 10% of stream duration). Also supports a macro {Best}, which tells the encoder to select the best thumbnail from the first few seconds of the video and will only produce one thumbnail, no matter what other settings are for Step and Range. The default value is macro {Best}.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keyframeinterval_nodejs">
+<a href="#keyframeinterval_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Frame<wbr>Interval</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The distance between two key frames. The value should be non-zero in the range [0.5, 20] seconds, specified in ISO 8601 format. The default is 2 seconds(PT2S). Note that this setting is ignored if VideoSyncMode.Passthrough is set, where the KeyFrameInterval value will follow the input source setting.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="label_nodejs">
+<a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An optional label for the codec. The label can be used to control muxing behavior.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="layers_nodejs">
+<a href="#layers_nodejs" style="color: inherit; text-decoration: inherit;">layers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#jpglayerresponse">Jpg<wbr>Layer<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}A collection of output JPEG image layers to be produced by the encoder.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="range_nodejs">
+<a href="#range_nodejs" style="color: inherit; text-decoration: inherit;">range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The position relative to transform preset start time in the input video at which to stop generating thumbnails. The value can be in ISO 8601 format (For example, PT5M30S to stop at 5 minutes and 30 seconds from start time), or a frame count (For example, 300 to stop at the 300th frame from the frame at start time. If this value is 1, it means only producing one thumbnail at start time), or a relative value to the stream duration (For example, 50% to stop at half of stream duration from start time). The default value is 100%, which means to stop at the end of the stream.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="spritecolumn_nodejs">
+<a href="#spritecolumn_nodejs" style="color: inherit; text-decoration: inherit;">sprite<wbr>Column</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Sets the number of columns used in thumbnail sprite image.  The number of rows are automatically calculated and a VTT file is generated with the coordinate mappings for each thumbnail in the sprite. Note: this value should be a positive integer and a proper value is recommended so that the output image resolution will not go beyond JPEG maximum pixel resolution limit 65535x65535.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="step_nodejs">
+<a href="#step_nodejs" style="color: inherit; text-decoration: inherit;">step</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The intervals at which thumbnails are generated. The value can be in ISO 8601 format (For example, PT05S for one image every 5 seconds), or a frame count (For example, 30 for one image every 30 frames), or a relative value to stream duration (For example, 10% for one image every 10% of stream duration). Note: Step value will affect the first generated thumbnail, which may not be exactly the one specified at transform preset start time. This is due to the encoder, which tries to select the best thumbnail between start time and Step position from start time as the first output. As the default value is 10%, it means if stream has long duration, the first generated thumbnail might be far away from the one specified at start time. Try to select reasonable value for Step if the first thumbnail is expected close to start time, or set Range value at 1 if only one thumbnail is needed at start time.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="stretchmode_nodejs">
+<a href="#stretchmode_nodejs" style="color: inherit; text-decoration: inherit;">stretch<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resizing mode - how the input video will be resized to fit the desired output resolution(s). Default is AutoSize{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="syncmode_nodejs">
+<a href="#syncmode_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Video Sync Mode{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="start_python">
+<a href="#start_python" style="color: inherit; text-decoration: inherit;">start</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The position in the input video from where to start generating thumbnails. The value can be in ISO 8601 format (For example, PT05S to start at 5 seconds), or a frame count (For example, 10 to start at the 10th frame), or a relative value to stream duration (For example, 10% to start at 10% of stream duration). Also supports a macro {Best}, which tells the encoder to select the best thumbnail from the first few seconds of the video and will only produce one thumbnail, no matter what other settings are for Step and Range. The default value is macro {Best}.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="key_frame_interval_python">
+<a href="#key_frame_interval_python" style="color: inherit; text-decoration: inherit;">key_<wbr>frame_<wbr>interval</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The distance between two key frames. The value should be non-zero in the range [0.5, 20] seconds, specified in ISO 8601 format. The default is 2 seconds(PT2S). Note that this setting is ignored if VideoSyncMode.Passthrough is set, where the KeyFrameInterval value will follow the input source setting.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="label_python">
+<a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}An optional label for the codec. The label can be used to control muxing behavior.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="layers_python">
+<a href="#layers_python" style="color: inherit; text-decoration: inherit;">layers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#jpglayerresponse">Sequence[Jpg<wbr>Layer<wbr>Response<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}A collection of output JPEG image layers to be produced by the encoder.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="range_python">
+<a href="#range_python" style="color: inherit; text-decoration: inherit;">range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The position relative to transform preset start time in the input video at which to stop generating thumbnails. The value can be in ISO 8601 format (For example, PT5M30S to stop at 5 minutes and 30 seconds from start time), or a frame count (For example, 300 to stop at the 300th frame from the frame at start time. If this value is 1, it means only producing one thumbnail at start time), or a relative value to the stream duration (For example, 50% to stop at half of stream duration from start time). The default value is 100%, which means to stop at the end of the stream.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sprite_column_python">
+<a href="#sprite_column_python" style="color: inherit; text-decoration: inherit;">sprite_<wbr>column</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Sets the number of columns used in thumbnail sprite image.  The number of rows are automatically calculated and a VTT file is generated with the coordinate mappings for each thumbnail in the sprite. Note: this value should be a positive integer and a proper value is recommended so that the output image resolution will not go beyond JPEG maximum pixel resolution limit 65535x65535.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="step_python">
+<a href="#step_python" style="color: inherit; text-decoration: inherit;">step</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The intervals at which thumbnails are generated. The value can be in ISO 8601 format (For example, PT05S for one image every 5 seconds), or a frame count (For example, 30 for one image every 30 frames), or a relative value to stream duration (For example, 10% for one image every 10% of stream duration). Note: Step value will affect the first generated thumbnail, which may not be exactly the one specified at transform preset start time. This is due to the encoder, which tries to select the best thumbnail between start time and Step position from start time as the first output. As the default value is 10%, it means if stream has long duration, the first generated thumbnail might be far away from the one specified at start time. Try to select reasonable value for Step if the first thumbnail is expected close to start time, or set Range value at 1 if only one thumbnail is needed at start time.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="stretch_mode_python">
+<a href="#stretch_mode_python" style="color: inherit; text-decoration: inherit;">stretch_<wbr>mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The resizing mode - how the input video will be resized to fit the desired output resolution(s). Default is AutoSize{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sync_mode_python">
+<a href="#sync_mode_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Video Sync Mode{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="jpglayer">Jpg<wbr>Layer</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="height_csharp">
+<a href="#height_csharp" style="color: inherit; text-decoration: inherit;">Height</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The height of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in height as the input.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="label_csharp">
+<a href="#label_csharp" style="color: inherit; text-decoration: inherit;">Label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The alphanumeric label for this layer, which can be used in multiplexing different video and audio layers, or in naming the output file.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="quality_csharp">
+<a href="#quality_csharp" style="color: inherit; text-decoration: inherit;">Quality</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The compression quality of the JPEG output. Range is from 0-100 and the default is 70.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="width_csharp">
+<a href="#width_csharp" style="color: inherit; text-decoration: inherit;">Width</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The width of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in width as the input.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="height_go">
+<a href="#height_go" style="color: inherit; text-decoration: inherit;">Height</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The height of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in height as the input.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="label_go">
+<a href="#label_go" style="color: inherit; text-decoration: inherit;">Label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The alphanumeric label for this layer, which can be used in multiplexing different video and audio layers, or in naming the output file.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="quality_go">
+<a href="#quality_go" style="color: inherit; text-decoration: inherit;">Quality</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The compression quality of the JPEG output. Range is from 0-100 and the default is 70.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="width_go">
+<a href="#width_go" style="color: inherit; text-decoration: inherit;">Width</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The width of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in width as the input.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="height_nodejs">
+<a href="#height_nodejs" style="color: inherit; text-decoration: inherit;">height</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The height of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in height as the input.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="label_nodejs">
+<a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The alphanumeric label for this layer, which can be used in multiplexing different video and audio layers, or in naming the output file.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="quality_nodejs">
+<a href="#quality_nodejs" style="color: inherit; text-decoration: inherit;">quality</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The compression quality of the JPEG output. Range is from 0-100 and the default is 70.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="width_nodejs">
+<a href="#width_nodejs" style="color: inherit; text-decoration: inherit;">width</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The width of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in width as the input.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="height_python">
+<a href="#height_python" style="color: inherit; text-decoration: inherit;">height</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The height of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in height as the input.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="label_python">
+<a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The alphanumeric label for this layer, which can be used in multiplexing different video and audio layers, or in naming the output file.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="quality_python">
+<a href="#quality_python" style="color: inherit; text-decoration: inherit;">quality</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The compression quality of the JPEG output. Range is from 0-100 and the default is 70.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="width_python">
+<a href="#width_python" style="color: inherit; text-decoration: inherit;">width</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The width of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in width as the input.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="jpglayerresponse">Jpg<wbr>Layer<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="height_csharp">
+<a href="#height_csharp" style="color: inherit; text-decoration: inherit;">Height</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The height of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in height as the input.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="label_csharp">
+<a href="#label_csharp" style="color: inherit; text-decoration: inherit;">Label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The alphanumeric label for this layer, which can be used in multiplexing different video and audio layers, or in naming the output file.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="quality_csharp">
+<a href="#quality_csharp" style="color: inherit; text-decoration: inherit;">Quality</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The compression quality of the JPEG output. Range is from 0-100 and the default is 70.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="width_csharp">
+<a href="#width_csharp" style="color: inherit; text-decoration: inherit;">Width</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The width of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in width as the input.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="height_go">
+<a href="#height_go" style="color: inherit; text-decoration: inherit;">Height</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The height of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in height as the input.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="label_go">
+<a href="#label_go" style="color: inherit; text-decoration: inherit;">Label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The alphanumeric label for this layer, which can be used in multiplexing different video and audio layers, or in naming the output file.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="quality_go">
+<a href="#quality_go" style="color: inherit; text-decoration: inherit;">Quality</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The compression quality of the JPEG output. Range is from 0-100 and the default is 70.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="width_go">
+<a href="#width_go" style="color: inherit; text-decoration: inherit;">Width</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The width of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in width as the input.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="height_nodejs">
+<a href="#height_nodejs" style="color: inherit; text-decoration: inherit;">height</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The height of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in height as the input.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="label_nodejs">
+<a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The alphanumeric label for this layer, which can be used in multiplexing different video and audio layers, or in naming the output file.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="quality_nodejs">
+<a href="#quality_nodejs" style="color: inherit; text-decoration: inherit;">quality</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The compression quality of the JPEG output. Range is from 0-100 and the default is 70.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="width_nodejs">
+<a href="#width_nodejs" style="color: inherit; text-decoration: inherit;">width</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The width of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in width as the input.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="height_python">
+<a href="#height_python" style="color: inherit; text-decoration: inherit;">height</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The height of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in height as the input.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="label_python">
+<a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The alphanumeric label for this layer, which can be used in multiplexing different video and audio layers, or in naming the output file.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="quality_python">
+<a href="#quality_python" style="color: inherit; text-decoration: inherit;">quality</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The compression quality of the JPEG output. Range is from 0-100 and the default is 70.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="width_python">
+<a href="#width_python" style="color: inherit; text-decoration: inherit;">width</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The width of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in width as the input.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="mp4format">Mp4Format</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="filenamepattern_csharp">
+<a href="#filenamepattern_csharp" style="color: inherit; text-decoration: inherit;">Filename<wbr>Pattern</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The pattern of the file names for the generated output files. The following macros are supported in the file name: {Basename} - An expansion macro that will use the name of the input video file. If the base name(the file suffix is not included) of the input video file is less than 32 characters long, the base name of input video files will be used. If the length of base name of the input video file exceeds 32 characters, the base name is truncated to the first 32 characters in total length. {Extension} - The appropriate extension for this format. {Label} - The label assigned to the codec/layer. {Index} - A unique index for thumbnails. Only applicable to thumbnails. {Bitrate} - The audio/video bitrate. Not applicable to thumbnails. {Codec} - The type of the audio/video codec. Any unsubstituted macros will be collapsed and removed from the filename.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="outputfiles_csharp">
+<a href="#outputfiles_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>Files</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#outputfile">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Output<wbr>File<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The list of output files to produce.  Each entry in the list is a set of audio and video layer labels to be muxed together .{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="filenamepattern_go">
+<a href="#filenamepattern_go" style="color: inherit; text-decoration: inherit;">Filename<wbr>Pattern</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The pattern of the file names for the generated output files. The following macros are supported in the file name: {Basename} - An expansion macro that will use the name of the input video file. If the base name(the file suffix is not included) of the input video file is less than 32 characters long, the base name of input video files will be used. If the length of base name of the input video file exceeds 32 characters, the base name is truncated to the first 32 characters in total length. {Extension} - The appropriate extension for this format. {Label} - The label assigned to the codec/layer. {Index} - A unique index for thumbnails. Only applicable to thumbnails. {Bitrate} - The audio/video bitrate. Not applicable to thumbnails. {Codec} - The type of the audio/video codec. Any unsubstituted macros will be collapsed and removed from the filename.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="outputfiles_go">
+<a href="#outputfiles_go" style="color: inherit; text-decoration: inherit;">Output<wbr>Files</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#outputfile">[]Output<wbr>File</a></span>
+    </dt>
+    <dd>{{% md %}}The list of output files to produce.  Each entry in the list is a set of audio and video layer labels to be muxed together .{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="filenamepattern_nodejs">
+<a href="#filenamepattern_nodejs" style="color: inherit; text-decoration: inherit;">filename<wbr>Pattern</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The pattern of the file names for the generated output files. The following macros are supported in the file name: {Basename} - An expansion macro that will use the name of the input video file. If the base name(the file suffix is not included) of the input video file is less than 32 characters long, the base name of input video files will be used. If the length of base name of the input video file exceeds 32 characters, the base name is truncated to the first 32 characters in total length. {Extension} - The appropriate extension for this format. {Label} - The label assigned to the codec/layer. {Index} - A unique index for thumbnails. Only applicable to thumbnails. {Bitrate} - The audio/video bitrate. Not applicable to thumbnails. {Codec} - The type of the audio/video codec. Any unsubstituted macros will be collapsed and removed from the filename.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="outputfiles_nodejs">
+<a href="#outputfiles_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Files</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#outputfile">Output<wbr>File[]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of output files to produce.  Each entry in the list is a set of audio and video layer labels to be muxed together .{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="filename_pattern_python">
+<a href="#filename_pattern_python" style="color: inherit; text-decoration: inherit;">filename_<wbr>pattern</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The pattern of the file names for the generated output files. The following macros are supported in the file name: {Basename} - An expansion macro that will use the name of the input video file. If the base name(the file suffix is not included) of the input video file is less than 32 characters long, the base name of input video files will be used. If the length of base name of the input video file exceeds 32 characters, the base name is truncated to the first 32 characters in total length. {Extension} - The appropriate extension for this format. {Label} - The label assigned to the codec/layer. {Index} - A unique index for thumbnails. Only applicable to thumbnails. {Bitrate} - The audio/video bitrate. Not applicable to thumbnails. {Codec} - The type of the audio/video codec. Any unsubstituted macros will be collapsed and removed from the filename.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="output_files_python">
+<a href="#output_files_python" style="color: inherit; text-decoration: inherit;">output_<wbr>files</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#outputfile">Sequence[Output<wbr>File<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of output files to produce.  Each entry in the list is a set of audio and video layer labels to be muxed together .{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="mp4formatresponse">Mp4Format<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="filenamepattern_csharp">
+<a href="#filenamepattern_csharp" style="color: inherit; text-decoration: inherit;">Filename<wbr>Pattern</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The pattern of the file names for the generated output files. The following macros are supported in the file name: {Basename} - An expansion macro that will use the name of the input video file. If the base name(the file suffix is not included) of the input video file is less than 32 characters long, the base name of input video files will be used. If the length of base name of the input video file exceeds 32 characters, the base name is truncated to the first 32 characters in total length. {Extension} - The appropriate extension for this format. {Label} - The label assigned to the codec/layer. {Index} - A unique index for thumbnails. Only applicable to thumbnails. {Bitrate} - The audio/video bitrate. Not applicable to thumbnails. {Codec} - The type of the audio/video codec. Any unsubstituted macros will be collapsed and removed from the filename.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="outputfiles_csharp">
+<a href="#outputfiles_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>Files</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#outputfileresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Output<wbr>File<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The list of output files to produce.  Each entry in the list is a set of audio and video layer labels to be muxed together .{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="filenamepattern_go">
+<a href="#filenamepattern_go" style="color: inherit; text-decoration: inherit;">Filename<wbr>Pattern</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The pattern of the file names for the generated output files. The following macros are supported in the file name: {Basename} - An expansion macro that will use the name of the input video file. If the base name(the file suffix is not included) of the input video file is less than 32 characters long, the base name of input video files will be used. If the length of base name of the input video file exceeds 32 characters, the base name is truncated to the first 32 characters in total length. {Extension} - The appropriate extension for this format. {Label} - The label assigned to the codec/layer. {Index} - A unique index for thumbnails. Only applicable to thumbnails. {Bitrate} - The audio/video bitrate. Not applicable to thumbnails. {Codec} - The type of the audio/video codec. Any unsubstituted macros will be collapsed and removed from the filename.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="outputfiles_go">
+<a href="#outputfiles_go" style="color: inherit; text-decoration: inherit;">Output<wbr>Files</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#outputfileresponse">[]Output<wbr>File<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The list of output files to produce.  Each entry in the list is a set of audio and video layer labels to be muxed together .{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="filenamepattern_nodejs">
+<a href="#filenamepattern_nodejs" style="color: inherit; text-decoration: inherit;">filename<wbr>Pattern</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The pattern of the file names for the generated output files. The following macros are supported in the file name: {Basename} - An expansion macro that will use the name of the input video file. If the base name(the file suffix is not included) of the input video file is less than 32 characters long, the base name of input video files will be used. If the length of base name of the input video file exceeds 32 characters, the base name is truncated to the first 32 characters in total length. {Extension} - The appropriate extension for this format. {Label} - The label assigned to the codec/layer. {Index} - A unique index for thumbnails. Only applicable to thumbnails. {Bitrate} - The audio/video bitrate. Not applicable to thumbnails. {Codec} - The type of the audio/video codec. Any unsubstituted macros will be collapsed and removed from the filename.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="outputfiles_nodejs">
+<a href="#outputfiles_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Files</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#outputfileresponse">Output<wbr>File<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of output files to produce.  Each entry in the list is a set of audio and video layer labels to be muxed together .{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="filename_pattern_python">
+<a href="#filename_pattern_python" style="color: inherit; text-decoration: inherit;">filename_<wbr>pattern</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The pattern of the file names for the generated output files. The following macros are supported in the file name: {Basename} - An expansion macro that will use the name of the input video file. If the base name(the file suffix is not included) of the input video file is less than 32 characters long, the base name of input video files will be used. If the length of base name of the input video file exceeds 32 characters, the base name is truncated to the first 32 characters in total length. {Extension} - The appropriate extension for this format. {Label} - The label assigned to the codec/layer. {Index} - A unique index for thumbnails. Only applicable to thumbnails. {Bitrate} - The audio/video bitrate. Not applicable to thumbnails. {Codec} - The type of the audio/video codec. Any unsubstituted macros will be collapsed and removed from the filename.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="output_files_python">
+<a href="#output_files_python" style="color: inherit; text-decoration: inherit;">output_<wbr>files</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#outputfileresponse">Sequence[Output<wbr>File<wbr>Response<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of output files to produce.  Each entry in the list is a set of audio and video layer labels to be muxed together .{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -3652,6 +7842,1026 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The list of labels that describe how the encoder should multiplex video and audio into an output file. For example, if the encoder is producing two video layers with labels v1 and v2, and one audio layer with label a1, then an array like '[v1, a1]' tells the encoder to produce an output file with the video track represented by v1 and the audio track represented by a1.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="pngformat">Png<wbr>Format</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="filenamepattern_csharp">
+<a href="#filenamepattern_csharp" style="color: inherit; text-decoration: inherit;">Filename<wbr>Pattern</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The pattern of the file names for the generated output files. The following macros are supported in the file name: {Basename} - An expansion macro that will use the name of the input video file. If the base name(the file suffix is not included) of the input video file is less than 32 characters long, the base name of input video files will be used. If the length of base name of the input video file exceeds 32 characters, the base name is truncated to the first 32 characters in total length. {Extension} - The appropriate extension for this format. {Label} - The label assigned to the codec/layer. {Index} - A unique index for thumbnails. Only applicable to thumbnails. {Bitrate} - The audio/video bitrate. Not applicable to thumbnails. {Codec} - The type of the audio/video codec. Any unsubstituted macros will be collapsed and removed from the filename.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="filenamepattern_go">
+<a href="#filenamepattern_go" style="color: inherit; text-decoration: inherit;">Filename<wbr>Pattern</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The pattern of the file names for the generated output files. The following macros are supported in the file name: {Basename} - An expansion macro that will use the name of the input video file. If the base name(the file suffix is not included) of the input video file is less than 32 characters long, the base name of input video files will be used. If the length of base name of the input video file exceeds 32 characters, the base name is truncated to the first 32 characters in total length. {Extension} - The appropriate extension for this format. {Label} - The label assigned to the codec/layer. {Index} - A unique index for thumbnails. Only applicable to thumbnails. {Bitrate} - The audio/video bitrate. Not applicable to thumbnails. {Codec} - The type of the audio/video codec. Any unsubstituted macros will be collapsed and removed from the filename.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="filenamepattern_nodejs">
+<a href="#filenamepattern_nodejs" style="color: inherit; text-decoration: inherit;">filename<wbr>Pattern</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The pattern of the file names for the generated output files. The following macros are supported in the file name: {Basename} - An expansion macro that will use the name of the input video file. If the base name(the file suffix is not included) of the input video file is less than 32 characters long, the base name of input video files will be used. If the length of base name of the input video file exceeds 32 characters, the base name is truncated to the first 32 characters in total length. {Extension} - The appropriate extension for this format. {Label} - The label assigned to the codec/layer. {Index} - A unique index for thumbnails. Only applicable to thumbnails. {Bitrate} - The audio/video bitrate. Not applicable to thumbnails. {Codec} - The type of the audio/video codec. Any unsubstituted macros will be collapsed and removed from the filename.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="filename_pattern_python">
+<a href="#filename_pattern_python" style="color: inherit; text-decoration: inherit;">filename_<wbr>pattern</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The pattern of the file names for the generated output files. The following macros are supported in the file name: {Basename} - An expansion macro that will use the name of the input video file. If the base name(the file suffix is not included) of the input video file is less than 32 characters long, the base name of input video files will be used. If the length of base name of the input video file exceeds 32 characters, the base name is truncated to the first 32 characters in total length. {Extension} - The appropriate extension for this format. {Label} - The label assigned to the codec/layer. {Index} - A unique index for thumbnails. Only applicable to thumbnails. {Bitrate} - The audio/video bitrate. Not applicable to thumbnails. {Codec} - The type of the audio/video codec. Any unsubstituted macros will be collapsed and removed from the filename.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="pngformatresponse">Png<wbr>Format<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="filenamepattern_csharp">
+<a href="#filenamepattern_csharp" style="color: inherit; text-decoration: inherit;">Filename<wbr>Pattern</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The pattern of the file names for the generated output files. The following macros are supported in the file name: {Basename} - An expansion macro that will use the name of the input video file. If the base name(the file suffix is not included) of the input video file is less than 32 characters long, the base name of input video files will be used. If the length of base name of the input video file exceeds 32 characters, the base name is truncated to the first 32 characters in total length. {Extension} - The appropriate extension for this format. {Label} - The label assigned to the codec/layer. {Index} - A unique index for thumbnails. Only applicable to thumbnails. {Bitrate} - The audio/video bitrate. Not applicable to thumbnails. {Codec} - The type of the audio/video codec. Any unsubstituted macros will be collapsed and removed from the filename.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="filenamepattern_go">
+<a href="#filenamepattern_go" style="color: inherit; text-decoration: inherit;">Filename<wbr>Pattern</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The pattern of the file names for the generated output files. The following macros are supported in the file name: {Basename} - An expansion macro that will use the name of the input video file. If the base name(the file suffix is not included) of the input video file is less than 32 characters long, the base name of input video files will be used. If the length of base name of the input video file exceeds 32 characters, the base name is truncated to the first 32 characters in total length. {Extension} - The appropriate extension for this format. {Label} - The label assigned to the codec/layer. {Index} - A unique index for thumbnails. Only applicable to thumbnails. {Bitrate} - The audio/video bitrate. Not applicable to thumbnails. {Codec} - The type of the audio/video codec. Any unsubstituted macros will be collapsed and removed from the filename.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="filenamepattern_nodejs">
+<a href="#filenamepattern_nodejs" style="color: inherit; text-decoration: inherit;">filename<wbr>Pattern</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The pattern of the file names for the generated output files. The following macros are supported in the file name: {Basename} - An expansion macro that will use the name of the input video file. If the base name(the file suffix is not included) of the input video file is less than 32 characters long, the base name of input video files will be used. If the length of base name of the input video file exceeds 32 characters, the base name is truncated to the first 32 characters in total length. {Extension} - The appropriate extension for this format. {Label} - The label assigned to the codec/layer. {Index} - A unique index for thumbnails. Only applicable to thumbnails. {Bitrate} - The audio/video bitrate. Not applicable to thumbnails. {Codec} - The type of the audio/video codec. Any unsubstituted macros will be collapsed and removed from the filename.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="filename_pattern_python">
+<a href="#filename_pattern_python" style="color: inherit; text-decoration: inherit;">filename_<wbr>pattern</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The pattern of the file names for the generated output files. The following macros are supported in the file name: {Basename} - An expansion macro that will use the name of the input video file. If the base name(the file suffix is not included) of the input video file is less than 32 characters long, the base name of input video files will be used. If the length of base name of the input video file exceeds 32 characters, the base name is truncated to the first 32 characters in total length. {Extension} - The appropriate extension for this format. {Label} - The label assigned to the codec/layer. {Index} - A unique index for thumbnails. Only applicable to thumbnails. {Bitrate} - The audio/video bitrate. Not applicable to thumbnails. {Codec} - The type of the audio/video codec. Any unsubstituted macros will be collapsed and removed from the filename.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="pngimage">Png<wbr>Image</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="start_csharp">
+<a href="#start_csharp" style="color: inherit; text-decoration: inherit;">Start</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The position in the input video from where to start generating thumbnails. The value can be in ISO 8601 format (For example, PT05S to start at 5 seconds), or a frame count (For example, 10 to start at the 10th frame), or a relative value to stream duration (For example, 10% to start at 10% of stream duration). Also supports a macro {Best}, which tells the encoder to select the best thumbnail from the first few seconds of the video and will only produce one thumbnail, no matter what other settings are for Step and Range. The default value is macro {Best}.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keyframeinterval_csharp">
+<a href="#keyframeinterval_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Frame<wbr>Interval</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The distance between two key frames. The value should be non-zero in the range [0.5, 20] seconds, specified in ISO 8601 format. The default is 2 seconds(PT2S). Note that this setting is ignored if VideoSyncMode.Passthrough is set, where the KeyFrameInterval value will follow the input source setting.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="label_csharp">
+<a href="#label_csharp" style="color: inherit; text-decoration: inherit;">Label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An optional label for the codec. The label can be used to control muxing behavior.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="layers_csharp">
+<a href="#layers_csharp" style="color: inherit; text-decoration: inherit;">Layers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#pnglayer">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Png<wbr>Layer<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A collection of output PNG image layers to be produced by the encoder.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="range_csharp">
+<a href="#range_csharp" style="color: inherit; text-decoration: inherit;">Range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The position relative to transform preset start time in the input video at which to stop generating thumbnails. The value can be in ISO 8601 format (For example, PT5M30S to stop at 5 minutes and 30 seconds from start time), or a frame count (For example, 300 to stop at the 300th frame from the frame at start time. If this value is 1, it means only producing one thumbnail at start time), or a relative value to the stream duration (For example, 50% to stop at half of stream duration from start time). The default value is 100%, which means to stop at the end of the stream.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="step_csharp">
+<a href="#step_csharp" style="color: inherit; text-decoration: inherit;">Step</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The intervals at which thumbnails are generated. The value can be in ISO 8601 format (For example, PT05S for one image every 5 seconds), or a frame count (For example, 30 for one image every 30 frames), or a relative value to stream duration (For example, 10% for one image every 10% of stream duration). Note: Step value will affect the first generated thumbnail, which may not be exactly the one specified at transform preset start time. This is due to the encoder, which tries to select the best thumbnail between start time and Step position from start time as the first output. As the default value is 10%, it means if stream has long duration, the first generated thumbnail might be far away from the one specified at start time. Try to select reasonable value for Step if the first thumbnail is expected close to start time, or set Range value at 1 if only one thumbnail is needed at start time.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="stretchmode_csharp">
+<a href="#stretchmode_csharp" style="color: inherit; text-decoration: inherit;">Stretch<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#stretchmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Stretch<wbr>Mode</a></span>
+    </dt>
+    <dd>{{% md %}}The resizing mode - how the input video will be resized to fit the desired output resolution(s). Default is AutoSize{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="syncmode_csharp">
+<a href="#syncmode_csharp" style="color: inherit; text-decoration: inherit;">Sync<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#videosyncmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Video<wbr>Sync<wbr>Mode</a></span>
+    </dt>
+    <dd>{{% md %}}The Video Sync Mode{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="start_go">
+<a href="#start_go" style="color: inherit; text-decoration: inherit;">Start</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The position in the input video from where to start generating thumbnails. The value can be in ISO 8601 format (For example, PT05S to start at 5 seconds), or a frame count (For example, 10 to start at the 10th frame), or a relative value to stream duration (For example, 10% to start at 10% of stream duration). Also supports a macro {Best}, which tells the encoder to select the best thumbnail from the first few seconds of the video and will only produce one thumbnail, no matter what other settings are for Step and Range. The default value is macro {Best}.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keyframeinterval_go">
+<a href="#keyframeinterval_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Frame<wbr>Interval</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The distance between two key frames. The value should be non-zero in the range [0.5, 20] seconds, specified in ISO 8601 format. The default is 2 seconds(PT2S). Note that this setting is ignored if VideoSyncMode.Passthrough is set, where the KeyFrameInterval value will follow the input source setting.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="label_go">
+<a href="#label_go" style="color: inherit; text-decoration: inherit;">Label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An optional label for the codec. The label can be used to control muxing behavior.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="layers_go">
+<a href="#layers_go" style="color: inherit; text-decoration: inherit;">Layers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#pnglayer">[]Png<wbr>Layer</a></span>
+    </dt>
+    <dd>{{% md %}}A collection of output PNG image layers to be produced by the encoder.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="range_go">
+<a href="#range_go" style="color: inherit; text-decoration: inherit;">Range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The position relative to transform preset start time in the input video at which to stop generating thumbnails. The value can be in ISO 8601 format (For example, PT5M30S to stop at 5 minutes and 30 seconds from start time), or a frame count (For example, 300 to stop at the 300th frame from the frame at start time. If this value is 1, it means only producing one thumbnail at start time), or a relative value to the stream duration (For example, 50% to stop at half of stream duration from start time). The default value is 100%, which means to stop at the end of the stream.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="step_go">
+<a href="#step_go" style="color: inherit; text-decoration: inherit;">Step</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The intervals at which thumbnails are generated. The value can be in ISO 8601 format (For example, PT05S for one image every 5 seconds), or a frame count (For example, 30 for one image every 30 frames), or a relative value to stream duration (For example, 10% for one image every 10% of stream duration). Note: Step value will affect the first generated thumbnail, which may not be exactly the one specified at transform preset start time. This is due to the encoder, which tries to select the best thumbnail between start time and Step position from start time as the first output. As the default value is 10%, it means if stream has long duration, the first generated thumbnail might be far away from the one specified at start time. Try to select reasonable value for Step if the first thumbnail is expected close to start time, or set Range value at 1 if only one thumbnail is needed at start time.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="stretchmode_go">
+<a href="#stretchmode_go" style="color: inherit; text-decoration: inherit;">Stretch<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#stretchmode">Stretch<wbr>Mode</a></span>
+    </dt>
+    <dd>{{% md %}}The resizing mode - how the input video will be resized to fit the desired output resolution(s). Default is AutoSize{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="syncmode_go">
+<a href="#syncmode_go" style="color: inherit; text-decoration: inherit;">Sync<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#videosyncmode">Video<wbr>Sync<wbr>Mode</a></span>
+    </dt>
+    <dd>{{% md %}}The Video Sync Mode{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="start_nodejs">
+<a href="#start_nodejs" style="color: inherit; text-decoration: inherit;">start</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The position in the input video from where to start generating thumbnails. The value can be in ISO 8601 format (For example, PT05S to start at 5 seconds), or a frame count (For example, 10 to start at the 10th frame), or a relative value to stream duration (For example, 10% to start at 10% of stream duration). Also supports a macro {Best}, which tells the encoder to select the best thumbnail from the first few seconds of the video and will only produce one thumbnail, no matter what other settings are for Step and Range. The default value is macro {Best}.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keyframeinterval_nodejs">
+<a href="#keyframeinterval_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Frame<wbr>Interval</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The distance between two key frames. The value should be non-zero in the range [0.5, 20] seconds, specified in ISO 8601 format. The default is 2 seconds(PT2S). Note that this setting is ignored if VideoSyncMode.Passthrough is set, where the KeyFrameInterval value will follow the input source setting.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="label_nodejs">
+<a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An optional label for the codec. The label can be used to control muxing behavior.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="layers_nodejs">
+<a href="#layers_nodejs" style="color: inherit; text-decoration: inherit;">layers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#pnglayer">Png<wbr>Layer[]</a></span>
+    </dt>
+    <dd>{{% md %}}A collection of output PNG image layers to be produced by the encoder.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="range_nodejs">
+<a href="#range_nodejs" style="color: inherit; text-decoration: inherit;">range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The position relative to transform preset start time in the input video at which to stop generating thumbnails. The value can be in ISO 8601 format (For example, PT5M30S to stop at 5 minutes and 30 seconds from start time), or a frame count (For example, 300 to stop at the 300th frame from the frame at start time. If this value is 1, it means only producing one thumbnail at start time), or a relative value to the stream duration (For example, 50% to stop at half of stream duration from start time). The default value is 100%, which means to stop at the end of the stream.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="step_nodejs">
+<a href="#step_nodejs" style="color: inherit; text-decoration: inherit;">step</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The intervals at which thumbnails are generated. The value can be in ISO 8601 format (For example, PT05S for one image every 5 seconds), or a frame count (For example, 30 for one image every 30 frames), or a relative value to stream duration (For example, 10% for one image every 10% of stream duration). Note: Step value will affect the first generated thumbnail, which may not be exactly the one specified at transform preset start time. This is due to the encoder, which tries to select the best thumbnail between start time and Step position from start time as the first output. As the default value is 10%, it means if stream has long duration, the first generated thumbnail might be far away from the one specified at start time. Try to select reasonable value for Step if the first thumbnail is expected close to start time, or set Range value at 1 if only one thumbnail is needed at start time.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="stretchmode_nodejs">
+<a href="#stretchmode_nodejs" style="color: inherit; text-decoration: inherit;">stretch<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#stretchmode">Stretch<wbr>Mode</a></span>
+    </dt>
+    <dd>{{% md %}}The resizing mode - how the input video will be resized to fit the desired output resolution(s). Default is AutoSize{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="syncmode_nodejs">
+<a href="#syncmode_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#videosyncmode">Video<wbr>Sync<wbr>Mode</a></span>
+    </dt>
+    <dd>{{% md %}}The Video Sync Mode{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="start_python">
+<a href="#start_python" style="color: inherit; text-decoration: inherit;">start</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The position in the input video from where to start generating thumbnails. The value can be in ISO 8601 format (For example, PT05S to start at 5 seconds), or a frame count (For example, 10 to start at the 10th frame), or a relative value to stream duration (For example, 10% to start at 10% of stream duration). Also supports a macro {Best}, which tells the encoder to select the best thumbnail from the first few seconds of the video and will only produce one thumbnail, no matter what other settings are for Step and Range. The default value is macro {Best}.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="key_frame_interval_python">
+<a href="#key_frame_interval_python" style="color: inherit; text-decoration: inherit;">key_<wbr>frame_<wbr>interval</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The distance between two key frames. The value should be non-zero in the range [0.5, 20] seconds, specified in ISO 8601 format. The default is 2 seconds(PT2S). Note that this setting is ignored if VideoSyncMode.Passthrough is set, where the KeyFrameInterval value will follow the input source setting.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="label_python">
+<a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}An optional label for the codec. The label can be used to control muxing behavior.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="layers_python">
+<a href="#layers_python" style="color: inherit; text-decoration: inherit;">layers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#pnglayer">Sequence[Png<wbr>Layer<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}A collection of output PNG image layers to be produced by the encoder.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="range_python">
+<a href="#range_python" style="color: inherit; text-decoration: inherit;">range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The position relative to transform preset start time in the input video at which to stop generating thumbnails. The value can be in ISO 8601 format (For example, PT5M30S to stop at 5 minutes and 30 seconds from start time), or a frame count (For example, 300 to stop at the 300th frame from the frame at start time. If this value is 1, it means only producing one thumbnail at start time), or a relative value to the stream duration (For example, 50% to stop at half of stream duration from start time). The default value is 100%, which means to stop at the end of the stream.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="step_python">
+<a href="#step_python" style="color: inherit; text-decoration: inherit;">step</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The intervals at which thumbnails are generated. The value can be in ISO 8601 format (For example, PT05S for one image every 5 seconds), or a frame count (For example, 30 for one image every 30 frames), or a relative value to stream duration (For example, 10% for one image every 10% of stream duration). Note: Step value will affect the first generated thumbnail, which may not be exactly the one specified at transform preset start time. This is due to the encoder, which tries to select the best thumbnail between start time and Step position from start time as the first output. As the default value is 10%, it means if stream has long duration, the first generated thumbnail might be far away from the one specified at start time. Try to select reasonable value for Step if the first thumbnail is expected close to start time, or set Range value at 1 if only one thumbnail is needed at start time.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="stretch_mode_python">
+<a href="#stretch_mode_python" style="color: inherit; text-decoration: inherit;">stretch_<wbr>mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str | <a href="#stretchmode">Stretch<wbr>Mode</a></span>
+    </dt>
+    <dd>{{% md %}}The resizing mode - how the input video will be resized to fit the desired output resolution(s). Default is AutoSize{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sync_mode_python">
+<a href="#sync_mode_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str | <a href="#videosyncmode">Video<wbr>Sync<wbr>Mode</a></span>
+    </dt>
+    <dd>{{% md %}}The Video Sync Mode{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="pngimageresponse">Png<wbr>Image<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="start_csharp">
+<a href="#start_csharp" style="color: inherit; text-decoration: inherit;">Start</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The position in the input video from where to start generating thumbnails. The value can be in ISO 8601 format (For example, PT05S to start at 5 seconds), or a frame count (For example, 10 to start at the 10th frame), or a relative value to stream duration (For example, 10% to start at 10% of stream duration). Also supports a macro {Best}, which tells the encoder to select the best thumbnail from the first few seconds of the video and will only produce one thumbnail, no matter what other settings are for Step and Range. The default value is macro {Best}.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keyframeinterval_csharp">
+<a href="#keyframeinterval_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Frame<wbr>Interval</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The distance between two key frames. The value should be non-zero in the range [0.5, 20] seconds, specified in ISO 8601 format. The default is 2 seconds(PT2S). Note that this setting is ignored if VideoSyncMode.Passthrough is set, where the KeyFrameInterval value will follow the input source setting.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="label_csharp">
+<a href="#label_csharp" style="color: inherit; text-decoration: inherit;">Label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An optional label for the codec. The label can be used to control muxing behavior.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="layers_csharp">
+<a href="#layers_csharp" style="color: inherit; text-decoration: inherit;">Layers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#pnglayerresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Png<wbr>Layer<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}A collection of output PNG image layers to be produced by the encoder.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="range_csharp">
+<a href="#range_csharp" style="color: inherit; text-decoration: inherit;">Range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The position relative to transform preset start time in the input video at which to stop generating thumbnails. The value can be in ISO 8601 format (For example, PT5M30S to stop at 5 minutes and 30 seconds from start time), or a frame count (For example, 300 to stop at the 300th frame from the frame at start time. If this value is 1, it means only producing one thumbnail at start time), or a relative value to the stream duration (For example, 50% to stop at half of stream duration from start time). The default value is 100%, which means to stop at the end of the stream.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="step_csharp">
+<a href="#step_csharp" style="color: inherit; text-decoration: inherit;">Step</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The intervals at which thumbnails are generated. The value can be in ISO 8601 format (For example, PT05S for one image every 5 seconds), or a frame count (For example, 30 for one image every 30 frames), or a relative value to stream duration (For example, 10% for one image every 10% of stream duration). Note: Step value will affect the first generated thumbnail, which may not be exactly the one specified at transform preset start time. This is due to the encoder, which tries to select the best thumbnail between start time and Step position from start time as the first output. As the default value is 10%, it means if stream has long duration, the first generated thumbnail might be far away from the one specified at start time. Try to select reasonable value for Step if the first thumbnail is expected close to start time, or set Range value at 1 if only one thumbnail is needed at start time.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="stretchmode_csharp">
+<a href="#stretchmode_csharp" style="color: inherit; text-decoration: inherit;">Stretch<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resizing mode - how the input video will be resized to fit the desired output resolution(s). Default is AutoSize{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="syncmode_csharp">
+<a href="#syncmode_csharp" style="color: inherit; text-decoration: inherit;">Sync<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Video Sync Mode{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="start_go">
+<a href="#start_go" style="color: inherit; text-decoration: inherit;">Start</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The position in the input video from where to start generating thumbnails. The value can be in ISO 8601 format (For example, PT05S to start at 5 seconds), or a frame count (For example, 10 to start at the 10th frame), or a relative value to stream duration (For example, 10% to start at 10% of stream duration). Also supports a macro {Best}, which tells the encoder to select the best thumbnail from the first few seconds of the video and will only produce one thumbnail, no matter what other settings are for Step and Range. The default value is macro {Best}.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keyframeinterval_go">
+<a href="#keyframeinterval_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Frame<wbr>Interval</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The distance between two key frames. The value should be non-zero in the range [0.5, 20] seconds, specified in ISO 8601 format. The default is 2 seconds(PT2S). Note that this setting is ignored if VideoSyncMode.Passthrough is set, where the KeyFrameInterval value will follow the input source setting.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="label_go">
+<a href="#label_go" style="color: inherit; text-decoration: inherit;">Label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An optional label for the codec. The label can be used to control muxing behavior.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="layers_go">
+<a href="#layers_go" style="color: inherit; text-decoration: inherit;">Layers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#pnglayerresponse">[]Png<wbr>Layer<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}A collection of output PNG image layers to be produced by the encoder.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="range_go">
+<a href="#range_go" style="color: inherit; text-decoration: inherit;">Range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The position relative to transform preset start time in the input video at which to stop generating thumbnails. The value can be in ISO 8601 format (For example, PT5M30S to stop at 5 minutes and 30 seconds from start time), or a frame count (For example, 300 to stop at the 300th frame from the frame at start time. If this value is 1, it means only producing one thumbnail at start time), or a relative value to the stream duration (For example, 50% to stop at half of stream duration from start time). The default value is 100%, which means to stop at the end of the stream.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="step_go">
+<a href="#step_go" style="color: inherit; text-decoration: inherit;">Step</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The intervals at which thumbnails are generated. The value can be in ISO 8601 format (For example, PT05S for one image every 5 seconds), or a frame count (For example, 30 for one image every 30 frames), or a relative value to stream duration (For example, 10% for one image every 10% of stream duration). Note: Step value will affect the first generated thumbnail, which may not be exactly the one specified at transform preset start time. This is due to the encoder, which tries to select the best thumbnail between start time and Step position from start time as the first output. As the default value is 10%, it means if stream has long duration, the first generated thumbnail might be far away from the one specified at start time. Try to select reasonable value for Step if the first thumbnail is expected close to start time, or set Range value at 1 if only one thumbnail is needed at start time.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="stretchmode_go">
+<a href="#stretchmode_go" style="color: inherit; text-decoration: inherit;">Stretch<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resizing mode - how the input video will be resized to fit the desired output resolution(s). Default is AutoSize{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="syncmode_go">
+<a href="#syncmode_go" style="color: inherit; text-decoration: inherit;">Sync<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Video Sync Mode{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="start_nodejs">
+<a href="#start_nodejs" style="color: inherit; text-decoration: inherit;">start</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The position in the input video from where to start generating thumbnails. The value can be in ISO 8601 format (For example, PT05S to start at 5 seconds), or a frame count (For example, 10 to start at the 10th frame), or a relative value to stream duration (For example, 10% to start at 10% of stream duration). Also supports a macro {Best}, which tells the encoder to select the best thumbnail from the first few seconds of the video and will only produce one thumbnail, no matter what other settings are for Step and Range. The default value is macro {Best}.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keyframeinterval_nodejs">
+<a href="#keyframeinterval_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Frame<wbr>Interval</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The distance between two key frames. The value should be non-zero in the range [0.5, 20] seconds, specified in ISO 8601 format. The default is 2 seconds(PT2S). Note that this setting is ignored if VideoSyncMode.Passthrough is set, where the KeyFrameInterval value will follow the input source setting.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="label_nodejs">
+<a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}An optional label for the codec. The label can be used to control muxing behavior.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="layers_nodejs">
+<a href="#layers_nodejs" style="color: inherit; text-decoration: inherit;">layers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#pnglayerresponse">Png<wbr>Layer<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}A collection of output PNG image layers to be produced by the encoder.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="range_nodejs">
+<a href="#range_nodejs" style="color: inherit; text-decoration: inherit;">range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The position relative to transform preset start time in the input video at which to stop generating thumbnails. The value can be in ISO 8601 format (For example, PT5M30S to stop at 5 minutes and 30 seconds from start time), or a frame count (For example, 300 to stop at the 300th frame from the frame at start time. If this value is 1, it means only producing one thumbnail at start time), or a relative value to the stream duration (For example, 50% to stop at half of stream duration from start time). The default value is 100%, which means to stop at the end of the stream.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="step_nodejs">
+<a href="#step_nodejs" style="color: inherit; text-decoration: inherit;">step</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The intervals at which thumbnails are generated. The value can be in ISO 8601 format (For example, PT05S for one image every 5 seconds), or a frame count (For example, 30 for one image every 30 frames), or a relative value to stream duration (For example, 10% for one image every 10% of stream duration). Note: Step value will affect the first generated thumbnail, which may not be exactly the one specified at transform preset start time. This is due to the encoder, which tries to select the best thumbnail between start time and Step position from start time as the first output. As the default value is 10%, it means if stream has long duration, the first generated thumbnail might be far away from the one specified at start time. Try to select reasonable value for Step if the first thumbnail is expected close to start time, or set Range value at 1 if only one thumbnail is needed at start time.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="stretchmode_nodejs">
+<a href="#stretchmode_nodejs" style="color: inherit; text-decoration: inherit;">stretch<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resizing mode - how the input video will be resized to fit the desired output resolution(s). Default is AutoSize{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="syncmode_nodejs">
+<a href="#syncmode_nodejs" style="color: inherit; text-decoration: inherit;">sync<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Video Sync Mode{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="start_python">
+<a href="#start_python" style="color: inherit; text-decoration: inherit;">start</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The position in the input video from where to start generating thumbnails. The value can be in ISO 8601 format (For example, PT05S to start at 5 seconds), or a frame count (For example, 10 to start at the 10th frame), or a relative value to stream duration (For example, 10% to start at 10% of stream duration). Also supports a macro {Best}, which tells the encoder to select the best thumbnail from the first few seconds of the video and will only produce one thumbnail, no matter what other settings are for Step and Range. The default value is macro {Best}.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="key_frame_interval_python">
+<a href="#key_frame_interval_python" style="color: inherit; text-decoration: inherit;">key_<wbr>frame_<wbr>interval</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The distance between two key frames. The value should be non-zero in the range [0.5, 20] seconds, specified in ISO 8601 format. The default is 2 seconds(PT2S). Note that this setting is ignored if VideoSyncMode.Passthrough is set, where the KeyFrameInterval value will follow the input source setting.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="label_python">
+<a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}An optional label for the codec. The label can be used to control muxing behavior.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="layers_python">
+<a href="#layers_python" style="color: inherit; text-decoration: inherit;">layers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#pnglayerresponse">Sequence[Png<wbr>Layer<wbr>Response<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}A collection of output PNG image layers to be produced by the encoder.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="range_python">
+<a href="#range_python" style="color: inherit; text-decoration: inherit;">range</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The position relative to transform preset start time in the input video at which to stop generating thumbnails. The value can be in ISO 8601 format (For example, PT5M30S to stop at 5 minutes and 30 seconds from start time), or a frame count (For example, 300 to stop at the 300th frame from the frame at start time. If this value is 1, it means only producing one thumbnail at start time), or a relative value to the stream duration (For example, 50% to stop at half of stream duration from start time). The default value is 100%, which means to stop at the end of the stream.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="step_python">
+<a href="#step_python" style="color: inherit; text-decoration: inherit;">step</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The intervals at which thumbnails are generated. The value can be in ISO 8601 format (For example, PT05S for one image every 5 seconds), or a frame count (For example, 30 for one image every 30 frames), or a relative value to stream duration (For example, 10% for one image every 10% of stream duration). Note: Step value will affect the first generated thumbnail, which may not be exactly the one specified at transform preset start time. This is due to the encoder, which tries to select the best thumbnail between start time and Step position from start time as the first output. As the default value is 10%, it means if stream has long duration, the first generated thumbnail might be far away from the one specified at start time. Try to select reasonable value for Step if the first thumbnail is expected close to start time, or set Range value at 1 if only one thumbnail is needed at start time.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="stretch_mode_python">
+<a href="#stretch_mode_python" style="color: inherit; text-decoration: inherit;">stretch_<wbr>mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The resizing mode - how the input video will be resized to fit the desired output resolution(s). Default is AutoSize{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sync_mode_python">
+<a href="#sync_mode_python" style="color: inherit; text-decoration: inherit;">sync_<wbr>mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Video Sync Mode{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="pnglayer">Png<wbr>Layer</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="height_csharp">
+<a href="#height_csharp" style="color: inherit; text-decoration: inherit;">Height</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The height of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in height as the input.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="label_csharp">
+<a href="#label_csharp" style="color: inherit; text-decoration: inherit;">Label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The alphanumeric label for this layer, which can be used in multiplexing different video and audio layers, or in naming the output file.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="width_csharp">
+<a href="#width_csharp" style="color: inherit; text-decoration: inherit;">Width</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The width of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in width as the input.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="height_go">
+<a href="#height_go" style="color: inherit; text-decoration: inherit;">Height</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The height of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in height as the input.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="label_go">
+<a href="#label_go" style="color: inherit; text-decoration: inherit;">Label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The alphanumeric label for this layer, which can be used in multiplexing different video and audio layers, or in naming the output file.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="width_go">
+<a href="#width_go" style="color: inherit; text-decoration: inherit;">Width</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The width of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in width as the input.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="height_nodejs">
+<a href="#height_nodejs" style="color: inherit; text-decoration: inherit;">height</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The height of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in height as the input.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="label_nodejs">
+<a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The alphanumeric label for this layer, which can be used in multiplexing different video and audio layers, or in naming the output file.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="width_nodejs">
+<a href="#width_nodejs" style="color: inherit; text-decoration: inherit;">width</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The width of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in width as the input.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="height_python">
+<a href="#height_python" style="color: inherit; text-decoration: inherit;">height</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The height of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in height as the input.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="label_python">
+<a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The alphanumeric label for this layer, which can be used in multiplexing different video and audio layers, or in naming the output file.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="width_python">
+<a href="#width_python" style="color: inherit; text-decoration: inherit;">width</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The width of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in width as the input.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="pnglayerresponse">Png<wbr>Layer<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="height_csharp">
+<a href="#height_csharp" style="color: inherit; text-decoration: inherit;">Height</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The height of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in height as the input.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="label_csharp">
+<a href="#label_csharp" style="color: inherit; text-decoration: inherit;">Label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The alphanumeric label for this layer, which can be used in multiplexing different video and audio layers, or in naming the output file.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="width_csharp">
+<a href="#width_csharp" style="color: inherit; text-decoration: inherit;">Width</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The width of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in width as the input.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="height_go">
+<a href="#height_go" style="color: inherit; text-decoration: inherit;">Height</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The height of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in height as the input.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="label_go">
+<a href="#label_go" style="color: inherit; text-decoration: inherit;">Label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The alphanumeric label for this layer, which can be used in multiplexing different video and audio layers, or in naming the output file.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="width_go">
+<a href="#width_go" style="color: inherit; text-decoration: inherit;">Width</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The width of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in width as the input.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="height_nodejs">
+<a href="#height_nodejs" style="color: inherit; text-decoration: inherit;">height</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The height of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in height as the input.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="label_nodejs">
+<a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The alphanumeric label for this layer, which can be used in multiplexing different video and audio layers, or in naming the output file.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="width_nodejs">
+<a href="#width_nodejs" style="color: inherit; text-decoration: inherit;">width</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The width of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in width as the input.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="height_python">
+<a href="#height_python" style="color: inherit; text-decoration: inherit;">height</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The height of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in height as the input.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="label_python">
+<a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The alphanumeric label for this layer, which can be used in multiplexing different video and audio layers, or in naming the output file.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="width_python">
+<a href="#width_python" style="color: inherit; text-decoration: inherit;">width</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The width of the output video for this layer. The value can be absolute (in pixels) or relative (in percentage). For example 50% means the output video has half as many pixels in width as the input.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4131,7 +9341,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#formats_csharp" style="color: inherit; text-decoration: inherit;">Formats</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Image<wbr>Format<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Multi<wbr>Bitrate<wbr>Format<wbr>Args&gt;&gt;</span>
+        <span class="property-type">List&lt;object&gt;</span>
     </dt>
     <dd>{{% md %}}The list of outputs to be produced by the encoder.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4188,7 +9398,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#codecs_nodejs" style="color: inherit; text-decoration: inherit;">codecs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Audio | Copy<wbr>Audio | Copy<wbr>Video | Video[]</span>
+        <span class="property-type">Aac<wbr>Audio | Audio | Copy<wbr>Audio | Copy<wbr>Video | H264Video | Image | Jpg<wbr>Image | Png<wbr>Image | Video[]</span>
     </dt>
     <dd>{{% md %}}The list of codecs to be used when encoding the input video.{{% /md %}}</dd>
     <dt class="property-required"
@@ -4197,7 +9407,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#formats_nodejs" style="color: inherit; text-decoration: inherit;">formats</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Image<wbr>Format | Multi<wbr>Bitrate<wbr>Format[]</span>
+        <span class="property-type">Image<wbr>Format | Jpg<wbr>Format | Mp4Format | Multi<wbr>Bitrate<wbr>Format | Png<wbr>Format | Transport<wbr>Stream<wbr>Format[]</span>
     </dt>
     <dd>{{% md %}}The list of outputs to be produced by the encoder.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4221,7 +9431,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#codecs_python" style="color: inherit; text-decoration: inherit;">codecs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Audio<wbr>Args, Copy<wbr>Audio<wbr>Args, Copy<wbr>Video<wbr>Args, Video<wbr>Args]]</span>
+        <span class="property-type">Sequence[Union[Aac<wbr>Audio<wbr>Args, Audio<wbr>Args, Copy<wbr>Audio<wbr>Args, Copy<wbr>Video<wbr>Args, H264Video<wbr>Args, Image<wbr>Args, Jpg<wbr>Image<wbr>Args, Png<wbr>Image<wbr>Args, Video<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}The list of codecs to be used when encoding the input video.{{% /md %}}</dd>
     <dt class="property-required"
@@ -4230,7 +9440,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#formats_python" style="color: inherit; text-decoration: inherit;">formats</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Image<wbr>Format<wbr>Args, Multi<wbr>Bitrate<wbr>Format<wbr>Args]]</span>
+        <span class="property-type">Sequence[Union[Image<wbr>Format<wbr>Args, Jpg<wbr>Format<wbr>Args, Mp4Format<wbr>Args, Multi<wbr>Bitrate<wbr>Format<wbr>Args, Png<wbr>Format<wbr>Args, Transport<wbr>Stream<wbr>Format<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}The list of outputs to be produced by the encoder.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4265,7 +9475,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#formats_csharp" style="color: inherit; text-decoration: inherit;">Formats</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Image<wbr>Format<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Multi<wbr>Bitrate<wbr>Format<wbr>Response<wbr>Args&gt;&gt;</span>
+        <span class="property-type">List&lt;object&gt;</span>
     </dt>
     <dd>{{% md %}}The list of outputs to be produced by the encoder.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4322,7 +9532,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#codecs_nodejs" style="color: inherit; text-decoration: inherit;">codecs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Audio<wbr>Response | Copy<wbr>Audio<wbr>Response | Copy<wbr>Video<wbr>Response | Video<wbr>Response[]</span>
+        <span class="property-type">Aac<wbr>Audio<wbr>Response | Audio<wbr>Response | Copy<wbr>Audio<wbr>Response | Copy<wbr>Video<wbr>Response | H264Video<wbr>Response | Image<wbr>Response | Jpg<wbr>Image<wbr>Response | Png<wbr>Image<wbr>Response | Video<wbr>Response[]</span>
     </dt>
     <dd>{{% md %}}The list of codecs to be used when encoding the input video.{{% /md %}}</dd>
     <dt class="property-required"
@@ -4331,7 +9541,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#formats_nodejs" style="color: inherit; text-decoration: inherit;">formats</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Image<wbr>Format<wbr>Response | Multi<wbr>Bitrate<wbr>Format<wbr>Response[]</span>
+        <span class="property-type">Image<wbr>Format<wbr>Response | Jpg<wbr>Format<wbr>Response | Mp4Format<wbr>Response | Multi<wbr>Bitrate<wbr>Format<wbr>Response | Png<wbr>Format<wbr>Response | Transport<wbr>Stream<wbr>Format<wbr>Response[]</span>
     </dt>
     <dd>{{% md %}}The list of outputs to be produced by the encoder.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4355,7 +9565,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#codecs_python" style="color: inherit; text-decoration: inherit;">codecs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Audio<wbr>Response<wbr>Args, Copy<wbr>Audio<wbr>Response<wbr>Args, Copy<wbr>Video<wbr>Response<wbr>Args, Video<wbr>Response<wbr>Args]]</span>
+        <span class="property-type">Sequence[Union[Aac<wbr>Audio<wbr>Response<wbr>Args, Audio<wbr>Response<wbr>Args, Copy<wbr>Audio<wbr>Response<wbr>Args, Copy<wbr>Video<wbr>Response<wbr>Args, H264Video<wbr>Response<wbr>Args, Image<wbr>Response<wbr>Args, Jpg<wbr>Image<wbr>Response<wbr>Args, Png<wbr>Image<wbr>Response<wbr>Args, Video<wbr>Response<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}The list of codecs to be used when encoding the input video.{{% /md %}}</dd>
     <dt class="property-required"
@@ -4364,7 +9574,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#formats_python" style="color: inherit; text-decoration: inherit;">formats</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Image<wbr>Format<wbr>Response<wbr>Args, Multi<wbr>Bitrate<wbr>Format<wbr>Response<wbr>Args]]</span>
+        <span class="property-type">Sequence[Union[Image<wbr>Format<wbr>Response<wbr>Args, Jpg<wbr>Format<wbr>Response<wbr>Args, Mp4Format<wbr>Response<wbr>Args, Multi<wbr>Bitrate<wbr>Format<wbr>Response<wbr>Args, Png<wbr>Format<wbr>Response<wbr>Args, Transport<wbr>Stream<wbr>Format<wbr>Response<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}The list of outputs to be produced by the encoder.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4436,7 +9646,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preset_csharp" style="color: inherit; text-decoration: inherit;">Preset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#audioanalyzerpreset">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Audio<wbr>Analyzer<wbr>Preset<wbr>Args</a> | <a href="#builtinstandardencoderpreset">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Built<wbr>In<wbr>Standard<wbr>Encoder<wbr>Preset<wbr>Args</a> | <a href="#facedetectorpreset">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Face<wbr>Detector<wbr>Preset<wbr>Args</a> | <a href="#standardencoderpreset">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Standard<wbr>Encoder<wbr>Preset<wbr>Args</a></span>
+        <span class="property-type"><a href="#audioanalyzerpreset">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Audio<wbr>Analyzer<wbr>Preset<wbr>Args</a> | <a href="#builtinstandardencoderpreset">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Built<wbr>In<wbr>Standard<wbr>Encoder<wbr>Preset<wbr>Args</a> | <a href="#facedetectorpreset">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Face<wbr>Detector<wbr>Preset<wbr>Args</a> | <a href="#standardencoderpreset">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Standard<wbr>Encoder<wbr>Preset<wbr>Args</a> | <a href="#videoanalyzerpreset">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Video<wbr>Analyzer<wbr>Preset<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Preset that describes the operations that will be used to modify, transcode, or extract insights from the source file to generate the output.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4469,7 +9679,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preset_go" style="color: inherit; text-decoration: inherit;">Preset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#audioanalyzerpreset">Audio<wbr>Analyzer<wbr>Preset</a> | <a href="#builtinstandardencoderpreset">Built<wbr>In<wbr>Standard<wbr>Encoder<wbr>Preset</a> | <a href="#facedetectorpreset">Face<wbr>Detector<wbr>Preset</a> | <a href="#standardencoderpreset">Standard<wbr>Encoder<wbr>Preset</a></span>
+        <span class="property-type"><a href="#audioanalyzerpreset">Audio<wbr>Analyzer<wbr>Preset</a> | <a href="#builtinstandardencoderpreset">Built<wbr>In<wbr>Standard<wbr>Encoder<wbr>Preset</a> | <a href="#facedetectorpreset">Face<wbr>Detector<wbr>Preset</a> | <a href="#standardencoderpreset">Standard<wbr>Encoder<wbr>Preset</a> | <a href="#videoanalyzerpreset">Video<wbr>Analyzer<wbr>Preset</a></span>
     </dt>
     <dd>{{% md %}}Preset that describes the operations that will be used to modify, transcode, or extract insights from the source file to generate the output.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4502,7 +9712,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preset_nodejs" style="color: inherit; text-decoration: inherit;">preset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#audioanalyzerpreset">Audio<wbr>Analyzer<wbr>Preset</a> | <a href="#builtinstandardencoderpreset">Built<wbr>In<wbr>Standard<wbr>Encoder<wbr>Preset</a> | <a href="#facedetectorpreset">Face<wbr>Detector<wbr>Preset</a> | <a href="#standardencoderpreset">Standard<wbr>Encoder<wbr>Preset</a></span>
+        <span class="property-type"><a href="#audioanalyzerpreset">Audio<wbr>Analyzer<wbr>Preset</a> | <a href="#builtinstandardencoderpreset">Built<wbr>In<wbr>Standard<wbr>Encoder<wbr>Preset</a> | <a href="#facedetectorpreset">Face<wbr>Detector<wbr>Preset</a> | <a href="#standardencoderpreset">Standard<wbr>Encoder<wbr>Preset</a> | <a href="#videoanalyzerpreset">Video<wbr>Analyzer<wbr>Preset</a></span>
     </dt>
     <dd>{{% md %}}Preset that describes the operations that will be used to modify, transcode, or extract insights from the source file to generate the output.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4535,7 +9745,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preset_python" style="color: inherit; text-decoration: inherit;">preset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#audioanalyzerpreset">Audio<wbr>Analyzer<wbr>Preset<wbr>Args</a> | <a href="#builtinstandardencoderpreset">Built<wbr>In<wbr>Standard<wbr>Encoder<wbr>Preset<wbr>Args</a> | <a href="#facedetectorpreset">Face<wbr>Detector<wbr>Preset<wbr>Args</a> | <a href="#standardencoderpreset">Standard<wbr>Encoder<wbr>Preset<wbr>Args</a></span>
+        <span class="property-type"><a href="#audioanalyzerpreset">Audio<wbr>Analyzer<wbr>Preset<wbr>Args</a> | <a href="#builtinstandardencoderpreset">Built<wbr>In<wbr>Standard<wbr>Encoder<wbr>Preset<wbr>Args</a> | <a href="#facedetectorpreset">Face<wbr>Detector<wbr>Preset<wbr>Args</a> | <a href="#standardencoderpreset">Standard<wbr>Encoder<wbr>Preset<wbr>Args</a> | <a href="#videoanalyzerpreset">Video<wbr>Analyzer<wbr>Preset<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Preset that describes the operations that will be used to modify, transcode, or extract insights from the source file to generate the output.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4570,7 +9780,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preset_csharp" style="color: inherit; text-decoration: inherit;">Preset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#audioanalyzerpresetresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Audio<wbr>Analyzer<wbr>Preset<wbr>Response<wbr>Args</a> | <a href="#builtinstandardencoderpresetresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Built<wbr>In<wbr>Standard<wbr>Encoder<wbr>Preset<wbr>Response<wbr>Args</a> | <a href="#facedetectorpresetresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Face<wbr>Detector<wbr>Preset<wbr>Response<wbr>Args</a> | <a href="#standardencoderpresetresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Standard<wbr>Encoder<wbr>Preset<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#audioanalyzerpresetresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Audio<wbr>Analyzer<wbr>Preset<wbr>Response<wbr>Args</a> | <a href="#builtinstandardencoderpresetresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Built<wbr>In<wbr>Standard<wbr>Encoder<wbr>Preset<wbr>Response<wbr>Args</a> | <a href="#facedetectorpresetresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Face<wbr>Detector<wbr>Preset<wbr>Response<wbr>Args</a> | <a href="#standardencoderpresetresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Standard<wbr>Encoder<wbr>Preset<wbr>Response<wbr>Args</a> | <a href="#videoanalyzerpresetresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Video<wbr>Analyzer<wbr>Preset<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Preset that describes the operations that will be used to modify, transcode, or extract insights from the source file to generate the output.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4603,7 +9813,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preset_go" style="color: inherit; text-decoration: inherit;">Preset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#audioanalyzerpresetresponse">Audio<wbr>Analyzer<wbr>Preset<wbr>Response</a> | <a href="#builtinstandardencoderpresetresponse">Built<wbr>In<wbr>Standard<wbr>Encoder<wbr>Preset<wbr>Response</a> | <a href="#facedetectorpresetresponse">Face<wbr>Detector<wbr>Preset<wbr>Response</a> | <a href="#standardencoderpresetresponse">Standard<wbr>Encoder<wbr>Preset<wbr>Response</a></span>
+        <span class="property-type"><a href="#audioanalyzerpresetresponse">Audio<wbr>Analyzer<wbr>Preset<wbr>Response</a> | <a href="#builtinstandardencoderpresetresponse">Built<wbr>In<wbr>Standard<wbr>Encoder<wbr>Preset<wbr>Response</a> | <a href="#facedetectorpresetresponse">Face<wbr>Detector<wbr>Preset<wbr>Response</a> | <a href="#standardencoderpresetresponse">Standard<wbr>Encoder<wbr>Preset<wbr>Response</a> | <a href="#videoanalyzerpresetresponse">Video<wbr>Analyzer<wbr>Preset<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Preset that describes the operations that will be used to modify, transcode, or extract insights from the source file to generate the output.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4636,7 +9846,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preset_nodejs" style="color: inherit; text-decoration: inherit;">preset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#audioanalyzerpresetresponse">Audio<wbr>Analyzer<wbr>Preset<wbr>Response</a> | <a href="#builtinstandardencoderpresetresponse">Built<wbr>In<wbr>Standard<wbr>Encoder<wbr>Preset<wbr>Response</a> | <a href="#facedetectorpresetresponse">Face<wbr>Detector<wbr>Preset<wbr>Response</a> | <a href="#standardencoderpresetresponse">Standard<wbr>Encoder<wbr>Preset<wbr>Response</a></span>
+        <span class="property-type"><a href="#audioanalyzerpresetresponse">Audio<wbr>Analyzer<wbr>Preset<wbr>Response</a> | <a href="#builtinstandardencoderpresetresponse">Built<wbr>In<wbr>Standard<wbr>Encoder<wbr>Preset<wbr>Response</a> | <a href="#facedetectorpresetresponse">Face<wbr>Detector<wbr>Preset<wbr>Response</a> | <a href="#standardencoderpresetresponse">Standard<wbr>Encoder<wbr>Preset<wbr>Response</a> | <a href="#videoanalyzerpresetresponse">Video<wbr>Analyzer<wbr>Preset<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Preset that describes the operations that will be used to modify, transcode, or extract insights from the source file to generate the output.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4669,7 +9879,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#preset_python" style="color: inherit; text-decoration: inherit;">preset</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#audioanalyzerpresetresponse">Audio<wbr>Analyzer<wbr>Preset<wbr>Response<wbr>Args</a> | <a href="#builtinstandardencoderpresetresponse">Built<wbr>In<wbr>Standard<wbr>Encoder<wbr>Preset<wbr>Response<wbr>Args</a> | <a href="#facedetectorpresetresponse">Face<wbr>Detector<wbr>Preset<wbr>Response<wbr>Args</a> | <a href="#standardencoderpresetresponse">Standard<wbr>Encoder<wbr>Preset<wbr>Response<wbr>Args</a></span>
+        <span class="property-type"><a href="#audioanalyzerpresetresponse">Audio<wbr>Analyzer<wbr>Preset<wbr>Response<wbr>Args</a> | <a href="#builtinstandardencoderpresetresponse">Built<wbr>In<wbr>Standard<wbr>Encoder<wbr>Preset<wbr>Response<wbr>Args</a> | <a href="#facedetectorpresetresponse">Face<wbr>Detector<wbr>Preset<wbr>Response<wbr>Args</a> | <a href="#standardencoderpresetresponse">Standard<wbr>Encoder<wbr>Preset<wbr>Response<wbr>Args</a> | <a href="#videoanalyzerpresetresponse">Video<wbr>Analyzer<wbr>Preset<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Preset that describes the operations that will be used to modify, transcode, or extract insights from the source file to generate the output.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4690,6 +9900,202 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Sets the relative priority of the TransformOutputs within a Transform. This sets the priority that the service uses for processing TransformOutputs. The default priority is Normal.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="transportstreamformat">Transport<wbr>Stream<wbr>Format</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="filenamepattern_csharp">
+<a href="#filenamepattern_csharp" style="color: inherit; text-decoration: inherit;">Filename<wbr>Pattern</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The pattern of the file names for the generated output files. The following macros are supported in the file name: {Basename} - An expansion macro that will use the name of the input video file. If the base name(the file suffix is not included) of the input video file is less than 32 characters long, the base name of input video files will be used. If the length of base name of the input video file exceeds 32 characters, the base name is truncated to the first 32 characters in total length. {Extension} - The appropriate extension for this format. {Label} - The label assigned to the codec/layer. {Index} - A unique index for thumbnails. Only applicable to thumbnails. {Bitrate} - The audio/video bitrate. Not applicable to thumbnails. {Codec} - The type of the audio/video codec. Any unsubstituted macros will be collapsed and removed from the filename.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="outputfiles_csharp">
+<a href="#outputfiles_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>Files</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#outputfile">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Output<wbr>File<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The list of output files to produce.  Each entry in the list is a set of audio and video layer labels to be muxed together .{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="filenamepattern_go">
+<a href="#filenamepattern_go" style="color: inherit; text-decoration: inherit;">Filename<wbr>Pattern</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The pattern of the file names for the generated output files. The following macros are supported in the file name: {Basename} - An expansion macro that will use the name of the input video file. If the base name(the file suffix is not included) of the input video file is less than 32 characters long, the base name of input video files will be used. If the length of base name of the input video file exceeds 32 characters, the base name is truncated to the first 32 characters in total length. {Extension} - The appropriate extension for this format. {Label} - The label assigned to the codec/layer. {Index} - A unique index for thumbnails. Only applicable to thumbnails. {Bitrate} - The audio/video bitrate. Not applicable to thumbnails. {Codec} - The type of the audio/video codec. Any unsubstituted macros will be collapsed and removed from the filename.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="outputfiles_go">
+<a href="#outputfiles_go" style="color: inherit; text-decoration: inherit;">Output<wbr>Files</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#outputfile">[]Output<wbr>File</a></span>
+    </dt>
+    <dd>{{% md %}}The list of output files to produce.  Each entry in the list is a set of audio and video layer labels to be muxed together .{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="filenamepattern_nodejs">
+<a href="#filenamepattern_nodejs" style="color: inherit; text-decoration: inherit;">filename<wbr>Pattern</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The pattern of the file names for the generated output files. The following macros are supported in the file name: {Basename} - An expansion macro that will use the name of the input video file. If the base name(the file suffix is not included) of the input video file is less than 32 characters long, the base name of input video files will be used. If the length of base name of the input video file exceeds 32 characters, the base name is truncated to the first 32 characters in total length. {Extension} - The appropriate extension for this format. {Label} - The label assigned to the codec/layer. {Index} - A unique index for thumbnails. Only applicable to thumbnails. {Bitrate} - The audio/video bitrate. Not applicable to thumbnails. {Codec} - The type of the audio/video codec. Any unsubstituted macros will be collapsed and removed from the filename.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="outputfiles_nodejs">
+<a href="#outputfiles_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Files</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#outputfile">Output<wbr>File[]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of output files to produce.  Each entry in the list is a set of audio and video layer labels to be muxed together .{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="filename_pattern_python">
+<a href="#filename_pattern_python" style="color: inherit; text-decoration: inherit;">filename_<wbr>pattern</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The pattern of the file names for the generated output files. The following macros are supported in the file name: {Basename} - An expansion macro that will use the name of the input video file. If the base name(the file suffix is not included) of the input video file is less than 32 characters long, the base name of input video files will be used. If the length of base name of the input video file exceeds 32 characters, the base name is truncated to the first 32 characters in total length. {Extension} - The appropriate extension for this format. {Label} - The label assigned to the codec/layer. {Index} - A unique index for thumbnails. Only applicable to thumbnails. {Bitrate} - The audio/video bitrate. Not applicable to thumbnails. {Codec} - The type of the audio/video codec. Any unsubstituted macros will be collapsed and removed from the filename.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="output_files_python">
+<a href="#output_files_python" style="color: inherit; text-decoration: inherit;">output_<wbr>files</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#outputfile">Sequence[Output<wbr>File<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of output files to produce.  Each entry in the list is a set of audio and video layer labels to be muxed together .{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="transportstreamformatresponse">Transport<wbr>Stream<wbr>Format<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="filenamepattern_csharp">
+<a href="#filenamepattern_csharp" style="color: inherit; text-decoration: inherit;">Filename<wbr>Pattern</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The pattern of the file names for the generated output files. The following macros are supported in the file name: {Basename} - An expansion macro that will use the name of the input video file. If the base name(the file suffix is not included) of the input video file is less than 32 characters long, the base name of input video files will be used. If the length of base name of the input video file exceeds 32 characters, the base name is truncated to the first 32 characters in total length. {Extension} - The appropriate extension for this format. {Label} - The label assigned to the codec/layer. {Index} - A unique index for thumbnails. Only applicable to thumbnails. {Bitrate} - The audio/video bitrate. Not applicable to thumbnails. {Codec} - The type of the audio/video codec. Any unsubstituted macros will be collapsed and removed from the filename.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="outputfiles_csharp">
+<a href="#outputfiles_csharp" style="color: inherit; text-decoration: inherit;">Output<wbr>Files</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#outputfileresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Output<wbr>File<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The list of output files to produce.  Each entry in the list is a set of audio and video layer labels to be muxed together .{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="filenamepattern_go">
+<a href="#filenamepattern_go" style="color: inherit; text-decoration: inherit;">Filename<wbr>Pattern</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The pattern of the file names for the generated output files. The following macros are supported in the file name: {Basename} - An expansion macro that will use the name of the input video file. If the base name(the file suffix is not included) of the input video file is less than 32 characters long, the base name of input video files will be used. If the length of base name of the input video file exceeds 32 characters, the base name is truncated to the first 32 characters in total length. {Extension} - The appropriate extension for this format. {Label} - The label assigned to the codec/layer. {Index} - A unique index for thumbnails. Only applicable to thumbnails. {Bitrate} - The audio/video bitrate. Not applicable to thumbnails. {Codec} - The type of the audio/video codec. Any unsubstituted macros will be collapsed and removed from the filename.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="outputfiles_go">
+<a href="#outputfiles_go" style="color: inherit; text-decoration: inherit;">Output<wbr>Files</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#outputfileresponse">[]Output<wbr>File<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The list of output files to produce.  Each entry in the list is a set of audio and video layer labels to be muxed together .{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="filenamepattern_nodejs">
+<a href="#filenamepattern_nodejs" style="color: inherit; text-decoration: inherit;">filename<wbr>Pattern</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The pattern of the file names for the generated output files. The following macros are supported in the file name: {Basename} - An expansion macro that will use the name of the input video file. If the base name(the file suffix is not included) of the input video file is less than 32 characters long, the base name of input video files will be used. If the length of base name of the input video file exceeds 32 characters, the base name is truncated to the first 32 characters in total length. {Extension} - The appropriate extension for this format. {Label} - The label assigned to the codec/layer. {Index} - A unique index for thumbnails. Only applicable to thumbnails. {Bitrate} - The audio/video bitrate. Not applicable to thumbnails. {Codec} - The type of the audio/video codec. Any unsubstituted macros will be collapsed and removed from the filename.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="outputfiles_nodejs">
+<a href="#outputfiles_nodejs" style="color: inherit; text-decoration: inherit;">output<wbr>Files</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#outputfileresponse">Output<wbr>File<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of output files to produce.  Each entry in the list is a set of audio and video layer labels to be muxed together .{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="filename_pattern_python">
+<a href="#filename_pattern_python" style="color: inherit; text-decoration: inherit;">filename_<wbr>pattern</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The pattern of the file names for the generated output files. The following macros are supported in the file name: {Basename} - An expansion macro that will use the name of the input video file. If the base name(the file suffix is not included) of the input video file is less than 32 characters long, the base name of input video files will be used. If the length of base name of the input video file exceeds 32 characters, the base name is truncated to the first 32 characters in total length. {Extension} - The appropriate extension for this format. {Label} - The label assigned to the codec/layer. {Index} - A unique index for thumbnails. Only applicable to thumbnails. {Bitrate} - The audio/video bitrate. Not applicable to thumbnails. {Codec} - The type of the audio/video codec. Any unsubstituted macros will be collapsed and removed from the filename.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="output_files_python">
+<a href="#output_files_python" style="color: inherit; text-decoration: inherit;">output_<wbr>files</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#outputfileresponse">Sequence[Output<wbr>File<wbr>Response<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of output files to produce.  Each entry in the list is a set of audio and video layer labels to be muxed together .{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -4860,6 +10266,346 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str | <a href="#videosyncmode">Video<wbr>Sync<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}The Video Sync Mode{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="videoanalyzerpreset">Video<wbr>Analyzer<wbr>Preset</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="audiolanguage_csharp">
+<a href="#audiolanguage_csharp" style="color: inherit; text-decoration: inherit;">Audio<wbr>Language</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The language for the audio payload in the input using the BCP-47 format of 'language tag-region' (e.g: 'en-US').  If you know the language of your content, it is recommended that you specify it. The language must be specified explicitly for AudioAnalysisMode::Basic, since automatic language detection is not included in basic mode. If the language isn't specified or set to null, automatic language detection will choose the first language detected and process with the selected language for the duration of the file. It does not currently support dynamically switching between languages after the first language is detected. The automatic detection works best with audio recordings with clearly discernable speech. If automatic detection fails to find the language, transcription would fallback to 'en-US'." The list of supported languages is available here: https://go.microsoft.com/fwlink/?linkid=2109463{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="experimentaloptions_csharp">
+<a href="#experimentaloptions_csharp" style="color: inherit; text-decoration: inherit;">Experimental<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Dictionary containing key value pairs for parameters not exposed in the preset itself{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="insightstoextract_csharp">
+<a href="#insightstoextract_csharp" style="color: inherit; text-decoration: inherit;">Insights<wbr>To<wbr>Extract</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#insightstype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Insights<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the type of insights that you want the service to generate. The allowed values are 'AudioInsightsOnly', 'VideoInsightsOnly', and 'AllInsights'. The default is AllInsights. If you set this to AllInsights and the input is audio only, then only audio insights are generated. Similarly if the input is video only, then only video insights are generated. It is recommended that you not use AudioInsightsOnly if you expect some of your inputs to be video only; or use VideoInsightsOnly if you expect some of your inputs to be audio only. Your Jobs in such conditions would error out.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="mode_csharp">
+<a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#audioanalysismode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Audio<wbr>Analysis<wbr>Mode</a></span>
+    </dt>
+    <dd>{{% md %}}Determines the set of audio analysis operations to be performed. If unspecified, the Standard AudioAnalysisMode would be chosen.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="audiolanguage_go">
+<a href="#audiolanguage_go" style="color: inherit; text-decoration: inherit;">Audio<wbr>Language</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The language for the audio payload in the input using the BCP-47 format of 'language tag-region' (e.g: 'en-US').  If you know the language of your content, it is recommended that you specify it. The language must be specified explicitly for AudioAnalysisMode::Basic, since automatic language detection is not included in basic mode. If the language isn't specified or set to null, automatic language detection will choose the first language detected and process with the selected language for the duration of the file. It does not currently support dynamically switching between languages after the first language is detected. The automatic detection works best with audio recordings with clearly discernable speech. If automatic detection fails to find the language, transcription would fallback to 'en-US'." The list of supported languages is available here: https://go.microsoft.com/fwlink/?linkid=2109463{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="experimentaloptions_go">
+<a href="#experimentaloptions_go" style="color: inherit; text-decoration: inherit;">Experimental<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}Dictionary containing key value pairs for parameters not exposed in the preset itself{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="insightstoextract_go">
+<a href="#insightstoextract_go" style="color: inherit; text-decoration: inherit;">Insights<wbr>To<wbr>Extract</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#insightstype">Insights<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the type of insights that you want the service to generate. The allowed values are 'AudioInsightsOnly', 'VideoInsightsOnly', and 'AllInsights'. The default is AllInsights. If you set this to AllInsights and the input is audio only, then only audio insights are generated. Similarly if the input is video only, then only video insights are generated. It is recommended that you not use AudioInsightsOnly if you expect some of your inputs to be video only; or use VideoInsightsOnly if you expect some of your inputs to be audio only. Your Jobs in such conditions would error out.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="mode_go">
+<a href="#mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#audioanalysismode">Audio<wbr>Analysis<wbr>Mode</a></span>
+    </dt>
+    <dd>{{% md %}}Determines the set of audio analysis operations to be performed. If unspecified, the Standard AudioAnalysisMode would be chosen.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="audiolanguage_nodejs">
+<a href="#audiolanguage_nodejs" style="color: inherit; text-decoration: inherit;">audio<wbr>Language</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The language for the audio payload in the input using the BCP-47 format of 'language tag-region' (e.g: 'en-US').  If you know the language of your content, it is recommended that you specify it. The language must be specified explicitly for AudioAnalysisMode::Basic, since automatic language detection is not included in basic mode. If the language isn't specified or set to null, automatic language detection will choose the first language detected and process with the selected language for the duration of the file. It does not currently support dynamically switching between languages after the first language is detected. The automatic detection works best with audio recordings with clearly discernable speech. If automatic detection fails to find the language, transcription would fallback to 'en-US'." The list of supported languages is available here: https://go.microsoft.com/fwlink/?linkid=2109463{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="experimentaloptions_nodejs">
+<a href="#experimentaloptions_nodejs" style="color: inherit; text-decoration: inherit;">experimental<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}Dictionary containing key value pairs for parameters not exposed in the preset itself{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="insightstoextract_nodejs">
+<a href="#insightstoextract_nodejs" style="color: inherit; text-decoration: inherit;">insights<wbr>To<wbr>Extract</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#insightstype">Insights<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the type of insights that you want the service to generate. The allowed values are 'AudioInsightsOnly', 'VideoInsightsOnly', and 'AllInsights'. The default is AllInsights. If you set this to AllInsights and the input is audio only, then only audio insights are generated. Similarly if the input is video only, then only video insights are generated. It is recommended that you not use AudioInsightsOnly if you expect some of your inputs to be video only; or use VideoInsightsOnly if you expect some of your inputs to be audio only. Your Jobs in such conditions would error out.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="mode_nodejs">
+<a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#audioanalysismode">Audio<wbr>Analysis<wbr>Mode</a></span>
+    </dt>
+    <dd>{{% md %}}Determines the set of audio analysis operations to be performed. If unspecified, the Standard AudioAnalysisMode would be chosen.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="audio_language_python">
+<a href="#audio_language_python" style="color: inherit; text-decoration: inherit;">audio_<wbr>language</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The language for the audio payload in the input using the BCP-47 format of 'language tag-region' (e.g: 'en-US').  If you know the language of your content, it is recommended that you specify it. The language must be specified explicitly for AudioAnalysisMode::Basic, since automatic language detection is not included in basic mode. If the language isn't specified or set to null, automatic language detection will choose the first language detected and process with the selected language for the duration of the file. It does not currently support dynamically switching between languages after the first language is detected. The automatic detection works best with audio recordings with clearly discernable speech. If automatic detection fails to find the language, transcription would fallback to 'en-US'." The list of supported languages is available here: https://go.microsoft.com/fwlink/?linkid=2109463{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="experimental_options_python">
+<a href="#experimental_options_python" style="color: inherit; text-decoration: inherit;">experimental_<wbr>options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}Dictionary containing key value pairs for parameters not exposed in the preset itself{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="insights_to_extract_python">
+<a href="#insights_to_extract_python" style="color: inherit; text-decoration: inherit;">insights_<wbr>to_<wbr>extract</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str | <a href="#insightstype">Insights<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}Defines the type of insights that you want the service to generate. The allowed values are 'AudioInsightsOnly', 'VideoInsightsOnly', and 'AllInsights'. The default is AllInsights. If you set this to AllInsights and the input is audio only, then only audio insights are generated. Similarly if the input is video only, then only video insights are generated. It is recommended that you not use AudioInsightsOnly if you expect some of your inputs to be video only; or use VideoInsightsOnly if you expect some of your inputs to be audio only. Your Jobs in such conditions would error out.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="mode_python">
+<a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str | <a href="#audioanalysismode">Audio<wbr>Analysis<wbr>Mode</a></span>
+    </dt>
+    <dd>{{% md %}}Determines the set of audio analysis operations to be performed. If unspecified, the Standard AudioAnalysisMode would be chosen.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="videoanalyzerpresetresponse">Video<wbr>Analyzer<wbr>Preset<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="audiolanguage_csharp">
+<a href="#audiolanguage_csharp" style="color: inherit; text-decoration: inherit;">Audio<wbr>Language</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The language for the audio payload in the input using the BCP-47 format of 'language tag-region' (e.g: 'en-US').  If you know the language of your content, it is recommended that you specify it. The language must be specified explicitly for AudioAnalysisMode::Basic, since automatic language detection is not included in basic mode. If the language isn't specified or set to null, automatic language detection will choose the first language detected and process with the selected language for the duration of the file. It does not currently support dynamically switching between languages after the first language is detected. The automatic detection works best with audio recordings with clearly discernable speech. If automatic detection fails to find the language, transcription would fallback to 'en-US'." The list of supported languages is available here: https://go.microsoft.com/fwlink/?linkid=2109463{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="experimentaloptions_csharp">
+<a href="#experimentaloptions_csharp" style="color: inherit; text-decoration: inherit;">Experimental<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Dictionary containing key value pairs for parameters not exposed in the preset itself{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="insightstoextract_csharp">
+<a href="#insightstoextract_csharp" style="color: inherit; text-decoration: inherit;">Insights<wbr>To<wbr>Extract</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Defines the type of insights that you want the service to generate. The allowed values are 'AudioInsightsOnly', 'VideoInsightsOnly', and 'AllInsights'. The default is AllInsights. If you set this to AllInsights and the input is audio only, then only audio insights are generated. Similarly if the input is video only, then only video insights are generated. It is recommended that you not use AudioInsightsOnly if you expect some of your inputs to be video only; or use VideoInsightsOnly if you expect some of your inputs to be audio only. Your Jobs in such conditions would error out.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="mode_csharp">
+<a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Determines the set of audio analysis operations to be performed. If unspecified, the Standard AudioAnalysisMode would be chosen.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="audiolanguage_go">
+<a href="#audiolanguage_go" style="color: inherit; text-decoration: inherit;">Audio<wbr>Language</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The language for the audio payload in the input using the BCP-47 format of 'language tag-region' (e.g: 'en-US').  If you know the language of your content, it is recommended that you specify it. The language must be specified explicitly for AudioAnalysisMode::Basic, since automatic language detection is not included in basic mode. If the language isn't specified or set to null, automatic language detection will choose the first language detected and process with the selected language for the duration of the file. It does not currently support dynamically switching between languages after the first language is detected. The automatic detection works best with audio recordings with clearly discernable speech. If automatic detection fails to find the language, transcription would fallback to 'en-US'." The list of supported languages is available here: https://go.microsoft.com/fwlink/?linkid=2109463{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="experimentaloptions_go">
+<a href="#experimentaloptions_go" style="color: inherit; text-decoration: inherit;">Experimental<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}Dictionary containing key value pairs for parameters not exposed in the preset itself{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="insightstoextract_go">
+<a href="#insightstoextract_go" style="color: inherit; text-decoration: inherit;">Insights<wbr>To<wbr>Extract</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Defines the type of insights that you want the service to generate. The allowed values are 'AudioInsightsOnly', 'VideoInsightsOnly', and 'AllInsights'. The default is AllInsights. If you set this to AllInsights and the input is audio only, then only audio insights are generated. Similarly if the input is video only, then only video insights are generated. It is recommended that you not use AudioInsightsOnly if you expect some of your inputs to be video only; or use VideoInsightsOnly if you expect some of your inputs to be audio only. Your Jobs in such conditions would error out.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="mode_go">
+<a href="#mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Determines the set of audio analysis operations to be performed. If unspecified, the Standard AudioAnalysisMode would be chosen.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="audiolanguage_nodejs">
+<a href="#audiolanguage_nodejs" style="color: inherit; text-decoration: inherit;">audio<wbr>Language</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The language for the audio payload in the input using the BCP-47 format of 'language tag-region' (e.g: 'en-US').  If you know the language of your content, it is recommended that you specify it. The language must be specified explicitly for AudioAnalysisMode::Basic, since automatic language detection is not included in basic mode. If the language isn't specified or set to null, automatic language detection will choose the first language detected and process with the selected language for the duration of the file. It does not currently support dynamically switching between languages after the first language is detected. The automatic detection works best with audio recordings with clearly discernable speech. If automatic detection fails to find the language, transcription would fallback to 'en-US'." The list of supported languages is available here: https://go.microsoft.com/fwlink/?linkid=2109463{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="experimentaloptions_nodejs">
+<a href="#experimentaloptions_nodejs" style="color: inherit; text-decoration: inherit;">experimental<wbr>Options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}Dictionary containing key value pairs for parameters not exposed in the preset itself{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="insightstoextract_nodejs">
+<a href="#insightstoextract_nodejs" style="color: inherit; text-decoration: inherit;">insights<wbr>To<wbr>Extract</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Defines the type of insights that you want the service to generate. The allowed values are 'AudioInsightsOnly', 'VideoInsightsOnly', and 'AllInsights'. The default is AllInsights. If you set this to AllInsights and the input is audio only, then only audio insights are generated. Similarly if the input is video only, then only video insights are generated. It is recommended that you not use AudioInsightsOnly if you expect some of your inputs to be video only; or use VideoInsightsOnly if you expect some of your inputs to be audio only. Your Jobs in such conditions would error out.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="mode_nodejs">
+<a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Determines the set of audio analysis operations to be performed. If unspecified, the Standard AudioAnalysisMode would be chosen.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="audio_language_python">
+<a href="#audio_language_python" style="color: inherit; text-decoration: inherit;">audio_<wbr>language</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The language for the audio payload in the input using the BCP-47 format of 'language tag-region' (e.g: 'en-US').  If you know the language of your content, it is recommended that you specify it. The language must be specified explicitly for AudioAnalysisMode::Basic, since automatic language detection is not included in basic mode. If the language isn't specified or set to null, automatic language detection will choose the first language detected and process with the selected language for the duration of the file. It does not currently support dynamically switching between languages after the first language is detected. The automatic detection works best with audio recordings with clearly discernable speech. If automatic detection fails to find the language, transcription would fallback to 'en-US'." The list of supported languages is available here: https://go.microsoft.com/fwlink/?linkid=2109463{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="experimental_options_python">
+<a href="#experimental_options_python" style="color: inherit; text-decoration: inherit;">experimental_<wbr>options</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}Dictionary containing key value pairs for parameters not exposed in the preset itself{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="insights_to_extract_python">
+<a href="#insights_to_extract_python" style="color: inherit; text-decoration: inherit;">insights_<wbr>to_<wbr>extract</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Defines the type of insights that you want the service to generate. The allowed values are 'AudioInsightsOnly', 'VideoInsightsOnly', and 'AllInsights'. The default is AllInsights. If you set this to AllInsights and the input is audio only, then only audio insights are generated. Similarly if the input is video only, then only video insights are generated. It is recommended that you not use AudioInsightsOnly if you expect some of your inputs to be video only; or use VideoInsightsOnly if you expect some of your inputs to be audio only. Your Jobs in such conditions would error out.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="mode_python">
+<a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Determines the set of audio analysis operations to be performed. If unspecified, the Standard AudioAnalysisMode would be chosen.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 

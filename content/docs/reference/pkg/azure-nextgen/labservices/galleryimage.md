@@ -12,6 +12,13 @@ meta_desc: "Documentation for the azure-nextgen.labservices.GalleryImage resourc
 
 Represents an image from the Azure Marketplace
 Latest API Version: 2018-10-15.
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:labservices/latest:GalleryImage myresource1 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.LabServices/labaccounts/{labAccountName}/galleryimages/{galleryImageName} 
+```
 
 
 

@@ -1726,6 +1726,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The catalog database server URL.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dualstandbypairname_csharp">
+<a href="#dualstandbypairname_csharp" style="color: inherit; text-decoration: inherit;">Dual<wbr>Standby<wbr>Pair<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The dual standby pair name of Azure-SSIS Integration Runtimes to support SSISDB failover.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1768,6 +1777,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The catalog database server URL.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dualstandbypairname_go">
+<a href="#dualstandbypairname_go" style="color: inherit; text-decoration: inherit;">Dual<wbr>Standby<wbr>Pair<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The dual standby pair name of Azure-SSIS Integration Runtimes to support SSISDB failover.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1810,6 +1828,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The catalog database server URL.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dualstandbypairname_nodejs">
+<a href="#dualstandbypairname_nodejs" style="color: inherit; text-decoration: inherit;">dual<wbr>Standby<wbr>Pair<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The dual standby pair name of Azure-SSIS Integration Runtimes to support SSISDB failover.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1852,6 +1879,15 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The catalog database server URL.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dual_standby_pair_name_python">
+<a href="#dual_standby_pair_name_python" style="color: inherit; text-decoration: inherit;">dual_<wbr>standby_<wbr>pair_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The dual standby pair name of Azure-SSIS Integration Runtimes to support SSISDB failover.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -2589,6 +2625,15 @@ The following output properties are available:
     <dd>{{% md %}}Integration runtime description.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="managedvirtualnetwork_csharp">
+<a href="#managedvirtualnetwork_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Virtual<wbr>Network</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedvirtualnetworkreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Managed<wbr>Virtual<wbr>Network<wbr>Reference<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Managed Virtual Network reference.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="ssisproperties_csharp">
 <a href="#ssisproperties_csharp" style="color: inherit; text-decoration: inherit;">Ssis<wbr>Properties</a>
 </span>
@@ -2629,6 +2674,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Integration runtime description.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="managedvirtualnetwork_go">
+<a href="#managedvirtualnetwork_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Virtual<wbr>Network</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedvirtualnetworkreferenceresponse">Managed<wbr>Virtual<wbr>Network<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Managed Virtual Network reference.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="ssisproperties_go">
@@ -2673,6 +2727,15 @@ The following output properties are available:
     <dd>{{% md %}}Integration runtime description.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="managedvirtualnetwork_nodejs">
+<a href="#managedvirtualnetwork_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Virtual<wbr>Network</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedvirtualnetworkreferenceresponse">Managed<wbr>Virtual<wbr>Network<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Managed Virtual Network reference.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="ssisproperties_nodejs">
 <a href="#ssisproperties_nodejs" style="color: inherit; text-decoration: inherit;">ssis<wbr>Properties</a>
 </span>
@@ -2715,6 +2778,15 @@ The following output properties are available:
     <dd>{{% md %}}Integration runtime description.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="managed_virtual_network_python">
+<a href="#managed_virtual_network_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>virtual_<wbr>network</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#managedvirtualnetworkreferenceresponse">Managed<wbr>Virtual<wbr>Network<wbr>Reference<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Managed Virtual Network reference.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="ssis_properties_python">
 <a href="#ssis_properties_python" style="color: inherit; text-decoration: inherit;">ssis_<wbr>properties</a>
 </span>
@@ -2722,6 +2794,109 @@ The following output properties are available:
         <span class="property-type"><a href="#integrationruntimessispropertiesresponse">Integration<wbr>Runtime<wbr>Ssis<wbr>Properties<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}SSIS properties for managed integration runtime.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="managedvirtualnetworkreferenceresponse">Managed<wbr>Virtual<wbr>Network<wbr>Reference<wbr>Response</h4>
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="referencename_csharp">
+<a href="#referencename_csharp" style="color: inherit; text-decoration: inherit;">Reference<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Reference ManagedVirtualNetwork name.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Managed Virtual Network reference type.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="referencename_go">
+<a href="#referencename_go" style="color: inherit; text-decoration: inherit;">Reference<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Reference ManagedVirtualNetwork name.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Managed Virtual Network reference type.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="referencename_nodejs">
+<a href="#referencename_nodejs" style="color: inherit; text-decoration: inherit;">reference<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Reference ManagedVirtualNetwork name.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Managed Virtual Network reference type.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="reference_name_python">
+<a href="#reference_name_python" style="color: inherit; text-decoration: inherit;">reference_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Reference ManagedVirtualNetwork name.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Managed Virtual Network reference type.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 

@@ -62,7 +62,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Azure Client ID (Application Object ID).{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="objectid_csharp">
@@ -71,7 +71,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Azure Object ID of the current user or service principal.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="subscriptionid_csharp">
@@ -80,7 +80,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Azure Subscription ID{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="tenantid_csharp">
@@ -89,7 +89,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Azure Tenant ID{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -104,7 +104,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Azure Client ID (Application Object ID).{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="objectid_go">
@@ -113,7 +113,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Azure Object ID of the current user or service principal.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="subscriptionid_go">
@@ -122,7 +122,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Azure Subscription ID{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="tenantid_go">
@@ -131,7 +131,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Azure Tenant ID{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -146,7 +146,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Azure Client ID (Application Object ID).{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="objectid_nodejs">
@@ -155,7 +155,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Azure Object ID of the current user or service principal.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="subscriptionid_nodejs">
@@ -164,7 +164,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Azure Subscription ID{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="tenantid_nodejs">
@@ -173,7 +173,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Azure Tenant ID{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -188,7 +188,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Azure Client ID (Application Object ID).{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="object_id_python">
@@ -197,7 +197,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Azure Object ID of the current user or service principal.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="subscription_id_python">
@@ -206,7 +206,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Azure Subscription ID{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="tenant_id_python">
@@ -215,7 +215,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}{{% /md %}}</dd>
+    <dd>{{% md %}}Azure Tenant ID{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 

@@ -464,6 +464,15 @@ The following output properties are available:
     <dd>{{% md %}}The location of the endpoint.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="privateipaddress_csharp">
+<a href="#privateipaddress_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>IPAddress</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The private ip address of the endpoint.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="publicport_csharp">
 <a href="#publicport_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Port</a>
 </span>
@@ -495,6 +504,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The location of the endpoint.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="privateipaddress_go">
+<a href="#privateipaddress_go" style="color: inherit; text-decoration: inherit;">Private<wbr>IPAddress</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The private ip address of the endpoint.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="publicport_go">
@@ -530,6 +548,15 @@ The following output properties are available:
     <dd>{{% md %}}The location of the endpoint.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="privateipaddress_nodejs">
+<a href="#privateipaddress_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>IPAddress</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The private ip address of the endpoint.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="publicport_nodejs">
 <a href="#publicport_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Port</a>
 </span>
@@ -561,6 +588,15 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The location of the endpoint.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="private_ip_address_python">
+<a href="#private_ip_address_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The private ip address of the endpoint.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="public_port_python">
@@ -2410,6 +2446,15 @@ The following output properties are available:
     <dd>{{% md %}}The data disks groups for the role.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="encryptdatadisks_csharp">
+<a href="#encryptdatadisks_csharp" style="color: inherit; text-decoration: inherit;">Encrypt<wbr>Data<wbr>Disks</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether encrypt the data disks.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="hardwareprofile_csharp">
 <a href="#hardwareprofile_csharp" style="color: inherit; text-decoration: inherit;">Hardware<wbr>Profile</a>
 </span>
@@ -2495,6 +2540,15 @@ The following output properties are available:
         <span class="property-type"><a href="#datadisksgroupsresponse">[]Data<wbr>Disks<wbr>Groups<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The data disks groups for the role.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="encryptdatadisks_go">
+<a href="#encryptdatadisks_go" style="color: inherit; text-decoration: inherit;">Encrypt<wbr>Data<wbr>Disks</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether encrypt the data disks.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="hardwareprofile_go">
@@ -2584,6 +2638,15 @@ The following output properties are available:
     <dd>{{% md %}}The data disks groups for the role.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="encryptdatadisks_nodejs">
+<a href="#encryptdatadisks_nodejs" style="color: inherit; text-decoration: inherit;">encrypt<wbr>Data<wbr>Disks</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether encrypt the data disks.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="hardwareprofile_nodejs">
 <a href="#hardwareprofile_nodejs" style="color: inherit; text-decoration: inherit;">hardware<wbr>Profile</a>
 </span>
@@ -2669,6 +2732,15 @@ The following output properties are available:
         <span class="property-type"><a href="#datadisksgroupsresponse">Sequence[Data<wbr>Disks<wbr>Groups<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The data disks groups for the role.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="encrypt_data_disks_python">
+<a href="#encrypt_data_disks_python" style="color: inherit; text-decoration: inherit;">encrypt_<wbr>data_<wbr>disks</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether encrypt the data disks.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="hardware_profile_python">

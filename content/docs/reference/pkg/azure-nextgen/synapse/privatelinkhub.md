@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.synapse.PrivateLinkHub resource 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A privateLinkHub
+Latest API Version: 2020-12-01.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var privateLinkHub = new AzureNextGen.Synapse.V20190601Preview.PrivateLinkHub("privateLinkHub", new AzureNextGen.Synapse.V20190601Preview.PrivateLinkHubArgs
+        var privateLinkHub = new AzureNextGen.Synapse.Latest.PrivateLinkHub("privateLinkHub", new AzureNextGen.Synapse.Latest.PrivateLinkHubArgs
         {
             Location = "East US",
             PrivateLinkHubName = "privateLinkHub1",
@@ -50,7 +51,7 @@ class MyStack : Stack
 package main
 
 import (
-	synapse "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/synapse/v20190601preview"
+	synapse "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/synapse/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -81,7 +82,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-private_link_hub = azure_nextgen.synapse.v20190601preview.PrivateLinkHub("privateLinkHub",
+private_link_hub = azure_nextgen.synapse.latest.PrivateLinkHub("privateLinkHub",
     location="East US",
     private_link_hub_name="privateLinkHub1",
     resource_group_name="resourceGroup1",
@@ -99,7 +100,7 @@ private_link_hub = azure_nextgen.synapse.v20190601preview.PrivateLinkHub("privat
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const privateLinkHub = new azure_nextgen.synapse.v20190601preview.PrivateLinkHub("privateLinkHub", {
+const privateLinkHub = new azure_nextgen.synapse.latest.PrivateLinkHub("privateLinkHub", {
     location: "East US",
     privateLinkHubName: "privateLinkHub1",
     resourceGroupName: "resourceGroup1",
@@ -1052,7 +1053,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:synapse/v20190601preview:PrivateLinkHub privateLinkHub1 /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup1/providers/Microsoft.Synapse/privateLinkHubs/privateLinkHub1 
+$ pulumi import azure-nextgen:synapse/latest:PrivateLinkHub privateLinkHub1 /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup1/providers/Microsoft.Synapse/privateLinkHubs/privateLinkHub1 
 ```
 
 

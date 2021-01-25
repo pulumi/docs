@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.synapse.SqlPoolTransparentDataEn
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Represents a Sql pool transparent data encryption configuration.
+Latest API Version: 2020-12-01.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var sqlPoolTransparentDataEncryption = new AzureNextGen.Synapse.V20190601Preview.SqlPoolTransparentDataEncryption("sqlPoolTransparentDataEncryption", new AzureNextGen.Synapse.V20190601Preview.SqlPoolTransparentDataEncryptionArgs
+        var sqlPoolTransparentDataEncryption = new AzureNextGen.Synapse.Latest.SqlPoolTransparentDataEncryption("sqlPoolTransparentDataEncryption", new AzureNextGen.Synapse.Latest.SqlPoolTransparentDataEncryptionArgs
         {
             ResourceGroupName = "sqlcrudtest-6852",
             SqlPoolName = "sqlcrudtest-9187",
@@ -48,7 +49,7 @@ class MyStack : Stack
 package main
 
 import (
-	synapse "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/synapse/v20190601preview"
+	synapse "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/synapse/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -78,7 +79,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-sql_pool_transparent_data_encryption = azure_nextgen.synapse.v20190601preview.SqlPoolTransparentDataEncryption("sqlPoolTransparentDataEncryption",
+sql_pool_transparent_data_encryption = azure_nextgen.synapse.latest.SqlPoolTransparentDataEncryption("sqlPoolTransparentDataEncryption",
     resource_group_name="sqlcrudtest-6852",
     sql_pool_name="sqlcrudtest-9187",
     status="Enabled",
@@ -95,7 +96,7 @@ sql_pool_transparent_data_encryption = azure_nextgen.synapse.v20190601preview.Sq
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const sqlPoolTransparentDataEncryption = new azure_nextgen.synapse.v20190601preview.SqlPoolTransparentDataEncryption("sqlPoolTransparentDataEncryption", {
+const sqlPoolTransparentDataEncryption = new azure_nextgen.synapse.latest.SqlPoolTransparentDataEncryption("sqlPoolTransparentDataEncryption", {
     resourceGroupName: "sqlcrudtest-6852",
     sqlPoolName: "sqlcrudtest-9187",
     status: "Enabled",
@@ -719,7 +720,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:synapse/v20190601preview:SqlPoolTransparentDataEncryption current /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/sqlcrudtest-6852/providers/Microsoft.Synapse/workspaces/sqlcrudtest-2080/sqlPools/sqlcrudtest-9187/transparentDataEncryption/current 
+$ pulumi import azure-nextgen:synapse/latest:SqlPoolTransparentDataEncryption current /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/sqlcrudtest-6852/providers/Microsoft.Synapse/workspaces/sqlcrudtest-2080/sqlPools/sqlcrudtest-9187/transparentDataEncryption/current 
 ```
 
 

@@ -2629,6 +2629,2096 @@ All [input](#inputs) properties are implicitly available as output properties. A
 </dl>
 {{% /choosable %}}
 
+<h4 id="aksreplicastatusresponseerror">AKSReplica<wbr>Status<wbr>Response<wbr>Error</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="code_csharp">
+<a href="#code_csharp" style="color: inherit; text-decoration: inherit;">Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Error code.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="details_csharp">
+<a href="#details_csharp" style="color: inherit; text-decoration: inherit;">Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#errordetailresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Error<wbr>Detail<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}An array of error detail objects.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="message_csharp">
+<a href="#message_csharp" style="color: inherit; text-decoration: inherit;">Message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Error message.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="code_go">
+<a href="#code_go" style="color: inherit; text-decoration: inherit;">Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Error code.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="details_go">
+<a href="#details_go" style="color: inherit; text-decoration: inherit;">Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#errordetailresponse">[]Error<wbr>Detail<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}An array of error detail objects.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="message_go">
+<a href="#message_go" style="color: inherit; text-decoration: inherit;">Message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Error message.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="code_nodejs">
+<a href="#code_nodejs" style="color: inherit; text-decoration: inherit;">code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Error code.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="details_nodejs">
+<a href="#details_nodejs" style="color: inherit; text-decoration: inherit;">details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#errordetailresponse">Error<wbr>Detail<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}An array of error detail objects.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="message_nodejs">
+<a href="#message_nodejs" style="color: inherit; text-decoration: inherit;">message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Error message.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="code_python">
+<a href="#code_python" style="color: inherit; text-decoration: inherit;">code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Error code.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="details_python">
+<a href="#details_python" style="color: inherit; text-decoration: inherit;">details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#errordetailresponse">Sequence[Error<wbr>Detail<wbr>Response<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}An array of error detail objects.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="message_python">
+<a href="#message_python" style="color: inherit; text-decoration: inherit;">message</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Error message.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="aksserviceresponseresponse">AKSService<wbr>Response<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="deploymentstatus_csharp">
+<a href="#deploymentstatus_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#aksserviceresponseresponsedeploymentstatus">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>AKSService<wbr>Response<wbr>Response<wbr>Deployment<wbr>Status<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The deployment status.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="error_csharp">
+<a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceresponsebaseresponseerror">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Service<wbr>Response<wbr>Base<wbr>Response<wbr>Error<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The error details.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="modelconfigmap_csharp">
+<a href="#modelconfigmap_csharp" style="color: inherit; text-decoration: inherit;">Model<wbr>Config<wbr>Map</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}Details on the models and configurations.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="scoringuri_csharp">
+<a href="#scoringuri_csharp" style="color: inherit; text-decoration: inherit;">Scoring<wbr>Uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Uri for sending scoring requests.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="state_csharp">
+<a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The current state of the service.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="swaggeruri_csharp">
+<a href="#swaggeruri_csharp" style="color: inherit; text-decoration: inherit;">Swagger<wbr>Uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Uri for sending swagger requests.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="aadauthenabled_csharp">
+<a href="#aadauthenabled_csharp" style="color: inherit; text-decoration: inherit;">Aad<wbr>Auth<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether or not AAD authentication is enabled.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="appinsightsenabled_csharp">
+<a href="#appinsightsenabled_csharp" style="color: inherit; text-decoration: inherit;">App<wbr>Insights<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether or not Application Insights is enabled.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="authenabled_csharp">
+<a href="#authenabled_csharp" style="color: inherit; text-decoration: inherit;">Auth<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether or not authentication is enabled.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="autoscaler_csharp">
+<a href="#autoscaler_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Scaler</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#aksserviceresponseresponseautoscaler">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>AKSService<wbr>Response<wbr>Response<wbr>Auto<wbr>Scaler<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The auto scaler properties.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="computename_csharp">
+<a href="#computename_csharp" style="color: inherit; text-decoration: inherit;">Compute<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the compute resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="containerresourcerequirements_csharp">
+<a href="#containerresourcerequirements_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Resource<wbr>Requirements</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#containerresourcerequirementsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Container<wbr>Resource<wbr>Requirements<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The container resource requirements.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="datacollection_csharp">
+<a href="#datacollection_csharp" style="color: inherit; text-decoration: inherit;">Data<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#aksserviceresponseresponsedatacollection">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>AKSService<wbr>Response<wbr>Response<wbr>Data<wbr>Collection<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Details of the data collection options specified.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deploymenttype_csharp">
+<a href="#deploymenttype_csharp" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The deployment type for the service.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The service description.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="environmentimagerequest_csharp">
+<a href="#environmentimagerequest_csharp" style="color: inherit; text-decoration: inherit;">Environment<wbr>Image<wbr>Request</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#aksserviceresponseresponseenvironmentimagerequest">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>AKSService<wbr>Response<wbr>Response<wbr>Environment<wbr>Image<wbr>Request<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The Environment, models and assets used for inferencing.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="isdefault_csharp">
+<a href="#isdefault_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Default</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is this the default variant.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kvtags_csharp">
+<a href="#kvtags_csharp" style="color: inherit; text-decoration: inherit;">Kv<wbr>Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The service tag dictionary. Tags are mutable.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="livenessproberequirements_csharp">
+<a href="#livenessproberequirements_csharp" style="color: inherit; text-decoration: inherit;">Liveness<wbr>Probe<wbr>Requirements</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#aksserviceresponseresponselivenessproberequirements">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>AKSService<wbr>Response<wbr>Response<wbr>Liveness<wbr>Probe<wbr>Requirements<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The liveness probe requirements.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxconcurrentrequestspercontainer_csharp">
+<a href="#maxconcurrentrequestspercontainer_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Requests<wbr>Per<wbr>Container</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of concurrent requests per container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxqueuewaitms_csharp">
+<a href="#maxqueuewaitms_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Queue<wbr>Wait<wbr>Ms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Maximum time a request will wait in the queue (in milliseconds). After this time, the service will return 503 (Service Unavailable){{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="models_csharp">
+<a href="#models_csharp" style="color: inherit; text-decoration: inherit;">Models</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#modelresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Model<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The list of models.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="namespace_csharp">
+<a href="#namespace_csharp" style="color: inherit; text-decoration: inherit;">Namespace</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Kubernetes namespace of the deployment.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="numreplicas_csharp">
+<a href="#numreplicas_csharp" style="color: inherit; text-decoration: inherit;">Num<wbr>Replicas</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of replicas on the cluster.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="properties_csharp">
+<a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The service property dictionary. Properties are immutable.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scoringtimeoutms_csharp">
+<a href="#scoringtimeoutms_csharp" style="color: inherit; text-decoration: inherit;">Scoring<wbr>Timeout<wbr>Ms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The scoring timeout in milliseconds.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="trafficpercentile_csharp">
+<a href="#trafficpercentile_csharp" style="color: inherit; text-decoration: inherit;">Traffic<wbr>Percentile</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">double</span>
+    </dt>
+    <dd>{{% md %}}The amount of traffic variant receives.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of the variant.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="deploymentstatus_go">
+<a href="#deploymentstatus_go" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#aksserviceresponseresponsedeploymentstatus">AKSService<wbr>Response<wbr>Response<wbr>Deployment<wbr>Status</a></span>
+    </dt>
+    <dd>{{% md %}}The deployment status.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="error_go">
+<a href="#error_go" style="color: inherit; text-decoration: inherit;">Error</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceresponsebaseresponseerror">Service<wbr>Response<wbr>Base<wbr>Response<wbr>Error</a></span>
+    </dt>
+    <dd>{{% md %}}The error details.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="modelconfigmap_go">
+<a href="#modelconfigmap_go" style="color: inherit; text-decoration: inherit;">Model<wbr>Config<wbr>Map</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}Details on the models and configurations.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="scoringuri_go">
+<a href="#scoringuri_go" style="color: inherit; text-decoration: inherit;">Scoring<wbr>Uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Uri for sending scoring requests.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="state_go">
+<a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The current state of the service.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="swaggeruri_go">
+<a href="#swaggeruri_go" style="color: inherit; text-decoration: inherit;">Swagger<wbr>Uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Uri for sending swagger requests.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="aadauthenabled_go">
+<a href="#aadauthenabled_go" style="color: inherit; text-decoration: inherit;">Aad<wbr>Auth<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether or not AAD authentication is enabled.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="appinsightsenabled_go">
+<a href="#appinsightsenabled_go" style="color: inherit; text-decoration: inherit;">App<wbr>Insights<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether or not Application Insights is enabled.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="authenabled_go">
+<a href="#authenabled_go" style="color: inherit; text-decoration: inherit;">Auth<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether or not authentication is enabled.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="autoscaler_go">
+<a href="#autoscaler_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Scaler</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#aksserviceresponseresponseautoscaler">AKSService<wbr>Response<wbr>Response<wbr>Auto<wbr>Scaler</a></span>
+    </dt>
+    <dd>{{% md %}}The auto scaler properties.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="computename_go">
+<a href="#computename_go" style="color: inherit; text-decoration: inherit;">Compute<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the compute resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="containerresourcerequirements_go">
+<a href="#containerresourcerequirements_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Resource<wbr>Requirements</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#containerresourcerequirementsresponse">Container<wbr>Resource<wbr>Requirements<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The container resource requirements.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="datacollection_go">
+<a href="#datacollection_go" style="color: inherit; text-decoration: inherit;">Data<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#aksserviceresponseresponsedatacollection">AKSService<wbr>Response<wbr>Response<wbr>Data<wbr>Collection</a></span>
+    </dt>
+    <dd>{{% md %}}Details of the data collection options specified.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deploymenttype_go">
+<a href="#deploymenttype_go" style="color: inherit; text-decoration: inherit;">Deployment<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The deployment type for the service.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The service description.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="environmentimagerequest_go">
+<a href="#environmentimagerequest_go" style="color: inherit; text-decoration: inherit;">Environment<wbr>Image<wbr>Request</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#aksserviceresponseresponseenvironmentimagerequest">AKSService<wbr>Response<wbr>Response<wbr>Environment<wbr>Image<wbr>Request</a></span>
+    </dt>
+    <dd>{{% md %}}The Environment, models and assets used for inferencing.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="isdefault_go">
+<a href="#isdefault_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Default</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is this the default variant.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kvtags_go">
+<a href="#kvtags_go" style="color: inherit; text-decoration: inherit;">Kv<wbr>Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}The service tag dictionary. Tags are mutable.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="livenessproberequirements_go">
+<a href="#livenessproberequirements_go" style="color: inherit; text-decoration: inherit;">Liveness<wbr>Probe<wbr>Requirements</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#aksserviceresponseresponselivenessproberequirements">AKSService<wbr>Response<wbr>Response<wbr>Liveness<wbr>Probe<wbr>Requirements</a></span>
+    </dt>
+    <dd>{{% md %}}The liveness probe requirements.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxconcurrentrequestspercontainer_go">
+<a href="#maxconcurrentrequestspercontainer_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrent<wbr>Requests<wbr>Per<wbr>Container</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of concurrent requests per container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxqueuewaitms_go">
+<a href="#maxqueuewaitms_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Queue<wbr>Wait<wbr>Ms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Maximum time a request will wait in the queue (in milliseconds). After this time, the service will return 503 (Service Unavailable){{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="models_go">
+<a href="#models_go" style="color: inherit; text-decoration: inherit;">Models</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#modelresponse">[]Model<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The list of models.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="namespace_go">
+<a href="#namespace_go" style="color: inherit; text-decoration: inherit;">Namespace</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Kubernetes namespace of the deployment.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="numreplicas_go">
+<a href="#numreplicas_go" style="color: inherit; text-decoration: inherit;">Num<wbr>Replicas</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of replicas on the cluster.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="properties_go">
+<a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}The service property dictionary. Properties are immutable.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scoringtimeoutms_go">
+<a href="#scoringtimeoutms_go" style="color: inherit; text-decoration: inherit;">Scoring<wbr>Timeout<wbr>Ms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The scoring timeout in milliseconds.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="trafficpercentile_go">
+<a href="#trafficpercentile_go" style="color: inherit; text-decoration: inherit;">Traffic<wbr>Percentile</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float64</span>
+    </dt>
+    <dd>{{% md %}}The amount of traffic variant receives.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of the variant.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="deploymentstatus_nodejs">
+<a href="#deploymentstatus_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#aksserviceresponseresponsedeploymentstatus">AKSService<wbr>Response<wbr>Response<wbr>Deployment<wbr>Status</a></span>
+    </dt>
+    <dd>{{% md %}}The deployment status.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="error_nodejs">
+<a href="#error_nodejs" style="color: inherit; text-decoration: inherit;">error</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceresponsebaseresponseerror">Service<wbr>Response<wbr>Base<wbr>Response<wbr>Error</a></span>
+    </dt>
+    <dd>{{% md %}}The error details.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="modelconfigmap_nodejs">
+<a href="#modelconfigmap_nodejs" style="color: inherit; text-decoration: inherit;">model<wbr>Config<wbr>Map</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}Details on the models and configurations.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="scoringuri_nodejs">
+<a href="#scoringuri_nodejs" style="color: inherit; text-decoration: inherit;">scoring<wbr>Uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Uri for sending scoring requests.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="state_nodejs">
+<a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The current state of the service.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="swaggeruri_nodejs">
+<a href="#swaggeruri_nodejs" style="color: inherit; text-decoration: inherit;">swagger<wbr>Uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Uri for sending swagger requests.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="aadauthenabled_nodejs">
+<a href="#aadauthenabled_nodejs" style="color: inherit; text-decoration: inherit;">aad<wbr>Auth<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether or not AAD authentication is enabled.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="appinsightsenabled_nodejs">
+<a href="#appinsightsenabled_nodejs" style="color: inherit; text-decoration: inherit;">app<wbr>Insights<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether or not Application Insights is enabled.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="authenabled_nodejs">
+<a href="#authenabled_nodejs" style="color: inherit; text-decoration: inherit;">auth<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether or not authentication is enabled.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="autoscaler_nodejs">
+<a href="#autoscaler_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Scaler</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#aksserviceresponseresponseautoscaler">AKSService<wbr>Response<wbr>Response<wbr>Auto<wbr>Scaler</a></span>
+    </dt>
+    <dd>{{% md %}}The auto scaler properties.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="computename_nodejs">
+<a href="#computename_nodejs" style="color: inherit; text-decoration: inherit;">compute<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the compute resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="containerresourcerequirements_nodejs">
+<a href="#containerresourcerequirements_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Resource<wbr>Requirements</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#containerresourcerequirementsresponse">Container<wbr>Resource<wbr>Requirements<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The container resource requirements.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="datacollection_nodejs">
+<a href="#datacollection_nodejs" style="color: inherit; text-decoration: inherit;">data<wbr>Collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#aksserviceresponseresponsedatacollection">AKSService<wbr>Response<wbr>Response<wbr>Data<wbr>Collection</a></span>
+    </dt>
+    <dd>{{% md %}}Details of the data collection options specified.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deploymenttype_nodejs">
+<a href="#deploymenttype_nodejs" style="color: inherit; text-decoration: inherit;">deployment<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The deployment type for the service.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The service description.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="environmentimagerequest_nodejs">
+<a href="#environmentimagerequest_nodejs" style="color: inherit; text-decoration: inherit;">environment<wbr>Image<wbr>Request</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#aksserviceresponseresponseenvironmentimagerequest">AKSService<wbr>Response<wbr>Response<wbr>Environment<wbr>Image<wbr>Request</a></span>
+    </dt>
+    <dd>{{% md %}}The Environment, models and assets used for inferencing.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="isdefault_nodejs">
+<a href="#isdefault_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Default</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Is this the default variant.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kvtags_nodejs">
+<a href="#kvtags_nodejs" style="color: inherit; text-decoration: inherit;">kv<wbr>Tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}The service tag dictionary. Tags are mutable.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="livenessproberequirements_nodejs">
+<a href="#livenessproberequirements_nodejs" style="color: inherit; text-decoration: inherit;">liveness<wbr>Probe<wbr>Requirements</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#aksserviceresponseresponselivenessproberequirements">AKSService<wbr>Response<wbr>Response<wbr>Liveness<wbr>Probe<wbr>Requirements</a></span>
+    </dt>
+    <dd>{{% md %}}The liveness probe requirements.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxconcurrentrequestspercontainer_nodejs">
+<a href="#maxconcurrentrequestspercontainer_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrent<wbr>Requests<wbr>Per<wbr>Container</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of concurrent requests per container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxqueuewaitms_nodejs">
+<a href="#maxqueuewaitms_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Queue<wbr>Wait<wbr>Ms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Maximum time a request will wait in the queue (in milliseconds). After this time, the service will return 503 (Service Unavailable){{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="models_nodejs">
+<a href="#models_nodejs" style="color: inherit; text-decoration: inherit;">models</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#modelresponse">Model<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of models.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="namespace_nodejs">
+<a href="#namespace_nodejs" style="color: inherit; text-decoration: inherit;">namespace</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Kubernetes namespace of the deployment.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="numreplicas_nodejs">
+<a href="#numreplicas_nodejs" style="color: inherit; text-decoration: inherit;">num<wbr>Replicas</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The number of replicas on the cluster.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="properties_nodejs">
+<a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}The service property dictionary. Properties are immutable.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scoringtimeoutms_nodejs">
+<a href="#scoringtimeoutms_nodejs" style="color: inherit; text-decoration: inherit;">scoring<wbr>Timeout<wbr>Ms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The scoring timeout in milliseconds.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="trafficpercentile_nodejs">
+<a href="#trafficpercentile_nodejs" style="color: inherit; text-decoration: inherit;">traffic<wbr>Percentile</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The amount of traffic variant receives.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of the variant.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="deployment_status_python">
+<a href="#deployment_status_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#aksserviceresponseresponsedeploymentstatus">AKSService<wbr>Response<wbr>Response<wbr>Deployment<wbr>Status<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The deployment status.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="error_python">
+<a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#serviceresponsebaseresponseerror">Service<wbr>Response<wbr>Base<wbr>Response<wbr>Error<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The error details.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="model_config_map_python">
+<a href="#model_config_map_python" style="color: inherit; text-decoration: inherit;">model_<wbr>config_<wbr>map</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}Details on the models and configurations.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="scoring_uri_python">
+<a href="#scoring_uri_python" style="color: inherit; text-decoration: inherit;">scoring_<wbr>uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Uri for sending scoring requests.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="state_python">
+<a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The current state of the service.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="swagger_uri_python">
+<a href="#swagger_uri_python" style="color: inherit; text-decoration: inherit;">swagger_<wbr>uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Uri for sending swagger requests.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="aad_auth_enabled_python">
+<a href="#aad_auth_enabled_python" style="color: inherit; text-decoration: inherit;">aad_<wbr>auth_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether or not AAD authentication is enabled.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="app_insights_enabled_python">
+<a href="#app_insights_enabled_python" style="color: inherit; text-decoration: inherit;">app_<wbr>insights_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether or not Application Insights is enabled.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="auth_enabled_python">
+<a href="#auth_enabled_python" style="color: inherit; text-decoration: inherit;">auth_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether or not authentication is enabled.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="auto_scaler_python">
+<a href="#auto_scaler_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>scaler</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#aksserviceresponseresponseautoscaler">AKSService<wbr>Response<wbr>Response<wbr>Auto<wbr>Scaler<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The auto scaler properties.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="compute_name_python">
+<a href="#compute_name_python" style="color: inherit; text-decoration: inherit;">compute_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the compute resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="container_resource_requirements_python">
+<a href="#container_resource_requirements_python" style="color: inherit; text-decoration: inherit;">container_<wbr>resource_<wbr>requirements</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#containerresourcerequirementsresponse">Container<wbr>Resource<wbr>Requirements<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The container resource requirements.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="data_collection_python">
+<a href="#data_collection_python" style="color: inherit; text-decoration: inherit;">data_<wbr>collection</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#aksserviceresponseresponsedatacollection">AKSService<wbr>Response<wbr>Response<wbr>Data<wbr>Collection<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Details of the data collection options specified.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="deployment_type_python">
+<a href="#deployment_type_python" style="color: inherit; text-decoration: inherit;">deployment_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The deployment type for the service.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The service description.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="environment_image_request_python">
+<a href="#environment_image_request_python" style="color: inherit; text-decoration: inherit;">environment_<wbr>image_<wbr>request</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#aksserviceresponseresponseenvironmentimagerequest">AKSService<wbr>Response<wbr>Response<wbr>Environment<wbr>Image<wbr>Request<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The Environment, models and assets used for inferencing.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="is_default_python">
+<a href="#is_default_python" style="color: inherit; text-decoration: inherit;">is_<wbr>default</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Is this the default variant.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kv_tags_python">
+<a href="#kv_tags_python" style="color: inherit; text-decoration: inherit;">kv_<wbr>tags</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}The service tag dictionary. Tags are mutable.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="liveness_probe_requirements_python">
+<a href="#liveness_probe_requirements_python" style="color: inherit; text-decoration: inherit;">liveness_<wbr>probe_<wbr>requirements</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#aksserviceresponseresponselivenessproberequirements">AKSService<wbr>Response<wbr>Response<wbr>Liveness<wbr>Probe<wbr>Requirements<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The liveness probe requirements.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="max_concurrent_requests_per_container_python">
+<a href="#max_concurrent_requests_per_container_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrent_<wbr>requests_<wbr>per_<wbr>container</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of concurrent requests per container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="max_queue_wait_ms_python">
+<a href="#max_queue_wait_ms_python" style="color: inherit; text-decoration: inherit;">max_<wbr>queue_<wbr>wait_<wbr>ms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}Maximum time a request will wait in the queue (in milliseconds). After this time, the service will return 503 (Service Unavailable){{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="models_python">
+<a href="#models_python" style="color: inherit; text-decoration: inherit;">models</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#modelresponse">Sequence[Model<wbr>Response<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of models.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="namespace_python">
+<a href="#namespace_python" style="color: inherit; text-decoration: inherit;">namespace</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Kubernetes namespace of the deployment.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="num_replicas_python">
+<a href="#num_replicas_python" style="color: inherit; text-decoration: inherit;">num_<wbr>replicas</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of replicas on the cluster.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="properties_python">
+<a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}The service property dictionary. Properties are immutable.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="scoring_timeout_ms_python">
+<a href="#scoring_timeout_ms_python" style="color: inherit; text-decoration: inherit;">scoring_<wbr>timeout_<wbr>ms</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The scoring timeout in milliseconds.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="traffic_percentile_python">
+<a href="#traffic_percentile_python" style="color: inherit; text-decoration: inherit;">traffic_<wbr>percentile</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}The amount of traffic variant receives.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of the variant.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="aksserviceresponseresponseautoscaler">AKSService<wbr>Response<wbr>Response<wbr>Auto<wbr>Scaler</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="autoscaleenabled_csharp">
+<a href="#autoscaleenabled_csharp" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Option to enable/disable auto scaling.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxreplicas_csharp">
+<a href="#maxreplicas_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Replicas</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of replicas in the cluster.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="minreplicas_csharp">
+<a href="#minreplicas_csharp" style="color: inherit; text-decoration: inherit;">Min<wbr>Replicas</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The minimum number of replicas to scale down to.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="refreshperiodinseconds_csharp">
+<a href="#refreshperiodinseconds_csharp" style="color: inherit; text-decoration: inherit;">Refresh<wbr>Period<wbr>In<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The amount of seconds to wait between auto scale updates.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="targetutilization_csharp">
+<a href="#targetutilization_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Utilization</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The target utilization percentage to use for determining whether to scale the cluster.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="autoscaleenabled_go">
+<a href="#autoscaleenabled_go" style="color: inherit; text-decoration: inherit;">Autoscale<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Option to enable/disable auto scaling.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxreplicas_go">
+<a href="#maxreplicas_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Replicas</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of replicas in the cluster.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="minreplicas_go">
+<a href="#minreplicas_go" style="color: inherit; text-decoration: inherit;">Min<wbr>Replicas</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The minimum number of replicas to scale down to.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="refreshperiodinseconds_go">
+<a href="#refreshperiodinseconds_go" style="color: inherit; text-decoration: inherit;">Refresh<wbr>Period<wbr>In<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The amount of seconds to wait between auto scale updates.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="targetutilization_go">
+<a href="#targetutilization_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Utilization</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The target utilization percentage to use for determining whether to scale the cluster.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="autoscaleenabled_nodejs">
+<a href="#autoscaleenabled_nodejs" style="color: inherit; text-decoration: inherit;">autoscale<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Option to enable/disable auto scaling.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="maxreplicas_nodejs">
+<a href="#maxreplicas_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Replicas</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of replicas in the cluster.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="minreplicas_nodejs">
+<a href="#minreplicas_nodejs" style="color: inherit; text-decoration: inherit;">min<wbr>Replicas</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The minimum number of replicas to scale down to.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="refreshperiodinseconds_nodejs">
+<a href="#refreshperiodinseconds_nodejs" style="color: inherit; text-decoration: inherit;">refresh<wbr>Period<wbr>In<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The amount of seconds to wait between auto scale updates.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="targetutilization_nodejs">
+<a href="#targetutilization_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Utilization</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The target utilization percentage to use for determining whether to scale the cluster.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="autoscale_enabled_python">
+<a href="#autoscale_enabled_python" style="color: inherit; text-decoration: inherit;">autoscale_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Option to enable/disable auto scaling.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="max_replicas_python">
+<a href="#max_replicas_python" style="color: inherit; text-decoration: inherit;">max_<wbr>replicas</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of replicas in the cluster.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="min_replicas_python">
+<a href="#min_replicas_python" style="color: inherit; text-decoration: inherit;">min_<wbr>replicas</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The minimum number of replicas to scale down to.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="refresh_period_in_seconds_python">
+<a href="#refresh_period_in_seconds_python" style="color: inherit; text-decoration: inherit;">refresh_<wbr>period_<wbr>in_<wbr>seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The amount of seconds to wait between auto scale updates.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="target_utilization_python">
+<a href="#target_utilization_python" style="color: inherit; text-decoration: inherit;">target_<wbr>utilization</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The target utilization percentage to use for determining whether to scale the cluster.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="aksserviceresponseresponsedatacollection">AKSService<wbr>Response<wbr>Response<wbr>Data<wbr>Collection</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="eventhubenabled_csharp">
+<a href="#eventhubenabled_csharp" style="color: inherit; text-decoration: inherit;">Event<wbr>Hub<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Option for enabling/disabling Event Hub.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="storageenabled_csharp">
+<a href="#storageenabled_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Option for enabling/disabling storage.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="eventhubenabled_go">
+<a href="#eventhubenabled_go" style="color: inherit; text-decoration: inherit;">Event<wbr>Hub<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Option for enabling/disabling Event Hub.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="storageenabled_go">
+<a href="#storageenabled_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Option for enabling/disabling storage.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="eventhubenabled_nodejs">
+<a href="#eventhubenabled_nodejs" style="color: inherit; text-decoration: inherit;">event<wbr>Hub<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Option for enabling/disabling Event Hub.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="storageenabled_nodejs">
+<a href="#storageenabled_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Option for enabling/disabling storage.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="event_hub_enabled_python">
+<a href="#event_hub_enabled_python" style="color: inherit; text-decoration: inherit;">event_<wbr>hub_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Option for enabling/disabling Event Hub.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="storage_enabled_python">
+<a href="#storage_enabled_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Option for enabling/disabling storage.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="aksserviceresponseresponsedeploymentstatus">AKSService<wbr>Response<wbr>Response<wbr>Deployment<wbr>Status</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="availablereplicas_csharp">
+<a href="#availablereplicas_csharp" style="color: inherit; text-decoration: inherit;">Available<wbr>Replicas</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of available replicas.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="desiredreplicas_csharp">
+<a href="#desiredreplicas_csharp" style="color: inherit; text-decoration: inherit;">Desired<wbr>Replicas</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The desired number of replicas.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="error_csharp">
+<a href="#error_csharp" style="color: inherit; text-decoration: inherit;">Error</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#aksreplicastatusresponseerror">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>AKSReplica<wbr>Status<wbr>Response<wbr>Error<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The error details.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="updatedreplicas_csharp">
+<a href="#updatedreplicas_csharp" style="color: inherit; text-decoration: inherit;">Updated<wbr>Replicas</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of updated replicas.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="availablereplicas_go">
+<a href="#availablereplicas_go" style="color: inherit; text-decoration: inherit;">Available<wbr>Replicas</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of available replicas.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="desiredreplicas_go">
+<a href="#desiredreplicas_go" style="color: inherit; text-decoration: inherit;">Desired<wbr>Replicas</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The desired number of replicas.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="error_go">
+<a href="#error_go" style="color: inherit; text-decoration: inherit;">Error</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#aksreplicastatusresponseerror">AKSReplica<wbr>Status<wbr>Response<wbr>Error</a></span>
+    </dt>
+    <dd>{{% md %}}The error details.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="updatedreplicas_go">
+<a href="#updatedreplicas_go" style="color: inherit; text-decoration: inherit;">Updated<wbr>Replicas</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of updated replicas.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="availablereplicas_nodejs">
+<a href="#availablereplicas_nodejs" style="color: inherit; text-decoration: inherit;">available<wbr>Replicas</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The number of available replicas.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="desiredreplicas_nodejs">
+<a href="#desiredreplicas_nodejs" style="color: inherit; text-decoration: inherit;">desired<wbr>Replicas</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The desired number of replicas.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="error_nodejs">
+<a href="#error_nodejs" style="color: inherit; text-decoration: inherit;">error</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#aksreplicastatusresponseerror">AKSReplica<wbr>Status<wbr>Response<wbr>Error</a></span>
+    </dt>
+    <dd>{{% md %}}The error details.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="updatedreplicas_nodejs">
+<a href="#updatedreplicas_nodejs" style="color: inherit; text-decoration: inherit;">updated<wbr>Replicas</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The number of updated replicas.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="available_replicas_python">
+<a href="#available_replicas_python" style="color: inherit; text-decoration: inherit;">available_<wbr>replicas</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of available replicas.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="desired_replicas_python">
+<a href="#desired_replicas_python" style="color: inherit; text-decoration: inherit;">desired_<wbr>replicas</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The desired number of replicas.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="error_python">
+<a href="#error_python" style="color: inherit; text-decoration: inherit;">error</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#aksreplicastatusresponseerror">AKSReplica<wbr>Status<wbr>Response<wbr>Error<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The error details.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="updated_replicas_python">
+<a href="#updated_replicas_python" style="color: inherit; text-decoration: inherit;">updated_<wbr>replicas</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of updated replicas.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="aksserviceresponseresponseenvironmentimagerequest">AKSService<wbr>Response<wbr>Response<wbr>Environment<wbr>Image<wbr>Request</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="assets_csharp">
+<a href="#assets_csharp" style="color: inherit; text-decoration: inherit;">Assets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#imageassetresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Image<wbr>Asset<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The list of assets.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="driverprogram_csharp">
+<a href="#driverprogram_csharp" style="color: inherit; text-decoration: inherit;">Driver<wbr>Program</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the driver file.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="environment_csharp">
+<a href="#environment_csharp" style="color: inherit; text-decoration: inherit;">Environment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#environmentimageresponseresponseenvironment">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Environment<wbr>Image<wbr>Response<wbr>Response<wbr>Environment<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The details of the AZURE ML environment.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="environmentreference_csharp">
+<a href="#environmentreference_csharp" style="color: inherit; text-decoration: inherit;">Environment<wbr>Reference</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#environmentimageresponseresponseenvironmentreference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Environment<wbr>Image<wbr>Response<wbr>Response<wbr>Environment<wbr>Reference<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The unique identifying details of the AZURE ML environment.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="modelids_csharp">
+<a href="#modelids_csharp" style="color: inherit; text-decoration: inherit;">Model<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The list of model Ids.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="models_csharp">
+<a href="#models_csharp" style="color: inherit; text-decoration: inherit;">Models</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#modelresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Machine<wbr>Learning<wbr>Services.<wbr>Inputs.<wbr>Model<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The list of models.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="assets_go">
+<a href="#assets_go" style="color: inherit; text-decoration: inherit;">Assets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#imageassetresponse">[]Image<wbr>Asset<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The list of assets.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="driverprogram_go">
+<a href="#driverprogram_go" style="color: inherit; text-decoration: inherit;">Driver<wbr>Program</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the driver file.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="environment_go">
+<a href="#environment_go" style="color: inherit; text-decoration: inherit;">Environment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#environmentimageresponseresponseenvironment">Environment<wbr>Image<wbr>Response<wbr>Response<wbr>Environment</a></span>
+    </dt>
+    <dd>{{% md %}}The details of the AZURE ML environment.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="environmentreference_go">
+<a href="#environmentreference_go" style="color: inherit; text-decoration: inherit;">Environment<wbr>Reference</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#environmentimageresponseresponseenvironmentreference">Environment<wbr>Image<wbr>Response<wbr>Response<wbr>Environment<wbr>Reference</a></span>
+    </dt>
+    <dd>{{% md %}}The unique identifying details of the AZURE ML environment.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="modelids_go">
+<a href="#modelids_go" style="color: inherit; text-decoration: inherit;">Model<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The list of model Ids.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="models_go">
+<a href="#models_go" style="color: inherit; text-decoration: inherit;">Models</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#modelresponse">[]Model<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The list of models.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="assets_nodejs">
+<a href="#assets_nodejs" style="color: inherit; text-decoration: inherit;">assets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#imageassetresponse">Image<wbr>Asset<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of assets.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="driverprogram_nodejs">
+<a href="#driverprogram_nodejs" style="color: inherit; text-decoration: inherit;">driver<wbr>Program</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the driver file.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="environment_nodejs">
+<a href="#environment_nodejs" style="color: inherit; text-decoration: inherit;">environment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#environmentimageresponseresponseenvironment">Environment<wbr>Image<wbr>Response<wbr>Response<wbr>Environment</a></span>
+    </dt>
+    <dd>{{% md %}}The details of the AZURE ML environment.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="environmentreference_nodejs">
+<a href="#environmentreference_nodejs" style="color: inherit; text-decoration: inherit;">environment<wbr>Reference</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#environmentimageresponseresponseenvironmentreference">Environment<wbr>Image<wbr>Response<wbr>Response<wbr>Environment<wbr>Reference</a></span>
+    </dt>
+    <dd>{{% md %}}The unique identifying details of the AZURE ML environment.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="modelids_nodejs">
+<a href="#modelids_nodejs" style="color: inherit; text-decoration: inherit;">model<wbr>Ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The list of model Ids.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="models_nodejs">
+<a href="#models_nodejs" style="color: inherit; text-decoration: inherit;">models</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#modelresponse">Model<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of models.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="assets_python">
+<a href="#assets_python" style="color: inherit; text-decoration: inherit;">assets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#imageassetresponse">Sequence[Image<wbr>Asset<wbr>Response<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of assets.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="driver_program_python">
+<a href="#driver_program_python" style="color: inherit; text-decoration: inherit;">driver_<wbr>program</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the driver file.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="environment_python">
+<a href="#environment_python" style="color: inherit; text-decoration: inherit;">environment</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#environmentimageresponseresponseenvironment">Environment<wbr>Image<wbr>Response<wbr>Response<wbr>Environment<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The details of the AZURE ML environment.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="environment_reference_python">
+<a href="#environment_reference_python" style="color: inherit; text-decoration: inherit;">environment_<wbr>reference</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#environmentimageresponseresponseenvironmentreference">Environment<wbr>Image<wbr>Response<wbr>Response<wbr>Environment<wbr>Reference<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The unique identifying details of the AZURE ML environment.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="model_ids_python">
+<a href="#model_ids_python" style="color: inherit; text-decoration: inherit;">model_<wbr>ids</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The list of model Ids.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="models_python">
+<a href="#models_python" style="color: inherit; text-decoration: inherit;">models</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#modelresponse">Sequence[Model<wbr>Response<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of models.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="aksserviceresponseresponselivenessproberequirements">AKSService<wbr>Response<wbr>Response<wbr>Liveness<wbr>Probe<wbr>Requirements</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="failurethreshold_csharp">
+<a href="#failurethreshold_csharp" style="color: inherit; text-decoration: inherit;">Failure<wbr>Threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of failures to allow before returning an unhealthy status.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="initialdelayseconds_csharp">
+<a href="#initialdelayseconds_csharp" style="color: inherit; text-decoration: inherit;">Initial<wbr>Delay<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The delay before the first probe in seconds.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="periodseconds_csharp">
+<a href="#periodseconds_csharp" style="color: inherit; text-decoration: inherit;">Period<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The length of time between probes in seconds.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="successthreshold_csharp">
+<a href="#successthreshold_csharp" style="color: inherit; text-decoration: inherit;">Success<wbr>Threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of successful probes before returning a healthy status.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timeoutseconds_csharp">
+<a href="#timeoutseconds_csharp" style="color: inherit; text-decoration: inherit;">Timeout<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The probe timeout in seconds.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="failurethreshold_go">
+<a href="#failurethreshold_go" style="color: inherit; text-decoration: inherit;">Failure<wbr>Threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of failures to allow before returning an unhealthy status.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="initialdelayseconds_go">
+<a href="#initialdelayseconds_go" style="color: inherit; text-decoration: inherit;">Initial<wbr>Delay<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The delay before the first probe in seconds.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="periodseconds_go">
+<a href="#periodseconds_go" style="color: inherit; text-decoration: inherit;">Period<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The length of time between probes in seconds.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="successthreshold_go">
+<a href="#successthreshold_go" style="color: inherit; text-decoration: inherit;">Success<wbr>Threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of successful probes before returning a healthy status.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timeoutseconds_go">
+<a href="#timeoutseconds_go" style="color: inherit; text-decoration: inherit;">Timeout<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The probe timeout in seconds.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="failurethreshold_nodejs">
+<a href="#failurethreshold_nodejs" style="color: inherit; text-decoration: inherit;">failure<wbr>Threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The number of failures to allow before returning an unhealthy status.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="initialdelayseconds_nodejs">
+<a href="#initialdelayseconds_nodejs" style="color: inherit; text-decoration: inherit;">initial<wbr>Delay<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The delay before the first probe in seconds.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="periodseconds_nodejs">
+<a href="#periodseconds_nodejs" style="color: inherit; text-decoration: inherit;">period<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The length of time between probes in seconds.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="successthreshold_nodejs">
+<a href="#successthreshold_nodejs" style="color: inherit; text-decoration: inherit;">success<wbr>Threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The number of successful probes before returning a healthy status.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timeoutseconds_nodejs">
+<a href="#timeoutseconds_nodejs" style="color: inherit; text-decoration: inherit;">timeout<wbr>Seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The probe timeout in seconds.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="failure_threshold_python">
+<a href="#failure_threshold_python" style="color: inherit; text-decoration: inherit;">failure_<wbr>threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of failures to allow before returning an unhealthy status.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="initial_delay_seconds_python">
+<a href="#initial_delay_seconds_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>delay_<wbr>seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The delay before the first probe in seconds.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="period_seconds_python">
+<a href="#period_seconds_python" style="color: inherit; text-decoration: inherit;">period_<wbr>seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The length of time between probes in seconds.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="success_threshold_python">
+<a href="#success_threshold_python" style="color: inherit; text-decoration: inherit;">success_<wbr>threshold</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The number of successful probes before returning a healthy status.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timeout_seconds_python">
+<a href="#timeout_seconds_python" style="color: inherit; text-decoration: inherit;">timeout_<wbr>seconds</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The probe timeout in seconds.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
 <h4 id="aksvariantresponseresponse">AKSVariant<wbr>Response<wbr>Response</h4>
 
 {{% choosable language csharp %}}

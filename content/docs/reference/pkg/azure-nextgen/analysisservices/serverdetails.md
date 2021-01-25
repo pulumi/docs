@@ -172,7 +172,7 @@ const serverDetails = new azure_nextgen.analysisservices.latest.ServerDetails("s
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ServerDetails</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">as_administrators</span><span class="p">:</span> <span class="nx">Optional[ServerAdministratorsArgs]</span> = None<span class="p">, </span><span class="nx">backup_blob_container_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gateway_details</span><span class="p">:</span> <span class="nx">Optional[GatewayDetailsArgs]</span> = None<span class="p">, </span><span class="nx">ip_v4_firewall_settings</span><span class="p">:</span> <span class="nx">Optional[IPv4FirewallSettingsArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_mode</span><span class="p">:</span> <span class="nx">Optional[ManagedMode]</span> = None<span class="p">, </span><span class="nx">querypool_connection_mode</span><span class="p">:</span> <span class="nx">Optional[ConnectionMode]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[ResourceSkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ServerDetails</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">as_administrators</span><span class="p">:</span> <span class="nx">Optional[ServerAdministratorsArgs]</span> = None<span class="p">, </span><span class="nx">backup_blob_container_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">gateway_details</span><span class="p">:</span> <span class="nx">Optional[GatewayDetailsArgs]</span> = None<span class="p">, </span><span class="nx">ip_v4_firewall_settings</span><span class="p">:</span> <span class="nx">Optional[IPv4FirewallSettingsArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_mode</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">querypool_connection_mode</span><span class="p">:</span> <span class="nx">Optional[ConnectionMode]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">server_monitor_mode</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">server_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[ResourceSkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -421,7 +421,7 @@ The ServerDetails resource accepts the following [input]({{< relref "/docs/intro
 <a href="#managedmode_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Analysis<wbr>Services.<wbr>Managed<wbr>Mode</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The managed mode of the server (0 = not managed, 1 = managed).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -433,6 +433,15 @@ The ServerDetails resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type"><a href="#connectionmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Analysis<wbr>Services.<wbr>Connection<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}How the read-write server's participation in the query pool is controlled.<br/>It can have the following values: <ul><li>readOnly - indicates that the read-write server is intended not to participate in query operations</li><li>all - indicates that the read-write server can participate in query operations</li></ul>Specifying readOnly when capacity is 1 results in error.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="servermonitormode_csharp">
+<a href="#servermonitormode_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Monitor<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The server monitor mode for AS server{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
@@ -526,7 +535,7 @@ The ServerDetails resource accepts the following [input]({{< relref "/docs/intro
 <a href="#managedmode_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedmode">Managed<wbr>Mode</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The managed mode of the server (0 = not managed, 1 = managed).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -538,6 +547,15 @@ The ServerDetails resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type"><a href="#connectionmode">Connection<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}How the read-write server's participation in the query pool is controlled.<br/>It can have the following values: <ul><li>readOnly - indicates that the read-write server is intended not to participate in query operations</li><li>all - indicates that the read-write server can participate in query operations</li></ul>Specifying readOnly when capacity is 1 results in error.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="servermonitormode_go">
+<a href="#servermonitormode_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Monitor<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The server monitor mode for AS server{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tags_go">
@@ -631,7 +649,7 @@ The ServerDetails resource accepts the following [input]({{< relref "/docs/intro
 <a href="#managedmode_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>Mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedmode">Managed<wbr>Mode</a></span>
+        <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}The managed mode of the server (0 = not managed, 1 = managed).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -643,6 +661,15 @@ The ServerDetails resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type"><a href="#connectionmode">Connection<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}How the read-write server's participation in the query pool is controlled.<br/>It can have the following values: <ul><li>readOnly - indicates that the read-write server is intended not to participate in query operations</li><li>all - indicates that the read-write server can participate in query operations</li></ul>Specifying readOnly when capacity is 1 results in error.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="servermonitormode_nodejs">
+<a href="#servermonitormode_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Monitor<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The server monitor mode for AS server{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
@@ -736,7 +763,7 @@ The ServerDetails resource accepts the following [input]({{< relref "/docs/intro
 <a href="#managed_mode_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>mode</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#managedmode">Managed<wbr>Mode</a></span>
+        <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The managed mode of the server (0 = not managed, 1 = managed).{{% /md %}}</dd>
     <dt class="property-optional"
@@ -748,6 +775,15 @@ The ServerDetails resource accepts the following [input]({{< relref "/docs/intro
         <span class="property-type"><a href="#connectionmode">Connection<wbr>Mode</a></span>
     </dt>
     <dd>{{% md %}}How the read-write server's participation in the query pool is controlled.<br/>It can have the following values: <ul><li>readOnly - indicates that the read-write server is intended not to participate in query operations</li><li>all - indicates that the read-write server can participate in query operations</li></ul>Specifying readOnly when capacity is 1 results in error.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="server_monitor_mode_python">
+<a href="#server_monitor_mode_python" style="color: inherit; text-decoration: inherit;">server_<wbr>monitor_<wbr>mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The server monitor mode for AS server{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tags_python">
@@ -1712,44 +1748,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#ipv4firewallruleresponse">Sequence[IPv4Firewall<wbr>Rule<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An array of firewall rules.{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-<h4 id="managedmode">Managed<wbr>Mode</h4>
-
-{{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Zero</dt>
-    <dd>0</dd>
-    <dt>One</dt>
-    <dd>1</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="tabular">
-    <dt>Managed<wbr>Mode<wbr>Zero</dt>
-    <dd>0</dd>
-    <dt>Managed<wbr>Mode<wbr>One</dt>
-    <dd>1</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Zero</dt>
-    <dd>0</dd>
-    <dt>One</dt>
-    <dd>1</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="tabular">
-    <dt>ZERO</dt>
-    <dd>0</dd>
-    <dt>ONE</dt>
-    <dd>1</dd>
 </dl>
 {{% /choosable %}}
 

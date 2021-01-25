@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.synapse.SqlPoolSensitivityLabel 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A sensitivity label.
+Latest API Version: 2020-12-01.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var sqlPoolSensitivityLabel = new AzureNextGen.Synapse.V20190601Preview.SqlPoolSensitivityLabel("sqlPoolSensitivityLabel", new AzureNextGen.Synapse.V20190601Preview.SqlPoolSensitivityLabelArgs
+        var sqlPoolSensitivityLabel = new AzureNextGen.Synapse.Latest.SqlPoolSensitivityLabel("sqlPoolSensitivityLabel", new AzureNextGen.Synapse.Latest.SqlPoolSensitivityLabelArgs
         {
             ColumnName = "myColumn",
             InformationType = "PhoneNumber",
@@ -54,7 +55,7 @@ class MyStack : Stack
 package main
 
 import (
-	synapse "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/synapse/v20190601preview"
+	synapse "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/synapse/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -90,7 +91,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-sql_pool_sensitivity_label = azure_nextgen.synapse.v20190601preview.SqlPoolSensitivityLabel("sqlPoolSensitivityLabel",
+sql_pool_sensitivity_label = azure_nextgen.synapse.latest.SqlPoolSensitivityLabel("sqlPoolSensitivityLabel",
     column_name="myColumn",
     information_type="PhoneNumber",
     information_type_id="d22fa6e9-5ee4-3bde-4c2b-a409604c4646",
@@ -113,7 +114,7 @@ sql_pool_sensitivity_label = azure_nextgen.synapse.v20190601preview.SqlPoolSensi
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const sqlPoolSensitivityLabel = new azure_nextgen.synapse.v20190601preview.SqlPoolSensitivityLabel("sqlPoolSensitivityLabel", {
+const sqlPoolSensitivityLabel = new azure_nextgen.synapse.latest.SqlPoolSensitivityLabel("sqlPoolSensitivityLabel", {
     columnName: "myColumn",
     informationType: "PhoneNumber",
     informationTypeId: "d22fa6e9-5ee4-3bde-4c2b-a409604c4646",
@@ -143,7 +144,7 @@ const sqlPoolSensitivityLabel = new azure_nextgen.synapse.v20190601preview.SqlPo
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">SqlPoolSensitivityLabel</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">column_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">information_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">information_type_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">label_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">label_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schema_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sensitivity_label_source</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_pool_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">table_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">SqlPoolSensitivityLabel</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">column_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">information_type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">information_type_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">label_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">label_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">rank</span><span class="p">:</span> <span class="nx">Optional[SensitivityLabelRank]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schema_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sensitivity_label_source</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sql_pool_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">table_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -413,6 +414,15 @@ The SqlPoolSensitivityLabel resource accepts the following [input]({{< relref "/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The label name.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="rank_csharp">
+<a href="#rank_csharp" style="color: inherit; text-decoration: inherit;">Rank</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sensitivitylabelrank">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse.<wbr>Sensitivity<wbr>Label<wbr>Rank</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -518,6 +528,15 @@ The SqlPoolSensitivityLabel resource accepts the following [input]({{< relref "/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The label name.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="rank_go">
+<a href="#rank_go" style="color: inherit; text-decoration: inherit;">Rank</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sensitivitylabelrank">Sensitivity<wbr>Label<wbr>Rank</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -623,6 +642,15 @@ The SqlPoolSensitivityLabel resource accepts the following [input]({{< relref "/
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The label name.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="rank_nodejs">
+<a href="#rank_nodejs" style="color: inherit; text-decoration: inherit;">rank</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sensitivitylabelrank">Sensitivity<wbr>Label<wbr>Rank</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -728,6 +756,15 @@ The SqlPoolSensitivityLabel resource accepts the following [input]({{< relref "/
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The label name.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="rank_python">
+<a href="#rank_python" style="color: inherit; text-decoration: inherit;">rank</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sensitivitylabelrank">Sensitivity<wbr>Label<wbr>Rank</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -759,6 +796,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Is sensitivity recommendation disabled. Applicable for recommended sensitivity label only. Specifies whether the sensitivity recommendation on this column is disabled (dismissed) or not.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="managedby_csharp">
+<a href="#managedby_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}managed by{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="name_csharp">
@@ -803,6 +849,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Is sensitivity recommendation disabled. Applicable for recommended sensitivity label only. Specifies whether the sensitivity recommendation on this column is disabled (dismissed) or not.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="managedby_go">
+<a href="#managedby_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}managed by{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -843,6 +898,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Is sensitivity recommendation disabled. Applicable for recommended sensitivity label only. Specifies whether the sensitivity recommendation on this column is disabled (dismissed) or not.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="managedby_nodejs">
+<a href="#managedby_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}managed by{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="name_nodejs">
@@ -887,6 +951,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Is sensitivity recommendation disabled. Applicable for recommended sensitivity label only. Specifies whether the sensitivity recommendation on this column is disabled (dismissed) or not.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="managed_by_python">
+<a href="#managed_by_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>by</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}managed by{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -911,13 +984,79 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+
+## Supporting Types
+
+
+
+<h4 id="sensitivitylabelrank">Sensitivity<wbr>Label<wbr>Rank</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>None</dt>
+    <dd>None</dd>
+    <dt>Low</dt>
+    <dd>Low</dd>
+    <dt>Medium</dt>
+    <dd>Medium</dd>
+    <dt>High</dt>
+    <dd>High</dd>
+    <dt>Critical</dt>
+    <dd>Critical</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Sensitivity<wbr>Label<wbr>Rank<wbr>None</dt>
+    <dd>None</dd>
+    <dt>Sensitivity<wbr>Label<wbr>Rank<wbr>Low</dt>
+    <dd>Low</dd>
+    <dt>Sensitivity<wbr>Label<wbr>Rank<wbr>Medium</dt>
+    <dd>Medium</dd>
+    <dt>Sensitivity<wbr>Label<wbr>Rank<wbr>High</dt>
+    <dd>High</dd>
+    <dt>Sensitivity<wbr>Label<wbr>Rank<wbr>Critical</dt>
+    <dd>Critical</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>None</dt>
+    <dd>None</dd>
+    <dt>Low</dt>
+    <dd>Low</dd>
+    <dt>Medium</dt>
+    <dd>Medium</dd>
+    <dt>High</dt>
+    <dd>High</dd>
+    <dt>Critical</dt>
+    <dd>Critical</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>NONE</dt>
+    <dd>None</dd>
+    <dt>LOW</dt>
+    <dd>Low</dd>
+    <dt>MEDIUM</dt>
+    <dd>Medium</dd>
+    <dt>HIGH</dt>
+    <dd>High</dd>
+    <dt>CRITICAL</dt>
+    <dd>Critical</dd>
+</dl>
+{{% /choosable %}}
 ## Import
 
 
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:synapse/v20190601preview:SqlPoolSensitivityLabel current /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/myRG/providers/Microsoft.Synapse/workspaces/myServer/sqlPools/myDatabase/schemas/dbo/tables/myTable/columns/myColumn/sensitivityLabels/current 
+$ pulumi import azure-nextgen:synapse/latest:SqlPoolSensitivityLabel current /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/myRG/providers/Microsoft.Synapse/workspaces/myServer/sqlPools/myDatabase/schemas/dbo/tables/myTable/columns/myColumn/sensitivityLabels/current 
 ```
 
 

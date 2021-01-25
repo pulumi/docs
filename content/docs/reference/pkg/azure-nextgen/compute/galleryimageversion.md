@@ -4111,7 +4111,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:compute/latest:GalleryImageVersion 1.0.0 <Azure resource ID> 
+$ pulumi import azure-nextgen:compute/latest:GalleryImageVersion 1.0.0 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/galleries/{galleryName}/images/{galleryImageName}/versions/{galleryImageVersionName} 
 ```
 
 

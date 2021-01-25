@@ -283,6 +283,15 @@ The following output properties are available:
     <dd>{{% md %}}How the read-write server's participation in the query pool is controlled.<br/>It can have the following values: <ul><li>readOnly - indicates that the read-write server is intended not to participate in query operations</li><li>all - indicates that the read-write server can participate in query operations</li></ul>Specifying readOnly when capacity is 1 results in error.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="servermonitormode_csharp">
+<a href="#servermonitormode_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Monitor<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The server monitor mode for AS server{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -422,6 +431,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}How the read-write server's participation in the query pool is controlled.<br/>It can have the following values: <ul><li>readOnly - indicates that the read-write server is intended not to participate in query operations</li><li>all - indicates that the read-write server can participate in query operations</li></ul>Specifying readOnly when capacity is 1 results in error.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="servermonitormode_go">
+<a href="#servermonitormode_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Monitor<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The server monitor mode for AS server{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="tags_go">
@@ -565,6 +583,15 @@ The following output properties are available:
     <dd>{{% md %}}How the read-write server's participation in the query pool is controlled.<br/>It can have the following values: <ul><li>readOnly - indicates that the read-write server is intended not to participate in query operations</li><li>all - indicates that the read-write server can participate in query operations</li></ul>Specifying readOnly when capacity is 1 results in error.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="servermonitormode_nodejs">
+<a href="#servermonitormode_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Monitor<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The server monitor mode for AS server{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -704,6 +731,15 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}How the read-write server's participation in the query pool is controlled.<br/>It can have the following values: <ul><li>readOnly - indicates that the read-write server is intended not to participate in query operations</li><li>all - indicates that the read-write server can participate in query operations</li></ul>Specifying readOnly when capacity is 1 results in error.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="server_monitor_mode_python">
+<a href="#server_monitor_mode_python" style="color: inherit; text-decoration: inherit;">server_<wbr>monitor_<wbr>mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The server monitor mode for AS server{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="tags_python">

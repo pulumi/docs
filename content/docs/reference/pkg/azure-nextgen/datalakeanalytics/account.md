@@ -1112,6 +1112,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The commitment tier in use for the current month.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="debugdataaccesslevel_csharp">
+<a href="#debugdataaccesslevel_csharp" style="color: inherit; text-decoration: inherit;">Debug<wbr>Data<wbr>Access<wbr>Level</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The current state of the DebugDataAccessLevel for this account.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="endpoint_csharp">
 <a href="#endpoint_csharp" style="color: inherit; text-decoration: inherit;">Endpoint</a>
 </span>
@@ -1119,6 +1128,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full CName endpoint for this account.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="hivemetastores_csharp">
+<a href="#hivemetastores_csharp" style="color: inherit; text-decoration: inherit;">Hive<wbr>Metastores</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#hivemetastoreresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Lake<wbr>Analytics.<wbr>Outputs.<wbr>Hive<wbr>Metastore<wbr>Response&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The list of hiveMetastores associated with this account.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="id_csharp">
@@ -1191,6 +1209,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource type.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="virtualnetworkrules_csharp">
+<a href="#virtualnetworkrules_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnetworkruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Lake<wbr>Analytics.<wbr>Outputs.<wbr>Virtual<wbr>Network<wbr>Rule<wbr>Response&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The list of virtualNetwork rules associated with this account.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1226,6 +1253,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The commitment tier in use for the current month.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="debugdataaccesslevel_go">
+<a href="#debugdataaccesslevel_go" style="color: inherit; text-decoration: inherit;">Debug<wbr>Data<wbr>Access<wbr>Level</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The current state of the DebugDataAccessLevel for this account.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="endpoint_go">
 <a href="#endpoint_go" style="color: inherit; text-decoration: inherit;">Endpoint</a>
 </span>
@@ -1233,6 +1269,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full CName endpoint for this account.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="hivemetastores_go">
+<a href="#hivemetastores_go" style="color: inherit; text-decoration: inherit;">Hive<wbr>Metastores</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#hivemetastoreresponse">[]Hive<wbr>Metastore<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The list of hiveMetastores associated with this account.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="id_go">
@@ -1305,6 +1350,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource type.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="virtualnetworkrules_go">
+<a href="#virtualnetworkrules_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnetworkruleresponse">[]Virtual<wbr>Network<wbr>Rule<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The list of virtualNetwork rules associated with this account.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1340,6 +1394,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The commitment tier in use for the current month.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="debugdataaccesslevel_nodejs">
+<a href="#debugdataaccesslevel_nodejs" style="color: inherit; text-decoration: inherit;">debug<wbr>Data<wbr>Access<wbr>Level</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The current state of the DebugDataAccessLevel for this account.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="endpoint_nodejs">
 <a href="#endpoint_nodejs" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span>
@@ -1347,6 +1410,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The full CName endpoint for this account.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="hivemetastores_nodejs">
+<a href="#hivemetastores_nodejs" style="color: inherit; text-decoration: inherit;">hive<wbr>Metastores</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#hivemetastoreresponse">Hive<wbr>Metastore<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of hiveMetastores associated with this account.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="id_nodejs">
@@ -1419,6 +1491,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource type.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="virtualnetworkrules_nodejs">
+<a href="#virtualnetworkrules_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnetworkruleresponse">Virtual<wbr>Network<wbr>Rule<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of virtualNetwork rules associated with this account.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1454,6 +1535,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The commitment tier in use for the current month.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="debug_data_access_level_python">
+<a href="#debug_data_access_level_python" style="color: inherit; text-decoration: inherit;">debug_<wbr>data_<wbr>access_<wbr>level</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The current state of the DebugDataAccessLevel for this account.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="endpoint_python">
 <a href="#endpoint_python" style="color: inherit; text-decoration: inherit;">endpoint</a>
 </span>
@@ -1461,6 +1551,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The full CName endpoint for this account.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="hive_metastores_python">
+<a href="#hive_metastores_python" style="color: inherit; text-decoration: inherit;">hive_<wbr>metastores</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#hivemetastoreresponse">Sequence[Hive<wbr>Metastore<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of hiveMetastores associated with this account.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="id_python">
@@ -1533,6 +1632,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource type.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="virtual_network_rules_python">
+<a href="#virtual_network_rules_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#virtualnetworkruleresponse">Sequence[Virtual<wbr>Network<wbr>Rule<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of virtualNetwork rules associated with this account.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -2894,6 +3002,356 @@ All [input](#inputs) properties are implicitly available as output properties. A
 </dl>
 {{% /choosable %}}
 
+<h4 id="hivemetastoreresponse">Hive<wbr>Metastore<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="databasename_csharp">
+<a href="#databasename_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The databaseName for the Hive MetaStore{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource name.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="nestedresourceprovisioningstate_csharp">
+<a href="#nestedresourceprovisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Nested<wbr>Resource<wbr>Provisioning<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The current state of the NestedResource{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="password_csharp">
+<a href="#password_csharp" style="color: inherit; text-decoration: inherit;">Password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The password for the Hive MetaStore{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="runtimeversion_csharp">
+<a href="#runtimeversion_csharp" style="color: inherit; text-decoration: inherit;">Runtime<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The runtimeVersion for the Hive MetaStore{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="serveruri_csharp">
+<a href="#serveruri_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The serverUri for the Hive MetaStore{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="username_csharp">
+<a href="#username_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The userName for the Hive MetaStore{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="databasename_go">
+<a href="#databasename_go" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The databaseName for the Hive MetaStore{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource name.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="nestedresourceprovisioningstate_go">
+<a href="#nestedresourceprovisioningstate_go" style="color: inherit; text-decoration: inherit;">Nested<wbr>Resource<wbr>Provisioning<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The current state of the NestedResource{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="password_go">
+<a href="#password_go" style="color: inherit; text-decoration: inherit;">Password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The password for the Hive MetaStore{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="runtimeversion_go">
+<a href="#runtimeversion_go" style="color: inherit; text-decoration: inherit;">Runtime<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The runtimeVersion for the Hive MetaStore{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="serveruri_go">
+<a href="#serveruri_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The serverUri for the Hive MetaStore{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="username_go">
+<a href="#username_go" style="color: inherit; text-decoration: inherit;">User<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The userName for the Hive MetaStore{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="databasename_nodejs">
+<a href="#databasename_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The databaseName for the Hive MetaStore{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource name.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="nestedresourceprovisioningstate_nodejs">
+<a href="#nestedresourceprovisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">nested<wbr>Resource<wbr>Provisioning<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The current state of the NestedResource{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="password_nodejs">
+<a href="#password_nodejs" style="color: inherit; text-decoration: inherit;">password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The password for the Hive MetaStore{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="runtimeversion_nodejs">
+<a href="#runtimeversion_nodejs" style="color: inherit; text-decoration: inherit;">runtime<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The runtimeVersion for the Hive MetaStore{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="serveruri_nodejs">
+<a href="#serveruri_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The serverUri for the Hive MetaStore{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="username_nodejs">
+<a href="#username_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The userName for the Hive MetaStore{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="database_name_python">
+<a href="#database_name_python" style="color: inherit; text-decoration: inherit;">database_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The databaseName for the Hive MetaStore{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The resource name.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="nested_resource_provisioning_state_python">
+<a href="#nested_resource_provisioning_state_python" style="color: inherit; text-decoration: inherit;">nested_<wbr>resource_<wbr>provisioning_<wbr>state</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The current state of the NestedResource{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="password_python">
+<a href="#password_python" style="color: inherit; text-decoration: inherit;">password</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The password for the Hive MetaStore{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="runtime_version_python">
+<a href="#runtime_version_python" style="color: inherit; text-decoration: inherit;">runtime_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The runtimeVersion for the Hive MetaStore{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="server_uri_python">
+<a href="#server_uri_python" style="color: inherit; text-decoration: inherit;">server_<wbr>uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The serverUri for the Hive MetaStore{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="user_name_python">
+<a href="#user_name_python" style="color: inherit; text-decoration: inherit;">user_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The userName for the Hive MetaStore{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
 <h4 id="storageaccountinformationresponse">Storage<wbr>Account<wbr>Information<wbr>Response</h4>
 
 {{% choosable language csharp %}}
@@ -3155,6 +3613,212 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Commitment_100000AUHours</dd>
     <dt>COMMITMENT_500000_AU_HOURS</dt>
     <dd>Commitment_500000AUHours</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="virtualnetworkruleresponse">Virtual<wbr>Network<wbr>Rule<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource name.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="subnetid_csharp">
+<a href="#subnetid_csharp" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource identifier for the subnet{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="virtualnetworkrulestate_csharp">
+<a href="#virtualnetworkrulestate_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Rule<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The current state of the VirtualNetwork Rule{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource name.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="subnetid_go">
+<a href="#subnetid_go" style="color: inherit; text-decoration: inherit;">Subnet<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource identifier for the subnet{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="virtualnetworkrulestate_go">
+<a href="#virtualnetworkrulestate_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Network<wbr>Rule<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The current state of the VirtualNetwork Rule{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource name.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="subnetid_nodejs">
+<a href="#subnetid_nodejs" style="color: inherit; text-decoration: inherit;">subnet<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource identifier for the subnet{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="virtualnetworkrulestate_nodejs">
+<a href="#virtualnetworkrulestate_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Network<wbr>Rule<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The current state of the VirtualNetwork Rule{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The resource identifier.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The resource name.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="subnet_id_python">
+<a href="#subnet_id_python" style="color: inherit; text-decoration: inherit;">subnet_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The resource identifier for the subnet{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The resource type.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="virtual_network_rule_state_python">
+<a href="#virtual_network_rule_state_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>network_<wbr>rule_<wbr>state</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The current state of the VirtualNetwork Rule{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 ## Import

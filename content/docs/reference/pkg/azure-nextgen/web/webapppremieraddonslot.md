@@ -12,6 +12,13 @@ meta_desc: "Documentation for the azure-nextgen.web.WebAppPremierAddOnSlot resou
 
 Premier add-on.
 Latest API Version: 2020-09-01.
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:web/latest:WebAppPremierAddOnSlot myresource1 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/slots/{slot}/premieraddons/{premierAddOnName} 
+```
 
 
 

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.recoveryservices.ProtectionConta
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Base class for container with backup items. Containers with specific workloads are derived from this class.
-Latest API Version: 2020-10-01.
+Latest API Version: 2020-12-01.
 
 {{% examples %}}
 ## Example Usage
@@ -110,7 +110,7 @@ const protectionContainer = new azure_nextgen.recoveryservices.latest.Protection
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ProtectionContainer</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">container_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">e_tag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">fabric_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Union[AzureSqlContainerArgs, AzureStorageContainerArgs, AzureWorkloadContainerArgs, DpmContainerArgs, GenericContainerArgs, IaaSVMContainerArgs, MabContainerArgs]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vault_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">ProtectionContainer</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">container_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">e_tag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">fabric_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Union[AzureBackupServerContainerArgs, AzureIaaSClassicComputeVMContainerArgs, AzureIaaSComputeVMContainerArgs, AzureSQLAGWorkloadContainerProtectionContainerArgs, AzureSqlContainerArgs, AzureStorageContainerArgs, AzureVMAppContainerProtectionContainerArgs, AzureWorkloadContainerArgs, DpmContainerArgs, GenericContainerArgs, IaaSVMContainerArgs, MabContainerArgs]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vault_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -341,7 +341,7 @@ The ProtectionContainer resource accepts the following [input]({{< relref "/docs
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuresqlcontainer">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Sql<wbr>Container<wbr>Args</a> | <a href="#azurestoragecontainer">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Storage<wbr>Container<wbr>Args</a> | <a href="#azureworkloadcontainer">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Workload<wbr>Container<wbr>Args</a> | <a href="#dpmcontainer">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Dpm<wbr>Container<wbr>Args</a> | <a href="#genericcontainer">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Generic<wbr>Container<wbr>Args</a> | <a href="#iaasvmcontainer">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Iaa<wbr>SVMContainer<wbr>Args</a> | <a href="#mabcontainer">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Mab<wbr>Container<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurebackupservercontainer">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Backup<wbr>Server<wbr>Container<wbr>Args</a> | <a href="#azureiaasclassiccomputevmcontainer">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Iaa<wbr>SClassic<wbr>Compute<wbr>VMContainer<wbr>Args</a> | <a href="#azureiaascomputevmcontainer">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Iaa<wbr>SCompute<wbr>VMContainer<wbr>Args</a> | <a href="#azuresqlagworkloadcontainerprotectioncontainer">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>SQLAGWorkload<wbr>Container<wbr>Protection<wbr>Container<wbr>Args</a> | <a href="#azuresqlcontainer">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Sql<wbr>Container<wbr>Args</a> | <a href="#azurestoragecontainer">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Storage<wbr>Container<wbr>Args</a> | <a href="#azurevmappcontainerprotectioncontainer">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>VMApp<wbr>Container<wbr>Protection<wbr>Container<wbr>Args</a> | <a href="#azureworkloadcontainer">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Workload<wbr>Container<wbr>Args</a> | <a href="#dpmcontainer">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Dpm<wbr>Container<wbr>Args</a> | <a href="#genericcontainer">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Generic<wbr>Container<wbr>Args</a> | <a href="#iaasvmcontainer">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Iaa<wbr>SVMContainer<wbr>Args</a> | <a href="#mabcontainer">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Mab<wbr>Container<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}ProtectionContainerResource properties{{% /md %}}</dd>
     <dt class="property-optional"
@@ -419,7 +419,7 @@ The ProtectionContainer resource accepts the following [input]({{< relref "/docs
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuresqlcontainer">Azure<wbr>Sql<wbr>Container</a> | <a href="#azurestoragecontainer">Azure<wbr>Storage<wbr>Container</a> | <a href="#azureworkloadcontainer">Azure<wbr>Workload<wbr>Container</a> | <a href="#dpmcontainer">Dpm<wbr>Container</a> | <a href="#genericcontainer">Generic<wbr>Container</a> | <a href="#iaasvmcontainer">Iaa<wbr>SVMContainer</a> | <a href="#mabcontainer">Mab<wbr>Container</a></span>
+        <span class="property-type"><a href="#azurebackupservercontainer">Azure<wbr>Backup<wbr>Server<wbr>Container</a> | <a href="#azureiaasclassiccomputevmcontainer">Azure<wbr>Iaa<wbr>SClassic<wbr>Compute<wbr>VMContainer</a> | <a href="#azureiaascomputevmcontainer">Azure<wbr>Iaa<wbr>SCompute<wbr>VMContainer</a> | <a href="#azuresqlagworkloadcontainerprotectioncontainer">Azure<wbr>SQLAGWorkload<wbr>Container<wbr>Protection<wbr>Container</a> | <a href="#azuresqlcontainer">Azure<wbr>Sql<wbr>Container</a> | <a href="#azurestoragecontainer">Azure<wbr>Storage<wbr>Container</a> | <a href="#azurevmappcontainerprotectioncontainer">Azure<wbr>VMApp<wbr>Container<wbr>Protection<wbr>Container</a> | <a href="#azureworkloadcontainer">Azure<wbr>Workload<wbr>Container</a> | <a href="#dpmcontainer">Dpm<wbr>Container</a> | <a href="#genericcontainer">Generic<wbr>Container</a> | <a href="#iaasvmcontainer">Iaa<wbr>SVMContainer</a> | <a href="#mabcontainer">Mab<wbr>Container</a></span>
     </dt>
     <dd>{{% md %}}ProtectionContainerResource properties{{% /md %}}</dd>
     <dt class="property-optional"
@@ -497,7 +497,7 @@ The ProtectionContainer resource accepts the following [input]({{< relref "/docs
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuresqlcontainer">Azure<wbr>Sql<wbr>Container</a> | <a href="#azurestoragecontainer">Azure<wbr>Storage<wbr>Container</a> | <a href="#azureworkloadcontainer">Azure<wbr>Workload<wbr>Container</a> | <a href="#dpmcontainer">Dpm<wbr>Container</a> | <a href="#genericcontainer">Generic<wbr>Container</a> | <a href="#iaasvmcontainer">Iaa<wbr>SVMContainer</a> | <a href="#mabcontainer">Mab<wbr>Container</a></span>
+        <span class="property-type"><a href="#azurebackupservercontainer">Azure<wbr>Backup<wbr>Server<wbr>Container</a> | <a href="#azureiaasclassiccomputevmcontainer">Azure<wbr>Iaa<wbr>SClassic<wbr>Compute<wbr>VMContainer</a> | <a href="#azureiaascomputevmcontainer">Azure<wbr>Iaa<wbr>SCompute<wbr>VMContainer</a> | <a href="#azuresqlagworkloadcontainerprotectioncontainer">Azure<wbr>SQLAGWorkload<wbr>Container<wbr>Protection<wbr>Container</a> | <a href="#azuresqlcontainer">Azure<wbr>Sql<wbr>Container</a> | <a href="#azurestoragecontainer">Azure<wbr>Storage<wbr>Container</a> | <a href="#azurevmappcontainerprotectioncontainer">Azure<wbr>VMApp<wbr>Container<wbr>Protection<wbr>Container</a> | <a href="#azureworkloadcontainer">Azure<wbr>Workload<wbr>Container</a> | <a href="#dpmcontainer">Dpm<wbr>Container</a> | <a href="#genericcontainer">Generic<wbr>Container</a> | <a href="#iaasvmcontainer">Iaa<wbr>SVMContainer</a> | <a href="#mabcontainer">Mab<wbr>Container</a></span>
     </dt>
     <dd>{{% md %}}ProtectionContainerResource properties{{% /md %}}</dd>
     <dt class="property-optional"
@@ -575,7 +575,7 @@ The ProtectionContainer resource accepts the following [input]({{< relref "/docs
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azuresqlcontainer">Azure<wbr>Sql<wbr>Container<wbr>Args</a> | <a href="#azurestoragecontainer">Azure<wbr>Storage<wbr>Container<wbr>Args</a> | <a href="#azureworkloadcontainer">Azure<wbr>Workload<wbr>Container<wbr>Args</a> | <a href="#dpmcontainer">Dpm<wbr>Container<wbr>Args</a> | <a href="#genericcontainer">Generic<wbr>Container<wbr>Args</a> | <a href="#iaasvmcontainer">Iaa<wbr>SVMContainer<wbr>Args</a> | <a href="#mabcontainer">Mab<wbr>Container<wbr>Args</a></span>
+        <span class="property-type"><a href="#azurebackupservercontainer">Azure<wbr>Backup<wbr>Server<wbr>Container<wbr>Args</a> | <a href="#azureiaasclassiccomputevmcontainer">Azure<wbr>Iaa<wbr>SClassic<wbr>Compute<wbr>VMContainer<wbr>Args</a> | <a href="#azureiaascomputevmcontainer">Azure<wbr>Iaa<wbr>SCompute<wbr>VMContainer<wbr>Args</a> | <a href="#azuresqlagworkloadcontainerprotectioncontainer">Azure<wbr>SQLAGWorkload<wbr>Container<wbr>Protection<wbr>Container<wbr>Args</a> | <a href="#azuresqlcontainer">Azure<wbr>Sql<wbr>Container<wbr>Args</a> | <a href="#azurestoragecontainer">Azure<wbr>Storage<wbr>Container<wbr>Args</a> | <a href="#azurevmappcontainerprotectioncontainer">Azure<wbr>VMApp<wbr>Container<wbr>Protection<wbr>Container<wbr>Args</a> | <a href="#azureworkloadcontainer">Azure<wbr>Workload<wbr>Container<wbr>Args</a> | <a href="#dpmcontainer">Dpm<wbr>Container<wbr>Args</a> | <a href="#genericcontainer">Generic<wbr>Container<wbr>Args</a> | <a href="#iaasvmcontainer">Iaa<wbr>SVMContainer<wbr>Args</a> | <a href="#mabcontainer">Mab<wbr>Container<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}ProtectionContainerResource properties{{% /md %}}</dd>
     <dt class="property-optional"
@@ -738,6 +738,2734 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Supporting Types
 
 
+
+<h4 id="azurebackupservercontainer">Azure<wbr>Backup<wbr>Server<wbr>Container</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backupmanagementtype_csharp">
+<a href="#backupmanagementtype_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Management<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#backupmanagementtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Backup<wbr>Management<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="canreregister_csharp">
+<a href="#canreregister_csharp" style="color: inherit; text-decoration: inherit;">Can<wbr>Re<wbr>Register</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the container is re-registrable.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="containerid_csharp">
+<a href="#containerid_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ID of container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dpmagentversion_csharp">
+<a href="#dpmagentversion_csharp" style="color: inherit; text-decoration: inherit;">Dpm<wbr>Agent<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Backup engine Agent version{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dpmservers_csharp">
+<a href="#dpmservers_csharp" style="color: inherit; text-decoration: inherit;">Dpm<wbr>Servers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of BackupEngines protecting the container{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="extendedinfo_csharp">
+<a href="#extendedinfo_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dpmcontainerextendedinfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>DPMContainer<wbr>Extended<wbr>Info<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Extended Info of the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="friendlyname_csharp">
+<a href="#friendlyname_csharp" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Friendly name of the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="healthstatus_csharp">
+<a href="#healthstatus_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Status of health of the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protecteditemcount_csharp">
+<a href="#protecteditemcount_csharp" style="color: inherit; text-decoration: inherit;">Protected<wbr>Item<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">double</span>
+    </dt>
+    <dd>{{% md %}}Number of protected items in the BackupEngine{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protectionstatus_csharp">
+<a href="#protectionstatus_csharp" style="color: inherit; text-decoration: inherit;">Protection<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Protection status of the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="registrationstatus_csharp">
+<a href="#registrationstatus_csharp" style="color: inherit; text-decoration: inherit;">Registration<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Status of registration of the container with the Recovery Services Vault.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="upgradeavailable_csharp">
+<a href="#upgradeavailable_csharp" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Available</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}To check if upgrade available{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backupmanagementtype_go">
+<a href="#backupmanagementtype_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Management<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#backupmanagementtype">Backup<wbr>Management<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="canreregister_go">
+<a href="#canreregister_go" style="color: inherit; text-decoration: inherit;">Can<wbr>Re<wbr>Register</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the container is re-registrable.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="containerid_go">
+<a href="#containerid_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ID of container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dpmagentversion_go">
+<a href="#dpmagentversion_go" style="color: inherit; text-decoration: inherit;">Dpm<wbr>Agent<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Backup engine Agent version{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dpmservers_go">
+<a href="#dpmservers_go" style="color: inherit; text-decoration: inherit;">Dpm<wbr>Servers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}List of BackupEngines protecting the container{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="extendedinfo_go">
+<a href="#extendedinfo_go" style="color: inherit; text-decoration: inherit;">Extended<wbr>Info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dpmcontainerextendedinfo">DPMContainer<wbr>Extended<wbr>Info</a></span>
+    </dt>
+    <dd>{{% md %}}Extended Info of the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="friendlyname_go">
+<a href="#friendlyname_go" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Friendly name of the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="healthstatus_go">
+<a href="#healthstatus_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Status of health of the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protecteditemcount_go">
+<a href="#protecteditemcount_go" style="color: inherit; text-decoration: inherit;">Protected<wbr>Item<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float64</span>
+    </dt>
+    <dd>{{% md %}}Number of protected items in the BackupEngine{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protectionstatus_go">
+<a href="#protectionstatus_go" style="color: inherit; text-decoration: inherit;">Protection<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Protection status of the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="registrationstatus_go">
+<a href="#registrationstatus_go" style="color: inherit; text-decoration: inherit;">Registration<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Status of registration of the container with the Recovery Services Vault.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="upgradeavailable_go">
+<a href="#upgradeavailable_go" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Available</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}To check if upgrade available{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backupmanagementtype_nodejs">
+<a href="#backupmanagementtype_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#backupmanagementtype">Backup<wbr>Management<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="canreregister_nodejs">
+<a href="#canreregister_nodejs" style="color: inherit; text-decoration: inherit;">can<wbr>Re<wbr>Register</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the container is re-registrable.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="containerid_nodejs">
+<a href="#containerid_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ID of container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dpmagentversion_nodejs">
+<a href="#dpmagentversion_nodejs" style="color: inherit; text-decoration: inherit;">dpm<wbr>Agent<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Backup engine Agent version{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dpmservers_nodejs">
+<a href="#dpmservers_nodejs" style="color: inherit; text-decoration: inherit;">dpm<wbr>Servers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}List of BackupEngines protecting the container{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="extendedinfo_nodejs">
+<a href="#extendedinfo_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dpmcontainerextendedinfo">DPMContainer<wbr>Extended<wbr>Info</a></span>
+    </dt>
+    <dd>{{% md %}}Extended Info of the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="friendlyname_nodejs">
+<a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Friendly name of the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="healthstatus_nodejs">
+<a href="#healthstatus_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Status of health of the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protecteditemcount_nodejs">
+<a href="#protecteditemcount_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Item<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Number of protected items in the BackupEngine{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protectionstatus_nodejs">
+<a href="#protectionstatus_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Protection status of the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="registrationstatus_nodejs">
+<a href="#registrationstatus_nodejs" style="color: inherit; text-decoration: inherit;">registration<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Status of registration of the container with the Recovery Services Vault.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="upgradeavailable_nodejs">
+<a href="#upgradeavailable_nodejs" style="color: inherit; text-decoration: inherit;">upgrade<wbr>Available</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}To check if upgrade available{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backup_management_type_python">
+<a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str | <a href="#backupmanagementtype">Backup<wbr>Management<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="can_re_register_python">
+<a href="#can_re_register_python" style="color: inherit; text-decoration: inherit;">can_<wbr>re_<wbr>register</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the container is re-registrable.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="container_id_python">
+<a href="#container_id_python" style="color: inherit; text-decoration: inherit;">container_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}ID of container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dpm_agent_version_python">
+<a href="#dpm_agent_version_python" style="color: inherit; text-decoration: inherit;">dpm_<wbr>agent_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Backup engine Agent version{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dpm_servers_python">
+<a href="#dpm_servers_python" style="color: inherit; text-decoration: inherit;">dpm_<wbr>servers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}List of BackupEngines protecting the container{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="extended_info_python">
+<a href="#extended_info_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dpmcontainerextendedinfo">DPMContainer<wbr>Extended<wbr>Info<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Extended Info of the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="friendly_name_python">
+<a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Friendly name of the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="health_status_python">
+<a href="#health_status_python" style="color: inherit; text-decoration: inherit;">health_<wbr>status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Status of health of the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protected_item_count_python">
+<a href="#protected_item_count_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>item_<wbr>count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}Number of protected items in the BackupEngine{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protection_status_python">
+<a href="#protection_status_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Protection status of the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="registration_status_python">
+<a href="#registration_status_python" style="color: inherit; text-decoration: inherit;">registration_<wbr>status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Status of registration of the container with the Recovery Services Vault.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="upgrade_available_python">
+<a href="#upgrade_available_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>available</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}To check if upgrade available{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="azurebackupservercontainerresponse">Azure<wbr>Backup<wbr>Server<wbr>Container<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backupmanagementtype_csharp">
+<a href="#backupmanagementtype_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Management<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="canreregister_csharp">
+<a href="#canreregister_csharp" style="color: inherit; text-decoration: inherit;">Can<wbr>Re<wbr>Register</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the container is re-registrable.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="containerid_csharp">
+<a href="#containerid_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ID of container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dpmagentversion_csharp">
+<a href="#dpmagentversion_csharp" style="color: inherit; text-decoration: inherit;">Dpm<wbr>Agent<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Backup engine Agent version{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dpmservers_csharp">
+<a href="#dpmservers_csharp" style="color: inherit; text-decoration: inherit;">Dpm<wbr>Servers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of BackupEngines protecting the container{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="extendedinfo_csharp">
+<a href="#extendedinfo_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dpmcontainerextendedinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>DPMContainer<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Extended Info of the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="friendlyname_csharp">
+<a href="#friendlyname_csharp" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Friendly name of the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="healthstatus_csharp">
+<a href="#healthstatus_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Status of health of the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protecteditemcount_csharp">
+<a href="#protecteditemcount_csharp" style="color: inherit; text-decoration: inherit;">Protected<wbr>Item<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">double</span>
+    </dt>
+    <dd>{{% md %}}Number of protected items in the BackupEngine{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protectionstatus_csharp">
+<a href="#protectionstatus_csharp" style="color: inherit; text-decoration: inherit;">Protection<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Protection status of the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="registrationstatus_csharp">
+<a href="#registrationstatus_csharp" style="color: inherit; text-decoration: inherit;">Registration<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Status of registration of the container with the Recovery Services Vault.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="upgradeavailable_csharp">
+<a href="#upgradeavailable_csharp" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Available</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}To check if upgrade available{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backupmanagementtype_go">
+<a href="#backupmanagementtype_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Management<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="canreregister_go">
+<a href="#canreregister_go" style="color: inherit; text-decoration: inherit;">Can<wbr>Re<wbr>Register</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the container is re-registrable.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="containerid_go">
+<a href="#containerid_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ID of container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dpmagentversion_go">
+<a href="#dpmagentversion_go" style="color: inherit; text-decoration: inherit;">Dpm<wbr>Agent<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Backup engine Agent version{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dpmservers_go">
+<a href="#dpmservers_go" style="color: inherit; text-decoration: inherit;">Dpm<wbr>Servers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}List of BackupEngines protecting the container{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="extendedinfo_go">
+<a href="#extendedinfo_go" style="color: inherit; text-decoration: inherit;">Extended<wbr>Info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dpmcontainerextendedinforesponse">DPMContainer<wbr>Extended<wbr>Info<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Extended Info of the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="friendlyname_go">
+<a href="#friendlyname_go" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Friendly name of the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="healthstatus_go">
+<a href="#healthstatus_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Status of health of the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protecteditemcount_go">
+<a href="#protecteditemcount_go" style="color: inherit; text-decoration: inherit;">Protected<wbr>Item<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float64</span>
+    </dt>
+    <dd>{{% md %}}Number of protected items in the BackupEngine{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protectionstatus_go">
+<a href="#protectionstatus_go" style="color: inherit; text-decoration: inherit;">Protection<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Protection status of the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="registrationstatus_go">
+<a href="#registrationstatus_go" style="color: inherit; text-decoration: inherit;">Registration<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Status of registration of the container with the Recovery Services Vault.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="upgradeavailable_go">
+<a href="#upgradeavailable_go" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Available</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}To check if upgrade available{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backupmanagementtype_nodejs">
+<a href="#backupmanagementtype_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="canreregister_nodejs">
+<a href="#canreregister_nodejs" style="color: inherit; text-decoration: inherit;">can<wbr>Re<wbr>Register</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the container is re-registrable.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="containerid_nodejs">
+<a href="#containerid_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ID of container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dpmagentversion_nodejs">
+<a href="#dpmagentversion_nodejs" style="color: inherit; text-decoration: inherit;">dpm<wbr>Agent<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Backup engine Agent version{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dpmservers_nodejs">
+<a href="#dpmservers_nodejs" style="color: inherit; text-decoration: inherit;">dpm<wbr>Servers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}List of BackupEngines protecting the container{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="extendedinfo_nodejs">
+<a href="#extendedinfo_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dpmcontainerextendedinforesponse">DPMContainer<wbr>Extended<wbr>Info<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Extended Info of the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="friendlyname_nodejs">
+<a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Friendly name of the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="healthstatus_nodejs">
+<a href="#healthstatus_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Status of health of the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protecteditemcount_nodejs">
+<a href="#protecteditemcount_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Item<wbr>Count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}Number of protected items in the BackupEngine{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protectionstatus_nodejs">
+<a href="#protectionstatus_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Protection status of the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="registrationstatus_nodejs">
+<a href="#registrationstatus_nodejs" style="color: inherit; text-decoration: inherit;">registration<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Status of registration of the container with the Recovery Services Vault.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="upgradeavailable_nodejs">
+<a href="#upgradeavailable_nodejs" style="color: inherit; text-decoration: inherit;">upgrade<wbr>Available</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}To check if upgrade available{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backup_management_type_python">
+<a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="can_re_register_python">
+<a href="#can_re_register_python" style="color: inherit; text-decoration: inherit;">can_<wbr>re_<wbr>register</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the container is re-registrable.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="container_id_python">
+<a href="#container_id_python" style="color: inherit; text-decoration: inherit;">container_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}ID of container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dpm_agent_version_python">
+<a href="#dpm_agent_version_python" style="color: inherit; text-decoration: inherit;">dpm_<wbr>agent_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Backup engine Agent version{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="dpm_servers_python">
+<a href="#dpm_servers_python" style="color: inherit; text-decoration: inherit;">dpm_<wbr>servers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}List of BackupEngines protecting the container{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="extended_info_python">
+<a href="#extended_info_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dpmcontainerextendedinforesponse">DPMContainer<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Extended Info of the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="friendly_name_python">
+<a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Friendly name of the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="health_status_python">
+<a href="#health_status_python" style="color: inherit; text-decoration: inherit;">health_<wbr>status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Status of health of the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protected_item_count_python">
+<a href="#protected_item_count_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>item_<wbr>count</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">float</span>
+    </dt>
+    <dd>{{% md %}}Number of protected items in the BackupEngine{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protection_status_python">
+<a href="#protection_status_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Protection status of the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="registration_status_python">
+<a href="#registration_status_python" style="color: inherit; text-decoration: inherit;">registration_<wbr>status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Status of registration of the container with the Recovery Services Vault.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="upgrade_available_python">
+<a href="#upgrade_available_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>available</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}To check if upgrade available{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="azureiaasclassiccomputevmcontainer">Azure<wbr>Iaa<wbr>SClassic<wbr>Compute<wbr>VMContainer</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backupmanagementtype_csharp">
+<a href="#backupmanagementtype_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Management<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#backupmanagementtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Backup<wbr>Management<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="friendlyname_csharp">
+<a href="#friendlyname_csharp" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Friendly name of the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="healthstatus_csharp">
+<a href="#healthstatus_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Status of health of the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="registrationstatus_csharp">
+<a href="#registrationstatus_csharp" style="color: inherit; text-decoration: inherit;">Registration<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Status of registration of the container with the Recovery Services Vault.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourcegroup_csharp">
+<a href="#resourcegroup_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource group name of Recovery Services Vault.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="virtualmachineid_csharp">
+<a href="#virtualmachineid_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Fully qualified ARM url of the virtual machine represented by this Azure IaaS VM container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="virtualmachineversion_csharp">
+<a href="#virtualmachineversion_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the container represents a Classic or an Azure Resource Manager VM.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backupmanagementtype_go">
+<a href="#backupmanagementtype_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Management<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#backupmanagementtype">Backup<wbr>Management<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="friendlyname_go">
+<a href="#friendlyname_go" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Friendly name of the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="healthstatus_go">
+<a href="#healthstatus_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Status of health of the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="registrationstatus_go">
+<a href="#registrationstatus_go" style="color: inherit; text-decoration: inherit;">Registration<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Status of registration of the container with the Recovery Services Vault.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourcegroup_go">
+<a href="#resourcegroup_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource group name of Recovery Services Vault.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="virtualmachineid_go">
+<a href="#virtualmachineid_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Fully qualified ARM url of the virtual machine represented by this Azure IaaS VM container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="virtualmachineversion_go">
+<a href="#virtualmachineversion_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the container represents a Classic or an Azure Resource Manager VM.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backupmanagementtype_nodejs">
+<a href="#backupmanagementtype_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#backupmanagementtype">Backup<wbr>Management<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="friendlyname_nodejs">
+<a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Friendly name of the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="healthstatus_nodejs">
+<a href="#healthstatus_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Status of health of the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="registrationstatus_nodejs">
+<a href="#registrationstatus_nodejs" style="color: inherit; text-decoration: inherit;">registration<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Status of registration of the container with the Recovery Services Vault.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourcegroup_nodejs">
+<a href="#resourcegroup_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource group name of Recovery Services Vault.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="virtualmachineid_nodejs">
+<a href="#virtualmachineid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Fully qualified ARM url of the virtual machine represented by this Azure IaaS VM container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="virtualmachineversion_nodejs">
+<a href="#virtualmachineversion_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the container represents a Classic or an Azure Resource Manager VM.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backup_management_type_python">
+<a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str | <a href="#backupmanagementtype">Backup<wbr>Management<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="friendly_name_python">
+<a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Friendly name of the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="health_status_python">
+<a href="#health_status_python" style="color: inherit; text-decoration: inherit;">health_<wbr>status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Status of health of the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="registration_status_python">
+<a href="#registration_status_python" style="color: inherit; text-decoration: inherit;">registration_<wbr>status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Status of registration of the container with the Recovery Services Vault.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resource_group_python">
+<a href="#resource_group_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Resource group name of Recovery Services Vault.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="virtual_machine_id_python">
+<a href="#virtual_machine_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Fully qualified ARM url of the virtual machine represented by this Azure IaaS VM container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="virtual_machine_version_python">
+<a href="#virtual_machine_version_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the container represents a Classic or an Azure Resource Manager VM.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="azureiaasclassiccomputevmcontainerresponse">Azure<wbr>Iaa<wbr>SClassic<wbr>Compute<wbr>VMContainer<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backupmanagementtype_csharp">
+<a href="#backupmanagementtype_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Management<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="friendlyname_csharp">
+<a href="#friendlyname_csharp" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Friendly name of the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="healthstatus_csharp">
+<a href="#healthstatus_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Status of health of the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="registrationstatus_csharp">
+<a href="#registrationstatus_csharp" style="color: inherit; text-decoration: inherit;">Registration<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Status of registration of the container with the Recovery Services Vault.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourcegroup_csharp">
+<a href="#resourcegroup_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource group name of Recovery Services Vault.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="virtualmachineid_csharp">
+<a href="#virtualmachineid_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Fully qualified ARM url of the virtual machine represented by this Azure IaaS VM container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="virtualmachineversion_csharp">
+<a href="#virtualmachineversion_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the container represents a Classic or an Azure Resource Manager VM.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backupmanagementtype_go">
+<a href="#backupmanagementtype_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Management<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="friendlyname_go">
+<a href="#friendlyname_go" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Friendly name of the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="healthstatus_go">
+<a href="#healthstatus_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Status of health of the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="registrationstatus_go">
+<a href="#registrationstatus_go" style="color: inherit; text-decoration: inherit;">Registration<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Status of registration of the container with the Recovery Services Vault.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourcegroup_go">
+<a href="#resourcegroup_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource group name of Recovery Services Vault.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="virtualmachineid_go">
+<a href="#virtualmachineid_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Fully qualified ARM url of the virtual machine represented by this Azure IaaS VM container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="virtualmachineversion_go">
+<a href="#virtualmachineversion_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the container represents a Classic or an Azure Resource Manager VM.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backupmanagementtype_nodejs">
+<a href="#backupmanagementtype_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="friendlyname_nodejs">
+<a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Friendly name of the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="healthstatus_nodejs">
+<a href="#healthstatus_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Status of health of the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="registrationstatus_nodejs">
+<a href="#registrationstatus_nodejs" style="color: inherit; text-decoration: inherit;">registration<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Status of registration of the container with the Recovery Services Vault.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourcegroup_nodejs">
+<a href="#resourcegroup_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource group name of Recovery Services Vault.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="virtualmachineid_nodejs">
+<a href="#virtualmachineid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Fully qualified ARM url of the virtual machine represented by this Azure IaaS VM container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="virtualmachineversion_nodejs">
+<a href="#virtualmachineversion_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the container represents a Classic or an Azure Resource Manager VM.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backup_management_type_python">
+<a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="friendly_name_python">
+<a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Friendly name of the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="health_status_python">
+<a href="#health_status_python" style="color: inherit; text-decoration: inherit;">health_<wbr>status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Status of health of the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="registration_status_python">
+<a href="#registration_status_python" style="color: inherit; text-decoration: inherit;">registration_<wbr>status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Status of registration of the container with the Recovery Services Vault.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resource_group_python">
+<a href="#resource_group_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Resource group name of Recovery Services Vault.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="virtual_machine_id_python">
+<a href="#virtual_machine_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Fully qualified ARM url of the virtual machine represented by this Azure IaaS VM container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="virtual_machine_version_python">
+<a href="#virtual_machine_version_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the container represents a Classic or an Azure Resource Manager VM.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="azureiaascomputevmcontainer">Azure<wbr>Iaa<wbr>SCompute<wbr>VMContainer</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backupmanagementtype_csharp">
+<a href="#backupmanagementtype_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Management<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#backupmanagementtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Backup<wbr>Management<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="friendlyname_csharp">
+<a href="#friendlyname_csharp" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Friendly name of the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="healthstatus_csharp">
+<a href="#healthstatus_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Status of health of the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="registrationstatus_csharp">
+<a href="#registrationstatus_csharp" style="color: inherit; text-decoration: inherit;">Registration<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Status of registration of the container with the Recovery Services Vault.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourcegroup_csharp">
+<a href="#resourcegroup_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource group name of Recovery Services Vault.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="virtualmachineid_csharp">
+<a href="#virtualmachineid_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Fully qualified ARM url of the virtual machine represented by this Azure IaaS VM container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="virtualmachineversion_csharp">
+<a href="#virtualmachineversion_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the container represents a Classic or an Azure Resource Manager VM.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backupmanagementtype_go">
+<a href="#backupmanagementtype_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Management<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#backupmanagementtype">Backup<wbr>Management<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="friendlyname_go">
+<a href="#friendlyname_go" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Friendly name of the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="healthstatus_go">
+<a href="#healthstatus_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Status of health of the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="registrationstatus_go">
+<a href="#registrationstatus_go" style="color: inherit; text-decoration: inherit;">Registration<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Status of registration of the container with the Recovery Services Vault.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourcegroup_go">
+<a href="#resourcegroup_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource group name of Recovery Services Vault.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="virtualmachineid_go">
+<a href="#virtualmachineid_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Fully qualified ARM url of the virtual machine represented by this Azure IaaS VM container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="virtualmachineversion_go">
+<a href="#virtualmachineversion_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the container represents a Classic or an Azure Resource Manager VM.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backupmanagementtype_nodejs">
+<a href="#backupmanagementtype_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#backupmanagementtype">Backup<wbr>Management<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="friendlyname_nodejs">
+<a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Friendly name of the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="healthstatus_nodejs">
+<a href="#healthstatus_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Status of health of the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="registrationstatus_nodejs">
+<a href="#registrationstatus_nodejs" style="color: inherit; text-decoration: inherit;">registration<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Status of registration of the container with the Recovery Services Vault.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourcegroup_nodejs">
+<a href="#resourcegroup_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource group name of Recovery Services Vault.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="virtualmachineid_nodejs">
+<a href="#virtualmachineid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Fully qualified ARM url of the virtual machine represented by this Azure IaaS VM container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="virtualmachineversion_nodejs">
+<a href="#virtualmachineversion_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the container represents a Classic or an Azure Resource Manager VM.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backup_management_type_python">
+<a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str | <a href="#backupmanagementtype">Backup<wbr>Management<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="friendly_name_python">
+<a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Friendly name of the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="health_status_python">
+<a href="#health_status_python" style="color: inherit; text-decoration: inherit;">health_<wbr>status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Status of health of the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="registration_status_python">
+<a href="#registration_status_python" style="color: inherit; text-decoration: inherit;">registration_<wbr>status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Status of registration of the container with the Recovery Services Vault.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resource_group_python">
+<a href="#resource_group_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Resource group name of Recovery Services Vault.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="virtual_machine_id_python">
+<a href="#virtual_machine_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Fully qualified ARM url of the virtual machine represented by this Azure IaaS VM container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="virtual_machine_version_python">
+<a href="#virtual_machine_version_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the container represents a Classic or an Azure Resource Manager VM.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="azureiaascomputevmcontainerresponse">Azure<wbr>Iaa<wbr>SCompute<wbr>VMContainer<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backupmanagementtype_csharp">
+<a href="#backupmanagementtype_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Management<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="friendlyname_csharp">
+<a href="#friendlyname_csharp" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Friendly name of the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="healthstatus_csharp">
+<a href="#healthstatus_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Status of health of the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="registrationstatus_csharp">
+<a href="#registrationstatus_csharp" style="color: inherit; text-decoration: inherit;">Registration<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Status of registration of the container with the Recovery Services Vault.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourcegroup_csharp">
+<a href="#resourcegroup_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource group name of Recovery Services Vault.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="virtualmachineid_csharp">
+<a href="#virtualmachineid_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Fully qualified ARM url of the virtual machine represented by this Azure IaaS VM container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="virtualmachineversion_csharp">
+<a href="#virtualmachineversion_csharp" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the container represents a Classic or an Azure Resource Manager VM.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backupmanagementtype_go">
+<a href="#backupmanagementtype_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Management<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="friendlyname_go">
+<a href="#friendlyname_go" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Friendly name of the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="healthstatus_go">
+<a href="#healthstatus_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Status of health of the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="registrationstatus_go">
+<a href="#registrationstatus_go" style="color: inherit; text-decoration: inherit;">Registration<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Status of registration of the container with the Recovery Services Vault.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourcegroup_go">
+<a href="#resourcegroup_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource group name of Recovery Services Vault.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="virtualmachineid_go">
+<a href="#virtualmachineid_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Fully qualified ARM url of the virtual machine represented by this Azure IaaS VM container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="virtualmachineversion_go">
+<a href="#virtualmachineversion_go" style="color: inherit; text-decoration: inherit;">Virtual<wbr>Machine<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the container represents a Classic or an Azure Resource Manager VM.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backupmanagementtype_nodejs">
+<a href="#backupmanagementtype_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="friendlyname_nodejs">
+<a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Friendly name of the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="healthstatus_nodejs">
+<a href="#healthstatus_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Status of health of the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="registrationstatus_nodejs">
+<a href="#registrationstatus_nodejs" style="color: inherit; text-decoration: inherit;">registration<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Status of registration of the container with the Recovery Services Vault.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourcegroup_nodejs">
+<a href="#resourcegroup_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource group name of Recovery Services Vault.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="virtualmachineid_nodejs">
+<a href="#virtualmachineid_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Fully qualified ARM url of the virtual machine represented by this Azure IaaS VM container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="virtualmachineversion_nodejs">
+<a href="#virtualmachineversion_nodejs" style="color: inherit; text-decoration: inherit;">virtual<wbr>Machine<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the container represents a Classic or an Azure Resource Manager VM.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backup_management_type_python">
+<a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="friendly_name_python">
+<a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Friendly name of the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="health_status_python">
+<a href="#health_status_python" style="color: inherit; text-decoration: inherit;">health_<wbr>status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Status of health of the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="registration_status_python">
+<a href="#registration_status_python" style="color: inherit; text-decoration: inherit;">registration_<wbr>status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Status of registration of the container with the Recovery Services Vault.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resource_group_python">
+<a href="#resource_group_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Resource group name of Recovery Services Vault.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="virtual_machine_id_python">
+<a href="#virtual_machine_id_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Fully qualified ARM url of the virtual machine represented by this Azure IaaS VM container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="virtual_machine_version_python">
+<a href="#virtual_machine_version_python" style="color: inherit; text-decoration: inherit;">virtual_<wbr>machine_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the container represents a Classic or an Azure Resource Manager VM.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="azuresqlagworkloadcontainerprotectioncontainer">Azure<wbr>SQLAGWorkload<wbr>Container<wbr>Protection<wbr>Container</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backupmanagementtype_csharp">
+<a href="#backupmanagementtype_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Management<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#backupmanagementtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Backup<wbr>Management<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="extendedinfo_csharp">
+<a href="#extendedinfo_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#azureworkloadcontainerextendedinfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Workload<wbr>Container<wbr>Extended<wbr>Info<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Additional details of a workload container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="friendlyname_csharp">
+<a href="#friendlyname_csharp" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Friendly name of the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="healthstatus_csharp">
+<a href="#healthstatus_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Status of health of the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastupdatedtime_csharp">
+<a href="#lastupdatedtime_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Updated<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Time stamp when this container was updated.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="operationtype_csharp">
+<a href="#operationtype_csharp" style="color: inherit; text-decoration: inherit;">Operation<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#operationtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Operation<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}Re-Do Operation{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="registrationstatus_csharp">
+<a href="#registrationstatus_csharp" style="color: inherit; text-decoration: inherit;">Registration<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Status of registration of the container with the Recovery Services Vault.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sourceresourceid_csharp">
+<a href="#sourceresourceid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ARM ID of the virtual machine represented by this Azure Workload Container{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workloadtype_csharp">
+<a href="#workloadtype_csharp" style="color: inherit; text-decoration: inherit;">Workload<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#workloadtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Workload<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}Workload type for which registration was sent.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backupmanagementtype_go">
+<a href="#backupmanagementtype_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Management<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#backupmanagementtype">Backup<wbr>Management<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="extendedinfo_go">
+<a href="#extendedinfo_go" style="color: inherit; text-decoration: inherit;">Extended<wbr>Info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#azureworkloadcontainerextendedinfo">Azure<wbr>Workload<wbr>Container<wbr>Extended<wbr>Info</a></span>
+    </dt>
+    <dd>{{% md %}}Additional details of a workload container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="friendlyname_go">
+<a href="#friendlyname_go" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Friendly name of the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="healthstatus_go">
+<a href="#healthstatus_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Status of health of the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastupdatedtime_go">
+<a href="#lastupdatedtime_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Updated<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Time stamp when this container was updated.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="operationtype_go">
+<a href="#operationtype_go" style="color: inherit; text-decoration: inherit;">Operation<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#operationtype">Operation<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}Re-Do Operation{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="registrationstatus_go">
+<a href="#registrationstatus_go" style="color: inherit; text-decoration: inherit;">Registration<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Status of registration of the container with the Recovery Services Vault.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sourceresourceid_go">
+<a href="#sourceresourceid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ARM ID of the virtual machine represented by this Azure Workload Container{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workloadtype_go">
+<a href="#workloadtype_go" style="color: inherit; text-decoration: inherit;">Workload<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#workloadtype">Workload<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}Workload type for which registration was sent.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backupmanagementtype_nodejs">
+<a href="#backupmanagementtype_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#backupmanagementtype">Backup<wbr>Management<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="extendedinfo_nodejs">
+<a href="#extendedinfo_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#azureworkloadcontainerextendedinfo">Azure<wbr>Workload<wbr>Container<wbr>Extended<wbr>Info</a></span>
+    </dt>
+    <dd>{{% md %}}Additional details of a workload container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="friendlyname_nodejs">
+<a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Friendly name of the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="healthstatus_nodejs">
+<a href="#healthstatus_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Status of health of the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastupdatedtime_nodejs">
+<a href="#lastupdatedtime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Updated<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Time stamp when this container was updated.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="operationtype_nodejs">
+<a href="#operationtype_nodejs" style="color: inherit; text-decoration: inherit;">operation<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#operationtype">Operation<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}Re-Do Operation{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="registrationstatus_nodejs">
+<a href="#registrationstatus_nodejs" style="color: inherit; text-decoration: inherit;">registration<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Status of registration of the container with the Recovery Services Vault.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sourceresourceid_nodejs">
+<a href="#sourceresourceid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ARM ID of the virtual machine represented by this Azure Workload Container{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workloadtype_nodejs">
+<a href="#workloadtype_nodejs" style="color: inherit; text-decoration: inherit;">workload<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#workloadtype">Workload<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}Workload type for which registration was sent.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backup_management_type_python">
+<a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str | <a href="#backupmanagementtype">Backup<wbr>Management<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="extended_info_python">
+<a href="#extended_info_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#azureworkloadcontainerextendedinfo">Azure<wbr>Workload<wbr>Container<wbr>Extended<wbr>Info<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Additional details of a workload container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="friendly_name_python">
+<a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Friendly name of the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="health_status_python">
+<a href="#health_status_python" style="color: inherit; text-decoration: inherit;">health_<wbr>status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Status of health of the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="last_updated_time_python">
+<a href="#last_updated_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>updated_<wbr>time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Time stamp when this container was updated.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="operation_type_python">
+<a href="#operation_type_python" style="color: inherit; text-decoration: inherit;">operation_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str | <a href="#operationtype">Operation<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}Re-Do Operation{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="registration_status_python">
+<a href="#registration_status_python" style="color: inherit; text-decoration: inherit;">registration_<wbr>status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Status of registration of the container with the Recovery Services Vault.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="source_resource_id_python">
+<a href="#source_resource_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>resource_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}ARM ID of the virtual machine represented by this Azure Workload Container{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workload_type_python">
+<a href="#workload_type_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str | <a href="#workloadtype">Workload<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}Workload type for which registration was sent.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="azuresqlagworkloadcontainerprotectioncontainerresponse">Azure<wbr>SQLAGWorkload<wbr>Container<wbr>Protection<wbr>Container<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backupmanagementtype_csharp">
+<a href="#backupmanagementtype_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Management<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="extendedinfo_csharp">
+<a href="#extendedinfo_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#azureworkloadcontainerextendedinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Workload<wbr>Container<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Additional details of a workload container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="friendlyname_csharp">
+<a href="#friendlyname_csharp" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Friendly name of the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="healthstatus_csharp">
+<a href="#healthstatus_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Status of health of the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastupdatedtime_csharp">
+<a href="#lastupdatedtime_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Updated<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Time stamp when this container was updated.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="operationtype_csharp">
+<a href="#operationtype_csharp" style="color: inherit; text-decoration: inherit;">Operation<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Re-Do Operation{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="registrationstatus_csharp">
+<a href="#registrationstatus_csharp" style="color: inherit; text-decoration: inherit;">Registration<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Status of registration of the container with the Recovery Services Vault.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sourceresourceid_csharp">
+<a href="#sourceresourceid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ARM ID of the virtual machine represented by this Azure Workload Container{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workloadtype_csharp">
+<a href="#workloadtype_csharp" style="color: inherit; text-decoration: inherit;">Workload<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Workload type for which registration was sent.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backupmanagementtype_go">
+<a href="#backupmanagementtype_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Management<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="extendedinfo_go">
+<a href="#extendedinfo_go" style="color: inherit; text-decoration: inherit;">Extended<wbr>Info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#azureworkloadcontainerextendedinforesponse">Azure<wbr>Workload<wbr>Container<wbr>Extended<wbr>Info<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Additional details of a workload container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="friendlyname_go">
+<a href="#friendlyname_go" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Friendly name of the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="healthstatus_go">
+<a href="#healthstatus_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Status of health of the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastupdatedtime_go">
+<a href="#lastupdatedtime_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Updated<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Time stamp when this container was updated.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="operationtype_go">
+<a href="#operationtype_go" style="color: inherit; text-decoration: inherit;">Operation<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Re-Do Operation{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="registrationstatus_go">
+<a href="#registrationstatus_go" style="color: inherit; text-decoration: inherit;">Registration<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Status of registration of the container with the Recovery Services Vault.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sourceresourceid_go">
+<a href="#sourceresourceid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ARM ID of the virtual machine represented by this Azure Workload Container{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workloadtype_go">
+<a href="#workloadtype_go" style="color: inherit; text-decoration: inherit;">Workload<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Workload type for which registration was sent.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backupmanagementtype_nodejs">
+<a href="#backupmanagementtype_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="extendedinfo_nodejs">
+<a href="#extendedinfo_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#azureworkloadcontainerextendedinforesponse">Azure<wbr>Workload<wbr>Container<wbr>Extended<wbr>Info<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Additional details of a workload container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="friendlyname_nodejs">
+<a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Friendly name of the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="healthstatus_nodejs">
+<a href="#healthstatus_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Status of health of the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastupdatedtime_nodejs">
+<a href="#lastupdatedtime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Updated<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Time stamp when this container was updated.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="operationtype_nodejs">
+<a href="#operationtype_nodejs" style="color: inherit; text-decoration: inherit;">operation<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Re-Do Operation{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="registrationstatus_nodejs">
+<a href="#registrationstatus_nodejs" style="color: inherit; text-decoration: inherit;">registration<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Status of registration of the container with the Recovery Services Vault.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sourceresourceid_nodejs">
+<a href="#sourceresourceid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ARM ID of the virtual machine represented by this Azure Workload Container{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workloadtype_nodejs">
+<a href="#workloadtype_nodejs" style="color: inherit; text-decoration: inherit;">workload<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Workload type for which registration was sent.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backup_management_type_python">
+<a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="extended_info_python">
+<a href="#extended_info_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#azureworkloadcontainerextendedinforesponse">Azure<wbr>Workload<wbr>Container<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Additional details of a workload container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="friendly_name_python">
+<a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Friendly name of the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="health_status_python">
+<a href="#health_status_python" style="color: inherit; text-decoration: inherit;">health_<wbr>status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Status of health of the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="last_updated_time_python">
+<a href="#last_updated_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>updated_<wbr>time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Time stamp when this container was updated.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="operation_type_python">
+<a href="#operation_type_python" style="color: inherit; text-decoration: inherit;">operation_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Re-Do Operation{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="registration_status_python">
+<a href="#registration_status_python" style="color: inherit; text-decoration: inherit;">registration_<wbr>status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Status of registration of the container with the Recovery Services Vault.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="source_resource_id_python">
+<a href="#source_resource_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>resource_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}ARM ID of the virtual machine represented by this Azure Workload Container{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workload_type_python">
+<a href="#workload_type_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Workload type for which registration was sent.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
 
 <h4 id="azuresqlcontainer">Azure<wbr>Sql<wbr>Container</h4>
 
@@ -1704,6 +4432,706 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Storage account version.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="azurevmappcontainerprotectioncontainer">Azure<wbr>VMApp<wbr>Container<wbr>Protection<wbr>Container</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backupmanagementtype_csharp">
+<a href="#backupmanagementtype_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Management<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#backupmanagementtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Backup<wbr>Management<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="extendedinfo_csharp">
+<a href="#extendedinfo_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#azureworkloadcontainerextendedinfo">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Workload<wbr>Container<wbr>Extended<wbr>Info<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Additional details of a workload container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="friendlyname_csharp">
+<a href="#friendlyname_csharp" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Friendly name of the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="healthstatus_csharp">
+<a href="#healthstatus_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Status of health of the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastupdatedtime_csharp">
+<a href="#lastupdatedtime_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Updated<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Time stamp when this container was updated.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="operationtype_csharp">
+<a href="#operationtype_csharp" style="color: inherit; text-decoration: inherit;">Operation<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#operationtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Operation<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}Re-Do Operation{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="registrationstatus_csharp">
+<a href="#registrationstatus_csharp" style="color: inherit; text-decoration: inherit;">Registration<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Status of registration of the container with the Recovery Services Vault.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sourceresourceid_csharp">
+<a href="#sourceresourceid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ARM ID of the virtual machine represented by this Azure Workload Container{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workloadtype_csharp">
+<a href="#workloadtype_csharp" style="color: inherit; text-decoration: inherit;">Workload<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#workloadtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Workload<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}Workload type for which registration was sent.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backupmanagementtype_go">
+<a href="#backupmanagementtype_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Management<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#backupmanagementtype">Backup<wbr>Management<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="extendedinfo_go">
+<a href="#extendedinfo_go" style="color: inherit; text-decoration: inherit;">Extended<wbr>Info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#azureworkloadcontainerextendedinfo">Azure<wbr>Workload<wbr>Container<wbr>Extended<wbr>Info</a></span>
+    </dt>
+    <dd>{{% md %}}Additional details of a workload container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="friendlyname_go">
+<a href="#friendlyname_go" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Friendly name of the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="healthstatus_go">
+<a href="#healthstatus_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Status of health of the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastupdatedtime_go">
+<a href="#lastupdatedtime_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Updated<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Time stamp when this container was updated.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="operationtype_go">
+<a href="#operationtype_go" style="color: inherit; text-decoration: inherit;">Operation<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#operationtype">Operation<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}Re-Do Operation{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="registrationstatus_go">
+<a href="#registrationstatus_go" style="color: inherit; text-decoration: inherit;">Registration<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Status of registration of the container with the Recovery Services Vault.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sourceresourceid_go">
+<a href="#sourceresourceid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ARM ID of the virtual machine represented by this Azure Workload Container{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workloadtype_go">
+<a href="#workloadtype_go" style="color: inherit; text-decoration: inherit;">Workload<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#workloadtype">Workload<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}Workload type for which registration was sent.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backupmanagementtype_nodejs">
+<a href="#backupmanagementtype_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#backupmanagementtype">Backup<wbr>Management<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="extendedinfo_nodejs">
+<a href="#extendedinfo_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#azureworkloadcontainerextendedinfo">Azure<wbr>Workload<wbr>Container<wbr>Extended<wbr>Info</a></span>
+    </dt>
+    <dd>{{% md %}}Additional details of a workload container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="friendlyname_nodejs">
+<a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Friendly name of the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="healthstatus_nodejs">
+<a href="#healthstatus_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Status of health of the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastupdatedtime_nodejs">
+<a href="#lastupdatedtime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Updated<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Time stamp when this container was updated.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="operationtype_nodejs">
+<a href="#operationtype_nodejs" style="color: inherit; text-decoration: inherit;">operation<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#operationtype">Operation<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}Re-Do Operation{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="registrationstatus_nodejs">
+<a href="#registrationstatus_nodejs" style="color: inherit; text-decoration: inherit;">registration<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Status of registration of the container with the Recovery Services Vault.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sourceresourceid_nodejs">
+<a href="#sourceresourceid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ARM ID of the virtual machine represented by this Azure Workload Container{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workloadtype_nodejs">
+<a href="#workloadtype_nodejs" style="color: inherit; text-decoration: inherit;">workload<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#workloadtype">Workload<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}Workload type for which registration was sent.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backup_management_type_python">
+<a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str | <a href="#backupmanagementtype">Backup<wbr>Management<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="extended_info_python">
+<a href="#extended_info_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#azureworkloadcontainerextendedinfo">Azure<wbr>Workload<wbr>Container<wbr>Extended<wbr>Info<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Additional details of a workload container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="friendly_name_python">
+<a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Friendly name of the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="health_status_python">
+<a href="#health_status_python" style="color: inherit; text-decoration: inherit;">health_<wbr>status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Status of health of the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="last_updated_time_python">
+<a href="#last_updated_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>updated_<wbr>time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Time stamp when this container was updated.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="operation_type_python">
+<a href="#operation_type_python" style="color: inherit; text-decoration: inherit;">operation_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str | <a href="#operationtype">Operation<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}Re-Do Operation{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="registration_status_python">
+<a href="#registration_status_python" style="color: inherit; text-decoration: inherit;">registration_<wbr>status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Status of registration of the container with the Recovery Services Vault.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="source_resource_id_python">
+<a href="#source_resource_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>resource_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}ARM ID of the virtual machine represented by this Azure Workload Container{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workload_type_python">
+<a href="#workload_type_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str | <a href="#workloadtype">Workload<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}Workload type for which registration was sent.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="azurevmappcontainerprotectioncontainerresponse">Azure<wbr>VMApp<wbr>Container<wbr>Protection<wbr>Container<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backupmanagementtype_csharp">
+<a href="#backupmanagementtype_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Management<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="extendedinfo_csharp">
+<a href="#extendedinfo_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#azureworkloadcontainerextendedinforesponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Azure<wbr>Workload<wbr>Container<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Additional details of a workload container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="friendlyname_csharp">
+<a href="#friendlyname_csharp" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Friendly name of the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="healthstatus_csharp">
+<a href="#healthstatus_csharp" style="color: inherit; text-decoration: inherit;">Health<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Status of health of the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastupdatedtime_csharp">
+<a href="#lastupdatedtime_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Updated<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Time stamp when this container was updated.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="operationtype_csharp">
+<a href="#operationtype_csharp" style="color: inherit; text-decoration: inherit;">Operation<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Re-Do Operation{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="registrationstatus_csharp">
+<a href="#registrationstatus_csharp" style="color: inherit; text-decoration: inherit;">Registration<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Status of registration of the container with the Recovery Services Vault.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sourceresourceid_csharp">
+<a href="#sourceresourceid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ARM ID of the virtual machine represented by this Azure Workload Container{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workloadtype_csharp">
+<a href="#workloadtype_csharp" style="color: inherit; text-decoration: inherit;">Workload<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Workload type for which registration was sent.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backupmanagementtype_go">
+<a href="#backupmanagementtype_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Management<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="extendedinfo_go">
+<a href="#extendedinfo_go" style="color: inherit; text-decoration: inherit;">Extended<wbr>Info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#azureworkloadcontainerextendedinforesponse">Azure<wbr>Workload<wbr>Container<wbr>Extended<wbr>Info<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Additional details of a workload container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="friendlyname_go">
+<a href="#friendlyname_go" style="color: inherit; text-decoration: inherit;">Friendly<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Friendly name of the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="healthstatus_go">
+<a href="#healthstatus_go" style="color: inherit; text-decoration: inherit;">Health<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Status of health of the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastupdatedtime_go">
+<a href="#lastupdatedtime_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Updated<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Time stamp when this container was updated.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="operationtype_go">
+<a href="#operationtype_go" style="color: inherit; text-decoration: inherit;">Operation<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Re-Do Operation{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="registrationstatus_go">
+<a href="#registrationstatus_go" style="color: inherit; text-decoration: inherit;">Registration<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Status of registration of the container with the Recovery Services Vault.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sourceresourceid_go">
+<a href="#sourceresourceid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ARM ID of the virtual machine represented by this Azure Workload Container{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workloadtype_go">
+<a href="#workloadtype_go" style="color: inherit; text-decoration: inherit;">Workload<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Workload type for which registration was sent.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backupmanagementtype_nodejs">
+<a href="#backupmanagementtype_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="extendedinfo_nodejs">
+<a href="#extendedinfo_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#azureworkloadcontainerextendedinforesponse">Azure<wbr>Workload<wbr>Container<wbr>Extended<wbr>Info<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Additional details of a workload container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="friendlyname_nodejs">
+<a href="#friendlyname_nodejs" style="color: inherit; text-decoration: inherit;">friendly<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Friendly name of the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="healthstatus_nodejs">
+<a href="#healthstatus_nodejs" style="color: inherit; text-decoration: inherit;">health<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Status of health of the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastupdatedtime_nodejs">
+<a href="#lastupdatedtime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Updated<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Time stamp when this container was updated.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="operationtype_nodejs">
+<a href="#operationtype_nodejs" style="color: inherit; text-decoration: inherit;">operation<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Re-Do Operation{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="registrationstatus_nodejs">
+<a href="#registrationstatus_nodejs" style="color: inherit; text-decoration: inherit;">registration<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Status of registration of the container with the Recovery Services Vault.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sourceresourceid_nodejs">
+<a href="#sourceresourceid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ARM ID of the virtual machine represented by this Azure Workload Container{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workloadtype_nodejs">
+<a href="#workloadtype_nodejs" style="color: inherit; text-decoration: inherit;">workload<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Workload type for which registration was sent.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backup_management_type_python">
+<a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Type of backup management for the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="extended_info_python">
+<a href="#extended_info_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>info</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#azureworkloadcontainerextendedinforesponse">Azure<wbr>Workload<wbr>Container<wbr>Extended<wbr>Info<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Additional details of a workload container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="friendly_name_python">
+<a href="#friendly_name_python" style="color: inherit; text-decoration: inherit;">friendly_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Friendly name of the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="health_status_python">
+<a href="#health_status_python" style="color: inherit; text-decoration: inherit;">health_<wbr>status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Status of health of the container.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="last_updated_time_python">
+<a href="#last_updated_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>updated_<wbr>time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Time stamp when this container was updated.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="operation_type_python">
+<a href="#operation_type_python" style="color: inherit; text-decoration: inherit;">operation_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Re-Do Operation{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="registration_status_python">
+<a href="#registration_status_python" style="color: inherit; text-decoration: inherit;">registration_<wbr>status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Status of registration of the container with the Recovery Services Vault.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="source_resource_id_python">
+<a href="#source_resource_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>resource_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}ARM ID of the virtual machine represented by this Azure Workload Container{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workload_type_python">
+<a href="#workload_type_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Workload type for which registration was sent.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 

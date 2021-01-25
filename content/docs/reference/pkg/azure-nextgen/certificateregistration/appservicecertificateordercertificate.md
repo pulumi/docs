@@ -12,6 +12,13 @@ meta_desc: "Documentation for the azure-nextgen.certificateregistration.AppServi
 
 Key Vault container ARM resource for a certificate that is purchased through Azure.
 Latest API Version: 2020-09-01.
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:certificateregistration/latest:AppServiceCertificateOrderCertificate myresource1 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CertificateRegistration/certificateOrders/{certificateOrderName}/certificates/{name} 
+```
 
 
 

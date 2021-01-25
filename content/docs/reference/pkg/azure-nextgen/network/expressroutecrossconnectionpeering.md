@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.network.ExpressRouteCrossConnect
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Peering in an ExpressRoute Cross Connection resource.
-Latest API Version: 2020-07-01.
+Latest API Version: 2020-08-01.
 
 {{% examples %}}
 ## Example Usage
@@ -2281,7 +2281,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:network/latest:ExpressRouteCrossConnectionPeering AzurePrivatePeering /subscriptions/subid/resourceGroups/CrossConnection-Boydton1DC/providers/Microsoft.Network/expressRouteCrossConnections/<circuitServiceKey>/peerings/AzurePrivatePeering 
+$ pulumi import azure-nextgen:network/latest:ExpressRouteCrossConnectionPeering AzurePrivatePeering /subscriptions/subid/resourceGroups/CrossConnection-SiliconValley/providers/Microsoft.Network/expressRouteCrossConnections/<circuitServiceKey>/peerings/AzurePrivatePeering 
 ```
 
 

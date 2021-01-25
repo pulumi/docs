@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.automation.SoftwareUpdateConfigu
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Software update configuration properties.
+Latest API Version: 2019-06-01.
 
 {{% examples %}}
 ## Example Usage
@@ -26,13 +27,13 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var softwareUpdateConfigurationByName = new AzureNextGen.Automation.V20170515Preview.SoftwareUpdateConfigurationByName("softwareUpdateConfigurationByName", new AzureNextGen.Automation.V20170515Preview.SoftwareUpdateConfigurationByNameArgs
+        var softwareUpdateConfigurationByName = new AzureNextGen.Automation.Latest.SoftwareUpdateConfigurationByName("softwareUpdateConfigurationByName", new AzureNextGen.Automation.Latest.SoftwareUpdateConfigurationByNameArgs
         {
             AutomationAccountName = "myaccount",
             ResourceGroupName = "mygroup",
-            ScheduleInfo = new AzureNextGen.Automation.V20170515Preview.Inputs.SchedulePropertiesArgs
+            ScheduleInfo = new AzureNextGen.Automation.Latest.Inputs.SUCSchedulePropertiesArgs
             {
-                AdvancedSchedule = new AzureNextGen.Automation.V20170515Preview.Inputs.AdvancedScheduleArgs
+                AdvancedSchedule = new AzureNextGen.Automation.Latest.Inputs.AdvancedScheduleArgs
                 {
                     WeekDays = 
                     {
@@ -47,13 +48,13 @@ class MyStack : Stack
                 TimeZone = "America/Los_Angeles",
             },
             SoftwareUpdateConfigurationName = "testpatch",
-            Tasks = new AzureNextGen.Automation.V20170515Preview.Inputs.SoftwareUpdateConfigurationTasksArgs
+            Tasks = new AzureNextGen.Automation.Latest.Inputs.SoftwareUpdateConfigurationTasksArgs
             {
-                PostTask = new AzureNextGen.Automation.V20170515Preview.Inputs.TaskPropertiesArgs
+                PostTask = new AzureNextGen.Automation.Latest.Inputs.TaskPropertiesArgs
                 {
                     Source = "GetCache",
                 },
-                PreTask = new AzureNextGen.Automation.V20170515Preview.Inputs.TaskPropertiesArgs
+                PreTask = new AzureNextGen.Automation.Latest.Inputs.TaskPropertiesArgs
                 {
                     Parameters = 
                     {
@@ -62,7 +63,7 @@ class MyStack : Stack
                     Source = "HelloWorld",
                 },
             },
-            UpdateConfiguration = new AzureNextGen.Automation.V20170515Preview.Inputs.UpdateConfigurationArgs
+            UpdateConfiguration = new AzureNextGen.Automation.Latest.Inputs.UpdateConfigurationArgs
             {
                 AzureVirtualMachines = 
                 {
@@ -77,11 +78,11 @@ class MyStack : Stack
                     "box2.contoso.com",
                 },
                 OperatingSystem = "Windows",
-                Targets = new AzureNextGen.Automation.V20170515Preview.Inputs.TargetPropertiesArgs
+                Targets = new AzureNextGen.Automation.Latest.Inputs.TargetPropertiesArgs
                 {
                     AzureQueries = 
                     {
-                        new AzureNextGen.Automation.V20170515Preview.Inputs.AzureQueryPropertiesArgs
+                        new AzureNextGen.Automation.Latest.Inputs.AzureQueryPropertiesArgs
                         {
                             Locations = 
                             {
@@ -93,48 +94,42 @@ class MyStack : Stack
                                 "/subscriptions/5ae68d89-69a4-454f-b5ce-e443cc4e0067/resourceGroups/myresources",
                                 "/subscriptions/5ae68d89-69a4-454f-b5ce-e443cc4e0067",
                             },
-                            TagSettings = new AzureNextGen.Automation.V20170515Preview.Inputs.TagSettingsPropertiesArgs
+                            TagSettings = new AzureNextGen.Automation.Latest.Inputs.TagSettingsPropertiesArgs
                             {
                                 FilterOperator = "All",
                                 Tags = 
                                 {
-                                    
+                                    { "tag1", 
                                     {
-                                        { "tag1", 
-                                        {
-                                            "tag1Value1",
-                                            "tag1Value2",
-                                            "tag1Value3",
-                                        } },
-                                    },
-                                    
+                                        "tag1Value1",
+                                        "tag1Value2",
+                                        "tag1Value3",
+                                    } },
+                                    { "tag2", 
                                     {
-                                        { "tag2", 
-                                        {
-                                            "tag2Value1",
-                                            "tag2Value2",
-                                            "tag2Value3",
-                                        } },
-                                    },
+                                        "tag2Value1",
+                                        "tag2Value2",
+                                        "tag2Value3",
+                                    } },
                                 },
                             },
                         },
                     },
                     NonAzureQueries = 
                     {
-                        new AzureNextGen.Automation.V20170515Preview.Inputs.NonAzureQueryPropertiesArgs
+                        new AzureNextGen.Automation.Latest.Inputs.NonAzureQueryPropertiesArgs
                         {
                             FunctionAlias = "SavedSearch1",
                             WorkspaceId = "WorkspaceId1",
                         },
-                        new AzureNextGen.Automation.V20170515Preview.Inputs.NonAzureQueryPropertiesArgs
+                        new AzureNextGen.Automation.Latest.Inputs.NonAzureQueryPropertiesArgs
                         {
                             FunctionAlias = "SavedSearch2",
                             WorkspaceId = "WorkspaceId2",
                         },
                     },
                 },
-                Windows = new AzureNextGen.Automation.V20170515Preview.Inputs.WindowsPropertiesArgs
+                Windows = new AzureNextGen.Automation.Latest.Inputs.WindowsPropertiesArgs
                 {
                     ExcludedKbNumbers = 
                     {
@@ -155,7 +150,115 @@ class MyStack : Stack
 {{% /example %}}
 
 {{% example go %}}
-Coming soon!
+
+```go
+package main
+
+import (
+	automation "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/automation/latest"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := automation.NewSoftwareUpdateConfigurationByName(ctx, "softwareUpdateConfigurationByName", &automation.SoftwareUpdateConfigurationByNameArgs{
+			AutomationAccountName: pulumi.String("myaccount"),
+			ResourceGroupName:     pulumi.String("mygroup"),
+			ScheduleInfo: &automation.SUCSchedulePropertiesArgs{
+				AdvancedSchedule: &automation.AdvancedScheduleArgs{
+					WeekDays: pulumi.StringArray{
+						pulumi.String("Monday"),
+						pulumi.String("Thursday"),
+					},
+				},
+				ExpiryTime: pulumi.String("2018-11-09T11:22:57+00:00"),
+				Frequency:  pulumi.String("Hour"),
+				Interval:   pulumi.Float64(1),
+				StartTime:  pulumi.String("2017-10-19T12:22:57+00:00"),
+				TimeZone:   pulumi.String("America/Los_Angeles"),
+			},
+			SoftwareUpdateConfigurationName: pulumi.String("testpatch"),
+			Tasks: &automation.SoftwareUpdateConfigurationTasksArgs{
+				PostTask: &automation.TaskPropertiesArgs{
+					Source: pulumi.String("GetCache"),
+				},
+				PreTask: &automation.TaskPropertiesArgs{
+					Parameters: pulumi.StringMap{
+						"COMPUTERNAME": pulumi.String("Computer1"),
+					},
+					Source: pulumi.String("HelloWorld"),
+				},
+			},
+			UpdateConfiguration: &automation.UpdateConfigurationArgs{
+				AzureVirtualMachines: pulumi.StringArray{
+					pulumi.String("/subscriptions/5ae68d89-69a4-454f-b5ce-e443cc4e0067/resourceGroups/myresources/providers/Microsoft.Compute/virtualMachines/vm-01"),
+					pulumi.String("/subscriptions/5ae68d89-69a4-454f-b5ce-e443cc4e0067/resourceGroups/myresources/providers/Microsoft.Compute/virtualMachines/vm-02"),
+					pulumi.String("/subscriptions/5ae68d89-69a4-454f-b5ce-e443cc4e0067/resourceGroups/myresources/providers/Microsoft.Compute/virtualMachines/vm-03"),
+				},
+				Duration: pulumi.String("PT2H0M"),
+				NonAzureComputerNames: pulumi.StringArray{
+					pulumi.String("box1.contoso.com"),
+					pulumi.String("box2.contoso.com"),
+				},
+				OperatingSystem: "Windows",
+				Targets: &automation.TargetPropertiesArgs{
+					AzureQueries: automation.AzureQueryPropertiesArray{
+						&automation.AzureQueryPropertiesArgs{
+							Locations: pulumi.StringArray{
+								pulumi.String("Japan East"),
+								pulumi.String("UK South"),
+							},
+							Scope: pulumi.StringArray{
+								pulumi.String("/subscriptions/5ae68d89-69a4-454f-b5ce-e443cc4e0067/resourceGroups/myresources"),
+								pulumi.String("/subscriptions/5ae68d89-69a4-454f-b5ce-e443cc4e0067"),
+							},
+							TagSettings: &automation.TagSettingsPropertiesArgs{
+								FilterOperator: "All",
+								Tags: pulumi.StringArrayMap{
+									"tag1": pulumi.StringArray{
+										pulumi.String("tag1Value1"),
+										pulumi.String("tag1Value2"),
+										pulumi.String("tag1Value3"),
+									},
+									"tag2": pulumi.StringArray{
+										pulumi.String("tag2Value1"),
+										pulumi.String("tag2Value2"),
+										pulumi.String("tag2Value3"),
+									},
+								},
+							},
+						},
+					},
+					NonAzureQueries: automation.NonAzureQueryPropertiesArray{
+						&automation.NonAzureQueryPropertiesArgs{
+							FunctionAlias: pulumi.String("SavedSearch1"),
+							WorkspaceId:   pulumi.String("WorkspaceId1"),
+						},
+						&automation.NonAzureQueryPropertiesArgs{
+							FunctionAlias: pulumi.String("SavedSearch2"),
+							WorkspaceId:   pulumi.String("WorkspaceId2"),
+						},
+					},
+				},
+				Windows: &automation.WindowsPropertiesArgs{
+					ExcludedKbNumbers: pulumi.StringArray{
+						pulumi.String("168934"),
+						pulumi.String("168973"),
+					},
+					IncludedUpdateClassifications: pulumi.String("Critical"),
+					RebootSetting:                 pulumi.String("IfRequired"),
+				},
+			},
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
 {{% /example %}}
 
 {{% example python %}}
@@ -164,11 +267,11 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-software_update_configuration_by_name = azure_nextgen.automation.v20170515preview.SoftwareUpdateConfigurationByName("softwareUpdateConfigurationByName",
+software_update_configuration_by_name = azure_nextgen.automation.latest.SoftwareUpdateConfigurationByName("softwareUpdateConfigurationByName",
     automation_account_name="myaccount",
     resource_group_name="mygroup",
-    schedule_info=azure_nextgen.automation.v20170515preview.SchedulePropertiesArgs(
-        advanced_schedule=azure_nextgen.automation.v20170515preview.AdvancedScheduleArgs(
+    schedule_info=azure_nextgen.automation.latest.SUCSchedulePropertiesArgs(
+        advanced_schedule=azure_nextgen.automation.latest.AdvancedScheduleArgs(
             week_days=[
                 "Monday",
                 "Thursday",
@@ -181,18 +284,18 @@ software_update_configuration_by_name = azure_nextgen.automation.v20170515previe
         time_zone="America/Los_Angeles",
     ),
     software_update_configuration_name="testpatch",
-    tasks=azure_nextgen.automation.v20170515preview.SoftwareUpdateConfigurationTasksArgs(
-        post_task=azure_nextgen.automation.v20170515preview.TaskPropertiesArgs(
+    tasks=azure_nextgen.automation.latest.SoftwareUpdateConfigurationTasksArgs(
+        post_task=azure_nextgen.automation.latest.TaskPropertiesArgs(
             source="GetCache",
         ),
-        pre_task=azure_nextgen.automation.v20170515preview.TaskPropertiesArgs(
+        pre_task=azure_nextgen.automation.latest.TaskPropertiesArgs(
             parameters={
                 "COMPUTERNAME": "Computer1",
             },
             source="HelloWorld",
         ),
     ),
-    update_configuration=azure_nextgen.automation.v20170515preview.UpdateConfigurationArgs(
+    update_configuration=azure_nextgen.automation.latest.UpdateConfigurationArgs(
         azure_virtual_machines=[
             "/subscriptions/5ae68d89-69a4-454f-b5ce-e443cc4e0067/resourceGroups/myresources/providers/Microsoft.Compute/virtualMachines/vm-01",
             "/subscriptions/5ae68d89-69a4-454f-b5ce-e443cc4e0067/resourceGroups/myresources/providers/Microsoft.Compute/virtualMachines/vm-02",
@@ -204,8 +307,8 @@ software_update_configuration_by_name = azure_nextgen.automation.v20170515previe
             "box2.contoso.com",
         ],
         operating_system="Windows",
-        targets=azure_nextgen.automation.v20170515preview.TargetPropertiesArgs(
-            azure_queries=[azure_nextgen.automation.v20170515preview.AzureQueryPropertiesArgs(
+        targets=azure_nextgen.automation.latest.TargetPropertiesArgs(
+            azure_queries=[azure_nextgen.automation.latest.AzureQueryPropertiesArgs(
                 locations=[
                     "Japan East",
                     "UK South",
@@ -214,38 +317,34 @@ software_update_configuration_by_name = azure_nextgen.automation.v20170515previe
                     "/subscriptions/5ae68d89-69a4-454f-b5ce-e443cc4e0067/resourceGroups/myresources",
                     "/subscriptions/5ae68d89-69a4-454f-b5ce-e443cc4e0067",
                 ],
-                tag_settings=azure_nextgen.automation.v20170515preview.TagSettingsPropertiesArgs(
+                tag_settings=azure_nextgen.automation.latest.TagSettingsPropertiesArgs(
                     filter_operator="All",
-                    tags=[
-                        {
-                            "tag1": [
-                                "tag1Value1",
-                                "tag1Value2",
-                                "tag1Value3",
-                            ],
-                        },
-                        {
-                            "tag2": [
-                                "tag2Value1",
-                                "tag2Value2",
-                                "tag2Value3",
-                            ],
-                        },
-                    ],
+                    tags={
+                        "tag1": [
+                            "tag1Value1",
+                            "tag1Value2",
+                            "tag1Value3",
+                        ],
+                        "tag2": [
+                            "tag2Value1",
+                            "tag2Value2",
+                            "tag2Value3",
+                        ],
+                    },
                 ),
             )],
             non_azure_queries=[
-                azure_nextgen.automation.v20170515preview.NonAzureQueryPropertiesArgs(
+                azure_nextgen.automation.latest.NonAzureQueryPropertiesArgs(
                     function_alias="SavedSearch1",
                     workspace_id="WorkspaceId1",
                 ),
-                azure_nextgen.automation.v20170515preview.NonAzureQueryPropertiesArgs(
+                azure_nextgen.automation.latest.NonAzureQueryPropertiesArgs(
                     function_alias="SavedSearch2",
                     workspace_id="WorkspaceId2",
                 ),
             ],
         ),
-        windows=azure_nextgen.automation.v20170515preview.WindowsPropertiesArgs(
+        windows=azure_nextgen.automation.latest.WindowsPropertiesArgs(
             excluded_kb_numbers=[
                 "168934",
                 "168973",
@@ -265,7 +364,7 @@ software_update_configuration_by_name = azure_nextgen.automation.v20170515previe
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const softwareUpdateConfigurationByName = new azure_nextgen.automation.v20170515preview.SoftwareUpdateConfigurationByName("softwareUpdateConfigurationByName", {
+const softwareUpdateConfigurationByName = new azure_nextgen.automation.latest.SoftwareUpdateConfigurationByName("softwareUpdateConfigurationByName", {
     automationAccountName: "myaccount",
     resourceGroupName: "mygroup",
     scheduleInfo: {
@@ -317,22 +416,18 @@ const softwareUpdateConfigurationByName = new azure_nextgen.automation.v20170515
                 ],
                 tagSettings: {
                     filterOperator: "All",
-                    tags: [
-                        {
-                            tag1: [
-                                "tag1Value1",
-                                "tag1Value2",
-                                "tag1Value3",
-                            ],
-                        },
-                        {
-                            tag2: [
-                                "tag2Value1",
-                                "tag2Value2",
-                                "tag2Value3",
-                            ],
-                        },
-                    ],
+                    tags: {
+                        tag1: [
+                            "tag1Value1",
+                            "tag1Value2",
+                            "tag1Value3",
+                        ],
+                        tag2: [
+                            "tag2Value1",
+                            "tag2Value2",
+                            "tag2Value3",
+                        ],
+                    },
                 },
             }],
             nonAzureQueries: [
@@ -373,7 +468,7 @@ const softwareUpdateConfigurationByName = new azure_nextgen.automation.v20170515
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">SoftwareUpdateConfigurationByName</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">automation_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">error</span><span class="p">:</span> <span class="nx">Optional[ErrorResponseArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schedule_info</span><span class="p">:</span> <span class="nx">Optional[SchedulePropertiesArgs]</span> = None<span class="p">, </span><span class="nx">software_update_configuration_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tasks</span><span class="p">:</span> <span class="nx">Optional[SoftwareUpdateConfigurationTasksArgs]</span> = None<span class="p">, </span><span class="nx">update_configuration</span><span class="p">:</span> <span class="nx">Optional[UpdateConfigurationArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">SoftwareUpdateConfigurationByName</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">automation_account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">error</span><span class="p">:</span> <span class="nx">Optional[ErrorResponseArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">schedule_info</span><span class="p">:</span> <span class="nx">Optional[SUCSchedulePropertiesArgs]</span> = None<span class="p">, </span><span class="nx">software_update_configuration_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tasks</span><span class="p">:</span> <span class="nx">Optional[SoftwareUpdateConfigurationTasksArgs]</span> = None<span class="p">, </span><span class="nx">update_configuration</span><span class="p">:</span> <span class="nx">Optional[UpdateConfigurationArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -568,7 +663,7 @@ The SoftwareUpdateConfigurationByName resource accepts the following [input]({{<
 <a href="#scheduleinfo_csharp" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scheduleproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation.<wbr>Inputs.<wbr>Schedule<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#sucscheduleproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation.<wbr>Inputs.<wbr>SUCSchedule<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Schedule information for the Software update configuration{{% /md %}}</dd>
     <dt class="property-required"
@@ -637,7 +732,7 @@ The SoftwareUpdateConfigurationByName resource accepts the following [input]({{<
 <a href="#scheduleinfo_go" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scheduleproperties">Schedule<wbr>Properties</a></span>
+        <span class="property-type"><a href="#sucscheduleproperties">SUCSchedule<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Schedule information for the Software update configuration{{% /md %}}</dd>
     <dt class="property-required"
@@ -706,7 +801,7 @@ The SoftwareUpdateConfigurationByName resource accepts the following [input]({{<
 <a href="#scheduleinfo_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scheduleproperties">Schedule<wbr>Properties</a></span>
+        <span class="property-type"><a href="#sucscheduleproperties">SUCSchedule<wbr>Properties</a></span>
     </dt>
     <dd>{{% md %}}Schedule information for the Software update configuration{{% /md %}}</dd>
     <dt class="property-required"
@@ -775,7 +870,7 @@ The SoftwareUpdateConfigurationByName resource accepts the following [input]({{<
 <a href="#schedule_info_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#scheduleproperties">Schedule<wbr>Properties<wbr>Args</a></span>
+        <span class="property-type"><a href="#sucscheduleproperties">SUCSchedule<wbr>Properties<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Schedule information for the Software update configuration{{% /md %}}</dd>
     <dt class="property-required"
@@ -2702,155 +2797,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 </dl>
 {{% /choosable %}}
 
-<h4 id="scheduleday">Schedule<wbr>Day</h4>
-
-{{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Monday</dt>
-    <dd>Monday</dd>
-    <dt>Tuesday</dt>
-    <dd>Tuesday</dd>
-    <dt>Wednesday</dt>
-    <dd>Wednesday</dd>
-    <dt>Thursday</dt>
-    <dd>Thursday</dd>
-    <dt>Friday</dt>
-    <dd>Friday</dd>
-    <dt>Saturday</dt>
-    <dd>Saturday</dd>
-    <dt>Sunday</dt>
-    <dd>Sunday</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="tabular">
-    <dt>Schedule<wbr>Day<wbr>Monday</dt>
-    <dd>Monday</dd>
-    <dt>Schedule<wbr>Day<wbr>Tuesday</dt>
-    <dd>Tuesday</dd>
-    <dt>Schedule<wbr>Day<wbr>Wednesday</dt>
-    <dd>Wednesday</dd>
-    <dt>Schedule<wbr>Day<wbr>Thursday</dt>
-    <dd>Thursday</dd>
-    <dt>Schedule<wbr>Day<wbr>Friday</dt>
-    <dd>Friday</dd>
-    <dt>Schedule<wbr>Day<wbr>Saturday</dt>
-    <dd>Saturday</dd>
-    <dt>Schedule<wbr>Day<wbr>Sunday</dt>
-    <dd>Sunday</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Monday</dt>
-    <dd>Monday</dd>
-    <dt>Tuesday</dt>
-    <dd>Tuesday</dd>
-    <dt>Wednesday</dt>
-    <dd>Wednesday</dd>
-    <dt>Thursday</dt>
-    <dd>Thursday</dd>
-    <dt>Friday</dt>
-    <dd>Friday</dd>
-    <dt>Saturday</dt>
-    <dd>Saturday</dd>
-    <dt>Sunday</dt>
-    <dd>Sunday</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="tabular">
-    <dt>MONDAY</dt>
-    <dd>Monday</dd>
-    <dt>TUESDAY</dt>
-    <dd>Tuesday</dd>
-    <dt>WEDNESDAY</dt>
-    <dd>Wednesday</dd>
-    <dt>THURSDAY</dt>
-    <dd>Thursday</dd>
-    <dt>FRIDAY</dt>
-    <dd>Friday</dd>
-    <dt>SATURDAY</dt>
-    <dd>Saturday</dd>
-    <dt>SUNDAY</dt>
-    <dd>Sunday</dd>
-</dl>
-{{% /choosable %}}
-
-<h4 id="schedulefrequency">Schedule<wbr>Frequency</h4>
-
-{{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>One<wbr>Time</dt>
-    <dd>OneTime</dd>
-    <dt>Day</dt>
-    <dd>Day</dd>
-    <dt>Hour</dt>
-    <dd>Hour</dd>
-    <dt>Week</dt>
-    <dd>Week</dd>
-    <dt>Month</dt>
-    <dd>Month</dd>
-    <dt>Minute</dt>
-    <dd>Minute{{% md %}}The minimum allowed interval for Minute schedules is 15 minutes.{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="tabular">
-    <dt>Schedule<wbr>Frequency<wbr>One<wbr>Time</dt>
-    <dd>OneTime</dd>
-    <dt>Schedule<wbr>Frequency<wbr>Day</dt>
-    <dd>Day</dd>
-    <dt>Schedule<wbr>Frequency<wbr>Hour</dt>
-    <dd>Hour</dd>
-    <dt>Schedule<wbr>Frequency<wbr>Week</dt>
-    <dd>Week</dd>
-    <dt>Schedule<wbr>Frequency<wbr>Month</dt>
-    <dd>Month</dd>
-    <dt>Schedule<wbr>Frequency<wbr>Minute</dt>
-    <dd>Minute{{% md %}}The minimum allowed interval for Minute schedules is 15 minutes.{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>One<wbr>Time</dt>
-    <dd>OneTime</dd>
-    <dt>Day</dt>
-    <dd>Day</dd>
-    <dt>Hour</dt>
-    <dd>Hour</dd>
-    <dt>Week</dt>
-    <dd>Week</dd>
-    <dt>Month</dt>
-    <dd>Month</dd>
-    <dt>Minute</dt>
-    <dd>Minute{{% md %}}The minimum allowed interval for Minute schedules is 15 minutes.{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="tabular">
-    <dt>ONE_TIME</dt>
-    <dd>OneTime</dd>
-    <dt>DAY</dt>
-    <dd>Day</dd>
-    <dt>HOUR</dt>
-    <dd>Hour</dd>
-    <dt>WEEK</dt>
-    <dd>Week</dd>
-    <dt>MONTH</dt>
-    <dd>Month</dd>
-    <dt>MINUTE</dt>
-    <dd>Minute{{% md %}}The minimum allowed interval for Minute schedules is 15 minutes.{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-<h4 id="scheduleproperties">Schedule<wbr>Properties</h4>
+<h4 id="sucscheduleproperties">SUCSchedule<wbr>Properties</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -2915,7 +2862,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interval_csharp" style="color: inherit; text-decoration: inherit;">Interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Gets or sets the interval of the schedule.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3038,7 +2985,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interval_go" style="color: inherit; text-decoration: inherit;">Interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Gets or sets the interval of the schedule.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3284,7 +3231,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interval_python" style="color: inherit; text-decoration: inherit;">interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Gets or sets the interval of the schedule.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3344,7 +3291,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 </dl>
 {{% /choosable %}}
 
-<h4 id="schedulepropertiesresponse">Schedule<wbr>Properties<wbr>Response</h4>
+<h4 id="sucschedulepropertiesresponse">SUCSchedule<wbr>Properties<wbr>Response</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -3418,7 +3365,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interval_csharp" style="color: inherit; text-decoration: inherit;">Interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Gets or sets the interval of the schedule.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3550,7 +3497,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interval_go" style="color: inherit; text-decoration: inherit;">Interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Gets or sets the interval of the schedule.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3814,7 +3761,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#interval_python" style="color: inherit; text-decoration: inherit;">interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Gets or sets the interval of the schedule.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3871,6 +3818,154 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Gets or sets the time zone of the schedule.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="scheduleday">Schedule<wbr>Day</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Monday</dt>
+    <dd>Monday</dd>
+    <dt>Tuesday</dt>
+    <dd>Tuesday</dd>
+    <dt>Wednesday</dt>
+    <dd>Wednesday</dd>
+    <dt>Thursday</dt>
+    <dd>Thursday</dd>
+    <dt>Friday</dt>
+    <dd>Friday</dd>
+    <dt>Saturday</dt>
+    <dd>Saturday</dd>
+    <dt>Sunday</dt>
+    <dd>Sunday</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Schedule<wbr>Day<wbr>Monday</dt>
+    <dd>Monday</dd>
+    <dt>Schedule<wbr>Day<wbr>Tuesday</dt>
+    <dd>Tuesday</dd>
+    <dt>Schedule<wbr>Day<wbr>Wednesday</dt>
+    <dd>Wednesday</dd>
+    <dt>Schedule<wbr>Day<wbr>Thursday</dt>
+    <dd>Thursday</dd>
+    <dt>Schedule<wbr>Day<wbr>Friday</dt>
+    <dd>Friday</dd>
+    <dt>Schedule<wbr>Day<wbr>Saturday</dt>
+    <dd>Saturday</dd>
+    <dt>Schedule<wbr>Day<wbr>Sunday</dt>
+    <dd>Sunday</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Monday</dt>
+    <dd>Monday</dd>
+    <dt>Tuesday</dt>
+    <dd>Tuesday</dd>
+    <dt>Wednesday</dt>
+    <dd>Wednesday</dd>
+    <dt>Thursday</dt>
+    <dd>Thursday</dd>
+    <dt>Friday</dt>
+    <dd>Friday</dd>
+    <dt>Saturday</dt>
+    <dd>Saturday</dd>
+    <dt>Sunday</dt>
+    <dd>Sunday</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>MONDAY</dt>
+    <dd>Monday</dd>
+    <dt>TUESDAY</dt>
+    <dd>Tuesday</dd>
+    <dt>WEDNESDAY</dt>
+    <dd>Wednesday</dd>
+    <dt>THURSDAY</dt>
+    <dd>Thursday</dd>
+    <dt>FRIDAY</dt>
+    <dd>Friday</dd>
+    <dt>SATURDAY</dt>
+    <dd>Saturday</dd>
+    <dt>SUNDAY</dt>
+    <dd>Sunday</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="schedulefrequency">Schedule<wbr>Frequency</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>One<wbr>Time</dt>
+    <dd>OneTime</dd>
+    <dt>Day</dt>
+    <dd>Day</dd>
+    <dt>Hour</dt>
+    <dd>Hour</dd>
+    <dt>Week</dt>
+    <dd>Week</dd>
+    <dt>Month</dt>
+    <dd>Month</dd>
+    <dt>Minute</dt>
+    <dd>Minute{{% md %}}The minimum allowed interval for Minute schedules is 15 minutes.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Schedule<wbr>Frequency<wbr>One<wbr>Time</dt>
+    <dd>OneTime</dd>
+    <dt>Schedule<wbr>Frequency<wbr>Day</dt>
+    <dd>Day</dd>
+    <dt>Schedule<wbr>Frequency<wbr>Hour</dt>
+    <dd>Hour</dd>
+    <dt>Schedule<wbr>Frequency<wbr>Week</dt>
+    <dd>Week</dd>
+    <dt>Schedule<wbr>Frequency<wbr>Month</dt>
+    <dd>Month</dd>
+    <dt>Schedule<wbr>Frequency<wbr>Minute</dt>
+    <dd>Minute{{% md %}}The minimum allowed interval for Minute schedules is 15 minutes.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>One<wbr>Time</dt>
+    <dd>OneTime</dd>
+    <dt>Day</dt>
+    <dd>Day</dd>
+    <dt>Hour</dt>
+    <dd>Hour</dd>
+    <dt>Week</dt>
+    <dd>Week</dd>
+    <dt>Month</dt>
+    <dd>Month</dd>
+    <dt>Minute</dt>
+    <dd>Minute{{% md %}}The minimum allowed interval for Minute schedules is 15 minutes.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>ONE_TIME</dt>
+    <dd>OneTime</dd>
+    <dt>DAY</dt>
+    <dd>Day</dd>
+    <dt>HOUR</dt>
+    <dd>Hour</dd>
+    <dt>WEEK</dt>
+    <dd>Week</dd>
+    <dt>MONTH</dt>
+    <dd>Month</dd>
+    <dt>MINUTE</dt>
+    <dd>Minute{{% md %}}The minimum allowed interval for Minute schedules is 15 minutes.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -5691,7 +5786,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:automation/v20170515preview:SoftwareUpdateConfigurationByName testpatch /subscriptions/51766542-3ed7-4a72-a187-0c8ab644ddab/resourceGroups/mygroup/providers/Microsoft.Automation/automationAccounts/myaccount/softwareUpdateConfigurations/testpatch 
+$ pulumi import azure-nextgen:automation/latest:SoftwareUpdateConfigurationByName testpatch /subscriptions/51766542-3ed7-4a72-a187-0c8ab644ddab/resourceGroups/mygroup/providers/Microsoft.Automation/automationAccounts/myaccount/softwareUpdateConfigurations/testpatch 
 ```
 
 

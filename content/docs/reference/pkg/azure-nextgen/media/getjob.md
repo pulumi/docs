@@ -260,7 +260,7 @@ The following output properties are available:
 <a href="#input_csharp" style="color: inherit; text-decoration: inherit;">Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobinputclipresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Outputs.<wbr>Job<wbr>Input<wbr>Clip<wbr>Response</a> | <a href="#jobinputsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Outputs.<wbr>Job<wbr>Inputs<wbr>Response</a></span>
+        <span class="property-type"><a href="#jobinputassetresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Outputs.<wbr>Job<wbr>Input<wbr>Asset<wbr>Response</a> | <a href="#jobinputclipresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Outputs.<wbr>Job<wbr>Input<wbr>Clip<wbr>Response</a> | <a href="#jobinputhttpresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Outputs.<wbr>Job<wbr>Input<wbr>Http<wbr>Response</a> | <a href="#jobinputsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Outputs.<wbr>Job<wbr>Inputs<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The inputs for the Job.{{% /md %}}</dd>
     <dt class="property-"
@@ -383,7 +383,7 @@ The following output properties are available:
 <a href="#input_go" style="color: inherit; text-decoration: inherit;">Input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobinputclipresponse">Job<wbr>Input<wbr>Clip<wbr>Response</a> | <a href="#jobinputsresponse">Job<wbr>Inputs<wbr>Response</a></span>
+        <span class="property-type"><a href="#jobinputassetresponse">Job<wbr>Input<wbr>Asset<wbr>Response</a> | <a href="#jobinputclipresponse">Job<wbr>Input<wbr>Clip<wbr>Response</a> | <a href="#jobinputhttpresponse">Job<wbr>Input<wbr>Http<wbr>Response</a> | <a href="#jobinputsresponse">Job<wbr>Inputs<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The inputs for the Job.{{% /md %}}</dd>
     <dt class="property-"
@@ -506,7 +506,7 @@ The following output properties are available:
 <a href="#input_nodejs" style="color: inherit; text-decoration: inherit;">input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobinputclipresponse">Job<wbr>Input<wbr>Clip<wbr>Response</a> | <a href="#jobinputsresponse">Job<wbr>Inputs<wbr>Response</a></span>
+        <span class="property-type"><a href="#jobinputassetresponse">Job<wbr>Input<wbr>Asset<wbr>Response</a> | <a href="#jobinputclipresponse">Job<wbr>Input<wbr>Clip<wbr>Response</a> | <a href="#jobinputhttpresponse">Job<wbr>Input<wbr>Http<wbr>Response</a> | <a href="#jobinputsresponse">Job<wbr>Inputs<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The inputs for the Job.{{% /md %}}</dd>
     <dt class="property-"
@@ -629,7 +629,7 @@ The following output properties are available:
 <a href="#input_python" style="color: inherit; text-decoration: inherit;">input</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#jobinputclipresponse">Job<wbr>Input<wbr>Clip<wbr>Response</a> | <a href="#jobinputsresponse">Job<wbr>Inputs<wbr>Response</a></span>
+        <span class="property-type"><a href="#jobinputassetresponse">Job<wbr>Input<wbr>Asset<wbr>Response</a> | <a href="#jobinputclipresponse">Job<wbr>Input<wbr>Clip<wbr>Response</a> | <a href="#jobinputhttpresponse">Job<wbr>Input<wbr>Http<wbr>Response</a> | <a href="#jobinputsresponse">Job<wbr>Inputs<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The inputs for the Job.{{% /md %}}</dd>
     <dt class="property-"
@@ -1103,6 +1103,217 @@ The following output properties are available:
 </dl>
 {{% /choosable %}}
 
+<h4 id="jobinputassetresponse">Job<wbr>Input<wbr>Asset<wbr>Response</h4>
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="assetname_csharp">
+<a href="#assetname_csharp" style="color: inherit; text-decoration: inherit;">Asset<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the input Asset.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="end_csharp">
+<a href="#end_csharp" style="color: inherit; text-decoration: inherit;">End</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#absolutecliptimeresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Absolute<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a> | <a href="#utccliptimeresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Utc<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will end. Defaults to the end of the input media.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="files_csharp">
+<a href="#files_csharp" style="color: inherit; text-decoration: inherit;">Files</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of files. Required for JobInputHttp. Maximum of 4000 characters each.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="label_csharp">
+<a href="#label_csharp" style="color: inherit; text-decoration: inherit;">Label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A label that is assigned to a JobInputClip, that is used to satisfy a reference used in the Transform. For example, a Transform can be authored so as to take an image file with the label 'xyz' and apply it as an overlay onto the input video before it is encoded. When submitting a Job, exactly one of the JobInputs should be the image file, and it should have the label 'xyz'.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="start_csharp">
+<a href="#start_csharp" style="color: inherit; text-decoration: inherit;">Start</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#absolutecliptimeresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Absolute<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a> | <a href="#utccliptimeresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Utc<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will start. Defaults to the beginning of the input media.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="assetname_go">
+<a href="#assetname_go" style="color: inherit; text-decoration: inherit;">Asset<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the input Asset.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="end_go">
+<a href="#end_go" style="color: inherit; text-decoration: inherit;">End</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#absolutecliptimeresponse">Absolute<wbr>Clip<wbr>Time<wbr>Response</a> | <a href="#utccliptimeresponse">Utc<wbr>Clip<wbr>Time<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will end. Defaults to the end of the input media.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="files_go">
+<a href="#files_go" style="color: inherit; text-decoration: inherit;">Files</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}List of files. Required for JobInputHttp. Maximum of 4000 characters each.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="label_go">
+<a href="#label_go" style="color: inherit; text-decoration: inherit;">Label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A label that is assigned to a JobInputClip, that is used to satisfy a reference used in the Transform. For example, a Transform can be authored so as to take an image file with the label 'xyz' and apply it as an overlay onto the input video before it is encoded. When submitting a Job, exactly one of the JobInputs should be the image file, and it should have the label 'xyz'.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="start_go">
+<a href="#start_go" style="color: inherit; text-decoration: inherit;">Start</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#absolutecliptimeresponse">Absolute<wbr>Clip<wbr>Time<wbr>Response</a> | <a href="#utccliptimeresponse">Utc<wbr>Clip<wbr>Time<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will start. Defaults to the beginning of the input media.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="assetname_nodejs">
+<a href="#assetname_nodejs" style="color: inherit; text-decoration: inherit;">asset<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the input Asset.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="end_nodejs">
+<a href="#end_nodejs" style="color: inherit; text-decoration: inherit;">end</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#absolutecliptimeresponse">Absolute<wbr>Clip<wbr>Time<wbr>Response</a> | <a href="#utccliptimeresponse">Utc<wbr>Clip<wbr>Time<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will end. Defaults to the end of the input media.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="files_nodejs">
+<a href="#files_nodejs" style="color: inherit; text-decoration: inherit;">files</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}List of files. Required for JobInputHttp. Maximum of 4000 characters each.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="label_nodejs">
+<a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A label that is assigned to a JobInputClip, that is used to satisfy a reference used in the Transform. For example, a Transform can be authored so as to take an image file with the label 'xyz' and apply it as an overlay onto the input video before it is encoded. When submitting a Job, exactly one of the JobInputs should be the image file, and it should have the label 'xyz'.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="start_nodejs">
+<a href="#start_nodejs" style="color: inherit; text-decoration: inherit;">start</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#absolutecliptimeresponse">Absolute<wbr>Clip<wbr>Time<wbr>Response</a> | <a href="#utccliptimeresponse">Utc<wbr>Clip<wbr>Time<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will start. Defaults to the beginning of the input media.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="asset_name_python">
+<a href="#asset_name_python" style="color: inherit; text-decoration: inherit;">asset_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the input Asset.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="end_python">
+<a href="#end_python" style="color: inherit; text-decoration: inherit;">end</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#absolutecliptimeresponse">Absolute<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a> | <a href="#utccliptimeresponse">Utc<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will end. Defaults to the end of the input media.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="files_python">
+<a href="#files_python" style="color: inherit; text-decoration: inherit;">files</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}List of files. Required for JobInputHttp. Maximum of 4000 characters each.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="label_python">
+<a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A label that is assigned to a JobInputClip, that is used to satisfy a reference used in the Transform. For example, a Transform can be authored so as to take an image file with the label 'xyz' and apply it as an overlay onto the input video before it is encoded. When submitting a Job, exactly one of the JobInputs should be the image file, and it should have the label 'xyz'.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="start_python">
+<a href="#start_python" style="color: inherit; text-decoration: inherit;">start</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#absolutecliptimeresponse">Absolute<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a> | <a href="#utccliptimeresponse">Utc<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will start. Defaults to the beginning of the input media.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
 <h4 id="jobinputclipresponse">Job<wbr>Input<wbr>Clip<wbr>Response</h4>
 
 
@@ -1278,6 +1489,217 @@ The following output properties are available:
 </dl>
 {{% /choosable %}}
 
+<h4 id="jobinputhttpresponse">Job<wbr>Input<wbr>Http<wbr>Response</h4>
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="baseuri_csharp">
+<a href="#baseuri_csharp" style="color: inherit; text-decoration: inherit;">Base<wbr>Uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Base URI for HTTPS job input. It will be concatenated with provided file names. If no base uri is given, then the provided file list is assumed to be fully qualified uris. Maximum length of 4000 characters.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="end_csharp">
+<a href="#end_csharp" style="color: inherit; text-decoration: inherit;">End</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#absolutecliptimeresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Absolute<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a> | <a href="#utccliptimeresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Utc<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will end. Defaults to the end of the input media.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="files_csharp">
+<a href="#files_csharp" style="color: inherit; text-decoration: inherit;">Files</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of files. Required for JobInputHttp. Maximum of 4000 characters each.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="label_csharp">
+<a href="#label_csharp" style="color: inherit; text-decoration: inherit;">Label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A label that is assigned to a JobInputClip, that is used to satisfy a reference used in the Transform. For example, a Transform can be authored so as to take an image file with the label 'xyz' and apply it as an overlay onto the input video before it is encoded. When submitting a Job, exactly one of the JobInputs should be the image file, and it should have the label 'xyz'.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="start_csharp">
+<a href="#start_csharp" style="color: inherit; text-decoration: inherit;">Start</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#absolutecliptimeresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Absolute<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a> | <a href="#utccliptimeresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Utc<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will start. Defaults to the beginning of the input media.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="baseuri_go">
+<a href="#baseuri_go" style="color: inherit; text-decoration: inherit;">Base<wbr>Uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Base URI for HTTPS job input. It will be concatenated with provided file names. If no base uri is given, then the provided file list is assumed to be fully qualified uris. Maximum length of 4000 characters.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="end_go">
+<a href="#end_go" style="color: inherit; text-decoration: inherit;">End</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#absolutecliptimeresponse">Absolute<wbr>Clip<wbr>Time<wbr>Response</a> | <a href="#utccliptimeresponse">Utc<wbr>Clip<wbr>Time<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will end. Defaults to the end of the input media.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="files_go">
+<a href="#files_go" style="color: inherit; text-decoration: inherit;">Files</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}List of files. Required for JobInputHttp. Maximum of 4000 characters each.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="label_go">
+<a href="#label_go" style="color: inherit; text-decoration: inherit;">Label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A label that is assigned to a JobInputClip, that is used to satisfy a reference used in the Transform. For example, a Transform can be authored so as to take an image file with the label 'xyz' and apply it as an overlay onto the input video before it is encoded. When submitting a Job, exactly one of the JobInputs should be the image file, and it should have the label 'xyz'.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="start_go">
+<a href="#start_go" style="color: inherit; text-decoration: inherit;">Start</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#absolutecliptimeresponse">Absolute<wbr>Clip<wbr>Time<wbr>Response</a> | <a href="#utccliptimeresponse">Utc<wbr>Clip<wbr>Time<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will start. Defaults to the beginning of the input media.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="baseuri_nodejs">
+<a href="#baseuri_nodejs" style="color: inherit; text-decoration: inherit;">base<wbr>Uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Base URI for HTTPS job input. It will be concatenated with provided file names. If no base uri is given, then the provided file list is assumed to be fully qualified uris. Maximum length of 4000 characters.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="end_nodejs">
+<a href="#end_nodejs" style="color: inherit; text-decoration: inherit;">end</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#absolutecliptimeresponse">Absolute<wbr>Clip<wbr>Time<wbr>Response</a> | <a href="#utccliptimeresponse">Utc<wbr>Clip<wbr>Time<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will end. Defaults to the end of the input media.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="files_nodejs">
+<a href="#files_nodejs" style="color: inherit; text-decoration: inherit;">files</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}List of files. Required for JobInputHttp. Maximum of 4000 characters each.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="label_nodejs">
+<a href="#label_nodejs" style="color: inherit; text-decoration: inherit;">label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A label that is assigned to a JobInputClip, that is used to satisfy a reference used in the Transform. For example, a Transform can be authored so as to take an image file with the label 'xyz' and apply it as an overlay onto the input video before it is encoded. When submitting a Job, exactly one of the JobInputs should be the image file, and it should have the label 'xyz'.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="start_nodejs">
+<a href="#start_nodejs" style="color: inherit; text-decoration: inherit;">start</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#absolutecliptimeresponse">Absolute<wbr>Clip<wbr>Time<wbr>Response</a> | <a href="#utccliptimeresponse">Utc<wbr>Clip<wbr>Time<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will start. Defaults to the beginning of the input media.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="base_uri_python">
+<a href="#base_uri_python" style="color: inherit; text-decoration: inherit;">base_<wbr>uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Base URI for HTTPS job input. It will be concatenated with provided file names. If no base uri is given, then the provided file list is assumed to be fully qualified uris. Maximum length of 4000 characters.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="end_python">
+<a href="#end_python" style="color: inherit; text-decoration: inherit;">end</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#absolutecliptimeresponse">Absolute<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a> | <a href="#utccliptimeresponse">Utc<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will end. Defaults to the end of the input media.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="files_python">
+<a href="#files_python" style="color: inherit; text-decoration: inherit;">files</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}List of files. Required for JobInputHttp. Maximum of 4000 characters each.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="label_python">
+<a href="#label_python" style="color: inherit; text-decoration: inherit;">label</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A label that is assigned to a JobInputClip, that is used to satisfy a reference used in the Transform. For example, a Transform can be authored so as to take an image file with the label 'xyz' and apply it as an overlay onto the input video before it is encoded. When submitting a Job, exactly one of the JobInputs should be the image file, and it should have the label 'xyz'.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="start_python">
+<a href="#start_python" style="color: inherit; text-decoration: inherit;">start</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#absolutecliptimeresponse">Absolute<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a> | <a href="#utccliptimeresponse">Utc<wbr>Clip<wbr>Time<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Defines a point on the timeline of the input media at which processing will start. Defaults to the beginning of the input media.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
 <h4 id="jobinputsresponse">Job<wbr>Inputs<wbr>Response</h4>
 
 
@@ -1294,7 +1716,7 @@ The following output properties are available:
 <a href="#inputs_csharp" style="color: inherit; text-decoration: inherit;">Inputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Job<wbr>Input<wbr>Clip<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Media.<wbr>Inputs.<wbr>Job<wbr>Inputs<wbr>Response<wbr>Args&gt;&gt;</span>
+        <span class="property-type">List&lt;object&gt;</span>
     </dt>
     <dd>{{% md %}}List of inputs to a Job.{{% /md %}}</dd>
 </dl>
@@ -1324,7 +1746,7 @@ The following output properties are available:
 <a href="#inputs_nodejs" style="color: inherit; text-decoration: inherit;">inputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Job<wbr>Input<wbr>Clip<wbr>Response | Job<wbr>Inputs<wbr>Response[]</span>
+        <span class="property-type">Job<wbr>Input<wbr>Asset<wbr>Response | Job<wbr>Input<wbr>Clip<wbr>Response | Job<wbr>Input<wbr>Http<wbr>Response | Job<wbr>Inputs<wbr>Response[]</span>
     </dt>
     <dd>{{% md %}}List of inputs to a Job.{{% /md %}}</dd>
 </dl>
@@ -1339,7 +1761,7 @@ The following output properties are available:
 <a href="#inputs_python" style="color: inherit; text-decoration: inherit;">inputs</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Job<wbr>Input<wbr>Clip<wbr>Response<wbr>Args, Job<wbr>Inputs<wbr>Response<wbr>Args]]</span>
+        <span class="property-type">Sequence[Union[Job<wbr>Input<wbr>Asset<wbr>Response<wbr>Args, Job<wbr>Input<wbr>Clip<wbr>Response<wbr>Args, Job<wbr>Input<wbr>Http<wbr>Response<wbr>Args, Job<wbr>Inputs<wbr>Response<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}List of inputs to a Job.{{% /md %}}</dd>
 </dl>

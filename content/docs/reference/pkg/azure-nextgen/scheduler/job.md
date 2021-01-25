@@ -11,6 +11,13 @@ meta_desc: "Documentation for the azure-nextgen.scheduler.Job resource with exam
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Latest API Version: 2016-03-01.
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:scheduler/latest:Job myresource1 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Scheduler/jobCollections/{jobCollectionName}/jobs/{jobName} 
+```
 
 
 

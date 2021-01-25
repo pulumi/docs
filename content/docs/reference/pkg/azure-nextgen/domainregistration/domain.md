@@ -12,6 +12,13 @@ meta_desc: "Documentation for the azure-nextgen.domainregistration.Domain resour
 
 Information about a domain.
 Latest API Version: 2020-09-01.
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:domainregistration/latest:Domain myresource1 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DomainRegistration/domains/{domainName} 
+```
 
 
 

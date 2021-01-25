@@ -1185,6 +1185,347 @@ const virtualMachineScaleSet = new azure_nextgen.compute.latest.VirtualMachineSc
 
 {{% /example %}}
 
+### Create a scale set with Fpga Network Interfaces.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var virtualMachineScaleSet = new AzureNextGen.Compute.Latest.VirtualMachineScaleSet("virtualMachineScaleSet", new AzureNextGen.Compute.Latest.VirtualMachineScaleSetArgs
+        {
+            Location = "westus",
+            Overprovision = true,
+            ResourceGroupName = "myResourceGroup",
+            Sku = new AzureNextGen.Compute.Latest.Inputs.SkuArgs
+            {
+                Capacity = 3,
+                Name = "Standard_D1_v2",
+                Tier = "Standard",
+            },
+            UpgradePolicy = new AzureNextGen.Compute.Latest.Inputs.UpgradePolicyArgs
+            {
+                Mode = "Manual",
+            },
+            VirtualMachineProfile = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetVMProfileArgs
+            {
+                NetworkProfile = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetNetworkProfileArgs
+                {
+                    NetworkInterfaceConfigurations = 
+                    {
+                        new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetNetworkConfigurationArgs
+                        {
+                            EnableIPForwarding = true,
+                            IpConfigurations = 
+                            {
+                                new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetIPConfigurationArgs
+                                {
+                                    Name = "{vmss-name}",
+                                    Subnet = new AzureNextGen.Compute.Latest.Inputs.ApiEntityReferenceArgs
+                                    {
+                                        Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+                                    },
+                                },
+                            },
+                            Name = "{vmss-name}",
+                            Primary = true,
+                        },
+                        new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetNetworkConfigurationArgs
+                        {
+                            EnableAcceleratedNetworking = false,
+                            EnableFpga = true,
+                            EnableIPForwarding = false,
+                            IpConfigurations = 
+                            {
+                                new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetIPConfigurationArgs
+                                {
+                                    Name = "{fpgaNic-Name}",
+                                    Primary = true,
+                                    PrivateIPAddressVersion = "IPv4",
+                                    Subnet = new AzureNextGen.Compute.Latest.Inputs.ApiEntityReferenceArgs
+                                    {
+                                        Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-fpga-subnet-name}",
+                                    },
+                                },
+                            },
+                            Name = "{fpgaNic-Name}",
+                            Primary = false,
+                        },
+                    },
+                },
+                OsProfile = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetOSProfileArgs
+                {
+                    AdminPassword = "{your-password}",
+                    AdminUsername = "{your-username}",
+                    ComputerNamePrefix = "{vmss-name}",
+                },
+                StorageProfile = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetStorageProfileArgs
+                {
+                    ImageReference = new AzureNextGen.Compute.Latest.Inputs.ImageReferenceArgs
+                    {
+                        Id = "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/images/{existing-custom-image-name}",
+                    },
+                    OsDisk = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetOSDiskArgs
+                    {
+                        Caching = "ReadWrite",
+                        CreateOption = "FromImage",
+                        ManagedDisk = new AzureNextGen.Compute.Latest.Inputs.VirtualMachineScaleSetManagedDiskParametersArgs
+                        {
+                            StorageAccountType = "Standard_LRS",
+                        },
+                    },
+                },
+            },
+            VmScaleSetName = "{vmss-name}",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+
+```go
+package main
+
+import (
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewVirtualMachineScaleSet(ctx, "virtualMachineScaleSet", &compute.VirtualMachineScaleSetArgs{
+			Location:          pulumi.String("westus"),
+			Overprovision:     pulumi.Bool(true),
+			ResourceGroupName: pulumi.String("myResourceGroup"),
+			Sku: &compute.SkuArgs{
+				Capacity: pulumi.Float64(3),
+				Name:     pulumi.String("Standard_D1_v2"),
+				Tier:     pulumi.String("Standard"),
+			},
+			UpgradePolicy: &compute.UpgradePolicyArgs{
+				Mode: "Manual",
+			},
+			VirtualMachineProfile: &compute.VirtualMachineScaleSetVMProfileArgs{
+				NetworkProfile: &compute.VirtualMachineScaleSetNetworkProfileArgs{
+					NetworkInterfaceConfigurations: compute.VirtualMachineScaleSetNetworkConfigurationArray{
+						&compute.VirtualMachineScaleSetNetworkConfigurationArgs{
+							EnableIPForwarding: pulumi.Bool(true),
+							IpConfigurations: compute.VirtualMachineScaleSetIPConfigurationArray{
+								&compute.VirtualMachineScaleSetIPConfigurationArgs{
+									Name: pulumi.String("{vmss-name}"),
+									Subnet: &compute.ApiEntityReferenceArgs{
+										Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}"),
+									},
+								},
+							},
+							Name:    pulumi.String("{vmss-name}"),
+							Primary: pulumi.Bool(true),
+						},
+						&compute.VirtualMachineScaleSetNetworkConfigurationArgs{
+							EnableAcceleratedNetworking: pulumi.Bool(false),
+							EnableFpga:                  pulumi.Bool(true),
+							EnableIPForwarding:          pulumi.Bool(false),
+							IpConfigurations: compute.VirtualMachineScaleSetIPConfigurationArray{
+								&compute.VirtualMachineScaleSetIPConfigurationArgs{
+									Name:                    pulumi.String("{fpgaNic-Name}"),
+									Primary:                 pulumi.Bool(true),
+									PrivateIPAddressVersion: pulumi.String("IPv4"),
+									Subnet: &compute.ApiEntityReferenceArgs{
+										Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-fpga-subnet-name}"),
+									},
+								},
+							},
+							Name:    pulumi.String("{fpgaNic-Name}"),
+							Primary: pulumi.Bool(false),
+						},
+					},
+				},
+				OsProfile: &compute.VirtualMachineScaleSetOSProfileArgs{
+					AdminPassword:      pulumi.String("{your-password}"),
+					AdminUsername:      pulumi.String("{your-username}"),
+					ComputerNamePrefix: pulumi.String("{vmss-name}"),
+				},
+				StorageProfile: &compute.VirtualMachineScaleSetStorageProfileArgs{
+					ImageReference: &compute.ImageReferenceArgs{
+						Id: pulumi.String("/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/images/{existing-custom-image-name}"),
+					},
+					OsDisk: &compute.VirtualMachineScaleSetOSDiskArgs{
+						Caching:      "ReadWrite",
+						CreateOption: pulumi.String("FromImage"),
+						ManagedDisk: &compute.VirtualMachineScaleSetManagedDiskParametersArgs{
+							StorageAccountType: pulumi.String("Standard_LRS"),
+						},
+					},
+				},
+			},
+			VmScaleSetName: pulumi.String("{vmss-name}"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azure_nextgen as azure_nextgen
+
+virtual_machine_scale_set = azure_nextgen.compute.latest.VirtualMachineScaleSet("virtualMachineScaleSet",
+    location="westus",
+    overprovision=True,
+    resource_group_name="myResourceGroup",
+    sku=azure_nextgen.compute.latest.SkuArgs(
+        capacity=3,
+        name="Standard_D1_v2",
+        tier="Standard",
+    ),
+    upgrade_policy=azure_nextgen.compute.latest.UpgradePolicyArgs(
+        mode="Manual",
+    ),
+    virtual_machine_profile=azure_nextgen.compute.latest.VirtualMachineScaleSetVMProfileArgs(
+        network_profile=azure_nextgen.compute.latest.VirtualMachineScaleSetNetworkProfileArgs(
+            network_interface_configurations=[
+                azure_nextgen.compute.latest.VirtualMachineScaleSetNetworkConfigurationArgs(
+                    enable_ip_forwarding=True,
+                    ip_configurations=[azure_nextgen.compute.latest.VirtualMachineScaleSetIPConfigurationArgs(
+                        name="{vmss-name}",
+                        subnet=azure_nextgen.compute.latest.ApiEntityReferenceArgs(
+                            id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+                        ),
+                    )],
+                    name="{vmss-name}",
+                    primary=True,
+                ),
+                azure_nextgen.compute.latest.VirtualMachineScaleSetNetworkConfigurationArgs(
+                    enable_accelerated_networking=False,
+                    enable_fpga=True,
+                    enable_ip_forwarding=False,
+                    ip_configurations=[azure_nextgen.compute.latest.VirtualMachineScaleSetIPConfigurationArgs(
+                        name="{fpgaNic-Name}",
+                        primary=True,
+                        private_ip_address_version="IPv4",
+                        subnet=azure_nextgen.compute.latest.ApiEntityReferenceArgs(
+                            id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-fpga-subnet-name}",
+                        ),
+                    )],
+                    name="{fpgaNic-Name}",
+                    primary=False,
+                ),
+            ],
+        ),
+        os_profile=azure_nextgen.compute.latest.VirtualMachineScaleSetOSProfileArgs(
+            admin_password="{your-password}",
+            admin_username="{your-username}",
+            computer_name_prefix="{vmss-name}",
+        ),
+        storage_profile=azure_nextgen.compute.latest.VirtualMachineScaleSetStorageProfileArgs(
+            image_reference=azure_nextgen.compute.latest.ImageReferenceArgs(
+                id="/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/images/{existing-custom-image-name}",
+            ),
+            os_disk=azure_nextgen.compute.latest.VirtualMachineScaleSetOSDiskArgs(
+                caching="ReadWrite",
+                create_option="FromImage",
+                managed_disk=azure_nextgen.compute.latest.VirtualMachineScaleSetManagedDiskParametersArgs(
+                    storage_account_type="Standard_LRS",
+                ),
+            ),
+        ),
+    ),
+    vm_scale_set_name="{vmss-name}")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
+
+const virtualMachineScaleSet = new azure_nextgen.compute.latest.VirtualMachineScaleSet("virtualMachineScaleSet", {
+    location: "westus",
+    overprovision: true,
+    resourceGroupName: "myResourceGroup",
+    sku: {
+        capacity: 3,
+        name: "Standard_D1_v2",
+        tier: "Standard",
+    },
+    upgradePolicy: {
+        mode: "Manual",
+    },
+    virtualMachineProfile: {
+        networkProfile: {
+            networkInterfaceConfigurations: [
+                {
+                    enableIPForwarding: true,
+                    ipConfigurations: [{
+                        name: "{vmss-name}",
+                        subnet: {
+                            id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-subnet-name}",
+                        },
+                    }],
+                    name: "{vmss-name}",
+                    primary: true,
+                },
+                {
+                    enableAcceleratedNetworking: false,
+                    enableFpga: true,
+                    enableIPForwarding: false,
+                    ipConfigurations: [{
+                        name: "{fpgaNic-Name}",
+                        primary: true,
+                        privateIPAddressVersion: "IPv4",
+                        subnet: {
+                            id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Network/virtualNetworks/{existing-virtual-network-name}/subnets/{existing-fpga-subnet-name}",
+                        },
+                    }],
+                    name: "{fpgaNic-Name}",
+                    primary: false,
+                },
+            ],
+        },
+        osProfile: {
+            adminPassword: "{your-password}",
+            adminUsername: "{your-username}",
+            computerNamePrefix: "{vmss-name}",
+        },
+        storageProfile: {
+            imageReference: {
+                id: "/subscriptions/{subscription-id}/resourceGroups/myResourceGroup/providers/Microsoft.Compute/images/{existing-custom-image-name}",
+            },
+            osDisk: {
+                caching: "ReadWrite",
+                createOption: "FromImage",
+                managedDisk: {
+                    storageAccountType: "Standard_LRS",
+                },
+            },
+        },
+    },
+    vmScaleSetName: "{vmss-name}",
+});
+
+```
+
+{{% /example %}}
+
 ### Create a scale set with Host Encryption using encryptionAtHost property.
 {{% example csharp %}}
 ```csharp
@@ -16656,6 +16997,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Specifies whether the network interface is accelerated networking-enabled.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="enablefpga_csharp">
+<a href="#enablefpga_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Fpga</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the network interface is FPGA networking-enabled.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="enableipforwarding_csharp">
 <a href="#enableipforwarding_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>IPForwarding</a>
 </span>
@@ -16732,6 +17082,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the network interface is accelerated networking-enabled.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enablefpga_go">
+<a href="#enablefpga_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Fpga</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the network interface is FPGA networking-enabled.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="enableipforwarding_go">
@@ -16812,6 +17171,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Specifies whether the network interface is accelerated networking-enabled.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="enablefpga_nodejs">
+<a href="#enablefpga_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Fpga</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the network interface is FPGA networking-enabled.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="enableipforwarding_nodejs">
 <a href="#enableipforwarding_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>IPForwarding</a>
 </span>
@@ -16888,6 +17256,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the network interface is accelerated networking-enabled.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enable_fpga_python">
+<a href="#enable_fpga_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>fpga</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the network interface is FPGA networking-enabled.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="enable_ip_forwarding_python">
@@ -17094,6 +17471,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Specifies whether the network interface is accelerated networking-enabled.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="enablefpga_csharp">
+<a href="#enablefpga_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Fpga</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the network interface is FPGA networking-enabled.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="enableipforwarding_csharp">
 <a href="#enableipforwarding_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>IPForwarding</a>
 </span>
@@ -17170,6 +17556,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the network interface is accelerated networking-enabled.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enablefpga_go">
+<a href="#enablefpga_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Fpga</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the network interface is FPGA networking-enabled.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="enableipforwarding_go">
@@ -17250,6 +17645,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Specifies whether the network interface is accelerated networking-enabled.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="enablefpga_nodejs">
+<a href="#enablefpga_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Fpga</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the network interface is FPGA networking-enabled.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="enableipforwarding_nodejs">
 <a href="#enableipforwarding_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>IPForwarding</a>
 </span>
@@ -17326,6 +17730,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the network interface is accelerated networking-enabled.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enable_fpga_python">
+<a href="#enable_fpga_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>fpga</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the network interface is FPGA networking-enabled.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="enable_ip_forwarding_python">

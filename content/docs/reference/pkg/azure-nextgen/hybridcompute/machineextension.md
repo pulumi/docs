@@ -17,7 +17,7 @@ Latest API Version: 2020-08-02.
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
-### Create or Update a Machine Extension
+### Create or Update a Machine Extension (PUT)
 {{% example csharp %}}
 ```csharp
 using Pulumi;

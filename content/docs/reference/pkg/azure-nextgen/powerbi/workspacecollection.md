@@ -11,6 +11,13 @@ meta_desc: "Documentation for the azure-nextgen.powerbi.WorkspaceCollection reso
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Latest API Version: 2016-01-29.
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:powerbi/latest:WorkspaceCollection myresource1 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.PowerBI/workspaceCollections/{workspaceCollectionName} 
+```
 
 
 

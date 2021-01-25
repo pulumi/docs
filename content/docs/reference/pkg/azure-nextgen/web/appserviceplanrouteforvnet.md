@@ -12,6 +12,13 @@ meta_desc: "Documentation for the azure-nextgen.web.AppServicePlanRouteForVnet r
 
 Virtual Network route contract used to pass routing information for a Virtual Network.
 Latest API Version: 2020-09-01.
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:web/latest:AppServicePlanRouteForVnet myresource1  
+```
 
 
 

@@ -11,13 +11,13 @@ meta_desc: "Documentation for the azure-nextgen.recoveryservices.Vault resource 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Resource information, as returned by the resource provider.
-Latest API Version: 2016-06-01.
+Latest API Version: 2020-02-02.
 
 {{% examples %}}
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
-### Create of Update Recovery Services vault
+### Create or Update Recovery Services vault
 {{% example csharp %}}
 ```csharp
 using Pulumi;
@@ -34,6 +34,7 @@ class MyStack : Stack
                 Type = "SystemAssigned",
             },
             Location = "West US",
+            Properties = ,
             ResourceGroupName = "Default-RecoveryServices-ResourceGroup",
             Sku = new AzureNextGen.RecoveryServices.Latest.Inputs.SkuArgs
             {
@@ -66,6 +67,7 @@ func main() {
 				Type: pulumi.String("SystemAssigned"),
 			},
 			Location:          pulumi.String("West US"),
+			Properties:        nil,
 			ResourceGroupName: pulumi.String("Default-RecoveryServices-ResourceGroup"),
 			Sku: &recoveryservices.SkuArgs{
 				Name: pulumi.String("Standard"),
@@ -94,6 +96,7 @@ vault = azure_nextgen.recoveryservices.latest.Vault("vault",
         type="SystemAssigned",
     ),
     location="West US",
+    properties=azure_nextgen.recoveryservices.latest.VaultPropertiesArgs(),
     resource_group_name="Default-RecoveryServices-ResourceGroup",
     sku=azure_nextgen.recoveryservices.latest.SkuArgs(
         name="Standard",
@@ -115,6 +118,303 @@ const vault = new azure_nextgen.recoveryservices.latest.Vault("vault", {
         type: "SystemAssigned",
     },
     location: "West US",
+    properties: {},
+    resourceGroupName: "Default-RecoveryServices-ResourceGroup",
+    sku: {
+        name: "Standard",
+    },
+    vaultName: "swaggerExample",
+});
+
+```
+
+{{% /example %}}
+
+### Create or Update Vault with CustomerManagedKeys
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var vault = new AzureNextGen.RecoveryServices.Latest.Vault("vault", new AzureNextGen.RecoveryServices.Latest.VaultArgs
+        {
+            Identity = new AzureNextGen.RecoveryServices.Latest.Inputs.IdentityDataArgs
+            {
+                Type = "UserAssigned",
+                UserAssignedIdentities = 
+                {
+                    { "/subscriptions/85bf5e8c-3084-4f42-add2-746ebb7e97b2/resourcegroups/defaultrg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/examplemsi",  },
+                },
+            },
+            Location = "West US",
+            Properties = new AzureNextGen.RecoveryServices.Latest.Inputs.VaultPropertiesArgs
+            {
+                Encryption = new AzureNextGen.RecoveryServices.Latest.Inputs.VaultPropertiesEncryptionArgs
+                {
+                    InfrastructureEncryption = "Enabled",
+                    KekIdentity = new AzureNextGen.RecoveryServices.Latest.Inputs.CmkKekIdentityArgs
+                    {
+                        UserAssignedIdentity = "/subscriptions/85bf5e8c-3084-4f42-add2-746ebb7e97b2/resourcegroups/defaultrg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/examplemsi",
+                    },
+                    KeyVaultProperties = new AzureNextGen.RecoveryServices.Latest.Inputs.CmkKeyVaultPropertiesArgs
+                    {
+                        KeyUri = "https://cmk2xkv.vault.azure.net/keys/Key1/0767b348bb1a4c07baa6c4ec0055d2b3",
+                    },
+                },
+            },
+            ResourceGroupName = "Default-RecoveryServices-ResourceGroup",
+            Sku = new AzureNextGen.RecoveryServices.Latest.Inputs.SkuArgs
+            {
+                Name = "Standard",
+            },
+            VaultName = "swaggerExample",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+
+```go
+package main
+
+import (
+	recoveryservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/recoveryservices/latest"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := recoveryservices.NewVault(ctx, "vault", &recoveryservices.VaultArgs{
+			Identity: &recoveryservices.IdentityDataArgs{
+				Type: pulumi.String("UserAssigned"),
+				UserAssignedIdentities: pulumi.MapMap{
+					"/subscriptions/85bf5e8c-3084-4f42-add2-746ebb7e97b2/resourcegroups/defaultrg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/examplemsi": nil,
+				},
+			},
+			Location: pulumi.String("West US"),
+			Properties: &recoveryservices.VaultPropertiesArgs{
+				Encryption: &recoveryservices.VaultPropertiesEncryptionArgs{
+					InfrastructureEncryption: pulumi.String("Enabled"),
+					KekIdentity: &recoveryservices.CmkKekIdentityArgs{
+						UserAssignedIdentity: pulumi.String("/subscriptions/85bf5e8c-3084-4f42-add2-746ebb7e97b2/resourcegroups/defaultrg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/examplemsi"),
+					},
+					KeyVaultProperties: &recoveryservices.CmkKeyVaultPropertiesArgs{
+						KeyUri: pulumi.String("https://cmk2xkv.vault.azure.net/keys/Key1/0767b348bb1a4c07baa6c4ec0055d2b3"),
+					},
+				},
+			},
+			ResourceGroupName: pulumi.String("Default-RecoveryServices-ResourceGroup"),
+			Sku: &recoveryservices.SkuArgs{
+				Name: pulumi.String("Standard"),
+			},
+			VaultName: pulumi.String("swaggerExample"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azure_nextgen as azure_nextgen
+
+vault = azure_nextgen.recoveryservices.latest.Vault("vault",
+    identity=azure_nextgen.recoveryservices.latest.IdentityDataArgs(
+        type="UserAssigned",
+        user_assigned_identities={
+            "/subscriptions/85bf5e8c-3084-4f42-add2-746ebb7e97b2/resourcegroups/defaultrg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/examplemsi": {},
+        },
+    ),
+    location="West US",
+    properties=azure_nextgen.recoveryservices.latest.VaultPropertiesArgs(
+        encryption=azure_nextgen.recoveryservices.latest.VaultPropertiesEncryptionArgs(
+            infrastructure_encryption="Enabled",
+            kek_identity=azure_nextgen.recoveryservices.latest.CmkKekIdentityArgs(
+                user_assigned_identity="/subscriptions/85bf5e8c-3084-4f42-add2-746ebb7e97b2/resourcegroups/defaultrg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/examplemsi",
+            ),
+            key_vault_properties=azure_nextgen.recoveryservices.latest.CmkKeyVaultPropertiesArgs(
+                key_uri="https://cmk2xkv.vault.azure.net/keys/Key1/0767b348bb1a4c07baa6c4ec0055d2b3",
+            ),
+        ),
+    ),
+    resource_group_name="Default-RecoveryServices-ResourceGroup",
+    sku=azure_nextgen.recoveryservices.latest.SkuArgs(
+        name="Standard",
+    ),
+    vault_name="swaggerExample")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
+
+const vault = new azure_nextgen.recoveryservices.latest.Vault("vault", {
+    identity: {
+        type: "UserAssigned",
+        userAssignedIdentities: {
+            "/subscriptions/85bf5e8c-3084-4f42-add2-746ebb7e97b2/resourcegroups/defaultrg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/examplemsi": {},
+        },
+    },
+    location: "West US",
+    properties: {
+        encryption: {
+            infrastructureEncryption: "Enabled",
+            kekIdentity: {
+                userAssignedIdentity: "/subscriptions/85bf5e8c-3084-4f42-add2-746ebb7e97b2/resourcegroups/defaultrg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/examplemsi",
+            },
+            keyVaultProperties: {
+                keyUri: "https://cmk2xkv.vault.azure.net/keys/Key1/0767b348bb1a4c07baa6c4ec0055d2b3",
+            },
+        },
+    },
+    resourceGroupName: "Default-RecoveryServices-ResourceGroup",
+    sku: {
+        name: "Standard",
+    },
+    vaultName: "swaggerExample",
+});
+
+```
+
+{{% /example %}}
+
+### Create or Update Vault with User Assigned Identity
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var vault = new AzureNextGen.RecoveryServices.Latest.Vault("vault", new AzureNextGen.RecoveryServices.Latest.VaultArgs
+        {
+            Identity = new AzureNextGen.RecoveryServices.Latest.Inputs.IdentityDataArgs
+            {
+                Type = "UserAssigned",
+                UserAssignedIdentities = 
+                {
+                    { "/subscriptions/85bf5e8c-3084-4f42-add2-746ebb7e97b2/resourcegroups/defaultrg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/examplemsi",  },
+                },
+            },
+            Location = "West US",
+            Properties = ,
+            ResourceGroupName = "Default-RecoveryServices-ResourceGroup",
+            Sku = new AzureNextGen.RecoveryServices.Latest.Inputs.SkuArgs
+            {
+                Name = "Standard",
+            },
+            VaultName = "swaggerExample",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+
+```go
+package main
+
+import (
+	recoveryservices "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/recoveryservices/latest"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := recoveryservices.NewVault(ctx, "vault", &recoveryservices.VaultArgs{
+			Identity: &recoveryservices.IdentityDataArgs{
+				Type: pulumi.String("UserAssigned"),
+				UserAssignedIdentities: pulumi.MapMap{
+					"/subscriptions/85bf5e8c-3084-4f42-add2-746ebb7e97b2/resourcegroups/defaultrg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/examplemsi": nil,
+				},
+			},
+			Location:          pulumi.String("West US"),
+			Properties:        nil,
+			ResourceGroupName: pulumi.String("Default-RecoveryServices-ResourceGroup"),
+			Sku: &recoveryservices.SkuArgs{
+				Name: pulumi.String("Standard"),
+			},
+			VaultName: pulumi.String("swaggerExample"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azure_nextgen as azure_nextgen
+
+vault = azure_nextgen.recoveryservices.latest.Vault("vault",
+    identity=azure_nextgen.recoveryservices.latest.IdentityDataArgs(
+        type="UserAssigned",
+        user_assigned_identities={
+            "/subscriptions/85bf5e8c-3084-4f42-add2-746ebb7e97b2/resourcegroups/defaultrg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/examplemsi": {},
+        },
+    ),
+    location="West US",
+    properties=azure_nextgen.recoveryservices.latest.VaultPropertiesArgs(),
+    resource_group_name="Default-RecoveryServices-ResourceGroup",
+    sku=azure_nextgen.recoveryservices.latest.SkuArgs(
+        name="Standard",
+    ),
+    vault_name="swaggerExample")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
+
+const vault = new azure_nextgen.recoveryservices.latest.Vault("vault", {
+    identity: {
+        type: "UserAssigned",
+        userAssignedIdentities: {
+            "/subscriptions/85bf5e8c-3084-4f42-add2-746ebb7e97b2/resourcegroups/defaultrg/providers/Microsoft.ManagedIdentity/userAssignedIdentities/examplemsi": {},
+        },
+    },
+    location: "West US",
+    properties: {},
     resourceGroupName: "Default-RecoveryServices-ResourceGroup",
     sku: {
         name: "Standard",
@@ -138,7 +438,7 @@ const vault = new azure_nextgen.recoveryservices.latest.Vault("vault", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Vault</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">e_tag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[IdentityDataArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[SkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vault_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Vault</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">e_tag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[IdentityDataArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[VaultPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[SkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">vault_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -356,6 +656,15 @@ The Vault resource accepts the following [input]({{< relref "/docs/intro/concept
     <dd>{{% md %}}Identity for the resource.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="properties_csharp">
+<a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#vaultproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Vault<wbr>Properties<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Properties of the vault.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="sku_csharp">
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
@@ -423,6 +732,15 @@ The Vault resource accepts the following [input]({{< relref "/docs/intro/concept
         <span class="property-type"><a href="#identitydata">Identity<wbr>Data</a></span>
     </dt>
     <dd>{{% md %}}Identity for the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="properties_go">
+<a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#vaultproperties">Vault<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}Properties of the vault.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="sku_go">
@@ -494,6 +812,15 @@ The Vault resource accepts the following [input]({{< relref "/docs/intro/concept
     <dd>{{% md %}}Identity for the resource.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="properties_nodejs">
+<a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#vaultproperties">Vault<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}Properties of the vault.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="sku_nodejs">
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
@@ -563,6 +890,15 @@ The Vault resource accepts the following [input]({{< relref "/docs/intro/concept
     <dd>{{% md %}}Identity for the resource.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="properties_python">
+<a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#vaultproperties">Vault<wbr>Properties<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Properties of the vault.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="sku_python">
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
@@ -612,15 +948,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Resource name associated with the resource.{{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="properties_csharp">
-<a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vaultpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Outputs.<wbr>Vault<wbr>Properties<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Properties of the vault.{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
@@ -652,15 +979,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource name associated with the resource.{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="properties_go">
-<a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vaultpropertiesresponse">Vault<wbr>Properties<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Properties of the vault.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="type_go">
@@ -696,15 +1014,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Resource name associated with the resource.{{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="properties_nodejs">
-<a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vaultpropertiesresponse">Vault<wbr>Properties<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Properties of the vault.{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
@@ -738,15 +1047,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Resource name associated with the resource.{{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="properties_python">
-<a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#vaultpropertiesresponse">Vault<wbr>Properties<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Properties of the vault.{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
@@ -767,6 +1067,326 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+<h4 id="cmkkekidentity">Cmk<wbr>Kek<wbr>Identity</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="usesystemassignedidentity_csharp">
+<a href="#usesystemassignedidentity_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>System<wbr>Assigned<wbr>Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicate that system assigned identity should be used. Mutually exclusive with 'userAssignedIdentity' field{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="userassignedidentity_csharp">
+<a href="#userassignedidentity_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The user assigned identity to be used to grant permissions in case the type of identity used is UserAssigned{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="usesystemassignedidentity_go">
+<a href="#usesystemassignedidentity_go" style="color: inherit; text-decoration: inherit;">Use<wbr>System<wbr>Assigned<wbr>Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicate that system assigned identity should be used. Mutually exclusive with 'userAssignedIdentity' field{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="userassignedidentity_go">
+<a href="#userassignedidentity_go" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The user assigned identity to be used to grant permissions in case the type of identity used is UserAssigned{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="usesystemassignedidentity_nodejs">
+<a href="#usesystemassignedidentity_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>System<wbr>Assigned<wbr>Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Indicate that system assigned identity should be used. Mutually exclusive with 'userAssignedIdentity' field{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="userassignedidentity_nodejs">
+<a href="#userassignedidentity_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The user assigned identity to be used to grant permissions in case the type of identity used is UserAssigned{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="use_system_assigned_identity_python">
+<a href="#use_system_assigned_identity_python" style="color: inherit; text-decoration: inherit;">use_<wbr>system_<wbr>assigned_<wbr>identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicate that system assigned identity should be used. Mutually exclusive with 'userAssignedIdentity' field{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="user_assigned_identity_python">
+<a href="#user_assigned_identity_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The user assigned identity to be used to grant permissions in case the type of identity used is UserAssigned{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="cmkkekidentityresponse">Cmk<wbr>Kek<wbr>Identity<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="usesystemassignedidentity_csharp">
+<a href="#usesystemassignedidentity_csharp" style="color: inherit; text-decoration: inherit;">Use<wbr>System<wbr>Assigned<wbr>Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicate that system assigned identity should be used. Mutually exclusive with 'userAssignedIdentity' field{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="userassignedidentity_csharp">
+<a href="#userassignedidentity_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The user assigned identity to be used to grant permissions in case the type of identity used is UserAssigned{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="usesystemassignedidentity_go">
+<a href="#usesystemassignedidentity_go" style="color: inherit; text-decoration: inherit;">Use<wbr>System<wbr>Assigned<wbr>Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicate that system assigned identity should be used. Mutually exclusive with 'userAssignedIdentity' field{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="userassignedidentity_go">
+<a href="#userassignedidentity_go" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The user assigned identity to be used to grant permissions in case the type of identity used is UserAssigned{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="usesystemassignedidentity_nodejs">
+<a href="#usesystemassignedidentity_nodejs" style="color: inherit; text-decoration: inherit;">use<wbr>System<wbr>Assigned<wbr>Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Indicate that system assigned identity should be used. Mutually exclusive with 'userAssignedIdentity' field{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="userassignedidentity_nodejs">
+<a href="#userassignedidentity_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The user assigned identity to be used to grant permissions in case the type of identity used is UserAssigned{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="use_system_assigned_identity_python">
+<a href="#use_system_assigned_identity_python" style="color: inherit; text-decoration: inherit;">use_<wbr>system_<wbr>assigned_<wbr>identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicate that system assigned identity should be used. Mutually exclusive with 'userAssignedIdentity' field{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="user_assigned_identity_python">
+<a href="#user_assigned_identity_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The user assigned identity to be used to grant permissions in case the type of identity used is UserAssigned{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="cmkkeyvaultproperties">Cmk<wbr>Key<wbr>Vault<wbr>Properties</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keyuri_csharp">
+<a href="#keyuri_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The key uri of the Customer Managed Key{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keyuri_go">
+<a href="#keyuri_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The key uri of the Customer Managed Key{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keyuri_nodejs">
+<a href="#keyuri_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The key uri of the Customer Managed Key{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="key_uri_python">
+<a href="#key_uri_python" style="color: inherit; text-decoration: inherit;">key_<wbr>uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The key uri of the Customer Managed Key{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="cmkkeyvaultpropertiesresponse">Cmk<wbr>Key<wbr>Vault<wbr>Properties<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keyuri_csharp">
+<a href="#keyuri_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The key uri of the Customer Managed Key{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keyuri_go">
+<a href="#keyuri_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The key uri of the Customer Managed Key{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keyuri_nodejs">
+<a href="#keyuri_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The key uri of the Customer Managed Key{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="key_uri_python">
+<a href="#key_uri_python" style="color: inherit; text-decoration: inherit;">key_<wbr>uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The key uri of the Customer Managed Key{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
 <h4 id="identitydata">Identity<wbr>Data</h4>
 
 {{% choosable language csharp %}}
@@ -780,7 +1400,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#resourceidentitytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Resource<wbr>Identity<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The identity type.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of managed identity used. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user-assigned identities. The type 'None' will remove any identities.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="userassignedidentities_csharp">
+<a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}The list of user-assigned identities associated with the resource. The user-assigned identity dictionary keys will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -795,7 +1424,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#resourceidentitytype">Resource<wbr>Identity<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The identity type.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of managed identity used. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user-assigned identities. The type 'None' will remove any identities.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="userassignedidentities_go">
+<a href="#userassignedidentities_go" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}The list of user-assigned identities associated with the resource. The user-assigned identity dictionary keys will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -810,7 +1448,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#resourceidentitytype">Resource<wbr>Identity<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The identity type.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of managed identity used. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user-assigned identities. The type 'None' will remove any identities.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="userassignedidentities_nodejs">
+<a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}The list of user-assigned identities associated with the resource. The user-assigned identity dictionary keys will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -825,7 +1472,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#resourceidentitytype">Resource<wbr>Identity<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The identity type.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of managed identity used. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user-assigned identities. The type 'None' will remove any identities.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="user_assigned_identities_python">
+<a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}The list of user-assigned identities associated with the resource. The user-assigned identity dictionary keys will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -860,7 +1516,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity type.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of managed identity used. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user-assigned identities. The type 'None' will remove any identities.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="userassignedidentities_csharp">
+<a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>User<wbr>Identity<wbr>Response<wbr>Args&gt;</span>
+    </dt>
+    <dd>{{% md %}}The list of user-assigned identities associated with the resource. The user-assigned identity dictionary keys will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -893,7 +1558,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity type.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of managed identity used. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user-assigned identities. The type 'None' will remove any identities.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="userassignedidentities_go">
+<a href="#userassignedidentities_go" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]User<wbr>Identity<wbr>Response</span>
+    </dt>
+    <dd>{{% md %}}The list of user-assigned identities associated with the resource. The user-assigned identity dictionary keys will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -926,7 +1600,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The identity type.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of managed identity used. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user-assigned identities. The type 'None' will remove any identities.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="userassignedidentities_nodejs">
+<a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: User<wbr>Identity<wbr>Response}</span>
+    </dt>
+    <dd>{{% md %}}The list of user-assigned identities associated with the resource. The user-assigned identity dictionary keys will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -959,7 +1642,54 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The identity type.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of managed identity used. The type 'SystemAssigned, UserAssigned' includes both an implicitly created identity and a set of user-assigned identities. The type 'None' will remove any identities.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="user_assigned_identities_python">
+<a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, User<wbr>Identity<wbr>Response<wbr>Args]</span>
+    </dt>
+    <dd>{{% md %}}The list of user-assigned identities associated with the resource. The user-assigned identity dictionary keys will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="infrastructureencryptionstate">Infrastructure<wbr>Encryption<wbr>State</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Enabled</dt>
+    <dd>Enabled</dd>
+    <dt>Disabled</dt>
+    <dd>Disabled</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Infrastructure<wbr>Encryption<wbr>State<wbr>Enabled</dt>
+    <dd>Enabled</dd>
+    <dt>Infrastructure<wbr>Encryption<wbr>State<wbr>Disabled</dt>
+    <dd>Disabled</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Enabled</dt>
+    <dd>Enabled</dd>
+    <dt>Disabled</dt>
+    <dd>Disabled</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>ENABLED</dt>
+    <dd>Enabled</dd>
+    <dt>DISABLED</dt>
+    <dd>Disabled</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1399,6 +2129,10 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>SystemAssigned</dd>
     <dt>None</dt>
     <dd>None</dd>
+    <dt>User<wbr>Assigned</dt>
+    <dd>UserAssigned</dd>
+    <dt>System<wbr>Assigned_User<wbr>Assigned</dt>
+    <dd>SystemAssigned, UserAssigned</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1408,6 +2142,10 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>SystemAssigned</dd>
     <dt>Resource<wbr>Identity<wbr>Type<wbr>None</dt>
     <dd>None</dd>
+    <dt>Resource<wbr>Identity<wbr>Type<wbr>User<wbr>Assigned</dt>
+    <dd>UserAssigned</dd>
+    <dt>Resource<wbr>Identity<wbr>Type_System<wbr>Assigned_User<wbr>Assigned</dt>
+    <dd>SystemAssigned, UserAssigned</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1417,6 +2155,10 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>SystemAssigned</dd>
     <dt>None</dt>
     <dd>None</dd>
+    <dt>User<wbr>Assigned</dt>
+    <dd>UserAssigned</dd>
+    <dt>System<wbr>Assigned_User<wbr>Assigned</dt>
+    <dd>SystemAssigned, UserAssigned</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1426,6 +2168,10 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>SystemAssigned</dd>
     <dt>NONE</dt>
     <dd>None</dd>
+    <dt>USER_ASSIGNED</dt>
+    <dd>UserAssigned</dd>
+    <dt>SYSTEM_ASSIGNED_USER_ASSIGNED</dt>
+    <dd>SystemAssigned, UserAssigned</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1941,6 +2687,300 @@ All [input](#inputs) properties are implicitly available as output properties. A
 </dl>
 {{% /choosable %}}
 
+<h4 id="useridentityresponse">User<wbr>Identity<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="clientid_csharp">
+<a href="#clientid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The client ID of the user-assigned identity.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="principalid_csharp">
+<a href="#principalid_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The principal ID of the user-assigned identity.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="clientid_go">
+<a href="#clientid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The client ID of the user-assigned identity.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="principalid_go">
+<a href="#principalid_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The principal ID of the user-assigned identity.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="clientid_nodejs">
+<a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The client ID of the user-assigned identity.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="principalid_nodejs">
+<a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The principal ID of the user-assigned identity.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="client_id_python">
+<a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The client ID of the user-assigned identity.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="principal_id_python">
+<a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The principal ID of the user-assigned identity.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="vaultproperties">Vault<wbr>Properties</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="encryption_csharp">
+<a href="#encryption_csharp" style="color: inherit; text-decoration: inherit;">Encryption</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#vaultpropertiesencryption">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Vault<wbr>Properties<wbr>Encryption<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Customer Managed Key details of the resource.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="encryption_go">
+<a href="#encryption_go" style="color: inherit; text-decoration: inherit;">Encryption</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#vaultpropertiesencryption">Vault<wbr>Properties<wbr>Encryption</a></span>
+    </dt>
+    <dd>{{% md %}}Customer Managed Key details of the resource.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="encryption_nodejs">
+<a href="#encryption_nodejs" style="color: inherit; text-decoration: inherit;">encryption</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#vaultpropertiesencryption">Vault<wbr>Properties<wbr>Encryption</a></span>
+    </dt>
+    <dd>{{% md %}}Customer Managed Key details of the resource.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="encryption_python">
+<a href="#encryption_python" style="color: inherit; text-decoration: inherit;">encryption</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#vaultpropertiesencryption">Vault<wbr>Properties<wbr>Encryption<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Customer Managed Key details of the resource.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="vaultpropertiesencryption">Vault<wbr>Properties<wbr>Encryption</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="infrastructureencryption_csharp">
+<a href="#infrastructureencryption_csharp" style="color: inherit; text-decoration: inherit;">Infrastructure<wbr>Encryption</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#infrastructureencryptionstate">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Infrastructure<wbr>Encryption<wbr>State</a></span>
+    </dt>
+    <dd>{{% md %}}Enabling/Disabling the Double Encryption state{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kekidentity_csharp">
+<a href="#kekidentity_csharp" style="color: inherit; text-decoration: inherit;">Kek<wbr>Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cmkkekidentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Cmk<wbr>Kek<wbr>Identity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The details of the identity used for CMK{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keyvaultproperties_csharp">
+<a href="#keyvaultproperties_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cmkkeyvaultproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Cmk<wbr>Key<wbr>Vault<wbr>Properties<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The properties of the Key Vault which hosts CMK{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="infrastructureencryption_go">
+<a href="#infrastructureencryption_go" style="color: inherit; text-decoration: inherit;">Infrastructure<wbr>Encryption</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#infrastructureencryptionstate">Infrastructure<wbr>Encryption<wbr>State</a></span>
+    </dt>
+    <dd>{{% md %}}Enabling/Disabling the Double Encryption state{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kekidentity_go">
+<a href="#kekidentity_go" style="color: inherit; text-decoration: inherit;">Kek<wbr>Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cmkkekidentity">Cmk<wbr>Kek<wbr>Identity</a></span>
+    </dt>
+    <dd>{{% md %}}The details of the identity used for CMK{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keyvaultproperties_go">
+<a href="#keyvaultproperties_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cmkkeyvaultproperties">Cmk<wbr>Key<wbr>Vault<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}The properties of the Key Vault which hosts CMK{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="infrastructureencryption_nodejs">
+<a href="#infrastructureencryption_nodejs" style="color: inherit; text-decoration: inherit;">infrastructure<wbr>Encryption</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#infrastructureencryptionstate">Infrastructure<wbr>Encryption<wbr>State</a></span>
+    </dt>
+    <dd>{{% md %}}Enabling/Disabling the Double Encryption state{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kekidentity_nodejs">
+<a href="#kekidentity_nodejs" style="color: inherit; text-decoration: inherit;">kek<wbr>Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cmkkekidentity">Cmk<wbr>Kek<wbr>Identity</a></span>
+    </dt>
+    <dd>{{% md %}}The details of the identity used for CMK{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keyvaultproperties_nodejs">
+<a href="#keyvaultproperties_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cmkkeyvaultproperties">Cmk<wbr>Key<wbr>Vault<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}The properties of the Key Vault which hosts CMK{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="infrastructure_encryption_python">
+<a href="#infrastructure_encryption_python" style="color: inherit; text-decoration: inherit;">infrastructure_<wbr>encryption</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str | <a href="#infrastructureencryptionstate">Infrastructure<wbr>Encryption<wbr>State</a></span>
+    </dt>
+    <dd>{{% md %}}Enabling/Disabling the Double Encryption state{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kek_identity_python">
+<a href="#kek_identity_python" style="color: inherit; text-decoration: inherit;">kek_<wbr>identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cmkkekidentity">Cmk<wbr>Kek<wbr>Identity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The details of the identity used for CMK{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="key_vault_properties_python">
+<a href="#key_vault_properties_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cmkkeyvaultproperties">Cmk<wbr>Key<wbr>Vault<wbr>Properties<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The properties of the Key Vault which hosts CMK{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
 <h4 id="vaultpropertiesresponse">Vault<wbr>Properties<wbr>Response</h4>
 
 {{% choosable language csharp %}}
@@ -1982,6 +3022,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Provisioning State.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="encryption_csharp">
+<a href="#encryption_csharp" style="color: inherit; text-decoration: inherit;">Encryption</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#vaultpropertiesresponseencryption">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Vault<wbr>Properties<wbr>Response<wbr>Encryption<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Customer Managed Key details of the resource.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="upgradedetails_csharp">
@@ -2035,6 +3084,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Provisioning State.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="encryption_go">
+<a href="#encryption_go" style="color: inherit; text-decoration: inherit;">Encryption</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#vaultpropertiesresponseencryption">Vault<wbr>Properties<wbr>Response<wbr>Encryption</a></span>
+    </dt>
+    <dd>{{% md %}}Customer Managed Key details of the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="upgradedetails_go">
 <a href="#upgradedetails_go" style="color: inherit; text-decoration: inherit;">Upgrade<wbr>Details</a>
 </span>
@@ -2084,6 +3142,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Provisioning State.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="encryption_nodejs">
+<a href="#encryption_nodejs" style="color: inherit; text-decoration: inherit;">encryption</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#vaultpropertiesresponseencryption">Vault<wbr>Properties<wbr>Response<wbr>Encryption</a></span>
+    </dt>
+    <dd>{{% md %}}Customer Managed Key details of the resource.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="upgradedetails_nodejs">
@@ -2137,6 +3204,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Provisioning State.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="encryption_python">
+<a href="#encryption_python" style="color: inherit; text-decoration: inherit;">encryption</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#vaultpropertiesresponseencryption">Vault<wbr>Properties<wbr>Response<wbr>Encryption<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Customer Managed Key details of the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="upgrade_details_python">
 <a href="#upgrade_details_python" style="color: inherit; text-decoration: inherit;">upgrade_<wbr>details</a>
 </span>
@@ -2144,6 +3220,140 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#upgradedetailsresponse">Upgrade<wbr>Details<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Details for upgrading vault.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="vaultpropertiesresponseencryption">Vault<wbr>Properties<wbr>Response<wbr>Encryption</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="infrastructureencryption_csharp">
+<a href="#infrastructureencryption_csharp" style="color: inherit; text-decoration: inherit;">Infrastructure<wbr>Encryption</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Enabling/Disabling the Double Encryption state{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kekidentity_csharp">
+<a href="#kekidentity_csharp" style="color: inherit; text-decoration: inherit;">Kek<wbr>Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cmkkekidentityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Cmk<wbr>Kek<wbr>Identity<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The details of the identity used for CMK{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keyvaultproperties_csharp">
+<a href="#keyvaultproperties_csharp" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cmkkeyvaultpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Inputs.<wbr>Cmk<wbr>Key<wbr>Vault<wbr>Properties<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The properties of the Key Vault which hosts CMK{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="infrastructureencryption_go">
+<a href="#infrastructureencryption_go" style="color: inherit; text-decoration: inherit;">Infrastructure<wbr>Encryption</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Enabling/Disabling the Double Encryption state{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kekidentity_go">
+<a href="#kekidentity_go" style="color: inherit; text-decoration: inherit;">Kek<wbr>Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cmkkekidentityresponse">Cmk<wbr>Kek<wbr>Identity<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The details of the identity used for CMK{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keyvaultproperties_go">
+<a href="#keyvaultproperties_go" style="color: inherit; text-decoration: inherit;">Key<wbr>Vault<wbr>Properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cmkkeyvaultpropertiesresponse">Cmk<wbr>Key<wbr>Vault<wbr>Properties<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The properties of the Key Vault which hosts CMK{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="infrastructureencryption_nodejs">
+<a href="#infrastructureencryption_nodejs" style="color: inherit; text-decoration: inherit;">infrastructure<wbr>Encryption</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Enabling/Disabling the Double Encryption state{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kekidentity_nodejs">
+<a href="#kekidentity_nodejs" style="color: inherit; text-decoration: inherit;">kek<wbr>Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cmkkekidentityresponse">Cmk<wbr>Kek<wbr>Identity<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The details of the identity used for CMK{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="keyvaultproperties_nodejs">
+<a href="#keyvaultproperties_nodejs" style="color: inherit; text-decoration: inherit;">key<wbr>Vault<wbr>Properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cmkkeyvaultpropertiesresponse">Cmk<wbr>Key<wbr>Vault<wbr>Properties<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The properties of the Key Vault which hosts CMK{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="infrastructure_encryption_python">
+<a href="#infrastructure_encryption_python" style="color: inherit; text-decoration: inherit;">infrastructure_<wbr>encryption</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Enabling/Disabling the Double Encryption state{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="kek_identity_python">
+<a href="#kek_identity_python" style="color: inherit; text-decoration: inherit;">kek_<wbr>identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cmkkekidentityresponse">Cmk<wbr>Kek<wbr>Identity<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The details of the identity used for CMK{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="key_vault_properties_python">
+<a href="#key_vault_properties_python" style="color: inherit; text-decoration: inherit;">key_<wbr>vault_<wbr>properties</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#cmkkeyvaultpropertiesresponse">Cmk<wbr>Key<wbr>Vault<wbr>Properties<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The properties of the Key Vault which hosts CMK{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 ## Import

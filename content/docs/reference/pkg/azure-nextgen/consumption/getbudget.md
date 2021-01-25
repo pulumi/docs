@@ -244,7 +244,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#budgetfilterresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Consumption.<wbr>Outputs.<wbr>Budget<wbr>Filter<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}May be used to filter budgets by resource group, resource, or meter.{{% /md %}}</dd>
+    <dd>{{% md %}}May be used to filter budgets by user-specified dimensions and/or tags.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="notifications_csharp">
@@ -349,7 +349,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#budgetfilterresponse">Budget<wbr>Filter<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}May be used to filter budgets by resource group, resource, or meter.{{% /md %}}</dd>
+    <dd>{{% md %}}May be used to filter budgets by user-specified dimensions and/or tags.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="notifications_go">
@@ -454,7 +454,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#budgetfilterresponse">Budget<wbr>Filter<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}May be used to filter budgets by resource group, resource, or meter.{{% /md %}}</dd>
+    <dd>{{% md %}}May be used to filter budgets by user-specified dimensions and/or tags.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="notifications_nodejs">
@@ -559,7 +559,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#budgetfilterresponse">Budget<wbr>Filter<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}May be used to filter budgets by resource group, resource, or meter.{{% /md %}}</dd>
+    <dd>{{% md %}}May be used to filter budgets by user-specified dimensions and/or tags.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="notifications_python">

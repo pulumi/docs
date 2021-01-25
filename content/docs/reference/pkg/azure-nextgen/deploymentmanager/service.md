@@ -721,7 +721,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:deploymentmanager/v20191101preview:Service myService <Azure resource ID> 
+$ pulumi import azure-nextgen:deploymentmanager/v20191101preview:Service myService /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DeploymentManager/serviceTopologies/{serviceTopologyName}/services/{serviceName} 
 ```
 
 

@@ -1883,6 +1883,15 @@ The following output properties are available:
     <dd>{{% md %}}Expected bandwidth in MBPS.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="egressnatrules_csharp">
+<a href="#egressnatrules_csharp" style="color: inherit; text-decoration: inherit;">Egress<wbr>Nat<wbr>Rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of egress NatRules.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="enablebgp_csharp">
 <a href="#enablebgp_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Bgp</a>
 </span>
@@ -1908,6 +1917,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ingressnatrules_csharp">
+<a href="#ingressnatrules_csharp" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Nat<wbr>Rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of ingress NatRules.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="ipsecpolicies_csharp">
@@ -1971,6 +1989,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Connection protocol used for this connection.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vpnlinkconnectionmode_csharp">
+<a href="#vpnlinkconnectionmode_csharp" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Link<wbr>Connection<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Vpn link connection mode.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="vpnsitelink_csharp">
@@ -2051,6 +2078,15 @@ The following output properties are available:
     <dd>{{% md %}}Expected bandwidth in MBPS.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="egressnatrules_go">
+<a href="#egressnatrules_go" style="color: inherit; text-decoration: inherit;">Egress<wbr>Nat<wbr>Rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresourceresponse">[]Sub<wbr>Resource<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}List of egress NatRules.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="enablebgp_go">
 <a href="#enablebgp_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Bgp</a>
 </span>
@@ -2076,6 +2112,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ingressnatrules_go">
+<a href="#ingressnatrules_go" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Nat<wbr>Rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresourceresponse">[]Sub<wbr>Resource<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}List of ingress NatRules.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="ipsecpolicies_go">
@@ -2139,6 +2184,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Connection protocol used for this connection.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vpnlinkconnectionmode_go">
+<a href="#vpnlinkconnectionmode_go" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Link<wbr>Connection<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Vpn link connection mode.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="vpnsitelink_go">
@@ -2219,6 +2273,15 @@ The following output properties are available:
     <dd>{{% md %}}Expected bandwidth in MBPS.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="egressnatrules_nodejs">
+<a href="#egressnatrules_nodejs" style="color: inherit; text-decoration: inherit;">egress<wbr>Nat<wbr>Rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of egress NatRules.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="enablebgp_nodejs">
 <a href="#enablebgp_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Bgp</a>
 </span>
@@ -2244,6 +2307,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ingressnatrules_nodejs">
+<a href="#ingressnatrules_nodejs" style="color: inherit; text-decoration: inherit;">ingress<wbr>Nat<wbr>Rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of ingress NatRules.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="ipsecpolicies_nodejs">
@@ -2307,6 +2379,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Connection protocol used for this connection.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vpnlinkconnectionmode_nodejs">
+<a href="#vpnlinkconnectionmode_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Link<wbr>Connection<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Vpn link connection mode.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="vpnsitelink_nodejs">
@@ -2387,6 +2468,15 @@ The following output properties are available:
     <dd>{{% md %}}Expected bandwidth in MBPS.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="egress_nat_rules_python">
+<a href="#egress_nat_rules_python" style="color: inherit; text-decoration: inherit;">egress_<wbr>nat_<wbr>rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresourceresponse">Sequence[Sub<wbr>Resource<wbr>Response<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}List of egress NatRules.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="enable_bgp_python">
 <a href="#enable_bgp_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>bgp</a>
 </span>
@@ -2412,6 +2502,15 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ingress_nat_rules_python">
+<a href="#ingress_nat_rules_python" style="color: inherit; text-decoration: inherit;">ingress_<wbr>nat_<wbr>rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresourceresponse">Sequence[Sub<wbr>Resource<wbr>Response<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}List of ingress NatRules.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="ipsec_policies_python">
@@ -2475,6 +2574,15 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Connection protocol used for this connection.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vpn_link_connection_mode_python">
+<a href="#vpn_link_connection_mode_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>link_<wbr>connection_<wbr>mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Vpn link connection mode.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="vpn_site_link_python">

@@ -128,7 +128,7 @@ const account = new azure_nextgen.purview.v20201201preview.Account("account", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Account</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[IdentityArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_acls</span><span class="p">:</span> <span class="nx">Optional[NetworkAclsArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[AccountSkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Account</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[IdentityArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">public_network_access</span><span class="p">:</span> <span class="nx">Optional[Union[str, PublicNetworkAccess]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[AccountSkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -337,13 +337,13 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}Gets or sets the location.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="networkacls_csharp">
-<a href="#networkacls_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Acls</a>
+        <span id="publicnetworkaccess_csharp">
+<a href="#publicnetworkaccess_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkacls">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Purview.<wbr>Inputs.<wbr>Network<wbr>Acls<wbr>Args</a></span>
+        <span class="property-type">string | <a href="#publicnetworkaccess">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Purview.<wbr>Public<wbr>Network<wbr>Access</a></span>
     </dt>
-    <dd>{{% md %}}Get the network ACLs.{{% /md %}}</dd>
+    <dd>{{% md %}}Gets or sets the public network access.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="sku_csharp">
@@ -406,13 +406,13 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}Gets or sets the location.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="networkacls_go">
-<a href="#networkacls_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Acls</a>
+        <span id="publicnetworkaccess_go">
+<a href="#publicnetworkaccess_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkacls">Network<wbr>Acls</a></span>
+        <span class="property-type">string | <a href="#publicnetworkaccess">Public<wbr>Network<wbr>Access</a></span>
     </dt>
-    <dd>{{% md %}}Get the network ACLs.{{% /md %}}</dd>
+    <dd>{{% md %}}Gets or sets the public network access.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="sku_go">
@@ -475,13 +475,13 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}Gets or sets the location.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="networkacls_nodejs">
-<a href="#networkacls_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Acls</a>
+        <span id="publicnetworkaccess_nodejs">
+<a href="#publicnetworkaccess_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Network<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkacls">Network<wbr>Acls</a></span>
+        <span class="property-type">string | <a href="#publicnetworkaccess">Public<wbr>Network<wbr>Access</a></span>
     </dt>
-    <dd>{{% md %}}Get the network ACLs.{{% /md %}}</dd>
+    <dd>{{% md %}}Gets or sets the public network access.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="sku_nodejs">
@@ -544,13 +544,13 @@ The Account resource accepts the following [input]({{< relref "/docs/intro/conce
     <dd>{{% md %}}Gets or sets the location.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="network_acls_python">
-<a href="#network_acls_python" style="color: inherit; text-decoration: inherit;">network_<wbr>acls</a>
+        <span id="public_network_access_python">
+<a href="#public_network_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>network_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkacls">Network<wbr>Acls<wbr>Args</a></span>
+        <span class="property-type">str | <a href="#publicnetworkaccess">Public<wbr>Network<wbr>Access</a></span>
     </dt>
-    <dd>{{% md %}}Get the network ACLs.{{% /md %}}</dd>
+    <dd>{{% md %}}Gets or sets the public network access.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="sku_python">
@@ -1579,44 +1579,6 @@ Configured in AWS to allow use of the role arn used for scanning{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
-<h4 id="defaultaction">Default<wbr>Action</h4>
-
-{{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Allow</dt>
-    <dd>Allow</dd>
-    <dt>Deny</dt>
-    <dd>Deny</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="tabular">
-    <dt>Default<wbr>Action<wbr>Allow</dt>
-    <dd>Allow</dd>
-    <dt>Default<wbr>Action<wbr>Deny</dt>
-    <dd>Deny</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Allow</dt>
-    <dd>Allow</dd>
-    <dt>Deny</dt>
-    <dd>Deny</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="tabular">
-    <dt>ALLOW</dt>
-    <dd>Allow</dd>
-    <dt>DENY</dt>
-    <dd>Deny</dd>
-</dl>
-{{% /choosable %}}
-
 <h4 id="identity">Identity</h4>
 
 {{% choosable language csharp %}}
@@ -1840,130 +1802,6 @@ Configured in AWS to allow use of the role arn used for scanning{{% /md %}}</dd>
 <dl class="tabular">
     <dt>STANDARD</dt>
     <dd>Standard</dd>
-</dl>
-{{% /choosable %}}
-
-<h4 id="networkacls">Network<wbr>Acls</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="defaultaction_csharp">
-<a href="#defaultaction_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Action</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#defaultaction">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Purview.<wbr>Default<wbr>Action</a></span>
-    </dt>
-    <dd>{{% md %}}Gets or sets the default behavior of network ACLs.{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="defaultaction_go">
-<a href="#defaultaction_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Action</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#defaultaction">Default<wbr>Action</a></span>
-    </dt>
-    <dd>{{% md %}}Gets or sets the default behavior of network ACLs.{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="defaultaction_nodejs">
-<a href="#defaultaction_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Action</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#defaultaction">Default<wbr>Action</a></span>
-    </dt>
-    <dd>{{% md %}}Gets or sets the default behavior of network ACLs.{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="default_action_python">
-<a href="#default_action_python" style="color: inherit; text-decoration: inherit;">default_<wbr>action</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#defaultaction">Default<wbr>Action</a></span>
-    </dt>
-    <dd>{{% md %}}Gets or sets the default behavior of network ACLs.{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-<h4 id="networkaclsresponse">Network<wbr>Acls<wbr>Response</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="defaultaction_csharp">
-<a href="#defaultaction_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Action</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Gets or sets the default behavior of network ACLs.{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="defaultaction_go">
-<a href="#defaultaction_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Action</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Gets or sets the default behavior of network ACLs.{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="defaultaction_nodejs">
-<a href="#defaultaction_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Action</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Gets or sets the default behavior of network ACLs.{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="default_action_python">
-<a href="#default_action_python" style="color: inherit; text-decoration: inherit;">default_<wbr>action</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Gets or sets the default behavior of network ACLs.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -2402,6 +2240,52 @@ Configured in AWS to allow use of the role arn used for scanning{{% /md %}}</dd>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The status.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="publicnetworkaccess">Public<wbr>Network<wbr>Access</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Not<wbr>Specified</dt>
+    <dd>NotSpecified</dd>
+    <dt>Enabled</dt>
+    <dd>Enabled</dd>
+    <dt>Disabled</dt>
+    <dd>Disabled</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Public<wbr>Network<wbr>Access<wbr>Not<wbr>Specified</dt>
+    <dd>NotSpecified</dd>
+    <dt>Public<wbr>Network<wbr>Access<wbr>Enabled</dt>
+    <dd>Enabled</dd>
+    <dt>Public<wbr>Network<wbr>Access<wbr>Disabled</dt>
+    <dd>Disabled</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Not<wbr>Specified</dt>
+    <dd>NotSpecified</dd>
+    <dt>Enabled</dt>
+    <dd>Enabled</dd>
+    <dt>Disabled</dt>
+    <dd>Disabled</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>NOT_SPECIFIED</dt>
+    <dd>NotSpecified</dd>
+    <dt>ENABLED</dt>
+    <dd>Enabled</dd>
+    <dt>DISABLED</dt>
+    <dd>Disabled</dd>
 </dl>
 {{% /choosable %}}
 

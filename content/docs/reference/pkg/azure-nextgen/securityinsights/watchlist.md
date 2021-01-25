@@ -29,19 +29,9 @@ class MyStack : Stack
         var watchlist = new AzureNextGen.SecurityInsights.V20190101Preview.Watchlist("watchlist", new AzureNextGen.SecurityInsights.V20190101Preview.WatchlistArgs
         {
             ContentType = "text/csv",
-            CreatedBy = new AzureNextGen.SecurityInsights.V20190101Preview.Inputs.UserInfoArgs
-            {
-                ObjectId = "2046feea-040d-4a46-9e2b-91c2941bfa70",
-            },
-            DefaultDuration = "P1279DT12H30M5S",
             Description = "Watchlist from CSV content",
             DisplayName = "High Value Assets Watchlist",
             Etag = "\"0300bf09-0000-0000-0000-5c37296e0000\"",
-            Labels = 
-            {
-                "Tag1",
-                "Tag2",
-            },
             NumberOfLinesToSkip = 1,
             OperationalInsightsResourceProvider = "Microsoft.OperationalInsights",
             Provider = "Microsoft",
@@ -74,18 +64,10 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := securityinsights.NewWatchlist(ctx, "watchlist", &securityinsights.WatchlistArgs{
-			ContentType: pulumi.String("text/csv"),
-			CreatedBy: &securityinsights.UserInfoArgs{
-				ObjectId: pulumi.String("2046feea-040d-4a46-9e2b-91c2941bfa70"),
-			},
-			DefaultDuration: pulumi.String("P1279DT12H30M5S"),
-			Description:     pulumi.String("Watchlist from CSV content"),
-			DisplayName:     pulumi.String("High Value Assets Watchlist"),
-			Etag:            pulumi.String("\"0300bf09-0000-0000-0000-5c37296e0000\""),
-			Labels: pulumi.StringArray{
-				pulumi.String("Tag1"),
-				pulumi.String("Tag2"),
-			},
+			ContentType:                         pulumi.String("text/csv"),
+			Description:                         pulumi.String("Watchlist from CSV content"),
+			DisplayName:                         pulumi.String("High Value Assets Watchlist"),
+			Etag:                                pulumi.String("\"0300bf09-0000-0000-0000-5c37296e0000\""),
 			NumberOfLinesToSkip:                 pulumi.Int(1),
 			OperationalInsightsResourceProvider: pulumi.String("Microsoft.OperationalInsights"),
 			Provider:                            pulumi.String("Microsoft"),
@@ -114,17 +96,9 @@ import pulumi_azure_nextgen as azure_nextgen
 
 watchlist = azure_nextgen.securityinsights.v20190101preview.Watchlist("watchlist",
     content_type="text/csv",
-    created_by=azure_nextgen.securityinsights.v20190101preview.UserInfoArgs(
-        object_id="2046feea-040d-4a46-9e2b-91c2941bfa70",
-    ),
-    default_duration="P1279DT12H30M5S",
     description="Watchlist from CSV content",
     display_name="High Value Assets Watchlist",
     etag="\"0300bf09-0000-0000-0000-5c37296e0000\"",
-    labels=[
-        "Tag1",
-        "Tag2",
-    ],
     number_of_lines_to_skip=1,
     operational_insights_resource_provider="Microsoft.OperationalInsights",
     provider="Microsoft",
@@ -148,17 +122,9 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const watchlist = new azure_nextgen.securityinsights.v20190101preview.Watchlist("watchlist", {
     contentType: "text/csv",
-    createdBy: {
-        objectId: "2046feea-040d-4a46-9e2b-91c2941bfa70",
-    },
-    defaultDuration: "P1279DT12H30M5S",
     description: "Watchlist from CSV content",
     displayName: "High Value Assets Watchlist",
     etag: "\"0300bf09-0000-0000-0000-5c37296e0000\"",
-    labels: [
-        "Tag1",
-        "Tag2",
-    ],
     numberOfLinesToSkip: 1,
     operationalInsightsResourceProvider: "Microsoft.OperationalInsights",
     provider: "Microsoft",

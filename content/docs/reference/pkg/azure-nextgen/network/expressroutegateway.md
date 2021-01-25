@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.network.ExpressRouteGateway reso
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 ExpressRoute gateway resource.
-Latest API Version: 2020-07-01.
+Latest API Version: 2020-08-01.
 
 {{% examples %}}
 ## Example Usage
@@ -962,6 +962,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Enable internet security.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="expressroutegatewaybypass_csharp">
+<a href="#expressroutegatewaybypass_csharp" style="color: inherit; text-decoration: inherit;">Express<wbr>Route<wbr>Gateway<wbr>Bypass</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable FastPath to vWan Firewall hub.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -1038,6 +1047,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable internet security.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="expressroutegatewaybypass_go">
+<a href="#expressroutegatewaybypass_go" style="color: inherit; text-decoration: inherit;">Express<wbr>Route<wbr>Gateway<wbr>Bypass</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable FastPath to vWan Firewall hub.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="id_go">
@@ -1118,6 +1136,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Enable internet security.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="expressroutegatewaybypass_nodejs">
+<a href="#expressroutegatewaybypass_nodejs" style="color: inherit; text-decoration: inherit;">express<wbr>Route<wbr>Gateway<wbr>Bypass</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Enable FastPath to vWan Firewall hub.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
@@ -1194,6 +1221,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable internet security.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="express_route_gateway_bypass_python">
+<a href="#express_route_gateway_bypass_python" style="color: inherit; text-decoration: inherit;">express_<wbr>route_<wbr>gateway_<wbr>bypass</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable FastPath to vWan Firewall hub.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="id_python">

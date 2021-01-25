@@ -18,6 +18,7 @@ Explore the resources and functions of the compute module in the Azure NextGen p
     <li><a href="dedicatedhostgroup" title="DedicatedHostGroup"><span class="symbol resource"></span>DedicatedHostGroup</a></li>
     <li><a href="disk" title="Disk"><span class="symbol resource"></span>Disk</a></li>
     <li><a href="diskaccess" title="DiskAccess"><span class="symbol resource"></span>DiskAccess</a></li>
+    <li><a href="diskaccessaprivateendpointconnection" title="DiskAccessAPrivateEndpointConnection"><span class="symbol resource"></span>DiskAccessAPrivateEndpointConnection</a></li>
     <li><a href="diskencryptionset" title="DiskEncryptionSet"><span class="symbol resource"></span>DiskEncryptionSet</a></li>
     <li><a href="gallery" title="Gallery"><span class="symbol resource"></span>Gallery</a></li>
     <li><a href="galleryapplication" title="GalleryApplication"><span class="symbol resource"></span>GalleryApplication</a></li>
@@ -48,6 +49,7 @@ Explore the resources and functions of the compute module in the Azure NextGen p
     <li><a href="getdedicatedhostgroup" title="GetDedicatedHostGroup"><span class="symbol function"></span>GetDedicatedHostGroup</a></li>
     <li><a href="getdisk" title="GetDisk"><span class="symbol function"></span>GetDisk</a></li>
     <li><a href="getdiskaccess" title="GetDiskAccess"><span class="symbol function"></span>GetDiskAccess</a></li>
+    <li><a href="getdiskaccessaprivateendpointconnection" title="GetDiskAccessAPrivateEndpointConnection"><span class="symbol function"></span>GetDiskAccessAPrivateEndpointConnection</a></li>
     <li><a href="getdiskencryptionset" title="GetDiskEncryptionSet"><span class="symbol function"></span>GetDiskEncryptionSet</a></li>
     <li><a href="getgallery" title="GetGallery"><span class="symbol function"></span>GetGallery</a></li>
     <li><a href="getgalleryapplication" title="GetGalleryApplication"><span class="symbol function"></span>GetGalleryApplication</a></li>
@@ -78,7 +80,7 @@ Explore the resources and functions of the compute module in the Azure NextGen p
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.4.0</dd>
+	<dd>0.5.0</dd>
 </dl>
 
 

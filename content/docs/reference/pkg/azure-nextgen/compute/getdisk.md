@@ -274,6 +274,15 @@ The following output properties are available:
     <dd>{{% md %}}Unique Guid identifying the resource.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="burstingenabled_csharp">
+<a href="#burstingenabled_csharp" style="color: inherit; text-decoration: inherit;">Bursting<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Set to true to enable bursting beyond the provisioned performance target of the disk. Bursting is disabled by default. Does not apply to Ultra disks.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="diskaccessid_csharp">
 <a href="#diskaccessid_csharp" style="color: inherit; text-decoration: inherit;">Disk<wbr>Access<wbr>Id</a>
 </span>
@@ -346,6 +355,15 @@ The following output properties are available:
     <dd>{{% md %}}Encryption settings collection used for Azure Disk Encryption, can contain multiple encryption settings per disk or snapshot.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="extendedlocation_csharp">
+<a href="#extendedlocation_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#extendedlocationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Outputs.<wbr>Extended<wbr>Location<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The extended location where the disk will be created. Extended location cannot be changed.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="hypervgeneration_csharp">
 <a href="#hypervgeneration_csharp" style="color: inherit; text-decoration: inherit;">Hyper<wbr>VGeneration</a>
 </span>
@@ -380,6 +398,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Operating System type.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="purchaseplan_csharp">
+<a href="#purchaseplan_csharp" style="color: inherit; text-decoration: inherit;">Purchase<wbr>Plan</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#purchaseplanresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Outputs.<wbr>Purchase<wbr>Plan<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Purchase plan information for the the image from which the OS disk was created. E.g. - {name: 2019-Datacenter, publisher: MicrosoftWindowsServer, product: WindowsServer}{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="sku_csharp">
@@ -541,6 +568,15 @@ The following output properties are available:
     <dd>{{% md %}}Unique Guid identifying the resource.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="burstingenabled_go">
+<a href="#burstingenabled_go" style="color: inherit; text-decoration: inherit;">Bursting<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Set to true to enable bursting beyond the provisioned performance target of the disk. Bursting is disabled by default. Does not apply to Ultra disks.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="diskaccessid_go">
 <a href="#diskaccessid_go" style="color: inherit; text-decoration: inherit;">Disk<wbr>Access<wbr>Id</a>
 </span>
@@ -613,6 +649,15 @@ The following output properties are available:
     <dd>{{% md %}}Encryption settings collection used for Azure Disk Encryption, can contain multiple encryption settings per disk or snapshot.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="extendedlocation_go">
+<a href="#extendedlocation_go" style="color: inherit; text-decoration: inherit;">Extended<wbr>Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#extendedlocationresponse">Extended<wbr>Location<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The extended location where the disk will be created. Extended location cannot be changed.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="hypervgeneration_go">
 <a href="#hypervgeneration_go" style="color: inherit; text-decoration: inherit;">Hyper<wbr>VGeneration</a>
 </span>
@@ -647,6 +692,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Operating System type.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="purchaseplan_go">
+<a href="#purchaseplan_go" style="color: inherit; text-decoration: inherit;">Purchase<wbr>Plan</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#purchaseplanresponse">Purchase<wbr>Plan<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Purchase plan information for the the image from which the OS disk was created. E.g. - {name: 2019-Datacenter, publisher: MicrosoftWindowsServer, product: WindowsServer}{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="sku_go">
@@ -808,6 +862,15 @@ The following output properties are available:
     <dd>{{% md %}}Unique Guid identifying the resource.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="burstingenabled_nodejs">
+<a href="#burstingenabled_nodejs" style="color: inherit; text-decoration: inherit;">bursting<wbr>Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Set to true to enable bursting beyond the provisioned performance target of the disk. Bursting is disabled by default. Does not apply to Ultra disks.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="diskaccessid_nodejs">
 <a href="#diskaccessid_nodejs" style="color: inherit; text-decoration: inherit;">disk<wbr>Access<wbr>Id</a>
 </span>
@@ -880,6 +943,15 @@ The following output properties are available:
     <dd>{{% md %}}Encryption settings collection used for Azure Disk Encryption, can contain multiple encryption settings per disk or snapshot.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="extendedlocation_nodejs">
+<a href="#extendedlocation_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#extendedlocationresponse">Extended<wbr>Location<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The extended location where the disk will be created. Extended location cannot be changed.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="hypervgeneration_nodejs">
 <a href="#hypervgeneration_nodejs" style="color: inherit; text-decoration: inherit;">hyper<wbr>VGeneration</a>
 </span>
@@ -914,6 +986,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The Operating System type.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="purchaseplan_nodejs">
+<a href="#purchaseplan_nodejs" style="color: inherit; text-decoration: inherit;">purchase<wbr>Plan</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#purchaseplanresponse">Purchase<wbr>Plan<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Purchase plan information for the the image from which the OS disk was created. E.g. - {name: 2019-Datacenter, publisher: MicrosoftWindowsServer, product: WindowsServer}{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="sku_nodejs">
@@ -1075,6 +1156,15 @@ The following output properties are available:
     <dd>{{% md %}}Unique Guid identifying the resource.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="bursting_enabled_python">
+<a href="#bursting_enabled_python" style="color: inherit; text-decoration: inherit;">bursting_<wbr>enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Set to true to enable bursting beyond the provisioned performance target of the disk. Bursting is disabled by default. Does not apply to Ultra disks.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="disk_access_id_python">
 <a href="#disk_access_id_python" style="color: inherit; text-decoration: inherit;">disk_<wbr>access_<wbr>id</a>
 </span>
@@ -1147,6 +1237,15 @@ The following output properties are available:
     <dd>{{% md %}}Encryption settings collection used for Azure Disk Encryption, can contain multiple encryption settings per disk or snapshot.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="extended_location_python">
+<a href="#extended_location_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#extendedlocationresponse">Extended<wbr>Location<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The extended location where the disk will be created. Extended location cannot be changed.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="hyper_v_generation_python">
 <a href="#hyper_v_generation_python" style="color: inherit; text-decoration: inherit;">hyper_<wbr>v_<wbr>generation</a>
 </span>
@@ -1181,6 +1280,15 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The Operating System type.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="purchase_plan_python">
+<a href="#purchase_plan_python" style="color: inherit; text-decoration: inherit;">purchase_<wbr>plan</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#purchaseplanresponse">Purchase<wbr>Plan<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Purchase plan information for the the image from which the OS disk was created. E.g. - {name: 2019-Datacenter, publisher: MicrosoftWindowsServer, product: WindowsServer}{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="sku_python">
@@ -2029,6 +2137,109 @@ The following output properties are available:
 </dl>
 {{% /choosable %}}
 
+<h4 id="extendedlocationresponse">Extended<wbr>Location<wbr>Response</h4>
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the extended location.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of the extended location.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the extended location.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of the extended location.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the extended location.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of the extended location.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the extended location.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of the extended location.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
 <h4 id="imagediskreferenceresponse">Image<wbr>Disk<wbr>Reference<wbr>Response</h4>
 
 
@@ -2335,6 +2546,181 @@ The following output properties are available:
         <span class="property-type"><a href="#sourcevaultresponse">Source<wbr>Vault<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Resource id of the KeyVault containing the key or secret{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="purchaseplanresponse">Purchase<wbr>Plan<wbr>Response</h4>
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The plan ID.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="product_csharp">
+<a href="#product_csharp" style="color: inherit; text-decoration: inherit;">Product</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the product of the image from the marketplace. This is the same value as Offer under the imageReference element.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="publisher_csharp">
+<a href="#publisher_csharp" style="color: inherit; text-decoration: inherit;">Publisher</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The publisher ID.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="promotioncode_csharp">
+<a href="#promotioncode_csharp" style="color: inherit; text-decoration: inherit;">Promotion<wbr>Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Offer Promotion Code.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The plan ID.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="product_go">
+<a href="#product_go" style="color: inherit; text-decoration: inherit;">Product</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the product of the image from the marketplace. This is the same value as Offer under the imageReference element.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="publisher_go">
+<a href="#publisher_go" style="color: inherit; text-decoration: inherit;">Publisher</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The publisher ID.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="promotioncode_go">
+<a href="#promotioncode_go" style="color: inherit; text-decoration: inherit;">Promotion<wbr>Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Offer Promotion Code.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The plan ID.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="product_nodejs">
+<a href="#product_nodejs" style="color: inherit; text-decoration: inherit;">product</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the product of the image from the marketplace. This is the same value as Offer under the imageReference element.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="publisher_nodejs">
+<a href="#publisher_nodejs" style="color: inherit; text-decoration: inherit;">publisher</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The publisher ID.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="promotioncode_nodejs">
+<a href="#promotioncode_nodejs" style="color: inherit; text-decoration: inherit;">promotion<wbr>Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Offer Promotion Code.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The plan ID.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="product_python">
+<a href="#product_python" style="color: inherit; text-decoration: inherit;">product</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the product of the image from the marketplace. This is the same value as Offer under the imageReference element.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="publisher_python">
+<a href="#publisher_python" style="color: inherit; text-decoration: inherit;">publisher</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The publisher ID.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="promotion_code_python">
+<a href="#promotion_code_python" style="color: inherit; text-decoration: inherit;">promotion_<wbr>code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Offer Promotion Code.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 

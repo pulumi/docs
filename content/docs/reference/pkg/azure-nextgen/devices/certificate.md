@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.devices.Certificate resource wit
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The X509 Certificate.
-Latest API Version: 2020-08-01.
+Latest API Version: 2020-08-31.
 
 {{% examples %}}
 ## Example Usage

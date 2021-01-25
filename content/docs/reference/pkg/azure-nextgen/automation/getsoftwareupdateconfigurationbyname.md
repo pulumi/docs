@@ -260,7 +260,7 @@ The following output properties are available:
 <a href="#scheduleinfo_csharp" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schedulepropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation.<wbr>Outputs.<wbr>Schedule<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#sucschedulepropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Automation.<wbr>Outputs.<wbr>SUCSchedule<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Schedule information for the Software update configuration{{% /md %}}</dd>
     <dt class="property-"
@@ -374,7 +374,7 @@ The following output properties are available:
 <a href="#scheduleinfo_go" style="color: inherit; text-decoration: inherit;">Schedule<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schedulepropertiesresponse">Schedule<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#sucschedulepropertiesresponse">SUCSchedule<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Schedule information for the Software update configuration{{% /md %}}</dd>
     <dt class="property-"
@@ -488,7 +488,7 @@ The following output properties are available:
 <a href="#scheduleinfo_nodejs" style="color: inherit; text-decoration: inherit;">schedule<wbr>Info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schedulepropertiesresponse">Schedule<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#sucschedulepropertiesresponse">SUCSchedule<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Schedule information for the Software update configuration{{% /md %}}</dd>
     <dt class="property-"
@@ -602,7 +602,7 @@ The following output properties are available:
 <a href="#schedule_info_python" style="color: inherit; text-decoration: inherit;">schedule_<wbr>info</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#schedulepropertiesresponse">Schedule<wbr>Properties<wbr>Response</a></span>
+        <span class="property-type"><a href="#sucschedulepropertiesresponse">SUCSchedule<wbr>Properties<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Schedule information for the Software update configuration{{% /md %}}</dd>
     <dt class="property-"
@@ -1412,7 +1412,7 @@ The following output properties are available:
 </dl>
 {{% /choosable %}}
 
-<h4 id="schedulepropertiesresponse">Schedule<wbr>Properties<wbr>Response</h4>
+<h4 id="sucschedulepropertiesresponse">SUCSchedule<wbr>Properties<wbr>Response</h4>
 
 
 
@@ -1491,7 +1491,7 @@ The following output properties are available:
 <a href="#interval_csharp" style="color: inherit; text-decoration: inherit;">Interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">double</span>
     </dt>
     <dd>{{% md %}}Gets or sets the interval of the schedule.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1623,7 +1623,7 @@ The following output properties are available:
 <a href="#interval_go" style="color: inherit; text-decoration: inherit;">Interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float64</span>
     </dt>
     <dd>{{% md %}}Gets or sets the interval of the schedule.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1887,7 +1887,7 @@ The following output properties are available:
 <a href="#interval_python" style="color: inherit; text-decoration: inherit;">interval</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">int</span>
+        <span class="property-type">float</span>
     </dt>
     <dd>{{% md %}}Gets or sets the interval of the schedule.{{% /md %}}</dd>
     <dt class="property-optional"

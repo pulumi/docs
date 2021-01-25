@@ -300,7 +300,7 @@ const trigger = new azure_nextgen.datafactory.latest.Trigger("trigger", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Trigger</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">factory_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Union[ChainingTriggerArgs, MultiplePipelineTriggerArgs, RerunTumblingWindowTriggerArgs, TumblingWindowTriggerArgs]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">trigger_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Trigger</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">factory_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">properties</span><span class="p">:</span> <span class="nx">Optional[Union[BlobEventsTriggerArgs, BlobTriggerArgs, ChainingTriggerArgs, CustomEventsTriggerArgs, MultiplePipelineTriggerArgs, RerunTumblingWindowTriggerArgs, ScheduleTriggerArgs, TumblingWindowTriggerArgs]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">trigger_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -486,7 +486,7 @@ The Trigger resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#chainingtrigger">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Chaining<wbr>Trigger<wbr>Args</a> | <a href="#multiplepipelinetrigger">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Multiple<wbr>Pipeline<wbr>Trigger<wbr>Args</a> | <a href="#reruntumblingwindowtrigger">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Rerun<wbr>Tumbling<wbr>Window<wbr>Trigger<wbr>Args</a> | <a href="#tumblingwindowtrigger">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Tumbling<wbr>Window<wbr>Trigger<wbr>Args</a></span>
+        <span class="property-type"><a href="#blobeventstrigger">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Blob<wbr>Events<wbr>Trigger<wbr>Args</a> | <a href="#blobtrigger">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Blob<wbr>Trigger<wbr>Args</a> | <a href="#chainingtrigger">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Chaining<wbr>Trigger<wbr>Args</a> | <a href="#customeventstrigger">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Custom<wbr>Events<wbr>Trigger<wbr>Args</a> | <a href="#multiplepipelinetrigger">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Multiple<wbr>Pipeline<wbr>Trigger<wbr>Args</a> | <a href="#reruntumblingwindowtrigger">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Rerun<wbr>Tumbling<wbr>Window<wbr>Trigger<wbr>Args</a> | <a href="#scheduletrigger">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Schedule<wbr>Trigger<wbr>Args</a> | <a href="#tumblingwindowtrigger">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Tumbling<wbr>Window<wbr>Trigger<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of the trigger.{{% /md %}}</dd>
     <dt class="property-required"
@@ -528,7 +528,7 @@ The Trigger resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#chainingtrigger">Chaining<wbr>Trigger</a> | <a href="#multiplepipelinetrigger">Multiple<wbr>Pipeline<wbr>Trigger</a> | <a href="#reruntumblingwindowtrigger">Rerun<wbr>Tumbling<wbr>Window<wbr>Trigger</a> | <a href="#tumblingwindowtrigger">Tumbling<wbr>Window<wbr>Trigger</a></span>
+        <span class="property-type"><a href="#blobeventstrigger">Blob<wbr>Events<wbr>Trigger</a> | <a href="#blobtrigger">Blob<wbr>Trigger</a> | <a href="#chainingtrigger">Chaining<wbr>Trigger</a> | <a href="#customeventstrigger">Custom<wbr>Events<wbr>Trigger</a> | <a href="#multiplepipelinetrigger">Multiple<wbr>Pipeline<wbr>Trigger</a> | <a href="#reruntumblingwindowtrigger">Rerun<wbr>Tumbling<wbr>Window<wbr>Trigger</a> | <a href="#scheduletrigger">Schedule<wbr>Trigger</a> | <a href="#tumblingwindowtrigger">Tumbling<wbr>Window<wbr>Trigger</a></span>
     </dt>
     <dd>{{% md %}}Properties of the trigger.{{% /md %}}</dd>
     <dt class="property-required"
@@ -570,7 +570,7 @@ The Trigger resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#chainingtrigger">Chaining<wbr>Trigger</a> | <a href="#multiplepipelinetrigger">Multiple<wbr>Pipeline<wbr>Trigger</a> | <a href="#reruntumblingwindowtrigger">Rerun<wbr>Tumbling<wbr>Window<wbr>Trigger</a> | <a href="#tumblingwindowtrigger">Tumbling<wbr>Window<wbr>Trigger</a></span>
+        <span class="property-type"><a href="#blobeventstrigger">Blob<wbr>Events<wbr>Trigger</a> | <a href="#blobtrigger">Blob<wbr>Trigger</a> | <a href="#chainingtrigger">Chaining<wbr>Trigger</a> | <a href="#customeventstrigger">Custom<wbr>Events<wbr>Trigger</a> | <a href="#multiplepipelinetrigger">Multiple<wbr>Pipeline<wbr>Trigger</a> | <a href="#reruntumblingwindowtrigger">Rerun<wbr>Tumbling<wbr>Window<wbr>Trigger</a> | <a href="#scheduletrigger">Schedule<wbr>Trigger</a> | <a href="#tumblingwindowtrigger">Tumbling<wbr>Window<wbr>Trigger</a></span>
     </dt>
     <dd>{{% md %}}Properties of the trigger.{{% /md %}}</dd>
     <dt class="property-required"
@@ -612,7 +612,7 @@ The Trigger resource accepts the following [input]({{< relref "/docs/intro/conce
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#chainingtrigger">Chaining<wbr>Trigger<wbr>Args</a> | <a href="#multiplepipelinetrigger">Multiple<wbr>Pipeline<wbr>Trigger<wbr>Args</a> | <a href="#reruntumblingwindowtrigger">Rerun<wbr>Tumbling<wbr>Window<wbr>Trigger<wbr>Args</a> | <a href="#tumblingwindowtrigger">Tumbling<wbr>Window<wbr>Trigger<wbr>Args</a></span>
+        <span class="property-type"><a href="#blobeventstrigger">Blob<wbr>Events<wbr>Trigger<wbr>Args</a> | <a href="#blobtrigger">Blob<wbr>Trigger<wbr>Args</a> | <a href="#chainingtrigger">Chaining<wbr>Trigger<wbr>Args</a> | <a href="#customeventstrigger">Custom<wbr>Events<wbr>Trigger<wbr>Args</a> | <a href="#multiplepipelinetrigger">Multiple<wbr>Pipeline<wbr>Trigger<wbr>Args</a> | <a href="#reruntumblingwindowtrigger">Rerun<wbr>Tumbling<wbr>Window<wbr>Trigger<wbr>Args</a> | <a href="#scheduletrigger">Schedule<wbr>Trigger<wbr>Args</a> | <a href="#tumblingwindowtrigger">Tumbling<wbr>Window<wbr>Trigger<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Properties of the trigger.{{% /md %}}</dd>
     <dt class="property-required"
@@ -820,6 +820,1228 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Supporting Types
 
 
+
+<h4 id="blobeventtypes">Blob<wbr>Event<wbr>Types</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Microsoft_Storage_Blob<wbr>Created</dt>
+    <dd>Microsoft.Storage.BlobCreated</dd>
+    <dt>Microsoft_Storage_Blob<wbr>Deleted</dt>
+    <dd>Microsoft.Storage.BlobDeleted</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Blob<wbr>Event<wbr>Types_Microsoft_Storage_Blob<wbr>Created</dt>
+    <dd>Microsoft.Storage.BlobCreated</dd>
+    <dt>Blob<wbr>Event<wbr>Types_Microsoft_Storage_Blob<wbr>Deleted</dt>
+    <dd>Microsoft.Storage.BlobDeleted</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Microsoft_Storage_Blob<wbr>Created</dt>
+    <dd>Microsoft.Storage.BlobCreated</dd>
+    <dt>Microsoft_Storage_Blob<wbr>Deleted</dt>
+    <dd>Microsoft.Storage.BlobDeleted</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>MICROSOFT_STORAGE_BLOB_CREATED</dt>
+    <dd>Microsoft.Storage.BlobCreated</dd>
+    <dt>MICROSOFT_STORAGE_BLOB_DELETED</dt>
+    <dd>Microsoft.Storage.BlobDeleted</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="blobeventstrigger">Blob<wbr>Events<wbr>Trigger</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="events_csharp">
+<a href="#events_csharp" style="color: inherit; text-decoration: inherit;">Events</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;Union&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Blob<wbr>Event<wbr>Types&gt;&gt;</span>
+    </dt>
+    <dd>{{% md %}}The type of events that cause this trigger to fire.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="scope_csharp">
+<a href="#scope_csharp" style="color: inherit; text-decoration: inherit;">Scope</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARM resource ID of the Storage Account.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="annotations_csharp">
+<a href="#annotations_csharp" style="color: inherit; text-decoration: inherit;">Annotations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;object&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="blobpathbeginswith_csharp">
+<a href="#blobpathbeginswith_csharp" style="color: inherit; text-decoration: inherit;">Blob<wbr>Path<wbr>Begins<wbr>With</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The blob path must begin with the pattern provided for trigger to fire. For example, '/records/blobs/december/' will only fire the trigger for blobs in the december folder under the records container. At least one of these must be provided: blobPathBeginsWith, blobPathEndsWith.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="blobpathendswith_csharp">
+<a href="#blobpathendswith_csharp" style="color: inherit; text-decoration: inherit;">Blob<wbr>Path<wbr>Ends<wbr>With</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The blob path must end with the pattern provided for trigger to fire. For example, 'december/boxes.csv' will only fire the trigger for blobs named boxes in a december folder. At least one of these must be provided: blobPathBeginsWith, blobPathEndsWith.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Trigger description.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ignoreemptyblobs_csharp">
+<a href="#ignoreemptyblobs_csharp" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Empty<wbr>Blobs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If set to true, blobs with zero bytes will be ignored.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="pipelines_csharp">
+<a href="#pipelines_csharp" style="color: inherit; text-decoration: inherit;">Pipelines</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerpipelinereference">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Trigger<wbr>Pipeline<wbr>Reference<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="events_go">
+<a href="#events_go" style="color: inherit; text-decoration: inherit;">Events</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The type of events that cause this trigger to fire.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="scope_go">
+<a href="#scope_go" style="color: inherit; text-decoration: inherit;">Scope</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARM resource ID of the Storage Account.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="annotations_go">
+<a href="#annotations_go" style="color: inherit; text-decoration: inherit;">Annotations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]interface{}</span>
+    </dt>
+    <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="blobpathbeginswith_go">
+<a href="#blobpathbeginswith_go" style="color: inherit; text-decoration: inherit;">Blob<wbr>Path<wbr>Begins<wbr>With</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The blob path must begin with the pattern provided for trigger to fire. For example, '/records/blobs/december/' will only fire the trigger for blobs in the december folder under the records container. At least one of these must be provided: blobPathBeginsWith, blobPathEndsWith.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="blobpathendswith_go">
+<a href="#blobpathendswith_go" style="color: inherit; text-decoration: inherit;">Blob<wbr>Path<wbr>Ends<wbr>With</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The blob path must end with the pattern provided for trigger to fire. For example, 'december/boxes.csv' will only fire the trigger for blobs named boxes in a december folder. At least one of these must be provided: blobPathBeginsWith, blobPathEndsWith.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Trigger description.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ignoreemptyblobs_go">
+<a href="#ignoreemptyblobs_go" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Empty<wbr>Blobs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If set to true, blobs with zero bytes will be ignored.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="pipelines_go">
+<a href="#pipelines_go" style="color: inherit; text-decoration: inherit;">Pipelines</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerpipelinereference">[]Trigger<wbr>Pipeline<wbr>Reference</a></span>
+    </dt>
+    <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="events_nodejs">
+<a href="#events_nodejs" style="color: inherit; text-decoration: inherit;">events</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | Blob<wbr>Event<wbr>Types[]</span>
+    </dt>
+    <dd>{{% md %}}The type of events that cause this trigger to fire.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="scope_nodejs">
+<a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARM resource ID of the Storage Account.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="annotations_nodejs">
+<a href="#annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any[]</span>
+    </dt>
+    <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="blobpathbeginswith_nodejs">
+<a href="#blobpathbeginswith_nodejs" style="color: inherit; text-decoration: inherit;">blob<wbr>Path<wbr>Begins<wbr>With</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The blob path must begin with the pattern provided for trigger to fire. For example, '/records/blobs/december/' will only fire the trigger for blobs in the december folder under the records container. At least one of these must be provided: blobPathBeginsWith, blobPathEndsWith.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="blobpathendswith_nodejs">
+<a href="#blobpathendswith_nodejs" style="color: inherit; text-decoration: inherit;">blob<wbr>Path<wbr>Ends<wbr>With</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The blob path must end with the pattern provided for trigger to fire. For example, 'december/boxes.csv' will only fire the trigger for blobs named boxes in a december folder. At least one of these must be provided: blobPathBeginsWith, blobPathEndsWith.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Trigger description.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ignoreemptyblobs_nodejs">
+<a href="#ignoreemptyblobs_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Empty<wbr>Blobs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}If set to true, blobs with zero bytes will be ignored.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="pipelines_nodejs">
+<a href="#pipelines_nodejs" style="color: inherit; text-decoration: inherit;">pipelines</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerpipelinereference">Trigger<wbr>Pipeline<wbr>Reference[]</a></span>
+    </dt>
+    <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="events_python">
+<a href="#events_python" style="color: inherit; text-decoration: inherit;">events</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[Union[str, Blob<wbr>Event<wbr>Types]]</span>
+    </dt>
+    <dd>{{% md %}}The type of events that cause this trigger to fire.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="scope_python">
+<a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ARM resource ID of the Storage Account.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="annotations_python">
+<a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[Any]</span>
+    </dt>
+    <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="blob_path_begins_with_python">
+<a href="#blob_path_begins_with_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>path_<wbr>begins_<wbr>with</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The blob path must begin with the pattern provided for trigger to fire. For example, '/records/blobs/december/' will only fire the trigger for blobs in the december folder under the records container. At least one of these must be provided: blobPathBeginsWith, blobPathEndsWith.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="blob_path_ends_with_python">
+<a href="#blob_path_ends_with_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>path_<wbr>ends_<wbr>with</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The blob path must end with the pattern provided for trigger to fire. For example, 'december/boxes.csv' will only fire the trigger for blobs named boxes in a december folder. At least one of these must be provided: blobPathBeginsWith, blobPathEndsWith.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Trigger description.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ignore_empty_blobs_python">
+<a href="#ignore_empty_blobs_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>empty_<wbr>blobs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If set to true, blobs with zero bytes will be ignored.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="pipelines_python">
+<a href="#pipelines_python" style="color: inherit; text-decoration: inherit;">pipelines</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerpipelinereference">Sequence[Trigger<wbr>Pipeline<wbr>Reference<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="blobeventstriggerresponse">Blob<wbr>Events<wbr>Trigger<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="events_csharp">
+<a href="#events_csharp" style="color: inherit; text-decoration: inherit;">Events</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The type of events that cause this trigger to fire.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="runtimestate_csharp">
+<a href="#runtimestate_csharp" style="color: inherit; text-decoration: inherit;">Runtime<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="scope_csharp">
+<a href="#scope_csharp" style="color: inherit; text-decoration: inherit;">Scope</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARM resource ID of the Storage Account.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="annotations_csharp">
+<a href="#annotations_csharp" style="color: inherit; text-decoration: inherit;">Annotations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;object&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="blobpathbeginswith_csharp">
+<a href="#blobpathbeginswith_csharp" style="color: inherit; text-decoration: inherit;">Blob<wbr>Path<wbr>Begins<wbr>With</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The blob path must begin with the pattern provided for trigger to fire. For example, '/records/blobs/december/' will only fire the trigger for blobs in the december folder under the records container. At least one of these must be provided: blobPathBeginsWith, blobPathEndsWith.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="blobpathendswith_csharp">
+<a href="#blobpathendswith_csharp" style="color: inherit; text-decoration: inherit;">Blob<wbr>Path<wbr>Ends<wbr>With</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The blob path must end with the pattern provided for trigger to fire. For example, 'december/boxes.csv' will only fire the trigger for blobs named boxes in a december folder. At least one of these must be provided: blobPathBeginsWith, blobPathEndsWith.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Trigger description.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ignoreemptyblobs_csharp">
+<a href="#ignoreemptyblobs_csharp" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Empty<wbr>Blobs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If set to true, blobs with zero bytes will be ignored.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="pipelines_csharp">
+<a href="#pipelines_csharp" style="color: inherit; text-decoration: inherit;">Pipelines</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerpipelinereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Trigger<wbr>Pipeline<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="events_go">
+<a href="#events_go" style="color: inherit; text-decoration: inherit;">Events</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The type of events that cause this trigger to fire.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="runtimestate_go">
+<a href="#runtimestate_go" style="color: inherit; text-decoration: inherit;">Runtime<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="scope_go">
+<a href="#scope_go" style="color: inherit; text-decoration: inherit;">Scope</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARM resource ID of the Storage Account.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="annotations_go">
+<a href="#annotations_go" style="color: inherit; text-decoration: inherit;">Annotations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]interface{}</span>
+    </dt>
+    <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="blobpathbeginswith_go">
+<a href="#blobpathbeginswith_go" style="color: inherit; text-decoration: inherit;">Blob<wbr>Path<wbr>Begins<wbr>With</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The blob path must begin with the pattern provided for trigger to fire. For example, '/records/blobs/december/' will only fire the trigger for blobs in the december folder under the records container. At least one of these must be provided: blobPathBeginsWith, blobPathEndsWith.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="blobpathendswith_go">
+<a href="#blobpathendswith_go" style="color: inherit; text-decoration: inherit;">Blob<wbr>Path<wbr>Ends<wbr>With</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The blob path must end with the pattern provided for trigger to fire. For example, 'december/boxes.csv' will only fire the trigger for blobs named boxes in a december folder. At least one of these must be provided: blobPathBeginsWith, blobPathEndsWith.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Trigger description.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ignoreemptyblobs_go">
+<a href="#ignoreemptyblobs_go" style="color: inherit; text-decoration: inherit;">Ignore<wbr>Empty<wbr>Blobs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If set to true, blobs with zero bytes will be ignored.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="pipelines_go">
+<a href="#pipelines_go" style="color: inherit; text-decoration: inherit;">Pipelines</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerpipelinereferenceresponse">[]Trigger<wbr>Pipeline<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="events_nodejs">
+<a href="#events_nodejs" style="color: inherit; text-decoration: inherit;">events</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The type of events that cause this trigger to fire.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="runtimestate_nodejs">
+<a href="#runtimestate_nodejs" style="color: inherit; text-decoration: inherit;">runtime<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="scope_nodejs">
+<a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARM resource ID of the Storage Account.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="annotations_nodejs">
+<a href="#annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any[]</span>
+    </dt>
+    <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="blobpathbeginswith_nodejs">
+<a href="#blobpathbeginswith_nodejs" style="color: inherit; text-decoration: inherit;">blob<wbr>Path<wbr>Begins<wbr>With</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The blob path must begin with the pattern provided for trigger to fire. For example, '/records/blobs/december/' will only fire the trigger for blobs in the december folder under the records container. At least one of these must be provided: blobPathBeginsWith, blobPathEndsWith.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="blobpathendswith_nodejs">
+<a href="#blobpathendswith_nodejs" style="color: inherit; text-decoration: inherit;">blob<wbr>Path<wbr>Ends<wbr>With</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The blob path must end with the pattern provided for trigger to fire. For example, 'december/boxes.csv' will only fire the trigger for blobs named boxes in a december folder. At least one of these must be provided: blobPathBeginsWith, blobPathEndsWith.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Trigger description.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ignoreemptyblobs_nodejs">
+<a href="#ignoreemptyblobs_nodejs" style="color: inherit; text-decoration: inherit;">ignore<wbr>Empty<wbr>Blobs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}If set to true, blobs with zero bytes will be ignored.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="pipelines_nodejs">
+<a href="#pipelines_nodejs" style="color: inherit; text-decoration: inherit;">pipelines</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerpipelinereferenceresponse">Trigger<wbr>Pipeline<wbr>Reference<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="events_python">
+<a href="#events_python" style="color: inherit; text-decoration: inherit;">events</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The type of events that cause this trigger to fire.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="runtime_state_python">
+<a href="#runtime_state_python" style="color: inherit; text-decoration: inherit;">runtime_<wbr>state</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="scope_python">
+<a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ARM resource ID of the Storage Account.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="annotations_python">
+<a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[Any]</span>
+    </dt>
+    <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="blob_path_begins_with_python">
+<a href="#blob_path_begins_with_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>path_<wbr>begins_<wbr>with</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The blob path must begin with the pattern provided for trigger to fire. For example, '/records/blobs/december/' will only fire the trigger for blobs in the december folder under the records container. At least one of these must be provided: blobPathBeginsWith, blobPathEndsWith.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="blob_path_ends_with_python">
+<a href="#blob_path_ends_with_python" style="color: inherit; text-decoration: inherit;">blob_<wbr>path_<wbr>ends_<wbr>with</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The blob path must end with the pattern provided for trigger to fire. For example, 'december/boxes.csv' will only fire the trigger for blobs named boxes in a december folder. At least one of these must be provided: blobPathBeginsWith, blobPathEndsWith.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Trigger description.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ignore_empty_blobs_python">
+<a href="#ignore_empty_blobs_python" style="color: inherit; text-decoration: inherit;">ignore_<wbr>empty_<wbr>blobs</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If set to true, blobs with zero bytes will be ignored.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="pipelines_python">
+<a href="#pipelines_python" style="color: inherit; text-decoration: inherit;">pipelines</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerpipelinereferenceresponse">Sequence[Trigger<wbr>Pipeline<wbr>Reference<wbr>Response<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="blobtrigger">Blob<wbr>Trigger</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="folderpath_csharp">
+<a href="#folderpath_csharp" style="color: inherit; text-decoration: inherit;">Folder<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The path of the container/folder that will trigger the pipeline.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="linkedservice_csharp">
+<a href="#linkedservice_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linkedservicereference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The Azure Storage linked service reference.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="maxconcurrency_csharp">
+<a href="#maxconcurrency_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrency</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The max number of parallel files to handle when it is triggered.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="annotations_csharp">
+<a href="#annotations_csharp" style="color: inherit; text-decoration: inherit;">Annotations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;object&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Trigger description.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="pipelines_csharp">
+<a href="#pipelines_csharp" style="color: inherit; text-decoration: inherit;">Pipelines</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerpipelinereference">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Trigger<wbr>Pipeline<wbr>Reference<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="folderpath_go">
+<a href="#folderpath_go" style="color: inherit; text-decoration: inherit;">Folder<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The path of the container/folder that will trigger the pipeline.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="linkedservice_go">
+<a href="#linkedservice_go" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
+    </dt>
+    <dd>{{% md %}}The Azure Storage linked service reference.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="maxconcurrency_go">
+<a href="#maxconcurrency_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrency</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The max number of parallel files to handle when it is triggered.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="annotations_go">
+<a href="#annotations_go" style="color: inherit; text-decoration: inherit;">Annotations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]interface{}</span>
+    </dt>
+    <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Trigger description.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="pipelines_go">
+<a href="#pipelines_go" style="color: inherit; text-decoration: inherit;">Pipelines</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerpipelinereference">[]Trigger<wbr>Pipeline<wbr>Reference</a></span>
+    </dt>
+    <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="folderpath_nodejs">
+<a href="#folderpath_nodejs" style="color: inherit; text-decoration: inherit;">folder<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The path of the container/folder that will trigger the pipeline.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="linkedservice_nodejs">
+<a href="#linkedservice_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference</a></span>
+    </dt>
+    <dd>{{% md %}}The Azure Storage linked service reference.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="maxconcurrency_nodejs">
+<a href="#maxconcurrency_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrency</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The max number of parallel files to handle when it is triggered.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="annotations_nodejs">
+<a href="#annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any[]</span>
+    </dt>
+    <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Trigger description.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="pipelines_nodejs">
+<a href="#pipelines_nodejs" style="color: inherit; text-decoration: inherit;">pipelines</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerpipelinereference">Trigger<wbr>Pipeline<wbr>Reference[]</a></span>
+    </dt>
+    <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="folder_path_python">
+<a href="#folder_path_python" style="color: inherit; text-decoration: inherit;">folder_<wbr>path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The path of the container/folder that will trigger the pipeline.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="linked_service_python">
+<a href="#linked_service_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linkedservicereference">Linked<wbr>Service<wbr>Reference<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The Azure Storage linked service reference.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="max_concurrency_python">
+<a href="#max_concurrency_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrency</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The max number of parallel files to handle when it is triggered.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="annotations_python">
+<a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[Any]</span>
+    </dt>
+    <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Trigger description.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="pipelines_python">
+<a href="#pipelines_python" style="color: inherit; text-decoration: inherit;">pipelines</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerpipelinereference">Sequence[Trigger<wbr>Pipeline<wbr>Reference<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="blobtriggerresponse">Blob<wbr>Trigger<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="folderpath_csharp">
+<a href="#folderpath_csharp" style="color: inherit; text-decoration: inherit;">Folder<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The path of the container/folder that will trigger the pipeline.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="linkedservice_csharp">
+<a href="#linkedservice_csharp" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The Azure Storage linked service reference.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="maxconcurrency_csharp">
+<a href="#maxconcurrency_csharp" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrency</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The max number of parallel files to handle when it is triggered.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="runtimestate_csharp">
+<a href="#runtimestate_csharp" style="color: inherit; text-decoration: inherit;">Runtime<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="annotations_csharp">
+<a href="#annotations_csharp" style="color: inherit; text-decoration: inherit;">Annotations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;object&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Trigger description.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="pipelines_csharp">
+<a href="#pipelines_csharp" style="color: inherit; text-decoration: inherit;">Pipelines</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerpipelinereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Trigger<wbr>Pipeline<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="folderpath_go">
+<a href="#folderpath_go" style="color: inherit; text-decoration: inherit;">Folder<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The path of the container/folder that will trigger the pipeline.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="linkedservice_go">
+<a href="#linkedservice_go" style="color: inherit; text-decoration: inherit;">Linked<wbr>Service</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The Azure Storage linked service reference.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="maxconcurrency_go">
+<a href="#maxconcurrency_go" style="color: inherit; text-decoration: inherit;">Max<wbr>Concurrency</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The max number of parallel files to handle when it is triggered.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="runtimestate_go">
+<a href="#runtimestate_go" style="color: inherit; text-decoration: inherit;">Runtime<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="annotations_go">
+<a href="#annotations_go" style="color: inherit; text-decoration: inherit;">Annotations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]interface{}</span>
+    </dt>
+    <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Trigger description.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="pipelines_go">
+<a href="#pipelines_go" style="color: inherit; text-decoration: inherit;">Pipelines</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerpipelinereferenceresponse">[]Trigger<wbr>Pipeline<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="folderpath_nodejs">
+<a href="#folderpath_nodejs" style="color: inherit; text-decoration: inherit;">folder<wbr>Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The path of the container/folder that will trigger the pipeline.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="linkedservice_nodejs">
+<a href="#linkedservice_nodejs" style="color: inherit; text-decoration: inherit;">linked<wbr>Service</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The Azure Storage linked service reference.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="maxconcurrency_nodejs">
+<a href="#maxconcurrency_nodejs" style="color: inherit; text-decoration: inherit;">max<wbr>Concurrency</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The max number of parallel files to handle when it is triggered.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="runtimestate_nodejs">
+<a href="#runtimestate_nodejs" style="color: inherit; text-decoration: inherit;">runtime<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="annotations_nodejs">
+<a href="#annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any[]</span>
+    </dt>
+    <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Trigger description.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="pipelines_nodejs">
+<a href="#pipelines_nodejs" style="color: inherit; text-decoration: inherit;">pipelines</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerpipelinereferenceresponse">Trigger<wbr>Pipeline<wbr>Reference<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="folder_path_python">
+<a href="#folder_path_python" style="color: inherit; text-decoration: inherit;">folder_<wbr>path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The path of the container/folder that will trigger the pipeline.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="linked_service_python">
+<a href="#linked_service_python" style="color: inherit; text-decoration: inherit;">linked_<wbr>service</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The Azure Storage linked service reference.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="max_concurrency_python">
+<a href="#max_concurrency_python" style="color: inherit; text-decoration: inherit;">max_<wbr>concurrency</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The max number of parallel files to handle when it is triggered.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="runtime_state_python">
+<a href="#runtime_state_python" style="color: inherit; text-decoration: inherit;">runtime_<wbr>state</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="annotations_python">
+<a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[Any]</span>
+    </dt>
+    <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Trigger description.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="pipelines_python">
+<a href="#pipelines_python" style="color: inherit; text-decoration: inherit;">pipelines</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerpipelinereferenceresponse">Sequence[Trigger<wbr>Pipeline<wbr>Reference<wbr>Response<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
 
 <h4 id="chainingtrigger">Chaining<wbr>Trigger</h4>
 
@@ -1266,6 +2488,1022 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Trigger description.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="customeventstrigger">Custom<wbr>Events<wbr>Trigger</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="events_csharp">
+<a href="#events_csharp" style="color: inherit; text-decoration: inherit;">Events</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;object&gt;</span>
+    </dt>
+    <dd>{{% md %}}The list of event types that cause this trigger to fire.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="scope_csharp">
+<a href="#scope_csharp" style="color: inherit; text-decoration: inherit;">Scope</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARM resource ID of the Azure Event Grid Topic.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="annotations_csharp">
+<a href="#annotations_csharp" style="color: inherit; text-decoration: inherit;">Annotations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;object&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Trigger description.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="pipelines_csharp">
+<a href="#pipelines_csharp" style="color: inherit; text-decoration: inherit;">Pipelines</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerpipelinereference">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Trigger<wbr>Pipeline<wbr>Reference<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="subjectbeginswith_csharp">
+<a href="#subjectbeginswith_csharp" style="color: inherit; text-decoration: inherit;">Subject<wbr>Begins<wbr>With</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The event subject must begin with the pattern provided for trigger to fire. At least one of these must be provided: subjectBeginsWith, subjectEndsWith.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="subjectendswith_csharp">
+<a href="#subjectendswith_csharp" style="color: inherit; text-decoration: inherit;">Subject<wbr>Ends<wbr>With</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The event subject must end with the pattern provided for trigger to fire. At least one of these must be provided: subjectBeginsWith, subjectEndsWith.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="events_go">
+<a href="#events_go" style="color: inherit; text-decoration: inherit;">Events</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]interface{}</span>
+    </dt>
+    <dd>{{% md %}}The list of event types that cause this trigger to fire.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="scope_go">
+<a href="#scope_go" style="color: inherit; text-decoration: inherit;">Scope</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARM resource ID of the Azure Event Grid Topic.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="annotations_go">
+<a href="#annotations_go" style="color: inherit; text-decoration: inherit;">Annotations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]interface{}</span>
+    </dt>
+    <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Trigger description.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="pipelines_go">
+<a href="#pipelines_go" style="color: inherit; text-decoration: inherit;">Pipelines</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerpipelinereference">[]Trigger<wbr>Pipeline<wbr>Reference</a></span>
+    </dt>
+    <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="subjectbeginswith_go">
+<a href="#subjectbeginswith_go" style="color: inherit; text-decoration: inherit;">Subject<wbr>Begins<wbr>With</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The event subject must begin with the pattern provided for trigger to fire. At least one of these must be provided: subjectBeginsWith, subjectEndsWith.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="subjectendswith_go">
+<a href="#subjectendswith_go" style="color: inherit; text-decoration: inherit;">Subject<wbr>Ends<wbr>With</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The event subject must end with the pattern provided for trigger to fire. At least one of these must be provided: subjectBeginsWith, subjectEndsWith.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="events_nodejs">
+<a href="#events_nodejs" style="color: inherit; text-decoration: inherit;">events</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any[]</span>
+    </dt>
+    <dd>{{% md %}}The list of event types that cause this trigger to fire.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="scope_nodejs">
+<a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARM resource ID of the Azure Event Grid Topic.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="annotations_nodejs">
+<a href="#annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any[]</span>
+    </dt>
+    <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Trigger description.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="pipelines_nodejs">
+<a href="#pipelines_nodejs" style="color: inherit; text-decoration: inherit;">pipelines</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerpipelinereference">Trigger<wbr>Pipeline<wbr>Reference[]</a></span>
+    </dt>
+    <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="subjectbeginswith_nodejs">
+<a href="#subjectbeginswith_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Begins<wbr>With</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The event subject must begin with the pattern provided for trigger to fire. At least one of these must be provided: subjectBeginsWith, subjectEndsWith.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="subjectendswith_nodejs">
+<a href="#subjectendswith_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Ends<wbr>With</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The event subject must end with the pattern provided for trigger to fire. At least one of these must be provided: subjectBeginsWith, subjectEndsWith.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="events_python">
+<a href="#events_python" style="color: inherit; text-decoration: inherit;">events</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[Any]</span>
+    </dt>
+    <dd>{{% md %}}The list of event types that cause this trigger to fire.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="scope_python">
+<a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ARM resource ID of the Azure Event Grid Topic.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="annotations_python">
+<a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[Any]</span>
+    </dt>
+    <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Trigger description.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="pipelines_python">
+<a href="#pipelines_python" style="color: inherit; text-decoration: inherit;">pipelines</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerpipelinereference">Sequence[Trigger<wbr>Pipeline<wbr>Reference<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="subject_begins_with_python">
+<a href="#subject_begins_with_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>begins_<wbr>with</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The event subject must begin with the pattern provided for trigger to fire. At least one of these must be provided: subjectBeginsWith, subjectEndsWith.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="subject_ends_with_python">
+<a href="#subject_ends_with_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>ends_<wbr>with</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The event subject must end with the pattern provided for trigger to fire. At least one of these must be provided: subjectBeginsWith, subjectEndsWith.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="customeventstriggerresponse">Custom<wbr>Events<wbr>Trigger<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="events_csharp">
+<a href="#events_csharp" style="color: inherit; text-decoration: inherit;">Events</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;object&gt;</span>
+    </dt>
+    <dd>{{% md %}}The list of event types that cause this trigger to fire.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="runtimestate_csharp">
+<a href="#runtimestate_csharp" style="color: inherit; text-decoration: inherit;">Runtime<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="scope_csharp">
+<a href="#scope_csharp" style="color: inherit; text-decoration: inherit;">Scope</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARM resource ID of the Azure Event Grid Topic.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="annotations_csharp">
+<a href="#annotations_csharp" style="color: inherit; text-decoration: inherit;">Annotations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;object&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Trigger description.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="pipelines_csharp">
+<a href="#pipelines_csharp" style="color: inherit; text-decoration: inherit;">Pipelines</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerpipelinereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Trigger<wbr>Pipeline<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="subjectbeginswith_csharp">
+<a href="#subjectbeginswith_csharp" style="color: inherit; text-decoration: inherit;">Subject<wbr>Begins<wbr>With</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The event subject must begin with the pattern provided for trigger to fire. At least one of these must be provided: subjectBeginsWith, subjectEndsWith.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="subjectendswith_csharp">
+<a href="#subjectendswith_csharp" style="color: inherit; text-decoration: inherit;">Subject<wbr>Ends<wbr>With</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The event subject must end with the pattern provided for trigger to fire. At least one of these must be provided: subjectBeginsWith, subjectEndsWith.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="events_go">
+<a href="#events_go" style="color: inherit; text-decoration: inherit;">Events</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]interface{}</span>
+    </dt>
+    <dd>{{% md %}}The list of event types that cause this trigger to fire.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="runtimestate_go">
+<a href="#runtimestate_go" style="color: inherit; text-decoration: inherit;">Runtime<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="scope_go">
+<a href="#scope_go" style="color: inherit; text-decoration: inherit;">Scope</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARM resource ID of the Azure Event Grid Topic.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="annotations_go">
+<a href="#annotations_go" style="color: inherit; text-decoration: inherit;">Annotations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]interface{}</span>
+    </dt>
+    <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Trigger description.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="pipelines_go">
+<a href="#pipelines_go" style="color: inherit; text-decoration: inherit;">Pipelines</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerpipelinereferenceresponse">[]Trigger<wbr>Pipeline<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="subjectbeginswith_go">
+<a href="#subjectbeginswith_go" style="color: inherit; text-decoration: inherit;">Subject<wbr>Begins<wbr>With</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The event subject must begin with the pattern provided for trigger to fire. At least one of these must be provided: subjectBeginsWith, subjectEndsWith.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="subjectendswith_go">
+<a href="#subjectendswith_go" style="color: inherit; text-decoration: inherit;">Subject<wbr>Ends<wbr>With</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The event subject must end with the pattern provided for trigger to fire. At least one of these must be provided: subjectBeginsWith, subjectEndsWith.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="events_nodejs">
+<a href="#events_nodejs" style="color: inherit; text-decoration: inherit;">events</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any[]</span>
+    </dt>
+    <dd>{{% md %}}The list of event types that cause this trigger to fire.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="runtimestate_nodejs">
+<a href="#runtimestate_nodejs" style="color: inherit; text-decoration: inherit;">runtime<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="scope_nodejs">
+<a href="#scope_nodejs" style="color: inherit; text-decoration: inherit;">scope</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARM resource ID of the Azure Event Grid Topic.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="annotations_nodejs">
+<a href="#annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any[]</span>
+    </dt>
+    <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Trigger description.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="pipelines_nodejs">
+<a href="#pipelines_nodejs" style="color: inherit; text-decoration: inherit;">pipelines</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerpipelinereferenceresponse">Trigger<wbr>Pipeline<wbr>Reference<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="subjectbeginswith_nodejs">
+<a href="#subjectbeginswith_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Begins<wbr>With</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The event subject must begin with the pattern provided for trigger to fire. At least one of these must be provided: subjectBeginsWith, subjectEndsWith.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="subjectendswith_nodejs">
+<a href="#subjectendswith_nodejs" style="color: inherit; text-decoration: inherit;">subject<wbr>Ends<wbr>With</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The event subject must end with the pattern provided for trigger to fire. At least one of these must be provided: subjectBeginsWith, subjectEndsWith.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="events_python">
+<a href="#events_python" style="color: inherit; text-decoration: inherit;">events</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[Any]</span>
+    </dt>
+    <dd>{{% md %}}The list of event types that cause this trigger to fire.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="runtime_state_python">
+<a href="#runtime_state_python" style="color: inherit; text-decoration: inherit;">runtime_<wbr>state</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="scope_python">
+<a href="#scope_python" style="color: inherit; text-decoration: inherit;">scope</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ARM resource ID of the Azure Event Grid Topic.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="annotations_python">
+<a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[Any]</span>
+    </dt>
+    <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Trigger description.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="pipelines_python">
+<a href="#pipelines_python" style="color: inherit; text-decoration: inherit;">pipelines</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerpipelinereferenceresponse">Sequence[Trigger<wbr>Pipeline<wbr>Reference<wbr>Response<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="subject_begins_with_python">
+<a href="#subject_begins_with_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>begins_<wbr>with</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The event subject must begin with the pattern provided for trigger to fire. At least one of these must be provided: subjectBeginsWith, subjectEndsWith.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="subject_ends_with_python">
+<a href="#subject_ends_with_python" style="color: inherit; text-decoration: inherit;">subject_<wbr>ends_<wbr>with</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The event subject must end with the pattern provided for trigger to fire. At least one of these must be provided: subjectBeginsWith, subjectEndsWith.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="dayofweek">Day<wbr>Of<wbr>Week</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Sunday</dt>
+    <dd>Sunday</dd>
+    <dt>Monday</dt>
+    <dd>Monday</dd>
+    <dt>Tuesday</dt>
+    <dd>Tuesday</dd>
+    <dt>Wednesday</dt>
+    <dd>Wednesday</dd>
+    <dt>Thursday</dt>
+    <dd>Thursday</dd>
+    <dt>Friday</dt>
+    <dd>Friday</dd>
+    <dt>Saturday</dt>
+    <dd>Saturday</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Day<wbr>Of<wbr>Week<wbr>Sunday</dt>
+    <dd>Sunday</dd>
+    <dt>Day<wbr>Of<wbr>Week<wbr>Monday</dt>
+    <dd>Monday</dd>
+    <dt>Day<wbr>Of<wbr>Week<wbr>Tuesday</dt>
+    <dd>Tuesday</dd>
+    <dt>Day<wbr>Of<wbr>Week<wbr>Wednesday</dt>
+    <dd>Wednesday</dd>
+    <dt>Day<wbr>Of<wbr>Week<wbr>Thursday</dt>
+    <dd>Thursday</dd>
+    <dt>Day<wbr>Of<wbr>Week<wbr>Friday</dt>
+    <dd>Friday</dd>
+    <dt>Day<wbr>Of<wbr>Week<wbr>Saturday</dt>
+    <dd>Saturday</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Sunday</dt>
+    <dd>Sunday</dd>
+    <dt>Monday</dt>
+    <dd>Monday</dd>
+    <dt>Tuesday</dt>
+    <dd>Tuesday</dd>
+    <dt>Wednesday</dt>
+    <dd>Wednesday</dd>
+    <dt>Thursday</dt>
+    <dd>Thursday</dd>
+    <dt>Friday</dt>
+    <dd>Friday</dd>
+    <dt>Saturday</dt>
+    <dd>Saturday</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>SUNDAY</dt>
+    <dd>Sunday</dd>
+    <dt>MONDAY</dt>
+    <dd>Monday</dd>
+    <dt>TUESDAY</dt>
+    <dd>Tuesday</dd>
+    <dt>WEDNESDAY</dt>
+    <dd>Wednesday</dd>
+    <dt>THURSDAY</dt>
+    <dd>Thursday</dd>
+    <dt>FRIDAY</dt>
+    <dd>Friday</dd>
+    <dt>SATURDAY</dt>
+    <dd>Saturday</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="daysofweek">Days<wbr>Of<wbr>Week</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Sunday</dt>
+    <dd>Sunday</dd>
+    <dt>Monday</dt>
+    <dd>Monday</dd>
+    <dt>Tuesday</dt>
+    <dd>Tuesday</dd>
+    <dt>Wednesday</dt>
+    <dd>Wednesday</dd>
+    <dt>Thursday</dt>
+    <dd>Thursday</dd>
+    <dt>Friday</dt>
+    <dd>Friday</dd>
+    <dt>Saturday</dt>
+    <dd>Saturday</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Days<wbr>Of<wbr>Week<wbr>Sunday</dt>
+    <dd>Sunday</dd>
+    <dt>Days<wbr>Of<wbr>Week<wbr>Monday</dt>
+    <dd>Monday</dd>
+    <dt>Days<wbr>Of<wbr>Week<wbr>Tuesday</dt>
+    <dd>Tuesday</dd>
+    <dt>Days<wbr>Of<wbr>Week<wbr>Wednesday</dt>
+    <dd>Wednesday</dd>
+    <dt>Days<wbr>Of<wbr>Week<wbr>Thursday</dt>
+    <dd>Thursday</dd>
+    <dt>Days<wbr>Of<wbr>Week<wbr>Friday</dt>
+    <dd>Friday</dd>
+    <dt>Days<wbr>Of<wbr>Week<wbr>Saturday</dt>
+    <dd>Saturday</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Sunday</dt>
+    <dd>Sunday</dd>
+    <dt>Monday</dt>
+    <dd>Monday</dd>
+    <dt>Tuesday</dt>
+    <dd>Tuesday</dd>
+    <dt>Wednesday</dt>
+    <dd>Wednesday</dd>
+    <dt>Thursday</dt>
+    <dd>Thursday</dd>
+    <dt>Friday</dt>
+    <dd>Friday</dd>
+    <dt>Saturday</dt>
+    <dd>Saturday</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>SUNDAY</dt>
+    <dd>Sunday</dd>
+    <dt>MONDAY</dt>
+    <dd>Monday</dd>
+    <dt>TUESDAY</dt>
+    <dd>Tuesday</dd>
+    <dt>WEDNESDAY</dt>
+    <dd>Wednesday</dd>
+    <dt>THURSDAY</dt>
+    <dd>Thursday</dd>
+    <dt>FRIDAY</dt>
+    <dd>Friday</dd>
+    <dt>SATURDAY</dt>
+    <dd>Saturday</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="linkedservicereference">Linked<wbr>Service<wbr>Reference</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="referencename_csharp">
+<a href="#referencename_csharp" style="color: inherit; text-decoration: inherit;">Reference<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Reference LinkedService name.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Linked service reference type.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="parameters_csharp">
+<a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}Arguments for LinkedService.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="referencename_go">
+<a href="#referencename_go" style="color: inherit; text-decoration: inherit;">Reference<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Reference LinkedService name.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Linked service reference type.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="parameters_go">
+<a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}Arguments for LinkedService.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="referencename_nodejs">
+<a href="#referencename_nodejs" style="color: inherit; text-decoration: inherit;">reference<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Reference LinkedService name.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Linked service reference type.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="parameters_nodejs">
+<a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}Arguments for LinkedService.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="reference_name_python">
+<a href="#reference_name_python" style="color: inherit; text-decoration: inherit;">reference_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Reference LinkedService name.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Linked service reference type.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="parameters_python">
+<a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}Arguments for LinkedService.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="linkedservicereferenceresponse">Linked<wbr>Service<wbr>Reference<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="referencename_csharp">
+<a href="#referencename_csharp" style="color: inherit; text-decoration: inherit;">Reference<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Reference LinkedService name.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Linked service reference type.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="parameters_csharp">
+<a href="#parameters_csharp" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}Arguments for LinkedService.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="referencename_go">
+<a href="#referencename_go" style="color: inherit; text-decoration: inherit;">Reference<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Reference LinkedService name.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Linked service reference type.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="parameters_go">
+<a href="#parameters_go" style="color: inherit; text-decoration: inherit;">Parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}Arguments for LinkedService.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="referencename_nodejs">
+<a href="#referencename_nodejs" style="color: inherit; text-decoration: inherit;">reference<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Reference LinkedService name.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Linked service reference type.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="parameters_nodejs">
+<a href="#parameters_nodejs" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}Arguments for LinkedService.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="reference_name_python">
+<a href="#reference_name_python" style="color: inherit; text-decoration: inherit;">reference_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Reference LinkedService name.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Linked service reference type.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="parameters_python">
+<a href="#parameters_python" style="color: inherit; text-decoration: inherit;">parameters</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}Arguments for LinkedService.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1838,6 +4076,692 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Reference name.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="recurrencefrequency">Recurrence<wbr>Frequency</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Not<wbr>Specified</dt>
+    <dd>NotSpecified</dd>
+    <dt>Minute</dt>
+    <dd>Minute</dd>
+    <dt>Hour</dt>
+    <dd>Hour</dd>
+    <dt>Day</dt>
+    <dd>Day</dd>
+    <dt>Week</dt>
+    <dd>Week</dd>
+    <dt>Month</dt>
+    <dd>Month</dd>
+    <dt>Year</dt>
+    <dd>Year</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Recurrence<wbr>Frequency<wbr>Not<wbr>Specified</dt>
+    <dd>NotSpecified</dd>
+    <dt>Recurrence<wbr>Frequency<wbr>Minute</dt>
+    <dd>Minute</dd>
+    <dt>Recurrence<wbr>Frequency<wbr>Hour</dt>
+    <dd>Hour</dd>
+    <dt>Recurrence<wbr>Frequency<wbr>Day</dt>
+    <dd>Day</dd>
+    <dt>Recurrence<wbr>Frequency<wbr>Week</dt>
+    <dd>Week</dd>
+    <dt>Recurrence<wbr>Frequency<wbr>Month</dt>
+    <dd>Month</dd>
+    <dt>Recurrence<wbr>Frequency<wbr>Year</dt>
+    <dd>Year</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Not<wbr>Specified</dt>
+    <dd>NotSpecified</dd>
+    <dt>Minute</dt>
+    <dd>Minute</dd>
+    <dt>Hour</dt>
+    <dd>Hour</dd>
+    <dt>Day</dt>
+    <dd>Day</dd>
+    <dt>Week</dt>
+    <dd>Week</dd>
+    <dt>Month</dt>
+    <dd>Month</dd>
+    <dt>Year</dt>
+    <dd>Year</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>NOT_SPECIFIED</dt>
+    <dd>NotSpecified</dd>
+    <dt>MINUTE</dt>
+    <dd>Minute</dd>
+    <dt>HOUR</dt>
+    <dd>Hour</dd>
+    <dt>DAY</dt>
+    <dd>Day</dd>
+    <dt>WEEK</dt>
+    <dd>Week</dd>
+    <dt>MONTH</dt>
+    <dd>Month</dd>
+    <dt>YEAR</dt>
+    <dd>Year</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="recurrenceschedule">Recurrence<wbr>Schedule</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="hours_csharp">
+<a href="#hours_csharp" style="color: inherit; text-decoration: inherit;">Hours</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;int&gt;</span>
+    </dt>
+    <dd>{{% md %}}The hours.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="minutes_csharp">
+<a href="#minutes_csharp" style="color: inherit; text-decoration: inherit;">Minutes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;int&gt;</span>
+    </dt>
+    <dd>{{% md %}}The minutes.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="monthdays_csharp">
+<a href="#monthdays_csharp" style="color: inherit; text-decoration: inherit;">Month<wbr>Days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;int&gt;</span>
+    </dt>
+    <dd>{{% md %}}The month days.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="monthlyoccurrences_csharp">
+<a href="#monthlyoccurrences_csharp" style="color: inherit; text-decoration: inherit;">Monthly<wbr>Occurrences</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#recurrencescheduleoccurrence">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Recurrence<wbr>Schedule<wbr>Occurrence<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The monthly occurrences.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="weekdays_csharp">
+<a href="#weekdays_csharp" style="color: inherit; text-decoration: inherit;">Week<wbr>Days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#daysofweek">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Days<wbr>Of<wbr>Week&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The days of the week.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="hours_go">
+<a href="#hours_go" style="color: inherit; text-decoration: inherit;">Hours</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]int</span>
+    </dt>
+    <dd>{{% md %}}The hours.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="minutes_go">
+<a href="#minutes_go" style="color: inherit; text-decoration: inherit;">Minutes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]int</span>
+    </dt>
+    <dd>{{% md %}}The minutes.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="monthdays_go">
+<a href="#monthdays_go" style="color: inherit; text-decoration: inherit;">Month<wbr>Days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]int</span>
+    </dt>
+    <dd>{{% md %}}The month days.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="monthlyoccurrences_go">
+<a href="#monthlyoccurrences_go" style="color: inherit; text-decoration: inherit;">Monthly<wbr>Occurrences</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#recurrencescheduleoccurrence">[]Recurrence<wbr>Schedule<wbr>Occurrence</a></span>
+    </dt>
+    <dd>{{% md %}}The monthly occurrences.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="weekdays_go">
+<a href="#weekdays_go" style="color: inherit; text-decoration: inherit;">Week<wbr>Days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#daysofweek">[]string</a></span>
+    </dt>
+    <dd>{{% md %}}The days of the week.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="hours_nodejs">
+<a href="#hours_nodejs" style="color: inherit; text-decoration: inherit;">hours</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number[]</span>
+    </dt>
+    <dd>{{% md %}}The hours.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="minutes_nodejs">
+<a href="#minutes_nodejs" style="color: inherit; text-decoration: inherit;">minutes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number[]</span>
+    </dt>
+    <dd>{{% md %}}The minutes.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="monthdays_nodejs">
+<a href="#monthdays_nodejs" style="color: inherit; text-decoration: inherit;">month<wbr>Days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number[]</span>
+    </dt>
+    <dd>{{% md %}}The month days.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="monthlyoccurrences_nodejs">
+<a href="#monthlyoccurrences_nodejs" style="color: inherit; text-decoration: inherit;">monthly<wbr>Occurrences</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#recurrencescheduleoccurrence">Recurrence<wbr>Schedule<wbr>Occurrence[]</a></span>
+    </dt>
+    <dd>{{% md %}}The monthly occurrences.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="weekdays_nodejs">
+<a href="#weekdays_nodejs" style="color: inherit; text-decoration: inherit;">week<wbr>Days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#daysofweek">Days<wbr>Of<wbr>Week[]</a></span>
+    </dt>
+    <dd>{{% md %}}The days of the week.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="hours_python">
+<a href="#hours_python" style="color: inherit; text-decoration: inherit;">hours</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[int]</span>
+    </dt>
+    <dd>{{% md %}}The hours.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="minutes_python">
+<a href="#minutes_python" style="color: inherit; text-decoration: inherit;">minutes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[int]</span>
+    </dt>
+    <dd>{{% md %}}The minutes.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="month_days_python">
+<a href="#month_days_python" style="color: inherit; text-decoration: inherit;">month_<wbr>days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[int]</span>
+    </dt>
+    <dd>{{% md %}}The month days.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="monthly_occurrences_python">
+<a href="#monthly_occurrences_python" style="color: inherit; text-decoration: inherit;">monthly_<wbr>occurrences</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#recurrencescheduleoccurrence">Sequence[Recurrence<wbr>Schedule<wbr>Occurrence<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}The monthly occurrences.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="week_days_python">
+<a href="#week_days_python" style="color: inherit; text-decoration: inherit;">week_<wbr>days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#daysofweek">Sequence[Days<wbr>Of<wbr>Week]</a></span>
+    </dt>
+    <dd>{{% md %}}The days of the week.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="recurrencescheduleoccurrence">Recurrence<wbr>Schedule<wbr>Occurrence</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="day_csharp">
+<a href="#day_csharp" style="color: inherit; text-decoration: inherit;">Day</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dayofweek">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Day<wbr>Of<wbr>Week</a></span>
+    </dt>
+    <dd>{{% md %}}The day of the week.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="occurrence_csharp">
+<a href="#occurrence_csharp" style="color: inherit; text-decoration: inherit;">Occurrence</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The occurrence.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="day_go">
+<a href="#day_go" style="color: inherit; text-decoration: inherit;">Day</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dayofweek">Day<wbr>Of<wbr>Week</a></span>
+    </dt>
+    <dd>{{% md %}}The day of the week.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="occurrence_go">
+<a href="#occurrence_go" style="color: inherit; text-decoration: inherit;">Occurrence</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The occurrence.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="day_nodejs">
+<a href="#day_nodejs" style="color: inherit; text-decoration: inherit;">day</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dayofweek">Day<wbr>Of<wbr>Week</a></span>
+    </dt>
+    <dd>{{% md %}}The day of the week.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="occurrence_nodejs">
+<a href="#occurrence_nodejs" style="color: inherit; text-decoration: inherit;">occurrence</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The occurrence.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="day_python">
+<a href="#day_python" style="color: inherit; text-decoration: inherit;">day</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dayofweek">Day<wbr>Of<wbr>Week</a></span>
+    </dt>
+    <dd>{{% md %}}The day of the week.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="occurrence_python">
+<a href="#occurrence_python" style="color: inherit; text-decoration: inherit;">occurrence</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The occurrence.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="recurrencescheduleoccurrenceresponse">Recurrence<wbr>Schedule<wbr>Occurrence<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="day_csharp">
+<a href="#day_csharp" style="color: inherit; text-decoration: inherit;">Day</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The day of the week.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="occurrence_csharp">
+<a href="#occurrence_csharp" style="color: inherit; text-decoration: inherit;">Occurrence</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The occurrence.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="day_go">
+<a href="#day_go" style="color: inherit; text-decoration: inherit;">Day</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The day of the week.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="occurrence_go">
+<a href="#occurrence_go" style="color: inherit; text-decoration: inherit;">Occurrence</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The occurrence.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="day_nodejs">
+<a href="#day_nodejs" style="color: inherit; text-decoration: inherit;">day</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The day of the week.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="occurrence_nodejs">
+<a href="#occurrence_nodejs" style="color: inherit; text-decoration: inherit;">occurrence</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The occurrence.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="day_python">
+<a href="#day_python" style="color: inherit; text-decoration: inherit;">day</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The day of the week.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="occurrence_python">
+<a href="#occurrence_python" style="color: inherit; text-decoration: inherit;">occurrence</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The occurrence.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="recurrencescheduleresponse">Recurrence<wbr>Schedule<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="hours_csharp">
+<a href="#hours_csharp" style="color: inherit; text-decoration: inherit;">Hours</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;int&gt;</span>
+    </dt>
+    <dd>{{% md %}}The hours.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="minutes_csharp">
+<a href="#minutes_csharp" style="color: inherit; text-decoration: inherit;">Minutes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;int&gt;</span>
+    </dt>
+    <dd>{{% md %}}The minutes.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="monthdays_csharp">
+<a href="#monthdays_csharp" style="color: inherit; text-decoration: inherit;">Month<wbr>Days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;int&gt;</span>
+    </dt>
+    <dd>{{% md %}}The month days.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="monthlyoccurrences_csharp">
+<a href="#monthlyoccurrences_csharp" style="color: inherit; text-decoration: inherit;">Monthly<wbr>Occurrences</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#recurrencescheduleoccurrenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Recurrence<wbr>Schedule<wbr>Occurrence<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The monthly occurrences.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="weekdays_csharp">
+<a href="#weekdays_csharp" style="color: inherit; text-decoration: inherit;">Week<wbr>Days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}The days of the week.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="hours_go">
+<a href="#hours_go" style="color: inherit; text-decoration: inherit;">Hours</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]int</span>
+    </dt>
+    <dd>{{% md %}}The hours.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="minutes_go">
+<a href="#minutes_go" style="color: inherit; text-decoration: inherit;">Minutes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]int</span>
+    </dt>
+    <dd>{{% md %}}The minutes.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="monthdays_go">
+<a href="#monthdays_go" style="color: inherit; text-decoration: inherit;">Month<wbr>Days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]int</span>
+    </dt>
+    <dd>{{% md %}}The month days.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="monthlyoccurrences_go">
+<a href="#monthlyoccurrences_go" style="color: inherit; text-decoration: inherit;">Monthly<wbr>Occurrences</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#recurrencescheduleoccurrenceresponse">[]Recurrence<wbr>Schedule<wbr>Occurrence<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The monthly occurrences.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="weekdays_go">
+<a href="#weekdays_go" style="color: inherit; text-decoration: inherit;">Week<wbr>Days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}The days of the week.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="hours_nodejs">
+<a href="#hours_nodejs" style="color: inherit; text-decoration: inherit;">hours</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number[]</span>
+    </dt>
+    <dd>{{% md %}}The hours.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="minutes_nodejs">
+<a href="#minutes_nodejs" style="color: inherit; text-decoration: inherit;">minutes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number[]</span>
+    </dt>
+    <dd>{{% md %}}The minutes.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="monthdays_nodejs">
+<a href="#monthdays_nodejs" style="color: inherit; text-decoration: inherit;">month<wbr>Days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number[]</span>
+    </dt>
+    <dd>{{% md %}}The month days.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="monthlyoccurrences_nodejs">
+<a href="#monthlyoccurrences_nodejs" style="color: inherit; text-decoration: inherit;">monthly<wbr>Occurrences</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#recurrencescheduleoccurrenceresponse">Recurrence<wbr>Schedule<wbr>Occurrence<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}The monthly occurrences.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="weekdays_nodejs">
+<a href="#weekdays_nodejs" style="color: inherit; text-decoration: inherit;">week<wbr>Days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}The days of the week.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="hours_python">
+<a href="#hours_python" style="color: inherit; text-decoration: inherit;">hours</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[int]</span>
+    </dt>
+    <dd>{{% md %}}The hours.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="minutes_python">
+<a href="#minutes_python" style="color: inherit; text-decoration: inherit;">minutes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[int]</span>
+    </dt>
+    <dd>{{% md %}}The minutes.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="month_days_python">
+<a href="#month_days_python" style="color: inherit; text-decoration: inherit;">month_<wbr>days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[int]</span>
+    </dt>
+    <dd>{{% md %}}The month days.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="monthly_occurrences_python">
+<a href="#monthly_occurrences_python" style="color: inherit; text-decoration: inherit;">monthly_<wbr>occurrences</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#recurrencescheduleoccurrenceresponse">Sequence[Recurrence<wbr>Schedule<wbr>Occurrence<wbr>Response<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}The monthly occurrences.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="week_days_python">
+<a href="#week_days_python" style="color: inherit; text-decoration: inherit;">week_<wbr>days</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}The days of the week.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -2554,6 +5478,866 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Interval between retries in seconds. Default is 30.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="scheduletrigger">Schedule<wbr>Trigger</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="recurrence_csharp">
+<a href="#recurrence_csharp" style="color: inherit; text-decoration: inherit;">Recurrence</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#scheduletriggerrecurrence">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Schedule<wbr>Trigger<wbr>Recurrence<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Recurrence schedule configuration.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="annotations_csharp">
+<a href="#annotations_csharp" style="color: inherit; text-decoration: inherit;">Annotations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;object&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Trigger description.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="pipelines_csharp">
+<a href="#pipelines_csharp" style="color: inherit; text-decoration: inherit;">Pipelines</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerpipelinereference">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Trigger<wbr>Pipeline<wbr>Reference<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="recurrence_go">
+<a href="#recurrence_go" style="color: inherit; text-decoration: inherit;">Recurrence</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#scheduletriggerrecurrence">Schedule<wbr>Trigger<wbr>Recurrence</a></span>
+    </dt>
+    <dd>{{% md %}}Recurrence schedule configuration.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="annotations_go">
+<a href="#annotations_go" style="color: inherit; text-decoration: inherit;">Annotations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]interface{}</span>
+    </dt>
+    <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Trigger description.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="pipelines_go">
+<a href="#pipelines_go" style="color: inherit; text-decoration: inherit;">Pipelines</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerpipelinereference">[]Trigger<wbr>Pipeline<wbr>Reference</a></span>
+    </dt>
+    <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="recurrence_nodejs">
+<a href="#recurrence_nodejs" style="color: inherit; text-decoration: inherit;">recurrence</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#scheduletriggerrecurrence">Schedule<wbr>Trigger<wbr>Recurrence</a></span>
+    </dt>
+    <dd>{{% md %}}Recurrence schedule configuration.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="annotations_nodejs">
+<a href="#annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any[]</span>
+    </dt>
+    <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Trigger description.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="pipelines_nodejs">
+<a href="#pipelines_nodejs" style="color: inherit; text-decoration: inherit;">pipelines</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerpipelinereference">Trigger<wbr>Pipeline<wbr>Reference[]</a></span>
+    </dt>
+    <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="recurrence_python">
+<a href="#recurrence_python" style="color: inherit; text-decoration: inherit;">recurrence</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#scheduletriggerrecurrence">Schedule<wbr>Trigger<wbr>Recurrence<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Recurrence schedule configuration.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="annotations_python">
+<a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[Any]</span>
+    </dt>
+    <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Trigger description.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="pipelines_python">
+<a href="#pipelines_python" style="color: inherit; text-decoration: inherit;">pipelines</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerpipelinereference">Sequence[Trigger<wbr>Pipeline<wbr>Reference<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="scheduletriggerrecurrence">Schedule<wbr>Trigger<wbr>Recurrence</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="endtime_csharp">
+<a href="#endtime_csharp" style="color: inherit; text-decoration: inherit;">End<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The end time.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="frequency_csharp">
+<a href="#frequency_csharp" style="color: inherit; text-decoration: inherit;">Frequency</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#recurrencefrequency">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Recurrence<wbr>Frequency</a></span>
+    </dt>
+    <dd>{{% md %}}The frequency.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="interval_csharp">
+<a href="#interval_csharp" style="color: inherit; text-decoration: inherit;">Interval</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The interval.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="schedule_csharp">
+<a href="#schedule_csharp" style="color: inherit; text-decoration: inherit;">Schedule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#recurrenceschedule">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Recurrence<wbr>Schedule<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The recurrence schedule.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="starttime_csharp">
+<a href="#starttime_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The start time.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timezone_csharp">
+<a href="#timezone_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The time zone.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="endtime_go">
+<a href="#endtime_go" style="color: inherit; text-decoration: inherit;">End<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The end time.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="frequency_go">
+<a href="#frequency_go" style="color: inherit; text-decoration: inherit;">Frequency</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#recurrencefrequency">Recurrence<wbr>Frequency</a></span>
+    </dt>
+    <dd>{{% md %}}The frequency.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="interval_go">
+<a href="#interval_go" style="color: inherit; text-decoration: inherit;">Interval</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The interval.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="schedule_go">
+<a href="#schedule_go" style="color: inherit; text-decoration: inherit;">Schedule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#recurrenceschedule">Recurrence<wbr>Schedule</a></span>
+    </dt>
+    <dd>{{% md %}}The recurrence schedule.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="starttime_go">
+<a href="#starttime_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The start time.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timezone_go">
+<a href="#timezone_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The time zone.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="endtime_nodejs">
+<a href="#endtime_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The end time.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="frequency_nodejs">
+<a href="#frequency_nodejs" style="color: inherit; text-decoration: inherit;">frequency</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#recurrencefrequency">Recurrence<wbr>Frequency</a></span>
+    </dt>
+    <dd>{{% md %}}The frequency.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="interval_nodejs">
+<a href="#interval_nodejs" style="color: inherit; text-decoration: inherit;">interval</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The interval.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="schedule_nodejs">
+<a href="#schedule_nodejs" style="color: inherit; text-decoration: inherit;">schedule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#recurrenceschedule">Recurrence<wbr>Schedule</a></span>
+    </dt>
+    <dd>{{% md %}}The recurrence schedule.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="starttime_nodejs">
+<a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The start time.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timezone_nodejs">
+<a href="#timezone_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The time zone.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="end_time_python">
+<a href="#end_time_python" style="color: inherit; text-decoration: inherit;">end_<wbr>time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The end time.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="frequency_python">
+<a href="#frequency_python" style="color: inherit; text-decoration: inherit;">frequency</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str | <a href="#recurrencefrequency">Recurrence<wbr>Frequency</a></span>
+    </dt>
+    <dd>{{% md %}}The frequency.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="interval_python">
+<a href="#interval_python" style="color: inherit; text-decoration: inherit;">interval</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The interval.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="schedule_python">
+<a href="#schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#recurrenceschedule">Recurrence<wbr>Schedule<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The recurrence schedule.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="start_time_python">
+<a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The start time.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="time_zone_python">
+<a href="#time_zone_python" style="color: inherit; text-decoration: inherit;">time_<wbr>zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The time zone.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="scheduletriggerrecurrenceresponse">Schedule<wbr>Trigger<wbr>Recurrence<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="endtime_csharp">
+<a href="#endtime_csharp" style="color: inherit; text-decoration: inherit;">End<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The end time.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="frequency_csharp">
+<a href="#frequency_csharp" style="color: inherit; text-decoration: inherit;">Frequency</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The frequency.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="interval_csharp">
+<a href="#interval_csharp" style="color: inherit; text-decoration: inherit;">Interval</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The interval.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="schedule_csharp">
+<a href="#schedule_csharp" style="color: inherit; text-decoration: inherit;">Schedule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#recurrencescheduleresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Recurrence<wbr>Schedule<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The recurrence schedule.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="starttime_csharp">
+<a href="#starttime_csharp" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The start time.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timezone_csharp">
+<a href="#timezone_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The time zone.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="endtime_go">
+<a href="#endtime_go" style="color: inherit; text-decoration: inherit;">End<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The end time.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="frequency_go">
+<a href="#frequency_go" style="color: inherit; text-decoration: inherit;">Frequency</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The frequency.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="interval_go">
+<a href="#interval_go" style="color: inherit; text-decoration: inherit;">Interval</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The interval.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="schedule_go">
+<a href="#schedule_go" style="color: inherit; text-decoration: inherit;">Schedule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#recurrencescheduleresponse">Recurrence<wbr>Schedule<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The recurrence schedule.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="starttime_go">
+<a href="#starttime_go" style="color: inherit; text-decoration: inherit;">Start<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The start time.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timezone_go">
+<a href="#timezone_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The time zone.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="endtime_nodejs">
+<a href="#endtime_nodejs" style="color: inherit; text-decoration: inherit;">end<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The end time.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="frequency_nodejs">
+<a href="#frequency_nodejs" style="color: inherit; text-decoration: inherit;">frequency</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The frequency.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="interval_nodejs">
+<a href="#interval_nodejs" style="color: inherit; text-decoration: inherit;">interval</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The interval.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="schedule_nodejs">
+<a href="#schedule_nodejs" style="color: inherit; text-decoration: inherit;">schedule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#recurrencescheduleresponse">Recurrence<wbr>Schedule<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The recurrence schedule.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="starttime_nodejs">
+<a href="#starttime_nodejs" style="color: inherit; text-decoration: inherit;">start<wbr>Time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The start time.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="timezone_nodejs">
+<a href="#timezone_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The time zone.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="end_time_python">
+<a href="#end_time_python" style="color: inherit; text-decoration: inherit;">end_<wbr>time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The end time.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="frequency_python">
+<a href="#frequency_python" style="color: inherit; text-decoration: inherit;">frequency</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The frequency.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="interval_python">
+<a href="#interval_python" style="color: inherit; text-decoration: inherit;">interval</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The interval.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="schedule_python">
+<a href="#schedule_python" style="color: inherit; text-decoration: inherit;">schedule</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#recurrencescheduleresponse">Recurrence<wbr>Schedule<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The recurrence schedule.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="start_time_python">
+<a href="#start_time_python" style="color: inherit; text-decoration: inherit;">start_<wbr>time</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The start time.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="time_zone_python">
+<a href="#time_zone_python" style="color: inherit; text-decoration: inherit;">time_<wbr>zone</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The time zone.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="scheduletriggerresponse">Schedule<wbr>Trigger<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="recurrence_csharp">
+<a href="#recurrence_csharp" style="color: inherit; text-decoration: inherit;">Recurrence</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#scheduletriggerrecurrenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Schedule<wbr>Trigger<wbr>Recurrence<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Recurrence schedule configuration.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="runtimestate_csharp">
+<a href="#runtimestate_csharp" style="color: inherit; text-decoration: inherit;">Runtime<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="annotations_csharp">
+<a href="#annotations_csharp" style="color: inherit; text-decoration: inherit;">Annotations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;object&gt;</span>
+    </dt>
+    <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Trigger description.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="pipelines_csharp">
+<a href="#pipelines_csharp" style="color: inherit; text-decoration: inherit;">Pipelines</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerpipelinereferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Trigger<wbr>Pipeline<wbr>Reference<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="recurrence_go">
+<a href="#recurrence_go" style="color: inherit; text-decoration: inherit;">Recurrence</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#scheduletriggerrecurrenceresponse">Schedule<wbr>Trigger<wbr>Recurrence<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Recurrence schedule configuration.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="runtimestate_go">
+<a href="#runtimestate_go" style="color: inherit; text-decoration: inherit;">Runtime<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="annotations_go">
+<a href="#annotations_go" style="color: inherit; text-decoration: inherit;">Annotations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]interface{}</span>
+    </dt>
+    <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Trigger description.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="pipelines_go">
+<a href="#pipelines_go" style="color: inherit; text-decoration: inherit;">Pipelines</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerpipelinereferenceresponse">[]Trigger<wbr>Pipeline<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="recurrence_nodejs">
+<a href="#recurrence_nodejs" style="color: inherit; text-decoration: inherit;">recurrence</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#scheduletriggerrecurrenceresponse">Schedule<wbr>Trigger<wbr>Recurrence<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Recurrence schedule configuration.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="runtimestate_nodejs">
+<a href="#runtimestate_nodejs" style="color: inherit; text-decoration: inherit;">runtime<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="annotations_nodejs">
+<a href="#annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any[]</span>
+    </dt>
+    <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Trigger description.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="pipelines_nodejs">
+<a href="#pipelines_nodejs" style="color: inherit; text-decoration: inherit;">pipelines</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerpipelinereferenceresponse">Trigger<wbr>Pipeline<wbr>Reference<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="recurrence_python">
+<a href="#recurrence_python" style="color: inherit; text-decoration: inherit;">recurrence</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#scheduletriggerrecurrenceresponse">Schedule<wbr>Trigger<wbr>Recurrence<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Recurrence schedule configuration.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="runtime_state_python">
+<a href="#runtime_state_python" style="color: inherit; text-decoration: inherit;">runtime_<wbr>state</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="annotations_python">
+<a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[Any]</span>
+    </dt>
+    <dd>{{% md %}}List of tags that can be used for describing the trigger.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Trigger description.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="pipelines_python">
+<a href="#pipelines_python" style="color: inherit; text-decoration: inherit;">pipelines</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerpipelinereferenceresponse">Sequence[Trigger<wbr>Pipeline<wbr>Reference<wbr>Response<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}Pipelines that need to be started.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -3389,7 +7173,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dependson_csharp" style="color: inherit; text-decoration: inherit;">Depends<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Self<wbr>Dependency<wbr>Tumbling<wbr>Window<wbr>Trigger<wbr>Reference<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Trigger<wbr>Dependency<wbr>Reference<wbr>Args&gt;&gt;</span>
+        <span class="property-type">List&lt;object&gt;</span>
     </dt>
     <dd>{{% md %}}Triggers that this trigger depends on. Only tumbling window triggers are supported.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3599,7 +7383,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dependson_nodejs" style="color: inherit; text-decoration: inherit;">depends<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Self<wbr>Dependency<wbr>Tumbling<wbr>Window<wbr>Trigger<wbr>Reference | Trigger<wbr>Dependency<wbr>Reference[]</span>
+        <span class="property-type">Self<wbr>Dependency<wbr>Tumbling<wbr>Window<wbr>Trigger<wbr>Reference | Trigger<wbr>Dependency<wbr>Reference | Tumbling<wbr>Window<wbr>Trigger<wbr>Dependency<wbr>Reference[]</span>
     </dt>
     <dd>{{% md %}}Triggers that this trigger depends on. Only tumbling window triggers are supported.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3704,7 +7488,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#depends_on_python" style="color: inherit; text-decoration: inherit;">depends_<wbr>on</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Self<wbr>Dependency<wbr>Tumbling<wbr>Window<wbr>Trigger<wbr>Reference<wbr>Args, Trigger<wbr>Dependency<wbr>Reference<wbr>Args]]</span>
+        <span class="property-type">Sequence[Union[Self<wbr>Dependency<wbr>Tumbling<wbr>Window<wbr>Trigger<wbr>Reference<wbr>Args, Trigger<wbr>Dependency<wbr>Reference<wbr>Args, Tumbling<wbr>Window<wbr>Trigger<wbr>Dependency<wbr>Reference<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}Triggers that this trigger depends on. Only tumbling window triggers are supported.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3734,6 +7518,274 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#retrypolicy">Retry<wbr>Policy<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Retry policy that will be applied for failed pipeline runs.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="tumblingwindowtriggerdependencyreference">Tumbling<wbr>Window<wbr>Trigger<wbr>Dependency<wbr>Reference</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="referencetrigger_csharp">
+<a href="#referencetrigger_csharp" style="color: inherit; text-decoration: inherit;">Reference<wbr>Trigger</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerreference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Trigger<wbr>Reference<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Referenced trigger.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="offset_csharp">
+<a href="#offset_csharp" style="color: inherit; text-decoration: inherit;">Offset</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Timespan applied to the start time of a tumbling window when evaluating dependency.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="size_csharp">
+<a href="#size_csharp" style="color: inherit; text-decoration: inherit;">Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The size of the window when evaluating the dependency. If undefined the frequency of the tumbling window will be used.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="referencetrigger_go">
+<a href="#referencetrigger_go" style="color: inherit; text-decoration: inherit;">Reference<wbr>Trigger</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerreference">Trigger<wbr>Reference</a></span>
+    </dt>
+    <dd>{{% md %}}Referenced trigger.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="offset_go">
+<a href="#offset_go" style="color: inherit; text-decoration: inherit;">Offset</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Timespan applied to the start time of a tumbling window when evaluating dependency.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="size_go">
+<a href="#size_go" style="color: inherit; text-decoration: inherit;">Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The size of the window when evaluating the dependency. If undefined the frequency of the tumbling window will be used.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="referencetrigger_nodejs">
+<a href="#referencetrigger_nodejs" style="color: inherit; text-decoration: inherit;">reference<wbr>Trigger</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerreference">Trigger<wbr>Reference</a></span>
+    </dt>
+    <dd>{{% md %}}Referenced trigger.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="offset_nodejs">
+<a href="#offset_nodejs" style="color: inherit; text-decoration: inherit;">offset</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Timespan applied to the start time of a tumbling window when evaluating dependency.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="size_nodejs">
+<a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The size of the window when evaluating the dependency. If undefined the frequency of the tumbling window will be used.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="reference_trigger_python">
+<a href="#reference_trigger_python" style="color: inherit; text-decoration: inherit;">reference_<wbr>trigger</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerreference">Trigger<wbr>Reference<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Referenced trigger.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="offset_python">
+<a href="#offset_python" style="color: inherit; text-decoration: inherit;">offset</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Timespan applied to the start time of a tumbling window when evaluating dependency.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="size_python">
+<a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The size of the window when evaluating the dependency. If undefined the frequency of the tumbling window will be used.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="tumblingwindowtriggerdependencyreferenceresponse">Tumbling<wbr>Window<wbr>Trigger<wbr>Dependency<wbr>Reference<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="referencetrigger_csharp">
+<a href="#referencetrigger_csharp" style="color: inherit; text-decoration: inherit;">Reference<wbr>Trigger</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Trigger<wbr>Reference<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Referenced trigger.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="offset_csharp">
+<a href="#offset_csharp" style="color: inherit; text-decoration: inherit;">Offset</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Timespan applied to the start time of a tumbling window when evaluating dependency.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="size_csharp">
+<a href="#size_csharp" style="color: inherit; text-decoration: inherit;">Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The size of the window when evaluating the dependency. If undefined the frequency of the tumbling window will be used.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="referencetrigger_go">
+<a href="#referencetrigger_go" style="color: inherit; text-decoration: inherit;">Reference<wbr>Trigger</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerreferenceresponse">Trigger<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Referenced trigger.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="offset_go">
+<a href="#offset_go" style="color: inherit; text-decoration: inherit;">Offset</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Timespan applied to the start time of a tumbling window when evaluating dependency.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="size_go">
+<a href="#size_go" style="color: inherit; text-decoration: inherit;">Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The size of the window when evaluating the dependency. If undefined the frequency of the tumbling window will be used.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="referencetrigger_nodejs">
+<a href="#referencetrigger_nodejs" style="color: inherit; text-decoration: inherit;">reference<wbr>Trigger</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerreferenceresponse">Trigger<wbr>Reference<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Referenced trigger.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="offset_nodejs">
+<a href="#offset_nodejs" style="color: inherit; text-decoration: inherit;">offset</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Timespan applied to the start time of a tumbling window when evaluating dependency.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="size_nodejs">
+<a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The size of the window when evaluating the dependency. If undefined the frequency of the tumbling window will be used.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="reference_trigger_python">
+<a href="#reference_trigger_python" style="color: inherit; text-decoration: inherit;">reference_<wbr>trigger</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#triggerreferenceresponse">Trigger<wbr>Reference<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Referenced trigger.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="offset_python">
+<a href="#offset_python" style="color: inherit; text-decoration: inherit;">offset</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Timespan applied to the start time of a tumbling window when evaluating dependency.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="size_python">
+<a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The size of the window when evaluating the dependency. If undefined the frequency of the tumbling window will be used.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -3820,7 +7872,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dependson_csharp" style="color: inherit; text-decoration: inherit;">Depends<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;Union&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Self<wbr>Dependency<wbr>Tumbling<wbr>Window<wbr>Trigger<wbr>Reference<wbr>Response<wbr>Args, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Trigger<wbr>Dependency<wbr>Reference<wbr>Response<wbr>Args&gt;&gt;</span>
+        <span class="property-type">List&lt;object&gt;</span>
     </dt>
     <dd>{{% md %}}Triggers that this trigger depends on. Only tumbling window triggers are supported.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4048,7 +8100,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#dependson_nodejs" style="color: inherit; text-decoration: inherit;">depends<wbr>On</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Self<wbr>Dependency<wbr>Tumbling<wbr>Window<wbr>Trigger<wbr>Reference<wbr>Response | Trigger<wbr>Dependency<wbr>Reference<wbr>Response[]</span>
+        <span class="property-type">Self<wbr>Dependency<wbr>Tumbling<wbr>Window<wbr>Trigger<wbr>Reference<wbr>Response | Trigger<wbr>Dependency<wbr>Reference<wbr>Response | Tumbling<wbr>Window<wbr>Trigger<wbr>Dependency<wbr>Reference<wbr>Response[]</span>
     </dt>
     <dd>{{% md %}}Triggers that this trigger depends on. Only tumbling window triggers are supported.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4162,7 +8214,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#depends_on_python" style="color: inherit; text-decoration: inherit;">depends_<wbr>on</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[Union[Self<wbr>Dependency<wbr>Tumbling<wbr>Window<wbr>Trigger<wbr>Reference<wbr>Response<wbr>Args, Trigger<wbr>Dependency<wbr>Reference<wbr>Response<wbr>Args]]</span>
+        <span class="property-type">Sequence[Union[Self<wbr>Dependency<wbr>Tumbling<wbr>Window<wbr>Trigger<wbr>Reference<wbr>Response<wbr>Args, Trigger<wbr>Dependency<wbr>Reference<wbr>Response<wbr>Args, Tumbling<wbr>Window<wbr>Trigger<wbr>Dependency<wbr>Reference<wbr>Response<wbr>Args]]</span>
     </dt>
     <dd>{{% md %}}Triggers that this trigger depends on. Only tumbling window triggers are supported.{{% /md %}}</dd>
     <dt class="property-optional"

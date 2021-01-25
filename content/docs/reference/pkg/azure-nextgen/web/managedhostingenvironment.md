@@ -12,6 +12,13 @@ meta_desc: "Documentation for the azure-nextgen.web.ManagedHostingEnvironment re
 
 Description of an hostingEnvironment (App Service Environment)
 Latest API Version: 2015-08-01.
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:web/latest:ManagedHostingEnvironment myresource1 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/managedHostingEnvironments/{name} 
+```
 
 
 

@@ -122,7 +122,7 @@ const myWorkbook = new azure_nextgen.insights.latest.MyWorkbook("myWorkbook", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">MyWorkbook</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">category</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ManagedIdentityArgs]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[Union[str, SharedTypeKind]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">serialized_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">MyWorkbook</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">category</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ManagedIdentityArgs]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[Union[str, Kind]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">serialized_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -340,6 +340,15 @@ The MyWorkbook resource accepts the following [input]({{< relref "/docs/intro/co
     <dd>{{% md %}}Configuration of this particular private workbook. Configuration data is a string containing valid JSON{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="etag_csharp">
+<a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Resource etag{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -362,7 +371,7 @@ The MyWorkbook resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#sharedtypekind">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Shared<wbr>Type<wbr>Kind</a></span>
+        <span class="property-type">string | <a href="#kind">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}The kind of workbook. Choices are user and shared.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -481,6 +490,15 @@ The MyWorkbook resource accepts the following [input]({{< relref "/docs/intro/co
     <dd>{{% md %}}Configuration of this particular private workbook. Configuration data is a string containing valid JSON{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="etag_go">
+<a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}Resource etag{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -503,7 +521,7 @@ The MyWorkbook resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#sharedtypekind">Shared<wbr>Type<wbr>Kind</a></span>
+        <span class="property-type">string | <a href="#kind">Kind</a></span>
     </dt>
     <dd>{{% md %}}The kind of workbook. Choices are user and shared.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -622,6 +640,15 @@ The MyWorkbook resource accepts the following [input]({{< relref "/docs/intro/co
     <dd>{{% md %}}Configuration of this particular private workbook. Configuration data is a string containing valid JSON{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="etag_nodejs">
+<a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}Resource etag{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
@@ -644,7 +671,7 @@ The MyWorkbook resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#sharedtypekind">Shared<wbr>Type<wbr>Kind</a></span>
+        <span class="property-type">string | <a href="#kind">Kind</a></span>
     </dt>
     <dd>{{% md %}}The kind of workbook. Choices are user and shared.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -763,6 +790,15 @@ The MyWorkbook resource accepts the following [input]({{< relref "/docs/intro/co
     <dd>{{% md %}}Configuration of this particular private workbook. Configuration data is a string containing valid JSON{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="etag_python">
+<a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}Resource etag{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
@@ -785,7 +821,7 @@ The MyWorkbook resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#sharedtypekind">Shared<wbr>Type<wbr>Kind</a></span>
+        <span class="property-type">str | <a href="#kind">Kind</a></span>
     </dt>
     <dd>{{% md %}}The kind of workbook. Choices are user and shared.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -1003,6 +1039,44 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
+<h4 id="kind">Kind</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>User</dt>
+    <dd>user</dd>
+    <dt>Shared</dt>
+    <dd>shared</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Kind<wbr>User</dt>
+    <dd>user</dd>
+    <dt>Kind<wbr>Shared</dt>
+    <dd>shared</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>User</dt>
+    <dd>user</dd>
+    <dt>Shared</dt>
+    <dd>shared</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>USER</dt>
+    <dd>user</dd>
+    <dt>SHARED</dt>
+    <dd>shared</dd>
+</dl>
+{{% /choosable %}}
+
 <h4 id="managedidentity">Managed<wbr>Identity</h4>
 
 {{% choosable language csharp %}}
@@ -1160,44 +1234,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#userassignedidentitiesresponse">User<wbr>Assigned<wbr>Identities<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Customer Managed Identity{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-<h4 id="sharedtypekind">Shared<wbr>Type<wbr>Kind</h4>
-
-{{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>User</dt>
-    <dd>user</dd>
-    <dt>Shared</dt>
-    <dd>shared</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="tabular">
-    <dt>Shared<wbr>Type<wbr>Kind<wbr>User</dt>
-    <dd>user</dd>
-    <dt>Shared<wbr>Type<wbr>Kind<wbr>Shared</dt>
-    <dd>shared</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>User</dt>
-    <dd>user</dd>
-    <dt>Shared</dt>
-    <dd>shared</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="tabular">
-    <dt>USER</dt>
-    <dd>user</dd>
-    <dt>SHARED</dt>
-    <dd>shared</dd>
 </dl>
 {{% /choosable %}}
 

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.devices.IotHubResource resource 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The description of the IoT hub.
-Latest API Version: 2020-08-01.
+Latest API Version: 2020-08-31.
 
 {{% examples %}}
 ## Example Usage
@@ -65,6 +65,26 @@ class MyStack : Stack
                     } },
                 },
                 MinTlsVersion = "1.2",
+                NetworkRuleSets = new AzureNextGen.Devices.Latest.Inputs.NetworkRuleSetPropertiesArgs
+                {
+                    ApplyToBuiltInEventHubEndpoint = true,
+                    DefaultAction = "Deny",
+                    IpRules = 
+                    {
+                        new AzureNextGen.Devices.Latest.Inputs.NetworkRuleSetIpRuleArgs
+                        {
+                            Action = "Allow",
+                            FilterName = "rule1",
+                            IpMask = "131.117.159.53",
+                        },
+                        new AzureNextGen.Devices.Latest.Inputs.NetworkRuleSetIpRuleArgs
+                        {
+                            Action = "Allow",
+                            FilterName = "rule2",
+                            IpMask = "157.55.59.128/25",
+                        },
+                    },
+                },
                 Routing = new AzureNextGen.Devices.Latest.Inputs.RoutingPropertiesArgs
                 {
                     Endpoints = new AzureNextGen.Devices.Latest.Inputs.RoutingEndpointsArgs
@@ -154,6 +174,22 @@ iot_hub_resource = azure_nextgen.devices.latest.IotHubResource("iotHubResource",
             ),
         },
         min_tls_version="1.2",
+        network_rule_sets=azure_nextgen.devices.latest.NetworkRuleSetPropertiesArgs(
+            apply_to_built_in_event_hub_endpoint=True,
+            default_action="Deny",
+            ip_rules=[
+                azure_nextgen.devices.latest.NetworkRuleSetIpRuleArgs(
+                    action="Allow",
+                    filter_name="rule1",
+                    ip_mask="131.117.159.53",
+                ),
+                azure_nextgen.devices.latest.NetworkRuleSetIpRuleArgs(
+                    action="Allow",
+                    filter_name="rule2",
+                    ip_mask="157.55.59.128/25",
+                ),
+            ],
+        ),
         routing=azure_nextgen.devices.latest.RoutingPropertiesArgs(
             endpoints=azure_nextgen.devices.latest.RoutingEndpointsArgs(
                 event_hubs=[],
@@ -226,6 +262,22 @@ const iotHubResource = new azure_nextgen.devices.latest.IotHubResource("iotHubRe
             },
         },
         minTlsVersion: "1.2",
+        networkRuleSets: {
+            applyToBuiltInEventHubEndpoint: true,
+            defaultAction: "Deny",
+            ipRules: [
+                {
+                    action: "Allow",
+                    filterName: "rule1",
+                    ipMask: "131.117.159.53",
+                },
+                {
+                    action: "Allow",
+                    filterName: "rule2",
+                    ipMask: "157.55.59.128/25",
+                },
+            ],
+        },
         routing: {
             endpoints: {
                 eventHubs: [],
@@ -1351,6 +1403,44 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The max delivery count for cloud-to-device messages in the device queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="defaultaction">Default<wbr>Action</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Deny</dt>
+    <dd>Deny</dd>
+    <dt>Allow</dt>
+    <dd>Allow</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Default<wbr>Action<wbr>Deny</dt>
+    <dd>Deny</dd>
+    <dt>Default<wbr>Action<wbr>Allow</dt>
+    <dd>Allow</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Deny</dt>
+    <dd>Deny</dd>
+    <dt>Allow</dt>
+    <dd>Allow</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>DENY</dt>
+    <dd>Deny</dd>
+    <dt>ALLOW</dt>
+    <dd>Allow</dd>
 </dl>
 {{% /choosable %}}
 
@@ -2792,6 +2882,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Specifies the minimum TLS version to support for this hub. Can be set to "1.2" to have clients that use a TLS version below 1.2 to be rejected.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="networkrulesets_csharp">
+<a href="#networkrulesets_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Rule<wbr>Sets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#networkrulesetproperties">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Devices.<wbr>Inputs.<wbr>Network<wbr>Rule<wbr>Set<wbr>Properties<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Network Rule Set Properties of IotHub{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="privateendpointconnections_csharp">
 <a href="#privateendpointconnections_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Connections</a>
 </span>
@@ -2913,6 +3012,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the minimum TLS version to support for this hub. Can be set to "1.2" to have clients that use a TLS version below 1.2 to be rejected.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="networkrulesets_go">
+<a href="#networkrulesets_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Rule<wbr>Sets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#networkrulesetproperties">Network<wbr>Rule<wbr>Set<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}Network Rule Set Properties of IotHub{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="privateendpointconnections_go">
@@ -3038,6 +3146,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Specifies the minimum TLS version to support for this hub. Can be set to "1.2" to have clients that use a TLS version below 1.2 to be rejected.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="networkrulesets_nodejs">
+<a href="#networkrulesets_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Rule<wbr>Sets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#networkrulesetproperties">Network<wbr>Rule<wbr>Set<wbr>Properties</a></span>
+    </dt>
+    <dd>{{% md %}}Network Rule Set Properties of IotHub{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="privateendpointconnections_nodejs">
 <a href="#privateendpointconnections_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint<wbr>Connections</a>
 </span>
@@ -3159,6 +3276,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the minimum TLS version to support for this hub. Can be set to "1.2" to have clients that use a TLS version below 1.2 to be rejected.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="network_rule_sets_python">
+<a href="#network_rule_sets_python" style="color: inherit; text-decoration: inherit;">network_<wbr>rule_<wbr>sets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#networkrulesetproperties">Network<wbr>Rule<wbr>Set<wbr>Properties<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Network Rule Set Properties of IotHub{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="private_endpoint_connections_python">
@@ -3322,6 +3448,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Specifies the minimum TLS version to support for this hub. Can be set to "1.2" to have clients that use a TLS version below 1.2 to be rejected.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="networkrulesets_csharp">
+<a href="#networkrulesets_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Rule<wbr>Sets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#networkrulesetpropertiesresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Devices.<wbr>Inputs.<wbr>Network<wbr>Rule<wbr>Set<wbr>Properties<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Network Rule Set Properties of IotHub{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="privateendpointconnections_csharp">
 <a href="#privateendpointconnections_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Connections</a>
 </span>
@@ -3479,6 +3614,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Specifies the minimum TLS version to support for this hub. Can be set to "1.2" to have clients that use a TLS version below 1.2 to be rejected.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="networkrulesets_go">
+<a href="#networkrulesets_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Rule<wbr>Sets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#networkrulesetpropertiesresponse">Network<wbr>Rule<wbr>Set<wbr>Properties<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Network Rule Set Properties of IotHub{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="privateendpointconnections_go">
@@ -3640,6 +3784,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Specifies the minimum TLS version to support for this hub. Can be set to "1.2" to have clients that use a TLS version below 1.2 to be rejected.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="networkrulesets_nodejs">
+<a href="#networkrulesets_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Rule<wbr>Sets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#networkrulesetpropertiesresponse">Network<wbr>Rule<wbr>Set<wbr>Properties<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Network Rule Set Properties of IotHub{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="privateendpointconnections_nodejs">
 <a href="#privateendpointconnections_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint<wbr>Connections</a>
 </span>
@@ -3797,6 +3950,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Specifies the minimum TLS version to support for this hub. Can be set to "1.2" to have clients that use a TLS version below 1.2 to be rejected.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="network_rule_sets_python">
+<a href="#network_rule_sets_python" style="color: inherit; text-decoration: inherit;">network_<wbr>rule_<wbr>sets</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#networkrulesetpropertiesresponse">Network<wbr>Rule<wbr>Set<wbr>Properties<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Network Rule Set Properties of IotHub{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="private_endpoint_connections_python">
@@ -4717,6 +4879,572 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The period of time for which a message is available to consume before it is expired by the IoT hub. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-file-upload.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="networkruleipaction">Network<wbr>Rule<wbr>IPAction</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Allow</dt>
+    <dd>Allow</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Network<wbr>Rule<wbr>IPAction<wbr>Allow</dt>
+    <dd>Allow</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Allow</dt>
+    <dd>Allow</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>ALLOW</dt>
+    <dd>Allow</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="networkrulesetiprule">Network<wbr>Rule<wbr>Set<wbr>Ip<wbr>Rule</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="filtername_csharp">
+<a href="#filtername_csharp" style="color: inherit; text-decoration: inherit;">Filter<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the IP filter rule.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="ipmask_csharp">
+<a href="#ipmask_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Mask</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A string that contains the IP address range in CIDR notation for the rule.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="action_csharp">
+<a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#networkruleipaction">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Devices.<wbr>Network<wbr>Rule<wbr>IPAction</a></span>
+    </dt>
+    <dd>{{% md %}}IP Filter Action{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="filtername_go">
+<a href="#filtername_go" style="color: inherit; text-decoration: inherit;">Filter<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the IP filter rule.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="ipmask_go">
+<a href="#ipmask_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Mask</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A string that contains the IP address range in CIDR notation for the rule.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="action_go">
+<a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#networkruleipaction">Network<wbr>Rule<wbr>IPAction</a></span>
+    </dt>
+    <dd>{{% md %}}IP Filter Action{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="filtername_nodejs">
+<a href="#filtername_nodejs" style="color: inherit; text-decoration: inherit;">filter<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the IP filter rule.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="ipmask_nodejs">
+<a href="#ipmask_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Mask</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A string that contains the IP address range in CIDR notation for the rule.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="action_nodejs">
+<a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#networkruleipaction">Network<wbr>Rule<wbr>IPAction</a></span>
+    </dt>
+    <dd>{{% md %}}IP Filter Action{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="filter_name_python">
+<a href="#filter_name_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Name of the IP filter rule.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="ip_mask_python">
+<a href="#ip_mask_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>mask</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A string that contains the IP address range in CIDR notation for the rule.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="action_python">
+<a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str | <a href="#networkruleipaction">Network<wbr>Rule<wbr>IPAction</a></span>
+    </dt>
+    <dd>{{% md %}}IP Filter Action{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="networkrulesetipruleresponse">Network<wbr>Rule<wbr>Set<wbr>Ip<wbr>Rule<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="filtername_csharp">
+<a href="#filtername_csharp" style="color: inherit; text-decoration: inherit;">Filter<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the IP filter rule.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="ipmask_csharp">
+<a href="#ipmask_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Mask</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A string that contains the IP address range in CIDR notation for the rule.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="action_csharp">
+<a href="#action_csharp" style="color: inherit; text-decoration: inherit;">Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}IP Filter Action{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="filtername_go">
+<a href="#filtername_go" style="color: inherit; text-decoration: inherit;">Filter<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the IP filter rule.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="ipmask_go">
+<a href="#ipmask_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Mask</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A string that contains the IP address range in CIDR notation for the rule.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="action_go">
+<a href="#action_go" style="color: inherit; text-decoration: inherit;">Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}IP Filter Action{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="filtername_nodejs">
+<a href="#filtername_nodejs" style="color: inherit; text-decoration: inherit;">filter<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the IP filter rule.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="ipmask_nodejs">
+<a href="#ipmask_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Mask</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A string that contains the IP address range in CIDR notation for the rule.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="action_nodejs">
+<a href="#action_nodejs" style="color: inherit; text-decoration: inherit;">action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}IP Filter Action{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="filter_name_python">
+<a href="#filter_name_python" style="color: inherit; text-decoration: inherit;">filter_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Name of the IP filter rule.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="ip_mask_python">
+<a href="#ip_mask_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>mask</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A string that contains the IP address range in CIDR notation for the rule.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="action_python">
+<a href="#action_python" style="color: inherit; text-decoration: inherit;">action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}IP Filter Action{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="networkrulesetproperties">Network<wbr>Rule<wbr>Set<wbr>Properties</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="applytobuiltineventhubendpoint_csharp">
+<a href="#applytobuiltineventhubendpoint_csharp" style="color: inherit; text-decoration: inherit;">Apply<wbr>To<wbr>Built<wbr>In<wbr>Event<wbr>Hub<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If True, then Network Rule Set is also applied to BuiltIn EventHub EndPoint of IotHub{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="iprules_csharp">
+<a href="#iprules_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#networkrulesetiprule">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Devices.<wbr>Inputs.<wbr>Network<wbr>Rule<wbr>Set<wbr>Ip<wbr>Rule<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of IP Rules{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="defaultaction_csharp">
+<a href="#defaultaction_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#defaultaction">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Devices.<wbr>Default<wbr>Action</a></span>
+    </dt>
+    <dd>{{% md %}}Default Action for Network Rule Set{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="applytobuiltineventhubendpoint_go">
+<a href="#applytobuiltineventhubendpoint_go" style="color: inherit; text-decoration: inherit;">Apply<wbr>To<wbr>Built<wbr>In<wbr>Event<wbr>Hub<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If True, then Network Rule Set is also applied to BuiltIn EventHub EndPoint of IotHub{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="iprules_go">
+<a href="#iprules_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#networkrulesetiprule">[]Network<wbr>Rule<wbr>Set<wbr>Ip<wbr>Rule</a></span>
+    </dt>
+    <dd>{{% md %}}List of IP Rules{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="defaultaction_go">
+<a href="#defaultaction_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#defaultaction">Default<wbr>Action</a></span>
+    </dt>
+    <dd>{{% md %}}Default Action for Network Rule Set{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="applytobuiltineventhubendpoint_nodejs">
+<a href="#applytobuiltineventhubendpoint_nodejs" style="color: inherit; text-decoration: inherit;">apply<wbr>To<wbr>Built<wbr>In<wbr>Event<wbr>Hub<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}If True, then Network Rule Set is also applied to BuiltIn EventHub EndPoint of IotHub{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="iprules_nodejs">
+<a href="#iprules_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#networkrulesetiprule">Network<wbr>Rule<wbr>Set<wbr>Ip<wbr>Rule[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of IP Rules{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="defaultaction_nodejs">
+<a href="#defaultaction_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#defaultaction">Default<wbr>Action</a></span>
+    </dt>
+    <dd>{{% md %}}Default Action for Network Rule Set{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="apply_to_built_in_event_hub_endpoint_python">
+<a href="#apply_to_built_in_event_hub_endpoint_python" style="color: inherit; text-decoration: inherit;">apply_<wbr>to_<wbr>built_<wbr>in_<wbr>event_<wbr>hub_<wbr>endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If True, then Network Rule Set is also applied to BuiltIn EventHub EndPoint of IotHub{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="ip_rules_python">
+<a href="#ip_rules_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#networkrulesetiprule">Sequence[Network<wbr>Rule<wbr>Set<wbr>Ip<wbr>Rule<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}List of IP Rules{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="default_action_python">
+<a href="#default_action_python" style="color: inherit; text-decoration: inherit;">default_<wbr>action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str | <a href="#defaultaction">Default<wbr>Action</a></span>
+    </dt>
+    <dd>{{% md %}}Default Action for Network Rule Set{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="networkrulesetpropertiesresponse">Network<wbr>Rule<wbr>Set<wbr>Properties<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="applytobuiltineventhubendpoint_csharp">
+<a href="#applytobuiltineventhubendpoint_csharp" style="color: inherit; text-decoration: inherit;">Apply<wbr>To<wbr>Built<wbr>In<wbr>Event<wbr>Hub<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If True, then Network Rule Set is also applied to BuiltIn EventHub EndPoint of IotHub{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="iprules_csharp">
+<a href="#iprules_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#networkrulesetipruleresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Devices.<wbr>Inputs.<wbr>Network<wbr>Rule<wbr>Set<wbr>Ip<wbr>Rule<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of IP Rules{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="defaultaction_csharp">
+<a href="#defaultaction_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Default Action for Network Rule Set{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="applytobuiltineventhubendpoint_go">
+<a href="#applytobuiltineventhubendpoint_go" style="color: inherit; text-decoration: inherit;">Apply<wbr>To<wbr>Built<wbr>In<wbr>Event<wbr>Hub<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If True, then Network Rule Set is also applied to BuiltIn EventHub EndPoint of IotHub{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="iprules_go">
+<a href="#iprules_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#networkrulesetipruleresponse">[]Network<wbr>Rule<wbr>Set<wbr>Ip<wbr>Rule<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}List of IP Rules{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="defaultaction_go">
+<a href="#defaultaction_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Default Action for Network Rule Set{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="applytobuiltineventhubendpoint_nodejs">
+<a href="#applytobuiltineventhubendpoint_nodejs" style="color: inherit; text-decoration: inherit;">apply<wbr>To<wbr>Built<wbr>In<wbr>Event<wbr>Hub<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}If True, then Network Rule Set is also applied to BuiltIn EventHub EndPoint of IotHub{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="iprules_nodejs">
+<a href="#iprules_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#networkrulesetipruleresponse">Network<wbr>Rule<wbr>Set<wbr>Ip<wbr>Rule<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of IP Rules{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="defaultaction_nodejs">
+<a href="#defaultaction_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Default Action for Network Rule Set{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="apply_to_built_in_event_hub_endpoint_python">
+<a href="#apply_to_built_in_event_hub_endpoint_python" style="color: inherit; text-decoration: inherit;">apply_<wbr>to_<wbr>built_<wbr>in_<wbr>event_<wbr>hub_<wbr>endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}If True, then Network Rule Set is also applied to BuiltIn EventHub EndPoint of IotHub{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="ip_rules_python">
+<a href="#ip_rules_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#networkrulesetipruleresponse">Sequence[Network<wbr>Rule<wbr>Set<wbr>Ip<wbr>Rule<wbr>Response<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}List of IP Rules{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="default_action_python">
+<a href="#default_action_python" style="color: inherit; text-decoration: inherit;">default_<wbr>action</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Default Action for Network Rule Set{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 

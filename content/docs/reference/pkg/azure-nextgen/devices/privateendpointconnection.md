@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.devices.PrivateEndpointConnectio
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 The private endpoint connection of an IotHub
-Latest API Version: 2020-08-01.
+Latest API Version: 2020-08-31.
 
 {{% examples %}}
 ## Example Usage

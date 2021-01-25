@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.network.ApplicationSecurityGroup
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An application security group in a resource group.
-Latest API Version: 2020-07-01.
+Latest API Version: 2020-08-01.
 
 {{% examples %}}
 ## Example Usage
