@@ -1,5 +1,5 @@
 ---
-title: "Reduce Cloud Costs with ARM"
+title: "Reduce Cloud Costs with EC2 ARM Instances"
 date: 2021-01-26
 meta_desc: "The cost of running cloud based infrastructure can make or break a deployment. You can use ARM instances to decrease the cloud spend and remain in budget."
 meta_image: arm.png
