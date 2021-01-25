@@ -105,7 +105,7 @@ You can install Pulumi using elevated permissions through the [Chocolatey packag
 > choco install pulumi
 ```
 
-This will install the `pulumi` CLI to the usual place (often `$($env:ChocolateyInstall)\lib\pulumi`), will generate [shims](https://chocolatey.org/docs/features-shim) (usually `$($env:ChocolateyInstall)\bin`) that is added to your path.
+This will install the `pulumi` CLI to the usual place (often `$($env:ChocolateyInstall)\lib\pulumi`) and generate the [shims](https://docs.chocolatey.org/en-us/features/shim) (usually `$($env:ChocolateyInstall)\bin`) to add Pulumi your path.
 
 Subsequent updates can be installed in the usual way:
 
