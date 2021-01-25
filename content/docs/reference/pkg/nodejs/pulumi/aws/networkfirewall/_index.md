@@ -3,7 +3,7 @@ title: "Module networkfirewall"
 title_tag: "Module networkfirewall | Package @pulumi/aws | Node.js SDK"
 linktitle: "networkfirewall"
 meta_desc: "Explore members of the networkfirewall module in the @pulumi/aws package."
-git_sha: "b08a8bf97426301e20cfb4790eaddfd5bb8cd655"
+git_sha: "b321f224815d900b31a53aff3df6b62a78294480"
 block_external_search_index: true
 ---
 
@@ -42,7 +42,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Firewall" data-link-title="Firewall">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/firewall.ts#L38">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/firewall.ts#L38">
         Resource <strong>Firewall</strong>
     </a>
 </h3>
@@ -79,7 +79,7 @@ Network Firewall Firewalls can be imported using their `ARN`.
 ```
 
 <h4 class="pdoc-member-header" id="Firewall-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/firewall.ts#L113"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/firewall.ts#L113"> <b>constructor</b></a>
 </h4>
 
 
@@ -93,7 +93,7 @@ Create a Firewall resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Firewall-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/firewall.ts#L48">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/firewall.ts#L48">method <b>get</b></a>
 </h4>
 
 
@@ -104,14 +104,14 @@ Get an existing Firewall resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Firewall-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/firewall.ts#L38">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/firewall.ts#L38">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Firewall-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/firewall.ts#L59">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/firewall.ts#L59">method <b>isInstance</b></a>
 </h4>
 
 
@@ -122,7 +122,7 @@ Returns true if the given object is an instance of Firewall.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Firewall-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/firewall.ts#L69">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/firewall.ts#L69">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -130,7 +130,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The Amazon Resource Name (ARN) that identifies the firewall.
 
 <h4 class="pdoc-member-header" id="Firewall-deleteProtection">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/firewall.ts#L73">property <b>deleteProtection</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/firewall.ts#L73">property <b>deleteProtection</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>deleteProtection: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -138,7 +138,7 @@ The Amazon Resource Name (ARN) that identifies the firewall.
 A boolean flag indicating whether it is possible to delete the firewall. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="Firewall-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/firewall.ts#L77">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/firewall.ts#L77">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -146,7 +146,7 @@ A boolean flag indicating whether it is possible to delete the firewall. Default
 A friendly description of the firewall.
 
 <h4 class="pdoc-member-header" id="Firewall-firewallPolicyArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/firewall.ts#L81">property <b>firewallPolicyArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/firewall.ts#L81">property <b>firewallPolicyArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>firewallPolicyArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -154,7 +154,7 @@ A friendly description of the firewall.
 The Amazon Resource Name (ARN) of the VPC Firewall policy.
 
 <h4 class="pdoc-member-header" id="Firewall-firewallPolicyChangeProtection">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/firewall.ts#L85">property <b>firewallPolicyChangeProtection</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/firewall.ts#L85">property <b>firewallPolicyChangeProtection</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>firewallPolicyChangeProtection: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -162,7 +162,7 @@ The Amazon Resource Name (ARN) of the VPC Firewall policy.
 A boolean flag indicating whether it is possible to change the associated firewall policy. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="Firewall-firewallStatuses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/firewall.ts#L89">property <b>firewallStatuses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/firewall.ts#L89">property <b>firewallStatuses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>firewallStatuses: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#FirewallFirewallStatus'>FirewallFirewallStatus</a>[]&gt;;</code></pre>
@@ -170,7 +170,7 @@ A boolean flag indicating whether it is possible to change the associated firewa
 Nested list of information about the current status of the firewall.
 
 <h4 class="pdoc-member-header" id="Firewall-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/firewall.ts#L38">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/firewall.ts#L38">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -179,7 +179,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Firewall-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/firewall.ts#L93">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/firewall.ts#L93">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -187,7 +187,7 @@ deployments and may be missing (undefined) during planning phases.
 A friendly name of the firewall.
 
 <h4 class="pdoc-member-header" id="Firewall-subnetChangeProtection">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/firewall.ts#L97">property <b>subnetChangeProtection</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/firewall.ts#L97">property <b>subnetChangeProtection</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>subnetChangeProtection: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -195,7 +195,7 @@ A friendly name of the firewall.
 A boolean flag indicating whether it is possible to change the associated subnet(s). Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="Firewall-subnetMappings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/firewall.ts#L101">property <b>subnetMappings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/firewall.ts#L101">property <b>subnetMappings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>subnetMappings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#FirewallSubnetMapping'>FirewallSubnetMapping</a>[]&gt;;</code></pre>
@@ -203,7 +203,7 @@ A boolean flag indicating whether it is possible to change the associated subnet
 Set of configuration blocks describing the public subnets. Each subnet must belong to a different Availability Zone in the VPC. AWS Network Firewall creates a firewall endpoint in each subnet. See Subnet Mapping below for details.
 
 <h4 class="pdoc-member-header" id="Firewall-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/firewall.ts#L105">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/firewall.ts#L105">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -211,7 +211,7 @@ Set of configuration blocks describing the public subnets. Each subnet must belo
 The key:value pairs to associate with the resource.
 
 <h4 class="pdoc-member-header" id="Firewall-updateToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/firewall.ts#L109">property <b>updateToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/firewall.ts#L109">property <b>updateToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>updateToken: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -219,7 +219,7 @@ The key:value pairs to associate with the resource.
 A string token used when updating a firewall.
 
 <h4 class="pdoc-member-header" id="Firewall-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/firewall.ts#L38">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/firewall.ts#L38">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -228,7 +228,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Firewall-vpcId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/firewall.ts#L113">property <b>vpcId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/firewall.ts#L113">property <b>vpcId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>vpcId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -236,7 +236,7 @@ deployments.
 The unique identifier of the VPC where AWS Network Firewall should create the firewall.
 
 <h3 class="pdoc-module-header" id="FirewallPolicy" data-link-title="FirewallPolicy">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/firewallPolicy.ts#L67">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/firewallPolicy.ts#L67">
         Resource <strong>FirewallPolicy</strong>
     </a>
 </h3>
@@ -302,7 +302,7 @@ Network Firewall Policies can be imported using their `ARN`.
 ```
 
 <h4 class="pdoc-member-header" id="FirewallPolicy-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/firewallPolicy.ts#L118"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/firewallPolicy.ts#L118"> <b>constructor</b></a>
 </h4>
 
 
@@ -316,7 +316,7 @@ Create a FirewallPolicy resource with the given unique name, arguments, and opti
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="FirewallPolicy-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/firewallPolicy.ts#L77">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/firewallPolicy.ts#L77">method <b>get</b></a>
 </h4>
 
 
@@ -327,14 +327,14 @@ Get an existing FirewallPolicy resource's state with the given name, ID, and opt
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="FirewallPolicy-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/firewallPolicy.ts#L67">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/firewallPolicy.ts#L67">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="FirewallPolicy-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/firewallPolicy.ts#L88">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/firewallPolicy.ts#L88">method <b>isInstance</b></a>
 </h4>
 
 
@@ -345,7 +345,7 @@ Returns true if the given object is an instance of FirewallPolicy.  This is desi
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="FirewallPolicy-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/firewallPolicy.ts#L98">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/firewallPolicy.ts#L98">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -353,7 +353,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The Amazon Resource Name (ARN) that identifies the firewall policy.
 
 <h4 class="pdoc-member-header" id="FirewallPolicy-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/firewallPolicy.ts#L102">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/firewallPolicy.ts#L102">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -361,7 +361,7 @@ The Amazon Resource Name (ARN) that identifies the firewall policy.
 A friendly description of the firewall policy.
 
 <h4 class="pdoc-member-header" id="FirewallPolicy-firewallPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/firewallPolicy.ts#L106">property <b>firewallPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/firewallPolicy.ts#L106">property <b>firewallPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>firewallPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#FirewallPolicyFirewallPolicy'>FirewallPolicyFirewallPolicy</a>&gt;;</code></pre>
@@ -369,7 +369,7 @@ A friendly description of the firewall policy.
 A configuration block describing the rule groups and policy actions to use in the firewall policy. See Firewall Policy below for details.
 
 <h4 class="pdoc-member-header" id="FirewallPolicy-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/firewallPolicy.ts#L67">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/firewallPolicy.ts#L67">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -378,7 +378,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="FirewallPolicy-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/firewallPolicy.ts#L110">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/firewallPolicy.ts#L110">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -386,7 +386,7 @@ deployments and may be missing (undefined) during planning phases.
 A friendly name of the firewall policy.
 
 <h4 class="pdoc-member-header" id="FirewallPolicy-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/firewallPolicy.ts#L114">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/firewallPolicy.ts#L114">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -394,7 +394,7 @@ A friendly name of the firewall policy.
 An array of key:value pairs to associate with the resource.
 
 <h4 class="pdoc-member-header" id="FirewallPolicy-updateToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/firewallPolicy.ts#L118">property <b>updateToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/firewallPolicy.ts#L118">property <b>updateToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>updateToken: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -402,7 +402,7 @@ An array of key:value pairs to associate with the resource.
 A string token used when updating a firewall policy.
 
 <h4 class="pdoc-member-header" id="FirewallPolicy-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/firewallPolicy.ts#L67">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/firewallPolicy.ts#L67">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -411,7 +411,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="LoggingConfiguration" data-link-title="LoggingConfiguration">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/loggingConfiguration.ts#L79">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/loggingConfiguration.ts#L79">
         Resource <strong>LoggingConfiguration</strong>
     </a>
 </h3>
@@ -489,7 +489,7 @@ Network Firewall Logging Configurations can be imported using the `firewall_arn`
 ```
 
 <h4 class="pdoc-member-header" id="LoggingConfiguration-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/loggingConfiguration.ts#L114"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/loggingConfiguration.ts#L114"> <b>constructor</b></a>
 </h4>
 
 
@@ -503,7 +503,7 @@ Create a LoggingConfiguration resource with the given unique name, arguments, an
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="LoggingConfiguration-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/loggingConfiguration.ts#L89">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/loggingConfiguration.ts#L89">method <b>get</b></a>
 </h4>
 
 
@@ -514,14 +514,14 @@ Get an existing LoggingConfiguration resource's state with the given name, ID, a
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="LoggingConfiguration-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/loggingConfiguration.ts#L79">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/loggingConfiguration.ts#L79">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="LoggingConfiguration-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/loggingConfiguration.ts#L100">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/loggingConfiguration.ts#L100">method <b>isInstance</b></a>
 </h4>
 
 
@@ -532,7 +532,7 @@ Returns true if the given object is an instance of LoggingConfiguration.  This i
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="LoggingConfiguration-firewallArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/loggingConfiguration.ts#L110">property <b>firewallArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/loggingConfiguration.ts#L110">property <b>firewallArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>firewallArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -540,7 +540,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The Amazon Resource Name (ARN) of the Network Firewall firewall.
 
 <h4 class="pdoc-member-header" id="LoggingConfiguration-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/loggingConfiguration.ts#L79">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/loggingConfiguration.ts#L79">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -549,7 +549,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="LoggingConfiguration-loggingConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/loggingConfiguration.ts#L114">property <b>loggingConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/loggingConfiguration.ts#L114">property <b>loggingConfiguration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>loggingConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#LoggingConfigurationLoggingConfiguration'>LoggingConfigurationLoggingConfiguration</a>&gt;;</code></pre>
@@ -557,7 +557,7 @@ deployments and may be missing (undefined) during planning phases.
 A configuration block describing how AWS Network Firewall performs logging for a firewall. See Logging Configuration below for details.
 
 <h4 class="pdoc-member-header" id="LoggingConfiguration-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/loggingConfiguration.ts#L79">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/loggingConfiguration.ts#L79">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -566,7 +566,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="ResourcePolicy" data-link-title="ResourcePolicy">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/resourcePolicy.ts#L71">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/resourcePolicy.ts#L71">
         Resource <strong>ResourcePolicy</strong>
     </a>
 </h3>
@@ -637,7 +637,7 @@ Network Firewall Resource Policies can be imported using the `resource_arn` e.g.
 ```
 
 <h4 class="pdoc-member-header" id="ResourcePolicy-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/resourcePolicy.ts#L103"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/resourcePolicy.ts#L103"> <b>constructor</b></a>
 </h4>
 
 
@@ -651,7 +651,7 @@ Create a ResourcePolicy resource with the given unique name, arguments, and opti
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="ResourcePolicy-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/resourcePolicy.ts#L81">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/resourcePolicy.ts#L81">method <b>get</b></a>
 </h4>
 
 
@@ -662,14 +662,14 @@ Get an existing ResourcePolicy resource's state with the given name, ID, and opt
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="ResourcePolicy-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/resourcePolicy.ts#L71">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/resourcePolicy.ts#L71">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="ResourcePolicy-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/resourcePolicy.ts#L92">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/resourcePolicy.ts#L92">method <b>isInstance</b></a>
 </h4>
 
 
@@ -680,7 +680,7 @@ Returns true if the given object is an instance of ResourcePolicy.  This is desi
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="ResourcePolicy-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/resourcePolicy.ts#L71">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/resourcePolicy.ts#L71">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -689,12 +689,12 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="ResourcePolicy-policy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/resourcePolicy.ts#L99">property <b>policy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/resourcePolicy.ts#L99">property <b>policy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>policy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ResourcePolicy-resourceArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/resourcePolicy.ts#L103">property <b>resourceArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/resourcePolicy.ts#L103">property <b>resourceArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>resourceArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -702,7 +702,7 @@ deployments and may be missing (undefined) during planning phases.
 The Amazon Resource Name (ARN) of the rule group or firewall policy.
 
 <h4 class="pdoc-member-header" id="ResourcePolicy-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/resourcePolicy.ts#L71">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/resourcePolicy.ts#L71">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -711,7 +711,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="RuleGroup" data-link-title="RuleGroup">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/ruleGroup.ts#L160">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/ruleGroup.ts#L160">
         Resource <strong>RuleGroup</strong>
     </a>
 </h3>
@@ -870,7 +870,7 @@ Network Firewall Rule Groups can be imported using their `ARN`.
 ```
 
 <h4 class="pdoc-member-header" id="RuleGroup-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/ruleGroup.ts#L223"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/ruleGroup.ts#L223"> <b>constructor</b></a>
 </h4>
 
 
@@ -884,7 +884,7 @@ Create a RuleGroup resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="RuleGroup-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/ruleGroup.ts#L170">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/ruleGroup.ts#L170">method <b>get</b></a>
 </h4>
 
 
@@ -895,14 +895,14 @@ Get an existing RuleGroup resource's state with the given name, ID, and optional
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="RuleGroup-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/ruleGroup.ts#L160">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/ruleGroup.ts#L160">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="RuleGroup-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/ruleGroup.ts#L181">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/ruleGroup.ts#L181">method <b>isInstance</b></a>
 </h4>
 
 
@@ -913,7 +913,7 @@ Returns true if the given object is an instance of RuleGroup.  This is designed 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="RuleGroup-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/ruleGroup.ts#L191">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/ruleGroup.ts#L191">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>arn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -921,7 +921,7 @@ when multiple copies of the Pulumi SDK have been loaded into the same process.
 The Amazon Resource Name (ARN) that identifies the rule group.
 
 <h4 class="pdoc-member-header" id="RuleGroup-capacity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/ruleGroup.ts#L195">property <b>capacity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/ruleGroup.ts#L195">property <b>capacity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>capacity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -929,7 +929,7 @@ The Amazon Resource Name (ARN) that identifies the rule group.
 The maximum number of operating resources that this rule group can use. For a stateless rule group, the capacity required is the sum of the capacity requirements of the individual rules. For a stateful rule group, the minimum capacity required is the number of individual rules.
 
 <h4 class="pdoc-member-header" id="RuleGroup-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/ruleGroup.ts#L199">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/ruleGroup.ts#L199">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>description: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -937,7 +937,7 @@ The maximum number of operating resources that this rule group can use. For a st
 A friendly description of the rule group.
 
 <h4 class="pdoc-member-header" id="RuleGroup-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/ruleGroup.ts#L160">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/ruleGroup.ts#L160">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -946,7 +946,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="RuleGroup-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/ruleGroup.ts#L203">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/ruleGroup.ts#L203">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>name: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -954,7 +954,7 @@ deployments and may be missing (undefined) during planning phases.
 A friendly name of the rule group.
 
 <h4 class="pdoc-member-header" id="RuleGroup-ruleGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/ruleGroup.ts#L207">property <b>ruleGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/ruleGroup.ts#L207">property <b>ruleGroup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ruleGroup: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/output/#RuleGroupRuleGroup'>RuleGroupRuleGroup</a>&gt;;</code></pre>
@@ -962,7 +962,7 @@ A friendly name of the rule group.
 A configuration block that defines the rule group rules. Required unless `rules` is specified. See Rule Group below for details.
 
 <h4 class="pdoc-member-header" id="RuleGroup-rules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/ruleGroup.ts#L211">property <b>rules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/ruleGroup.ts#L211">property <b>rules</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>rules: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -970,7 +970,7 @@ A configuration block that defines the rule group rules. Required unless `rules`
 The stateful rule group rules specifications in Suricata file format, with one rule per line. Use this to import your existing Suricata compatible rule groups. Required unless `ruleGroup` is specified.
 
 <h4 class="pdoc-member-header" id="RuleGroup-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/ruleGroup.ts#L215">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/ruleGroup.ts#L215">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>tags: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>} | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -978,7 +978,7 @@ The stateful rule group rules specifications in Suricata file format, with one r
 A map of key:value pairs to associate with the resource.
 
 <h4 class="pdoc-member-header" id="RuleGroup-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/ruleGroup.ts#L219">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/ruleGroup.ts#L219">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -986,7 +986,7 @@ A map of key:value pairs to associate with the resource.
 Whether the rule group is stateless (containing stateless rules) or stateful (containing stateful rules). Valid values include: `STATEFUL` or `STATELESS`.
 
 <h4 class="pdoc-member-header" id="RuleGroup-updateToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/ruleGroup.ts#L223">property <b>updateToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/ruleGroup.ts#L223">property <b>updateToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>updateToken: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -994,7 +994,7 @@ Whether the rule group is stateless (containing stateless rules) or stateful (co
 A string token used when updating the rule group.
 
 <h4 class="pdoc-member-header" id="RuleGroup-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/ruleGroup.ts#L160">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/ruleGroup.ts#L160">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -1006,7 +1006,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="FirewallArgs" data-link-title="FirewallArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/firewall.ts#L231">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/firewall.ts#L231">
         interface <strong>FirewallArgs</strong>
     </a>
 </h3>
@@ -1016,7 +1016,7 @@ deployments.
 The set of arguments for constructing a Firewall resource.
 
 <h4 class="pdoc-member-header" id="FirewallArgs-deleteProtection">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/firewall.ts#L235">property <b>deleteProtection</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/firewall.ts#L235">property <b>deleteProtection</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deleteProtection?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1024,7 +1024,7 @@ The set of arguments for constructing a Firewall resource.
 A boolean flag indicating whether it is possible to delete the firewall. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="FirewallArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/firewall.ts#L239">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/firewall.ts#L239">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1032,7 +1032,7 @@ A boolean flag indicating whether it is possible to delete the firewall. Default
 A friendly description of the firewall.
 
 <h4 class="pdoc-member-header" id="FirewallArgs-firewallPolicyArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/firewall.ts#L243">property <b>firewallPolicyArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/firewall.ts#L243">property <b>firewallPolicyArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>firewallPolicyArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1040,7 +1040,7 @@ A friendly description of the firewall.
 The Amazon Resource Name (ARN) of the VPC Firewall policy.
 
 <h4 class="pdoc-member-header" id="FirewallArgs-firewallPolicyChangeProtection">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/firewall.ts#L247">property <b>firewallPolicyChangeProtection</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/firewall.ts#L247">property <b>firewallPolicyChangeProtection</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>firewallPolicyChangeProtection?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1048,7 +1048,7 @@ The Amazon Resource Name (ARN) of the VPC Firewall policy.
 A boolean flag indicating whether it is possible to change the associated firewall policy. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="FirewallArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/firewall.ts#L251">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/firewall.ts#L251">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1056,7 +1056,7 @@ A boolean flag indicating whether it is possible to change the associated firewa
 A friendly name of the firewall.
 
 <h4 class="pdoc-member-header" id="FirewallArgs-subnetChangeProtection">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/firewall.ts#L255">property <b>subnetChangeProtection</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/firewall.ts#L255">property <b>subnetChangeProtection</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subnetChangeProtection?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1064,7 +1064,7 @@ A friendly name of the firewall.
 A boolean flag indicating whether it is possible to change the associated subnet(s). Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="FirewallArgs-subnetMappings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/firewall.ts#L259">property <b>subnetMappings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/firewall.ts#L259">property <b>subnetMappings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subnetMappings: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#FirewallSubnetMapping'>FirewallSubnetMapping</a>&gt;[]&gt;;</code></pre>
@@ -1072,7 +1072,7 @@ A boolean flag indicating whether it is possible to change the associated subnet
 Set of configuration blocks describing the public subnets. Each subnet must belong to a different Availability Zone in the VPC. AWS Network Firewall creates a firewall endpoint in each subnet. See Subnet Mapping below for details.
 
 <h4 class="pdoc-member-header" id="FirewallArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/firewall.ts#L263">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/firewall.ts#L263">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1080,7 +1080,7 @@ Set of configuration blocks describing the public subnets. Each subnet must belo
 The key:value pairs to associate with the resource.
 
 <h4 class="pdoc-member-header" id="FirewallArgs-vpcId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/firewall.ts#L267">property <b>vpcId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/firewall.ts#L267">property <b>vpcId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpcId: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1088,7 +1088,7 @@ The key:value pairs to associate with the resource.
 The unique identifier of the VPC where AWS Network Firewall should create the firewall.
 
 <h3 class="pdoc-module-header" id="FirewallPolicyArgs" data-link-title="FirewallPolicyArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/firewallPolicy.ts#L194">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/firewallPolicy.ts#L194">
         interface <strong>FirewallPolicyArgs</strong>
     </a>
 </h3>
@@ -1098,7 +1098,7 @@ The unique identifier of the VPC where AWS Network Firewall should create the fi
 The set of arguments for constructing a FirewallPolicy resource.
 
 <h4 class="pdoc-member-header" id="FirewallPolicyArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/firewallPolicy.ts#L198">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/firewallPolicy.ts#L198">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1106,7 +1106,7 @@ The set of arguments for constructing a FirewallPolicy resource.
 A friendly description of the firewall policy.
 
 <h4 class="pdoc-member-header" id="FirewallPolicyArgs-firewallPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/firewallPolicy.ts#L202">property <b>firewallPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/firewallPolicy.ts#L202">property <b>firewallPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>firewallPolicy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#FirewallPolicyFirewallPolicy'>FirewallPolicyFirewallPolicy</a>&gt;;</code></pre>
@@ -1114,7 +1114,7 @@ A friendly description of the firewall policy.
 A configuration block describing the rule groups and policy actions to use in the firewall policy. See Firewall Policy below for details.
 
 <h4 class="pdoc-member-header" id="FirewallPolicyArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/firewallPolicy.ts#L206">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/firewallPolicy.ts#L206">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1122,7 +1122,7 @@ A configuration block describing the rule groups and policy actions to use in th
 A friendly name of the firewall policy.
 
 <h4 class="pdoc-member-header" id="FirewallPolicyArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/firewallPolicy.ts#L210">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/firewallPolicy.ts#L210">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1130,7 +1130,7 @@ A friendly name of the firewall policy.
 An array of key:value pairs to associate with the resource.
 
 <h3 class="pdoc-module-header" id="FirewallPolicyState" data-link-title="FirewallPolicyState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/firewallPolicy.ts#L164">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/firewallPolicy.ts#L164">
         interface <strong>FirewallPolicyState</strong>
     </a>
 </h3>
@@ -1140,7 +1140,7 @@ An array of key:value pairs to associate with the resource.
 Input properties used for looking up and filtering FirewallPolicy resources.
 
 <h4 class="pdoc-member-header" id="FirewallPolicyState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/firewallPolicy.ts#L168">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/firewallPolicy.ts#L168">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1148,7 +1148,7 @@ Input properties used for looking up and filtering FirewallPolicy resources.
 The Amazon Resource Name (ARN) that identifies the firewall policy.
 
 <h4 class="pdoc-member-header" id="FirewallPolicyState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/firewallPolicy.ts#L172">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/firewallPolicy.ts#L172">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1156,7 +1156,7 @@ The Amazon Resource Name (ARN) that identifies the firewall policy.
 A friendly description of the firewall policy.
 
 <h4 class="pdoc-member-header" id="FirewallPolicyState-firewallPolicy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/firewallPolicy.ts#L176">property <b>firewallPolicy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/firewallPolicy.ts#L176">property <b>firewallPolicy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>firewallPolicy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#FirewallPolicyFirewallPolicy'>FirewallPolicyFirewallPolicy</a>&gt;;</code></pre>
@@ -1164,7 +1164,7 @@ A friendly description of the firewall policy.
 A configuration block describing the rule groups and policy actions to use in the firewall policy. See Firewall Policy below for details.
 
 <h4 class="pdoc-member-header" id="FirewallPolicyState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/firewallPolicy.ts#L180">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/firewallPolicy.ts#L180">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1172,7 +1172,7 @@ A configuration block describing the rule groups and policy actions to use in th
 A friendly name of the firewall policy.
 
 <h4 class="pdoc-member-header" id="FirewallPolicyState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/firewallPolicy.ts#L184">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/firewallPolicy.ts#L184">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1180,7 +1180,7 @@ A friendly name of the firewall policy.
 An array of key:value pairs to associate with the resource.
 
 <h4 class="pdoc-member-header" id="FirewallPolicyState-updateToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/firewallPolicy.ts#L188">property <b>updateToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/firewallPolicy.ts#L188">property <b>updateToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>updateToken?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1188,7 +1188,7 @@ An array of key:value pairs to associate with the resource.
 A string token used when updating a firewall policy.
 
 <h3 class="pdoc-module-header" id="FirewallState" data-link-title="FirewallState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/firewall.ts#L177">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/firewall.ts#L177">
         interface <strong>FirewallState</strong>
     </a>
 </h3>
@@ -1198,7 +1198,7 @@ A string token used when updating a firewall policy.
 Input properties used for looking up and filtering Firewall resources.
 
 <h4 class="pdoc-member-header" id="FirewallState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/firewall.ts#L181">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/firewall.ts#L181">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1206,7 +1206,7 @@ Input properties used for looking up and filtering Firewall resources.
 The Amazon Resource Name (ARN) that identifies the firewall.
 
 <h4 class="pdoc-member-header" id="FirewallState-deleteProtection">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/firewall.ts#L185">property <b>deleteProtection</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/firewall.ts#L185">property <b>deleteProtection</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>deleteProtection?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1214,7 +1214,7 @@ The Amazon Resource Name (ARN) that identifies the firewall.
 A boolean flag indicating whether it is possible to delete the firewall. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="FirewallState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/firewall.ts#L189">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/firewall.ts#L189">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1222,7 +1222,7 @@ A boolean flag indicating whether it is possible to delete the firewall. Default
 A friendly description of the firewall.
 
 <h4 class="pdoc-member-header" id="FirewallState-firewallPolicyArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/firewall.ts#L193">property <b>firewallPolicyArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/firewall.ts#L193">property <b>firewallPolicyArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>firewallPolicyArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1230,7 +1230,7 @@ A friendly description of the firewall.
 The Amazon Resource Name (ARN) of the VPC Firewall policy.
 
 <h4 class="pdoc-member-header" id="FirewallState-firewallPolicyChangeProtection">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/firewall.ts#L197">property <b>firewallPolicyChangeProtection</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/firewall.ts#L197">property <b>firewallPolicyChangeProtection</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>firewallPolicyChangeProtection?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1238,7 +1238,7 @@ The Amazon Resource Name (ARN) of the VPC Firewall policy.
 A boolean flag indicating whether it is possible to change the associated firewall policy. Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="FirewallState-firewallStatuses">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/firewall.ts#L201">property <b>firewallStatuses</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/firewall.ts#L201">property <b>firewallStatuses</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>firewallStatuses?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#FirewallFirewallStatus'>FirewallFirewallStatus</a>&gt;[]&gt;;</code></pre>
@@ -1246,7 +1246,7 @@ A boolean flag indicating whether it is possible to change the associated firewa
 Nested list of information about the current status of the firewall.
 
 <h4 class="pdoc-member-header" id="FirewallState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/firewall.ts#L205">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/firewall.ts#L205">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1254,7 +1254,7 @@ Nested list of information about the current status of the firewall.
 A friendly name of the firewall.
 
 <h4 class="pdoc-member-header" id="FirewallState-subnetChangeProtection">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/firewall.ts#L209">property <b>subnetChangeProtection</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/firewall.ts#L209">property <b>subnetChangeProtection</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subnetChangeProtection?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -1262,7 +1262,7 @@ A friendly name of the firewall.
 A boolean flag indicating whether it is possible to change the associated subnet(s). Defaults to `false`.
 
 <h4 class="pdoc-member-header" id="FirewallState-subnetMappings">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/firewall.ts#L213">property <b>subnetMappings</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/firewall.ts#L213">property <b>subnetMappings</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>subnetMappings?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#FirewallSubnetMapping'>FirewallSubnetMapping</a>&gt;[]&gt;;</code></pre>
@@ -1270,7 +1270,7 @@ A boolean flag indicating whether it is possible to change the associated subnet
 Set of configuration blocks describing the public subnets. Each subnet must belong to a different Availability Zone in the VPC. AWS Network Firewall creates a firewall endpoint in each subnet. See Subnet Mapping below for details.
 
 <h4 class="pdoc-member-header" id="FirewallState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/firewall.ts#L217">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/firewall.ts#L217">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1278,7 +1278,7 @@ Set of configuration blocks describing the public subnets. Each subnet must belo
 The key:value pairs to associate with the resource.
 
 <h4 class="pdoc-member-header" id="FirewallState-updateToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/firewall.ts#L221">property <b>updateToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/firewall.ts#L221">property <b>updateToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>updateToken?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1286,7 +1286,7 @@ The key:value pairs to associate with the resource.
 A string token used when updating a firewall.
 
 <h4 class="pdoc-member-header" id="FirewallState-vpcId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/firewall.ts#L225">property <b>vpcId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/firewall.ts#L225">property <b>vpcId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>vpcId?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1294,7 +1294,7 @@ A string token used when updating a firewall.
 The unique identifier of the VPC where AWS Network Firewall should create the firewall.
 
 <h3 class="pdoc-module-header" id="LoggingConfigurationArgs" data-link-title="LoggingConfigurationArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/loggingConfiguration.ts#L169">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/loggingConfiguration.ts#L169">
         interface <strong>LoggingConfigurationArgs</strong>
     </a>
 </h3>
@@ -1304,7 +1304,7 @@ The unique identifier of the VPC where AWS Network Firewall should create the fi
 The set of arguments for constructing a LoggingConfiguration resource.
 
 <h4 class="pdoc-member-header" id="LoggingConfigurationArgs-firewallArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/loggingConfiguration.ts#L173">property <b>firewallArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/loggingConfiguration.ts#L173">property <b>firewallArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>firewallArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1312,7 +1312,7 @@ The set of arguments for constructing a LoggingConfiguration resource.
 The Amazon Resource Name (ARN) of the Network Firewall firewall.
 
 <h4 class="pdoc-member-header" id="LoggingConfigurationArgs-loggingConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/loggingConfiguration.ts#L177">property <b>loggingConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/loggingConfiguration.ts#L177">property <b>loggingConfiguration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loggingConfiguration: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LoggingConfigurationLoggingConfiguration'>LoggingConfigurationLoggingConfiguration</a>&gt;;</code></pre>
@@ -1320,7 +1320,7 @@ The Amazon Resource Name (ARN) of the Network Firewall firewall.
 A configuration block describing how AWS Network Firewall performs logging for a firewall. See Logging Configuration below for details.
 
 <h3 class="pdoc-module-header" id="LoggingConfigurationState" data-link-title="LoggingConfigurationState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/loggingConfiguration.ts#L155">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/loggingConfiguration.ts#L155">
         interface <strong>LoggingConfigurationState</strong>
     </a>
 </h3>
@@ -1330,7 +1330,7 @@ A configuration block describing how AWS Network Firewall performs logging for a
 Input properties used for looking up and filtering LoggingConfiguration resources.
 
 <h4 class="pdoc-member-header" id="LoggingConfigurationState-firewallArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/loggingConfiguration.ts#L159">property <b>firewallArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/loggingConfiguration.ts#L159">property <b>firewallArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>firewallArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1338,7 +1338,7 @@ Input properties used for looking up and filtering LoggingConfiguration resource
 The Amazon Resource Name (ARN) of the Network Firewall firewall.
 
 <h4 class="pdoc-member-header" id="LoggingConfigurationState-loggingConfiguration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/loggingConfiguration.ts#L163">property <b>loggingConfiguration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/loggingConfiguration.ts#L163">property <b>loggingConfiguration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>loggingConfiguration?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#LoggingConfigurationLoggingConfiguration'>LoggingConfigurationLoggingConfiguration</a>&gt;;</code></pre>
@@ -1346,7 +1346,7 @@ The Amazon Resource Name (ARN) of the Network Firewall firewall.
 A configuration block describing how AWS Network Firewall performs logging for a firewall. See Logging Configuration below for details.
 
 <h3 class="pdoc-module-header" id="ResourcePolicyArgs" data-link-title="ResourcePolicyArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/resourcePolicy.ts#L155">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/resourcePolicy.ts#L155">
         interface <strong>ResourcePolicyArgs</strong>
     </a>
 </h3>
@@ -1356,12 +1356,12 @@ A configuration block describing how AWS Network Firewall performs logging for a
 The set of arguments for constructing a ResourcePolicy resource.
 
 <h4 class="pdoc-member-header" id="ResourcePolicyArgs-policy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/resourcePolicy.ts#L156">property <b>policy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/resourcePolicy.ts#L156">property <b>policy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policy: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ResourcePolicyArgs-resourceArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/resourcePolicy.ts#L160">property <b>resourceArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/resourcePolicy.ts#L160">property <b>resourceArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceArn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1369,7 +1369,7 @@ The set of arguments for constructing a ResourcePolicy resource.
 The Amazon Resource Name (ARN) of the rule group or firewall policy.
 
 <h3 class="pdoc-module-header" id="ResourcePolicyState" data-link-title="ResourcePolicyState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/resourcePolicy.ts#L144">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/resourcePolicy.ts#L144">
         interface <strong>ResourcePolicyState</strong>
     </a>
 </h3>
@@ -1379,12 +1379,12 @@ The Amazon Resource Name (ARN) of the rule group or firewall policy.
 Input properties used for looking up and filtering ResourcePolicy resources.
 
 <h4 class="pdoc-member-header" id="ResourcePolicyState-policy">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/resourcePolicy.ts#L145">property <b>policy</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/resourcePolicy.ts#L145">property <b>policy</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>policy?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ResourcePolicyState-resourceArn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/resourcePolicy.ts#L149">property <b>resourceArn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/resourcePolicy.ts#L149">property <b>resourceArn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>resourceArn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1392,7 +1392,7 @@ Input properties used for looking up and filtering ResourcePolicy resources.
 The Amazon Resource Name (ARN) of the rule group or firewall policy.
 
 <h3 class="pdoc-module-header" id="RuleGroupArgs" data-link-title="RuleGroupArgs">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/ruleGroup.ts#L320">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/ruleGroup.ts#L320">
         interface <strong>RuleGroupArgs</strong>
     </a>
 </h3>
@@ -1402,7 +1402,7 @@ The Amazon Resource Name (ARN) of the rule group or firewall policy.
 The set of arguments for constructing a RuleGroup resource.
 
 <h4 class="pdoc-member-header" id="RuleGroupArgs-capacity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/ruleGroup.ts#L324">property <b>capacity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/ruleGroup.ts#L324">property <b>capacity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>capacity: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1410,7 +1410,7 @@ The set of arguments for constructing a RuleGroup resource.
 The maximum number of operating resources that this rule group can use. For a stateless rule group, the capacity required is the sum of the capacity requirements of the individual rules. For a stateful rule group, the minimum capacity required is the number of individual rules.
 
 <h4 class="pdoc-member-header" id="RuleGroupArgs-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/ruleGroup.ts#L328">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/ruleGroup.ts#L328">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1418,7 +1418,7 @@ The maximum number of operating resources that this rule group can use. For a st
 A friendly description of the rule group.
 
 <h4 class="pdoc-member-header" id="RuleGroupArgs-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/ruleGroup.ts#L332">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/ruleGroup.ts#L332">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1426,7 +1426,7 @@ A friendly description of the rule group.
 A friendly name of the rule group.
 
 <h4 class="pdoc-member-header" id="RuleGroupArgs-ruleGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/ruleGroup.ts#L336">property <b>ruleGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/ruleGroup.ts#L336">property <b>ruleGroup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ruleGroup?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleGroup'>RuleGroupRuleGroup</a>&gt;;</code></pre>
@@ -1434,7 +1434,7 @@ A friendly name of the rule group.
 A configuration block that defines the rule group rules. Required unless `rules` is specified. See Rule Group below for details.
 
 <h4 class="pdoc-member-header" id="RuleGroupArgs-rules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/ruleGroup.ts#L340">property <b>rules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/ruleGroup.ts#L340">property <b>rules</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1442,7 +1442,7 @@ A configuration block that defines the rule group rules. Required unless `rules`
 The stateful rule group rules specifications in Suricata file format, with one rule per line. Use this to import your existing Suricata compatible rule groups. Required unless `ruleGroup` is specified.
 
 <h4 class="pdoc-member-header" id="RuleGroupArgs-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/ruleGroup.ts#L344">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/ruleGroup.ts#L344">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1450,7 +1450,7 @@ The stateful rule group rules specifications in Suricata file format, with one r
 A map of key:value pairs to associate with the resource.
 
 <h4 class="pdoc-member-header" id="RuleGroupArgs-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/ruleGroup.ts#L348">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/ruleGroup.ts#L348">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1458,7 +1458,7 @@ A map of key:value pairs to associate with the resource.
 Whether the rule group is stateless (containing stateless rules) or stateful (containing stateful rules). Valid values include: `STATEFUL` or `STATELESS`.
 
 <h3 class="pdoc-module-header" id="RuleGroupState" data-link-title="RuleGroupState">
-    <a href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/ruleGroup.ts#L278">
+    <a href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/ruleGroup.ts#L278">
         interface <strong>RuleGroupState</strong>
     </a>
 </h3>
@@ -1468,7 +1468,7 @@ Whether the rule group is stateless (containing stateless rules) or stateful (co
 Input properties used for looking up and filtering RuleGroup resources.
 
 <h4 class="pdoc-member-header" id="RuleGroupState-arn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/ruleGroup.ts#L282">property <b>arn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/ruleGroup.ts#L282">property <b>arn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>arn?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1476,7 +1476,7 @@ Input properties used for looking up and filtering RuleGroup resources.
 The Amazon Resource Name (ARN) that identifies the rule group.
 
 <h4 class="pdoc-member-header" id="RuleGroupState-capacity">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/ruleGroup.ts#L286">property <b>capacity</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/ruleGroup.ts#L286">property <b>capacity</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>capacity?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>&gt;;</code></pre>
@@ -1484,7 +1484,7 @@ The Amazon Resource Name (ARN) that identifies the rule group.
 The maximum number of operating resources that this rule group can use. For a stateless rule group, the capacity required is the sum of the capacity requirements of the individual rules. For a stateful rule group, the minimum capacity required is the number of individual rules.
 
 <h4 class="pdoc-member-header" id="RuleGroupState-description">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/ruleGroup.ts#L290">property <b>description</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/ruleGroup.ts#L290">property <b>description</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>description?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1492,7 +1492,7 @@ The maximum number of operating resources that this rule group can use. For a st
 A friendly description of the rule group.
 
 <h4 class="pdoc-member-header" id="RuleGroupState-name">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/ruleGroup.ts#L294">property <b>name</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/ruleGroup.ts#L294">property <b>name</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>name?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1500,7 +1500,7 @@ A friendly description of the rule group.
 A friendly name of the rule group.
 
 <h4 class="pdoc-member-header" id="RuleGroupState-ruleGroup">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/ruleGroup.ts#L298">property <b>ruleGroup</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/ruleGroup.ts#L298">property <b>ruleGroup</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ruleGroup?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/aws/types/input/#RuleGroupRuleGroup'>RuleGroupRuleGroup</a>&gt;;</code></pre>
@@ -1508,7 +1508,7 @@ A friendly name of the rule group.
 A configuration block that defines the rule group rules. Required unless `rules` is specified. See Rule Group below for details.
 
 <h4 class="pdoc-member-header" id="RuleGroupState-rules">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/ruleGroup.ts#L302">property <b>rules</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/ruleGroup.ts#L302">property <b>rules</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rules?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1516,7 +1516,7 @@ A configuration block that defines the rule group rules. Required unless `rules`
 The stateful rule group rules specifications in Suricata file format, with one rule per line. Use this to import your existing Suricata compatible rule groups. Required unless `ruleGroup` is specified.
 
 <h4 class="pdoc-member-header" id="RuleGroupState-tags">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/ruleGroup.ts#L306">property <b>tags</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/ruleGroup.ts#L306">property <b>tags</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>tags?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -1524,7 +1524,7 @@ The stateful rule group rules specifications in Suricata file format, with one r
 A map of key:value pairs to associate with the resource.
 
 <h4 class="pdoc-member-header" id="RuleGroupState-type">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/ruleGroup.ts#L310">property <b>type</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/ruleGroup.ts#L310">property <b>type</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>type?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -1532,7 +1532,7 @@ A map of key:value pairs to associate with the resource.
 Whether the rule group is stateless (containing stateless rules) or stateful (containing stateful rules). Valid values include: `STATEFUL` or `STATELESS`.
 
 <h4 class="pdoc-member-header" id="RuleGroupState-updateToken">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b08a8bf97426301e20cfb4790eaddfd5bb8cd655/sdk/nodejs/networkfirewall/ruleGroup.ts#L314">property <b>updateToken</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-aws/blob/b321f224815d900b31a53aff3df6b62a78294480/sdk/nodejs/networkfirewall/ruleGroup.ts#L314">property <b>updateToken</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>updateToken?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
