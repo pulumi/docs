@@ -828,15 +828,6 @@ The following output properties are available:
     <dd>{{% md %}}Notification message for users during ramp down period.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="rampdownnotificationminutes_csharp">
-<a href="#rampdownnotificationminutes_csharp" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Down<wbr>Notification<wbr>Minutes</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Number of minutes to wait to stop hosts during ramp down period.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="rampdownstarttime_csharp">
 <a href="#rampdownstarttime_csharp" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Down<wbr>Start<wbr>Time</a>
 </span>
@@ -855,13 +846,13 @@ The following output properties are available:
     <dd>{{% md %}}Specifies when to stop hosts during ramp down period.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="rampupalgorithm_csharp">
-<a href="#rampupalgorithm_csharp" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Up<wbr>Algorithm</a>
+        <span id="rampdownwaittimeminutes_csharp">
+<a href="#rampdownwaittimeminutes_csharp" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Down<wbr>Wait<wbr>Time<wbr>Minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Load balancing algorithm for ramp up period.{{% /md %}}</dd>
+    <dd>{{% md %}}Number of minutes to wait to stop hosts during ramp down period.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="rampupcapacitythresholdpct_csharp">
@@ -873,8 +864,17 @@ The following output properties are available:
     <dd>{{% md %}}Capacity threshold for ramp up period.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="rampupminimumhostpct_csharp">
-<a href="#rampupminimumhostpct_csharp" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Up<wbr>Minimum<wbr>Host<wbr>Pct</a>
+        <span id="rampuploadbalancingalgorithm_csharp">
+<a href="#rampuploadbalancingalgorithm_csharp" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Up<wbr>Load<wbr>Balancing<wbr>Algorithm</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Load balancing algorithm for ramp up period.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="rampupminimumhostspct_csharp">
+<a href="#rampupminimumhostspct_csharp" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Up<wbr>Minimum<wbr>Hosts<wbr>Pct</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
@@ -996,15 +996,6 @@ The following output properties are available:
     <dd>{{% md %}}Notification message for users during ramp down period.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="rampdownnotificationminutes_go">
-<a href="#rampdownnotificationminutes_go" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Down<wbr>Notification<wbr>Minutes</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Number of minutes to wait to stop hosts during ramp down period.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="rampdownstarttime_go">
 <a href="#rampdownstarttime_go" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Down<wbr>Start<wbr>Time</a>
 </span>
@@ -1023,13 +1014,13 @@ The following output properties are available:
     <dd>{{% md %}}Specifies when to stop hosts during ramp down period.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="rampupalgorithm_go">
-<a href="#rampupalgorithm_go" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Up<wbr>Algorithm</a>
+        <span id="rampdownwaittimeminutes_go">
+<a href="#rampdownwaittimeminutes_go" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Down<wbr>Wait<wbr>Time<wbr>Minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Load balancing algorithm for ramp up period.{{% /md %}}</dd>
+    <dd>{{% md %}}Number of minutes to wait to stop hosts during ramp down period.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="rampupcapacitythresholdpct_go">
@@ -1041,8 +1032,17 @@ The following output properties are available:
     <dd>{{% md %}}Capacity threshold for ramp up period.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="rampupminimumhostpct_go">
-<a href="#rampupminimumhostpct_go" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Up<wbr>Minimum<wbr>Host<wbr>Pct</a>
+        <span id="rampuploadbalancingalgorithm_go">
+<a href="#rampuploadbalancingalgorithm_go" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Up<wbr>Load<wbr>Balancing<wbr>Algorithm</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Load balancing algorithm for ramp up period.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="rampupminimumhostspct_go">
+<a href="#rampupminimumhostspct_go" style="color: inherit; text-decoration: inherit;">Ramp<wbr>Up<wbr>Minimum<wbr>Hosts<wbr>Pct</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>
@@ -1164,15 +1164,6 @@ The following output properties are available:
     <dd>{{% md %}}Notification message for users during ramp down period.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="rampdownnotificationminutes_nodejs">
-<a href="#rampdownnotificationminutes_nodejs" style="color: inherit; text-decoration: inherit;">ramp<wbr>Down<wbr>Notification<wbr>Minutes</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">number</span>
-    </dt>
-    <dd>{{% md %}}Number of minutes to wait to stop hosts during ramp down period.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="rampdownstarttime_nodejs">
 <a href="#rampdownstarttime_nodejs" style="color: inherit; text-decoration: inherit;">ramp<wbr>Down<wbr>Start<wbr>Time</a>
 </span>
@@ -1191,13 +1182,13 @@ The following output properties are available:
     <dd>{{% md %}}Specifies when to stop hosts during ramp down period.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="rampupalgorithm_nodejs">
-<a href="#rampupalgorithm_nodejs" style="color: inherit; text-decoration: inherit;">ramp<wbr>Up<wbr>Algorithm</a>
+        <span id="rampdownwaittimeminutes_nodejs">
+<a href="#rampdownwaittimeminutes_nodejs" style="color: inherit; text-decoration: inherit;">ramp<wbr>Down<wbr>Wait<wbr>Time<wbr>Minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string</span>
+        <span class="property-type">number</span>
     </dt>
-    <dd>{{% md %}}Load balancing algorithm for ramp up period.{{% /md %}}</dd>
+    <dd>{{% md %}}Number of minutes to wait to stop hosts during ramp down period.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="rampupcapacitythresholdpct_nodejs">
@@ -1209,8 +1200,17 @@ The following output properties are available:
     <dd>{{% md %}}Capacity threshold for ramp up period.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="rampupminimumhostpct_nodejs">
-<a href="#rampupminimumhostpct_nodejs" style="color: inherit; text-decoration: inherit;">ramp<wbr>Up<wbr>Minimum<wbr>Host<wbr>Pct</a>
+        <span id="rampuploadbalancingalgorithm_nodejs">
+<a href="#rampuploadbalancingalgorithm_nodejs" style="color: inherit; text-decoration: inherit;">ramp<wbr>Up<wbr>Load<wbr>Balancing<wbr>Algorithm</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Load balancing algorithm for ramp up period.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="rampupminimumhostspct_nodejs">
+<a href="#rampupminimumhostspct_nodejs" style="color: inherit; text-decoration: inherit;">ramp<wbr>Up<wbr>Minimum<wbr>Hosts<wbr>Pct</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">number</span>
@@ -1332,15 +1332,6 @@ The following output properties are available:
     <dd>{{% md %}}Notification message for users during ramp down period.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="ramp_down_notification_minutes_python">
-<a href="#ramp_down_notification_minutes_python" style="color: inherit; text-decoration: inherit;">ramp_<wbr>down_<wbr>notification_<wbr>minutes</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">int</span>
-    </dt>
-    <dd>{{% md %}}Number of minutes to wait to stop hosts during ramp down period.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="ramp_down_start_time_python">
 <a href="#ramp_down_start_time_python" style="color: inherit; text-decoration: inherit;">ramp_<wbr>down_<wbr>start_<wbr>time</a>
 </span>
@@ -1359,13 +1350,13 @@ The following output properties are available:
     <dd>{{% md %}}Specifies when to stop hosts during ramp down period.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="ramp_up_algorithm_python">
-<a href="#ramp_up_algorithm_python" style="color: inherit; text-decoration: inherit;">ramp_<wbr>up_<wbr>algorithm</a>
+        <span id="ramp_down_wait_time_minutes_python">
+<a href="#ramp_down_wait_time_minutes_python" style="color: inherit; text-decoration: inherit;">ramp_<wbr>down_<wbr>wait_<wbr>time_<wbr>minutes</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str</span>
+        <span class="property-type">int</span>
     </dt>
-    <dd>{{% md %}}Load balancing algorithm for ramp up period.{{% /md %}}</dd>
+    <dd>{{% md %}}Number of minutes to wait to stop hosts during ramp down period.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="ramp_up_capacity_threshold_pct_python">
@@ -1377,8 +1368,17 @@ The following output properties are available:
     <dd>{{% md %}}Capacity threshold for ramp up period.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="ramp_up_minimum_host_pct_python">
-<a href="#ramp_up_minimum_host_pct_python" style="color: inherit; text-decoration: inherit;">ramp_<wbr>up_<wbr>minimum_<wbr>host_<wbr>pct</a>
+        <span id="ramp_up_load_balancing_algorithm_python">
+<a href="#ramp_up_load_balancing_algorithm_python" style="color: inherit; text-decoration: inherit;">ramp_<wbr>up_<wbr>load_<wbr>balancing_<wbr>algorithm</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Load balancing algorithm for ramp up period.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ramp_up_minimum_hosts_pct_python">
+<a href="#ramp_up_minimum_hosts_pct_python" style="color: inherit; text-decoration: inherit;">ramp_<wbr>up_<wbr>minimum_<wbr>hosts_<wbr>pct</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">int</span>

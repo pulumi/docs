@@ -5738,6 +5738,15 @@ The following output properties are available:
     <dd>{{% md %}}Specifies whether the network interface is accelerated networking-enabled.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="enablefpga_csharp">
+<a href="#enablefpga_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Fpga</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the network interface is FPGA networking-enabled.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="enableipforwarding_csharp">
 <a href="#enableipforwarding_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>IPForwarding</a>
 </span>
@@ -5814,6 +5823,15 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the network interface is accelerated networking-enabled.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enablefpga_go">
+<a href="#enablefpga_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Fpga</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the network interface is FPGA networking-enabled.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="enableipforwarding_go">
@@ -5894,6 +5912,15 @@ The following output properties are available:
     <dd>{{% md %}}Specifies whether the network interface is accelerated networking-enabled.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="enablefpga_nodejs">
+<a href="#enablefpga_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Fpga</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the network interface is FPGA networking-enabled.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="enableipforwarding_nodejs">
 <a href="#enableipforwarding_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>IPForwarding</a>
 </span>
@@ -5970,6 +5997,15 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Specifies whether the network interface is accelerated networking-enabled.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enable_fpga_python">
+<a href="#enable_fpga_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>fpga</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Specifies whether the network interface is FPGA networking-enabled.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="enable_ip_forwarding_python">

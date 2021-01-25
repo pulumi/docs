@@ -12,6 +12,13 @@ meta_desc: "Documentation for the azure-nextgen.web.WebAppDeployment resource wi
 
 User credentials used for publishing activity.
 Latest API Version: 2020-09-01.
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:web/latest:WebAppDeployment myresource1 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/deployments/{id} 
+```
 
 
 

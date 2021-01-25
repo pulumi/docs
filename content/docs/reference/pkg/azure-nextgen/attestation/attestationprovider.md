@@ -12,6 +12,13 @@ meta_desc: "Documentation for the azure-nextgen.attestation.AttestationProvider 
 
 Attestation service response message.
 Latest API Version: 2020-10-01.
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:attestation/latest:AttestationProvider myattestationprovider subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MyResourceGroup/providers/Microsoft.Attestation/attestationProviders/myattestationprovider 
+```
 
 
 
@@ -204,7 +211,7 @@ The AttestationProvider resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The supported Azure location where the attestation service instance should be created.{{% /md %}}</dd>
+    <dd>{{% md %}}The supported Azure location where the attestation provider should be created.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="properties_csharp">
@@ -213,7 +220,7 @@ The AttestationProvider resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#attestationservicecreationspecificparams">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Attestation.<wbr>Inputs.<wbr>Attestation<wbr>Service<wbr>Creation<wbr>Specific<wbr>Params<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Properties of the attestation service instance{{% /md %}}</dd>
+    <dd>{{% md %}}Properties of the attestation provider{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="providername_csharp">
@@ -222,7 +229,7 @@ The AttestationProvider resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the attestation service instance.{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the attestation provider.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_csharp">
@@ -240,7 +247,7 @@ The AttestationProvider resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}The tags that will be assigned to the attestation service instance.{{% /md %}}</dd>
+    <dd>{{% md %}}The tags that will be assigned to the attestation provider.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -255,7 +262,7 @@ The AttestationProvider resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The supported Azure location where the attestation service instance should be created.{{% /md %}}</dd>
+    <dd>{{% md %}}The supported Azure location where the attestation provider should be created.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="properties_go">
@@ -264,7 +271,7 @@ The AttestationProvider resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#attestationservicecreationspecificparams">Attestation<wbr>Service<wbr>Creation<wbr>Specific<wbr>Params</a></span>
     </dt>
-    <dd>{{% md %}}Properties of the attestation service instance{{% /md %}}</dd>
+    <dd>{{% md %}}Properties of the attestation provider{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="providername_go">
@@ -273,7 +280,7 @@ The AttestationProvider resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the attestation service instance.{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the attestation provider.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_go">
@@ -291,7 +298,7 @@ The AttestationProvider resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}The tags that will be assigned to the attestation service instance.{{% /md %}}</dd>
+    <dd>{{% md %}}The tags that will be assigned to the attestation provider.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -306,7 +313,7 @@ The AttestationProvider resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The supported Azure location where the attestation service instance should be created.{{% /md %}}</dd>
+    <dd>{{% md %}}The supported Azure location where the attestation provider should be created.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="properties_nodejs">
@@ -315,7 +322,7 @@ The AttestationProvider resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#attestationservicecreationspecificparams">Attestation<wbr>Service<wbr>Creation<wbr>Specific<wbr>Params</a></span>
     </dt>
-    <dd>{{% md %}}Properties of the attestation service instance{{% /md %}}</dd>
+    <dd>{{% md %}}Properties of the attestation provider{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="providername_nodejs">
@@ -324,7 +331,7 @@ The AttestationProvider resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Name of the attestation service instance.{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the attestation provider.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="resourcegroupname_nodejs">
@@ -342,7 +349,7 @@ The AttestationProvider resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}The tags that will be assigned to the attestation service instance.{{% /md %}}</dd>
+    <dd>{{% md %}}The tags that will be assigned to the attestation provider.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -357,7 +364,7 @@ The AttestationProvider resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The supported Azure location where the attestation service instance should be created.{{% /md %}}</dd>
+    <dd>{{% md %}}The supported Azure location where the attestation provider should be created.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="properties_python">
@@ -366,7 +373,7 @@ The AttestationProvider resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#attestationservicecreationspecificparams">Attestation<wbr>Service<wbr>Creation<wbr>Specific<wbr>Params<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Properties of the attestation service instance{{% /md %}}</dd>
+    <dd>{{% md %}}Properties of the attestation provider{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="provider_name_python">
@@ -375,7 +382,7 @@ The AttestationProvider resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Name of the attestation service instance.{{% /md %}}</dd>
+    <dd>{{% md %}}Name of the attestation provider.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="resource_group_name_python">
@@ -393,7 +400,7 @@ The AttestationProvider resource accepts the following [input]({{< relref "/docs
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}The tags that will be assigned to the attestation service instance.{{% /md %}}</dd>
+    <dd>{{% md %}}The tags that will be assigned to the attestation provider.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -425,6 +432,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="privateendpointconnections_csharp">
+<a href="#privateendpointconnections_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Connections</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#privateendpointconnectionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Attestation.<wbr>Outputs.<wbr>Private<wbr>Endpoint<wbr>Connection<wbr>Response&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of private endpoint connections associated with the attestation provider.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="systemdata_csharp">
@@ -469,7 +485,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Trust model for the attestation service instance.{{% /md %}}</dd>
+    <dd>{{% md %}}Trust model for the attestation provider.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -494,6 +510,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="privateendpointconnections_go">
+<a href="#privateendpointconnections_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint<wbr>Connections</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#privateendpointconnectionresponse">[]Private<wbr>Endpoint<wbr>Connection<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}List of private endpoint connections associated with the attestation provider.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="systemdata_go">
@@ -538,7 +563,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Trust model for the attestation service instance.{{% /md %}}</dd>
+    <dd>{{% md %}}Trust model for the attestation provider.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -563,6 +588,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="privateendpointconnections_nodejs">
+<a href="#privateendpointconnections_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint<wbr>Connections</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#privateendpointconnectionresponse">Private<wbr>Endpoint<wbr>Connection<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of private endpoint connections associated with the attestation provider.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="systemdata_nodejs">
@@ -607,7 +641,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Trust model for the attestation service instance.{{% /md %}}</dd>
+    <dd>{{% md %}}Trust model for the attestation provider.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -632,6 +666,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="private_endpoint_connections_python">
+<a href="#private_endpoint_connections_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint_<wbr>connections</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#privateendpointconnectionresponse">Sequence[Private<wbr>Endpoint<wbr>Connection<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}List of private endpoint connections associated with the attestation provider.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="system_data_python">
@@ -676,7 +719,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Trust model for the attestation service instance.{{% /md %}}</dd>
+    <dd>{{% md %}}Trust model for the attestation provider.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -759,36 +802,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-required"
             title="Required">
-        <span id="alg_csharp">
-<a href="#alg_csharp" style="color: inherit; text-decoration: inherit;">Alg</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The "alg" (algorithm) parameter identifies the algorithm intended for
-use with the key.  The values used should either be registered in the
-IANA "JSON Web Signature and Encryption Algorithms" registry
-established by [JWA] or be a value that contains a Collision-
-Resistant Name.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="kid_csharp">
-<a href="#kid_csharp" style="color: inherit; text-decoration: inherit;">Kid</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The "kid" (key ID) parameter is used to match a specific key.  This
-is used, for instance, to choose among a set of keys within a JWK Set
-during key rollover.  The structure of the "kid" value is
-unspecified.  When "kid" values are used within a JWK Set, different
-keys within the JWK Set SHOULD use distinct "kid" values.  (One
-example in which different keys might use the same "kid" value is if
-they have different "kty" (key type) values but are considered to be
-equivalent alternatives by the application using them.)  The "kid"
-value is a case-sensitive string.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="kty_csharp">
 <a href="#kty_csharp" style="color: inherit; text-decoration: inherit;">Kty</a>
 </span>
@@ -800,18 +813,19 @@ family used with the key, such as "RSA" or "EC". "kty" values should
 either be registered in the IANA "JSON Web Key Types" registry
 established by [JWA] or be a value that contains a Collision-
 Resistant Name.  The "kty" value is a case-sensitive string.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="use_csharp">
-<a href="#use_csharp" style="color: inherit; text-decoration: inherit;">Use</a>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="alg_csharp">
+<a href="#alg_csharp" style="color: inherit; text-decoration: inherit;">Alg</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Use ("public key use") identifies the intended use of
-the public key. The "use" parameter is employed to indicate whether
-a public key is used for encrypting data or verifying the signature
-on data. Values are commonly "sig" (signature) or "enc" (encryption).{{% /md %}}</dd>
+    <dd>{{% md %}}The "alg" (algorithm) parameter identifies the algorithm intended for
+use with the key.  The values used should either be registered in the
+IANA "JSON Web Signature and Encryption Algorithms" registry
+established by [JWA] or be a value that contains a Collision-
+Resistant Name.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="crv_csharp">
@@ -868,6 +882,23 @@ on data. Values are commonly "sig" (signature) or "enc" (encryption).{{% /md %}}
     <dd>{{% md %}}Symmetric key{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="kid_csharp">
+<a href="#kid_csharp" style="color: inherit; text-decoration: inherit;">Kid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The "kid" (key ID) parameter is used to match a specific key.  This
+is used, for instance, to choose among a set of keys within a JWK Set
+during key rollover.  The structure of the "kid" value is
+unspecified.  When "kid" values are used within a JWK Set, different
+keys within the JWK Set SHOULD use distinct "kid" values.  (One
+example in which different keys might use the same "kid" value is if
+they have different "kty" (key type) values but are considered to be
+equivalent alternatives by the application using them.)  The "kid"
+value is a case-sensitive string.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="n_csharp">
 <a href="#n_csharp" style="color: inherit; text-decoration: inherit;">N</a>
 </span>
@@ -902,6 +933,18 @@ on data. Values are commonly "sig" (signature) or "enc" (encryption).{{% /md %}}
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}RSA Private Key Parameter{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="use_csharp">
+<a href="#use_csharp" style="color: inherit; text-decoration: inherit;">Use</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Use ("public key use") identifies the intended use of
+the public key. The "use" parameter is employed to indicate whether
+a public key is used for encrypting data or verifying the signature
+on data. Values are commonly "sig" (signature) or "enc" (encryption).{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="x_csharp">
@@ -943,36 +986,6 @@ certificate.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="alg_go">
-<a href="#alg_go" style="color: inherit; text-decoration: inherit;">Alg</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The "alg" (algorithm) parameter identifies the algorithm intended for
-use with the key.  The values used should either be registered in the
-IANA "JSON Web Signature and Encryption Algorithms" registry
-established by [JWA] or be a value that contains a Collision-
-Resistant Name.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="kid_go">
-<a href="#kid_go" style="color: inherit; text-decoration: inherit;">Kid</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The "kid" (key ID) parameter is used to match a specific key.  This
-is used, for instance, to choose among a set of keys within a JWK Set
-during key rollover.  The structure of the "kid" value is
-unspecified.  When "kid" values are used within a JWK Set, different
-keys within the JWK Set SHOULD use distinct "kid" values.  (One
-example in which different keys might use the same "kid" value is if
-they have different "kty" (key type) values but are considered to be
-equivalent alternatives by the application using them.)  The "kid"
-value is a case-sensitive string.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="kty_go">
 <a href="#kty_go" style="color: inherit; text-decoration: inherit;">Kty</a>
 </span>
@@ -984,18 +997,19 @@ family used with the key, such as "RSA" or "EC". "kty" values should
 either be registered in the IANA "JSON Web Key Types" registry
 established by [JWA] or be a value that contains a Collision-
 Resistant Name.  The "kty" value is a case-sensitive string.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="use_go">
-<a href="#use_go" style="color: inherit; text-decoration: inherit;">Use</a>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="alg_go">
+<a href="#alg_go" style="color: inherit; text-decoration: inherit;">Alg</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Use ("public key use") identifies the intended use of
-the public key. The "use" parameter is employed to indicate whether
-a public key is used for encrypting data or verifying the signature
-on data. Values are commonly "sig" (signature) or "enc" (encryption).{{% /md %}}</dd>
+    <dd>{{% md %}}The "alg" (algorithm) parameter identifies the algorithm intended for
+use with the key.  The values used should either be registered in the
+IANA "JSON Web Signature and Encryption Algorithms" registry
+established by [JWA] or be a value that contains a Collision-
+Resistant Name.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="crv_go">
@@ -1052,6 +1066,23 @@ on data. Values are commonly "sig" (signature) or "enc" (encryption).{{% /md %}}
     <dd>{{% md %}}Symmetric key{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="kid_go">
+<a href="#kid_go" style="color: inherit; text-decoration: inherit;">Kid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The "kid" (key ID) parameter is used to match a specific key.  This
+is used, for instance, to choose among a set of keys within a JWK Set
+during key rollover.  The structure of the "kid" value is
+unspecified.  When "kid" values are used within a JWK Set, different
+keys within the JWK Set SHOULD use distinct "kid" values.  (One
+example in which different keys might use the same "kid" value is if
+they have different "kty" (key type) values but are considered to be
+equivalent alternatives by the application using them.)  The "kid"
+value is a case-sensitive string.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="n_go">
 <a href="#n_go" style="color: inherit; text-decoration: inherit;">N</a>
 </span>
@@ -1086,6 +1117,18 @@ on data. Values are commonly "sig" (signature) or "enc" (encryption).{{% /md %}}
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}RSA Private Key Parameter{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="use_go">
+<a href="#use_go" style="color: inherit; text-decoration: inherit;">Use</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Use ("public key use") identifies the intended use of
+the public key. The "use" parameter is employed to indicate whether
+a public key is used for encrypting data or verifying the signature
+on data. Values are commonly "sig" (signature) or "enc" (encryption).{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="x_go">
@@ -1127,36 +1170,6 @@ certificate.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="alg_nodejs">
-<a href="#alg_nodejs" style="color: inherit; text-decoration: inherit;">alg</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The "alg" (algorithm) parameter identifies the algorithm intended for
-use with the key.  The values used should either be registered in the
-IANA "JSON Web Signature and Encryption Algorithms" registry
-established by [JWA] or be a value that contains a Collision-
-Resistant Name.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="kid_nodejs">
-<a href="#kid_nodejs" style="color: inherit; text-decoration: inherit;">kid</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The "kid" (key ID) parameter is used to match a specific key.  This
-is used, for instance, to choose among a set of keys within a JWK Set
-during key rollover.  The structure of the "kid" value is
-unspecified.  When "kid" values are used within a JWK Set, different
-keys within the JWK Set SHOULD use distinct "kid" values.  (One
-example in which different keys might use the same "kid" value is if
-they have different "kty" (key type) values but are considered to be
-equivalent alternatives by the application using them.)  The "kid"
-value is a case-sensitive string.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="kty_nodejs">
 <a href="#kty_nodejs" style="color: inherit; text-decoration: inherit;">kty</a>
 </span>
@@ -1168,18 +1181,19 @@ family used with the key, such as "RSA" or "EC". "kty" values should
 either be registered in the IANA "JSON Web Key Types" registry
 established by [JWA] or be a value that contains a Collision-
 Resistant Name.  The "kty" value is a case-sensitive string.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="use_nodejs">
-<a href="#use_nodejs" style="color: inherit; text-decoration: inherit;">use</a>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="alg_nodejs">
+<a href="#alg_nodejs" style="color: inherit; text-decoration: inherit;">alg</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Use ("public key use") identifies the intended use of
-the public key. The "use" parameter is employed to indicate whether
-a public key is used for encrypting data or verifying the signature
-on data. Values are commonly "sig" (signature) or "enc" (encryption).{{% /md %}}</dd>
+    <dd>{{% md %}}The "alg" (algorithm) parameter identifies the algorithm intended for
+use with the key.  The values used should either be registered in the
+IANA "JSON Web Signature and Encryption Algorithms" registry
+established by [JWA] or be a value that contains a Collision-
+Resistant Name.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="crv_nodejs">
@@ -1236,6 +1250,23 @@ on data. Values are commonly "sig" (signature) or "enc" (encryption).{{% /md %}}
     <dd>{{% md %}}Symmetric key{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="kid_nodejs">
+<a href="#kid_nodejs" style="color: inherit; text-decoration: inherit;">kid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The "kid" (key ID) parameter is used to match a specific key.  This
+is used, for instance, to choose among a set of keys within a JWK Set
+during key rollover.  The structure of the "kid" value is
+unspecified.  When "kid" values are used within a JWK Set, different
+keys within the JWK Set SHOULD use distinct "kid" values.  (One
+example in which different keys might use the same "kid" value is if
+they have different "kty" (key type) values but are considered to be
+equivalent alternatives by the application using them.)  The "kid"
+value is a case-sensitive string.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="n_nodejs">
 <a href="#n_nodejs" style="color: inherit; text-decoration: inherit;">n</a>
 </span>
@@ -1270,6 +1301,18 @@ on data. Values are commonly "sig" (signature) or "enc" (encryption).{{% /md %}}
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}RSA Private Key Parameter{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="use_nodejs">
+<a href="#use_nodejs" style="color: inherit; text-decoration: inherit;">use</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Use ("public key use") identifies the intended use of
+the public key. The "use" parameter is employed to indicate whether
+a public key is used for encrypting data or verifying the signature
+on data. Values are commonly "sig" (signature) or "enc" (encryption).{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="x_nodejs">
@@ -1311,36 +1354,6 @@ certificate.{{% /md %}}</dd>
 
     <dt class="property-required"
             title="Required">
-        <span id="alg_python">
-<a href="#alg_python" style="color: inherit; text-decoration: inherit;">alg</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The "alg" (algorithm) parameter identifies the algorithm intended for
-use with the key.  The values used should either be registered in the
-IANA "JSON Web Signature and Encryption Algorithms" registry
-established by [JWA] or be a value that contains a Collision-
-Resistant Name.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="kid_python">
-<a href="#kid_python" style="color: inherit; text-decoration: inherit;">kid</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The "kid" (key ID) parameter is used to match a specific key.  This
-is used, for instance, to choose among a set of keys within a JWK Set
-during key rollover.  The structure of the "kid" value is
-unspecified.  When "kid" values are used within a JWK Set, different
-keys within the JWK Set SHOULD use distinct "kid" values.  (One
-example in which different keys might use the same "kid" value is if
-they have different "kty" (key type) values but are considered to be
-equivalent alternatives by the application using them.)  The "kid"
-value is a case-sensitive string.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="kty_python">
 <a href="#kty_python" style="color: inherit; text-decoration: inherit;">kty</a>
 </span>
@@ -1352,18 +1365,19 @@ family used with the key, such as "RSA" or "EC". "kty" values should
 either be registered in the IANA "JSON Web Key Types" registry
 established by [JWA] or be a value that contains a Collision-
 Resistant Name.  The "kty" value is a case-sensitive string.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="use_python">
-<a href="#use_python" style="color: inherit; text-decoration: inherit;">use</a>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="alg_python">
+<a href="#alg_python" style="color: inherit; text-decoration: inherit;">alg</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Use ("public key use") identifies the intended use of
-the public key. The "use" parameter is employed to indicate whether
-a public key is used for encrypting data or verifying the signature
-on data. Values are commonly "sig" (signature) or "enc" (encryption).{{% /md %}}</dd>
+    <dd>{{% md %}}The "alg" (algorithm) parameter identifies the algorithm intended for
+use with the key.  The values used should either be registered in the
+IANA "JSON Web Signature and Encryption Algorithms" registry
+established by [JWA] or be a value that contains a Collision-
+Resistant Name.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="crv_python">
@@ -1420,6 +1434,23 @@ on data. Values are commonly "sig" (signature) or "enc" (encryption).{{% /md %}}
     <dd>{{% md %}}Symmetric key{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="kid_python">
+<a href="#kid_python" style="color: inherit; text-decoration: inherit;">kid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The "kid" (key ID) parameter is used to match a specific key.  This
+is used, for instance, to choose among a set of keys within a JWK Set
+during key rollover.  The structure of the "kid" value is
+unspecified.  When "kid" values are used within a JWK Set, different
+keys within the JWK Set SHOULD use distinct "kid" values.  (One
+example in which different keys might use the same "kid" value is if
+they have different "kty" (key type) values but are considered to be
+equivalent alternatives by the application using them.)  The "kid"
+value is a case-sensitive string.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="n_python">
 <a href="#n_python" style="color: inherit; text-decoration: inherit;">n</a>
 </span>
@@ -1454,6 +1485,18 @@ on data. Values are commonly "sig" (signature) or "enc" (encryption).{{% /md %}}
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}RSA Private Key Parameter{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="use_python">
+<a href="#use_python" style="color: inherit; text-decoration: inherit;">use</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Use ("public key use") identifies the intended use of
+the public key. The "use" parameter is employed to indicate whether
+a public key is used for encrypting data or verifying the signature
+on data. Values are commonly "sig" (signature) or "enc" (encryption).{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="x_python">
@@ -1565,6 +1608,444 @@ default, the order of the JWK values within the array does not imply
 an order of preference among them, although applications of JWK Sets
 can choose to assign a meaning to the order for their purposes, if
 desired.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="privateendpointconnectionresponse">Private<wbr>Endpoint<wbr>Connection<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="privatelinkserviceconnectionstate_csharp">
+<a href="#privatelinkserviceconnectionstate_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Attestation.<wbr>Inputs.<wbr>Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A collection of information about the state of the connection between service consumer and provider.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="provisioningstate_csharp">
+<a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The provisioning state of the private endpoint connection resource.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="privateendpoint_csharp">
+<a href="#privateendpoint_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#privateendpointresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Attestation.<wbr>Inputs.<wbr>Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The resource of private end point.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="privatelinkserviceconnectionstate_go">
+<a href="#privatelinkserviceconnectionstate_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}A collection of information about the state of the connection between service consumer and provider.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="provisioningstate_go">
+<a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The provisioning state of the private endpoint connection resource.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="privateendpoint_go">
+<a href="#privateendpoint_go" style="color: inherit; text-decoration: inherit;">Private<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The resource of private end point.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="privatelinkserviceconnectionstate_nodejs">
+<a href="#privatelinkserviceconnectionstate_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Link<wbr>Service<wbr>Connection<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}A collection of information about the state of the connection between service consumer and provider.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="provisioningstate_nodejs">
+<a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The provisioning state of the private endpoint connection resource.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="privateendpoint_nodejs">
+<a href="#privateendpoint_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>Endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The resource of private end point.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="private_link_service_connection_state_python">
+<a href="#private_link_service_connection_state_python" style="color: inherit; text-decoration: inherit;">private_<wbr>link_<wbr>service_<wbr>connection_<wbr>state</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}A collection of information about the state of the connection between service consumer and provider.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="provisioning_state_python">
+<a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The provisioning state of the private endpoint connection resource.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of the resource. E.g. "Microsoft.Compute/virtualMachines" or "Microsoft.Storage/storageAccounts"{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="private_endpoint_python">
+<a href="#private_endpoint_python" style="color: inherit; text-decoration: inherit;">private_<wbr>endpoint</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#privateendpointresponse">Private<wbr>Endpoint<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The resource of private end point.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="privateendpointresponse">Private<wbr>Endpoint<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARM identifier for Private Endpoint{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARM identifier for Private Endpoint{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ARM identifier for Private Endpoint{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ARM identifier for Private Endpoint{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="privatelinkserviceconnectionstateresponse">Private<wbr>Link<wbr>Service<wbr>Connection<wbr>State<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="actionsrequired_csharp">
+<a href="#actionsrequired_csharp" style="color: inherit; text-decoration: inherit;">Actions<wbr>Required</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A message indicating if changes on the service provider require any updates on the consumer.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The reason for approval/rejection of the connection.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="status_csharp">
+<a href="#status_csharp" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="actionsrequired_go">
+<a href="#actionsrequired_go" style="color: inherit; text-decoration: inherit;">Actions<wbr>Required</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A message indicating if changes on the service provider require any updates on the consumer.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The reason for approval/rejection of the connection.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="status_go">
+<a href="#status_go" style="color: inherit; text-decoration: inherit;">Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="actionsrequired_nodejs">
+<a href="#actionsrequired_nodejs" style="color: inherit; text-decoration: inherit;">actions<wbr>Required</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A message indicating if changes on the service provider require any updates on the consumer.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The reason for approval/rejection of the connection.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="status_nodejs">
+<a href="#status_nodejs" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="actions_required_python">
+<a href="#actions_required_python" style="color: inherit; text-decoration: inherit;">actions_<wbr>required</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A message indicating if changes on the service provider require any updates on the consumer.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The reason for approval/rejection of the connection.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="status_python">
+<a href="#status_python" style="color: inherit; text-decoration: inherit;">status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the connection has been Approved/Rejected/Removed by the owner of the service.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 

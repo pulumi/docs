@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.batch.Application resource with 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Contains information about an application in a Batch account.
-Latest API Version: 2020-09-01.
+Latest API Version: 2021-01-01.
 
 {{% examples %}}
 ## Example Usage

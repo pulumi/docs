@@ -166,15 +166,6 @@ The following output properties are available:
     <dd>{{% md %}}defines the specific alert criteria information.{{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="description_csharp">
-<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}the description of the metric alert that will be included in the alert email.{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
 </span>
@@ -202,6 +193,15 @@ The following output properties are available:
     <dd>{{% md %}}Azure resource Id{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="ismigrated_csharp">
+<a href="#ismigrated_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Migrated</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}the value indicating whether this alert rule is migrated.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="lastupdatedtime_csharp">
 <a href="#lastupdatedtime_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Updated<wbr>Time</a>
 </span>
@@ -227,6 +227,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Azure resource name{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="scopes_csharp">
+<a href="#scopes_csharp" style="color: inherit; text-decoration: inherit;">Scopes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}the list of resource id's that this metric alert is scoped to.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="severity_csharp">
@@ -274,13 +283,13 @@ The following output properties are available:
     <dd>{{% md %}}the flag that indicates whether the alert should be auto resolved or not. The default is true.{{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="scopes_csharp">
-<a href="#scopes_csharp" style="color: inherit; text-decoration: inherit;">Scopes</a>
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the list of resource id's that this metric alert is scoped to.{{% /md %}}</dd>
+    <dd>{{% md %}}the description of the metric alert that will be included in the alert email.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="tags_csharp">
@@ -298,7 +307,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the region of the target resource(s) on which the alert is created/updated. Mandatory for MultipleResourceMultipleMetricCriteria.{{% /md %}}</dd>
+    <dd>{{% md %}}the region of the target resource(s) on which the alert is created/updated. Mandatory if the scope contains a subscription, resource group, or more than one resource.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="targetresourcetype_csharp">
@@ -307,7 +316,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the resource type of the target resource(s) on which the alert is created/updated. Mandatory for MultipleResourceMultipleMetricCriteria.{{% /md %}}</dd>
+    <dd>{{% md %}}the resource type of the target resource(s) on which the alert is created/updated. Mandatory if the scope contains a subscription, resource group, or more than one resource.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -323,15 +332,6 @@ The following output properties are available:
         <span class="property-type"><a href="#metricalertmultipleresourcemultiplemetriccriteriaresponse">Metric<wbr>Alert<wbr>Multiple<wbr>Resource<wbr>Multiple<wbr>Metric<wbr>Criteria<wbr>Response</a> | <a href="#metricalertsingleresourcemultiplemetriccriteriaresponse">Metric<wbr>Alert<wbr>Single<wbr>Resource<wbr>Multiple<wbr>Metric<wbr>Criteria<wbr>Response</a> | <a href="#webtestlocationavailabilitycriteriaresponse">Webtest<wbr>Location<wbr>Availability<wbr>Criteria<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}defines the specific alert criteria information.{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="description_go">
-<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}the description of the metric alert that will be included in the alert email.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="enabled_go">
@@ -361,6 +361,15 @@ The following output properties are available:
     <dd>{{% md %}}Azure resource Id{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="ismigrated_go">
+<a href="#ismigrated_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Migrated</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}the value indicating whether this alert rule is migrated.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="lastupdatedtime_go">
 <a href="#lastupdatedtime_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Updated<wbr>Time</a>
 </span>
@@ -386,6 +395,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Azure resource name{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="scopes_go">
+<a href="#scopes_go" style="color: inherit; text-decoration: inherit;">Scopes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}the list of resource id's that this metric alert is scoped to.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="severity_go">
@@ -433,13 +451,13 @@ The following output properties are available:
     <dd>{{% md %}}the flag that indicates whether the alert should be auto resolved or not. The default is true.{{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="scopes_go">
-<a href="#scopes_go" style="color: inherit; text-decoration: inherit;">Scopes</a>
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the list of resource id's that this metric alert is scoped to.{{% /md %}}</dd>
+    <dd>{{% md %}}the description of the metric alert that will be included in the alert email.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="tags_go">
@@ -457,7 +475,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the region of the target resource(s) on which the alert is created/updated. Mandatory for MultipleResourceMultipleMetricCriteria.{{% /md %}}</dd>
+    <dd>{{% md %}}the region of the target resource(s) on which the alert is created/updated. Mandatory if the scope contains a subscription, resource group, or more than one resource.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="targetresourcetype_go">
@@ -466,7 +484,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the resource type of the target resource(s) on which the alert is created/updated. Mandatory for MultipleResourceMultipleMetricCriteria.{{% /md %}}</dd>
+    <dd>{{% md %}}the resource type of the target resource(s) on which the alert is created/updated. Mandatory if the scope contains a subscription, resource group, or more than one resource.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -482,15 +500,6 @@ The following output properties are available:
         <span class="property-type"><a href="#metricalertmultipleresourcemultiplemetriccriteriaresponse">Metric<wbr>Alert<wbr>Multiple<wbr>Resource<wbr>Multiple<wbr>Metric<wbr>Criteria<wbr>Response</a> | <a href="#metricalertsingleresourcemultiplemetriccriteriaresponse">Metric<wbr>Alert<wbr>Single<wbr>Resource<wbr>Multiple<wbr>Metric<wbr>Criteria<wbr>Response</a> | <a href="#webtestlocationavailabilitycriteriaresponse">Webtest<wbr>Location<wbr>Availability<wbr>Criteria<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}defines the specific alert criteria information.{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="description_nodejs">
-<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}the description of the metric alert that will be included in the alert email.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="enabled_nodejs">
@@ -520,6 +529,15 @@ The following output properties are available:
     <dd>{{% md %}}Azure resource Id{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="ismigrated_nodejs">
+<a href="#ismigrated_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Migrated</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}the value indicating whether this alert rule is migrated.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="lastupdatedtime_nodejs">
 <a href="#lastupdatedtime_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Updated<wbr>Time</a>
 </span>
@@ -545,6 +563,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Azure resource name{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="scopes_nodejs">
+<a href="#scopes_nodejs" style="color: inherit; text-decoration: inherit;">scopes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}the list of resource id's that this metric alert is scoped to.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="severity_nodejs">
@@ -592,13 +619,13 @@ The following output properties are available:
     <dd>{{% md %}}the flag that indicates whether the alert should be auto resolved or not. The default is true.{{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="scopes_nodejs">
-<a href="#scopes_nodejs" style="color: inherit; text-decoration: inherit;">scopes</a>
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the list of resource id's that this metric alert is scoped to.{{% /md %}}</dd>
+    <dd>{{% md %}}the description of the metric alert that will be included in the alert email.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="tags_nodejs">
@@ -616,7 +643,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the region of the target resource(s) on which the alert is created/updated. Mandatory for MultipleResourceMultipleMetricCriteria.{{% /md %}}</dd>
+    <dd>{{% md %}}the region of the target resource(s) on which the alert is created/updated. Mandatory if the scope contains a subscription, resource group, or more than one resource.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="targetresourcetype_nodejs">
@@ -625,7 +652,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the resource type of the target resource(s) on which the alert is created/updated. Mandatory for MultipleResourceMultipleMetricCriteria.{{% /md %}}</dd>
+    <dd>{{% md %}}the resource type of the target resource(s) on which the alert is created/updated. Mandatory if the scope contains a subscription, resource group, or more than one resource.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -641,15 +668,6 @@ The following output properties are available:
         <span class="property-type"><a href="#metricalertmultipleresourcemultiplemetriccriteriaresponse">Metric<wbr>Alert<wbr>Multiple<wbr>Resource<wbr>Multiple<wbr>Metric<wbr>Criteria<wbr>Response</a> | <a href="#metricalertsingleresourcemultiplemetriccriteriaresponse">Metric<wbr>Alert<wbr>Single<wbr>Resource<wbr>Multiple<wbr>Metric<wbr>Criteria<wbr>Response</a> | <a href="#webtestlocationavailabilitycriteriaresponse">Webtest<wbr>Location<wbr>Availability<wbr>Criteria<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}defines the specific alert criteria information.{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="description_python">
-<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}the description of the metric alert that will be included in the alert email.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="enabled_python">
@@ -679,6 +697,15 @@ The following output properties are available:
     <dd>{{% md %}}Azure resource Id{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="is_migrated_python">
+<a href="#is_migrated_python" style="color: inherit; text-decoration: inherit;">is_<wbr>migrated</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}the value indicating whether this alert rule is migrated.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="last_updated_time_python">
 <a href="#last_updated_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>updated_<wbr>time</a>
 </span>
@@ -704,6 +731,15 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Azure resource name{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="scopes_python">
+<a href="#scopes_python" style="color: inherit; text-decoration: inherit;">scopes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}the list of resource id's that this metric alert is scoped to.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="severity_python">
@@ -751,13 +787,13 @@ The following output properties are available:
     <dd>{{% md %}}the flag that indicates whether the alert should be auto resolved or not. The default is true.{{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="scopes_python">
-<a href="#scopes_python" style="color: inherit; text-decoration: inherit;">scopes</a>
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}the list of resource id's that this metric alert is scoped to.{{% /md %}}</dd>
+    <dd>{{% md %}}the description of the metric alert that will be included in the alert email.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="tags_python">
@@ -775,7 +811,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}the region of the target resource(s) on which the alert is created/updated. Mandatory for MultipleResourceMultipleMetricCriteria.{{% /md %}}</dd>
+    <dd>{{% md %}}the region of the target resource(s) on which the alert is created/updated. Mandatory if the scope contains a subscription, resource group, or more than one resource.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="target_resource_type_python">
@@ -784,7 +820,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}the resource type of the target resource(s) on which the alert is created/updated. Mandatory for MultipleResourceMultipleMetricCriteria.{{% /md %}}</dd>
+    <dd>{{% md %}}the resource type of the target resource(s) on which the alert is created/updated. Mandatory if the scope contains a subscription, resource group, or more than one resource.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1315,7 +1351,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}The properties of a webhook object.{{% /md %}}</dd>
+    <dd>{{% md %}}This field allows specifying custom properties, which would be appended to the alert payload sent as input to the webhook.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1339,7 +1375,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}The properties of a webhook object.{{% /md %}}</dd>
+    <dd>{{% md %}}This field allows specifying custom properties, which would be appended to the alert payload sent as input to the webhook.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1363,7 +1399,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}The properties of a webhook object.{{% /md %}}</dd>
+    <dd>{{% md %}}This field allows specifying custom properties, which would be appended to the alert payload sent as input to the webhook.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1387,7 +1423,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}The properties of a webhook object.{{% /md %}}</dd>
+    <dd>{{% md %}}This field allows specifying custom properties, which would be appended to the alert payload sent as input to the webhook.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 

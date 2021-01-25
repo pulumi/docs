@@ -12,6 +12,13 @@ meta_desc: "Documentation for the azure-nextgen.devtestlab.Policy resource with 
 
 A Policy.
 Latest API Version: 2018-09-15.
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:devtestlab/latest:Policy myresource1 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevTestLab/labs/{labName}/policysets/{policySetName}/policies/{name} 
+```
 
 
 

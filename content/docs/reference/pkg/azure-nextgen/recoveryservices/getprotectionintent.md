@@ -251,7 +251,7 @@ The following output properties are available:
 <a href="#properties_csharp" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurerecoveryservicevaultprotectionintentresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Outputs.<wbr>Azure<wbr>Recovery<wbr>Service<wbr>Vault<wbr>Protection<wbr>Intent<wbr>Response</a> | <a href="#azureresourceprotectionintentresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Outputs.<wbr>Azure<wbr>Resource<wbr>Protection<wbr>Intent<wbr>Response</a></span>
+        <span class="property-type"><a href="#azurerecoveryservicevaultprotectionintentresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Outputs.<wbr>Azure<wbr>Recovery<wbr>Service<wbr>Vault<wbr>Protection<wbr>Intent<wbr>Response</a> | <a href="#azureresourceprotectionintentresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Outputs.<wbr>Azure<wbr>Resource<wbr>Protection<wbr>Intent<wbr>Response</a> | <a href="#azureworkloadautoprotectionintentresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Outputs.<wbr>Azure<wbr>Workload<wbr>Auto<wbr>Protection<wbr>Intent<wbr>Response</a> | <a href="#azureworkloadsqlautoprotectionintentresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Recovery<wbr>Services.<wbr>Outputs.<wbr>Azure<wbr>Workload<wbr>SQLAuto<wbr>Protection<wbr>Intent<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}ProtectionIntentResource properties{{% /md %}}</dd>
     <dt class="property-"
@@ -320,7 +320,7 @@ The following output properties are available:
 <a href="#properties_go" style="color: inherit; text-decoration: inherit;">Properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurerecoveryservicevaultprotectionintentresponse">Azure<wbr>Recovery<wbr>Service<wbr>Vault<wbr>Protection<wbr>Intent<wbr>Response</a> | <a href="#azureresourceprotectionintentresponse">Azure<wbr>Resource<wbr>Protection<wbr>Intent<wbr>Response</a></span>
+        <span class="property-type"><a href="#azurerecoveryservicevaultprotectionintentresponse">Azure<wbr>Recovery<wbr>Service<wbr>Vault<wbr>Protection<wbr>Intent<wbr>Response</a> | <a href="#azureresourceprotectionintentresponse">Azure<wbr>Resource<wbr>Protection<wbr>Intent<wbr>Response</a> | <a href="#azureworkloadautoprotectionintentresponse">Azure<wbr>Workload<wbr>Auto<wbr>Protection<wbr>Intent<wbr>Response</a> | <a href="#azureworkloadsqlautoprotectionintentresponse">Azure<wbr>Workload<wbr>SQLAuto<wbr>Protection<wbr>Intent<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}ProtectionIntentResource properties{{% /md %}}</dd>
     <dt class="property-"
@@ -389,7 +389,7 @@ The following output properties are available:
 <a href="#properties_nodejs" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurerecoveryservicevaultprotectionintentresponse">Azure<wbr>Recovery<wbr>Service<wbr>Vault<wbr>Protection<wbr>Intent<wbr>Response</a> | <a href="#azureresourceprotectionintentresponse">Azure<wbr>Resource<wbr>Protection<wbr>Intent<wbr>Response</a></span>
+        <span class="property-type"><a href="#azurerecoveryservicevaultprotectionintentresponse">Azure<wbr>Recovery<wbr>Service<wbr>Vault<wbr>Protection<wbr>Intent<wbr>Response</a> | <a href="#azureresourceprotectionintentresponse">Azure<wbr>Resource<wbr>Protection<wbr>Intent<wbr>Response</a> | <a href="#azureworkloadautoprotectionintentresponse">Azure<wbr>Workload<wbr>Auto<wbr>Protection<wbr>Intent<wbr>Response</a> | <a href="#azureworkloadsqlautoprotectionintentresponse">Azure<wbr>Workload<wbr>SQLAuto<wbr>Protection<wbr>Intent<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}ProtectionIntentResource properties{{% /md %}}</dd>
     <dt class="property-"
@@ -458,7 +458,7 @@ The following output properties are available:
 <a href="#properties_python" style="color: inherit; text-decoration: inherit;">properties</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurerecoveryservicevaultprotectionintentresponse">Azure<wbr>Recovery<wbr>Service<wbr>Vault<wbr>Protection<wbr>Intent<wbr>Response</a> | <a href="#azureresourceprotectionintentresponse">Azure<wbr>Resource<wbr>Protection<wbr>Intent<wbr>Response</a></span>
+        <span class="property-type"><a href="#azurerecoveryservicevaultprotectionintentresponse">Azure<wbr>Recovery<wbr>Service<wbr>Vault<wbr>Protection<wbr>Intent<wbr>Response</a> | <a href="#azureresourceprotectionintentresponse">Azure<wbr>Resource<wbr>Protection<wbr>Intent<wbr>Response</a> | <a href="#azureworkloadautoprotectionintentresponse">Azure<wbr>Workload<wbr>Auto<wbr>Protection<wbr>Intent<wbr>Response</a> | <a href="#azureworkloadsqlautoprotectionintentresponse">Azure<wbr>Workload<wbr>SQLAuto<wbr>Protection<wbr>Intent<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}ProtectionIntentResource properties{{% /md %}}</dd>
     <dt class="property-"
@@ -961,6 +961,464 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="azureworkloadautoprotectionintentresponse">Azure<wbr>Workload<wbr>Auto<wbr>Protection<wbr>Intent<wbr>Response</h4>
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backupmanagementtype_csharp">
+<a href="#backupmanagementtype_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Management<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="itemid_csharp">
+<a href="#itemid_csharp" style="color: inherit; text-decoration: inherit;">Item<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ID of the item which is getting protected, In case of Azure Vm , it is ProtectedItemId{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="policyid_csharp">
+<a href="#policyid_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protectionstate_csharp">
+<a href="#protectionstate_csharp" style="color: inherit; text-decoration: inherit;">Protection<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sourceresourceid_csharp">
+<a href="#sourceresourceid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backupmanagementtype_go">
+<a href="#backupmanagementtype_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Management<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="itemid_go">
+<a href="#itemid_go" style="color: inherit; text-decoration: inherit;">Item<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ID of the item which is getting protected, In case of Azure Vm , it is ProtectedItemId{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="policyid_go">
+<a href="#policyid_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protectionstate_go">
+<a href="#protectionstate_go" style="color: inherit; text-decoration: inherit;">Protection<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sourceresourceid_go">
+<a href="#sourceresourceid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backupmanagementtype_nodejs">
+<a href="#backupmanagementtype_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="itemid_nodejs">
+<a href="#itemid_nodejs" style="color: inherit; text-decoration: inherit;">item<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ID of the item which is getting protected, In case of Azure Vm , it is ProtectedItemId{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="policyid_nodejs">
+<a href="#policyid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protectionstate_nodejs">
+<a href="#protectionstate_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sourceresourceid_nodejs">
+<a href="#sourceresourceid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backup_management_type_python">
+<a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="item_id_python">
+<a href="#item_id_python" style="color: inherit; text-decoration: inherit;">item_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}ID of the item which is getting protected, In case of Azure Vm , it is ProtectedItemId{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="policy_id_python">
+<a href="#policy_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protection_state_python">
+<a href="#protection_state_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>state</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="source_resource_id_python">
+<a href="#source_resource_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>resource_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="azureworkloadsqlautoprotectionintentresponse">Azure<wbr>Workload<wbr>SQLAuto<wbr>Protection<wbr>Intent<wbr>Response</h4>
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backupmanagementtype_csharp">
+<a href="#backupmanagementtype_csharp" style="color: inherit; text-decoration: inherit;">Backup<wbr>Management<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="itemid_csharp">
+<a href="#itemid_csharp" style="color: inherit; text-decoration: inherit;">Item<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ID of the item which is getting protected, In case of Azure Vm , it is ProtectedItemId{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="policyid_csharp">
+<a href="#policyid_csharp" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protectionstate_csharp">
+<a href="#protectionstate_csharp" style="color: inherit; text-decoration: inherit;">Protection<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sourceresourceid_csharp">
+<a href="#sourceresourceid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workloaditemtype_csharp">
+<a href="#workloaditemtype_csharp" style="color: inherit; text-decoration: inherit;">Workload<wbr>Item<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Workload item type of the item for which intent is to be set{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backupmanagementtype_go">
+<a href="#backupmanagementtype_go" style="color: inherit; text-decoration: inherit;">Backup<wbr>Management<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="itemid_go">
+<a href="#itemid_go" style="color: inherit; text-decoration: inherit;">Item<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ID of the item which is getting protected, In case of Azure Vm , it is ProtectedItemId{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="policyid_go">
+<a href="#policyid_go" style="color: inherit; text-decoration: inherit;">Policy<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protectionstate_go">
+<a href="#protectionstate_go" style="color: inherit; text-decoration: inherit;">Protection<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sourceresourceid_go">
+<a href="#sourceresourceid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workloaditemtype_go">
+<a href="#workloaditemtype_go" style="color: inherit; text-decoration: inherit;">Workload<wbr>Item<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Workload item type of the item for which intent is to be set{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backupmanagementtype_nodejs">
+<a href="#backupmanagementtype_nodejs" style="color: inherit; text-decoration: inherit;">backup<wbr>Management<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="itemid_nodejs">
+<a href="#itemid_nodejs" style="color: inherit; text-decoration: inherit;">item<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ID of the item which is getting protected, In case of Azure Vm , it is ProtectedItemId{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="policyid_nodejs">
+<a href="#policyid_nodejs" style="color: inherit; text-decoration: inherit;">policy<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protectionstate_nodejs">
+<a href="#protectionstate_nodejs" style="color: inherit; text-decoration: inherit;">protection<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sourceresourceid_nodejs">
+<a href="#sourceresourceid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workloaditemtype_nodejs">
+<a href="#workloaditemtype_nodejs" style="color: inherit; text-decoration: inherit;">workload<wbr>Item<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Workload item type of the item for which intent is to be set{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="backup_management_type_python">
+<a href="#backup_management_type_python" style="color: inherit; text-decoration: inherit;">backup_<wbr>management_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Type of backup management for the backed up item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="item_id_python">
+<a href="#item_id_python" style="color: inherit; text-decoration: inherit;">item_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}ID of the item which is getting protected, In case of Azure Vm , it is ProtectedItemId{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="policy_id_python">
+<a href="#policy_id_python" style="color: inherit; text-decoration: inherit;">policy_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}ID of the backup policy with which this item is backed up.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protection_state_python">
+<a href="#protection_state_python" style="color: inherit; text-decoration: inherit;">protection_<wbr>state</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Backup state of this backup item.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="source_resource_id_python">
+<a href="#source_resource_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>resource_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}ARM ID of the resource to be backed up.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workload_item_type_python">
+<a href="#workload_item_type_python" style="color: inherit; text-decoration: inherit;">workload_<wbr>item_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Workload item type of the item for which intent is to be set{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 

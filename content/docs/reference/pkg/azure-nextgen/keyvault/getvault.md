@@ -1208,8 +1208,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="actionrequired_csharp">
-<a href="#actionrequired_csharp" style="color: inherit; text-decoration: inherit;">Action<wbr>Required</a>
+        <span id="actionsrequired_csharp">
+<a href="#actionsrequired_csharp" style="color: inherit; text-decoration: inherit;">Actions<wbr>Required</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -1241,8 +1241,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="actionrequired_go">
-<a href="#actionrequired_go" style="color: inherit; text-decoration: inherit;">Action<wbr>Required</a>
+        <span id="actionsrequired_go">
+<a href="#actionsrequired_go" style="color: inherit; text-decoration: inherit;">Actions<wbr>Required</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -1274,8 +1274,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="actionrequired_nodejs">
-<a href="#actionrequired_nodejs" style="color: inherit; text-decoration: inherit;">action<wbr>Required</a>
+        <span id="actionsrequired_nodejs">
+<a href="#actionsrequired_nodejs" style="color: inherit; text-decoration: inherit;">actions<wbr>Required</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -1307,8 +1307,8 @@ The following output properties are available:
 
     <dt class="property-optional"
             title="Optional">
-        <span id="action_required_python">
-<a href="#action_required_python" style="color: inherit; text-decoration: inherit;">action_<wbr>required</a>
+        <span id="actions_required_python">
+<a href="#actions_required_python" style="color: inherit; text-decoration: inherit;">actions_<wbr>required</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
@@ -1558,6 +1558,15 @@ The following output properties are available:
     <dd>{{% md %}}Rules governing the accessibility of the key vault from specific network locations.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="provisioningstate_csharp">
+<a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Provisioning state of the vault.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="softdeleteretentionindays_csharp">
 <a href="#softdeleteretentionindays_csharp" style="color: inherit; text-decoration: inherit;">Soft<wbr>Delete<wbr>Retention<wbr>In<wbr>Days</a>
 </span>
@@ -1688,6 +1697,15 @@ The following output properties are available:
         <span class="property-type"><a href="#networkrulesetresponse">Network<wbr>Rule<wbr>Set<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Rules governing the accessibility of the key vault from specific network locations.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="provisioningstate_go">
+<a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Provisioning state of the vault.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="softdeleteretentionindays_go">
@@ -1822,6 +1840,15 @@ The following output properties are available:
     <dd>{{% md %}}Rules governing the accessibility of the key vault from specific network locations.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="provisioningstate_nodejs">
+<a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Provisioning state of the vault.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="softdeleteretentionindays_nodejs">
 <a href="#softdeleteretentionindays_nodejs" style="color: inherit; text-decoration: inherit;">soft<wbr>Delete<wbr>Retention<wbr>In<wbr>Days</a>
 </span>
@@ -1952,6 +1979,15 @@ The following output properties are available:
         <span class="property-type"><a href="#networkrulesetresponse">Network<wbr>Rule<wbr>Set<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Rules governing the accessibility of the key vault from specific network locations.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="provisioning_state_python">
+<a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Provisioning state of the vault.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="soft_delete_retention_in_days_python">

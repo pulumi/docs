@@ -12,6 +12,13 @@ meta_desc: "Documentation for the azure-nextgen.resources.Resource resource with
 
 Resource information.
 Latest API Version: 2020-08-01.
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:resources/latest:Resource myresource1 /subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{parentResourcePath}/{resourceType}/{resourceName} 
+```
 
 
 

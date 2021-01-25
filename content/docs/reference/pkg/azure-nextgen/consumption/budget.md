@@ -520,7 +520,7 @@ The Budget resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#budgetfilter">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Consumption.<wbr>Inputs.<wbr>Budget<wbr>Filter<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}May be used to filter budgets by resource group, resource, or meter.{{% /md %}}</dd>
+    <dd>{{% md %}}May be used to filter budgets by user-specified dimensions and/or tags.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="notifications_csharp">
@@ -607,7 +607,7 @@ The Budget resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#budgetfilter">Budget<wbr>Filter</a></span>
     </dt>
-    <dd>{{% md %}}May be used to filter budgets by resource group, resource, or meter.{{% /md %}}</dd>
+    <dd>{{% md %}}May be used to filter budgets by user-specified dimensions and/or tags.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="notifications_go">
@@ -694,7 +694,7 @@ The Budget resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#budgetfilter">Budget<wbr>Filter</a></span>
     </dt>
-    <dd>{{% md %}}May be used to filter budgets by resource group, resource, or meter.{{% /md %}}</dd>
+    <dd>{{% md %}}May be used to filter budgets by user-specified dimensions and/or tags.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="notifications_nodejs">
@@ -781,7 +781,7 @@ The Budget resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#budgetfilter">Budget<wbr>Filter<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}May be used to filter budgets by resource group, resource, or meter.{{% /md %}}</dd>
+    <dd>{{% md %}}May be used to filter budgets by user-specified dimensions and/or tags.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="notifications_python">
@@ -2726,7 +2726,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:consumption/latest:Budget TestBudget subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/MYDEVTESTRG/providers/Microsoft.Consumption/budgets/TestBudget 
+$ pulumi import azure-nextgen:consumption/latest:Budget TestBudget subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Consumption/budgets/TestBudget 
 ```
 
 

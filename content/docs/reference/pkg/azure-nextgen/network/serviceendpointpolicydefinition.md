@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.network.ServiceEndpointPolicyDef
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Service Endpoint policy definitions.
-Latest API Version: 2020-07-01.
+Latest API Version: 2020-08-01.
 
 {{% examples %}}
 ## Example Usage

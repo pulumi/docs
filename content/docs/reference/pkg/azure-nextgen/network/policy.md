@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.network.Policy resource with exa
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Defines web application firewall policy.
-Latest API Version: 2020-04-01.
+Latest API Version: 2020-11-01.
 
 {{% examples %}}
 ## Example Usage
@@ -102,8 +102,16 @@ class MyStack : Stack
                 },
             },
             PolicyName = "Policy1",
-            PolicySettings = ,
+            PolicySettings = new AzureNextGen.Network.Latest.Inputs.PolicySettingsArgs
+            {
+                Mode = "Prevention",
+                RequestBodyCheck = "Disabled",
+            },
             ResourceGroupName = "rg1",
+            Sku = new AzureNextGen.Network.Latest.Inputs.SkuArgs
+            {
+                Name = "Classic_AzureFrontDoor",
+            },
         });
     }
 
@@ -180,9 +188,15 @@ func main() {
 					},
 				},
 			},
-			PolicyName:        pulumi.String("Policy1"),
-			PolicySettings:    nil,
+			PolicyName: pulumi.String("Policy1"),
+			PolicySettings: &network.PolicySettingsArgs{
+				Mode:             pulumi.String("Prevention"),
+				RequestBodyCheck: pulumi.Bool("Disabled"),
+			},
 			ResourceGroupName: pulumi.String("rg1"),
+			Sku: &network.SkuArgs{
+				Name: pulumi.String("Classic_AzureFrontDoor"),
+			},
 		})
 		if err != nil {
 			return err
@@ -249,8 +263,14 @@ policy = azure_nextgen.network.latest.Policy("policy",
         )],
     ),
     policy_name="Policy1",
-    policy_settings=azure_nextgen.network.latest.PolicySettingsArgs(),
-    resource_group_name="rg1")
+    policy_settings=azure_nextgen.network.latest.PolicySettingsArgs(
+        mode="Prevention",
+        request_body_check="Disabled",
+    ),
+    resource_group_name="rg1",
+    sku=azure_nextgen.network.latest.SkuArgs(
+        name="Classic_AzureFrontDoor",
+    ))
 
 ```
 
@@ -310,8 +330,14 @@ const policy = new azure_nextgen.network.latest.Policy("policy", {
         }],
     },
     policyName: "Policy1",
-    policySettings: {},
+    policySettings: {
+        mode: "Prevention",
+        requestBodyCheck: "Disabled",
+    },
     resourceGroupName: "rg1",
+    sku: {
+        name: "Classic_AzureFrontDoor",
+    },
 });
 
 ```
@@ -330,7 +356,7 @@ const policy = new azure_nextgen.network.latest.Policy("policy", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Policy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">custom_rules</span><span class="p">:</span> <span class="nx">Optional[CustomRuleListArgs]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_rules</span><span class="p">:</span> <span class="nx">Optional[ManagedRuleSetListArgs]</span> = None<span class="p">, </span><span class="nx">policy_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy_settings</span><span class="p">:</span> <span class="nx">Optional[PolicySettingsArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Policy</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">custom_rules</span><span class="p">:</span> <span class="nx">Optional[CustomRuleListArgs]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">managed_rules</span><span class="p">:</span> <span class="nx">Optional[ManagedRuleSetListArgs]</span> = None<span class="p">, </span><span class="nx">policy_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">policy_settings</span><span class="p">:</span> <span class="nx">Optional[PolicySettingsArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[SkuArgs]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -566,6 +592,15 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
     <dd>{{% md %}}Describes settings for the policy.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="sku_csharp">
+<a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sku<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The pricing tier of web application firewall policy. Defaults to Classic_AzureFrontDoor if not specified.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -642,6 +677,15 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
         <span class="property-type"><a href="#policysettings">Policy<wbr>Settings</a></span>
     </dt>
     <dd>{{% md %}}Describes settings for the policy.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sku_go">
+<a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sku">Sku</a></span>
+    </dt>
+    <dd>{{% md %}}The pricing tier of web application firewall policy. Defaults to Classic_AzureFrontDoor if not specified.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tags_go">
@@ -722,6 +766,15 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
     <dd>{{% md %}}Describes settings for the policy.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="sku_nodejs">
+<a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sku">Sku</a></span>
+    </dt>
+    <dd>{{% md %}}The pricing tier of web application firewall policy. Defaults to Classic_AzureFrontDoor if not specified.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -800,6 +853,15 @@ The Policy resource accepts the following [input]({{< relref "/docs/intro/concep
     <dd>{{% md %}}Describes settings for the policy.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="sku_python">
+<a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#sku">Sku<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The pricing tier of web application firewall policy. Defaults to Classic_AzureFrontDoor if not specified.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="tags_python">
 <a href="#tags_python" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -876,6 +938,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Describes Routing Rules associated with this Web Application Firewall policy.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="securitypolicylinks_csharp">
+<a href="#securitypolicylinks_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Policy<wbr>Links</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#securitypolicylinkresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Outputs.<wbr>Security<wbr>Policy<wbr>Link<wbr>Response&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Describes Security Policy associated with this Web Application Firewall policy.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
@@ -943,6 +1014,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#routingrulelinkresponse">[]Routing<wbr>Rule<wbr>Link<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes Routing Rules associated with this Web Application Firewall policy.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="securitypolicylinks_go">
+<a href="#securitypolicylinks_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Policy<wbr>Links</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#securitypolicylinkresponse">[]Security<wbr>Policy<wbr>Link<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Describes Security Policy associated with this Web Application Firewall policy.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="type_go">
@@ -1014,6 +1094,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Describes Routing Rules associated with this Web Application Firewall policy.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="securitypolicylinks_nodejs">
+<a href="#securitypolicylinks_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Policy<wbr>Links</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#securitypolicylinkresponse">Security<wbr>Policy<wbr>Link<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}Describes Security Policy associated with this Web Application Firewall policy.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
@@ -1081,6 +1170,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#routingrulelinkresponse">Sequence[Routing<wbr>Rule<wbr>Link<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}Describes Routing Rules associated with this Web Application Firewall policy.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="security_policy_links_python">
+<a href="#security_policy_links_python" style="color: inherit; text-decoration: inherit;">security_<wbr>policy_<wbr>links</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#securitypolicylinkresponse">Sequence[Security<wbr>Policy<wbr>Link<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Describes Security Policy associated with this Web Application Firewall policy.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="type_python">
@@ -3940,6 +4038,238 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>MatchRule</dd>
     <dt>RATE_LIMIT_RULE</dt>
     <dd>RateLimitRule</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="securitypolicylinkresponse">Security<wbr>Policy<wbr>Link<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="sku">Sku</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#skuname">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Sku<wbr>Name</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the pricing tier.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#skuname">Sku<wbr>Name</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the pricing tier.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#skuname">Sku<wbr>Name</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the pricing tier.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str | <a href="#skuname">Sku<wbr>Name</a></span>
+    </dt>
+    <dd>{{% md %}}Name of the pricing tier.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="skuname">Sku<wbr>Name</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Classic_Azure<wbr>Front<wbr>Door</dt>
+    <dd>Classic_AzureFrontDoor</dd>
+    <dt>Standard_Azure<wbr>Front<wbr>Door</dt>
+    <dd>Standard_AzureFrontDoor</dd>
+    <dt>Premium_Azure<wbr>Front<wbr>Door</dt>
+    <dd>Premium_AzureFrontDoor</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Sku<wbr>Name_Classic_Azure<wbr>Front<wbr>Door</dt>
+    <dd>Classic_AzureFrontDoor</dd>
+    <dt>Sku<wbr>Name_Standard_Azure<wbr>Front<wbr>Door</dt>
+    <dd>Standard_AzureFrontDoor</dd>
+    <dt>Sku<wbr>Name_Premium_Azure<wbr>Front<wbr>Door</dt>
+    <dd>Premium_AzureFrontDoor</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Classic_Azure<wbr>Front<wbr>Door</dt>
+    <dd>Classic_AzureFrontDoor</dd>
+    <dt>Standard_Azure<wbr>Front<wbr>Door</dt>
+    <dd>Standard_AzureFrontDoor</dd>
+    <dt>Premium_Azure<wbr>Front<wbr>Door</dt>
+    <dd>Premium_AzureFrontDoor</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>CLASSIC_AZURE_FRONT_DOOR</dt>
+    <dd>Classic_AzureFrontDoor</dd>
+    <dt>STANDARD_AZURE_FRONT_DOOR</dt>
+    <dd>Standard_AzureFrontDoor</dd>
+    <dt>PREMIUM_AZURE_FRONT_DOOR</dt>
+    <dd>Premium_AzureFrontDoor</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="skuresponse">Sku<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the pricing tier.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the pricing tier.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the pricing tier.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Name of the pricing tier.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 

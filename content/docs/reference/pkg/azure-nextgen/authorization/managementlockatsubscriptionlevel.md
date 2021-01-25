@@ -12,6 +12,13 @@ meta_desc: "Documentation for the azure-nextgen.authorization.ManagementLockAtSu
 
 The lock information.
 Latest API Version: 2016-09-01.
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:authorization/latest:ManagementLockAtSubscriptionLevel myresource1 /subscriptions/{subscriptionId}/providers/Microsoft.Authorization/locks/{lockName} 
+```
 
 
 

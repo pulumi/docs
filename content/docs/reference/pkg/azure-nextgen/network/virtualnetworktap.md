@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.network.VirtualNetworkTap resour
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Virtual Network Tap resource.
-Latest API Version: 2020-07-01.
+Latest API Version: 2020-08-01.
 
 {{% examples %}}
 ## Example Usage
@@ -1979,6 +1979,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}An array of backend addresses.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The location of the backend address pool.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -2010,6 +2019,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#loadbalancerbackendaddress">[]Load<wbr>Balancer<wbr>Backend<wbr>Address</a></span>
     </dt>
     <dd>{{% md %}}An array of backend addresses.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The location of the backend address pool.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
@@ -2045,6 +2063,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}An array of backend addresses.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The location of the backend address pool.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -2076,6 +2103,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#loadbalancerbackendaddress">Sequence[Load<wbr>Balancer<wbr>Backend<wbr>Address<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An array of backend addresses.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The location of the backend address pool.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
@@ -2176,6 +2212,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}An array of backend addresses.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The location of the backend address pool.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -2270,6 +2315,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#loadbalancerbackendaddressresponse">[]Load<wbr>Balancer<wbr>Backend<wbr>Address<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}An array of backend addresses.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The location of the backend address pool.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="name_go">
@@ -2368,6 +2422,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}An array of backend addresses.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The location of the backend address pool.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -2462,6 +2525,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#loadbalancerbackendaddressresponse">Sequence[Load<wbr>Balancer<wbr>Backend<wbr>Address<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An array of backend addresses.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The location of the backend address pool.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="name_python">
@@ -10293,6 +10365,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}An array of custom dns configurations.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="extendedlocation_csharp">
+<a href="#extendedlocation_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#extendedlocationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Extended<wbr>Location<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The extended location of the load balancer.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -10405,6 +10486,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#customdnsconfigpropertiesformatresponse">[]Custom<wbr>Dns<wbr>Config<wbr>Properties<wbr>Format<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}An array of custom dns configurations.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="extendedlocation_go">
+<a href="#extendedlocation_go" style="color: inherit; text-decoration: inherit;">Extended<wbr>Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#extendedlocationresponse">Extended<wbr>Location<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The extended location of the load balancer.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="id_go">
@@ -10521,6 +10611,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}An array of custom dns configurations.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="extendedlocation_nodejs">
+<a href="#extendedlocation_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#extendedlocationresponse">Extended<wbr>Location<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The extended location of the load balancer.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
@@ -10633,6 +10732,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#customdnsconfigpropertiesformatresponse">Sequence[Custom<wbr>Dns<wbr>Config<wbr>Properties<wbr>Format<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}An array of custom dns configurations.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="extended_location_python">
+<a href="#extended_location_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#extendedlocationresponse">Extended<wbr>Location<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The extended location of the load balancer.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="id_python">
@@ -13391,6 +13499,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The destination CIDR to which the route applies.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="hasbgpoverride_csharp">
+<a href="#hasbgpoverride_csharp" style="color: inherit; text-decoration: inherit;">Has<wbr>Bgp<wbr>Override</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}A value indicating whether this route overrides overlapping BGP routes regardless of LPM.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -13416,6 +13533,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address packets should be forwarded to. Next hop values are only allowed in routes where the next hop type is VirtualAppliance.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -13440,6 +13566,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The destination CIDR to which the route applies.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="hasbgpoverride_go">
+<a href="#hasbgpoverride_go" style="color: inherit; text-decoration: inherit;">Has<wbr>Bgp<wbr>Override</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}A value indicating whether this route overrides overlapping BGP routes regardless of LPM.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="id_go">
@@ -13467,6 +13602,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address packets should be forwarded to. Next hop values are only allowed in routes where the next hop type is VirtualAppliance.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -13491,6 +13635,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The destination CIDR to which the route applies.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="hasbgpoverride_nodejs">
+<a href="#hasbgpoverride_nodejs" style="color: inherit; text-decoration: inherit;">has<wbr>Bgp<wbr>Override</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}A value indicating whether this route overrides overlapping BGP routes regardless of LPM.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="id_nodejs">
@@ -13518,6 +13671,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address packets should be forwarded to. Next hop values are only allowed in routes where the next hop type is VirtualAppliance.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -13542,6 +13704,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The destination CIDR to which the route applies.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="has_bgp_override_python">
+<a href="#has_bgp_override_python" style="color: inherit; text-decoration: inherit;">has_<wbr>bgp_<wbr>override</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}A value indicating whether this route overrides overlapping BGP routes regardless of LPM.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="id_python">
@@ -13569,6 +13740,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IP address packets should be forwarded to. Next hop values are only allowed in routes where the next hop type is VirtualAppliance.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -13677,6 +13857,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The destination CIDR to which the route applies.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="hasbgpoverride_csharp">
+<a href="#hasbgpoverride_csharp" style="color: inherit; text-decoration: inherit;">Has<wbr>Bgp<wbr>Override</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}A value indicating whether this route overrides overlapping BGP routes regardless of LPM.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -13702,6 +13891,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address packets should be forwarded to. Next hop values are only allowed in routes where the next hop type is VirtualAppliance.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -13746,6 +13944,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The destination CIDR to which the route applies.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="hasbgpoverride_go">
+<a href="#hasbgpoverride_go" style="color: inherit; text-decoration: inherit;">Has<wbr>Bgp<wbr>Override</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}A value indicating whether this route overrides overlapping BGP routes regardless of LPM.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="id_go">
 <a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -13771,6 +13978,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address packets should be forwarded to. Next hop values are only allowed in routes where the next hop type is VirtualAppliance.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -13815,6 +14031,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The destination CIDR to which the route applies.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="hasbgpoverride_nodejs">
+<a href="#hasbgpoverride_nodejs" style="color: inherit; text-decoration: inherit;">has<wbr>Bgp<wbr>Override</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}A value indicating whether this route overrides overlapping BGP routes regardless of LPM.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
@@ -13840,6 +14065,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The IP address packets should be forwarded to. Next hop values are only allowed in routes where the next hop type is VirtualAppliance.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -13884,6 +14118,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The destination CIDR to which the route applies.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="has_bgp_override_python">
+<a href="#has_bgp_override_python" style="color: inherit; text-decoration: inherit;">has_<wbr>bgp_<wbr>override</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}A value indicating whether this route overrides overlapping BGP routes regardless of LPM.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="id_python">
 <a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
@@ -13909,6 +14152,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The IP address packets should be forwarded to. Next hop values are only allowed in routes where the next hop type is VirtualAppliance.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -14152,6 +14404,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The provisioning state of the route table resource.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
+        <span id="resourceguid_csharp">
+<a href="#resourceguid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Guid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource GUID property of the route table.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
         <span id="subnets_csharp">
 <a href="#subnets_csharp" style="color: inherit; text-decoration: inherit;">Subnets</a>
 </span>
@@ -14246,6 +14507,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provisioning state of the route table resource.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="resourceguid_go">
+<a href="#resourceguid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Guid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource GUID property of the route table.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="subnets_go">
@@ -14344,6 +14614,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The provisioning state of the route table resource.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
+        <span id="resourceguid_nodejs">
+<a href="#resourceguid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Guid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource GUID property of the route table.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
         <span id="subnets_nodejs">
 <a href="#subnets_nodejs" style="color: inherit; text-decoration: inherit;">subnets</a>
 </span>
@@ -14438,6 +14717,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provisioning state of the route table resource.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="resource_guid_python">
+<a href="#resource_guid_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>guid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The resource GUID property of the route table.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="subnets_python">
@@ -14662,6 +14950,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The source port ranges.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -14821,6 +15118,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The source port ranges.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -14980,6 +15286,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The source port ranges.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -15139,6 +15454,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The source port ranges.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -15464,6 +15788,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">List&lt;string&gt;</span>
     </dt>
     <dd>{{% md %}}The source port ranges.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -15641,6 +15974,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">[]string</span>
     </dt>
     <dd>{{% md %}}The source port ranges.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -15818,6 +16160,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string[]</span>
     </dt>
     <dd>{{% md %}}The source port ranges.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -15995,6 +16346,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">Sequence[str]</span>
     </dt>
     <dd>{{% md %}}The source port ranges.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of the resource.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 

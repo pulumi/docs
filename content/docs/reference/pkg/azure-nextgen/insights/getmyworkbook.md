@@ -202,6 +202,15 @@ The following output properties are available:
     <dd>{{% md %}}Unique user id of the specific user that owns this private workbook.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="etag_csharp">
+<a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Resource etag{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -341,6 +350,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Unique user id of the specific user that owns this private workbook.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="etag_go">
+<a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}Resource etag{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="id_go">
@@ -484,6 +502,15 @@ The following output properties are available:
     <dd>{{% md %}}Unique user id of the specific user that owns this private workbook.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="etag_nodejs">
+<a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}Resource etag{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
@@ -623,6 +650,15 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Unique user id of the specific user that owns this private workbook.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="etag_python">
+<a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}Resource etag{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="id_python">

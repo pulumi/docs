@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.compute.Snapshot resource with e
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Snapshot resource.
-Latest API Version: 2020-06-30.
+Latest API Version: 2020-09-30.
 
 {{% examples %}}
 ## Example Usage
@@ -333,7 +333,7 @@ const snapshot = new azure_nextgen.compute.latest.Snapshot("snapshot", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Snapshot</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">creation_data</span><span class="p">:</span> <span class="nx">Optional[CreationDataArgs]</span> = None<span class="p">, </span><span class="nx">disk_access_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disk_size_gb</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">encryption</span><span class="p">:</span> <span class="nx">Optional[EncryptionArgs]</span> = None<span class="p">, </span><span class="nx">encryption_settings_collection</span><span class="p">:</span> <span class="nx">Optional[EncryptionSettingsCollectionArgs]</span> = None<span class="p">, </span><span class="nx">hyper_v_generation</span><span class="p">:</span> <span class="nx">Optional[Union[str, HyperVGeneration]]</span> = None<span class="p">, </span><span class="nx">incremental</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_access_policy</span><span class="p">:</span> <span class="nx">Optional[Union[str, NetworkAccessPolicy]]</span> = None<span class="p">, </span><span class="nx">os_type</span><span class="p">:</span> <span class="nx">Optional[OperatingSystemTypes]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[SnapshotSkuArgs]</span> = None<span class="p">, </span><span class="nx">snapshot_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Snapshot</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">creation_data</span><span class="p">:</span> <span class="nx">Optional[CreationDataArgs]</span> = None<span class="p">, </span><span class="nx">disk_access_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">disk_size_gb</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">encryption</span><span class="p">:</span> <span class="nx">Optional[EncryptionArgs]</span> = None<span class="p">, </span><span class="nx">encryption_settings_collection</span><span class="p">:</span> <span class="nx">Optional[EncryptionSettingsCollectionArgs]</span> = None<span class="p">, </span><span class="nx">extended_location</span><span class="p">:</span> <span class="nx">Optional[ExtendedLocationArgs]</span> = None<span class="p">, </span><span class="nx">hyper_v_generation</span><span class="p">:</span> <span class="nx">Optional[Union[str, HyperVGeneration]]</span> = None<span class="p">, </span><span class="nx">incremental</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">network_access_policy</span><span class="p">:</span> <span class="nx">Optional[Union[str, NetworkAccessPolicy]]</span> = None<span class="p">, </span><span class="nx">os_type</span><span class="p">:</span> <span class="nx">Optional[OperatingSystemTypes]</span> = None<span class="p">, </span><span class="nx">purchase_plan</span><span class="p">:</span> <span class="nx">Optional[PurchasePlanArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sku</span><span class="p">:</span> <span class="nx">Optional[SnapshotSkuArgs]</span> = None<span class="p">, </span><span class="nx">snapshot_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -578,6 +578,15 @@ The Snapshot resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}Encryption settings collection used be Azure Disk Encryption, can contain multiple encryption settings per disk or snapshot.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="extendedlocation_csharp">
+<a href="#extendedlocation_csharp" style="color: inherit; text-decoration: inherit;">Extended<wbr>Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#extendedlocation">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Extended<wbr>Location<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The extended location where the snapshot will be created. Extended location cannot be changed.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="hypervgeneration_csharp">
 <a href="#hypervgeneration_csharp" style="color: inherit; text-decoration: inherit;">Hyper<wbr>VGeneration</a>
 </span>
@@ -614,13 +623,22 @@ The Snapshot resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}The Operating System type.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="purchaseplan_csharp">
+<a href="#purchaseplan_csharp" style="color: inherit; text-decoration: inherit;">Purchase<wbr>Plan</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#purchaseplan">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Purchase<wbr>Plan<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Purchase plan information for the image from which the source disk for the snapshot was originally created.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="sku_csharp">
 <a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#snapshotsku">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Snapshot<wbr>Sku<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The snapshots sku name. Can be Standard_LRS, Premium_LRS, or Standard_ZRS.{{% /md %}}</dd>
+    <dd>{{% md %}}The snapshots sku name. Can be Standard_LRS, Premium_LRS, or Standard_ZRS. This is an optional parameter for incremental snapshot and the default behavior is the SKU will be set to the same sku as the previous snapshot{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
@@ -710,6 +728,15 @@ The Snapshot resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}Encryption settings collection used be Azure Disk Encryption, can contain multiple encryption settings per disk or snapshot.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="extendedlocation_go">
+<a href="#extendedlocation_go" style="color: inherit; text-decoration: inherit;">Extended<wbr>Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#extendedlocation">Extended<wbr>Location</a></span>
+    </dt>
+    <dd>{{% md %}}The extended location where the snapshot will be created. Extended location cannot be changed.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="hypervgeneration_go">
 <a href="#hypervgeneration_go" style="color: inherit; text-decoration: inherit;">Hyper<wbr>VGeneration</a>
 </span>
@@ -746,13 +773,22 @@ The Snapshot resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}The Operating System type.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="purchaseplan_go">
+<a href="#purchaseplan_go" style="color: inherit; text-decoration: inherit;">Purchase<wbr>Plan</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#purchaseplan">Purchase<wbr>Plan</a></span>
+    </dt>
+    <dd>{{% md %}}Purchase plan information for the image from which the source disk for the snapshot was originally created.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="sku_go">
 <a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#snapshotsku">Snapshot<wbr>Sku</a></span>
     </dt>
-    <dd>{{% md %}}The snapshots sku name. Can be Standard_LRS, Premium_LRS, or Standard_ZRS.{{% /md %}}</dd>
+    <dd>{{% md %}}The snapshots sku name. Can be Standard_LRS, Premium_LRS, or Standard_ZRS. This is an optional parameter for incremental snapshot and the default behavior is the SKU will be set to the same sku as the previous snapshot{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tags_go">
@@ -842,6 +878,15 @@ The Snapshot resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}Encryption settings collection used be Azure Disk Encryption, can contain multiple encryption settings per disk or snapshot.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="extendedlocation_nodejs">
+<a href="#extendedlocation_nodejs" style="color: inherit; text-decoration: inherit;">extended<wbr>Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#extendedlocation">Extended<wbr>Location</a></span>
+    </dt>
+    <dd>{{% md %}}The extended location where the snapshot will be created. Extended location cannot be changed.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="hypervgeneration_nodejs">
 <a href="#hypervgeneration_nodejs" style="color: inherit; text-decoration: inherit;">hyper<wbr>VGeneration</a>
 </span>
@@ -878,13 +923,22 @@ The Snapshot resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}The Operating System type.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="purchaseplan_nodejs">
+<a href="#purchaseplan_nodejs" style="color: inherit; text-decoration: inherit;">purchase<wbr>Plan</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#purchaseplan">Purchase<wbr>Plan</a></span>
+    </dt>
+    <dd>{{% md %}}Purchase plan information for the image from which the source disk for the snapshot was originally created.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="sku_nodejs">
 <a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#snapshotsku">Snapshot<wbr>Sku</a></span>
     </dt>
-    <dd>{{% md %}}The snapshots sku name. Can be Standard_LRS, Premium_LRS, or Standard_ZRS.{{% /md %}}</dd>
+    <dd>{{% md %}}The snapshots sku name. Can be Standard_LRS, Premium_LRS, or Standard_ZRS. This is an optional parameter for incremental snapshot and the default behavior is the SKU will be set to the same sku as the previous snapshot{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
@@ -974,6 +1028,15 @@ The Snapshot resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}Encryption settings collection used be Azure Disk Encryption, can contain multiple encryption settings per disk or snapshot.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="extended_location_python">
+<a href="#extended_location_python" style="color: inherit; text-decoration: inherit;">extended_<wbr>location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#extendedlocation">Extended<wbr>Location<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The extended location where the snapshot will be created. Extended location cannot be changed.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="hyper_v_generation_python">
 <a href="#hyper_v_generation_python" style="color: inherit; text-decoration: inherit;">hyper_<wbr>v_<wbr>generation</a>
 </span>
@@ -1010,13 +1073,22 @@ The Snapshot resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}The Operating System type.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="purchase_plan_python">
+<a href="#purchase_plan_python" style="color: inherit; text-decoration: inherit;">purchase_<wbr>plan</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#purchaseplan">Purchase<wbr>Plan<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Purchase plan information for the image from which the source disk for the snapshot was originally created.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="sku_python">
 <a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#snapshotsku">Snapshot<wbr>Sku<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}The snapshots sku name. Can be Standard_LRS, Premium_LRS, or Standard_ZRS.{{% /md %}}</dd>
+    <dd>{{% md %}}The snapshots sku name. Can be Standard_LRS, Premium_LRS, or Standard_ZRS. This is an optional parameter for incremental snapshot and the default behavior is the SKU will be set to the same sku as the previous snapshot{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tags_python">
@@ -2842,6 +2914,232 @@ All [input](#inputs) properties are implicitly available as output properties. A
 </dl>
 {{% /choosable %}}
 
+<h4 id="extendedlocation">Extended<wbr>Location</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the extended location.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#extendedlocationtypes">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Extended<wbr>Location<wbr>Types</a></span>
+    </dt>
+    <dd>{{% md %}}The type of the extended location.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the extended location.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#extendedlocationtypes">Extended<wbr>Location<wbr>Types</a></span>
+    </dt>
+    <dd>{{% md %}}The type of the extended location.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the extended location.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#extendedlocationtypes">Extended<wbr>Location<wbr>Types</a></span>
+    </dt>
+    <dd>{{% md %}}The type of the extended location.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the extended location.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str | <a href="#extendedlocationtypes">Extended<wbr>Location<wbr>Types</a></span>
+    </dt>
+    <dd>{{% md %}}The type of the extended location.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="extendedlocationresponse">Extended<wbr>Location<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the extended location.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of the extended location.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the extended location.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of the extended location.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the extended location.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of the extended location.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the extended location.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of the extended location.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="extendedlocationtypes">Extended<wbr>Location<wbr>Types</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Edge<wbr>Zone</dt>
+    <dd>EdgeZone</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Extended<wbr>Location<wbr>Types<wbr>Edge<wbr>Zone</dt>
+    <dd>EdgeZone</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Edge<wbr>Zone</dt>
+    <dd>EdgeZone</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>EDGE_ZONE</dt>
+    <dd>EdgeZone</dd>
+</dl>
+{{% /choosable %}}
+
 <h4 id="hypervgeneration">Hyper<wbr>VGeneration</h4>
 
 {{% choosable language csharp %}}
@@ -3552,6 +3850,346 @@ All [input](#inputs) properties are implicitly available as output properties. A
 </dl>
 {{% /choosable %}}
 
+<h4 id="purchaseplan">Purchase<wbr>Plan</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The plan ID.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="product_csharp">
+<a href="#product_csharp" style="color: inherit; text-decoration: inherit;">Product</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the product of the image from the marketplace. This is the same value as Offer under the imageReference element.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="publisher_csharp">
+<a href="#publisher_csharp" style="color: inherit; text-decoration: inherit;">Publisher</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The publisher ID.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="promotioncode_csharp">
+<a href="#promotioncode_csharp" style="color: inherit; text-decoration: inherit;">Promotion<wbr>Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Offer Promotion Code.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The plan ID.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="product_go">
+<a href="#product_go" style="color: inherit; text-decoration: inherit;">Product</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the product of the image from the marketplace. This is the same value as Offer under the imageReference element.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="publisher_go">
+<a href="#publisher_go" style="color: inherit; text-decoration: inherit;">Publisher</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The publisher ID.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="promotioncode_go">
+<a href="#promotioncode_go" style="color: inherit; text-decoration: inherit;">Promotion<wbr>Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Offer Promotion Code.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The plan ID.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="product_nodejs">
+<a href="#product_nodejs" style="color: inherit; text-decoration: inherit;">product</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the product of the image from the marketplace. This is the same value as Offer under the imageReference element.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="publisher_nodejs">
+<a href="#publisher_nodejs" style="color: inherit; text-decoration: inherit;">publisher</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The publisher ID.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="promotioncode_nodejs">
+<a href="#promotioncode_nodejs" style="color: inherit; text-decoration: inherit;">promotion<wbr>Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Offer Promotion Code.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The plan ID.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="product_python">
+<a href="#product_python" style="color: inherit; text-decoration: inherit;">product</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the product of the image from the marketplace. This is the same value as Offer under the imageReference element.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="publisher_python">
+<a href="#publisher_python" style="color: inherit; text-decoration: inherit;">publisher</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The publisher ID.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="promotion_code_python">
+<a href="#promotion_code_python" style="color: inherit; text-decoration: inherit;">promotion_<wbr>code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Offer Promotion Code.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="purchaseplanresponse">Purchase<wbr>Plan<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The plan ID.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="product_csharp">
+<a href="#product_csharp" style="color: inherit; text-decoration: inherit;">Product</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the product of the image from the marketplace. This is the same value as Offer under the imageReference element.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="publisher_csharp">
+<a href="#publisher_csharp" style="color: inherit; text-decoration: inherit;">Publisher</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The publisher ID.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="promotioncode_csharp">
+<a href="#promotioncode_csharp" style="color: inherit; text-decoration: inherit;">Promotion<wbr>Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Offer Promotion Code.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The plan ID.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="product_go">
+<a href="#product_go" style="color: inherit; text-decoration: inherit;">Product</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the product of the image from the marketplace. This is the same value as Offer under the imageReference element.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="publisher_go">
+<a href="#publisher_go" style="color: inherit; text-decoration: inherit;">Publisher</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The publisher ID.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="promotioncode_go">
+<a href="#promotioncode_go" style="color: inherit; text-decoration: inherit;">Promotion<wbr>Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Offer Promotion Code.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The plan ID.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="product_nodejs">
+<a href="#product_nodejs" style="color: inherit; text-decoration: inherit;">product</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Specifies the product of the image from the marketplace. This is the same value as Offer under the imageReference element.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="publisher_nodejs">
+<a href="#publisher_nodejs" style="color: inherit; text-decoration: inherit;">publisher</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The publisher ID.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="promotioncode_nodejs">
+<a href="#promotioncode_nodejs" style="color: inherit; text-decoration: inherit;">promotion<wbr>Code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Offer Promotion Code.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The plan ID.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="product_python">
+<a href="#product_python" style="color: inherit; text-decoration: inherit;">product</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Specifies the product of the image from the marketplace. This is the same value as Offer under the imageReference element.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="publisher_python">
+<a href="#publisher_python" style="color: inherit; text-decoration: inherit;">publisher</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The publisher ID.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="promotion_code_python">
+<a href="#promotion_code_python" style="color: inherit; text-decoration: inherit;">promotion_<wbr>code</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Offer Promotion Code.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
 <h4 id="snapshotsku">Snapshot<wbr>Sku</h4>
 
 {{% choosable language csharp %}}
@@ -3887,7 +4525,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:compute/latest:Snapshot mySnapshot2 <Azure resource ID> 
+$ pulumi import azure-nextgen:compute/latest:Snapshot mySnapshot2 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/snapshots/{snapshotName} 
 ```
 
 

@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.batch.BatchAccount resource with
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Contains information about an Azure Batch account.
-Latest API Version: 2020-09-01.
+Latest API Version: 2021-01-01.
 
 {{% examples %}}
 ## Example Usage
@@ -330,6 +330,128 @@ const batchAccount = new azure_nextgen.batch.latest.BatchAccount("batchAccount",
     },
     identity: {
         type: "SystemAssigned",
+    },
+    location: "japaneast",
+    resourceGroupName: "default-azurebatch-japaneast",
+});
+
+```
+
+{{% /example %}}
+
+### BatchAccountCreate_UserAssignedIdentity
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var batchAccount = new AzureNextGen.Batch.Latest.BatchAccount("batchAccount", new AzureNextGen.Batch.Latest.BatchAccountArgs
+        {
+            AccountName = "sampleacct",
+            AutoStorage = new AzureNextGen.Batch.Latest.Inputs.AutoStorageBasePropertiesArgs
+            {
+                StorageAccountId = "/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Storage/storageAccounts/samplestorage",
+            },
+            Identity = new AzureNextGen.Batch.Latest.Inputs.BatchAccountIdentityArgs
+            {
+                Type = "UserAssigned",
+                UserAssignedIdentities = 
+                {
+                    { "/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id1",  },
+                },
+            },
+            Location = "japaneast",
+            ResourceGroupName = "default-azurebatch-japaneast",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+
+```go
+package main
+
+import (
+	batch "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/batch/latest"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := batch.NewBatchAccount(ctx, "batchAccount", &batch.BatchAccountArgs{
+			AccountName: pulumi.String("sampleacct"),
+			AutoStorage: &batch.AutoStorageBasePropertiesArgs{
+				StorageAccountId: pulumi.String("/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Storage/storageAccounts/samplestorage"),
+			},
+			Identity: &batch.BatchAccountIdentityArgs{
+				Type: "UserAssigned",
+				UserAssignedIdentities: pulumi.MapMap{
+					"/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id1": nil,
+				},
+			},
+			Location:          pulumi.String("japaneast"),
+			ResourceGroupName: pulumi.String("default-azurebatch-japaneast"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azure_nextgen as azure_nextgen
+
+batch_account = azure_nextgen.batch.latest.BatchAccount("batchAccount",
+    account_name="sampleacct",
+    auto_storage=azure_nextgen.batch.latest.AutoStorageBasePropertiesArgs(
+        storage_account_id="/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Storage/storageAccounts/samplestorage",
+    ),
+    identity=azure_nextgen.batch.latest.BatchAccountIdentityArgs(
+        type="UserAssigned",
+        user_assigned_identities={
+            "/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id1": {},
+        },
+    ),
+    location="japaneast",
+    resource_group_name="default-azurebatch-japaneast")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
+
+const batchAccount = new azure_nextgen.batch.latest.BatchAccount("batchAccount", {
+    accountName: "sampleacct",
+    autoStorage: {
+        storageAccountId: "/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.Storage/storageAccounts/samplestorage",
+    },
+    identity: {
+        type: "UserAssigned",
+        userAssignedIdentities: {
+            "/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id1": {},
+        },
     },
     location: "japaneast",
     resourceGroupName: "default-azurebatch-japaneast",
@@ -1667,6 +1789,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#resourceidentitytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Resource<wbr>Identity<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of identity used for the Batch account.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="userassignedidentities_csharp">
+<a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}The list of user identities associated with the Batch account. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1682,6 +1813,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#resourceidentitytype">Resource<wbr>Identity<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of identity used for the Batch account.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="userassignedidentities_go">
+<a href="#userassignedidentities_go" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}The list of user identities associated with the Batch account. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1697,6 +1837,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#resourceidentitytype">Resource<wbr>Identity<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of identity used for the Batch account.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="userassignedidentities_nodejs">
+<a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}The list of user identities associated with the Batch account. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1712,6 +1861,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#resourceidentitytype">Resource<wbr>Identity<wbr>Type</a></span>
     </dt>
     <dd>{{% md %}}The type of identity used for the Batch account.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="user_assigned_identities_python">
+<a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}The list of user identities associated with the Batch account. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1747,6 +1905,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of identity used for the Batch account.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="userassignedidentities_csharp">
+<a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>Batch<wbr>Account<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args&gt;</span>
+    </dt>
+    <dd>{{% md %}}The list of user identities associated with the Batch account. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1780,6 +1947,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of identity used for the Batch account.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="userassignedidentities_go">
+<a href="#userassignedidentities_go" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]Batch<wbr>Account<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities</span>
+    </dt>
+    <dd>{{% md %}}The list of user identities associated with the Batch account. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1813,6 +1989,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The type of identity used for the Batch account.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="userassignedidentities_nodejs">
+<a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: Batch<wbr>Account<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities}</span>
+    </dt>
+    <dd>{{% md %}}The list of user identities associated with the Batch account. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1846,6 +2031,113 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The type of identity used for the Batch account.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="user_assigned_identities_python">
+<a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, Batch<wbr>Account<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args]</span>
+    </dt>
+    <dd>{{% md %}}The list of user identities associated with the Batch account. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="batchaccountidentityresponseuserassignedidentities">Batch<wbr>Account<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="clientid_csharp">
+<a href="#clientid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="principalid_csharp">
+<a href="#principalid_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="clientid_go">
+<a href="#clientid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="principalid_go">
+<a href="#principalid_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="clientid_nodejs">
+<a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="principalid_nodejs">
+<a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="client_id_python">
+<a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="principal_id_python">
+<a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -2991,6 +3283,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <dl class="tabular">
     <dt>System<wbr>Assigned</dt>
     <dd>SystemAssigned{{% md %}}Batch account has a system assigned identity with it.{{% /md %}}</dd>
+    <dt>User<wbr>Assigned</dt>
+    <dd>UserAssigned{{% md %}}Batch account has user assigned identities with it.{{% /md %}}</dd>
     <dt>None</dt>
     <dd>None{{% md %}}Batch account has no identity associated with it. Setting `None` in update account will remove existing identities.{{% /md %}}</dd>
 </dl>
@@ -3000,6 +3294,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <dl class="tabular">
     <dt>Resource<wbr>Identity<wbr>Type<wbr>System<wbr>Assigned</dt>
     <dd>SystemAssigned{{% md %}}Batch account has a system assigned identity with it.{{% /md %}}</dd>
+    <dt>Resource<wbr>Identity<wbr>Type<wbr>User<wbr>Assigned</dt>
+    <dd>UserAssigned{{% md %}}Batch account has user assigned identities with it.{{% /md %}}</dd>
     <dt>Resource<wbr>Identity<wbr>Type<wbr>None</dt>
     <dd>None{{% md %}}Batch account has no identity associated with it. Setting `None` in update account will remove existing identities.{{% /md %}}</dd>
 </dl>
@@ -3009,6 +3305,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <dl class="tabular">
     <dt>System<wbr>Assigned</dt>
     <dd>SystemAssigned{{% md %}}Batch account has a system assigned identity with it.{{% /md %}}</dd>
+    <dt>User<wbr>Assigned</dt>
+    <dd>UserAssigned{{% md %}}Batch account has user assigned identities with it.{{% /md %}}</dd>
     <dt>None</dt>
     <dd>None{{% md %}}Batch account has no identity associated with it. Setting `None` in update account will remove existing identities.{{% /md %}}</dd>
 </dl>
@@ -3018,6 +3316,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <dl class="tabular">
     <dt>SYSTEM_ASSIGNED</dt>
     <dd>SystemAssigned{{% md %}}Batch account has a system assigned identity with it.{{% /md %}}</dd>
+    <dt>USER_ASSIGNED</dt>
+    <dd>UserAssigned{{% md %}}Batch account has user assigned identities with it.{{% /md %}}</dd>
     <dt>NONE</dt>
     <dd>None{{% md %}}Batch account has no identity associated with it. Setting `None` in update account will remove existing identities.{{% /md %}}</dd>
 </dl>

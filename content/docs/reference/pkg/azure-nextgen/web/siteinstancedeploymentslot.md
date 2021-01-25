@@ -12,6 +12,13 @@ meta_desc: "Documentation for the azure-nextgen.web.SiteInstanceDeploymentSlot r
 
 Represents user credentials used for publishing activity
 Latest API Version: 2015-08-01.
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:web/latest:SiteInstanceDeploymentSlot myresource1 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/slots/{slot}/instances/{instanceId}/deployments/{id} 
+```
 
 
 

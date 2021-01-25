@@ -11,6 +11,13 @@ meta_desc: "Documentation for the azure-nextgen.providerhub.OperationByProviderR
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Latest API Version: 2020-11-20.
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:providerhub/latest:OperationByProviderRegistration myresource1  
+```
 
 
 

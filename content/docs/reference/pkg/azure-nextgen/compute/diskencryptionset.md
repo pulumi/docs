@@ -11,12 +11,125 @@ meta_desc: "Documentation for the azure-nextgen.compute.DiskEncryptionSet resour
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 disk encryption set resource.
-Latest API Version: 2020-06-30.
+Latest API Version: 2020-09-30.
 
 {{% examples %}}
 ## Example Usage
 
 {{< chooser language "typescript,python,go,csharp" / >}}
+### Create a disk encryption set with key vault from a different subscription.
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var diskEncryptionSet = new AzureNextGen.Compute.Latest.DiskEncryptionSet("diskEncryptionSet", new AzureNextGen.Compute.Latest.DiskEncryptionSetArgs
+        {
+            ActiveKey = new AzureNextGen.Compute.Latest.Inputs.KeyForDiskEncryptionSetArgs
+            {
+                KeyUrl = "https://myvaultdifferentsub.vault-int.azure-int.net/keys/{key}",
+            },
+            DiskEncryptionSetName = "myDiskEncryptionSet",
+            EncryptionType = "EncryptionAtRestWithCustomerKey",
+            Identity = new AzureNextGen.Compute.Latest.Inputs.EncryptionSetIdentityArgs
+            {
+                Type = "SystemAssigned",
+            },
+            Location = "West US",
+            ResourceGroupName = "myResourceGroup",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+
+```go
+package main
+
+import (
+	compute "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/compute/latest"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := compute.NewDiskEncryptionSet(ctx, "diskEncryptionSet", &compute.DiskEncryptionSetArgs{
+			ActiveKey: &compute.KeyForDiskEncryptionSetArgs{
+				KeyUrl: pulumi.String("https://myvaultdifferentsub.vault-int.azure-int.net/keys/{key}"),
+			},
+			DiskEncryptionSetName: pulumi.String("myDiskEncryptionSet"),
+			EncryptionType:        pulumi.String("EncryptionAtRestWithCustomerKey"),
+			Identity: &compute.EncryptionSetIdentityArgs{
+				Type: pulumi.String("SystemAssigned"),
+			},
+			Location:          pulumi.String("West US"),
+			ResourceGroupName: pulumi.String("myResourceGroup"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azure_nextgen as azure_nextgen
+
+disk_encryption_set = azure_nextgen.compute.latest.DiskEncryptionSet("diskEncryptionSet",
+    active_key=azure_nextgen.compute.latest.KeyForDiskEncryptionSetArgs(
+        key_url="https://myvaultdifferentsub.vault-int.azure-int.net/keys/{key}",
+    ),
+    disk_encryption_set_name="myDiskEncryptionSet",
+    encryption_type="EncryptionAtRestWithCustomerKey",
+    identity=azure_nextgen.compute.latest.EncryptionSetIdentityArgs(
+        type="SystemAssigned",
+    ),
+    location="West US",
+    resource_group_name="myResourceGroup")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
+
+const diskEncryptionSet = new azure_nextgen.compute.latest.DiskEncryptionSet("diskEncryptionSet", {
+    activeKey: {
+        keyUrl: "https://myvaultdifferentsub.vault-int.azure-int.net/keys/{key}",
+    },
+    diskEncryptionSetName: "myDiskEncryptionSet",
+    encryptionType: "EncryptionAtRestWithCustomerKey",
+    identity: {
+        type: "SystemAssigned",
+    },
+    location: "West US",
+    resourceGroupName: "myResourceGroup",
+});
+
+```
+
+{{% /example %}}
+
 ### Create a disk encryption set.
 {{% example csharp %}}
 ```csharp
@@ -29,7 +142,7 @@ class MyStack : Stack
     {
         var diskEncryptionSet = new AzureNextGen.Compute.Latest.DiskEncryptionSet("diskEncryptionSet", new AzureNextGen.Compute.Latest.DiskEncryptionSetArgs
         {
-            ActiveKey = new AzureNextGen.Compute.Latest.Inputs.KeyVaultAndKeyReferenceArgs
+            ActiveKey = new AzureNextGen.Compute.Latest.Inputs.KeyForDiskEncryptionSetArgs
             {
                 KeyUrl = "https://myvmvault.vault-int.azure-int.net/keys/{key}",
                 SourceVault = new AzureNextGen.Compute.Latest.Inputs.SourceVaultArgs
@@ -67,7 +180,7 @@ import (
 func main() {
 	pulumi.Run(func(ctx *pulumi.Context) error {
 		_, err := compute.NewDiskEncryptionSet(ctx, "diskEncryptionSet", &compute.DiskEncryptionSetArgs{
-			ActiveKey: &compute.KeyVaultAndKeyReferenceArgs{
+			ActiveKey: &compute.KeyForDiskEncryptionSetArgs{
 				KeyUrl: pulumi.String("https://myvmvault.vault-int.azure-int.net/keys/{key}"),
 				SourceVault: &compute.SourceVaultArgs{
 					Id: pulumi.String("/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.KeyVault/vaults/myVMVault"),
@@ -99,7 +212,7 @@ import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
 disk_encryption_set = azure_nextgen.compute.latest.DiskEncryptionSet("diskEncryptionSet",
-    active_key=azure_nextgen.compute.latest.KeyVaultAndKeyReferenceArgs(
+    active_key=azure_nextgen.compute.latest.KeyForDiskEncryptionSetArgs(
         key_url="https://myvmvault.vault-int.azure-int.net/keys/{key}",
         source_vault=azure_nextgen.compute.latest.SourceVaultArgs(
             id="/subscriptions/{subscriptionId}/resourceGroups/myResourceGroup/providers/Microsoft.KeyVault/vaults/myVMVault",
@@ -155,7 +268,7 @@ const diskEncryptionSet = new azure_nextgen.compute.latest.DiskEncryptionSet("di
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">DiskEncryptionSet</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">active_key</span><span class="p">:</span> <span class="nx">Optional[KeyVaultAndKeyReferenceArgs]</span> = None<span class="p">, </span><span class="nx">disk_encryption_set_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">encryption_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, DiskEncryptionSetType]]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[EncryptionSetIdentityArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">DiskEncryptionSet</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">active_key</span><span class="p">:</span> <span class="nx">Optional[KeyForDiskEncryptionSetArgs]</span> = None<span class="p">, </span><span class="nx">disk_encryption_set_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">encryption_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, DiskEncryptionSetType]]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[EncryptionSetIdentityArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -359,7 +472,7 @@ The DiskEncryptionSet resource accepts the following [input]({{< relref "/docs/i
 <a href="#activekey_csharp" style="color: inherit; text-decoration: inherit;">Active<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultandkeyreference">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Key<wbr>Vault<wbr>And<wbr>Key<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyfordiskencryptionset">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Key<wbr>For<wbr>Disk<wbr>Encryption<wbr>Set<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The key vault key which is currently used by this disk encryption set.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -428,7 +541,7 @@ The DiskEncryptionSet resource accepts the following [input]({{< relref "/docs/i
 <a href="#activekey_go" style="color: inherit; text-decoration: inherit;">Active<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultandkeyreference">Key<wbr>Vault<wbr>And<wbr>Key<wbr>Reference</a></span>
+        <span class="property-type"><a href="#keyfordiskencryptionset">Key<wbr>For<wbr>Disk<wbr>Encryption<wbr>Set</a></span>
     </dt>
     <dd>{{% md %}}The key vault key which is currently used by this disk encryption set.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -497,7 +610,7 @@ The DiskEncryptionSet resource accepts the following [input]({{< relref "/docs/i
 <a href="#activekey_nodejs" style="color: inherit; text-decoration: inherit;">active<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultandkeyreference">Key<wbr>Vault<wbr>And<wbr>Key<wbr>Reference</a></span>
+        <span class="property-type"><a href="#keyfordiskencryptionset">Key<wbr>For<wbr>Disk<wbr>Encryption<wbr>Set</a></span>
     </dt>
     <dd>{{% md %}}The key vault key which is currently used by this disk encryption set.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -566,7 +679,7 @@ The DiskEncryptionSet resource accepts the following [input]({{< relref "/docs/i
 <a href="#active_key_python" style="color: inherit; text-decoration: inherit;">active_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultandkeyreference">Key<wbr>Vault<wbr>And<wbr>Key<wbr>Reference<wbr>Args</a></span>
+        <span class="property-type"><a href="#keyfordiskencryptionset">Key<wbr>For<wbr>Disk<wbr>Encryption<wbr>Set<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The key vault key which is currently used by this disk encryption set.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -633,7 +746,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#previouskeys_csharp" style="color: inherit; text-decoration: inherit;">Previous<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultandkeyreferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Outputs.<wbr>Key<wbr>Vault<wbr>And<wbr>Key<wbr>Reference<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#keyfordiskencryptionsetresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Outputs.<wbr>Key<wbr>For<wbr>Disk<wbr>Encryption<wbr>Set<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}A readonly collection of key vault keys previously used by this disk encryption set while a key rotation is in progress. It will be empty if there is no ongoing key rotation.{{% /md %}}</dd>
     <dt class="property-"
@@ -684,7 +797,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#previouskeys_go" style="color: inherit; text-decoration: inherit;">Previous<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultandkeyreferenceresponse">[]Key<wbr>Vault<wbr>And<wbr>Key<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#keyfordiskencryptionsetresponse">[]Key<wbr>For<wbr>Disk<wbr>Encryption<wbr>Set<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}A readonly collection of key vault keys previously used by this disk encryption set while a key rotation is in progress. It will be empty if there is no ongoing key rotation.{{% /md %}}</dd>
     <dt class="property-"
@@ -735,7 +848,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#previouskeys_nodejs" style="color: inherit; text-decoration: inherit;">previous<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultandkeyreferenceresponse">Key<wbr>Vault<wbr>And<wbr>Key<wbr>Reference<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#keyfordiskencryptionsetresponse">Key<wbr>For<wbr>Disk<wbr>Encryption<wbr>Set<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}A readonly collection of key vault keys previously used by this disk encryption set while a key rotation is in progress. It will be empty if there is no ongoing key rotation.{{% /md %}}</dd>
     <dt class="property-"
@@ -786,7 +899,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#previous_keys_python" style="color: inherit; text-decoration: inherit;">previous_<wbr>keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultandkeyreferenceresponse">Sequence[Key<wbr>Vault<wbr>And<wbr>Key<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#keyfordiskencryptionsetresponse">Sequence[Key<wbr>For<wbr>Disk<wbr>Encryption<wbr>Set<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}A readonly collection of key vault keys previously used by this disk encryption set while a key rotation is in progress. It will be empty if there is no ongoing key rotation.{{% /md %}}</dd>
     <dt class="property-"
@@ -826,6 +939,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <dl class="tabular">
     <dt>System<wbr>Assigned</dt>
     <dd>SystemAssigned</dd>
+    <dt>None</dt>
+    <dd>None</dd>
 </dl>
 {{% /choosable %}}
 
@@ -833,6 +948,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <dl class="tabular">
     <dt>Disk<wbr>Encryption<wbr>Set<wbr>Identity<wbr>Type<wbr>System<wbr>Assigned</dt>
     <dd>SystemAssigned</dd>
+    <dt>Disk<wbr>Encryption<wbr>Set<wbr>Identity<wbr>Type<wbr>None</dt>
+    <dd>None</dd>
 </dl>
 {{% /choosable %}}
 
@@ -840,6 +957,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <dl class="tabular">
     <dt>System<wbr>Assigned</dt>
     <dd>SystemAssigned</dd>
+    <dt>None</dt>
+    <dd>None</dd>
 </dl>
 {{% /choosable %}}
 
@@ -847,6 +966,8 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <dl class="tabular">
     <dt>SYSTEM_ASSIGNED</dt>
     <dd>SystemAssigned</dd>
+    <dt>NONE</dt>
+    <dd>None</dd>
 </dl>
 {{% /choosable %}}
 
@@ -901,7 +1022,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#diskencryptionsetidentitytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Disk<wbr>Encryption<wbr>Set<wbr>Identity<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The type of Managed Identity used by the DiskEncryptionSet. Only SystemAssigned is supported.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of Managed Identity used by the DiskEncryptionSet. Only SystemAssigned is supported for new creations. Disk Encryption Sets can be updated with Identity type None during migration of subscription to a new Azure Active Directory tenant; it will cause the encrypted resources to lose access to the keys.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -916,7 +1037,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#diskencryptionsetidentitytype">Disk<wbr>Encryption<wbr>Set<wbr>Identity<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The type of Managed Identity used by the DiskEncryptionSet. Only SystemAssigned is supported.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of Managed Identity used by the DiskEncryptionSet. Only SystemAssigned is supported for new creations. Disk Encryption Sets can be updated with Identity type None during migration of subscription to a new Azure Active Directory tenant; it will cause the encrypted resources to lose access to the keys.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -931,7 +1052,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string | <a href="#diskencryptionsetidentitytype">Disk<wbr>Encryption<wbr>Set<wbr>Identity<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The type of Managed Identity used by the DiskEncryptionSet. Only SystemAssigned is supported.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of Managed Identity used by the DiskEncryptionSet. Only SystemAssigned is supported for new creations. Disk Encryption Sets can be updated with Identity type None during migration of subscription to a new Azure Active Directory tenant; it will cause the encrypted resources to lose access to the keys.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -946,7 +1067,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str | <a href="#diskencryptionsetidentitytype">Disk<wbr>Encryption<wbr>Set<wbr>Identity<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}The type of Managed Identity used by the DiskEncryptionSet. Only SystemAssigned is supported.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of Managed Identity used by the DiskEncryptionSet. Only SystemAssigned is supported for new creations. Disk Encryption Sets can be updated with Identity type None during migration of subscription to a new Azure Active Directory tenant; it will cause the encrypted resources to lose access to the keys.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -981,7 +1102,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of Managed Identity used by the DiskEncryptionSet. Only SystemAssigned is supported.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of Managed Identity used by the DiskEncryptionSet. Only SystemAssigned is supported for new creations. Disk Encryption Sets can be updated with Identity type None during migration of subscription to a new Azure Active Directory tenant; it will cause the encrypted resources to lose access to the keys.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1014,7 +1135,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of Managed Identity used by the DiskEncryptionSet. Only SystemAssigned is supported.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of Managed Identity used by the DiskEncryptionSet. Only SystemAssigned is supported for new creations. Disk Encryption Sets can be updated with Identity type None during migration of subscription to a new Azure Active Directory tenant; it will cause the encrypted resources to lose access to the keys.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1047,7 +1168,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of Managed Identity used by the DiskEncryptionSet. Only SystemAssigned is supported.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of Managed Identity used by the DiskEncryptionSet. Only SystemAssigned is supported for new creations. Disk Encryption Sets can be updated with Identity type None during migration of subscription to a new Azure Active Directory tenant; it will cause the encrypted resources to lose access to the keys.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1080,11 +1201,11 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of Managed Identity used by the DiskEncryptionSet. Only SystemAssigned is supported.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of Managed Identity used by the DiskEncryptionSet. Only SystemAssigned is supported for new creations. Disk Encryption Sets can be updated with Identity type None during migration of subscription to a new Azure Active Directory tenant; it will cause the encrypted resources to lose access to the keys.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
-<h4 id="keyvaultandkeyreference">Key<wbr>Vault<wbr>And<wbr>Key<wbr>Reference</h4>
+<h4 id="keyfordiskencryptionset">Key<wbr>For<wbr>Disk<wbr>Encryption<wbr>Set</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1097,16 +1218,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Url pointing to a key or secret in KeyVault{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
+    <dd>{{% md %}}Fully versioned Key Url pointing to a key in KeyVault{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="sourcevault_csharp">
 <a href="#sourcevault_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sourcevault">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Source<wbr>Vault<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Resource id of the KeyVault containing the key or secret{{% /md %}}</dd>
+    <dd>{{% md %}}Resource id of the KeyVault containing the key or secret. This property is optional and cannot be used if the KeyVault subscription is not the same as the Disk Encryption Set subscription.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1121,16 +1242,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Url pointing to a key or secret in KeyVault{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
+    <dd>{{% md %}}Fully versioned Key Url pointing to a key in KeyVault{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="sourcevault_go">
 <a href="#sourcevault_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sourcevault">Source<wbr>Vault</a></span>
     </dt>
-    <dd>{{% md %}}Resource id of the KeyVault containing the key or secret{{% /md %}}</dd>
+    <dd>{{% md %}}Resource id of the KeyVault containing the key or secret. This property is optional and cannot be used if the KeyVault subscription is not the same as the Disk Encryption Set subscription.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1145,16 +1266,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Url pointing to a key or secret in KeyVault{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
+    <dd>{{% md %}}Fully versioned Key Url pointing to a key in KeyVault{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="sourcevault_nodejs">
 <a href="#sourcevault_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sourcevault">Source<wbr>Vault</a></span>
     </dt>
-    <dd>{{% md %}}Resource id of the KeyVault containing the key or secret{{% /md %}}</dd>
+    <dd>{{% md %}}Resource id of the KeyVault containing the key or secret. This property is optional and cannot be used if the KeyVault subscription is not the same as the Disk Encryption Set subscription.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1169,20 +1290,20 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Url pointing to a key or secret in KeyVault{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
+    <dd>{{% md %}}Fully versioned Key Url pointing to a key in KeyVault{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="source_vault_python">
 <a href="#source_vault_python" style="color: inherit; text-decoration: inherit;">source_<wbr>vault</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sourcevault">Source<wbr>Vault<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Resource id of the KeyVault containing the key or secret{{% /md %}}</dd>
+    <dd>{{% md %}}Resource id of the KeyVault containing the key or secret. This property is optional and cannot be used if the KeyVault subscription is not the same as the Disk Encryption Set subscription.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
-<h4 id="keyvaultandkeyreferenceresponse">Key<wbr>Vault<wbr>And<wbr>Key<wbr>Reference<wbr>Response</h4>
+<h4 id="keyfordiskencryptionsetresponse">Key<wbr>For<wbr>Disk<wbr>Encryption<wbr>Set<wbr>Response</h4>
 
 {{% choosable language csharp %}}
 <dl class="resources-properties">
@@ -1195,16 +1316,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Url pointing to a key or secret in KeyVault{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
+    <dd>{{% md %}}Fully versioned Key Url pointing to a key in KeyVault{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="sourcevault_csharp">
 <a href="#sourcevault_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sourcevaultresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Source<wbr>Vault<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Resource id of the KeyVault containing the key or secret{{% /md %}}</dd>
+    <dd>{{% md %}}Resource id of the KeyVault containing the key or secret. This property is optional and cannot be used if the KeyVault subscription is not the same as the Disk Encryption Set subscription.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1219,16 +1340,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Url pointing to a key or secret in KeyVault{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
+    <dd>{{% md %}}Fully versioned Key Url pointing to a key in KeyVault{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="sourcevault_go">
 <a href="#sourcevault_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sourcevaultresponse">Source<wbr>Vault<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Resource id of the KeyVault containing the key or secret{{% /md %}}</dd>
+    <dd>{{% md %}}Resource id of the KeyVault containing the key or secret. This property is optional and cannot be used if the KeyVault subscription is not the same as the Disk Encryption Set subscription.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1243,16 +1364,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Url pointing to a key or secret in KeyVault{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
+    <dd>{{% md %}}Fully versioned Key Url pointing to a key in KeyVault{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="sourcevault_nodejs">
 <a href="#sourcevault_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sourcevaultresponse">Source<wbr>Vault<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Resource id of the KeyVault containing the key or secret{{% /md %}}</dd>
+    <dd>{{% md %}}Resource id of the KeyVault containing the key or secret. This property is optional and cannot be used if the KeyVault subscription is not the same as the Disk Encryption Set subscription.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1267,16 +1388,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Url pointing to a key or secret in KeyVault{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
+    <dd>{{% md %}}Fully versioned Key Url pointing to a key in KeyVault{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="source_vault_python">
 <a href="#source_vault_python" style="color: inherit; text-decoration: inherit;">source_<wbr>vault</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sourcevaultresponse">Source<wbr>Vault<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Resource id of the KeyVault containing the key or secret{{% /md %}}</dd>
+    <dd>{{% md %}}Resource id of the KeyVault containing the key or secret. This property is optional and cannot be used if the KeyVault subscription is not the same as the Disk Encryption Set subscription.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1409,7 +1530,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:compute/latest:DiskEncryptionSet myDiskEncryptionSet <Azure resource ID> 
+$ pulumi import azure-nextgen:compute/latest:DiskEncryptionSet myDiskEncryptionSet /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Compute/diskEncryptionSets/{diskEncryptionSetName} 
 ```
 
 

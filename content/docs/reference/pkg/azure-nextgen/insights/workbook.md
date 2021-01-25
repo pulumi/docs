@@ -31,8 +31,10 @@ class MyStack : Stack
         {
             Category = "workbook",
             DisplayName = "tttt",
+            Id = "c0deea5e-3344-40f2-96f8-6f8e1c3b5722",
             Kind = "shared",
             Location = "west us",
+            Name = "Blah Blah Blah",
             ResourceGroupName = "my-resource-group",
             ResourceName = "deadb33f-8bee-4d3b-a059-9be8dac93960",
             SerializedData = "{\"version\":\"Notebook/1.0\",\"items\":[{\"type\":1,\"content\":\"{\"json\":\"## New workbook\\r\\n---\\r\\n\\r\\nWelcome to your new workbook.  This area will display text formatted as markdown.\\r\\n\\r\\n\\r\\nWe've included a basic analytics query to get you started. Use the `Edit` button below each section to configure it or add more sections.\"}\",\"halfWidth\":null,\"conditionalVisibility\":null},{\"type\":3,\"content\":\"{\"version\":\"KqlItem/1.0\",\"query\":\"union withsource=TableName *\\n| summarize Count=count() by TableName\\n| render barchart\",\"showQuery\":false,\"size\":1,\"aggregation\":0,\"showAnnotations\":false}\",\"halfWidth\":null,\"conditionalVisibility\":null}],\"isLocked\":false}",
@@ -64,8 +66,10 @@ import pulumi_azure_nextgen as azure_nextgen
 workbook = azure_nextgen.insights.latest.Workbook("workbook",
     category="workbook",
     display_name="tttt",
+    id="c0deea5e-3344-40f2-96f8-6f8e1c3b5722",
     kind="shared",
     location="west us",
+    name="Blah Blah Blah",
     resource_group_name="my-resource-group",
     resource_name="deadb33f-8bee-4d3b-a059-9be8dac93960",
     serialized_data="{\"version\":\"Notebook/1.0\",\"items\":[{\"type\":1,\"content\":\"{\"json\":\"## New workbook\\r\\n---\\r\\n\\r\\nWelcome to your new workbook.  This area will display text formatted as markdown.\\r\\n\\r\\n\\r\\nWe've included a basic analytics query to get you started. Use the `Edit` button below each section to configure it or add more sections.\"}\",\"halfWidth\":null,\"conditionalVisibility\":null},{\"type\":3,\"content\":\"{\"version\":\"KqlItem/1.0\",\"query\":\"union withsource=TableName *\\n| summarize Count=count() by TableName\\n| render barchart\",\"showQuery\":false,\"size\":1,\"aggregation\":0,\"showAnnotations\":false}\",\"halfWidth\":null,\"conditionalVisibility\":null}],\"isLocked\":false}",
@@ -88,8 +92,10 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 const workbook = new azure_nextgen.insights.latest.Workbook("workbook", {
     category: "workbook",
     displayName: "tttt",
+    id: "c0deea5e-3344-40f2-96f8-6f8e1c3b5722",
     kind: "shared",
     location: "west us",
+    name: "Blah Blah Blah",
     resourceGroupName: "my-resource-group",
     resourceName: "deadb33f-8bee-4d3b-a059-9be8dac93960",
     serializedData: "{\"version\":\"Notebook/1.0\",\"items\":[{\"type\":1,\"content\":\"{\"json\":\"## New workbook\\r\\n---\\r\\n\\r\\nWelcome to your new workbook.  This area will display text formatted as markdown.\\r\\n\\r\\n\\r\\nWe've included a basic analytics query to get you started. Use the `Edit` button below each section to configure it or add more sections.\"}\",\"halfWidth\":null,\"conditionalVisibility\":null},{\"type\":3,\"content\":\"{\"version\":\"KqlItem/1.0\",\"query\":\"union withsource=TableName *\\n| summarize Count=count() by TableName\\n| render barchart\",\"showQuery\":false,\"size\":1,\"aggregation\":0,\"showAnnotations\":false}\",\"halfWidth\":null,\"conditionalVisibility\":null}],\"isLocked\":false}",
@@ -118,12 +124,15 @@ class MyStack : Stack
         {
             Category = "workbook",
             DisplayName = "tttt",
+            Etag = "\"4a00f78d-0000-0700-0000-5f8f616c1000\"",
+            Id = "/subscriptions/00000000-0000-0000-0000-00000000/resourcegroups/MyGroup/providers/Microsoft.Insights/workbooks/e378d137-1243-4256-b5c4-ad2a937cae79",
             Identity = new AzureNextGen.Insights.Latest.Inputs.ManagedIdentityArgs
             {
                 Type = "UserAssigned",
             },
             Kind = "shared",
             Location = "westus",
+            Name = "e378d137-1243-4256-b5c4-ad2a937cae79",
             ResourceGroupName = "my-resource-group",
             ResourceName = "deadb33f-5e0d-4064-8ebb-1a4ed0313eb2",
             SerializedData = "{\"version\":\"Notebook/1.0\",\"items\":[{\"type\":1,\"content\":{\"json\":\"test\"},\"name\":\"text - 0\"}],\"isLocked\":false,\"fallbackResourceIds\":[\"/subscriptions/00000000-0000-0000-0000-00000000/resourceGroups/MyGroup\"]}",
@@ -158,11 +167,14 @@ func main() {
 		_, err := insights.NewWorkbook(ctx, "workbook", &insights.WorkbookArgs{
 			Category:    pulumi.String("workbook"),
 			DisplayName: pulumi.String("tttt"),
+			Etag:        "\"4a00f78d-0000-0700-0000-5f8f616c1000\"",
+			Id:          pulumi.String("/subscriptions/00000000-0000-0000-0000-00000000/resourcegroups/MyGroup/providers/Microsoft.Insights/workbooks/e378d137-1243-4256-b5c4-ad2a937cae79"),
 			Identity: &insights.ManagedIdentityArgs{
 				Type: pulumi.String("UserAssigned"),
 			},
 			Kind:              pulumi.String("shared"),
 			Location:          pulumi.String("westus"),
+			Name:              pulumi.String("e378d137-1243-4256-b5c4-ad2a937cae79"),
 			ResourceGroupName: pulumi.String("my-resource-group"),
 			ResourceName:      pulumi.String("deadb33f-5e0d-4064-8ebb-1a4ed0313eb2"),
 			SerializedData:    pulumi.String("{\"version\":\"Notebook/1.0\",\"items\":[{\"type\":1,\"content\":{\"json\":\"test\"},\"name\":\"text - 0\"}],\"isLocked\":false,\"fallbackResourceIds\":[\"/subscriptions/00000000-0000-0000-0000-00000000/resourceGroups/MyGroup\"]}"),
@@ -193,11 +205,14 @@ import pulumi_azure_nextgen as azure_nextgen
 workbook = azure_nextgen.insights.latest.Workbook("workbook",
     category="workbook",
     display_name="tttt",
+    etag="\"4a00f78d-0000-0700-0000-5f8f616c1000\"",
+    id="/subscriptions/00000000-0000-0000-0000-00000000/resourcegroups/MyGroup/providers/Microsoft.Insights/workbooks/e378d137-1243-4256-b5c4-ad2a937cae79",
     identity=azure_nextgen.insights.latest.ManagedIdentityArgs(
         type="UserAssigned",
     ),
     kind="shared",
     location="westus",
+    name="e378d137-1243-4256-b5c4-ad2a937cae79",
     resource_group_name="my-resource-group",
     resource_name="deadb33f-5e0d-4064-8ebb-1a4ed0313eb2",
     serialized_data="{\"version\":\"Notebook/1.0\",\"items\":[{\"type\":1,\"content\":{\"json\":\"test\"},\"name\":\"text - 0\"}],\"isLocked\":false,\"fallbackResourceIds\":[\"/subscriptions/00000000-0000-0000-0000-00000000/resourceGroups/MyGroup\"]}",
@@ -221,11 +236,14 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 const workbook = new azure_nextgen.insights.latest.Workbook("workbook", {
     category: "workbook",
     displayName: "tttt",
+    etag: "\"4a00f78d-0000-0700-0000-5f8f616c1000\"",
+    id: "/subscriptions/00000000-0000-0000-0000-00000000/resourcegroups/MyGroup/providers/Microsoft.Insights/workbooks/e378d137-1243-4256-b5c4-ad2a937cae79",
     identity: {
         type: "UserAssigned",
     },
     kind: "shared",
     location: "westus",
+    name: "e378d137-1243-4256-b5c4-ad2a937cae79",
     resourceGroupName: "my-resource-group",
     resourceName: "deadb33f-5e0d-4064-8ebb-1a4ed0313eb2",
     serializedData: "{\"version\":\"Notebook/1.0\",\"items\":[{\"type\":1,\"content\":{\"json\":\"test\"},\"name\":\"text - 0\"}],\"isLocked\":false,\"fallbackResourceIds\":[\"/subscriptions/00000000-0000-0000-0000-00000000/resourceGroups/MyGroup\"]}",
@@ -253,7 +271,7 @@ const workbook = new azure_nextgen.insights.latest.Workbook("workbook", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Workbook</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">category</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ManagedIdentityArgs]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[Union[str, SharedTypeKind]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">serialized_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Workbook</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">category</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">etag</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[ManagedIdentityArgs]</span> = None<span class="p">, </span><span class="nx">kind</span><span class="p">:</span> <span class="nx">Optional[Union[str, Kind]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_name_</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">serialized_data</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">source_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">storage_uri</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -444,15 +462,6 @@ The Workbook resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}The user-defined name (display name) of the workbook.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="location_csharp">
-<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="resourcegroupname_csharp">
 <a href="#resourcegroupname_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
 </span>
@@ -478,15 +487,24 @@ The Workbook resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Configuration of this particular workbook. Configuration data is a string containing valid JSON{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="sourceid_csharp">
-<a href="#sourceid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Id</a>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="etag_csharp">
+<a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Resource etag{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ResourceId for a source resource.{{% /md %}}</dd>
+    <dd>{{% md %}}Azure resource Id{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="identity_csharp">
@@ -502,9 +520,36 @@ The Workbook resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#sharedtypekind">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Shared<wbr>Type<wbr>Kind</a></span>
+        <span class="property-type">string | <a href="#kind">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Kind</a></span>
     </dt>
     <dd>{{% md %}}The kind of workbook. Choices are user and shared.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_csharp">
+<a href="#location_csharp" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource location{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Azure resource name{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sourceid_csharp">
+<a href="#sourceid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ResourceId for a source resource.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="storageuri_csharp">
@@ -523,6 +568,15 @@ The Workbook resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Azure resource type{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="version_csharp">
@@ -558,15 +612,6 @@ The Workbook resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}The user-defined name (display name) of the workbook.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="location_go">
-<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="resourcegroupname_go">
 <a href="#resourcegroupname_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Group<wbr>Name</a>
 </span>
@@ -592,15 +637,24 @@ The Workbook resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Configuration of this particular workbook. Configuration data is a string containing valid JSON{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="sourceid_go">
-<a href="#sourceid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Id</a>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="etag_go">
+<a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}Resource etag{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ResourceId for a source resource.{{% /md %}}</dd>
+    <dd>{{% md %}}Azure resource Id{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="identity_go">
@@ -616,9 +670,36 @@ The Workbook resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#sharedtypekind">Shared<wbr>Type<wbr>Kind</a></span>
+        <span class="property-type">string | <a href="#kind">Kind</a></span>
     </dt>
     <dd>{{% md %}}The kind of workbook. Choices are user and shared.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_go">
+<a href="#location_go" style="color: inherit; text-decoration: inherit;">Location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource location{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Azure resource name{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sourceid_go">
+<a href="#sourceid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ResourceId for a source resource.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="storageuri_go">
@@ -637,6 +718,15 @@ The Workbook resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">map[string]string</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Azure resource type{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="version_go">
@@ -672,15 +762,6 @@ The Workbook resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}The user-defined name (display name) of the workbook.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="location_nodejs">
-<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="resourcegroupname_nodejs">
 <a href="#resourcegroupname_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Group<wbr>Name</a>
 </span>
@@ -706,15 +787,24 @@ The Workbook resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Configuration of this particular workbook. Configuration data is a string containing valid JSON{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="sourceid_nodejs">
-<a href="#sourceid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Id</a>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="etag_nodejs">
+<a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}Resource etag{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}ResourceId for a source resource.{{% /md %}}</dd>
+    <dd>{{% md %}}Azure resource Id{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="identity_nodejs">
@@ -730,9 +820,36 @@ The Workbook resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#sharedtypekind">Shared<wbr>Type<wbr>Kind</a></span>
+        <span class="property-type">string | <a href="#kind">Kind</a></span>
     </dt>
     <dd>{{% md %}}The kind of workbook. Choices are user and shared.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_nodejs">
+<a href="#location_nodejs" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource location{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Azure resource name{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="sourceid_nodejs">
+<a href="#sourceid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ResourceId for a source resource.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="storageuri_nodejs">
@@ -751,6 +868,15 @@ The Workbook resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">{[key: string]: string}</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Azure resource type{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="version_nodejs">
@@ -786,15 +912,6 @@ The Workbook resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}The user-defined name (display name) of the workbook.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="location_python">
-<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Resource location{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="resource_group_name_python">
 <a href="#resource_group_name_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>group_<wbr>name</a>
 </span>
@@ -820,15 +937,24 @@ The Workbook resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Configuration of this particular workbook. Configuration data is a string containing valid JSON{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="source_id_python">
-<a href="#source_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>id</a>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="etag_python">
+<a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}Resource etag{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}ResourceId for a source resource.{{% /md %}}</dd>
+    <dd>{{% md %}}Azure resource Id{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="identity_python">
@@ -844,9 +970,36 @@ The Workbook resource accepts the following [input]({{< relref "/docs/intro/conc
 <a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#sharedtypekind">Shared<wbr>Type<wbr>Kind</a></span>
+        <span class="property-type">str | <a href="#kind">Kind</a></span>
     </dt>
     <dd>{{% md %}}The kind of workbook. Choices are user and shared.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_python">
+<a href="#location_python" style="color: inherit; text-decoration: inherit;">location</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Resource location{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Azure resource name{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="source_id_python">
+<a href="#source_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}ResourceId for a source resource.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="storage_uri_python">
@@ -865,6 +1018,15 @@ The Workbook resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">Mapping[str, str]</span>
     </dt>
     <dd>{{% md %}}Resource tags{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Azure resource type{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="version_python">
@@ -898,15 +1060,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="name_csharp">
-<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Azure resource name. This is GUID value. The display name should be assigned within properties field.{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
         <span id="timemodified_csharp">
 <a href="#timemodified_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Modified</a>
 </span>
@@ -914,15 +1067,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date and time in UTC of the last modification that was made to this workbook definition.{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="type_csharp">
-<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Azure resource type{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="userid_csharp">
@@ -949,15 +1093,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="name_go">
-<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Azure resource name. This is GUID value. The display name should be assigned within properties field.{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
         <span id="timemodified_go">
 <a href="#timemodified_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Modified</a>
 </span>
@@ -965,15 +1100,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date and time in UTC of the last modification that was made to this workbook definition.{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="type_go">
-<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Azure resource type{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="userid_go">
@@ -1000,15 +1126,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="name_nodejs">
-<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Azure resource name. This is GUID value. The display name should be assigned within properties field.{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
         <span id="timemodified_nodejs">
 <a href="#timemodified_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Modified</a>
 </span>
@@ -1016,15 +1133,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date and time in UTC of the last modification that was made to this workbook definition.{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="type_nodejs">
-<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Azure resource type{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="userid_nodejs">
@@ -1051,15 +1159,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="name_python">
-<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Azure resource name. This is GUID value. The display name should be assigned within properties field.{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
         <span id="time_modified_python">
 <a href="#time_modified_python" style="color: inherit; text-decoration: inherit;">time_<wbr>modified</a>
 </span>
@@ -1067,15 +1166,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Date and time in UTC of the last modification that was made to this workbook definition.{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="type_python">
-<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Azure resource type{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="user_id_python">
@@ -1097,6 +1187,44 @@ All [input](#inputs) properties are implicitly available as output properties. A
 ## Supporting Types
 
 
+
+<h4 id="kind">Kind</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>User</dt>
+    <dd>user</dd>
+    <dt>Shared</dt>
+    <dd>shared</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Kind<wbr>User</dt>
+    <dd>user</dd>
+    <dt>Kind<wbr>Shared</dt>
+    <dd>shared</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>User</dt>
+    <dd>user</dd>
+    <dt>Shared</dt>
+    <dd>shared</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>USER</dt>
+    <dd>user</dd>
+    <dt>SHARED</dt>
+    <dd>shared</dd>
+</dl>
+{{% /choosable %}}
 
 <h4 id="managedidentity">Managed<wbr>Identity</h4>
 
@@ -1255,44 +1383,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#userassignedidentitiesresponse">User<wbr>Assigned<wbr>Identities<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Customer Managed Identity{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-<h4 id="sharedtypekind">Shared<wbr>Type<wbr>Kind</h4>
-
-{{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>User</dt>
-    <dd>user</dd>
-    <dt>Shared</dt>
-    <dd>shared</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="tabular">
-    <dt>Shared<wbr>Type<wbr>Kind<wbr>User</dt>
-    <dd>user</dd>
-    <dt>Shared<wbr>Type<wbr>Kind<wbr>Shared</dt>
-    <dd>shared</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>User</dt>
-    <dd>user</dd>
-    <dt>Shared</dt>
-    <dd>shared</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="tabular">
-    <dt>USER</dt>
-    <dd>user</dd>
-    <dt>SHARED</dt>
-    <dd>shared</dd>
 </dl>
 {{% /choosable %}}
 

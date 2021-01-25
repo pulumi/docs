@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.network.VpnGateway resource with
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 VpnGateway Resource.
-Latest API Version: 2020-07-01.
+Latest API Version: 2020-08-01.
 
 {{% examples %}}
 ## Example Usage
@@ -67,6 +67,13 @@ class MyStack : Stack
                         new AzureNextGen.Network.Latest.Inputs.VpnSiteLinkConnectionArgs
                         {
                             ConnectionBandwidth = 200,
+                            EgressNatRules = 
+                            {
+                                new AzureNextGen.Network.Latest.Inputs.SubResourceArgs
+                                {
+                                    Id = "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/vpnGateways/gateway1/natRules/nat03",
+                                },
+                            },
                             Name = "Connection-Link1",
                             SharedKey = "key",
                             VpnConnectionProtocolType = "IKEv2",
@@ -81,6 +88,30 @@ class MyStack : Stack
             GatewayName = "gateway1",
             IsRoutingPreferenceInternet = false,
             Location = "westcentralus",
+            NatRules = 
+            {
+                new AzureNextGen.Network.Latest.Inputs.VpnGatewayNatRuleArgs
+                {
+                    ExternalMappings = 
+                    {
+                        new AzureNextGen.Network.Latest.Inputs.VpnNatRuleMappingArgs
+                        {
+                            AddressSpace = "192.168.0.0/26",
+                        },
+                    },
+                    InternalMappings = 
+                    {
+                        new AzureNextGen.Network.Latest.Inputs.VpnNatRuleMappingArgs
+                        {
+                            AddressSpace = "0.0.0.0/26",
+                        },
+                    },
+                    IpConfigurationId = "",
+                    Mode = "EgressSnat",
+                    Name = "nat03",
+                    Type = "Static",
+                },
+            },
             ResourceGroupName = "rg1",
             Tags = 
             {
@@ -138,7 +169,12 @@ func main() {
 					},
 					VpnLinkConnections: network.VpnSiteLinkConnectionArray{
 						&network.VpnSiteLinkConnectionArgs{
-							ConnectionBandwidth:       pulumi.Int(200),
+							ConnectionBandwidth: pulumi.Int(200),
+							EgressNatRules: network.SubResourceArray{
+								&network.SubResourceArgs{
+									Id: pulumi.String("/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/vpnGateways/gateway1/natRules/nat03"),
+								},
+							},
 							Name:                      pulumi.String("Connection-Link1"),
 							SharedKey:                 pulumi.String("key"),
 							VpnConnectionProtocolType: pulumi.String("IKEv2"),
@@ -152,7 +188,25 @@ func main() {
 			GatewayName:                 pulumi.String("gateway1"),
 			IsRoutingPreferenceInternet: pulumi.Bool(false),
 			Location:                    pulumi.String("westcentralus"),
-			ResourceGroupName:           pulumi.String("rg1"),
+			NatRules: network.VpnGatewayNatRuleArray{
+				&network.VpnGatewayNatRuleArgs{
+					ExternalMappings: network.VpnNatRuleMappingArray{
+						&network.VpnNatRuleMappingArgs{
+							AddressSpace: pulumi.String("192.168.0.0/26"),
+						},
+					},
+					InternalMappings: network.VpnNatRuleMappingArray{
+						&network.VpnNatRuleMappingArgs{
+							AddressSpace: pulumi.String("0.0.0.0/26"),
+						},
+					},
+					IpConfigurationId: pulumi.String(""),
+					Mode:              pulumi.String("EgressSnat"),
+					Name:              pulumi.String("nat03"),
+					Type:              pulumi.String("Static"),
+				},
+			},
+			ResourceGroupName: pulumi.String("rg1"),
 			Tags: pulumi.StringMap{
 				"key1": pulumi.String("value1"),
 			},
@@ -199,6 +253,9 @@ vpn_gateway = azure_nextgen.network.latest.VpnGateway("vpnGateway",
         ),
         vpn_link_connections=[azure_nextgen.network.latest.VpnSiteLinkConnectionArgs(
             connection_bandwidth=200,
+            egress_nat_rules=[azure_nextgen.network.latest.SubResourceArgs(
+                id="/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/vpnGateways/gateway1/natRules/nat03",
+            )],
             name="Connection-Link1",
             shared_key="key",
             vpn_connection_protocol_type="IKEv2",
@@ -210,6 +267,18 @@ vpn_gateway = azure_nextgen.network.latest.VpnGateway("vpnGateway",
     gateway_name="gateway1",
     is_routing_preference_internet=False,
     location="westcentralus",
+    nat_rules=[azure_nextgen.network.latest.VpnGatewayNatRuleArgs(
+        external_mappings=[azure_nextgen.network.latest.VpnNatRuleMappingArgs(
+            address_space="192.168.0.0/26",
+        )],
+        internal_mappings=[azure_nextgen.network.latest.VpnNatRuleMappingArgs(
+            address_space="0.0.0.0/26",
+        )],
+        ip_configuration_id="",
+        mode="EgressSnat",
+        name="nat03",
+        type="Static",
+    )],
     resource_group_name="rg1",
     tags={
         "key1": "value1",
@@ -250,6 +319,9 @@ const vpnGateway = new azure_nextgen.network.latest.VpnGateway("vpnGateway", {
         },
         vpnLinkConnections: [{
             connectionBandwidth: 200,
+            egressNatRules: [{
+                id: "/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/vpnGateways/gateway1/natRules/nat03",
+            }],
             name: "Connection-Link1",
             sharedKey: "key",
             vpnConnectionProtocolType: "IKEv2",
@@ -261,6 +333,18 @@ const vpnGateway = new azure_nextgen.network.latest.VpnGateway("vpnGateway", {
     gatewayName: "gateway1",
     isRoutingPreferenceInternet: false,
     location: "westcentralus",
+    natRules: [{
+        externalMappings: [{
+            addressSpace: "192.168.0.0/26",
+        }],
+        internalMappings: [{
+            addressSpace: "0.0.0.0/26",
+        }],
+        ipConfigurationId: "",
+        mode: "EgressSnat",
+        name: "nat03",
+        type: "Static",
+    }],
     resourceGroupName: "rg1",
     tags: {
         key1: "value1",
@@ -286,7 +370,7 @@ const vpnGateway = new azure_nextgen.network.latest.VpnGateway("vpnGateway", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">VpnGateway</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">bgp_settings</span><span class="p">:</span> <span class="nx">Optional[BgpSettingsArgs]</span> = None<span class="p">, </span><span class="nx">connections</span><span class="p">:</span> <span class="nx">Optional[Sequence[VpnConnectionArgs]]</span> = None<span class="p">, </span><span class="nx">gateway_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">is_routing_preference_internet</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">virtual_hub</span><span class="p">:</span> <span class="nx">Optional[SubResourceArgs]</span> = None<span class="p">, </span><span class="nx">vpn_gateway_scale_unit</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">VpnGateway</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">bgp_settings</span><span class="p">:</span> <span class="nx">Optional[BgpSettingsArgs]</span> = None<span class="p">, </span><span class="nx">connections</span><span class="p">:</span> <span class="nx">Optional[Sequence[VpnConnectionArgs]]</span> = None<span class="p">, </span><span class="nx">gateway_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">is_routing_preference_internet</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">nat_rules</span><span class="p">:</span> <span class="nx">Optional[Sequence[VpnGatewayNatRuleArgs]]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">virtual_hub</span><span class="p">:</span> <span class="nx">Optional[SubResourceArgs]</span> = None<span class="p">, </span><span class="nx">vpn_gateway_scale_unit</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -522,6 +606,15 @@ The VpnGateway resource accepts the following [input]({{< relref "/docs/intro/co
     <dd>{{% md %}}Enable Routing Preference property for the Public IP Interface of the VpnGateway.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="natrules_csharp">
+<a href="#natrules_csharp" style="color: inherit; text-decoration: inherit;">Nat<wbr>Rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#vpngatewaynatrule">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Vpn<wbr>Gateway<wbr>Nat<wbr>Rule<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of all the nat Rules associated with the gateway.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="tags_csharp">
 <a href="#tags_csharp" style="color: inherit; text-decoration: inherit;">Tags</a>
 </span>
@@ -616,6 +709,15 @@ The VpnGateway resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable Routing Preference property for the Public IP Interface of the VpnGateway.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="natrules_go">
+<a href="#natrules_go" style="color: inherit; text-decoration: inherit;">Nat<wbr>Rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#vpngatewaynatrule">[]Vpn<wbr>Gateway<wbr>Nat<wbr>Rule</a></span>
+    </dt>
+    <dd>{{% md %}}List of all the nat Rules associated with the gateway.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tags_go">
@@ -714,6 +816,15 @@ The VpnGateway resource accepts the following [input]({{< relref "/docs/intro/co
     <dd>{{% md %}}Enable Routing Preference property for the Public IP Interface of the VpnGateway.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="natrules_nodejs">
+<a href="#natrules_nodejs" style="color: inherit; text-decoration: inherit;">nat<wbr>Rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#vpngatewaynatrule">Vpn<wbr>Gateway<wbr>Nat<wbr>Rule[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of all the nat Rules associated with the gateway.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="tags_nodejs">
 <a href="#tags_nodejs" style="color: inherit; text-decoration: inherit;">tags</a>
 </span>
@@ -808,6 +919,15 @@ The VpnGateway resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable Routing Preference property for the Public IP Interface of the VpnGateway.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="nat_rules_python">
+<a href="#nat_rules_python" style="color: inherit; text-decoration: inherit;">nat_<wbr>rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#vpngatewaynatrule">Sequence[Vpn<wbr>Gateway<wbr>Nat<wbr>Rule<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}List of all the nat Rules associated with the gateway.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tags_python">
@@ -5359,6 +5479,952 @@ All [input](#inputs) properties are implicitly available as output properties. A
 </dl>
 {{% /choosable %}}
 
+<h4 id="vpngatewaynatrule">Vpn<wbr>Gateway<wbr>Nat<wbr>Rule</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="externalmappings_csharp">
+<a href="#externalmappings_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Mappings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#vpnnatrulemapping">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Vpn<wbr>Nat<wbr>Rule<wbr>Mapping<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The private IP address external mapping for NAT.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="internalmappings_csharp">
+<a href="#internalmappings_csharp" style="color: inherit; text-decoration: inherit;">Internal<wbr>Mappings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#vpnnatrulemapping">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Vpn<wbr>Nat<wbr>Rule<wbr>Mapping<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The private IP address internal mapping for NAT.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ipconfigurationid_csharp">
+<a href="#ipconfigurationid_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Configuration<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The IP Configuration ID this NAT rule applies to.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="mode_csharp">
+<a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#vpnnatrulemode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Vpn<wbr>Nat<wbr>Rule<wbr>Mode</a></span>
+    </dt>
+    <dd>{{% md %}}The Source NAT direction of a VPN NAT.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#vpnnatruletype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Vpn<wbr>Nat<wbr>Rule<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}The type of NAT rule for VPN NAT.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="externalmappings_go">
+<a href="#externalmappings_go" style="color: inherit; text-decoration: inherit;">External<wbr>Mappings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#vpnnatrulemapping">[]Vpn<wbr>Nat<wbr>Rule<wbr>Mapping</a></span>
+    </dt>
+    <dd>{{% md %}}The private IP address external mapping for NAT.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="internalmappings_go">
+<a href="#internalmappings_go" style="color: inherit; text-decoration: inherit;">Internal<wbr>Mappings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#vpnnatrulemapping">[]Vpn<wbr>Nat<wbr>Rule<wbr>Mapping</a></span>
+    </dt>
+    <dd>{{% md %}}The private IP address internal mapping for NAT.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ipconfigurationid_go">
+<a href="#ipconfigurationid_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Configuration<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The IP Configuration ID this NAT rule applies to.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="mode_go">
+<a href="#mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#vpnnatrulemode">Vpn<wbr>Nat<wbr>Rule<wbr>Mode</a></span>
+    </dt>
+    <dd>{{% md %}}The Source NAT direction of a VPN NAT.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#vpnnatruletype">Vpn<wbr>Nat<wbr>Rule<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}The type of NAT rule for VPN NAT.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="externalmappings_nodejs">
+<a href="#externalmappings_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Mappings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#vpnnatrulemapping">Vpn<wbr>Nat<wbr>Rule<wbr>Mapping[]</a></span>
+    </dt>
+    <dd>{{% md %}}The private IP address external mapping for NAT.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="internalmappings_nodejs">
+<a href="#internalmappings_nodejs" style="color: inherit; text-decoration: inherit;">internal<wbr>Mappings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#vpnnatrulemapping">Vpn<wbr>Nat<wbr>Rule<wbr>Mapping[]</a></span>
+    </dt>
+    <dd>{{% md %}}The private IP address internal mapping for NAT.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ipconfigurationid_nodejs">
+<a href="#ipconfigurationid_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Configuration<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The IP Configuration ID this NAT rule applies to.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="mode_nodejs">
+<a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#vpnnatrulemode">Vpn<wbr>Nat<wbr>Rule<wbr>Mode</a></span>
+    </dt>
+    <dd>{{% md %}}The Source NAT direction of a VPN NAT.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#vpnnatruletype">Vpn<wbr>Nat<wbr>Rule<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}The type of NAT rule for VPN NAT.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="external_mappings_python">
+<a href="#external_mappings_python" style="color: inherit; text-decoration: inherit;">external_<wbr>mappings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#vpnnatrulemapping">Sequence[Vpn<wbr>Nat<wbr>Rule<wbr>Mapping<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}The private IP address external mapping for NAT.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="internal_mappings_python">
+<a href="#internal_mappings_python" style="color: inherit; text-decoration: inherit;">internal_<wbr>mappings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#vpnnatrulemapping">Sequence[Vpn<wbr>Nat<wbr>Rule<wbr>Mapping<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}The private IP address internal mapping for NAT.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ip_configuration_id_python">
+<a href="#ip_configuration_id_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>configuration_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The IP Configuration ID this NAT rule applies to.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="mode_python">
+<a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str | <a href="#vpnnatrulemode">Vpn<wbr>Nat<wbr>Rule<wbr>Mode</a></span>
+    </dt>
+    <dd>{{% md %}}The Source NAT direction of a VPN NAT.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str | <a href="#vpnnatruletype">Vpn<wbr>Nat<wbr>Rule<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}The type of NAT rule for VPN NAT.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="vpngatewaynatruleresponse">Vpn<wbr>Gateway<wbr>Nat<wbr>Rule<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="egressvpnsitelinkconnections_csharp">
+<a href="#egressvpnsitelinkconnections_csharp" style="color: inherit; text-decoration: inherit;">Egress<wbr>Vpn<wbr>Site<wbr>Link<wbr>Connections</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of egress VpnSiteLinkConnections.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="etag_csharp">
+<a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="ingressvpnsitelinkconnections_csharp">
+<a href="#ingressvpnsitelinkconnections_csharp" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Vpn<wbr>Site<wbr>Link<wbr>Connections</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of ingress VpnSiteLinkConnections.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="provisioningstate_csharp">
+<a href="#provisioningstate_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The provisioning state of the NAT Rule resource.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="externalmappings_csharp">
+<a href="#externalmappings_csharp" style="color: inherit; text-decoration: inherit;">External<wbr>Mappings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#vpnnatrulemappingresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Vpn<wbr>Nat<wbr>Rule<wbr>Mapping<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The private IP address external mapping for NAT.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="internalmappings_csharp">
+<a href="#internalmappings_csharp" style="color: inherit; text-decoration: inherit;">Internal<wbr>Mappings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#vpnnatrulemappingresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Vpn<wbr>Nat<wbr>Rule<wbr>Mapping<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The private IP address internal mapping for NAT.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ipconfigurationid_csharp">
+<a href="#ipconfigurationid_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Configuration<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The IP Configuration ID this NAT rule applies to.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="mode_csharp">
+<a href="#mode_csharp" style="color: inherit; text-decoration: inherit;">Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Source NAT direction of a VPN NAT.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="egressvpnsitelinkconnections_go">
+<a href="#egressvpnsitelinkconnections_go" style="color: inherit; text-decoration: inherit;">Egress<wbr>Vpn<wbr>Site<wbr>Link<wbr>Connections</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresourceresponse">[]Sub<wbr>Resource<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}List of egress VpnSiteLinkConnections.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="etag_go">
+<a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="ingressvpnsitelinkconnections_go">
+<a href="#ingressvpnsitelinkconnections_go" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Vpn<wbr>Site<wbr>Link<wbr>Connections</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresourceresponse">[]Sub<wbr>Resource<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}List of ingress VpnSiteLinkConnections.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="provisioningstate_go">
+<a href="#provisioningstate_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The provisioning state of the NAT Rule resource.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="externalmappings_go">
+<a href="#externalmappings_go" style="color: inherit; text-decoration: inherit;">External<wbr>Mappings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#vpnnatrulemappingresponse">[]Vpn<wbr>Nat<wbr>Rule<wbr>Mapping<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The private IP address external mapping for NAT.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="internalmappings_go">
+<a href="#internalmappings_go" style="color: inherit; text-decoration: inherit;">Internal<wbr>Mappings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#vpnnatrulemappingresponse">[]Vpn<wbr>Nat<wbr>Rule<wbr>Mapping<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The private IP address internal mapping for NAT.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ipconfigurationid_go">
+<a href="#ipconfigurationid_go" style="color: inherit; text-decoration: inherit;">Ip<wbr>Configuration<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The IP Configuration ID this NAT rule applies to.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="mode_go">
+<a href="#mode_go" style="color: inherit; text-decoration: inherit;">Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Source NAT direction of a VPN NAT.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="egressvpnsitelinkconnections_nodejs">
+<a href="#egressvpnsitelinkconnections_nodejs" style="color: inherit; text-decoration: inherit;">egress<wbr>Vpn<wbr>Site<wbr>Link<wbr>Connections</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of egress VpnSiteLinkConnections.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="etag_nodejs">
+<a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="ingressvpnsitelinkconnections_nodejs">
+<a href="#ingressvpnsitelinkconnections_nodejs" style="color: inherit; text-decoration: inherit;">ingress<wbr>Vpn<wbr>Site<wbr>Link<wbr>Connections</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of ingress VpnSiteLinkConnections.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="provisioningstate_nodejs">
+<a href="#provisioningstate_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The provisioning state of the NAT Rule resource.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="externalmappings_nodejs">
+<a href="#externalmappings_nodejs" style="color: inherit; text-decoration: inherit;">external<wbr>Mappings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#vpnnatrulemappingresponse">Vpn<wbr>Nat<wbr>Rule<wbr>Mapping<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}The private IP address external mapping for NAT.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="internalmappings_nodejs">
+<a href="#internalmappings_nodejs" style="color: inherit; text-decoration: inherit;">internal<wbr>Mappings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#vpnnatrulemappingresponse">Vpn<wbr>Nat<wbr>Rule<wbr>Mapping<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}The private IP address internal mapping for NAT.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ipconfigurationid_nodejs">
+<a href="#ipconfigurationid_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Configuration<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The IP Configuration ID this NAT rule applies to.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="mode_nodejs">
+<a href="#mode_nodejs" style="color: inherit; text-decoration: inherit;">mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Source NAT direction of a VPN NAT.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="egress_vpn_site_link_connections_python">
+<a href="#egress_vpn_site_link_connections_python" style="color: inherit; text-decoration: inherit;">egress_<wbr>vpn_<wbr>site_<wbr>link_<wbr>connections</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresourceresponse">Sequence[Sub<wbr>Resource<wbr>Response<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}List of egress VpnSiteLinkConnections.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="etag_python">
+<a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}A unique read-only string that changes whenever the resource is updated.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="ingress_vpn_site_link_connections_python">
+<a href="#ingress_vpn_site_link_connections_python" style="color: inherit; text-decoration: inherit;">ingress_<wbr>vpn_<wbr>site_<wbr>link_<wbr>connections</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresourceresponse">Sequence[Sub<wbr>Resource<wbr>Response<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}List of ingress VpnSiteLinkConnections.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="provisioning_state_python">
+<a href="#provisioning_state_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>state</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The provisioning state of the NAT Rule resource.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Resource type.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="external_mappings_python">
+<a href="#external_mappings_python" style="color: inherit; text-decoration: inherit;">external_<wbr>mappings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#vpnnatrulemappingresponse">Sequence[Vpn<wbr>Nat<wbr>Rule<wbr>Mapping<wbr>Response<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}The private IP address external mapping for NAT.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="internal_mappings_python">
+<a href="#internal_mappings_python" style="color: inherit; text-decoration: inherit;">internal_<wbr>mappings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#vpnnatrulemappingresponse">Sequence[Vpn<wbr>Nat<wbr>Rule<wbr>Mapping<wbr>Response<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}The private IP address internal mapping for NAT.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ip_configuration_id_python">
+<a href="#ip_configuration_id_python" style="color: inherit; text-decoration: inherit;">ip_<wbr>configuration_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The IP Configuration ID this NAT rule applies to.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="mode_python">
+<a href="#mode_python" style="color: inherit; text-decoration: inherit;">mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Source NAT direction of a VPN NAT.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the resource that is unique within a resource group. This name can be used to access the resource.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="vpnlinkconnectionmode">Vpn<wbr>Link<wbr>Connection<wbr>Mode</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Default</dt>
+    <dd>Default</dd>
+    <dt>Responder<wbr>Only</dt>
+    <dd>ResponderOnly</dd>
+    <dt>Initiator<wbr>Only</dt>
+    <dd>InitiatorOnly</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Vpn<wbr>Link<wbr>Connection<wbr>Mode<wbr>Default</dt>
+    <dd>Default</dd>
+    <dt>Vpn<wbr>Link<wbr>Connection<wbr>Mode<wbr>Responder<wbr>Only</dt>
+    <dd>ResponderOnly</dd>
+    <dt>Vpn<wbr>Link<wbr>Connection<wbr>Mode<wbr>Initiator<wbr>Only</dt>
+    <dd>InitiatorOnly</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Default</dt>
+    <dd>Default</dd>
+    <dt>Responder<wbr>Only</dt>
+    <dd>ResponderOnly</dd>
+    <dt>Initiator<wbr>Only</dt>
+    <dd>InitiatorOnly</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>DEFAULT</dt>
+    <dd>Default</dd>
+    <dt>RESPONDER_ONLY</dt>
+    <dd>ResponderOnly</dd>
+    <dt>INITIATOR_ONLY</dt>
+    <dd>InitiatorOnly</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="vpnnatrulemapping">Vpn<wbr>Nat<wbr>Rule<wbr>Mapping</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="addressspace_csharp">
+<a href="#addressspace_csharp" style="color: inherit; text-decoration: inherit;">Address<wbr>Space</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Address space for Vpn NatRule mapping.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="addressspace_go">
+<a href="#addressspace_go" style="color: inherit; text-decoration: inherit;">Address<wbr>Space</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Address space for Vpn NatRule mapping.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="addressspace_nodejs">
+<a href="#addressspace_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Space</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Address space for Vpn NatRule mapping.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="address_space_python">
+<a href="#address_space_python" style="color: inherit; text-decoration: inherit;">address_<wbr>space</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Address space for Vpn NatRule mapping.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="vpnnatrulemappingresponse">Vpn<wbr>Nat<wbr>Rule<wbr>Mapping<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="addressspace_csharp">
+<a href="#addressspace_csharp" style="color: inherit; text-decoration: inherit;">Address<wbr>Space</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Address space for Vpn NatRule mapping.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="addressspace_go">
+<a href="#addressspace_go" style="color: inherit; text-decoration: inherit;">Address<wbr>Space</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Address space for Vpn NatRule mapping.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="addressspace_nodejs">
+<a href="#addressspace_nodejs" style="color: inherit; text-decoration: inherit;">address<wbr>Space</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Address space for Vpn NatRule mapping.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="address_space_python">
+<a href="#address_space_python" style="color: inherit; text-decoration: inherit;">address_<wbr>space</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Address space for Vpn NatRule mapping.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="vpnnatrulemode">Vpn<wbr>Nat<wbr>Rule<wbr>Mode</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Egress<wbr>Snat</dt>
+    <dd>EgressSnat</dd>
+    <dt>Ingress<wbr>Snat</dt>
+    <dd>IngressSnat</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Vpn<wbr>Nat<wbr>Rule<wbr>Mode<wbr>Egress<wbr>Snat</dt>
+    <dd>EgressSnat</dd>
+    <dt>Vpn<wbr>Nat<wbr>Rule<wbr>Mode<wbr>Ingress<wbr>Snat</dt>
+    <dd>IngressSnat</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Egress<wbr>Snat</dt>
+    <dd>EgressSnat</dd>
+    <dt>Ingress<wbr>Snat</dt>
+    <dd>IngressSnat</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>EGRESS_SNAT</dt>
+    <dd>EgressSnat</dd>
+    <dt>INGRESS_SNAT</dt>
+    <dd>IngressSnat</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="vpnnatruletype">Vpn<wbr>Nat<wbr>Rule<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Static</dt>
+    <dd>Static</dd>
+    <dt>Dynamic</dt>
+    <dd>Dynamic</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Vpn<wbr>Nat<wbr>Rule<wbr>Type<wbr>Static</dt>
+    <dd>Static</dd>
+    <dt>Vpn<wbr>Nat<wbr>Rule<wbr>Type<wbr>Dynamic</dt>
+    <dd>Dynamic</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Static</dt>
+    <dd>Static</dd>
+    <dt>Dynamic</dt>
+    <dd>Dynamic</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>STATIC</dt>
+    <dd>Static</dd>
+    <dt>DYNAMIC</dt>
+    <dd>Dynamic</dd>
+</dl>
+{{% /choosable %}}
+
 <h4 id="vpnsitelinkconnection">Vpn<wbr>Site<wbr>Link<wbr>Connection</h4>
 
 {{% choosable language csharp %}}
@@ -5373,6 +6439,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Expected bandwidth in MBPS.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="egressnatrules_csharp">
+<a href="#egressnatrules_csharp" style="color: inherit; text-decoration: inherit;">Egress<wbr>Nat<wbr>Rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresource">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of egress NatRules.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="enablebgp_csharp">
@@ -5400,6 +6475,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ingressnatrules_csharp">
+<a href="#ingressnatrules_csharp" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Nat<wbr>Rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresource">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of ingress NatRules.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="ipsecpolicies_csharp">
@@ -5465,6 +6549,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Connection protocol used for this connection.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="vpnlinkconnectionmode_csharp">
+<a href="#vpnlinkconnectionmode_csharp" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Link<wbr>Connection<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#vpnlinkconnectionmode">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Vpn<wbr>Link<wbr>Connection<wbr>Mode</a></span>
+    </dt>
+    <dd>{{% md %}}Vpn link connection mode.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="vpnsitelink_csharp">
 <a href="#vpnsitelink_csharp" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Site<wbr>Link</a>
 </span>
@@ -5487,6 +6580,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Expected bandwidth in MBPS.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="egressnatrules_go">
+<a href="#egressnatrules_go" style="color: inherit; text-decoration: inherit;">Egress<wbr>Nat<wbr>Rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresource">[]Sub<wbr>Resource</a></span>
+    </dt>
+    <dd>{{% md %}}List of egress NatRules.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="enablebgp_go">
@@ -5514,6 +6616,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ingressnatrules_go">
+<a href="#ingressnatrules_go" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Nat<wbr>Rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresource">[]Sub<wbr>Resource</a></span>
+    </dt>
+    <dd>{{% md %}}List of ingress NatRules.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="ipsecpolicies_go">
@@ -5579,6 +6690,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Connection protocol used for this connection.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="vpnlinkconnectionmode_go">
+<a href="#vpnlinkconnectionmode_go" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Link<wbr>Connection<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#vpnlinkconnectionmode">Vpn<wbr>Link<wbr>Connection<wbr>Mode</a></span>
+    </dt>
+    <dd>{{% md %}}Vpn link connection mode.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="vpnsitelink_go">
 <a href="#vpnsitelink_go" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Site<wbr>Link</a>
 </span>
@@ -5601,6 +6721,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">number</span>
     </dt>
     <dd>{{% md %}}Expected bandwidth in MBPS.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="egressnatrules_nodejs">
+<a href="#egressnatrules_nodejs" style="color: inherit; text-decoration: inherit;">egress<wbr>Nat<wbr>Rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of egress NatRules.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="enablebgp_nodejs">
@@ -5628,6 +6757,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ingressnatrules_nodejs">
+<a href="#ingressnatrules_nodejs" style="color: inherit; text-decoration: inherit;">ingress<wbr>Nat<wbr>Rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresource">Sub<wbr>Resource[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of ingress NatRules.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="ipsecpolicies_nodejs">
@@ -5693,6 +6831,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Connection protocol used for this connection.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="vpnlinkconnectionmode_nodejs">
+<a href="#vpnlinkconnectionmode_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Link<wbr>Connection<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string | <a href="#vpnlinkconnectionmode">Vpn<wbr>Link<wbr>Connection<wbr>Mode</a></span>
+    </dt>
+    <dd>{{% md %}}Vpn link connection mode.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="vpnsitelink_nodejs">
 <a href="#vpnsitelink_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Site<wbr>Link</a>
 </span>
@@ -5715,6 +6862,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}Expected bandwidth in MBPS.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="egress_nat_rules_python">
+<a href="#egress_nat_rules_python" style="color: inherit; text-decoration: inherit;">egress_<wbr>nat_<wbr>rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresource">Sequence[Sub<wbr>Resource<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}List of egress NatRules.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="enable_bgp_python">
@@ -5742,6 +6898,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ingress_nat_rules_python">
+<a href="#ingress_nat_rules_python" style="color: inherit; text-decoration: inherit;">ingress_<wbr>nat_<wbr>rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresource">Sequence[Sub<wbr>Resource<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}List of ingress NatRules.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="ipsec_policies_python">
@@ -5805,6 +6970,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str | <a href="#virtualnetworkgatewayconnectionprotocol">Virtual<wbr>Network<wbr>Gateway<wbr>Connection<wbr>Protocol</a></span>
     </dt>
     <dd>{{% md %}}Connection protocol used for this connection.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vpn_link_connection_mode_python">
+<a href="#vpn_link_connection_mode_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>link_<wbr>connection_<wbr>mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str | <a href="#vpnlinkconnectionmode">Vpn<wbr>Link<wbr>Connection<wbr>Mode</a></span>
+    </dt>
+    <dd>{{% md %}}Vpn link connection mode.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="vpn_site_link_python">
@@ -5887,6 +7061,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Expected bandwidth in MBPS.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="egressnatrules_csharp">
+<a href="#egressnatrules_csharp" style="color: inherit; text-decoration: inherit;">Egress<wbr>Nat<wbr>Rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of egress NatRules.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="enablebgp_csharp">
 <a href="#enablebgp_csharp" style="color: inherit; text-decoration: inherit;">Enable<wbr>Bgp</a>
 </span>
@@ -5912,6 +7095,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ingressnatrules_csharp">
+<a href="#ingressnatrules_csharp" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Nat<wbr>Rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresourceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Inputs.<wbr>Sub<wbr>Resource<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of ingress NatRules.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="ipsecpolicies_csharp">
@@ -5975,6 +7167,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Connection protocol used for this connection.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vpnlinkconnectionmode_csharp">
+<a href="#vpnlinkconnectionmode_csharp" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Link<wbr>Connection<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Vpn link connection mode.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="vpnsitelink_csharp">
@@ -6055,6 +7256,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Expected bandwidth in MBPS.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="egressnatrules_go">
+<a href="#egressnatrules_go" style="color: inherit; text-decoration: inherit;">Egress<wbr>Nat<wbr>Rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresourceresponse">[]Sub<wbr>Resource<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}List of egress NatRules.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="enablebgp_go">
 <a href="#enablebgp_go" style="color: inherit; text-decoration: inherit;">Enable<wbr>Bgp</a>
 </span>
@@ -6080,6 +7290,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ingressnatrules_go">
+<a href="#ingressnatrules_go" style="color: inherit; text-decoration: inherit;">Ingress<wbr>Nat<wbr>Rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresourceresponse">[]Sub<wbr>Resource<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}List of ingress NatRules.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="ipsecpolicies_go">
@@ -6143,6 +7362,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Connection protocol used for this connection.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vpnlinkconnectionmode_go">
+<a href="#vpnlinkconnectionmode_go" style="color: inherit; text-decoration: inherit;">Vpn<wbr>Link<wbr>Connection<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Vpn link connection mode.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="vpnsitelink_go">
@@ -6223,6 +7451,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Expected bandwidth in MBPS.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="egressnatrules_nodejs">
+<a href="#egressnatrules_nodejs" style="color: inherit; text-decoration: inherit;">egress<wbr>Nat<wbr>Rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of egress NatRules.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="enablebgp_nodejs">
 <a href="#enablebgp_nodejs" style="color: inherit; text-decoration: inherit;">enable<wbr>Bgp</a>
 </span>
@@ -6248,6 +7485,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ingressnatrules_nodejs">
+<a href="#ingressnatrules_nodejs" style="color: inherit; text-decoration: inherit;">ingress<wbr>Nat<wbr>Rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresourceresponse">Sub<wbr>Resource<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of ingress NatRules.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="ipsecpolicies_nodejs">
@@ -6311,6 +7557,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Connection protocol used for this connection.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vpnlinkconnectionmode_nodejs">
+<a href="#vpnlinkconnectionmode_nodejs" style="color: inherit; text-decoration: inherit;">vpn<wbr>Link<wbr>Connection<wbr>Mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Vpn link connection mode.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="vpnsitelink_nodejs">
@@ -6391,6 +7646,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Expected bandwidth in MBPS.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="egress_nat_rules_python">
+<a href="#egress_nat_rules_python" style="color: inherit; text-decoration: inherit;">egress_<wbr>nat_<wbr>rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresourceresponse">Sequence[Sub<wbr>Resource<wbr>Response<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}List of egress NatRules.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="enable_bgp_python">
 <a href="#enable_bgp_python" style="color: inherit; text-decoration: inherit;">enable_<wbr>bgp</a>
 </span>
@@ -6416,6 +7680,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="ingress_nat_rules_python">
+<a href="#ingress_nat_rules_python" style="color: inherit; text-decoration: inherit;">ingress_<wbr>nat_<wbr>rules</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subresourceresponse">Sequence[Sub<wbr>Resource<wbr>Response<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}List of ingress NatRules.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="ipsec_policies_python">
@@ -6479,6 +7752,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Connection protocol used for this connection.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="vpn_link_connection_mode_python">
+<a href="#vpn_link_connection_mode_python" style="color: inherit; text-decoration: inherit;">vpn_<wbr>link_<wbr>connection_<wbr>mode</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Vpn link connection mode.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="vpn_site_link_python">

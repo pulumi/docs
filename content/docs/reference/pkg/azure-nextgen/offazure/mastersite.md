@@ -940,7 +940,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:offazure/latest:MasterSite masterSite1 /subscriptions/4bd2aa0f-2bd2-4d67-91a8-5a4533d58600/resourceGroups/pajindTest/providers/Microsoft.OffAzure/VMwareSites/masterSite1 
+$ pulumi import azure-nextgen:offazure/latest:MasterSite masterSite1 /subscriptions/4bd2aa0f-2bd2-4d67-91a8-5a4533d58600/resourceGroups/poshukla/providers/Microsoft.OffAzure/MasterSites/masterSite1 
 ```
 
 

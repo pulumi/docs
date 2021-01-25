@@ -337,6 +337,15 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="columnname_csharp">
+<a href="#columnname_csharp" style="color: inherit; text-decoration: inherit;">Column<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The column name.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -355,6 +364,15 @@ The following output properties are available:
     <dd>{{% md %}}Is sensitivity recommendation disabled. Applicable for recommended sensitivity label only. Specifies whether the sensitivity recommendation on this column is disabled (dismissed) or not.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="managedby_csharp">
+<a href="#managedby_csharp" style="color: inherit; text-decoration: inherit;">Managed<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}managed by{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -362,6 +380,24 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="schemaname_csharp">
+<a href="#schemaname_csharp" style="color: inherit; text-decoration: inherit;">Schema<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The schema name.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="tablename_csharp">
+<a href="#tablename_csharp" style="color: inherit; text-decoration: inherit;">Table<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The table name.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="type_csharp">
@@ -407,12 +443,30 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The label name.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="rank_csharp">
+<a href="#rank_csharp" style="color: inherit; text-decoration: inherit;">Rank</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-"
+            title="">
+        <span id="columnname_go">
+<a href="#columnname_go" style="color: inherit; text-decoration: inherit;">Column<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The column name.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="id_go">
@@ -433,6 +487,15 @@ The following output properties are available:
     <dd>{{% md %}}Is sensitivity recommendation disabled. Applicable for recommended sensitivity label only. Specifies whether the sensitivity recommendation on this column is disabled (dismissed) or not.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="managedby_go">
+<a href="#managedby_go" style="color: inherit; text-decoration: inherit;">Managed<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}managed by{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -440,6 +503,24 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="schemaname_go">
+<a href="#schemaname_go" style="color: inherit; text-decoration: inherit;">Schema<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The schema name.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="tablename_go">
+<a href="#tablename_go" style="color: inherit; text-decoration: inherit;">Table<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The table name.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="type_go">
@@ -485,12 +566,30 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The label name.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="rank_go">
+<a href="#rank_go" style="color: inherit; text-decoration: inherit;">Rank</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
+    <dt class="property-"
+            title="">
+        <span id="columnname_nodejs">
+<a href="#columnname_nodejs" style="color: inherit; text-decoration: inherit;">column<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The column name.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="id_nodejs">
@@ -511,6 +610,15 @@ The following output properties are available:
     <dd>{{% md %}}Is sensitivity recommendation disabled. Applicable for recommended sensitivity label only. Specifies whether the sensitivity recommendation on this column is disabled (dismissed) or not.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="managedby_nodejs">
+<a href="#managedby_nodejs" style="color: inherit; text-decoration: inherit;">managed<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}managed by{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -518,6 +626,24 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="schemaname_nodejs">
+<a href="#schemaname_nodejs" style="color: inherit; text-decoration: inherit;">schema<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The schema name.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="tablename_nodejs">
+<a href="#tablename_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The table name.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="type_nodejs">
@@ -563,12 +689,30 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The label name.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="rank_nodejs">
+<a href="#rank_nodejs" style="color: inherit; text-decoration: inherit;">rank</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
+    <dt class="property-"
+            title="">
+        <span id="column_name_python">
+<a href="#column_name_python" style="color: inherit; text-decoration: inherit;">column_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The column name.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="id_python">
@@ -589,6 +733,15 @@ The following output properties are available:
     <dd>{{% md %}}Is sensitivity recommendation disabled. Applicable for recommended sensitivity label only. Specifies whether the sensitivity recommendation on this column is disabled (dismissed) or not.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="managed_by_python">
+<a href="#managed_by_python" style="color: inherit; text-decoration: inherit;">managed_<wbr>by</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}managed by{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -596,6 +749,24 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the resource{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="schema_name_python">
+<a href="#schema_name_python" style="color: inherit; text-decoration: inherit;">schema_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The schema name.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="table_name_python">
+<a href="#table_name_python" style="color: inherit; text-decoration: inherit;">table_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The table name.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="type_python">
@@ -641,6 +812,15 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The label name.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="rank_python">
+<a href="#rank_python" style="color: inherit; text-decoration: inherit;">rank</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 

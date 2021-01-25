@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.batch.Certificate resource with 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Contains information about a certificate.
-Latest API Version: 2020-09-01.
+Latest API Version: 2021-01-01.
 
 {{% examples %}}
 ## Example Usage
@@ -33,7 +33,7 @@ class MyStack : Stack
             CertificateName = "sha1-0a0e4f50d51beadeac1d35afc5116098e7902e6e",
             Data = "MIIJsgIBAzCCCW4GCSqGSIb3DQE...",
             Format = "Pfx",
-            Password = "<password>",
+            Password = "<ExamplePassword>",
             ResourceGroupName = "default-azurebatch-japaneast",
             Thumbprint = "0a0e4f50d51beadeac1d35afc5116098e7902e6e",
             ThumbprintAlgorithm = "sha1",
@@ -63,7 +63,7 @@ func main() {
 			CertificateName:     pulumi.String("sha1-0a0e4f50d51beadeac1d35afc5116098e7902e6e"),
 			Data:                pulumi.String("MIIJsgIBAzCCCW4GCSqGSIb3DQE..."),
 			Format:              "Pfx",
-			Password:            pulumi.String("<password>"),
+			Password:            pulumi.String("<ExamplePassword>"),
 			ResourceGroupName:   pulumi.String("default-azurebatch-japaneast"),
 			Thumbprint:          pulumi.String("0a0e4f50d51beadeac1d35afc5116098e7902e6e"),
 			ThumbprintAlgorithm: pulumi.String("sha1"),
@@ -90,7 +90,7 @@ certificate = azure_nextgen.batch.latest.Certificate("certificate",
     certificate_name="sha1-0a0e4f50d51beadeac1d35afc5116098e7902e6e",
     data="MIIJsgIBAzCCCW4GCSqGSIb3DQE...",
     format="Pfx",
-    password="<password>",
+    password="<ExamplePassword>",
     resource_group_name="default-azurebatch-japaneast",
     thumbprint="0a0e4f50d51beadeac1d35afc5116098e7902e6e",
     thumbprint_algorithm="sha1")
@@ -110,7 +110,7 @@ const certificate = new azure_nextgen.batch.latest.Certificate("certificate", {
     certificateName: "sha1-0a0e4f50d51beadeac1d35afc5116098e7902e6e",
     data: "MIIJsgIBAzCCCW4GCSqGSIb3DQE...",
     format: "Pfx",
-    password: "<password>",
+    password: "<ExamplePassword>",
     resourceGroupName: "default-azurebatch-japaneast",
     thumbprint: "0a0e4f50d51beadeac1d35afc5116098e7902e6e",
     thumbprintAlgorithm: "sha1",
@@ -226,7 +226,7 @@ class MyStack : Stack
             AccountName = "sampleacct",
             CertificateName = "sha1-0a0e4f50d51beadeac1d35afc5116098e7902e6e",
             Data = "MIIJsgIBAzCCCW4GCSqGSIb3DQE...",
-            Password = "<password>",
+            Password = "<ExamplePassword>",
             ResourceGroupName = "default-azurebatch-japaneast",
         });
     }
@@ -253,7 +253,7 @@ func main() {
 			AccountName:       pulumi.String("sampleacct"),
 			CertificateName:   pulumi.String("sha1-0a0e4f50d51beadeac1d35afc5116098e7902e6e"),
 			Data:              pulumi.String("MIIJsgIBAzCCCW4GCSqGSIb3DQE..."),
-			Password:          pulumi.String("<password>"),
+			Password:          pulumi.String("<ExamplePassword>"),
 			ResourceGroupName: pulumi.String("default-azurebatch-japaneast"),
 		})
 		if err != nil {
@@ -277,7 +277,7 @@ certificate = azure_nextgen.batch.latest.Certificate("certificate",
     account_name="sampleacct",
     certificate_name="sha1-0a0e4f50d51beadeac1d35afc5116098e7902e6e",
     data="MIIJsgIBAzCCCW4GCSqGSIb3DQE...",
-    password="<password>",
+    password="<ExamplePassword>",
     resource_group_name="default-azurebatch-japaneast")
 
 ```
@@ -294,7 +294,7 @@ const certificate = new azure_nextgen.batch.latest.Certificate("certificate", {
     accountName: "sampleacct",
     certificateName: "sha1-0a0e4f50d51beadeac1d35afc5116098e7902e6e",
     data: "MIIJsgIBAzCCCW4GCSqGSIb3DQE...",
-    password: "<password>",
+    password: "<ExamplePassword>",
     resourceGroupName: "default-azurebatch-japaneast",
 });
 

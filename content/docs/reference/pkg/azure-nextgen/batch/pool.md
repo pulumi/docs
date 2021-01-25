@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.batch.Pool resource with example
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Contains information about a pool.
-Latest API Version: 2020-09-01.
+Latest API Version: 2021-01-01.
 
 {{% examples %}}
 ## Example Usage
@@ -139,7 +139,7 @@ const pool = new azure_nextgen.batch.latest.Pool("pool", {
 
 {{% /example %}}
 
-### CreatePool - Full Example
+### CreatePool - Full CloudServiceConfiguration
 {{% example csharp %}}
 ```csharp
 using Pulumi;
@@ -203,43 +203,6 @@ class MyStack : Stack
             },
             NetworkConfiguration = new AzureNextGen.Batch.Latest.Inputs.NetworkConfigurationArgs
             {
-                EndpointConfiguration = new AzureNextGen.Batch.Latest.Inputs.PoolEndpointConfigurationArgs
-                {
-                    InboundNatPools = 
-                    {
-                        new AzureNextGen.Batch.Latest.Inputs.InboundNatPoolArgs
-                        {
-                            BackendPort = 12001,
-                            FrontendPortRangeEnd = 15100,
-                            FrontendPortRangeStart = 15000,
-                            Name = "testnat",
-                            NetworkSecurityGroupRules = 
-                            {
-                                new AzureNextGen.Batch.Latest.Inputs.NetworkSecurityGroupRuleArgs
-                                {
-                                    Access = "Allow",
-                                    Priority = 150,
-                                    SourceAddressPrefix = "192.100.12.45",
-                                    SourcePortRanges = 
-                                    {
-                                        "*",
-                                    },
-                                },
-                                new AzureNextGen.Batch.Latest.Inputs.NetworkSecurityGroupRuleArgs
-                                {
-                                    Access = "Deny",
-                                    Priority = 3500,
-                                    SourceAddressPrefix = "*",
-                                    SourcePortRanges = 
-                                    {
-                                        "*",
-                                    },
-                                },
-                            },
-                            Protocol = "TCP",
-                        },
-                    },
-                },
                 PublicIPAddressConfiguration = new AzureNextGen.Batch.Latest.Inputs.PublicIPAddressConfigurationArgs
                 {
                     IpAddressIds = 
@@ -311,7 +274,7 @@ class MyStack : Stack
                         Uid = 1234,
                     },
                     Name = "username1",
-                    Password = "examplepassword",
+                    Password = "<ExamplePassword>",
                 },
             },
             VmSize = "STANDARD_D4",
@@ -369,29 +332,6 @@ pool = azure_nextgen.batch.latest.Pool("pool",
         ),
     ],
     network_configuration=azure_nextgen.batch.latest.NetworkConfigurationArgs(
-        endpoint_configuration=azure_nextgen.batch.latest.PoolEndpointConfigurationArgs(
-            inbound_nat_pools=[azure_nextgen.batch.latest.InboundNatPoolArgs(
-                backend_port=12001,
-                frontend_port_range_end=15100,
-                frontend_port_range_start=15000,
-                name="testnat",
-                network_security_group_rules=[
-                    azure_nextgen.batch.latest.NetworkSecurityGroupRuleArgs(
-                        access="Allow",
-                        priority=150,
-                        source_address_prefix="192.100.12.45",
-                        source_port_ranges=["*"],
-                    ),
-                    azure_nextgen.batch.latest.NetworkSecurityGroupRuleArgs(
-                        access="Deny",
-                        priority=3500,
-                        source_address_prefix="*",
-                        source_port_ranges=["*"],
-                    ),
-                ],
-                protocol="TCP",
-            )],
-        ),
         public_ip_address_configuration=azure_nextgen.batch.latest.PublicIPAddressConfigurationArgs(
             ip_address_ids=[
                 "/subscriptions/subid1/resourceGroups/rg13/providers/Microsoft.Network/publicIPAddresses/ip135",
@@ -443,7 +383,7 @@ pool = azure_nextgen.batch.latest.Pool("pool",
             uid=1234,
         ),
         name="username1",
-        password="examplepassword",
+        password="<ExamplePassword>",
     )],
     vm_size="STANDARD_D4")
 
@@ -492,29 +432,6 @@ const pool = new azure_nextgen.batch.latest.Pool("pool", {
         },
     ],
     networkConfiguration: {
-        endpointConfiguration: {
-            inboundNatPools: [{
-                backendPort: 12001,
-                frontendPortRangeEnd: 15100,
-                frontendPortRangeStart: 15000,
-                name: "testnat",
-                networkSecurityGroupRules: [
-                    {
-                        access: "Allow",
-                        priority: 150,
-                        sourceAddressPrefix: "192.100.12.45",
-                        sourcePortRanges: ["*"],
-                    },
-                    {
-                        access: "Deny",
-                        priority: 3500,
-                        sourceAddressPrefix: "*",
-                        sourcePortRanges: ["*"],
-                    },
-                ],
-                protocol: "TCP",
-            }],
-        },
         publicIPAddressConfiguration: {
             ipAddressIds: [
                 "/subscriptions/subid1/resourceGroups/rg13/providers/Microsoft.Network/publicIPAddresses/ip135",
@@ -566,7 +483,7 @@ const pool = new azure_nextgen.batch.latest.Pool("pool", {
             uid: 1234,
         },
         name: "username1",
-        password: "examplepassword",
+        password: "<ExamplePassword>",
     }],
     vmSize: "STANDARD_D4",
 });
@@ -626,6 +543,10 @@ class MyStack : Stack
                     },
                     LicenseType = "Windows_Server",
                     NodeAgentSkuId = "batch.node.windows amd64",
+                    NodePlacementConfiguration = new AzureNextGen.Batch.Latest.Inputs.NodePlacementConfigurationArgs
+                    {
+                        Policy = "Zonal",
+                    },
                     WindowsConfiguration = new AzureNextGen.Batch.Latest.Inputs.WindowsConfigurationArgs
                     {
                         EnableAutomaticUpdates = false,
@@ -735,6 +656,9 @@ pool = azure_nextgen.batch.latest.Pool("pool",
             ),
             license_type="Windows_Server",
             node_agent_sku_id="batch.node.windows amd64",
+            node_placement_configuration=azure_nextgen.batch.latest.NodePlacementConfigurationArgs(
+                policy="Zonal",
+            ),
             windows_configuration=azure_nextgen.batch.latest.WindowsConfigurationArgs(
                 enable_automatic_updates=False,
             ),
@@ -820,6 +744,9 @@ const pool = new azure_nextgen.batch.latest.Pool("pool", {
             },
             licenseType: "Windows_Server",
             nodeAgentSkuId: "batch.node.windows amd64",
+            nodePlacementConfiguration: {
+                policy: "Zonal",
+            },
             windowsConfiguration: {
                 enableAutomaticUpdates: false,
             },
@@ -1466,6 +1393,416 @@ const pool = new azure_nextgen.batch.latest.Pool("pool", {
 
 {{% /example %}}
 
+### CreatePool - UserAssignedIdentities
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var pool = new AzureNextGen.Batch.Latest.Pool("pool", new AzureNextGen.Batch.Latest.PoolArgs
+        {
+            AccountName = "sampleacct",
+            DeploymentConfiguration = new AzureNextGen.Batch.Latest.Inputs.DeploymentConfigurationArgs
+            {
+                VirtualMachineConfiguration = new AzureNextGen.Batch.Latest.Inputs.VirtualMachineConfigurationArgs
+                {
+                    ImageReference = new AzureNextGen.Batch.Latest.Inputs.ImageReferenceArgs
+                    {
+                        Offer = "UbuntuServer",
+                        Publisher = "Canonical",
+                        Sku = "18.04-LTS",
+                        Version = "latest",
+                    },
+                    NodeAgentSkuId = "batch.node.ubuntu 18.04",
+                },
+            },
+            Identity = new AzureNextGen.Batch.Latest.Inputs.BatchPoolIdentityArgs
+            {
+                Type = "UserAssigned",
+                UserAssignedIdentities = 
+                {
+                    { "/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id1",  },
+                    { "/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id2",  },
+                },
+            },
+            PoolName = "testpool",
+            ResourceGroupName = "default-azurebatch-japaneast",
+            ScaleSettings = new AzureNextGen.Batch.Latest.Inputs.ScaleSettingsArgs
+            {
+                AutoScale = new AzureNextGen.Batch.Latest.Inputs.AutoScaleSettingsArgs
+                {
+                    EvaluationInterval = "PT5M",
+                    Formula = "$TargetDedicatedNodes=1",
+                },
+            },
+            VmSize = "STANDARD_D4",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+
+```go
+package main
+
+import (
+	"fmt"
+
+	batch "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/batch/latest"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := batch.NewPool(ctx, "pool", &batch.PoolArgs{
+			AccountName: pulumi.String("sampleacct"),
+			DeploymentConfiguration: &batch.DeploymentConfigurationArgs{
+				VirtualMachineConfiguration: &batch.VirtualMachineConfigurationArgs{
+					ImageReference: &batch.ImageReferenceArgs{
+						Offer:     pulumi.String("UbuntuServer"),
+						Publisher: pulumi.String("Canonical"),
+						Sku:       pulumi.String("18.04-LTS"),
+						Version:   pulumi.String("latest"),
+					},
+					NodeAgentSkuId: pulumi.String("batch.node.ubuntu 18.04"),
+				},
+			},
+			Identity: &batch.BatchPoolIdentityArgs{
+				Type: "UserAssigned",
+				UserAssignedIdentities: pulumi.MapMap{
+					"/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id1": nil,
+					"/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id2": nil,
+				},
+			},
+			PoolName:          pulumi.String("testpool"),
+			ResourceGroupName: pulumi.String("default-azurebatch-japaneast"),
+			ScaleSettings: &batch.ScaleSettingsArgs{
+				AutoScale: &batch.AutoScaleSettingsArgs{
+					EvaluationInterval: pulumi.String("PT5M"),
+					Formula:            pulumi.String(fmt.Sprintf("%v%v", "$", "TargetDedicatedNodes=1")),
+				},
+			},
+			VmSize: pulumi.String("STANDARD_D4"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azure_nextgen as azure_nextgen
+
+pool = azure_nextgen.batch.latest.Pool("pool",
+    account_name="sampleacct",
+    deployment_configuration=azure_nextgen.batch.latest.DeploymentConfigurationArgs(
+        virtual_machine_configuration=azure_nextgen.batch.latest.VirtualMachineConfigurationArgs(
+            image_reference=azure_nextgen.batch.latest.ImageReferenceArgs(
+                offer="UbuntuServer",
+                publisher="Canonical",
+                sku="18.04-LTS",
+                version="latest",
+            ),
+            node_agent_sku_id="batch.node.ubuntu 18.04",
+        ),
+    ),
+    identity=azure_nextgen.batch.latest.BatchPoolIdentityArgs(
+        type="UserAssigned",
+        user_assigned_identities={
+            "/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id1": {},
+            "/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id2": {},
+        },
+    ),
+    pool_name="testpool",
+    resource_group_name="default-azurebatch-japaneast",
+    scale_settings=azure_nextgen.batch.latest.ScaleSettingsArgs(
+        auto_scale=azure_nextgen.batch.latest.AutoScaleSettingsArgs(
+            evaluation_interval="PT5M",
+            formula="$TargetDedicatedNodes=1",
+        ),
+    ),
+    vm_size="STANDARD_D4")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
+
+const pool = new azure_nextgen.batch.latest.Pool("pool", {
+    accountName: "sampleacct",
+    deploymentConfiguration: {
+        virtualMachineConfiguration: {
+            imageReference: {
+                offer: "UbuntuServer",
+                publisher: "Canonical",
+                sku: "18.04-LTS",
+                version: "latest",
+            },
+            nodeAgentSkuId: "batch.node.ubuntu 18.04",
+        },
+    },
+    identity: {
+        type: "UserAssigned",
+        userAssignedIdentities: {
+            "/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id1": {},
+            "/subscriptions/subid/resourceGroups/default-azurebatch-japaneast/providers/Microsoft.ManagedIdentity/userAssignedIdentities/id2": {},
+        },
+    },
+    poolName: "testpool",
+    resourceGroupName: "default-azurebatch-japaneast",
+    scaleSettings: {
+        autoScale: {
+            evaluationInterval: "PT5M",
+            formula: `$TargetDedicatedNodes=1`,
+        },
+    },
+    vmSize: "STANDARD_D4",
+});
+
+```
+
+{{% /example %}}
+
+### CreatePool - VirtualMachineConfiguration Extensions
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var pool = new AzureNextGen.Batch.Latest.Pool("pool", new AzureNextGen.Batch.Latest.PoolArgs
+        {
+            AccountName = "sampleacct",
+            DeploymentConfiguration = new AzureNextGen.Batch.Latest.Inputs.DeploymentConfigurationArgs
+            {
+                VirtualMachineConfiguration = new AzureNextGen.Batch.Latest.Inputs.VirtualMachineConfigurationArgs
+                {
+                    Extensions = 
+                    {
+                        new AzureNextGen.Batch.Latest.Inputs.VMExtensionArgs
+                        {
+                            AutoUpgradeMinorVersion = true,
+                            Name = "batchextension1",
+                            ProtectedSettings = 
+                            {
+                                { "protectedSettingsKey", "protectedSettingsValue" },
+                            },
+                            Publisher = "Microsoft.Azure.Security.Monitoring",
+                            Settings = 
+                            {
+                                { "settingsKey", "settingsValue" },
+                            },
+                            Type = "SecurityMonitoringForLinux",
+                            TypeHandlerVersion = "1.0",
+                        },
+                    },
+                    ImageReference = new AzureNextGen.Batch.Latest.Inputs.ImageReferenceArgs
+                    {
+                        Offer = "UbuntuServer",
+                        Publisher = "Canonical",
+                        Sku = "16.04.0-LTS",
+                    },
+                    NodeAgentSkuId = "batch.node.ubuntu 16.04",
+                },
+            },
+            PoolName = "testpool",
+            ResourceGroupName = "default-azurebatch-japaneast",
+            ScaleSettings = new AzureNextGen.Batch.Latest.Inputs.ScaleSettingsArgs
+            {
+                AutoScale = new AzureNextGen.Batch.Latest.Inputs.AutoScaleSettingsArgs
+                {
+                    EvaluationInterval = "PT5M",
+                    Formula = "$TargetDedicatedNodes=1",
+                },
+            },
+            VmSize = "STANDARD_D4",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+
+```go
+package main
+
+import (
+	"fmt"
+
+	batch "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/batch/latest"
+	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
+)
+
+func main() {
+	pulumi.Run(func(ctx *pulumi.Context) error {
+		_, err := batch.NewPool(ctx, "pool", &batch.PoolArgs{
+			AccountName: pulumi.String("sampleacct"),
+			DeploymentConfiguration: &batch.DeploymentConfigurationArgs{
+				VirtualMachineConfiguration: &batch.VirtualMachineConfigurationArgs{
+					Extensions: batch.VMExtensionArray{
+						&batch.VMExtensionArgs{
+							AutoUpgradeMinorVersion: pulumi.Bool(true),
+							Name:                    pulumi.String("batchextension1"),
+							ProtectedSettings: pulumi.StringMap{
+								"protectedSettingsKey": pulumi.String("protectedSettingsValue"),
+							},
+							Publisher: pulumi.String("Microsoft.Azure.Security.Monitoring"),
+							Settings: pulumi.StringMap{
+								"settingsKey": pulumi.String("settingsValue"),
+							},
+							Type:               pulumi.String("SecurityMonitoringForLinux"),
+							TypeHandlerVersion: pulumi.String("1.0"),
+						},
+					},
+					ImageReference: &batch.ImageReferenceArgs{
+						Offer:     pulumi.String("UbuntuServer"),
+						Publisher: pulumi.String("Canonical"),
+						Sku:       pulumi.String("16.04.0-LTS"),
+					},
+					NodeAgentSkuId: pulumi.String("batch.node.ubuntu 16.04"),
+				},
+			},
+			PoolName:          pulumi.String("testpool"),
+			ResourceGroupName: pulumi.String("default-azurebatch-japaneast"),
+			ScaleSettings: &batch.ScaleSettingsArgs{
+				AutoScale: &batch.AutoScaleSettingsArgs{
+					EvaluationInterval: pulumi.String("PT5M"),
+					Formula:            pulumi.String(fmt.Sprintf("%v%v", "$", "TargetDedicatedNodes=1")),
+				},
+			},
+			VmSize: pulumi.String("STANDARD_D4"),
+		})
+		if err != nil {
+			return err
+		}
+		return nil
+	})
+}
+
+```
+
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azure_nextgen as azure_nextgen
+
+pool = azure_nextgen.batch.latest.Pool("pool",
+    account_name="sampleacct",
+    deployment_configuration=azure_nextgen.batch.latest.DeploymentConfigurationArgs(
+        virtual_machine_configuration=azure_nextgen.batch.latest.VirtualMachineConfigurationArgs(
+            extensions=[azure_nextgen.batch.latest.VMExtensionArgs(
+                auto_upgrade_minor_version=True,
+                name="batchextension1",
+                protected_settings={
+                    "protectedSettingsKey": "protectedSettingsValue",
+                },
+                publisher="Microsoft.Azure.Security.Monitoring",
+                settings={
+                    "settingsKey": "settingsValue",
+                },
+                type="SecurityMonitoringForLinux",
+                type_handler_version="1.0",
+            )],
+            image_reference=azure_nextgen.batch.latest.ImageReferenceArgs(
+                offer="UbuntuServer",
+                publisher="Canonical",
+                sku="16.04.0-LTS",
+            ),
+            node_agent_sku_id="batch.node.ubuntu 16.04",
+        ),
+    ),
+    pool_name="testpool",
+    resource_group_name="default-azurebatch-japaneast",
+    scale_settings=azure_nextgen.batch.latest.ScaleSettingsArgs(
+        auto_scale=azure_nextgen.batch.latest.AutoScaleSettingsArgs(
+            evaluation_interval="PT5M",
+            formula="$TargetDedicatedNodes=1",
+        ),
+    ),
+    vm_size="STANDARD_D4")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
+
+const pool = new azure_nextgen.batch.latest.Pool("pool", {
+    accountName: "sampleacct",
+    deploymentConfiguration: {
+        virtualMachineConfiguration: {
+            extensions: [{
+                autoUpgradeMinorVersion: true,
+                name: "batchextension1",
+                protectedSettings: {
+                    protectedSettingsKey: "protectedSettingsValue",
+                },
+                publisher: "Microsoft.Azure.Security.Monitoring",
+                settings: {
+                    settingsKey: "settingsValue",
+                },
+                type: "SecurityMonitoringForLinux",
+                typeHandlerVersion: "1.0",
+            }],
+            imageReference: {
+                offer: "UbuntuServer",
+                publisher: "Canonical",
+                sku: "16.04.0-LTS",
+            },
+            nodeAgentSkuId: "batch.node.ubuntu 16.04",
+        },
+    },
+    poolName: "testpool",
+    resourceGroupName: "default-azurebatch-japaneast",
+    scaleSettings: {
+        autoScale: {
+            evaluationInterval: "PT5M",
+            formula: `$TargetDedicatedNodes=1`,
+        },
+    },
+    vmSize: "STANDARD_D4",
+});
+
+```
+
+{{% /example %}}
+
 {{% /examples %}}
 
 
@@ -1478,7 +1815,7 @@ const pool = new azure_nextgen.batch.latest.Pool("pool", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Pool</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">application_licenses</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">application_packages</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApplicationPackageReferenceArgs]]</span> = None<span class="p">, </span><span class="nx">certificates</span><span class="p">:</span> <span class="nx">Optional[Sequence[CertificateReferenceArgs]]</span> = None<span class="p">, </span><span class="nx">deployment_configuration</span><span class="p">:</span> <span class="nx">Optional[DeploymentConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">inter_node_communication</span><span class="p">:</span> <span class="nx">Optional[InterNodeCommunicationState]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Sequence[MetadataItemArgs]]</span> = None<span class="p">, </span><span class="nx">mount_configuration</span><span class="p">:</span> <span class="nx">Optional[Sequence[MountConfigurationArgs]]</span> = None<span class="p">, </span><span class="nx">network_configuration</span><span class="p">:</span> <span class="nx">Optional[NetworkConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">pool_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scale_settings</span><span class="p">:</span> <span class="nx">Optional[ScaleSettingsArgs]</span> = None<span class="p">, </span><span class="nx">start_task</span><span class="p">:</span> <span class="nx">Optional[StartTaskArgs]</span> = None<span class="p">, </span><span class="nx">task_scheduling_policy</span><span class="p">:</span> <span class="nx">Optional[TaskSchedulingPolicyArgs]</span> = None<span class="p">, </span><span class="nx">task_slots_per_node</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">user_accounts</span><span class="p">:</span> <span class="nx">Optional[Sequence[UserAccountArgs]]</span> = None<span class="p">, </span><span class="nx">vm_size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Pool</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">account_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">application_licenses</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">application_packages</span><span class="p">:</span> <span class="nx">Optional[Sequence[ApplicationPackageReferenceArgs]]</span> = None<span class="p">, </span><span class="nx">certificates</span><span class="p">:</span> <span class="nx">Optional[Sequence[CertificateReferenceArgs]]</span> = None<span class="p">, </span><span class="nx">deployment_configuration</span><span class="p">:</span> <span class="nx">Optional[DeploymentConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">display_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">identity</span><span class="p">:</span> <span class="nx">Optional[BatchPoolIdentityArgs]</span> = None<span class="p">, </span><span class="nx">inter_node_communication</span><span class="p">:</span> <span class="nx">Optional[InterNodeCommunicationState]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[Sequence[MetadataItemArgs]]</span> = None<span class="p">, </span><span class="nx">mount_configuration</span><span class="p">:</span> <span class="nx">Optional[Sequence[MountConfigurationArgs]]</span> = None<span class="p">, </span><span class="nx">network_configuration</span><span class="p">:</span> <span class="nx">Optional[NetworkConfigurationArgs]</span> = None<span class="p">, </span><span class="nx">pool_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">scale_settings</span><span class="p">:</span> <span class="nx">Optional[ScaleSettingsArgs]</span> = None<span class="p">, </span><span class="nx">start_task</span><span class="p">:</span> <span class="nx">Optional[StartTaskArgs]</span> = None<span class="p">, </span><span class="nx">task_scheduling_policy</span><span class="p">:</span> <span class="nx">Optional[TaskSchedulingPolicyArgs]</span> = None<span class="p">, </span><span class="nx">task_slots_per_node</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">user_accounts</span><span class="p">:</span> <span class="nx">Optional[Sequence[UserAccountArgs]]</span> = None<span class="p">, </span><span class="nx">vm_size</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1723,6 +2060,15 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
     <dd>{{% md %}}The display name need not be unique and can contain any Unicode characters up to a maximum length of 1024.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="identity_csharp">
+<a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#batchpoolidentity">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>Batch<wbr>Pool<wbr>Identity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The type of identity used for the Batch Pool.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="internodecommunication_csharp">
 <a href="#internodecommunication_csharp" style="color: inherit; text-decoration: inherit;">Inter<wbr>Node<wbr>Communication</a>
 </span>
@@ -1889,6 +2235,15 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The display name need not be unique and can contain any Unicode characters up to a maximum length of 1024.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="identity_go">
+<a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#batchpoolidentity">Batch<wbr>Pool<wbr>Identity</a></span>
+    </dt>
+    <dd>{{% md %}}The type of identity used for the Batch Pool.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="internodecommunication_go">
@@ -2059,6 +2414,15 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
     <dd>{{% md %}}The display name need not be unique and can contain any Unicode characters up to a maximum length of 1024.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="identity_nodejs">
+<a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#batchpoolidentity">Batch<wbr>Pool<wbr>Identity</a></span>
+    </dt>
+    <dd>{{% md %}}The type of identity used for the Batch Pool.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="internodecommunication_nodejs">
 <a href="#internodecommunication_nodejs" style="color: inherit; text-decoration: inherit;">inter<wbr>Node<wbr>Communication</a>
 </span>
@@ -2225,6 +2589,15 @@ The Pool resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The display name need not be unique and can contain any Unicode characters up to a maximum length of 1024.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="identity_python">
+<a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#batchpoolidentity">Batch<wbr>Pool<wbr>Identity<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The type of identity used for the Batch Pool.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="inter_node_communication_python">
@@ -4650,6 +5023,300 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}These are 'net use' options in Windows and 'mount' options in Linux.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="batchpoolidentity">Batch<wbr>Pool<wbr>Identity</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#poolidentitytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Pool<wbr>Identity<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}The type of identity used for the Batch Pool.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="userassignedidentities_csharp">
+<a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, object&gt;</span>
+    </dt>
+    <dd>{{% md %}}The list of user identities associated with the Batch pool. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#poolidentitytype">Pool<wbr>Identity<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}The type of identity used for the Batch Pool.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="userassignedidentities_go">
+<a href="#userassignedidentities_go" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]interface{}</span>
+    </dt>
+    <dd>{{% md %}}The list of user identities associated with the Batch pool. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#poolidentitytype">Pool<wbr>Identity<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}The type of identity used for the Batch Pool.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="userassignedidentities_nodejs">
+<a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: any}</span>
+    </dt>
+    <dd>{{% md %}}The list of user identities associated with the Batch pool. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#poolidentitytype">Pool<wbr>Identity<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}The type of identity used for the Batch Pool.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="user_assigned_identities_python">
+<a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, Any]</span>
+    </dt>
+    <dd>{{% md %}}The list of user identities associated with the Batch pool. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="batchpoolidentityresponse">Batch<wbr>Pool<wbr>Identity<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity used for the Batch Pool.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="userassignedidentities_csharp">
+<a href="#userassignedidentities_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>Batch<wbr>Pool<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args&gt;</span>
+    </dt>
+    <dd>{{% md %}}The list of user identities associated with the Batch pool. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity used for the Batch Pool.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="userassignedidentities_go">
+<a href="#userassignedidentities_go" style="color: inherit; text-decoration: inherit;">User<wbr>Assigned<wbr>Identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]Batch<wbr>Pool<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities</span>
+    </dt>
+    <dd>{{% md %}}The list of user identities associated with the Batch pool. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity used for the Batch Pool.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="userassignedidentities_nodejs">
+<a href="#userassignedidentities_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Assigned<wbr>Identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: Batch<wbr>Pool<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities}</span>
+    </dt>
+    <dd>{{% md %}}The list of user identities associated with the Batch pool. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of identity used for the Batch Pool.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="user_assigned_identities_python">
+<a href="#user_assigned_identities_python" style="color: inherit; text-decoration: inherit;">user_<wbr>assigned_<wbr>identities</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, Batch<wbr>Pool<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities<wbr>Args]</span>
+    </dt>
+    <dd>{{% md %}}The list of user identities associated with the Batch pool. The user identity dictionary key references will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}'.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="batchpoolidentityresponseuserassignedidentities">Batch<wbr>Pool<wbr>Identity<wbr>Response<wbr>User<wbr>Assigned<wbr>Identities</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="clientid_csharp">
+<a href="#clientid_csharp" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="principalid_csharp">
+<a href="#principalid_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="clientid_go">
+<a href="#clientid_go" style="color: inherit; text-decoration: inherit;">Client<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="principalid_go">
+<a href="#principalid_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="clientid_nodejs">
+<a href="#clientid_nodejs" style="color: inherit; text-decoration: inherit;">client<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="principalid_nodejs">
+<a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="client_id_python">
+<a href="#client_id_python" style="color: inherit; text-decoration: inherit;">client_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The client id of user assigned identity.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="principal_id_python">
+<a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -10545,6 +11212,168 @@ All [input](#inputs) properties are implicitly available as output properties. A
 </dl>
 {{% /choosable %}}
 
+<h4 id="nodeplacementconfiguration">Node<wbr>Placement<wbr>Configuration</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="policy_csharp">
+<a href="#policy_csharp" style="color: inherit; text-decoration: inherit;">Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#nodeplacementpolicytype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Node<wbr>Placement<wbr>Policy<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}Allocation policy used by Batch Service to provision the nodes. If not specified, Batch will use the regional policy.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="policy_go">
+<a href="#policy_go" style="color: inherit; text-decoration: inherit;">Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#nodeplacementpolicytype">Node<wbr>Placement<wbr>Policy<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}Allocation policy used by Batch Service to provision the nodes. If not specified, Batch will use the regional policy.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="policy_nodejs">
+<a href="#policy_nodejs" style="color: inherit; text-decoration: inherit;">policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#nodeplacementpolicytype">Node<wbr>Placement<wbr>Policy<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}Allocation policy used by Batch Service to provision the nodes. If not specified, Batch will use the regional policy.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="policy_python">
+<a href="#policy_python" style="color: inherit; text-decoration: inherit;">policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#nodeplacementpolicytype">Node<wbr>Placement<wbr>Policy<wbr>Type</a></span>
+    </dt>
+    <dd>{{% md %}}Allocation policy used by Batch Service to provision the nodes. If not specified, Batch will use the regional policy.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="nodeplacementconfigurationresponse">Node<wbr>Placement<wbr>Configuration<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="policy_csharp">
+<a href="#policy_csharp" style="color: inherit; text-decoration: inherit;">Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Allocation policy used by Batch Service to provision the nodes. If not specified, Batch will use the regional policy.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="policy_go">
+<a href="#policy_go" style="color: inherit; text-decoration: inherit;">Policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Allocation policy used by Batch Service to provision the nodes. If not specified, Batch will use the regional policy.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="policy_nodejs">
+<a href="#policy_nodejs" style="color: inherit; text-decoration: inherit;">policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Allocation policy used by Batch Service to provision the nodes. If not specified, Batch will use the regional policy.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="policy_python">
+<a href="#policy_python" style="color: inherit; text-decoration: inherit;">policy</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Allocation policy used by Batch Service to provision the nodes. If not specified, Batch will use the regional policy.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="nodeplacementpolicytype">Node<wbr>Placement<wbr>Policy<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>Regional</dt>
+    <dd>Regional{{% md %}}All nodes in the pool will be allocated in the same region.{{% /md %}}</dd>
+    <dt>Zonal</dt>
+    <dd>Zonal{{% md %}}Nodes in the pool will be spread across different zones with best effort balancing.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Node<wbr>Placement<wbr>Policy<wbr>Type<wbr>Regional</dt>
+    <dd>Regional{{% md %}}All nodes in the pool will be allocated in the same region.{{% /md %}}</dd>
+    <dt>Node<wbr>Placement<wbr>Policy<wbr>Type<wbr>Zonal</dt>
+    <dd>Zonal{{% md %}}Nodes in the pool will be spread across different zones with best effort balancing.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>Regional</dt>
+    <dd>Regional{{% md %}}All nodes in the pool will be allocated in the same region.{{% /md %}}</dd>
+    <dt>Zonal</dt>
+    <dd>Zonal{{% md %}}Nodes in the pool will be spread across different zones with best effort balancing.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>REGIONAL</dt>
+    <dd>Regional{{% md %}}All nodes in the pool will be allocated in the same region.{{% /md %}}</dd>
+    <dt>ZONAL</dt>
+    <dd>Zonal{{% md %}}Nodes in the pool will be spread across different zones with best effort balancing.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
 <h4 id="poolendpointconfiguration">Pool<wbr>Endpoint<wbr>Configuration</h4>
 
 {{% choosable language csharp %}}
@@ -10666,6 +11495,44 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type"><a href="#inboundnatpoolresponse">Sequence[Inbound<wbr>Nat<wbr>Pool<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The maximum number of inbound NAT pools per Batch pool is 5. If the maximum number of inbound NAT pools is exceeded the request fails with HTTP status code 400. This cannot be specified if the IPAddressProvisioningType is NoPublicIPAddresses.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="poolidentitytype">Pool<wbr>Identity<wbr>Type</h4>
+
+{{% choosable language csharp %}}
+<dl class="tabular">
+    <dt>User<wbr>Assigned</dt>
+    <dd>UserAssigned{{% md %}}Batch pool has user assigned identities with it.{{% /md %}}</dd>
+    <dt>None</dt>
+    <dd>None{{% md %}}Batch pool has no identity associated with it. Setting `None` in update pool will remove existing identities.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="tabular">
+    <dt>Pool<wbr>Identity<wbr>Type<wbr>User<wbr>Assigned</dt>
+    <dd>UserAssigned{{% md %}}Batch pool has user assigned identities with it.{{% /md %}}</dd>
+    <dt>Pool<wbr>Identity<wbr>Type<wbr>None</dt>
+    <dd>None{{% md %}}Batch pool has no identity associated with it. Setting `None` in update pool will remove existing identities.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="tabular">
+    <dt>User<wbr>Assigned</dt>
+    <dd>UserAssigned{{% md %}}Batch pool has user assigned identities with it.{{% /md %}}</dd>
+    <dt>None</dt>
+    <dd>None{{% md %}}Batch pool has no identity associated with it. Setting `None` in update pool will remove existing identities.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="tabular">
+    <dt>USER_ASSIGNED</dt>
+    <dd>UserAssigned{{% md %}}Batch pool has user assigned identities with it.{{% /md %}}</dd>
+    <dt>NONE</dt>
+    <dd>None{{% md %}}Batch pool has no identity associated with it. Setting `None` in update pool will remove existing identities.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -13587,6 +14454,634 @@ All [input](#inputs) properties are implicitly available as output properties. A
 </dl>
 {{% /choosable %}}
 
+<h4 id="vmextension">VMExtension</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="publisher_csharp">
+<a href="#publisher_csharp" style="color: inherit; text-decoration: inherit;">Publisher</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="autoupgrademinorversion_csharp">
+<a href="#autoupgrademinorversion_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Upgrade<wbr>Minor<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protectedsettings_csharp">
+<a href="#protectedsettings_csharp" style="color: inherit; text-decoration: inherit;">Protected<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all. {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="provisionafterextensions_csharp">
+<a href="#provisionafterextensions_csharp" style="color: inherit; text-decoration: inherit;">Provision<wbr>After<wbr>Extensions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Collection of extension names after which this extension needs to be provisioned.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="settings_csharp">
+<a href="#settings_csharp" style="color: inherit; text-decoration: inherit;">Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="typehandlerversion_csharp">
+<a href="#typehandlerversion_csharp" style="color: inherit; text-decoration: inherit;">Type<wbr>Handler<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="publisher_go">
+<a href="#publisher_go" style="color: inherit; text-decoration: inherit;">Publisher</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="autoupgrademinorversion_go">
+<a href="#autoupgrademinorversion_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Upgrade<wbr>Minor<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protectedsettings_go">
+<a href="#protectedsettings_go" style="color: inherit; text-decoration: inherit;">Protected<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all. {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="provisionafterextensions_go">
+<a href="#provisionafterextensions_go" style="color: inherit; text-decoration: inherit;">Provision<wbr>After<wbr>Extensions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Collection of extension names after which this extension needs to be provisioned.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="settings_go">
+<a href="#settings_go" style="color: inherit; text-decoration: inherit;">Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="typehandlerversion_go">
+<a href="#typehandlerversion_go" style="color: inherit; text-decoration: inherit;">Type<wbr>Handler<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="publisher_nodejs">
+<a href="#publisher_nodejs" style="color: inherit; text-decoration: inherit;">publisher</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="autoupgrademinorversion_nodejs">
+<a href="#autoupgrademinorversion_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Upgrade<wbr>Minor<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protectedsettings_nodejs">
+<a href="#protectedsettings_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all. {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="provisionafterextensions_nodejs">
+<a href="#provisionafterextensions_nodejs" style="color: inherit; text-decoration: inherit;">provision<wbr>After<wbr>Extensions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Collection of extension names after which this extension needs to be provisioned.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="settings_nodejs">
+<a href="#settings_nodejs" style="color: inherit; text-decoration: inherit;">settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="typehandlerversion_nodejs">
+<a href="#typehandlerversion_nodejs" style="color: inherit; text-decoration: inherit;">type<wbr>Handler<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="publisher_python">
+<a href="#publisher_python" style="color: inherit; text-decoration: inherit;">publisher</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="auto_upgrade_minor_version_python">
+<a href="#auto_upgrade_minor_version_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>upgrade_<wbr>minor_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protected_settings_python">
+<a href="#protected_settings_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all. {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="provision_after_extensions_python">
+<a href="#provision_after_extensions_python" style="color: inherit; text-decoration: inherit;">provision_<wbr>after_<wbr>extensions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}Collection of extension names after which this extension needs to be provisioned.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="settings_python">
+<a href="#settings_python" style="color: inherit; text-decoration: inherit;">settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_handler_version_python">
+<a href="#type_handler_version_python" style="color: inherit; text-decoration: inherit;">type_<wbr>handler_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="vmextensionresponse">VMExtension<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="publisher_csharp">
+<a href="#publisher_csharp" style="color: inherit; text-decoration: inherit;">Publisher</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="autoupgrademinorversion_csharp">
+<a href="#autoupgrademinorversion_csharp" style="color: inherit; text-decoration: inherit;">Auto<wbr>Upgrade<wbr>Minor<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protectedsettings_csharp">
+<a href="#protectedsettings_csharp" style="color: inherit; text-decoration: inherit;">Protected<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all. {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="provisionafterextensions_csharp">
+<a href="#provisionafterextensions_csharp" style="color: inherit; text-decoration: inherit;">Provision<wbr>After<wbr>Extensions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Collection of extension names after which this extension needs to be provisioned.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="settings_csharp">
+<a href="#settings_csharp" style="color: inherit; text-decoration: inherit;">Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="typehandlerversion_csharp">
+<a href="#typehandlerversion_csharp" style="color: inherit; text-decoration: inherit;">Type<wbr>Handler<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="publisher_go">
+<a href="#publisher_go" style="color: inherit; text-decoration: inherit;">Publisher</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="autoupgrademinorversion_go">
+<a href="#autoupgrademinorversion_go" style="color: inherit; text-decoration: inherit;">Auto<wbr>Upgrade<wbr>Minor<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protectedsettings_go">
+<a href="#protectedsettings_go" style="color: inherit; text-decoration: inherit;">Protected<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all. {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="provisionafterextensions_go">
+<a href="#provisionafterextensions_go" style="color: inherit; text-decoration: inherit;">Provision<wbr>After<wbr>Extensions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}Collection of extension names after which this extension needs to be provisioned.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="settings_go">
+<a href="#settings_go" style="color: inherit; text-decoration: inherit;">Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="typehandlerversion_go">
+<a href="#typehandlerversion_go" style="color: inherit; text-decoration: inherit;">Type<wbr>Handler<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="publisher_nodejs">
+<a href="#publisher_nodejs" style="color: inherit; text-decoration: inherit;">publisher</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="autoupgrademinorversion_nodejs">
+<a href="#autoupgrademinorversion_nodejs" style="color: inherit; text-decoration: inherit;">auto<wbr>Upgrade<wbr>Minor<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protectedsettings_nodejs">
+<a href="#protectedsettings_nodejs" style="color: inherit; text-decoration: inherit;">protected<wbr>Settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all. {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="provisionafterextensions_nodejs">
+<a href="#provisionafterextensions_nodejs" style="color: inherit; text-decoration: inherit;">provision<wbr>After<wbr>Extensions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}Collection of extension names after which this extension needs to be provisioned.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="settings_nodejs">
+<a href="#settings_nodejs" style="color: inherit; text-decoration: inherit;">settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="typehandlerversion_nodejs">
+<a href="#typehandlerversion_nodejs" style="color: inherit; text-decoration: inherit;">type<wbr>Handler<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="publisher_python">
+<a href="#publisher_python" style="color: inherit; text-decoration: inherit;">publisher</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="auto_upgrade_minor_version_python">
+<a href="#auto_upgrade_minor_version_python" style="color: inherit; text-decoration: inherit;">auto_<wbr>upgrade_<wbr>minor_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether the extension should use a newer minor version if one is available at deployment time. Once deployed, however, the extension will not upgrade minor versions unless redeployed, even with this property set to true.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="protected_settings_python">
+<a href="#protected_settings_python" style="color: inherit; text-decoration: inherit;">protected_<wbr>settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}The extension can contain either protectedSettings or protectedSettingsFromKeyVault or no protected settings at all. {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="provision_after_extensions_python">
+<a href="#provision_after_extensions_python" style="color: inherit; text-decoration: inherit;">provision_<wbr>after_<wbr>extensions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}Collection of extension names after which this extension needs to be provisioned.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="settings_python">
+<a href="#settings_python" style="color: inherit; text-decoration: inherit;">settings</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_handler_version_python">
+<a href="#type_handler_version_python" style="color: inherit; text-decoration: inherit;">type_<wbr>handler_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
 <h4 id="virtualmachineconfiguration">Virtual<wbr>Machine<wbr>Configuration</h4>
 
 {{% choosable language csharp %}}
@@ -13639,6 +15134,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}If specified, encryption is performed on each node in the pool during node provisioning.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="extensions_csharp">
+<a href="#extensions_csharp" style="color: inherit; text-decoration: inherit;">Extensions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#vmextension">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>VMExtension<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}If specified, the extensions mentioned in this configuration will be installed on each node.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="licensetype_csharp">
 <a href="#licensetype_csharp" style="color: inherit; text-decoration: inherit;">License<wbr>Type</a>
 </span>
@@ -13650,6 +15154,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
  Windows_Server - The on-premises license is for Windows Server.
  Windows_Client - The on-premises license is for Windows Client.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="nodeplacementconfiguration_csharp">
+<a href="#nodeplacementconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Placement<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#nodeplacementconfiguration">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>Node<wbr>Placement<wbr>Configuration<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}This configuration will specify rules on how nodes in the pool will be physically allocated.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="windowsconfiguration_csharp">
@@ -13712,6 +15225,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}If specified, encryption is performed on each node in the pool during node provisioning.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="extensions_go">
+<a href="#extensions_go" style="color: inherit; text-decoration: inherit;">Extensions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#vmextension">[]VMExtension</a></span>
+    </dt>
+    <dd>{{% md %}}If specified, the extensions mentioned in this configuration will be installed on each node.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="licensetype_go">
 <a href="#licensetype_go" style="color: inherit; text-decoration: inherit;">License<wbr>Type</a>
 </span>
@@ -13723,6 +15245,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
  Windows_Server - The on-premises license is for Windows Server.
  Windows_Client - The on-premises license is for Windows Client.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="nodeplacementconfiguration_go">
+<a href="#nodeplacementconfiguration_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Placement<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#nodeplacementconfiguration">Node<wbr>Placement<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}This configuration will specify rules on how nodes in the pool will be physically allocated.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="windowsconfiguration_go">
@@ -13785,6 +15316,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}If specified, encryption is performed on each node in the pool during node provisioning.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="extensions_nodejs">
+<a href="#extensions_nodejs" style="color: inherit; text-decoration: inherit;">extensions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#vmextension">VMExtension[]</a></span>
+    </dt>
+    <dd>{{% md %}}If specified, the extensions mentioned in this configuration will be installed on each node.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="licensetype_nodejs">
 <a href="#licensetype_nodejs" style="color: inherit; text-decoration: inherit;">license<wbr>Type</a>
 </span>
@@ -13796,6 +15336,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
  Windows_Server - The on-premises license is for Windows Server.
  Windows_Client - The on-premises license is for Windows Client.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="nodeplacementconfiguration_nodejs">
+<a href="#nodeplacementconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Placement<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#nodeplacementconfiguration">Node<wbr>Placement<wbr>Configuration</a></span>
+    </dt>
+    <dd>{{% md %}}This configuration will specify rules on how nodes in the pool will be physically allocated.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="windowsconfiguration_nodejs">
@@ -13858,6 +15407,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}If specified, encryption is performed on each node in the pool during node provisioning.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="extensions_python">
+<a href="#extensions_python" style="color: inherit; text-decoration: inherit;">extensions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#vmextension">Sequence[VMExtension<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}If specified, the extensions mentioned in this configuration will be installed on each node.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="license_type_python">
 <a href="#license_type_python" style="color: inherit; text-decoration: inherit;">license_<wbr>type</a>
 </span>
@@ -13869,6 +15427,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
  Windows_Server - The on-premises license is for Windows Server.
  Windows_Client - The on-premises license is for Windows Client.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="node_placement_configuration_python">
+<a href="#node_placement_configuration_python" style="color: inherit; text-decoration: inherit;">node_<wbr>placement_<wbr>configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#nodeplacementconfiguration">Node<wbr>Placement<wbr>Configuration<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}This configuration will specify rules on how nodes in the pool will be physically allocated.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="windows_configuration_python">
@@ -13933,6 +15500,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}If specified, encryption is performed on each node in the pool during node provisioning.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="extensions_csharp">
+<a href="#extensions_csharp" style="color: inherit; text-decoration: inherit;">Extensions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#vmextensionresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>VMExtension<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}If specified, the extensions mentioned in this configuration will be installed on each node.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="licensetype_csharp">
 <a href="#licensetype_csharp" style="color: inherit; text-decoration: inherit;">License<wbr>Type</a>
 </span>
@@ -13944,6 +15520,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
  Windows_Server - The on-premises license is for Windows Server.
  Windows_Client - The on-premises license is for Windows Client.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="nodeplacementconfiguration_csharp">
+<a href="#nodeplacementconfiguration_csharp" style="color: inherit; text-decoration: inherit;">Node<wbr>Placement<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#nodeplacementconfigurationresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Batch.<wbr>Inputs.<wbr>Node<wbr>Placement<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}This configuration will specify rules on how nodes in the pool will be physically allocated.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="windowsconfiguration_csharp">
@@ -14006,6 +15591,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}If specified, encryption is performed on each node in the pool during node provisioning.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="extensions_go">
+<a href="#extensions_go" style="color: inherit; text-decoration: inherit;">Extensions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#vmextensionresponse">[]VMExtension<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}If specified, the extensions mentioned in this configuration will be installed on each node.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="licensetype_go">
 <a href="#licensetype_go" style="color: inherit; text-decoration: inherit;">License<wbr>Type</a>
 </span>
@@ -14017,6 +15611,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
  Windows_Server - The on-premises license is for Windows Server.
  Windows_Client - The on-premises license is for Windows Client.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="nodeplacementconfiguration_go">
+<a href="#nodeplacementconfiguration_go" style="color: inherit; text-decoration: inherit;">Node<wbr>Placement<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#nodeplacementconfigurationresponse">Node<wbr>Placement<wbr>Configuration<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}This configuration will specify rules on how nodes in the pool will be physically allocated.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="windowsconfiguration_go">
@@ -14079,6 +15682,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}If specified, encryption is performed on each node in the pool during node provisioning.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="extensions_nodejs">
+<a href="#extensions_nodejs" style="color: inherit; text-decoration: inherit;">extensions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#vmextensionresponse">VMExtension<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}If specified, the extensions mentioned in this configuration will be installed on each node.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="licensetype_nodejs">
 <a href="#licensetype_nodejs" style="color: inherit; text-decoration: inherit;">license<wbr>Type</a>
 </span>
@@ -14090,6 +15702,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
  Windows_Server - The on-premises license is for Windows Server.
  Windows_Client - The on-premises license is for Windows Client.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="nodeplacementconfiguration_nodejs">
+<a href="#nodeplacementconfiguration_nodejs" style="color: inherit; text-decoration: inherit;">node<wbr>Placement<wbr>Configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#nodeplacementconfigurationresponse">Node<wbr>Placement<wbr>Configuration<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}This configuration will specify rules on how nodes in the pool will be physically allocated.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="windowsconfiguration_nodejs">
@@ -14152,6 +15773,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}If specified, encryption is performed on each node in the pool during node provisioning.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="extensions_python">
+<a href="#extensions_python" style="color: inherit; text-decoration: inherit;">extensions</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#vmextensionresponse">Sequence[VMExtension<wbr>Response<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}If specified, the extensions mentioned in this configuration will be installed on each node.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="license_type_python">
 <a href="#license_type_python" style="color: inherit; text-decoration: inherit;">license_<wbr>type</a>
 </span>
@@ -14163,6 +15793,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
  Windows_Server - The on-premises license is for Windows Server.
  Windows_Client - The on-premises license is for Windows Client.
 {{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="node_placement_configuration_python">
+<a href="#node_placement_configuration_python" style="color: inherit; text-decoration: inherit;">node_<wbr>placement_<wbr>configuration</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#nodeplacementconfigurationresponse">Node<wbr>Placement<wbr>Configuration<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}This configuration will specify rules on how nodes in the pool will be physically allocated.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="windows_configuration_python">

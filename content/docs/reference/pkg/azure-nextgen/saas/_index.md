@@ -9,9 +9,16 @@ meta_desc: "Explore the resources and functions of the saas module in the Azure 
 
 Explore the resources and functions of the saas module in the Azure NextGen package.
 
+<h2 id="resources">Resources</h2>
+<ul class="api">
+    <li><a href="saassubscriptionlevel" title="SaasSubscriptionLevel"><span class="symbol resource"></span>SaasSubscriptionLevel</a></li>
+</ul>
+
 <h2 id="functions">Functions</h2>
 <ul class="api">
+    <li><a href="getsaassubscriptionlevel" title="GetSaasSubscriptionLevel"><span class="symbol function"></span>GetSaasSubscriptionLevel</a></li>
     <li><a href="listsaasresourceaccesstoken" title="ListSaasResourceAccessToken"><span class="symbol function"></span>ListSaasResourceAccessToken</a></li>
+    <li><a href="listsaassubscriptionlevelaccesstoken" title="ListSaasSubscriptionLevelAccessToken"><span class="symbol function"></span>ListSaasSubscriptionLevelAccessToken</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -21,7 +28,7 @@ Explore the resources and functions of the saas module in the Azure NextGen pack
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.4.0</dd>
+	<dd>0.5.0</dd>
 </dl>
 
 

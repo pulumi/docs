@@ -284,13 +284,13 @@ External cloud identifier used as part of scanning configuration.{{% /md %}}</dd
     <dd>{{% md %}}Gets or sets the location.{{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="networkacls_csharp">
-<a href="#networkacls_csharp" style="color: inherit; text-decoration: inherit;">Network<wbr>Acls</a>
+        <span id="publicnetworkaccess_csharp">
+<a href="#publicnetworkaccess_csharp" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkaclsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Purview.<wbr>Outputs.<wbr>Network<wbr>Acls<wbr>Response</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Get the network ACLs.{{% /md %}}</dd>
+    <dd>{{% md %}}Gets or sets the public network access.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="sku_csharp">
@@ -444,13 +444,13 @@ External cloud identifier used as part of scanning configuration.{{% /md %}}</dd
     <dd>{{% md %}}Gets or sets the location.{{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="networkacls_go">
-<a href="#networkacls_go" style="color: inherit; text-decoration: inherit;">Network<wbr>Acls</a>
+        <span id="publicnetworkaccess_go">
+<a href="#publicnetworkaccess_go" style="color: inherit; text-decoration: inherit;">Public<wbr>Network<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkaclsresponse">Network<wbr>Acls<wbr>Response</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Get the network ACLs.{{% /md %}}</dd>
+    <dd>{{% md %}}Gets or sets the public network access.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="sku_go">
@@ -604,13 +604,13 @@ External cloud identifier used as part of scanning configuration.{{% /md %}}</dd
     <dd>{{% md %}}Gets or sets the location.{{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="networkacls_nodejs">
-<a href="#networkacls_nodejs" style="color: inherit; text-decoration: inherit;">network<wbr>Acls</a>
+        <span id="publicnetworkaccess_nodejs">
+<a href="#publicnetworkaccess_nodejs" style="color: inherit; text-decoration: inherit;">public<wbr>Network<wbr>Access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkaclsresponse">Network<wbr>Acls<wbr>Response</a></span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Get the network ACLs.{{% /md %}}</dd>
+    <dd>{{% md %}}Gets or sets the public network access.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="sku_nodejs">
@@ -764,13 +764,13 @@ External cloud identifier used as part of scanning configuration.{{% /md %}}</dd
     <dd>{{% md %}}Gets or sets the location.{{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="network_acls_python">
-<a href="#network_acls_python" style="color: inherit; text-decoration: inherit;">network_<wbr>acls</a>
+        <span id="public_network_access_python">
+<a href="#public_network_access_python" style="color: inherit; text-decoration: inherit;">public_<wbr>network_<wbr>access</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#networkaclsresponse">Network<wbr>Acls<wbr>Response</a></span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Get the network ACLs.{{% /md %}}</dd>
+    <dd>{{% md %}}Gets or sets the public network access.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="sku_python">
@@ -1386,73 +1386,6 @@ Configured in AWS to allow use of the role arn used for scanning{{% /md %}}</dd>
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Identity Type{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-<h4 id="networkaclsresponse">Network<wbr>Acls<wbr>Response</h4>
-
-
-
-
-
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="defaultaction_csharp">
-<a href="#defaultaction_csharp" style="color: inherit; text-decoration: inherit;">Default<wbr>Action</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Gets or sets the default behavior of network ACLs.{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="defaultaction_go">
-<a href="#defaultaction_go" style="color: inherit; text-decoration: inherit;">Default<wbr>Action</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Gets or sets the default behavior of network ACLs.{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="defaultaction_nodejs">
-<a href="#defaultaction_nodejs" style="color: inherit; text-decoration: inherit;">default<wbr>Action</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Gets or sets the default behavior of network ACLs.{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-optional"
-            title="Optional">
-        <span id="default_action_python">
-<a href="#default_action_python" style="color: inherit; text-decoration: inherit;">default_<wbr>action</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Gets or sets the default behavior of network ACLs.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 

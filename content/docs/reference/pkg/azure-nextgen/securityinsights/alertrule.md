@@ -880,6 +880,12 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>MicrosoftSecurityIncidentCreation</dd>
     <dt>Fusion</dt>
     <dd>Fusion</dd>
+    <dt>MLBehavior<wbr>Analytics</dt>
+    <dd>MLBehaviorAnalytics</dd>
+    <dt>Threat<wbr>Intelligence</dt>
+    <dd>ThreatIntelligence</dd>
+    <dt>Anomaly</dt>
+    <dd>Anomaly</dd>
 </dl>
 {{% /choosable %}}
 
@@ -891,6 +897,12 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>MicrosoftSecurityIncidentCreation</dd>
     <dt>Alert<wbr>Rule<wbr>Kind<wbr>Fusion</dt>
     <dd>Fusion</dd>
+    <dt>Alert<wbr>Rule<wbr>Kind<wbr>MLBehavior<wbr>Analytics</dt>
+    <dd>MLBehaviorAnalytics</dd>
+    <dt>Alert<wbr>Rule<wbr>Kind<wbr>Threat<wbr>Intelligence</dt>
+    <dd>ThreatIntelligence</dd>
+    <dt>Alert<wbr>Rule<wbr>Kind<wbr>Anomaly</dt>
+    <dd>Anomaly</dd>
 </dl>
 {{% /choosable %}}
 
@@ -902,6 +914,12 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>MicrosoftSecurityIncidentCreation</dd>
     <dt>Fusion</dt>
     <dd>Fusion</dd>
+    <dt>MLBehavior<wbr>Analytics</dt>
+    <dd>MLBehaviorAnalytics</dd>
+    <dt>Threat<wbr>Intelligence</dt>
+    <dd>ThreatIntelligence</dd>
+    <dt>Anomaly</dt>
+    <dd>Anomaly</dd>
 </dl>
 {{% /choosable %}}
 
@@ -913,6 +931,12 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>MicrosoftSecurityIncidentCreation</dd>
     <dt>FUSION</dt>
     <dd>Fusion</dd>
+    <dt>ML_BEHAVIOR_ANALYTICS</dt>
+    <dd>MLBehaviorAnalytics</dd>
+    <dt>THREAT_INTELLIGENCE</dt>
+    <dd>ThreatIntelligence</dd>
+    <dt>ANOMALY</dt>
+    <dd>Anomaly</dd>
 </dl>
 {{% /choosable %}}
 ## Import

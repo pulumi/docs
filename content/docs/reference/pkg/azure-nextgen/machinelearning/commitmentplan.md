@@ -11,6 +11,13 @@ meta_desc: "Documentation for the azure-nextgen.machinelearning.CommitmentPlan r
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 An Azure ML commitment plan resource.
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:machinelearning/v20160501preview:CommitmentPlan myresource1 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.MachineLearning/commitmentPlans/{commitmentPlanName} 
+```
 
 
 

@@ -28,6 +28,7 @@ Explore the resources and functions of the authorization module in the Azure Nex
 <ul class="api">
     <li><a href="getaccessreviewscheduledefinitionbyid" title="GetAccessReviewScheduleDefinitionById"><span class="symbol function"></span>GetAccessReviewScheduleDefinitionById</a></li>
     <li><a href="getclientconfig" title="GetClientConfig"><span class="symbol function"></span>GetClientConfig</a></li>
+    <li><a href="getclienttoken" title="GetClientToken"><span class="symbol function"></span>GetClientToken</a></li>
     <li><a href="getmanagementlockatresourcegrouplevel" title="GetManagementLockAtResourceGroupLevel"><span class="symbol function"></span>GetManagementLockAtResourceGroupLevel</a></li>
     <li><a href="getmanagementlockatresourcelevel" title="GetManagementLockAtResourceLevel"><span class="symbol function"></span>GetManagementLockAtResourceLevel</a></li>
     <li><a href="getmanagementlockatsubscriptionlevel" title="GetManagementLockAtSubscriptionLevel"><span class="symbol function"></span>GetManagementLockAtSubscriptionLevel</a></li>
@@ -47,7 +48,7 @@ Explore the resources and functions of the authorization module in the Azure Nex
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.4.0</dd>
+	<dd>0.5.0</dd>
 </dl>
 
 

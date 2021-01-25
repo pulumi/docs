@@ -11,6 +11,7 @@ Explore the resources and functions of the avs module in the Azure NextGen packa
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="addon" title="Addon"><span class="symbol resource"></span>Addon</a></li>
     <li><a href="authorization" title="Authorization"><span class="symbol resource"></span>Authorization</a></li>
     <li><a href="cluster" title="Cluster"><span class="symbol resource"></span>Cluster</a></li>
     <li><a href="globalreachconnection" title="GlobalReachConnection"><span class="symbol resource"></span>GlobalReachConnection</a></li>
@@ -26,6 +27,7 @@ Explore the resources and functions of the avs module in the Azure NextGen packa
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
+    <li><a href="getaddon" title="GetAddon"><span class="symbol function"></span>GetAddon</a></li>
     <li><a href="getauthorization" title="GetAuthorization"><span class="symbol function"></span>GetAuthorization</a></li>
     <li><a href="getcluster" title="GetCluster"><span class="symbol function"></span>GetCluster</a></li>
     <li><a href="getglobalreachconnection" title="GetGlobalReachConnection"><span class="symbol function"></span>GetGlobalReachConnection</a></li>
@@ -47,7 +49,7 @@ Explore the resources and functions of the avs module in the Azure NextGen packa
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.4.0</dd>
+	<dd>0.5.0</dd>
 </dl>
 
 

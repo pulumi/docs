@@ -2606,10 +2606,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Alerts</dd>
     <dt>Secure<wbr>Scores</dt>
     <dd>SecureScores</dd>
+    <dt>Secure<wbr>Scores<wbr>Snapshot</dt>
+    <dd>SecureScoresSnapshot</dd>
     <dt>Secure<wbr>Score<wbr>Controls</dt>
     <dd>SecureScoreControls</dd>
+    <dt>Secure<wbr>Score<wbr>Controls<wbr>Snapshot</dt>
+    <dd>SecureScoreControlsSnapshot</dd>
     <dt>Regulatory<wbr>Compliance<wbr>Assessment</dt>
     <dd>RegulatoryComplianceAssessment</dd>
+    <dt>Regulatory<wbr>Compliance<wbr>Assessment<wbr>Snapshot</dt>
+    <dd>RegulatoryComplianceAssessmentSnapshot</dd>
 </dl>
 {{% /choosable %}}
 
@@ -2623,10 +2629,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Alerts</dd>
     <dt>Event<wbr>Source<wbr>Secure<wbr>Scores</dt>
     <dd>SecureScores</dd>
+    <dt>Event<wbr>Source<wbr>Secure<wbr>Scores<wbr>Snapshot</dt>
+    <dd>SecureScoresSnapshot</dd>
     <dt>Event<wbr>Source<wbr>Secure<wbr>Score<wbr>Controls</dt>
     <dd>SecureScoreControls</dd>
+    <dt>Event<wbr>Source<wbr>Secure<wbr>Score<wbr>Controls<wbr>Snapshot</dt>
+    <dd>SecureScoreControlsSnapshot</dd>
     <dt>Event<wbr>Source<wbr>Regulatory<wbr>Compliance<wbr>Assessment</dt>
     <dd>RegulatoryComplianceAssessment</dd>
+    <dt>Event<wbr>Source<wbr>Regulatory<wbr>Compliance<wbr>Assessment<wbr>Snapshot</dt>
+    <dd>RegulatoryComplianceAssessmentSnapshot</dd>
 </dl>
 {{% /choosable %}}
 
@@ -2640,10 +2652,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Alerts</dd>
     <dt>Secure<wbr>Scores</dt>
     <dd>SecureScores</dd>
+    <dt>Secure<wbr>Scores<wbr>Snapshot</dt>
+    <dd>SecureScoresSnapshot</dd>
     <dt>Secure<wbr>Score<wbr>Controls</dt>
     <dd>SecureScoreControls</dd>
+    <dt>Secure<wbr>Score<wbr>Controls<wbr>Snapshot</dt>
+    <dd>SecureScoreControlsSnapshot</dd>
     <dt>Regulatory<wbr>Compliance<wbr>Assessment</dt>
     <dd>RegulatoryComplianceAssessment</dd>
+    <dt>Regulatory<wbr>Compliance<wbr>Assessment<wbr>Snapshot</dt>
+    <dd>RegulatoryComplianceAssessmentSnapshot</dd>
 </dl>
 {{% /choosable %}}
 
@@ -2657,10 +2675,16 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>Alerts</dd>
     <dt>SECURE_SCORES</dt>
     <dd>SecureScores</dd>
+    <dt>SECURE_SCORES_SNAPSHOT</dt>
+    <dd>SecureScoresSnapshot</dd>
     <dt>SECURE_SCORE_CONTROLS</dt>
     <dd>SecureScoreControls</dd>
+    <dt>SECURE_SCORE_CONTROLS_SNAPSHOT</dt>
+    <dd>SecureScoreControlsSnapshot</dd>
     <dt>REGULATORY_COMPLIANCE_ASSESSMENT</dt>
     <dd>RegulatoryComplianceAssessment</dd>
+    <dt>REGULATORY_COMPLIANCE_ASSESSMENT_SNAPSHOT</dt>
+    <dd>RegulatoryComplianceAssessmentSnapshot</dd>
 </dl>
 {{% /choosable %}}
 

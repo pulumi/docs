@@ -238,6 +238,15 @@ The following output properties are available:
     <dd>{{% md %}}Enable internet security.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="expressroutegatewaybypass_csharp">
+<a href="#expressroutegatewaybypass_csharp" style="color: inherit; text-decoration: inherit;">Express<wbr>Route<wbr>Gateway<wbr>Bypass</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable FastPath to vWan Firewall hub.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -314,6 +323,15 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable internet security.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="expressroutegatewaybypass_go">
+<a href="#expressroutegatewaybypass_go" style="color: inherit; text-decoration: inherit;">Express<wbr>Route<wbr>Gateway<wbr>Bypass</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable FastPath to vWan Firewall hub.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="id_go">
@@ -394,6 +412,15 @@ The following output properties are available:
     <dd>{{% md %}}Enable internet security.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="expressroutegatewaybypass_nodejs">
+<a href="#expressroutegatewaybypass_nodejs" style="color: inherit; text-decoration: inherit;">express<wbr>Route<wbr>Gateway<wbr>Bypass</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Enable FastPath to vWan Firewall hub.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="id_nodejs">
 <a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
 </span>
@@ -470,6 +497,15 @@ The following output properties are available:
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Enable internet security.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="express_route_gateway_bypass_python">
+<a href="#express_route_gateway_bypass_python" style="color: inherit; text-decoration: inherit;">express_<wbr>route_<wbr>gateway_<wbr>bypass</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Enable FastPath to vWan Firewall hub.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="id_python">

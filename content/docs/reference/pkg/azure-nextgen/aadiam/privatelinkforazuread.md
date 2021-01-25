@@ -934,7 +934,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:aadiam/v20200301preview:privateLinkForAzureAd myOrgPrivateLinkPolicy <Azure resource ID> 
+$ pulumi import azure-nextgen:aadiam/v20200301preview:privateLinkForAzureAd myOrgPrivateLinkPolicy /subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/microsoft.aadiam/privateLinkForAzureAd/{policyName} 
 ```
 
 

@@ -45,7 +45,6 @@ class MyStack : Stack
             ResourceGroupName = "resourceGroup1",
             SsoClientId = "client",
             SsoClientSecretKeyVaultPath = "https://keyvault/secret",
-            SsoContext = "KeyVaultPath",
             SsoSecretType = "SharedKey",
             SsoadfsAuthority = "https://adfs",
             StartVMOnConnect = false,
@@ -93,7 +92,6 @@ func main() {
 			ResourceGroupName:           pulumi.String("resourceGroup1"),
 			SsoClientId:                 pulumi.String("client"),
 			SsoClientSecretKeyVaultPath: pulumi.String("https://keyvault/secret"),
-			SsoContext:                  pulumi.String("KeyVaultPath"),
 			SsoSecretType:               pulumi.String("SharedKey"),
 			SsoadfsAuthority:            pulumi.String("https://adfs"),
 			StartVMOnConnect:            pulumi.Bool(false),
@@ -137,7 +135,6 @@ host_pool = azure_nextgen.desktopvirtualization.v20201110preview.HostPool("hostP
     resource_group_name="resourceGroup1",
     sso_client_id="client",
     sso_client_secret_key_vault_path="https://keyvault/secret",
-    sso_context="KeyVaultPath",
     sso_secret_type="SharedKey",
     ssoadfs_authority="https://adfs",
     start_vm_on_connect=False,
@@ -174,7 +171,6 @@ const hostPool = new azure_nextgen.desktopvirtualization.v20201110preview.HostPo
     resourceGroupName: "resourceGroup1",
     ssoClientId: "client",
     ssoClientSecretKeyVaultPath: "https://keyvault/secret",
-    ssoContext: "KeyVaultPath",
     ssoSecretType: "SharedKey",
     ssoadfsAuthority: "https://adfs",
     startVMOnConnect: false,
@@ -201,7 +197,7 @@ const hostPool = new azure_nextgen.desktopvirtualization.v20201110preview.HostPo
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">HostPool</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">custom_rdp_property</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">friendly_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">host_pool_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">host_pool_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, HostPoolType]]</span> = None<span class="p">, </span><span class="nx">load_balancer_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, LoadBalancerType]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_session_limit</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">personal_desktop_assignment_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, PersonalDesktopAssignmentType]]</span> = None<span class="p">, </span><span class="nx">preferred_app_group_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, PreferredAppGroupType]]</span> = None<span class="p">, </span><span class="nx">registration_info</span><span class="p">:</span> <span class="nx">Optional[RegistrationInfoArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ring</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">sso_client_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sso_client_secret_key_vault_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sso_context</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sso_secret_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, SSOSecretType]]</span> = None<span class="p">, </span><span class="nx">ssoadfs_authority</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">start_vm_on_connect</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">validation_environment</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">vm_template</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">HostPool</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">custom_rdp_property</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">friendly_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">host_pool_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">host_pool_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, HostPoolType]]</span> = None<span class="p">, </span><span class="nx">load_balancer_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, LoadBalancerType]]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">max_session_limit</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">personal_desktop_assignment_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, PersonalDesktopAssignmentType]]</span> = None<span class="p">, </span><span class="nx">preferred_app_group_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, PreferredAppGroupType]]</span> = None<span class="p">, </span><span class="nx">registration_info</span><span class="p">:</span> <span class="nx">Optional[RegistrationInfoArgs]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">ring</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">sso_client_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sso_client_secret_key_vault_path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">sso_secret_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, SSOSecretType]]</span> = None<span class="p">, </span><span class="nx">ssoadfs_authority</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">start_vm_on_connect</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">validation_environment</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">vm_template</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -509,15 +505,6 @@ The HostPool resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}Path to Azure KeyVault storing the secret used for communication to ADFS.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="ssocontext_csharp">
-<a href="#ssocontext_csharp" style="color: inherit; text-decoration: inherit;">Sso<wbr>Context</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Path to keyvault containing ssoContext secret.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="ssosecrettype_csharp">
 <a href="#ssosecrettype_csharp" style="color: inherit; text-decoration: inherit;">Sso<wbr>Secret<wbr>Type</a>
 </span>
@@ -711,15 +698,6 @@ The HostPool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to Azure KeyVault storing the secret used for communication to ADFS.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="ssocontext_go">
-<a href="#ssocontext_go" style="color: inherit; text-decoration: inherit;">Sso<wbr>Context</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Path to keyvault containing ssoContext secret.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="ssosecrettype_go">
@@ -917,15 +895,6 @@ The HostPool resource accepts the following [input]({{< relref "/docs/intro/conc
     <dd>{{% md %}}Path to Azure KeyVault storing the secret used for communication to ADFS.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="ssocontext_nodejs">
-<a href="#ssocontext_nodejs" style="color: inherit; text-decoration: inherit;">sso<wbr>Context</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Path to keyvault containing ssoContext secret.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="ssosecrettype_nodejs">
 <a href="#ssosecrettype_nodejs" style="color: inherit; text-decoration: inherit;">sso<wbr>Secret<wbr>Type</a>
 </span>
@@ -1119,15 +1088,6 @@ The HostPool resource accepts the following [input]({{< relref "/docs/intro/conc
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Path to Azure KeyVault storing the secret used for communication to ADFS.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="sso_context_python">
-<a href="#sso_context_python" style="color: inherit; text-decoration: inherit;">sso_<wbr>context</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Path to keyvault containing ssoContext secret.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="sso_secret_type_python">

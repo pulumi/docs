@@ -201,11 +201,11 @@ postgres_instance = azure_nextgen.azuredata.v20200908preview.PostgresInstance("p
             },
             "storage": {
                 "data": {
-                    "className": "local-storage",
+                    "class_name": "local-storage",
                     "size": "5Gi",
                 },
                 "logs": {
-                    "className": "local-storage",
+                    "class_name": "local-storage",
                     "size": "5Gi",
                 },
             },

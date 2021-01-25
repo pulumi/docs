@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.confluent.Organization resource 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Organization resource.
+Latest API Version: 2020-03-01.
 
 {{% examples %}}
 ## Example Usage
@@ -26,10 +27,10 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var organization = new AzureNextGen.Confluent.V20200301Preview.Organization("organization", new AzureNextGen.Confluent.V20200301Preview.OrganizationArgs
+        var organization = new AzureNextGen.Confluent.Latest.Organization("organization", new AzureNextGen.Confluent.Latest.OrganizationArgs
         {
             Location = "West US",
-            OfferDetail = new AzureNextGen.Confluent.V20200301Preview.Inputs.OrganizationResourcePropertiesOfferDetailArgs
+            OfferDetail = new AzureNextGen.Confluent.Latest.Inputs.OrganizationResourcePropertiesOfferDetailArgs
             {
                 Id = "string",
                 PlanId = "string",
@@ -43,7 +44,7 @@ class MyStack : Stack
             {
                 { "Environment", "Dev" },
             },
-            UserDetail = new AzureNextGen.Confluent.V20200301Preview.Inputs.OrganizationResourcePropertiesUserDetailArgs
+            UserDetail = new AzureNextGen.Confluent.Latest.Inputs.OrganizationResourcePropertiesUserDetailArgs
             {
                 EmailAddress = "contoso@microsoft.com",
                 FirstName = "string",
@@ -64,7 +65,7 @@ class MyStack : Stack
 package main
 
 import (
-	confluent "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/confluent/v20200301preview"
+	confluent "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/confluent/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -107,9 +108,9 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-organization = azure_nextgen.confluent.v20200301preview.Organization("organization",
+organization = azure_nextgen.confluent.latest.Organization("organization",
     location="West US",
-    offer_detail=azure_nextgen.confluent.v20200301preview.OrganizationResourcePropertiesOfferDetailArgs(
+    offer_detail=azure_nextgen.confluent.latest.OrganizationResourcePropertiesOfferDetailArgs(
         id="string",
         plan_id="string",
         plan_name="string",
@@ -121,7 +122,7 @@ organization = azure_nextgen.confluent.v20200301preview.Organization("organizati
     tags={
         "Environment": "Dev",
     },
-    user_detail=azure_nextgen.confluent.v20200301preview.OrganizationResourcePropertiesUserDetailArgs(
+    user_detail=azure_nextgen.confluent.latest.OrganizationResourcePropertiesUserDetailArgs(
         email_address="contoso@microsoft.com",
         first_name="string",
         last_name="string",
@@ -137,7 +138,7 @@ organization = azure_nextgen.confluent.v20200301preview.Organization("organizati
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const organization = new azure_nextgen.confluent.v20200301preview.Organization("organization", {
+const organization = new azure_nextgen.confluent.latest.Organization("organization", {
     location: "West US",
     offerDetail: {
         id: "string",
@@ -1828,7 +1829,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:confluent/v20200301preview:Organization myOrganization /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.Confluent/organizations/myOrganization 
+$ pulumi import azure-nextgen:confluent/latest:Organization myOrganization /subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/myResourceGroup/providers/Microsoft.Confluent/organizations/myOrganization 
 ```
 
 

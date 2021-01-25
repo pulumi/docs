@@ -33,7 +33,7 @@ class MyStack : Stack
             {
                 new AzureNextGen.Insights.Latest.Inputs.MetricAlertActionArgs
                 {
-                    ActionGroupId = "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/gigtest/providers/microsoft.insights/notificationgroups/group2",
+                    ActionGroupId = "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/gigtest/providers/microsoft.insights/actiongroups/group2",
                     WebHookProperties = 
                     {
                         { "key11", "value11" },
@@ -102,7 +102,7 @@ import pulumi_azure_nextgen as azure_nextgen
 
 metric_alert = azure_nextgen.insights.latest.MetricAlert("metricAlert",
     actions=[azure_nextgen.insights.latest.MetricAlertActionArgs(
-        action_group_id="/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/gigtest/providers/microsoft.insights/notificationgroups/group2",
+        action_group_id="/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/gigtest/providers/microsoft.insights/actiongroups/group2",
         web_hook_properties={
             "key11": "value11",
             "key12": "value12",
@@ -154,7 +154,7 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const metricAlert = new azure_nextgen.insights.latest.MetricAlert("metricAlert", {
     actions: [{
-        actionGroupId: "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/gigtest/providers/microsoft.insights/notificationgroups/group2",
+        actionGroupId: "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/gigtest/providers/microsoft.insights/actiongroups/group2",
         webHookProperties: {
             key11: "value11",
             key12: "value12",
@@ -215,7 +215,7 @@ class MyStack : Stack
             {
                 new AzureNextGen.Insights.Latest.Inputs.MetricAlertActionArgs
                 {
-                    ActionGroupId = "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/gigtest/providers/microsoft.insights/notificationgroups/group2",
+                    ActionGroupId = "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/gigtest/providers/microsoft.insights/actiongroups/group2",
                     WebHookProperties = 
                     {
                         { "key11", "value11" },
@@ -260,8 +260,6 @@ class MyStack : Stack
             },
             Severity = 3,
             Tags = ,
-            TargetResourceRegion = "southcentralus",
-            TargetResourceType = "Microsoft.Compute/virtualMachines",
             WindowSize = "PT15M",
         });
     }
@@ -284,7 +282,7 @@ import pulumi_azure_nextgen as azure_nextgen
 
 metric_alert = azure_nextgen.insights.latest.MetricAlert("metricAlert",
     actions=[azure_nextgen.insights.latest.MetricAlertActionArgs(
-        action_group_id="/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/gigtest/providers/microsoft.insights/notificationgroups/group2",
+        action_group_id="/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/gigtest/providers/microsoft.insights/actiongroups/group2",
         web_hook_properties={
             "key11": "value11",
             "key12": "value12",
@@ -318,8 +316,6 @@ metric_alert = azure_nextgen.insights.latest.MetricAlert("metricAlert",
     scopes=["/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/gigtest/providers/Microsoft.Compute/virtualMachines/gigwadme"],
     severity=3,
     tags={},
-    target_resource_region="southcentralus",
-    target_resource_type="Microsoft.Compute/virtualMachines",
     window_size="PT15M")
 
 ```
@@ -334,7 +330,7 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const metricAlert = new azure_nextgen.insights.latest.MetricAlert("metricAlert", {
     actions: [{
-        actionGroupId: "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/gigtest/providers/microsoft.insights/notificationgroups/group2",
+        actionGroupId: "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/gigtest/providers/microsoft.insights/actiongroups/group2",
         webHookProperties: {
             key11: "value11",
             key12: "value12",
@@ -368,8 +364,6 @@ const metricAlert = new azure_nextgen.insights.latest.MetricAlert("metricAlert",
     scopes: ["/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/gigtest/providers/Microsoft.Compute/virtualMachines/gigwadme"],
     severity: 3,
     tags: {},
-    targetResourceRegion: "southcentralus",
-    targetResourceType: "Microsoft.Compute/virtualMachines",
     windowSize: "PT15M",
 });
 
@@ -515,7 +509,7 @@ class MyStack : Stack
             {
                 new AzureNextGen.Insights.Latest.Inputs.MetricAlertActionArgs
                 {
-                    ActionGroupId = "/subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourcegroups/gigtest/providers/microsoft.insights/notificationgroups/group2",
+                    ActionGroupId = "/subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourcegroups/gigtest/providers/microsoft.insights/actiongroups/group2",
                     WebHookProperties = 
                     {
                         { "key11", "value11" },
@@ -579,7 +573,7 @@ import pulumi_azure_nextgen as azure_nextgen
 
 metric_alert = azure_nextgen.insights.latest.MetricAlert("metricAlert",
     actions=[azure_nextgen.insights.latest.MetricAlertActionArgs(
-        action_group_id="/subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourcegroups/gigtest/providers/microsoft.insights/notificationgroups/group2",
+        action_group_id="/subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourcegroups/gigtest/providers/microsoft.insights/actiongroups/group2",
         web_hook_properties={
             "key11": "value11",
             "key12": "value12",
@@ -627,7 +621,7 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const metricAlert = new azure_nextgen.insights.latest.MetricAlert("metricAlert", {
     actions: [{
-        actionGroupId: "/subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourcegroups/gigtest/providers/microsoft.insights/notificationgroups/group2",
+        actionGroupId: "/subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourcegroups/gigtest/providers/microsoft.insights/actiongroups/group2",
         webHookProperties: {
             key11: "value11",
             key12: "value12",
@@ -684,7 +678,7 @@ class MyStack : Stack
             {
                 new AzureNextGen.Insights.Latest.Inputs.MetricAlertActionArgs
                 {
-                    ActionGroupId = "/subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourcegroups/gigtest/providers/microsoft.insights/notificationgroups/group2",
+                    ActionGroupId = "/subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourcegroups/gigtest/providers/microsoft.insights/actiongroups/group2",
                     WebHookProperties = 
                     {
                         { "key11", "value11" },
@@ -744,7 +738,7 @@ import pulumi_azure_nextgen as azure_nextgen
 
 metric_alert = azure_nextgen.insights.latest.MetricAlert("metricAlert",
     actions=[azure_nextgen.insights.latest.MetricAlertActionArgs(
-        action_group_id="/subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourcegroups/gigtest/providers/microsoft.insights/notificationgroups/group2",
+        action_group_id="/subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourcegroups/gigtest/providers/microsoft.insights/actiongroups/group2",
         web_hook_properties={
             "key11": "value11",
             "key12": "value12",
@@ -786,7 +780,7 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const metricAlert = new azure_nextgen.insights.latest.MetricAlert("metricAlert", {
     actions: [{
-        actionGroupId: "/subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourcegroups/gigtest/providers/microsoft.insights/notificationgroups/group2",
+        actionGroupId: "/subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourcegroups/gigtest/providers/microsoft.insights/actiongroups/group2",
         webHookProperties: {
             key11: "value11",
             key12: "value12",
@@ -837,7 +831,7 @@ class MyStack : Stack
             {
                 new AzureNextGen.Insights.Latest.Inputs.MetricAlertActionArgs
                 {
-                    ActionGroupId = "/subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourcegroups/gigtest/providers/microsoft.insights/notificationgroups/group2",
+                    ActionGroupId = "/subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourcegroups/gigtest/providers/microsoft.insights/actiongroups/group2",
                     WebHookProperties = 
                     {
                         { "key11", "value11" },
@@ -901,7 +895,7 @@ import pulumi_azure_nextgen as azure_nextgen
 
 metric_alert = azure_nextgen.insights.latest.MetricAlert("metricAlert",
     actions=[azure_nextgen.insights.latest.MetricAlertActionArgs(
-        action_group_id="/subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourcegroups/gigtest/providers/microsoft.insights/notificationgroups/group2",
+        action_group_id="/subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourcegroups/gigtest/providers/microsoft.insights/actiongroups/group2",
         web_hook_properties={
             "key11": "value11",
             "key12": "value12",
@@ -949,7 +943,7 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const metricAlert = new azure_nextgen.insights.latest.MetricAlert("metricAlert", {
     actions: [{
-        actionGroupId: "/subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourcegroups/gigtest/providers/microsoft.insights/notificationgroups/group2",
+        actionGroupId: "/subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourcegroups/gigtest/providers/microsoft.insights/actiongroups/group2",
         webHookProperties: {
             key11: "value11",
             key12: "value12",
@@ -1006,7 +1000,7 @@ class MyStack : Stack
             {
                 new AzureNextGen.Insights.Latest.Inputs.MetricAlertActionArgs
                 {
-                    ActionGroupId = "/subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourcegroups/gigtest/providers/microsoft.insights/notificationgroups/group2",
+                    ActionGroupId = "/subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourcegroups/gigtest/providers/microsoft.insights/actiongroups/group2",
                     WebHookProperties = 
                     {
                         { "key11", "value11" },
@@ -1069,7 +1063,7 @@ import pulumi_azure_nextgen as azure_nextgen
 
 metric_alert = azure_nextgen.insights.latest.MetricAlert("metricAlert",
     actions=[azure_nextgen.insights.latest.MetricAlertActionArgs(
-        action_group_id="/subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourcegroups/gigtest/providers/microsoft.insights/notificationgroups/group2",
+        action_group_id="/subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourcegroups/gigtest/providers/microsoft.insights/actiongroups/group2",
         web_hook_properties={
             "key11": "value11",
             "key12": "value12",
@@ -1114,7 +1108,7 @@ import * as azure_nextgen from "@pulumi/azure-nextgen";
 
 const metricAlert = new azure_nextgen.insights.latest.MetricAlert("metricAlert", {
     actions: [{
-        actionGroupId: "/subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourcegroups/gigtest/providers/microsoft.insights/notificationgroups/group2",
+        actionGroupId: "/subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourcegroups/gigtest/providers/microsoft.insights/actiongroups/group2",
         webHookProperties: {
             key11: "value11",
             key12: "value12",
@@ -1146,6 +1140,204 @@ const metricAlert = new azure_nextgen.insights.latest.MetricAlert("metricAlert",
     targetResourceRegion: "southcentralus",
     targetResourceType: "Microsoft.Compute/virtualMachines",
     windowSize: "PT15M",
+});
+
+```
+
+{{% /example %}}
+
+### Create or update an alert rules with dimensions
+{{% example csharp %}}
+```csharp
+using Pulumi;
+using AzureNextGen = Pulumi.AzureNextGen;
+
+class MyStack : Stack
+{
+    public MyStack()
+    {
+        var metricAlert = new AzureNextGen.Insights.Latest.MetricAlert("metricAlert", new AzureNextGen.Insights.Latest.MetricAlertArgs
+        {
+            Actions = 
+            {
+                new AzureNextGen.Insights.Latest.Inputs.MetricAlertActionArgs
+                {
+                    ActionGroupId = "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/gigtest/providers/microsoft.insights/actiongroups/group2",
+                    WebHookProperties = 
+                    {
+                        { "key11", "value11" },
+                        { "key12", "value12" },
+                    },
+                },
+            },
+            AutoMitigate = true,
+            Criteria = 
+            {
+                { "allOf", 
+                {
+                    
+                    {
+                        { "criterionType", "StaticThresholdCriterion" },
+                        { "dimensions", 
+                        {
+                            new AzureNextGen.Insights.Latest.Inputs.MetricDimensionArgs
+                            {
+                                Name = "ActivityName",
+                                Operator = "Include",
+                                Values = 
+                                {
+                                    "*",
+                                },
+                            },
+                            new AzureNextGen.Insights.Latest.Inputs.MetricDimensionArgs
+                            {
+                                Name = "StatusCode",
+                                Operator = "Include",
+                                Values = 
+                                {
+                                    "200",
+                                },
+                            },
+                        } },
+                        { "metricName", "Availability" },
+                        { "metricNamespace", "Microsoft.KeyVault/vaults" },
+                        { "name", "Metric1" },
+                        { "operator", "GreaterThan" },
+                        { "threshold", 55 },
+                        { "timeAggregation", "Average" },
+                    },
+                } },
+                { "odataType", "Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria" },
+            },
+            Description = "This is the description of the rule1",
+            Enabled = true,
+            EvaluationFrequency = "PT1H",
+            Location = "global",
+            ResourceGroupName = "gigtest",
+            RuleName = "MetricAlertOnMultipleDimensions",
+            Scopes = 
+            {
+                "/subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourceGroups/gigtest/providers/Microsoft.KeyVault/vaults/keyVaultResource",
+            },
+            Severity = 3,
+            Tags = ,
+            WindowSize = "P1D",
+        });
+    }
+
+}
+
+```
+
+{{% /example %}}
+
+{{% example go %}}
+Coming soon!
+{{% /example %}}
+
+{{% example python %}}
+
+```python
+import pulumi
+import pulumi_azure_nextgen as azure_nextgen
+
+metric_alert = azure_nextgen.insights.latest.MetricAlert("metricAlert",
+    actions=[azure_nextgen.insights.latest.MetricAlertActionArgs(
+        action_group_id="/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/gigtest/providers/microsoft.insights/actiongroups/group2",
+        web_hook_properties={
+            "key11": "value11",
+            "key12": "value12",
+        },
+    )],
+    auto_mitigate=True,
+    criteria={
+        "allOf": [{
+            "criterionType": "StaticThresholdCriterion",
+            "dimensions": [
+                azure_nextgen.insights.latest.MetricDimensionArgs(
+                    name="ActivityName",
+                    operator="Include",
+                    values=["*"],
+                ),
+                azure_nextgen.insights.latest.MetricDimensionArgs(
+                    name="StatusCode",
+                    operator="Include",
+                    values=["200"],
+                ),
+            ],
+            "metricName": "Availability",
+            "metricNamespace": "Microsoft.KeyVault/vaults",
+            "name": "Metric1",
+            "operator": "GreaterThan",
+            "threshold": 55,
+            "timeAggregation": "Average",
+        }],
+        "odataType": "Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria",
+    },
+    description="This is the description of the rule1",
+    enabled=True,
+    evaluation_frequency="PT1H",
+    location="global",
+    resource_group_name="gigtest",
+    rule_name="MetricAlertOnMultipleDimensions",
+    scopes=["/subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourceGroups/gigtest/providers/Microsoft.KeyVault/vaults/keyVaultResource"],
+    severity=3,
+    tags={},
+    window_size="P1D")
+
+```
+
+{{% /example %}}
+
+{{% example typescript %}}
+
+```typescript
+import * as pulumi from "@pulumi/pulumi";
+import * as azure_nextgen from "@pulumi/azure-nextgen";
+
+const metricAlert = new azure_nextgen.insights.latest.MetricAlert("metricAlert", {
+    actions: [{
+        actionGroupId: "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/gigtest/providers/microsoft.insights/actiongroups/group2",
+        webHookProperties: {
+            key11: "value11",
+            key12: "value12",
+        },
+    }],
+    autoMitigate: true,
+    criteria: {
+        allOf: [{
+            criterionType: "StaticThresholdCriterion",
+            dimensions: [
+                {
+                    name: "ActivityName",
+                    operator: "Include",
+                    values: ["*"],
+                },
+                {
+                    name: "StatusCode",
+                    operator: "Include",
+                    values: ["200"],
+                },
+            ],
+            metricName: "Availability",
+            metricNamespace: "Microsoft.KeyVault/vaults",
+            name: "Metric1",
+            operator: "GreaterThan",
+            threshold: 55,
+            timeAggregation: "Average",
+        }],
+        odataType: "Microsoft.Azure.Monitor.MultipleResourceMultipleMetricCriteria",
+    },
+    description: "This is the description of the rule1",
+    enabled: true,
+    evaluationFrequency: "PT1H",
+    location: "global",
+    resourceGroupName: "gigtest",
+    ruleName: "MetricAlertOnMultipleDimensions",
+    scopes: ["/subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourceGroups/gigtest/providers/Microsoft.KeyVault/vaults/keyVaultResource"],
+    severity: 3,
+    tags: {},
+    windowSize: "P1D",
 });
 
 ```
@@ -1346,15 +1538,6 @@ The MetricAlert resource accepts the following [input]({{< relref "/docs/intro/c
     <dd>{{% md %}}defines the specific alert criteria information.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
-        <span id="description_csharp">
-<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}the description of the metric alert that will be included in the alert email.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="enabled_csharp">
 <a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
 </span>
@@ -1400,6 +1583,15 @@ The MetricAlert resource accepts the following [input]({{< relref "/docs/intro/c
     <dd>{{% md %}}The name of the rule.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
+        <span id="scopes_csharp">
+<a href="#scopes_csharp" style="color: inherit; text-decoration: inherit;">Scopes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}the list of resource id's that this metric alert is scoped to.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
         <span id="severity_csharp">
 <a href="#severity_csharp" style="color: inherit; text-decoration: inherit;">Severity</a>
 </span>
@@ -1436,13 +1628,13 @@ The MetricAlert resource accepts the following [input]({{< relref "/docs/intro/c
     <dd>{{% md %}}the flag that indicates whether the alert should be auto resolved or not. The default is true.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="scopes_csharp">
-<a href="#scopes_csharp" style="color: inherit; text-decoration: inherit;">Scopes</a>
+        <span id="description_csharp">
+<a href="#description_csharp" style="color: inherit; text-decoration: inherit;">Description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the list of resource id's that this metric alert is scoped to.{{% /md %}}</dd>
+    <dd>{{% md %}}the description of the metric alert that will be included in the alert email.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tags_csharp">
@@ -1460,7 +1652,7 @@ The MetricAlert resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the region of the target resource(s) on which the alert is created/updated. Mandatory for MultipleResourceMultipleMetricCriteria.{{% /md %}}</dd>
+    <dd>{{% md %}}the region of the target resource(s) on which the alert is created/updated. Mandatory if the scope contains a subscription, resource group, or more than one resource.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="targetresourcetype_csharp">
@@ -1469,7 +1661,7 @@ The MetricAlert resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the resource type of the target resource(s) on which the alert is created/updated. Mandatory for MultipleResourceMultipleMetricCriteria.{{% /md %}}</dd>
+    <dd>{{% md %}}the resource type of the target resource(s) on which the alert is created/updated. Mandatory if the scope contains a subscription, resource group, or more than one resource.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1485,15 +1677,6 @@ The MetricAlert resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#metricalertmultipleresourcemultiplemetriccriteria">Metric<wbr>Alert<wbr>Multiple<wbr>Resource<wbr>Multiple<wbr>Metric<wbr>Criteria</a> | <a href="#metricalertsingleresourcemultiplemetriccriteria">Metric<wbr>Alert<wbr>Single<wbr>Resource<wbr>Multiple<wbr>Metric<wbr>Criteria</a> | <a href="#webtestlocationavailabilitycriteria">Webtest<wbr>Location<wbr>Availability<wbr>Criteria</a></span>
     </dt>
     <dd>{{% md %}}defines the specific alert criteria information.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="description_go">
-<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}the description of the metric alert that will be included in the alert email.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="enabled_go">
@@ -1541,6 +1724,15 @@ The MetricAlert resource accepts the following [input]({{< relref "/docs/intro/c
     <dd>{{% md %}}The name of the rule.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
+        <span id="scopes_go">
+<a href="#scopes_go" style="color: inherit; text-decoration: inherit;">Scopes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}the list of resource id's that this metric alert is scoped to.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
         <span id="severity_go">
 <a href="#severity_go" style="color: inherit; text-decoration: inherit;">Severity</a>
 </span>
@@ -1577,13 +1769,13 @@ The MetricAlert resource accepts the following [input]({{< relref "/docs/intro/c
     <dd>{{% md %}}the flag that indicates whether the alert should be auto resolved or not. The default is true.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="scopes_go">
-<a href="#scopes_go" style="color: inherit; text-decoration: inherit;">Scopes</a>
+        <span id="description_go">
+<a href="#description_go" style="color: inherit; text-decoration: inherit;">Description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the list of resource id's that this metric alert is scoped to.{{% /md %}}</dd>
+    <dd>{{% md %}}the description of the metric alert that will be included in the alert email.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tags_go">
@@ -1601,7 +1793,7 @@ The MetricAlert resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the region of the target resource(s) on which the alert is created/updated. Mandatory for MultipleResourceMultipleMetricCriteria.{{% /md %}}</dd>
+    <dd>{{% md %}}the region of the target resource(s) on which the alert is created/updated. Mandatory if the scope contains a subscription, resource group, or more than one resource.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="targetresourcetype_go">
@@ -1610,7 +1802,7 @@ The MetricAlert resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the resource type of the target resource(s) on which the alert is created/updated. Mandatory for MultipleResourceMultipleMetricCriteria.{{% /md %}}</dd>
+    <dd>{{% md %}}the resource type of the target resource(s) on which the alert is created/updated. Mandatory if the scope contains a subscription, resource group, or more than one resource.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1626,15 +1818,6 @@ The MetricAlert resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#metricalertmultipleresourcemultiplemetriccriteria">Metric<wbr>Alert<wbr>Multiple<wbr>Resource<wbr>Multiple<wbr>Metric<wbr>Criteria</a> | <a href="#metricalertsingleresourcemultiplemetriccriteria">Metric<wbr>Alert<wbr>Single<wbr>Resource<wbr>Multiple<wbr>Metric<wbr>Criteria</a> | <a href="#webtestlocationavailabilitycriteria">Webtest<wbr>Location<wbr>Availability<wbr>Criteria</a></span>
     </dt>
     <dd>{{% md %}}defines the specific alert criteria information.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="description_nodejs">
-<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}the description of the metric alert that will be included in the alert email.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="enabled_nodejs">
@@ -1682,6 +1865,15 @@ The MetricAlert resource accepts the following [input]({{< relref "/docs/intro/c
     <dd>{{% md %}}The name of the rule.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
+        <span id="scopes_nodejs">
+<a href="#scopes_nodejs" style="color: inherit; text-decoration: inherit;">scopes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}the list of resource id's that this metric alert is scoped to.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
         <span id="severity_nodejs">
 <a href="#severity_nodejs" style="color: inherit; text-decoration: inherit;">severity</a>
 </span>
@@ -1718,13 +1910,13 @@ The MetricAlert resource accepts the following [input]({{< relref "/docs/intro/c
     <dd>{{% md %}}the flag that indicates whether the alert should be auto resolved or not. The default is true.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="scopes_nodejs">
-<a href="#scopes_nodejs" style="color: inherit; text-decoration: inherit;">scopes</a>
+        <span id="description_nodejs">
+<a href="#description_nodejs" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
+        <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the list of resource id's that this metric alert is scoped to.{{% /md %}}</dd>
+    <dd>{{% md %}}the description of the metric alert that will be included in the alert email.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tags_nodejs">
@@ -1742,7 +1934,7 @@ The MetricAlert resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the region of the target resource(s) on which the alert is created/updated. Mandatory for MultipleResourceMultipleMetricCriteria.{{% /md %}}</dd>
+    <dd>{{% md %}}the region of the target resource(s) on which the alert is created/updated. Mandatory if the scope contains a subscription, resource group, or more than one resource.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="targetresourcetype_nodejs">
@@ -1751,7 +1943,7 @@ The MetricAlert resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}the resource type of the target resource(s) on which the alert is created/updated. Mandatory for MultipleResourceMultipleMetricCriteria.{{% /md %}}</dd>
+    <dd>{{% md %}}the resource type of the target resource(s) on which the alert is created/updated. Mandatory if the scope contains a subscription, resource group, or more than one resource.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1767,15 +1959,6 @@ The MetricAlert resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type"><a href="#metricalertmultipleresourcemultiplemetriccriteria">Metric<wbr>Alert<wbr>Multiple<wbr>Resource<wbr>Multiple<wbr>Metric<wbr>Criteria<wbr>Args</a> | <a href="#metricalertsingleresourcemultiplemetriccriteria">Metric<wbr>Alert<wbr>Single<wbr>Resource<wbr>Multiple<wbr>Metric<wbr>Criteria<wbr>Args</a> | <a href="#webtestlocationavailabilitycriteria">Webtest<wbr>Location<wbr>Availability<wbr>Criteria<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}defines the specific alert criteria information.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="description_python">
-<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}the description of the metric alert that will be included in the alert email.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="enabled_python">
@@ -1823,6 +2006,15 @@ The MetricAlert resource accepts the following [input]({{< relref "/docs/intro/c
     <dd>{{% md %}}The name of the rule.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
+        <span id="scopes_python">
+<a href="#scopes_python" style="color: inherit; text-decoration: inherit;">scopes</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}the list of resource id's that this metric alert is scoped to.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
         <span id="severity_python">
 <a href="#severity_python" style="color: inherit; text-decoration: inherit;">severity</a>
 </span>
@@ -1859,13 +2051,13 @@ The MetricAlert resource accepts the following [input]({{< relref "/docs/intro/c
     <dd>{{% md %}}the flag that indicates whether the alert should be auto resolved or not. The default is true.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="scopes_python">
-<a href="#scopes_python" style="color: inherit; text-decoration: inherit;">scopes</a>
+        <span id="description_python">
+<a href="#description_python" style="color: inherit; text-decoration: inherit;">description</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
+        <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}the list of resource id's that this metric alert is scoped to.{{% /md %}}</dd>
+    <dd>{{% md %}}the description of the metric alert that will be included in the alert email.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tags_python">
@@ -1883,7 +2075,7 @@ The MetricAlert resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}the region of the target resource(s) on which the alert is created/updated. Mandatory for MultipleResourceMultipleMetricCriteria.{{% /md %}}</dd>
+    <dd>{{% md %}}the region of the target resource(s) on which the alert is created/updated. Mandatory if the scope contains a subscription, resource group, or more than one resource.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="target_resource_type_python">
@@ -1892,7 +2084,7 @@ The MetricAlert resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}the resource type of the target resource(s) on which the alert is created/updated. Mandatory for MultipleResourceMultipleMetricCriteria.{{% /md %}}</dd>
+    <dd>{{% md %}}the resource type of the target resource(s) on which the alert is created/updated. Mandatory if the scope contains a subscription, resource group, or more than one resource.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -1915,6 +2107,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="ismigrated_csharp">
+<a href="#ismigrated_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Migrated</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}the value indicating whether this alert rule is migrated.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="lastupdatedtime_csharp">
@@ -1959,6 +2160,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="ismigrated_go">
+<a href="#ismigrated_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Migrated</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}the value indicating whether this alert rule is migrated.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="lastupdatedtime_go">
 <a href="#lastupdatedtime_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Updated<wbr>Time</a>
 </span>
@@ -1999,6 +2209,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="ismigrated_nodejs">
+<a href="#ismigrated_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Migrated</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}the value indicating whether this alert rule is migrated.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="lastupdatedtime_nodejs">
@@ -2043,6 +2262,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="is_migrated_python">
+<a href="#is_migrated_python" style="color: inherit; text-decoration: inherit;">is_<wbr>migrated</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}the value indicating whether this alert rule is migrated.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="last_updated_time_python">
 <a href="#last_updated_time_python" style="color: inherit; text-decoration: inherit;">last_<wbr>updated_<wbr>time</a>
 </span>
@@ -2081,7 +2309,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 
 
-<h4 id="aggregationtype">Aggregation<wbr>Type</h4>
+<h4 id="aggregationtypeenum">Aggregation<wbr>Type<wbr>Enum</h4>
 
 {{% choosable language csharp %}}
 <dl class="tabular">
@@ -2100,15 +2328,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
 {{% choosable language go %}}
 <dl class="tabular">
-    <dt>Aggregation<wbr>Type<wbr>Average</dt>
+    <dt>Aggregation<wbr>Type<wbr>Enum<wbr>Average</dt>
     <dd>Average</dd>
-    <dt>Aggregation<wbr>Type<wbr>Count</dt>
+    <dt>Aggregation<wbr>Type<wbr>Enum<wbr>Count</dt>
     <dd>Count</dd>
-    <dt>Aggregation<wbr>Type<wbr>Minimum</dt>
+    <dt>Aggregation<wbr>Type<wbr>Enum<wbr>Minimum</dt>
     <dd>Minimum</dd>
-    <dt>Aggregation<wbr>Type<wbr>Maximum</dt>
+    <dt>Aggregation<wbr>Type<wbr>Enum<wbr>Maximum</dt>
     <dd>Maximum</dd>
-    <dt>Aggregation<wbr>Type<wbr>Total</dt>
+    <dt>Aggregation<wbr>Type<wbr>Enum<wbr>Total</dt>
     <dd>Total</dd>
 </dl>
 {{% /choosable %}}
@@ -2199,7 +2427,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timeaggregation_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Aggregation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#aggregationtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Aggregation<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#aggregationtypeenum">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Aggregation<wbr>Type<wbr>Enum</a></span>
     </dt>
     <dd>{{% md %}}the criteria time aggregation types.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2295,7 +2523,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timeaggregation_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Aggregation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#aggregationtype">Aggregation<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#aggregationtypeenum">Aggregation<wbr>Type<wbr>Enum</a></span>
     </dt>
     <dd>{{% md %}}the criteria time aggregation types.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2391,7 +2619,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timeaggregation_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Aggregation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#aggregationtype">Aggregation<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#aggregationtypeenum">Aggregation<wbr>Type<wbr>Enum</a></span>
     </dt>
     <dd>{{% md %}}the criteria time aggregation types.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -2487,7 +2715,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#time_aggregation_python" style="color: inherit; text-decoration: inherit;">time_<wbr>aggregation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#aggregationtype">Aggregation<wbr>Type</a></span>
+        <span class="property-type">str | <a href="#aggregationtypeenum">Aggregation<wbr>Type<wbr>Enum</a></span>
     </dt>
     <dd>{{% md %}}the criteria time aggregation types.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3225,7 +3453,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}The properties of a webhook object.{{% /md %}}</dd>
+    <dd>{{% md %}}This field allows specifying custom properties, which would be appended to the alert payload sent as input to the webhook.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -3249,7 +3477,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}The properties of a webhook object.{{% /md %}}</dd>
+    <dd>{{% md %}}This field allows specifying custom properties, which would be appended to the alert payload sent as input to the webhook.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -3273,7 +3501,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}The properties of a webhook object.{{% /md %}}</dd>
+    <dd>{{% md %}}This field allows specifying custom properties, which would be appended to the alert payload sent as input to the webhook.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -3297,7 +3525,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}The properties of a webhook object.{{% /md %}}</dd>
+    <dd>{{% md %}}This field allows specifying custom properties, which would be appended to the alert payload sent as input to the webhook.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -3323,7 +3551,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Dictionary&lt;string, string&gt;</span>
     </dt>
-    <dd>{{% md %}}The properties of a webhook object.{{% /md %}}</dd>
+    <dd>{{% md %}}This field allows specifying custom properties, which would be appended to the alert payload sent as input to the webhook.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -3347,7 +3575,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">map[string]string</span>
     </dt>
-    <dd>{{% md %}}The properties of a webhook object.{{% /md %}}</dd>
+    <dd>{{% md %}}This field allows specifying custom properties, which would be appended to the alert payload sent as input to the webhook.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -3371,7 +3599,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">{[key: string]: string}</span>
     </dt>
-    <dd>{{% md %}}The properties of a webhook object.{{% /md %}}</dd>
+    <dd>{{% md %}}This field allows specifying custom properties, which would be appended to the alert payload sent as input to the webhook.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -3395,7 +3623,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">Mapping[str, str]</span>
     </dt>
-    <dd>{{% md %}}The properties of a webhook object.{{% /md %}}</dd>
+    <dd>{{% md %}}This field allows specifying custom properties, which would be appended to the alert payload sent as input to the webhook.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -3694,7 +3922,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timeaggregation_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Aggregation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#aggregationtype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Aggregation<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#aggregationtypeenum">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Insights.<wbr>Aggregation<wbr>Type<wbr>Enum</a></span>
     </dt>
     <dd>{{% md %}}the criteria time aggregation types.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3772,7 +4000,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timeaggregation_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Aggregation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#aggregationtype">Aggregation<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#aggregationtypeenum">Aggregation<wbr>Type<wbr>Enum</a></span>
     </dt>
     <dd>{{% md %}}the criteria time aggregation types.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3850,7 +4078,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#timeaggregation_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Aggregation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#aggregationtype">Aggregation<wbr>Type</a></span>
+        <span class="property-type">string | <a href="#aggregationtypeenum">Aggregation<wbr>Type<wbr>Enum</a></span>
     </dt>
     <dd>{{% md %}}the criteria time aggregation types.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -3928,7 +4156,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 <a href="#time_aggregation_python" style="color: inherit; text-decoration: inherit;">time_<wbr>aggregation</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#aggregationtype">Aggregation<wbr>Type</a></span>
+        <span class="property-type">str | <a href="#aggregationtypeenum">Aggregation<wbr>Type<wbr>Enum</a></span>
     </dt>
     <dd>{{% md %}}the criteria time aggregation types.{{% /md %}}</dd>
     <dt class="property-optional"
@@ -4846,7 +5074,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:insights/latest:MetricAlert webtest-name-example /subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourceGroups/gigtest/providers/providers/microsoft.insights/metricalerts/MetricAlertAtSubscriptionLevel 
+$ pulumi import azure-nextgen:insights/latest:MetricAlert webtest-name-example /subscriptions/14ddf0c5-77c5-4b53-84f6-e1fa43ad68f7/resourceGroups/gigtest/providers/providers/microsoft.insights/metricalerts/MetricAlertWithDimensions 
 ```
 
 

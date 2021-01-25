@@ -188,7 +188,7 @@ The following output properties are available:
 <a href="#previouskeys_csharp" style="color: inherit; text-decoration: inherit;">Previous<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultandkeyreferenceresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Outputs.<wbr>Key<wbr>Vault<wbr>And<wbr>Key<wbr>Reference<wbr>Response&gt;</a></span>
+        <span class="property-type"><a href="#keyfordiskencryptionsetresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Outputs.<wbr>Key<wbr>For<wbr>Disk<wbr>Encryption<wbr>Set<wbr>Response&gt;</a></span>
     </dt>
     <dd>{{% md %}}A readonly collection of key vault keys previously used by this disk encryption set while a key rotation is in progress. It will be empty if there is no ongoing key rotation.{{% /md %}}</dd>
     <dt class="property-"
@@ -215,7 +215,7 @@ The following output properties are available:
 <a href="#activekey_csharp" style="color: inherit; text-decoration: inherit;">Active<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultandkeyreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Outputs.<wbr>Key<wbr>Vault<wbr>And<wbr>Key<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#keyfordiskencryptionsetresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Outputs.<wbr>Key<wbr>For<wbr>Disk<wbr>Encryption<wbr>Set<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The key vault key which is currently used by this disk encryption set.{{% /md %}}</dd>
     <dt class="property-"
@@ -284,7 +284,7 @@ The following output properties are available:
 <a href="#previouskeys_go" style="color: inherit; text-decoration: inherit;">Previous<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultandkeyreferenceresponse">[]Key<wbr>Vault<wbr>And<wbr>Key<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#keyfordiskencryptionsetresponse">[]Key<wbr>For<wbr>Disk<wbr>Encryption<wbr>Set<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}A readonly collection of key vault keys previously used by this disk encryption set while a key rotation is in progress. It will be empty if there is no ongoing key rotation.{{% /md %}}</dd>
     <dt class="property-"
@@ -311,7 +311,7 @@ The following output properties are available:
 <a href="#activekey_go" style="color: inherit; text-decoration: inherit;">Active<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultandkeyreferenceresponse">Key<wbr>Vault<wbr>And<wbr>Key<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#keyfordiskencryptionsetresponse">Key<wbr>For<wbr>Disk<wbr>Encryption<wbr>Set<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The key vault key which is currently used by this disk encryption set.{{% /md %}}</dd>
     <dt class="property-"
@@ -380,7 +380,7 @@ The following output properties are available:
 <a href="#previouskeys_nodejs" style="color: inherit; text-decoration: inherit;">previous<wbr>Keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultandkeyreferenceresponse">Key<wbr>Vault<wbr>And<wbr>Key<wbr>Reference<wbr>Response[]</a></span>
+        <span class="property-type"><a href="#keyfordiskencryptionsetresponse">Key<wbr>For<wbr>Disk<wbr>Encryption<wbr>Set<wbr>Response[]</a></span>
     </dt>
     <dd>{{% md %}}A readonly collection of key vault keys previously used by this disk encryption set while a key rotation is in progress. It will be empty if there is no ongoing key rotation.{{% /md %}}</dd>
     <dt class="property-"
@@ -407,7 +407,7 @@ The following output properties are available:
 <a href="#activekey_nodejs" style="color: inherit; text-decoration: inherit;">active<wbr>Key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultandkeyreferenceresponse">Key<wbr>Vault<wbr>And<wbr>Key<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#keyfordiskencryptionsetresponse">Key<wbr>For<wbr>Disk<wbr>Encryption<wbr>Set<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The key vault key which is currently used by this disk encryption set.{{% /md %}}</dd>
     <dt class="property-"
@@ -476,7 +476,7 @@ The following output properties are available:
 <a href="#previous_keys_python" style="color: inherit; text-decoration: inherit;">previous_<wbr>keys</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultandkeyreferenceresponse">Sequence[Key<wbr>Vault<wbr>And<wbr>Key<wbr>Reference<wbr>Response]</a></span>
+        <span class="property-type"><a href="#keyfordiskencryptionsetresponse">Sequence[Key<wbr>For<wbr>Disk<wbr>Encryption<wbr>Set<wbr>Response]</a></span>
     </dt>
     <dd>{{% md %}}A readonly collection of key vault keys previously used by this disk encryption set while a key rotation is in progress. It will be empty if there is no ongoing key rotation.{{% /md %}}</dd>
     <dt class="property-"
@@ -503,7 +503,7 @@ The following output properties are available:
 <a href="#active_key_python" style="color: inherit; text-decoration: inherit;">active_<wbr>key</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#keyvaultandkeyreferenceresponse">Key<wbr>Vault<wbr>And<wbr>Key<wbr>Reference<wbr>Response</a></span>
+        <span class="property-type"><a href="#keyfordiskencryptionsetresponse">Key<wbr>For<wbr>Disk<wbr>Encryption<wbr>Set<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The key vault key which is currently used by this disk encryption set.{{% /md %}}</dd>
     <dt class="property-"
@@ -578,7 +578,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of Managed Identity used by the DiskEncryptionSet. Only SystemAssigned is supported.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of Managed Identity used by the DiskEncryptionSet. Only SystemAssigned is supported for new creations. Disk Encryption Sets can be updated with Identity type None during migration of subscription to a new Azure Active Directory tenant; it will cause the encrypted resources to lose access to the keys.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -611,7 +611,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of Managed Identity used by the DiskEncryptionSet. Only SystemAssigned is supported.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of Managed Identity used by the DiskEncryptionSet. Only SystemAssigned is supported for new creations. Disk Encryption Sets can be updated with Identity type None during migration of subscription to a new Azure Active Directory tenant; it will cause the encrypted resources to lose access to the keys.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -644,7 +644,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The type of Managed Identity used by the DiskEncryptionSet. Only SystemAssigned is supported.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of Managed Identity used by the DiskEncryptionSet. Only SystemAssigned is supported for new creations. Disk Encryption Sets can be updated with Identity type None during migration of subscription to a new Azure Active Directory tenant; it will cause the encrypted resources to lose access to the keys.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -677,11 +677,11 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The type of Managed Identity used by the DiskEncryptionSet. Only SystemAssigned is supported.{{% /md %}}</dd>
+    <dd>{{% md %}}The type of Managed Identity used by the DiskEncryptionSet. Only SystemAssigned is supported for new creations. Disk Encryption Sets can be updated with Identity type None during migration of subscription to a new Azure Active Directory tenant; it will cause the encrypted resources to lose access to the keys.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
-<h4 id="keyvaultandkeyreferenceresponse">Key<wbr>Vault<wbr>And<wbr>Key<wbr>Reference<wbr>Response</h4>
+<h4 id="keyfordiskencryptionsetresponse">Key<wbr>For<wbr>Disk<wbr>Encryption<wbr>Set<wbr>Response</h4>
 
 
 
@@ -699,16 +699,16 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Url pointing to a key or secret in KeyVault{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
+    <dd>{{% md %}}Fully versioned Key Url pointing to a key in KeyVault{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="sourcevault_csharp">
 <a href="#sourcevault_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sourcevaultresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Compute.<wbr>Inputs.<wbr>Source<wbr>Vault<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Resource id of the KeyVault containing the key or secret{{% /md %}}</dd>
+    <dd>{{% md %}}Resource id of the KeyVault containing the key or secret. This property is optional and cannot be used if the KeyVault subscription is not the same as the Disk Encryption Set subscription.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -723,16 +723,16 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Url pointing to a key or secret in KeyVault{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
+    <dd>{{% md %}}Fully versioned Key Url pointing to a key in KeyVault{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="sourcevault_go">
 <a href="#sourcevault_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sourcevaultresponse">Source<wbr>Vault<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Resource id of the KeyVault containing the key or secret{{% /md %}}</dd>
+    <dd>{{% md %}}Resource id of the KeyVault containing the key or secret. This property is optional and cannot be used if the KeyVault subscription is not the same as the Disk Encryption Set subscription.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -747,16 +747,16 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}Url pointing to a key or secret in KeyVault{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
+    <dd>{{% md %}}Fully versioned Key Url pointing to a key in KeyVault{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="sourcevault_nodejs">
 <a href="#sourcevault_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Vault</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sourcevaultresponse">Source<wbr>Vault<wbr>Response</a></span>
     </dt>
-    <dd>{{% md %}}Resource id of the KeyVault containing the key or secret{{% /md %}}</dd>
+    <dd>{{% md %}}Resource id of the KeyVault containing the key or secret. This property is optional and cannot be used if the KeyVault subscription is not the same as the Disk Encryption Set subscription.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -771,16 +771,16 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}Url pointing to a key or secret in KeyVault{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
+    <dd>{{% md %}}Fully versioned Key Url pointing to a key in KeyVault{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="source_vault_python">
 <a href="#source_vault_python" style="color: inherit; text-decoration: inherit;">source_<wbr>vault</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type"><a href="#sourcevaultresponse">Source<wbr>Vault<wbr>Response<wbr>Args</a></span>
     </dt>
-    <dd>{{% md %}}Resource id of the KeyVault containing the key or secret{{% /md %}}</dd>
+    <dd>{{% md %}}Resource id of the KeyVault containing the key or secret. This property is optional and cannot be used if the KeyVault subscription is not the same as the Disk Encryption Set subscription.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 

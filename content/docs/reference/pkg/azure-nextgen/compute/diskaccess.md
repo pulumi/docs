@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.compute.DiskAccess resource with
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 disk access resource.
-Latest API Version: 2020-06-30.
+Latest API Version: 2020-09-30.
 
 {{% examples %}}
 ## Example Usage

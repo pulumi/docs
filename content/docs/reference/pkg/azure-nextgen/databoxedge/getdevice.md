@@ -265,6 +265,15 @@ The following output properties are available:
     <dd>{{% md %}}The Serial Number of Data Box Edge/Gateway device.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="systemdata_csharp">
+<a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}DataBoxEdge Resource{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="timezone_csharp">
 <a href="#timezone_csharp" style="color: inherit; text-decoration: inherit;">Time<wbr>Zone</a>
 </span>
@@ -301,6 +310,15 @@ The following output properties are available:
     <dd>{{% md %}}The Description of the Data Box Edge/Gateway device.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="edgeprofile_csharp">
+<a href="#edgeprofile_csharp" style="color: inherit; text-decoration: inherit;">Edge<wbr>Profile</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#edgeprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Outputs.<wbr>Edge<wbr>Profile<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The details of Edge Profile for this resource{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="etag_csharp">
 <a href="#etag_csharp" style="color: inherit; text-decoration: inherit;">Etag</a>
 </span>
@@ -319,6 +337,24 @@ The following output properties are available:
     <dd>{{% md %}}The Data Box Edge/Gateway device name.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="identity_csharp">
+<a href="#identity_csharp" style="color: inherit; text-decoration: inherit;">Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resourceidentityresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Outputs.<wbr>Resource<wbr>Identity<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Msi identity of the resource{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="kind_csharp">
+<a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The etag for the devices.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="modeldescription_csharp">
 <a href="#modeldescription_csharp" style="color: inherit; text-decoration: inherit;">Model<wbr>Description</a>
 </span>
@@ -326,6 +362,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the Data Box Edge/Gateway device model.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="resourcemovedetails_csharp">
+<a href="#resourcemovedetails_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Move<wbr>Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resourcemovedetailsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Outputs.<wbr>Resource<wbr>Move<wbr>Details<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The details of the move operation on this resource.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="sku_csharp">
@@ -460,6 +505,15 @@ The following output properties are available:
     <dd>{{% md %}}The Serial Number of Data Box Edge/Gateway device.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="systemdata_go">
+<a href="#systemdata_go" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}DataBoxEdge Resource{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="timezone_go">
 <a href="#timezone_go" style="color: inherit; text-decoration: inherit;">Time<wbr>Zone</a>
 </span>
@@ -496,6 +550,15 @@ The following output properties are available:
     <dd>{{% md %}}The Description of the Data Box Edge/Gateway device.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="edgeprofile_go">
+<a href="#edgeprofile_go" style="color: inherit; text-decoration: inherit;">Edge<wbr>Profile</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#edgeprofileresponse">Edge<wbr>Profile<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The details of Edge Profile for this resource{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="etag_go">
 <a href="#etag_go" style="color: inherit; text-decoration: inherit;">Etag</a>
 </span>
@@ -514,6 +577,24 @@ The following output properties are available:
     <dd>{{% md %}}The Data Box Edge/Gateway device name.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="identity_go">
+<a href="#identity_go" style="color: inherit; text-decoration: inherit;">Identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resourceidentityresponse">Resource<wbr>Identity<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Msi identity of the resource{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="kind_go">
+<a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The etag for the devices.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="modeldescription_go">
 <a href="#modeldescription_go" style="color: inherit; text-decoration: inherit;">Model<wbr>Description</a>
 </span>
@@ -521,6 +602,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the Data Box Edge/Gateway device model.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="resourcemovedetails_go">
+<a href="#resourcemovedetails_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Move<wbr>Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resourcemovedetailsresponse">Resource<wbr>Move<wbr>Details<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The details of the move operation on this resource.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="sku_go">
@@ -655,6 +745,15 @@ The following output properties are available:
     <dd>{{% md %}}The Serial Number of Data Box Edge/Gateway device.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="systemdata_nodejs">
+<a href="#systemdata_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}DataBoxEdge Resource{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="timezone_nodejs">
 <a href="#timezone_nodejs" style="color: inherit; text-decoration: inherit;">time<wbr>Zone</a>
 </span>
@@ -691,6 +790,15 @@ The following output properties are available:
     <dd>{{% md %}}The Description of the Data Box Edge/Gateway device.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="edgeprofile_nodejs">
+<a href="#edgeprofile_nodejs" style="color: inherit; text-decoration: inherit;">edge<wbr>Profile</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#edgeprofileresponse">Edge<wbr>Profile<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The details of Edge Profile for this resource{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="etag_nodejs">
 <a href="#etag_nodejs" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
@@ -709,6 +817,24 @@ The following output properties are available:
     <dd>{{% md %}}The Data Box Edge/Gateway device name.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="identity_nodejs">
+<a href="#identity_nodejs" style="color: inherit; text-decoration: inherit;">identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resourceidentityresponse">Resource<wbr>Identity<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Msi identity of the resource{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="kind_nodejs">
+<a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The etag for the devices.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="modeldescription_nodejs">
 <a href="#modeldescription_nodejs" style="color: inherit; text-decoration: inherit;">model<wbr>Description</a>
 </span>
@@ -716,6 +842,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The description of the Data Box Edge/Gateway device model.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="resourcemovedetails_nodejs">
+<a href="#resourcemovedetails_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Move<wbr>Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resourcemovedetailsresponse">Resource<wbr>Move<wbr>Details<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The details of the move operation on this resource.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="sku_nodejs">
@@ -850,6 +985,15 @@ The following output properties are available:
     <dd>{{% md %}}The Serial Number of Data Box Edge/Gateway device.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="system_data_python">
+<a href="#system_data_python" style="color: inherit; text-decoration: inherit;">system_<wbr>data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}DataBoxEdge Resource{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="time_zone_python">
 <a href="#time_zone_python" style="color: inherit; text-decoration: inherit;">time_<wbr>zone</a>
 </span>
@@ -886,6 +1030,15 @@ The following output properties are available:
     <dd>{{% md %}}The Description of the Data Box Edge/Gateway device.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="edge_profile_python">
+<a href="#edge_profile_python" style="color: inherit; text-decoration: inherit;">edge_<wbr>profile</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#edgeprofileresponse">Edge<wbr>Profile<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The details of Edge Profile for this resource{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="etag_python">
 <a href="#etag_python" style="color: inherit; text-decoration: inherit;">etag</a>
 </span>
@@ -904,6 +1057,24 @@ The following output properties are available:
     <dd>{{% md %}}The Data Box Edge/Gateway device name.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="identity_python">
+<a href="#identity_python" style="color: inherit; text-decoration: inherit;">identity</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resourceidentityresponse">Resource<wbr>Identity<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Msi identity of the resource{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="kind_python">
+<a href="#kind_python" style="color: inherit; text-decoration: inherit;">kind</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The etag for the devices.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="model_description_python">
 <a href="#model_description_python" style="color: inherit; text-decoration: inherit;">model_<wbr>description</a>
 </span>
@@ -911,6 +1082,15 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The description of the Data Box Edge/Gateway device model.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="resource_move_details_python">
+<a href="#resource_move_details_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>move_<wbr>details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#resourcemovedetailsresponse">Resource<wbr>Move<wbr>Details<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The details of the move operation on this resource.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="sku_python">
@@ -937,6 +1117,706 @@ The following output properties are available:
 
 ## Supporting Types
 
+
+<h4 id="edgeprofileresponse">Edge<wbr>Profile<wbr>Response</h4>
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="subscription_csharp">
+<a href="#subscription_csharp" style="color: inherit; text-decoration: inherit;">Subscription</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#edgeprofilesubscriptionresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Edge<wbr>Profile<wbr>Subscription<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Edge Profile Subscription{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="subscription_go">
+<a href="#subscription_go" style="color: inherit; text-decoration: inherit;">Subscription</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#edgeprofilesubscriptionresponse">Edge<wbr>Profile<wbr>Subscription<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Edge Profile Subscription{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="subscription_nodejs">
+<a href="#subscription_nodejs" style="color: inherit; text-decoration: inherit;">subscription</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#edgeprofilesubscriptionresponse">Edge<wbr>Profile<wbr>Subscription<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Edge Profile Subscription{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="subscription_python">
+<a href="#subscription_python" style="color: inherit; text-decoration: inherit;">subscription</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#edgeprofilesubscriptionresponse">Edge<wbr>Profile<wbr>Subscription<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Edge Profile Subscription{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="edgeprofilesubscriptionresponse">Edge<wbr>Profile<wbr>Subscription<wbr>Response</h4>
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ARM ID of the subscription{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="locationplacementid_csharp">
+<a href="#locationplacementid_csharp" style="color: inherit; text-decoration: inherit;">Location<wbr>Placement<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="quotaid_csharp">
+<a href="#quotaid_csharp" style="color: inherit; text-decoration: inherit;">Quota<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="registeredfeatures_csharp">
+<a href="#registeredfeatures_csharp" style="color: inherit; text-decoration: inherit;">Registered<wbr>Features</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subscriptionregisteredfeaturesresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Subscription<wbr>Registered<wbr>Features<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="registrationdate_csharp">
+<a href="#registrationdate_csharp" style="color: inherit; text-decoration: inherit;">Registration<wbr>Date</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="registrationid_csharp">
+<a href="#registrationid_csharp" style="color: inherit; text-decoration: inherit;">Registration<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Edge Subscription Registration ID{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="serializeddetails_csharp">
+<a href="#serializeddetails_csharp" style="color: inherit; text-decoration: inherit;">Serialized<wbr>Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_csharp">
+<a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="subscriptionid_csharp">
+<a href="#subscriptionid_csharp" style="color: inherit; text-decoration: inherit;">Subscription<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tenantid_csharp">
+<a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ARM ID of the subscription{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="locationplacementid_go">
+<a href="#locationplacementid_go" style="color: inherit; text-decoration: inherit;">Location<wbr>Placement<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="quotaid_go">
+<a href="#quotaid_go" style="color: inherit; text-decoration: inherit;">Quota<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="registeredfeatures_go">
+<a href="#registeredfeatures_go" style="color: inherit; text-decoration: inherit;">Registered<wbr>Features</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subscriptionregisteredfeaturesresponse">[]Subscription<wbr>Registered<wbr>Features<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="registrationdate_go">
+<a href="#registrationdate_go" style="color: inherit; text-decoration: inherit;">Registration<wbr>Date</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="registrationid_go">
+<a href="#registrationid_go" style="color: inherit; text-decoration: inherit;">Registration<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Edge Subscription Registration ID{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="serializeddetails_go">
+<a href="#serializeddetails_go" style="color: inherit; text-decoration: inherit;">Serialized<wbr>Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_go">
+<a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="subscriptionid_go">
+<a href="#subscriptionid_go" style="color: inherit; text-decoration: inherit;">Subscription<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tenantid_go">
+<a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}ARM ID of the subscription{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="locationplacementid_nodejs">
+<a href="#locationplacementid_nodejs" style="color: inherit; text-decoration: inherit;">location<wbr>Placement<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="quotaid_nodejs">
+<a href="#quotaid_nodejs" style="color: inherit; text-decoration: inherit;">quota<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="registeredfeatures_nodejs">
+<a href="#registeredfeatures_nodejs" style="color: inherit; text-decoration: inherit;">registered<wbr>Features</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subscriptionregisteredfeaturesresponse">Subscription<wbr>Registered<wbr>Features<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="registrationdate_nodejs">
+<a href="#registrationdate_nodejs" style="color: inherit; text-decoration: inherit;">registration<wbr>Date</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="registrationid_nodejs">
+<a href="#registrationid_nodejs" style="color: inherit; text-decoration: inherit;">registration<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Edge Subscription Registration ID{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="serializeddetails_nodejs">
+<a href="#serializeddetails_nodejs" style="color: inherit; text-decoration: inherit;">serialized<wbr>Details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_nodejs">
+<a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="subscriptionid_nodejs">
+<a href="#subscriptionid_nodejs" style="color: inherit; text-decoration: inherit;">subscription<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tenantid_nodejs">
+<a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}ARM ID of the subscription{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="location_placement_id_python">
+<a href="#location_placement_id_python" style="color: inherit; text-decoration: inherit;">location_<wbr>placement_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="quota_id_python">
+<a href="#quota_id_python" style="color: inherit; text-decoration: inherit;">quota_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="registered_features_python">
+<a href="#registered_features_python" style="color: inherit; text-decoration: inherit;">registered_<wbr>features</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#subscriptionregisteredfeaturesresponse">Sequence[Subscription<wbr>Registered<wbr>Features<wbr>Response<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="registration_date_python">
+<a href="#registration_date_python" style="color: inherit; text-decoration: inherit;">registration_<wbr>date</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="registration_id_python">
+<a href="#registration_id_python" style="color: inherit; text-decoration: inherit;">registration_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Edge Subscription Registration ID{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="serialized_details_python">
+<a href="#serialized_details_python" style="color: inherit; text-decoration: inherit;">serialized_<wbr>details</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_python">
+<a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="subscription_id_python">
+<a href="#subscription_id_python" style="color: inherit; text-decoration: inherit;">subscription_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tenant_id_python">
+<a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="resourceidentityresponse">Resource<wbr>Identity<wbr>Response</h4>
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="principalid_csharp">
+<a href="#principalid_csharp" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Service Principal Id backing the Msi{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="tenantid_csharp">
+<a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Home Tenant Id{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Identity type{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="principalid_go">
+<a href="#principalid_go" style="color: inherit; text-decoration: inherit;">Principal<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Service Principal Id backing the Msi{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="tenantid_go">
+<a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Home Tenant Id{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Identity type{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="principalid_nodejs">
+<a href="#principalid_nodejs" style="color: inherit; text-decoration: inherit;">principal<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Service Principal Id backing the Msi{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="tenantid_nodejs">
+<a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Home Tenant Id{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Identity type{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="principal_id_python">
+<a href="#principal_id_python" style="color: inherit; text-decoration: inherit;">principal_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Service Principal Id backing the Msi{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="tenant_id_python">
+<a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Home Tenant Id{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Identity type{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="resourcemovedetailsresponse">Resource<wbr>Move<wbr>Details<wbr>Response</h4>
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="operationinprogress_csharp">
+<a href="#operationinprogress_csharp" style="color: inherit; text-decoration: inherit;">Operation<wbr>In<wbr>Progress</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Denotes whether move operation is in progress{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="operationinprogresslocktimeoutinutc_csharp">
+<a href="#operationinprogresslocktimeoutinutc_csharp" style="color: inherit; text-decoration: inherit;">Operation<wbr>In<wbr>Progress<wbr>Lock<wbr>Timeout<wbr>In<wbr>UTC</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Denotes the timeout of the operation to finish{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="operationinprogress_go">
+<a href="#operationinprogress_go" style="color: inherit; text-decoration: inherit;">Operation<wbr>In<wbr>Progress</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Denotes whether move operation is in progress{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="operationinprogresslocktimeoutinutc_go">
+<a href="#operationinprogresslocktimeoutinutc_go" style="color: inherit; text-decoration: inherit;">Operation<wbr>In<wbr>Progress<wbr>Lock<wbr>Timeout<wbr>In<wbr>UTC</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Denotes the timeout of the operation to finish{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="operationinprogress_nodejs">
+<a href="#operationinprogress_nodejs" style="color: inherit; text-decoration: inherit;">operation<wbr>In<wbr>Progress</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Denotes whether move operation is in progress{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="operationinprogresslocktimeoutinutc_nodejs">
+<a href="#operationinprogresslocktimeoutinutc_nodejs" style="color: inherit; text-decoration: inherit;">operation<wbr>In<wbr>Progress<wbr>Lock<wbr>Timeout<wbr>In<wbr>UTC</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Denotes the timeout of the operation to finish{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="operation_in_progress_python">
+<a href="#operation_in_progress_python" style="color: inherit; text-decoration: inherit;">operation_<wbr>in_<wbr>progress</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Denotes whether move operation is in progress{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="operation_in_progress_lock_timeout_in_utc_python">
+<a href="#operation_in_progress_lock_timeout_in_utc_python" style="color: inherit; text-decoration: inherit;">operation_<wbr>in_<wbr>progress_<wbr>lock_<wbr>timeout_<wbr>in_<wbr>utc</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Denotes the timeout of the operation to finish{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
 
 <h4 id="skuresponse">Sku<wbr>Response</h4>
 
@@ -1038,6 +1918,356 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The SKU tier. This is based on the SKU name.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="subscriptionregisteredfeaturesresponse">Subscription<wbr>Registered<wbr>Features<wbr>Response</h4>
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_csharp">
+<a href="#state_csharp" style="color: inherit; text-decoration: inherit;">State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_go">
+<a href="#state_go" style="color: inherit; text-decoration: inherit;">State</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_nodejs">
+<a href="#state_nodejs" style="color: inherit; text-decoration: inherit;">state</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_python">
+<a href="#state_python" style="color: inherit; text-decoration: inherit;">state</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="systemdataresponse">System<wbr>Data<wbr>Response</h4>
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="createdat_csharp">
+<a href="#createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="createdby_csharp">
+<a href="#createdby_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="createdbytype_csharp">
+<a href="#createdbytype_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedat_csharp">
+<a href="#lastmodifiedat_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>At</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedby_csharp">
+<a href="#lastmodifiedby_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedbytype_csharp">
+<a href="#lastmodifiedbytype_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="createdat_go">
+<a href="#createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="createdby_go">
+<a href="#createdby_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="createdbytype_go">
+<a href="#createdbytype_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedat_go">
+<a href="#lastmodifiedat_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>At</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedby_go">
+<a href="#lastmodifiedby_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedbytype_go">
+<a href="#lastmodifiedbytype_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="createdat_nodejs">
+<a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="createdby_nodejs">
+<a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="createdbytype_nodejs">
+<a href="#createdbytype_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedat_nodejs">
+<a href="#lastmodifiedat_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>At</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedby_nodejs">
+<a href="#lastmodifiedby_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedbytype_nodejs">
+<a href="#lastmodifiedbytype_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="created_at_python">
+<a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="created_by_python">
+<a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="created_by_type_python">
+<a href="#created_by_type_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="last_modified_at_python">
+<a href="#last_modified_at_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>at</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="last_modified_by_python">
+<a href="#last_modified_by_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="last_modified_by_type_python">
+<a href="#last_modified_by_type_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 

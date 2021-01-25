@@ -325,6 +325,15 @@ The DataExport resource accepts the following [input]({{< relref "/docs/intro/co
     <dd>{{% md %}}The destination resource ID. This can be copied from the Properties entry of the destination resource in Azure.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
+        <span id="tablenames_csharp">
+<a href="#tablenames_csharp" style="color: inherit; text-decoration: inherit;">Table<wbr>Names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">List&lt;string&gt;</span>
+    </dt>
+    <dd>{{% md %}}An array of tables to export, for example: [“Heartbeat, SecurityEvent”].{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
         <span id="workspacename_csharp">
 <a href="#workspacename_csharp" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Name</a>
 </span>
@@ -377,15 +386,6 @@ The DataExport resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date and time when the export was last modified.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="tablenames_csharp">
-<a href="#tablenames_csharp" style="color: inherit; text-decoration: inherit;">Table<wbr>Names</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">List&lt;string&gt;</span>
-    </dt>
-    <dd>{{% md %}}An array of tables to export, for example: [“Heartbeat, SecurityEvent”].{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -419,6 +419,15 @@ The DataExport resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The destination resource ID. This can be copied from the Properties entry of the destination resource in Azure.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="tablenames_go">
+<a href="#tablenames_go" style="color: inherit; text-decoration: inherit;">Table<wbr>Names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">[]string</span>
+    </dt>
+    <dd>{{% md %}}An array of tables to export, for example: [“Heartbeat, SecurityEvent”].{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="workspacename_go">
@@ -473,15 +482,6 @@ The DataExport resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date and time when the export was last modified.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="tablenames_go">
-<a href="#tablenames_go" style="color: inherit; text-decoration: inherit;">Table<wbr>Names</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">[]string</span>
-    </dt>
-    <dd>{{% md %}}An array of tables to export, for example: [“Heartbeat, SecurityEvent”].{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -515,6 +515,15 @@ The DataExport resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The destination resource ID. This can be copied from the Properties entry of the destination resource in Azure.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="tablenames_nodejs">
+<a href="#tablenames_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string[]</span>
+    </dt>
+    <dd>{{% md %}}An array of tables to export, for example: [“Heartbeat, SecurityEvent”].{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="workspacename_nodejs">
@@ -569,15 +578,6 @@ The DataExport resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Date and time when the export was last modified.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="tablenames_nodejs">
-<a href="#tablenames_nodejs" style="color: inherit; text-decoration: inherit;">table<wbr>Names</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string[]</span>
-    </dt>
-    <dd>{{% md %}}An array of tables to export, for example: [“Heartbeat, SecurityEvent”].{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -611,6 +611,15 @@ The DataExport resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The destination resource ID. This can be copied from the Properties entry of the destination resource in Azure.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="table_names_python">
+<a href="#table_names_python" style="color: inherit; text-decoration: inherit;">table_<wbr>names</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Sequence[str]</span>
+    </dt>
+    <dd>{{% md %}}An array of tables to export, for example: [“Heartbeat, SecurityEvent”].{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="workspace_name_python">
@@ -665,15 +674,6 @@ The DataExport resource accepts the following [input]({{< relref "/docs/intro/co
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Date and time when the export was last modified.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="table_names_python">
-<a href="#table_names_python" style="color: inherit; text-decoration: inherit;">table_<wbr>names</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">Sequence[str]</span>
-    </dt>
-    <dd>{{% md %}}An array of tables to export, for example: [“Heartbeat, SecurityEvent”].{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 

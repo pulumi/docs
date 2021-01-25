@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.automation.Watcher resource with
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Definition of the watcher type.
-Latest API Version: 2015-10-31.
+Latest API Version: 2019-06-01.
 
 {{% examples %}}
 ## Example Usage
@@ -365,7 +365,7 @@ The Watcher resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Azure Region where the resource lives{{% /md %}}</dd>
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="scriptname_csharp">
@@ -470,7 +470,7 @@ The Watcher resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Azure Region where the resource lives{{% /md %}}</dd>
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="scriptname_go">
@@ -575,7 +575,7 @@ The Watcher resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Azure Region where the resource lives{{% /md %}}</dd>
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="scriptname_nodejs">
@@ -680,7 +680,7 @@ The Watcher resource accepts the following [input]({{< relref "/docs/intro/conce
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Azure Region where the resource lives{{% /md %}}</dd>
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="script_name_python">

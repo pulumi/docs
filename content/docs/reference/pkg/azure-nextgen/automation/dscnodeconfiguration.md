@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.automation.DscNodeConfiguration 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Definition of the dsc node configuration.
-Latest API Version: 2018-01-15.
+Latest API Version: 2019-06-01.
 
 {{% examples %}}
 ## Example Usage

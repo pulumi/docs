@@ -12,6 +12,13 @@ meta_desc: "Documentation for the azure-nextgen.devtestlab.ArtifactSource resour
 
 Properties of an artifact source.
 Latest API Version: 2018-09-15.
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:devtestlab/latest:ArtifactSource myresource1 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevTestLab/labs/{labName}/artifactsources/{name} 
+```
 
 
 

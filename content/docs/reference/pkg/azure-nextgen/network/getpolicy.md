@@ -211,6 +211,15 @@ The following output properties are available:
     <dd>{{% md %}}Describes Routing Rules associated with this Web Application Firewall policy.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="securitypolicylinks_csharp">
+<a href="#securitypolicylinks_csharp" style="color: inherit; text-decoration: inherit;">Security<wbr>Policy<wbr>Links</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#securitypolicylinkresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Outputs.<wbr>Security<wbr>Policy<wbr>Link<wbr>Response&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}Describes Security Policy associated with this Web Application Firewall policy.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="type_csharp">
 <a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
@@ -263,6 +272,15 @@ The following output properties are available:
         <span class="property-type"><a href="#policysettingsresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Outputs.<wbr>Policy<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes settings for the policy.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="sku_csharp">
+<a href="#sku_csharp" style="color: inherit; text-decoration: inherit;">Sku</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#skuresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Network.<wbr>Outputs.<wbr>Sku<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The pricing tier of web application firewall policy. Defaults to Classic_AzureFrontDoor if not specified.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="tags_csharp">
@@ -334,6 +352,15 @@ The following output properties are available:
     <dd>{{% md %}}Describes Routing Rules associated with this Web Application Firewall policy.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="securitypolicylinks_go">
+<a href="#securitypolicylinks_go" style="color: inherit; text-decoration: inherit;">Security<wbr>Policy<wbr>Links</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#securitypolicylinkresponse">[]Security<wbr>Policy<wbr>Link<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Describes Security Policy associated with this Web Application Firewall policy.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
@@ -386,6 +413,15 @@ The following output properties are available:
         <span class="property-type"><a href="#policysettingsresponse">Policy<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes settings for the policy.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="sku_go">
+<a href="#sku_go" style="color: inherit; text-decoration: inherit;">Sku</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#skuresponse">Sku<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The pricing tier of web application firewall policy. Defaults to Classic_AzureFrontDoor if not specified.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="tags_go">
@@ -457,6 +493,15 @@ The following output properties are available:
     <dd>{{% md %}}Describes Routing Rules associated with this Web Application Firewall policy.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="securitypolicylinks_nodejs">
+<a href="#securitypolicylinks_nodejs" style="color: inherit; text-decoration: inherit;">security<wbr>Policy<wbr>Links</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#securitypolicylinkresponse">Security<wbr>Policy<wbr>Link<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}Describes Security Policy associated with this Web Application Firewall policy.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
@@ -509,6 +554,15 @@ The following output properties are available:
         <span class="property-type"><a href="#policysettingsresponse">Policy<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes settings for the policy.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="sku_nodejs">
+<a href="#sku_nodejs" style="color: inherit; text-decoration: inherit;">sku</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#skuresponse">Sku<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The pricing tier of web application firewall policy. Defaults to Classic_AzureFrontDoor if not specified.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="tags_nodejs">
@@ -580,6 +634,15 @@ The following output properties are available:
     <dd>{{% md %}}Describes Routing Rules associated with this Web Application Firewall policy.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="security_policy_links_python">
+<a href="#security_policy_links_python" style="color: inherit; text-decoration: inherit;">security_<wbr>policy_<wbr>links</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#securitypolicylinkresponse">Sequence[Security<wbr>Policy<wbr>Link<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}Describes Security Policy associated with this Web Application Firewall policy.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
@@ -632,6 +695,15 @@ The following output properties are available:
         <span class="property-type"><a href="#policysettingsresponse">Policy<wbr>Settings<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}Describes settings for the policy.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="sku_python">
+<a href="#sku_python" style="color: inherit; text-decoration: inherit;">sku</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#skuresponse">Sku<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The pricing tier of web application firewall policy. Defaults to Classic_AzureFrontDoor if not specified.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="tags_python">
@@ -2104,6 +2176,140 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="securitypolicylinkresponse">Security<wbr>Policy<wbr>Link<wbr>Response</h4>
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_csharp">
+<a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_go">
+<a href="#id_go" style="color: inherit; text-decoration: inherit;">Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_nodejs">
+<a href="#id_nodejs" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="id_python">
+<a href="#id_python" style="color: inherit; text-decoration: inherit;">id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Resource ID.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="skuresponse">Sku<wbr>Response</h4>
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the pricing tier.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the pricing tier.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the pricing tier.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Name of the pricing tier.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 

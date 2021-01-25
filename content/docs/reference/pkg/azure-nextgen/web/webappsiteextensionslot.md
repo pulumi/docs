@@ -12,6 +12,13 @@ meta_desc: "Documentation for the azure-nextgen.web.WebAppSiteExtensionSlot reso
 
 Site Extension Information.
 Latest API Version: 2020-09-01.
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:web/latest:WebAppSiteExtensionSlot myresource1 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Web/sites/{name}/slots/{slot}/siteextensions/{siteExtensionId} 
+```
 
 
 

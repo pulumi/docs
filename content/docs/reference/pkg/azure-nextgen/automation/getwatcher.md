@@ -289,7 +289,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Azure Region where the resource lives{{% /md %}}</dd>
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="scriptname_csharp">
@@ -430,7 +430,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Azure Region where the resource lives{{% /md %}}</dd>
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="scriptname_go">
@@ -571,7 +571,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The Azure Region where the resource lives{{% /md %}}</dd>
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="scriptname_nodejs">
@@ -712,7 +712,7 @@ The following output properties are available:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The Azure Region where the resource lives{{% /md %}}</dd>
+    <dd>{{% md %}}The geo-location where the resource lives{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="script_name_python">

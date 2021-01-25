@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.synapse.Workspace resource with 
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A workspace
+Latest API Version: 2020-12-01.
 
 {{% examples %}}
 ## Example Usage
@@ -26,32 +27,32 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var workspace = new AzureNextGen.Synapse.V20190601Preview.Workspace("workspace", new AzureNextGen.Synapse.V20190601Preview.WorkspaceArgs
+        var workspace = new AzureNextGen.Synapse.Latest.Workspace("workspace", new AzureNextGen.Synapse.Latest.WorkspaceArgs
         {
-            DefaultDataLakeStorage = new AzureNextGen.Synapse.V20190601Preview.Inputs.DataLakeStorageAccountDetailsArgs
+            DefaultDataLakeStorage = new AzureNextGen.Synapse.Latest.Inputs.DataLakeStorageAccountDetailsArgs
             {
                 AccountUrl = "https://accountname.dfs.core.windows.net",
                 Filesystem = "default",
             },
-            Encryption = new AzureNextGen.Synapse.V20190601Preview.Inputs.EncryptionDetailsArgs
+            Encryption = new AzureNextGen.Synapse.Latest.Inputs.EncryptionDetailsArgs
             {
-                Cmk = new AzureNextGen.Synapse.V20190601Preview.Inputs.CustomerManagedKeyDetailsArgs
+                Cmk = new AzureNextGen.Synapse.Latest.Inputs.CustomerManagedKeyDetailsArgs
                 {
-                    Key = new AzureNextGen.Synapse.V20190601Preview.Inputs.WorkspaceKeyDetailsArgs
+                    Key = new AzureNextGen.Synapse.Latest.Inputs.WorkspaceKeyDetailsArgs
                     {
                         KeyVaultUrl = "https://vault.azure.net/keys/key1",
                         Name = "default",
                     },
                 },
             },
-            Identity = new AzureNextGen.Synapse.V20190601Preview.Inputs.ManagedIdentityArgs
+            Identity = new AzureNextGen.Synapse.Latest.Inputs.ManagedIdentityArgs
             {
                 Type = "SystemAssigned",
             },
             Location = "East US",
             ManagedResourceGroupName = "workspaceManagedResourceGroupUnique",
             ManagedVirtualNetwork = "default",
-            ManagedVirtualNetworkSettings = new AzureNextGen.Synapse.V20190601Preview.Inputs.ManagedVirtualNetworkSettingsArgs
+            ManagedVirtualNetworkSettings = new AzureNextGen.Synapse.Latest.Inputs.ManagedVirtualNetworkSettingsArgs
             {
                 AllowedAadTenantIdsForLinking = 
                 {
@@ -60,7 +61,7 @@ class MyStack : Stack
                 LinkedAccessCheckOnTargetResource = false,
                 PreventDataExfiltration = false,
             },
-            PurviewConfiguration = new AzureNextGen.Synapse.V20190601Preview.Inputs.PurviewConfigurationArgs
+            PurviewConfiguration = new AzureNextGen.Synapse.Latest.Inputs.PurviewConfigurationArgs
             {
                 PurviewResourceId = "/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup1/providers/Microsoft.ProjectPurview/accounts/accountname1",
             },
@@ -72,7 +73,7 @@ class MyStack : Stack
                 { "key", "value" },
             },
             WorkspaceName = "workspace1",
-            WorkspaceRepositoryConfiguration = new AzureNextGen.Synapse.V20190601Preview.Inputs.WorkspaceRepositoryConfigurationArgs
+            WorkspaceRepositoryConfiguration = new AzureNextGen.Synapse.Latest.Inputs.WorkspaceRepositoryConfigurationArgs
             {
                 AccountName = "mygithubaccount",
                 CollaborationBranch = "master",
@@ -97,7 +98,7 @@ class MyStack : Stack
 package main
 
 import (
-	synapse "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/synapse/v20190601preview"
+	synapse "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/synapse/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -166,31 +167,31 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-workspace = azure_nextgen.synapse.v20190601preview.Workspace("workspace",
-    default_data_lake_storage=azure_nextgen.synapse.v20190601preview.DataLakeStorageAccountDetailsArgs(
+workspace = azure_nextgen.synapse.latest.Workspace("workspace",
+    default_data_lake_storage=azure_nextgen.synapse.latest.DataLakeStorageAccountDetailsArgs(
         account_url="https://accountname.dfs.core.windows.net",
         filesystem="default",
     ),
-    encryption=azure_nextgen.synapse.v20190601preview.EncryptionDetailsArgs(
-        cmk=azure_nextgen.synapse.v20190601preview.CustomerManagedKeyDetailsArgs(
-            key=azure_nextgen.synapse.v20190601preview.WorkspaceKeyDetailsArgs(
+    encryption=azure_nextgen.synapse.latest.EncryptionDetailsArgs(
+        cmk=azure_nextgen.synapse.latest.CustomerManagedKeyDetailsArgs(
+            key=azure_nextgen.synapse.latest.WorkspaceKeyDetailsArgs(
                 key_vault_url="https://vault.azure.net/keys/key1",
                 name="default",
             ),
         ),
     ),
-    identity=azure_nextgen.synapse.v20190601preview.ManagedIdentityArgs(
+    identity=azure_nextgen.synapse.latest.ManagedIdentityArgs(
         type="SystemAssigned",
     ),
     location="East US",
     managed_resource_group_name="workspaceManagedResourceGroupUnique",
     managed_virtual_network="default",
-    managed_virtual_network_settings=azure_nextgen.synapse.v20190601preview.ManagedVirtualNetworkSettingsArgs(
+    managed_virtual_network_settings=azure_nextgen.synapse.latest.ManagedVirtualNetworkSettingsArgs(
         allowed_aad_tenant_ids_for_linking=["740239CE-A25B-485B-86A0-262F29F6EBDB"],
         linked_access_check_on_target_resource=False,
         prevent_data_exfiltration=False,
     ),
-    purview_configuration=azure_nextgen.synapse.v20190601preview.PurviewConfigurationArgs(
+    purview_configuration=azure_nextgen.synapse.latest.PurviewConfigurationArgs(
         purview_resource_id="/subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup1/providers/Microsoft.ProjectPurview/accounts/accountname1",
     ),
     resource_group_name="resourceGroup1",
@@ -200,7 +201,7 @@ workspace = azure_nextgen.synapse.v20190601preview.Workspace("workspace",
         "key": "value",
     },
     workspace_name="workspace1",
-    workspace_repository_configuration=azure_nextgen.synapse.v20190601preview.WorkspaceRepositoryConfigurationArgs(
+    workspace_repository_configuration=azure_nextgen.synapse.latest.WorkspaceRepositoryConfigurationArgs(
         account_name="mygithubaccount",
         collaboration_branch="master",
         host_name="",
@@ -220,7 +221,7 @@ workspace = azure_nextgen.synapse.v20190601preview.Workspace("workspace",
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const workspace = new azure_nextgen.synapse.v20190601preview.Workspace("workspace", {
+const workspace = new azure_nextgen.synapse.latest.Workspace("workspace", {
     defaultDataLakeStorage: {
         accountUrl: "https://accountname.dfs.core.windows.net",
         filesystem: "default",
@@ -1097,6 +1098,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="adlaresourceid_csharp">
+<a href="#adlaresourceid_csharp" style="color: inherit; text-decoration: inherit;">Adla<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ADLA resource ID.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="extraproperties_csharp">
 <a href="#extraproperties_csharp" style="color: inherit; text-decoration: inherit;">Extra<wbr>Properties</a>
 </span>
@@ -1155,6 +1165,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-"
+            title="">
+        <span id="adlaresourceid_go">
+<a href="#adlaresourceid_go" style="color: inherit; text-decoration: inherit;">Adla<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ADLA resource ID.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="extraproperties_go">
@@ -1217,6 +1236,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 
     <dt class="property-"
             title="">
+        <span id="adlaresourceid_nodejs">
+<a href="#adlaresourceid_nodejs" style="color: inherit; text-decoration: inherit;">adla<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ADLA resource ID.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="extraproperties_nodejs">
 <a href="#extraproperties_nodejs" style="color: inherit; text-decoration: inherit;">extra<wbr>Properties</a>
 </span>
@@ -1275,6 +1303,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language python %}}
 <dl class="resources-properties">
 
+    <dt class="property-"
+            title="">
+        <span id="adla_resource_id_python">
+<a href="#adla_resource_id_python" style="color: inherit; text-decoration: inherit;">adla_<wbr>resource_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ADLA resource ID.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="extra_properties_python">
@@ -3436,6 +3473,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}GitHub Enterprise host name. For example: https://github.mydomain.com{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="lastcommitid_csharp">
+<a href="#lastcommitid_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Commit<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The last commit ID{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="projectname_csharp">
 <a href="#projectname_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Name</a>
 </span>
@@ -3461,6 +3507,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Root folder to use in the repository{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tenantid_csharp">
+<a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The VSTS tenant ID{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
@@ -3505,6 +3560,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}GitHub Enterprise host name. For example: https://github.mydomain.com{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="lastcommitid_go">
+<a href="#lastcommitid_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Commit<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The last commit ID{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="projectname_go">
 <a href="#projectname_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Name</a>
 </span>
@@ -3530,6 +3594,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Root folder to use in the repository{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tenantid_go">
+<a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The VSTS tenant ID{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="type_go">
@@ -3574,6 +3647,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}GitHub Enterprise host name. For example: https://github.mydomain.com{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="lastcommitid_nodejs">
+<a href="#lastcommitid_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Commit<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The last commit ID{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="projectname_nodejs">
 <a href="#projectname_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Name</a>
 </span>
@@ -3599,6 +3681,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Root folder to use in the repository{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tenantid_nodejs">
+<a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The VSTS tenant ID{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
@@ -3643,6 +3734,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}GitHub Enterprise host name. For example: https://github.mydomain.com{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="last_commit_id_python">
+<a href="#last_commit_id_python" style="color: inherit; text-decoration: inherit;">last_<wbr>commit_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The last commit ID{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="project_name_python">
 <a href="#project_name_python" style="color: inherit; text-decoration: inherit;">project_<wbr>name</a>
 </span>
@@ -3668,6 +3768,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Root folder to use in the repository{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tenant_id_python">
+<a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The VSTS tenant ID{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="type_python">
@@ -3714,6 +3823,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}GitHub Enterprise host name. For example: https://github.mydomain.com{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="lastcommitid_csharp">
+<a href="#lastcommitid_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Commit<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The last commit ID{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="projectname_csharp">
 <a href="#projectname_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Name</a>
 </span>
@@ -3739,6 +3857,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Root folder to use in the repository{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tenantid_csharp">
+<a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The VSTS tenant ID{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
@@ -3783,6 +3910,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}GitHub Enterprise host name. For example: https://github.mydomain.com{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="lastcommitid_go">
+<a href="#lastcommitid_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Commit<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The last commit ID{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="projectname_go">
 <a href="#projectname_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Name</a>
 </span>
@@ -3808,6 +3944,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Root folder to use in the repository{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tenantid_go">
+<a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The VSTS tenant ID{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="type_go">
@@ -3852,6 +3997,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}GitHub Enterprise host name. For example: https://github.mydomain.com{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="lastcommitid_nodejs">
+<a href="#lastcommitid_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Commit<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The last commit ID{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="projectname_nodejs">
 <a href="#projectname_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Name</a>
 </span>
@@ -3877,6 +4031,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Root folder to use in the repository{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tenantid_nodejs">
+<a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The VSTS tenant ID{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
@@ -3921,6 +4084,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}GitHub Enterprise host name. For example: https://github.mydomain.com{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="last_commit_id_python">
+<a href="#last_commit_id_python" style="color: inherit; text-decoration: inherit;">last_<wbr>commit_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The last commit ID{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="project_name_python">
 <a href="#project_name_python" style="color: inherit; text-decoration: inherit;">project_<wbr>name</a>
 </span>
@@ -3948,6 +4120,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Root folder to use in the repository{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="tenant_id_python">
+<a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The VSTS tenant ID{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="type_python">
 <a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
@@ -3963,7 +4144,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:synapse/v20190601preview:Workspace workspace1 /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup1/providers/Microsoft.Synapse/workspaces/workspace1 
+$ pulumi import azure-nextgen:synapse/latest:Workspace workspace1 /subscriptions/00000000-1111-2222-3333-444444444444/resourceGroups/resourceGroup1/providers/Microsoft.Synapse/workspaces/workspace1 
 ```
 
 

@@ -772,15 +772,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Property to specify whether the 'soft delete' functionality is enabled for this managed HSM pool. If it's not set to any value(true or false) when creating new managed HSM pool, it will be set to true by default. Once set to true, it cannot be reverted to false.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="hsmuri_csharp">
-<a href="#hsmuri_csharp" style="color: inherit; text-decoration: inherit;">Hsm<wbr>Uri</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The URI of the managed hsm pool for performing operations on keys.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="initialadminobjectids_csharp">
 <a href="#initialadminobjectids_csharp" style="color: inherit; text-decoration: inherit;">Initial<wbr>Admin<wbr>Object<wbr>Ids</a>
 </span>
@@ -839,15 +830,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Property to specify whether the 'soft delete' functionality is enabled for this managed HSM pool. If it's not set to any value(true or false) when creating new managed HSM pool, it will be set to true by default. Once set to true, it cannot be reverted to false.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="hsmuri_go">
-<a href="#hsmuri_go" style="color: inherit; text-decoration: inherit;">Hsm<wbr>Uri</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The URI of the managed hsm pool for performing operations on keys.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="initialadminobjectids_go">
@@ -910,15 +892,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Property to specify whether the 'soft delete' functionality is enabled for this managed HSM pool. If it's not set to any value(true or false) when creating new managed HSM pool, it will be set to true by default. Once set to true, it cannot be reverted to false.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="hsmuri_nodejs">
-<a href="#hsmuri_nodejs" style="color: inherit; text-decoration: inherit;">hsm<wbr>Uri</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The URI of the managed hsm pool for performing operations on keys.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="initialadminobjectids_nodejs">
 <a href="#initialadminobjectids_nodejs" style="color: inherit; text-decoration: inherit;">initial<wbr>Admin<wbr>Object<wbr>Ids</a>
 </span>
@@ -979,15 +952,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Property to specify whether the 'soft delete' functionality is enabled for this managed HSM pool. If it's not set to any value(true or false) when creating new managed HSM pool, it will be set to true by default. Once set to true, it cannot be reverted to false.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="hsm_uri_python">
-<a href="#hsm_uri_python" style="color: inherit; text-decoration: inherit;">hsm_<wbr>uri</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The URI of the managed hsm pool for performing operations on keys.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="initial_admin_object_ids_python">
 <a href="#initial_admin_object_ids_python" style="color: inherit; text-decoration: inherit;">initial_<wbr>admin_<wbr>object_<wbr>ids</a>
 </span>
@@ -1021,6 +985,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language csharp %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span id="hsmuri_csharp">
+<a href="#hsmuri_csharp" style="color: inherit; text-decoration: inherit;">Hsm<wbr>Uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The URI of the managed hsm pool for performing operations on keys.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="provisioningstate_csharp">
@@ -1068,15 +1041,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Property to specify whether the 'soft delete' functionality is enabled for this managed HSM pool. If it's not set to any value(true or false) when creating new managed HSM pool, it will be set to true by default. Once set to true, it cannot be reverted to false.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="hsmuri_csharp">
-<a href="#hsmuri_csharp" style="color: inherit; text-decoration: inherit;">Hsm<wbr>Uri</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The URI of the managed hsm pool for performing operations on keys.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="initialadminobjectids_csharp">
 <a href="#initialadminobjectids_csharp" style="color: inherit; text-decoration: inherit;">Initial<wbr>Admin<wbr>Object<wbr>Ids</a>
 </span>
@@ -1108,6 +1072,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span id="hsmuri_go">
+<a href="#hsmuri_go" style="color: inherit; text-decoration: inherit;">Hsm<wbr>Uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The URI of the managed hsm pool for performing operations on keys.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="provisioningstate_go">
@@ -1155,15 +1128,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Property to specify whether the 'soft delete' functionality is enabled for this managed HSM pool. If it's not set to any value(true or false) when creating new managed HSM pool, it will be set to true by default. Once set to true, it cannot be reverted to false.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="hsmuri_go">
-<a href="#hsmuri_go" style="color: inherit; text-decoration: inherit;">Hsm<wbr>Uri</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The URI of the managed hsm pool for performing operations on keys.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="initialadminobjectids_go">
 <a href="#initialadminobjectids_go" style="color: inherit; text-decoration: inherit;">Initial<wbr>Admin<wbr>Object<wbr>Ids</a>
 </span>
@@ -1195,6 +1159,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span id="hsmuri_nodejs">
+<a href="#hsmuri_nodejs" style="color: inherit; text-decoration: inherit;">hsm<wbr>Uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The URI of the managed hsm pool for performing operations on keys.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="provisioningstate_nodejs">
@@ -1242,15 +1215,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}Property to specify whether the 'soft delete' functionality is enabled for this managed HSM pool. If it's not set to any value(true or false) when creating new managed HSM pool, it will be set to true by default. Once set to true, it cannot be reverted to false.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="hsmuri_nodejs">
-<a href="#hsmuri_nodejs" style="color: inherit; text-decoration: inherit;">hsm<wbr>Uri</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The URI of the managed hsm pool for performing operations on keys.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
         <span id="initialadminobjectids_nodejs">
 <a href="#initialadminobjectids_nodejs" style="color: inherit; text-decoration: inherit;">initial<wbr>Admin<wbr>Object<wbr>Ids</a>
 </span>
@@ -1282,6 +1246,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
 {{% choosable language python %}}
 <dl class="resources-properties">
 
+    <dt class="property-required"
+            title="Required">
+        <span id="hsm_uri_python">
+<a href="#hsm_uri_python" style="color: inherit; text-decoration: inherit;">hsm_<wbr>uri</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The URI of the managed hsm pool for performing operations on keys.{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="provisioning_state_python">
@@ -1327,15 +1300,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Property to specify whether the 'soft delete' functionality is enabled for this managed HSM pool. If it's not set to any value(true or false) when creating new managed HSM pool, it will be set to true by default. Once set to true, it cannot be reverted to false.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="hsm_uri_python">
-<a href="#hsm_uri_python" style="color: inherit; text-decoration: inherit;">hsm_<wbr>uri</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The URI of the managed hsm pool for performing operations on keys.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="initial_admin_object_ids_python">

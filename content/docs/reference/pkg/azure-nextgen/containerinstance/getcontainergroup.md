@@ -1696,6 +1696,15 @@ The following output properties are available:
     <dd>{{% md %}}The port number to probe.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="httpheaders_csharp">
+<a href="#httpheaders_csharp" style="color: inherit; text-decoration: inherit;">Http<wbr>Headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#httpheadersresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Container<wbr>Instance.<wbr>Inputs.<wbr>Http<wbr>Headers<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The HTTP headers.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="path_csharp">
 <a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
 </span>
@@ -1727,6 +1736,15 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port number to probe.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="httpheaders_go">
+<a href="#httpheaders_go" style="color: inherit; text-decoration: inherit;">Http<wbr>Headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#httpheadersresponse">Http<wbr>Headers<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The HTTP headers.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="path_go">
@@ -1762,6 +1780,15 @@ The following output properties are available:
     <dd>{{% md %}}The port number to probe.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="httpheaders_nodejs">
+<a href="#httpheaders_nodejs" style="color: inherit; text-decoration: inherit;">http<wbr>Headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#httpheadersresponse">Http<wbr>Headers<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The HTTP headers.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="path_nodejs">
 <a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
 </span>
@@ -1793,6 +1820,15 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port number to probe.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="http_headers_python">
+<a href="#http_headers_python" style="color: inherit; text-decoration: inherit;">http_<wbr>headers</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#httpheadersresponse">Http<wbr>Headers<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The HTTP headers.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="path_python">
@@ -3880,6 +3916,109 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The SKU of the GPU resource.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="httpheadersresponse">Http<wbr>Headers<wbr>Response</h4>
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The header name.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="value_csharp">
+<a href="#value_csharp" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The header value.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The header name.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="value_go">
+<a href="#value_go" style="color: inherit; text-decoration: inherit;">Value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The header value.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The header name.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="value_nodejs">
+<a href="#value_nodejs" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The header value.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The header name.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="value_python">
+<a href="#value_python" style="color: inherit; text-decoration: inherit;">value</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The header value.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 

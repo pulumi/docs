@@ -105,7 +105,7 @@ const assessment = new azure_nextgen.security.latest.Assessment("assessment", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Assessment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">additional_data</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">assessment_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[SecurityAssessmentMetadataPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">partners_data</span><span class="p">:</span> <span class="nx">Optional[SecurityAssessmentPartnerDataArgs]</span> = None<span class="p">, </span><span class="nx">resource_details</span><span class="p">:</span> <span class="nx">Optional[Union[AzureResourceDetailsArgs, OnPremiseResourceDetailsArgs]]</span> = None<span class="p">, </span><span class="nx">resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[AssessmentStatusArgs]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">Assessment</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">additional_data</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">assessment_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">metadata</span><span class="p">:</span> <span class="nx">Optional[SecurityAssessmentMetadataPropertiesArgs]</span> = None<span class="p">, </span><span class="nx">partners_data</span><span class="p">:</span> <span class="nx">Optional[SecurityAssessmentPartnerDataArgs]</span> = None<span class="p">, </span><span class="nx">resource_details</span><span class="p">:</span> <span class="nx">Optional[Union[AzureResourceDetailsArgs, OnPremiseResourceDetailsArgs, OnPremiseSqlResourceDetailsArgs]]</span> = None<span class="p">, </span><span class="nx">resource_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">status</span><span class="p">:</span> <span class="nx">Optional[AssessmentStatusArgs]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -291,7 +291,7 @@ The Assessment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#resourcedetails_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureresourcedetails">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Inputs.<wbr>Azure<wbr>Resource<wbr>Details<wbr>Args</a> | <a href="#onpremiseresourcedetails">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Inputs.<wbr>On<wbr>Premise<wbr>Resource<wbr>Details<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureresourcedetails">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Inputs.<wbr>Azure<wbr>Resource<wbr>Details<wbr>Args</a> | <a href="#onpremiseresourcedetails">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Inputs.<wbr>On<wbr>Premise<wbr>Resource<wbr>Details<wbr>Args</a> | <a href="#onpremisesqlresourcedetails">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Security.<wbr>Inputs.<wbr>On<wbr>Premise<wbr>Sql<wbr>Resource<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Details of the resource that was assessed{{% /md %}}</dd>
     <dt class="property-required"
@@ -360,7 +360,7 @@ The Assessment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#resourcedetails_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureresourcedetails">Azure<wbr>Resource<wbr>Details</a> | <a href="#onpremiseresourcedetails">On<wbr>Premise<wbr>Resource<wbr>Details</a></span>
+        <span class="property-type"><a href="#azureresourcedetails">Azure<wbr>Resource<wbr>Details</a> | <a href="#onpremiseresourcedetails">On<wbr>Premise<wbr>Resource<wbr>Details</a> | <a href="#onpremisesqlresourcedetails">On<wbr>Premise<wbr>Sql<wbr>Resource<wbr>Details</a></span>
     </dt>
     <dd>{{% md %}}Details of the resource that was assessed{{% /md %}}</dd>
     <dt class="property-required"
@@ -429,7 +429,7 @@ The Assessment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#resourcedetails_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureresourcedetails">Azure<wbr>Resource<wbr>Details</a> | <a href="#onpremiseresourcedetails">On<wbr>Premise<wbr>Resource<wbr>Details</a></span>
+        <span class="property-type"><a href="#azureresourcedetails">Azure<wbr>Resource<wbr>Details</a> | <a href="#onpremiseresourcedetails">On<wbr>Premise<wbr>Resource<wbr>Details</a> | <a href="#onpremisesqlresourcedetails">On<wbr>Premise<wbr>Sql<wbr>Resource<wbr>Details</a></span>
     </dt>
     <dd>{{% md %}}Details of the resource that was assessed{{% /md %}}</dd>
     <dt class="property-required"
@@ -498,7 +498,7 @@ The Assessment resource accepts the following [input]({{< relref "/docs/intro/co
 <a href="#resource_details_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>details</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azureresourcedetails">Azure<wbr>Resource<wbr>Details<wbr>Args</a> | <a href="#onpremiseresourcedetails">On<wbr>Premise<wbr>Resource<wbr>Details<wbr>Args</a></span>
+        <span class="property-type"><a href="#azureresourcedetails">Azure<wbr>Resource<wbr>Details<wbr>Args</a> | <a href="#onpremiseresourcedetails">On<wbr>Premise<wbr>Resource<wbr>Details<wbr>Args</a> | <a href="#onpremisesqlresourcedetails">On<wbr>Premise<wbr>Sql<wbr>Resource<wbr>Details<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}Details of the resource that was assessed{{% /md %}}</dd>
     <dt class="property-required"
@@ -1706,6 +1706,490 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The name of the machine{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="source_computer_id_python">
+<a href="#source_computer_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>computer_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The oms agent Id installed on the machine{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="vmuuid_python">
+<a href="#vmuuid_python" style="color: inherit; text-decoration: inherit;">vmuuid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The unique Id of the machine{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="workspace_id_python">
+<a href="#workspace_id_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Azure resource Id of the workspace the machine is attached to{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="onpremisesqlresourcedetails">On<wbr>Premise<wbr>Sql<wbr>Resource<wbr>Details</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="databasename_csharp">
+<a href="#databasename_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Sql database name installed on the machine{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="machinename_csharp">
+<a href="#machinename_csharp" style="color: inherit; text-decoration: inherit;">Machine<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the machine{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="servername_csharp">
+<a href="#servername_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Sql server name installed on the machine{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="sourcecomputerid_csharp">
+<a href="#sourcecomputerid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Computer<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The oms agent Id installed on the machine{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="vmuuid_csharp">
+<a href="#vmuuid_csharp" style="color: inherit; text-decoration: inherit;">Vmuuid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The unique Id of the machine{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="workspaceid_csharp">
+<a href="#workspaceid_csharp" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Azure resource Id of the workspace the machine is attached to{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="databasename_go">
+<a href="#databasename_go" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Sql database name installed on the machine{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="machinename_go">
+<a href="#machinename_go" style="color: inherit; text-decoration: inherit;">Machine<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the machine{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="servername_go">
+<a href="#servername_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Sql server name installed on the machine{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="sourcecomputerid_go">
+<a href="#sourcecomputerid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Computer<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The oms agent Id installed on the machine{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="vmuuid_go">
+<a href="#vmuuid_go" style="color: inherit; text-decoration: inherit;">Vmuuid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The unique Id of the machine{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="workspaceid_go">
+<a href="#workspaceid_go" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Azure resource Id of the workspace the machine is attached to{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="databasename_nodejs">
+<a href="#databasename_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Sql database name installed on the machine{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="machinename_nodejs">
+<a href="#machinename_nodejs" style="color: inherit; text-decoration: inherit;">machine<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the machine{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="servername_nodejs">
+<a href="#servername_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Sql server name installed on the machine{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="sourcecomputerid_nodejs">
+<a href="#sourcecomputerid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Computer<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The oms agent Id installed on the machine{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="vmuuid_nodejs">
+<a href="#vmuuid_nodejs" style="color: inherit; text-decoration: inherit;">vmuuid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The unique Id of the machine{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="workspaceid_nodejs">
+<a href="#workspaceid_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Azure resource Id of the workspace the machine is attached to{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="database_name_python">
+<a href="#database_name_python" style="color: inherit; text-decoration: inherit;">database_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Sql database name installed on the machine{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="machine_name_python">
+<a href="#machine_name_python" style="color: inherit; text-decoration: inherit;">machine_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the machine{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="server_name_python">
+<a href="#server_name_python" style="color: inherit; text-decoration: inherit;">server_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Sql server name installed on the machine{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="source_computer_id_python">
+<a href="#source_computer_id_python" style="color: inherit; text-decoration: inherit;">source_<wbr>computer_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The oms agent Id installed on the machine{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="vmuuid_python">
+<a href="#vmuuid_python" style="color: inherit; text-decoration: inherit;">vmuuid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The unique Id of the machine{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="workspace_id_python">
+<a href="#workspace_id_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Azure resource Id of the workspace the machine is attached to{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="onpremisesqlresourcedetailsresponse">On<wbr>Premise<wbr>Sql<wbr>Resource<wbr>Details<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="databasename_csharp">
+<a href="#databasename_csharp" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Sql database name installed on the machine{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="machinename_csharp">
+<a href="#machinename_csharp" style="color: inherit; text-decoration: inherit;">Machine<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the machine{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="servername_csharp">
+<a href="#servername_csharp" style="color: inherit; text-decoration: inherit;">Server<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Sql server name installed on the machine{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="sourcecomputerid_csharp">
+<a href="#sourcecomputerid_csharp" style="color: inherit; text-decoration: inherit;">Source<wbr>Computer<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The oms agent Id installed on the machine{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="vmuuid_csharp">
+<a href="#vmuuid_csharp" style="color: inherit; text-decoration: inherit;">Vmuuid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The unique Id of the machine{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="workspaceid_csharp">
+<a href="#workspaceid_csharp" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Azure resource Id of the workspace the machine is attached to{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="databasename_go">
+<a href="#databasename_go" style="color: inherit; text-decoration: inherit;">Database<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Sql database name installed on the machine{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="machinename_go">
+<a href="#machinename_go" style="color: inherit; text-decoration: inherit;">Machine<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the machine{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="servername_go">
+<a href="#servername_go" style="color: inherit; text-decoration: inherit;">Server<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Sql server name installed on the machine{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="sourcecomputerid_go">
+<a href="#sourcecomputerid_go" style="color: inherit; text-decoration: inherit;">Source<wbr>Computer<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The oms agent Id installed on the machine{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="vmuuid_go">
+<a href="#vmuuid_go" style="color: inherit; text-decoration: inherit;">Vmuuid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The unique Id of the machine{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="workspaceid_go">
+<a href="#workspaceid_go" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Azure resource Id of the workspace the machine is attached to{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="databasename_nodejs">
+<a href="#databasename_nodejs" style="color: inherit; text-decoration: inherit;">database<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Sql database name installed on the machine{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="machinename_nodejs">
+<a href="#machinename_nodejs" style="color: inherit; text-decoration: inherit;">machine<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the machine{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="servername_nodejs">
+<a href="#servername_nodejs" style="color: inherit; text-decoration: inherit;">server<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The Sql server name installed on the machine{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="sourcecomputerid_nodejs">
+<a href="#sourcecomputerid_nodejs" style="color: inherit; text-decoration: inherit;">source<wbr>Computer<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The oms agent Id installed on the machine{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="vmuuid_nodejs">
+<a href="#vmuuid_nodejs" style="color: inherit; text-decoration: inherit;">vmuuid</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The unique Id of the machine{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="workspaceid_nodejs">
+<a href="#workspaceid_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Azure resource Id of the workspace the machine is attached to{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="database_name_python">
+<a href="#database_name_python" style="color: inherit; text-decoration: inherit;">database_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Sql database name installed on the machine{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="machine_name_python">
+<a href="#machine_name_python" style="color: inherit; text-decoration: inherit;">machine_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the machine{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="server_name_python">
+<a href="#server_name_python" style="color: inherit; text-decoration: inherit;">server_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The Sql server name installed on the machine{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="source_computer_id_python">

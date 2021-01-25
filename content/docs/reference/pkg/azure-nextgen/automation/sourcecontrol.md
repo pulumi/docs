@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.automation.SourceControl resourc
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Definition of the source control.
+Latest API Version: 2019-06-01.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var sourceControl = new AzureNextGen.Automation.V20170515Preview.SourceControl("sourceControl", new AzureNextGen.Automation.V20170515Preview.SourceControlArgs
+        var sourceControl = new AzureNextGen.Automation.Latest.SourceControl("sourceControl", new AzureNextGen.Automation.Latest.SourceControlArgs
         {
             AutoSync = true,
             AutomationAccountName = "sampleAccount9",
@@ -36,7 +37,7 @@ class MyStack : Stack
             PublishRunbook = true,
             RepoUrl = "https://sampleUser.visualstudio.com/myProject/_git/myRepository",
             ResourceGroupName = "rg",
-            SecurityToken = new AzureNextGen.Automation.V20170515Preview.Inputs.SourceControlSecurityTokenPropertiesArgs
+            SecurityToken = new AzureNextGen.Automation.Latest.Inputs.SourceControlSecurityTokenPropertiesArgs
             {
                 AccessToken = "3a326f7a0dcd343ea58fee21f2fd5fb4c1234567",
                 TokenType = "PersonalAccessToken",
@@ -58,7 +59,7 @@ class MyStack : Stack
 package main
 
 import (
-	automation "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/automation/v20170515preview"
+	automation "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/automation/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -97,7 +98,7 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-source_control = azure_nextgen.automation.v20170515preview.SourceControl("sourceControl",
+source_control = azure_nextgen.automation.latest.SourceControl("sourceControl",
     auto_sync=True,
     automation_account_name="sampleAccount9",
     branch="master",
@@ -106,7 +107,7 @@ source_control = azure_nextgen.automation.v20170515preview.SourceControl("source
     publish_runbook=True,
     repo_url="https://sampleUser.visualstudio.com/myProject/_git/myRepository",
     resource_group_name="rg",
-    security_token=azure_nextgen.automation.v20170515preview.SourceControlSecurityTokenPropertiesArgs(
+    security_token=azure_nextgen.automation.latest.SourceControlSecurityTokenPropertiesArgs(
         access_token="3a326f7a0dcd343ea58fee21f2fd5fb4c1234567",
         token_type="PersonalAccessToken",
     ),
@@ -123,7 +124,7 @@ source_control = azure_nextgen.automation.v20170515preview.SourceControl("source
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const sourceControl = new azure_nextgen.automation.v20170515preview.SourceControl("sourceControl", {
+const sourceControl = new azure_nextgen.automation.latest.SourceControl("sourceControl", {
     autoSync: true,
     automationAccountName: "sampleAccount9",
     branch: "master",
@@ -1188,7 +1189,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:automation/v20170515preview:SourceControl sampleSourceControl /subscriptions/subid/resourceGroups/rg/providers/Microsoft.Automation/automationAccounts/sampleAccount9/sourcecontrols/sampleSourceControl 
+$ pulumi import azure-nextgen:automation/latest:SourceControl sampleSourceControl /subscriptions/subid/resourceGroups/rg/providers/Microsoft.Automation/automationAccounts/sampleAccount9/sourcecontrols/sampleSourceControl 
 ```
 
 

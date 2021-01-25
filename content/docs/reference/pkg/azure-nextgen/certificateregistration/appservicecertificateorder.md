@@ -12,6 +12,13 @@ meta_desc: "Documentation for the azure-nextgen.certificateregistration.AppServi
 
 SSL certificate purchase order.
 Latest API Version: 2020-09-01.
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:certificateregistration/latest:AppServiceCertificateOrder myresource1 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.CertificateRegistration/certificateOrders/{certificateOrderName} 
+```
 
 
 

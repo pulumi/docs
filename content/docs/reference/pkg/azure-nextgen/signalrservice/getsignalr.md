@@ -175,6 +175,16 @@ The following output properties are available:
     <dd>{{% md %}}FQDN of the SignalR service instance. Format: xxx.service.signalr.net{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="hostnameprefix_csharp">
+<a href="#hostnameprefix_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Name<wbr>Prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Prefix for the hostName of the SignalR service. Retained for future use.
+The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="id_csharp">
 <a href="#id_csharp" style="color: inherit; text-decoration: inherit;">Id</a>
 </span>
@@ -270,16 +280,6 @@ When a featureFlag is not explicitly set, SignalR service will use its globally 
 But keep in mind, the default value doesn't mean "false". It varies in terms of different FeatureFlags.{{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="hostnameprefix_csharp">
-<a href="#hostnameprefix_csharp" style="color: inherit; text-decoration: inherit;">Host<wbr>Name<wbr>Prefix</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Prefix for the hostName of the SignalR service. Retained for future use.
-The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
         <span id="kind_csharp">
 <a href="#kind_csharp" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span>
@@ -356,6 +356,16 @@ The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.{{% /
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}FQDN of the SignalR service instance. Format: xxx.service.signalr.net{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="hostnameprefix_go">
+<a href="#hostnameprefix_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Name<wbr>Prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Prefix for the hostName of the SignalR service. Retained for future use.
+The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="id_go">
@@ -453,16 +463,6 @@ When a featureFlag is not explicitly set, SignalR service will use its globally 
 But keep in mind, the default value doesn't mean "false". It varies in terms of different FeatureFlags.{{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="hostnameprefix_go">
-<a href="#hostnameprefix_go" style="color: inherit; text-decoration: inherit;">Host<wbr>Name<wbr>Prefix</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Prefix for the hostName of the SignalR service. Retained for future use.
-The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
         <span id="kind_go">
 <a href="#kind_go" style="color: inherit; text-decoration: inherit;">Kind</a>
 </span>
@@ -539,6 +539,16 @@ The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.{{% /
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}FQDN of the SignalR service instance. Format: xxx.service.signalr.net{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="hostnameprefix_nodejs">
+<a href="#hostnameprefix_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Name<wbr>Prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Prefix for the hostName of the SignalR service. Retained for future use.
+The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="id_nodejs">
@@ -636,16 +646,6 @@ When a featureFlag is not explicitly set, SignalR service will use its globally 
 But keep in mind, the default value doesn't mean "false". It varies in terms of different FeatureFlags.{{% /md %}}</dd>
     <dt class="property-"
             title="">
-        <span id="hostnameprefix_nodejs">
-<a href="#hostnameprefix_nodejs" style="color: inherit; text-decoration: inherit;">host<wbr>Name<wbr>Prefix</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Prefix for the hostName of the SignalR service. Retained for future use.
-The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
         <span id="kind_nodejs">
 <a href="#kind_nodejs" style="color: inherit; text-decoration: inherit;">kind</a>
 </span>
@@ -722,6 +722,16 @@ The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.{{% /
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}FQDN of the SignalR service instance. Format: xxx.service.signalr.net{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="host_name_prefix_python">
+<a href="#host_name_prefix_python" style="color: inherit; text-decoration: inherit;">host_<wbr>name_<wbr>prefix</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Prefix for the hostName of the SignalR service. Retained for future use.
+The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="id_python">
@@ -817,16 +827,6 @@ FeatureFlags that are not included in the parameters for the update operation wi
 And the response will only include featureFlags that are explicitly set. 
 When a featureFlag is not explicitly set, SignalR service will use its globally default value. 
 But keep in mind, the default value doesn't mean "false". It varies in terms of different FeatureFlags.{{% /md %}}</dd>
-    <dt class="property-"
-            title="">
-        <span id="host_name_prefix_python">
-<a href="#host_name_prefix_python" style="color: inherit; text-decoration: inherit;">host_<wbr>name_<wbr>prefix</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Prefix for the hostName of the SignalR service. Retained for future use.
-The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="kind_python">
@@ -1597,6 +1597,15 @@ The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.{{% /
 
     <dt class="property-required"
             title="Required">
+        <span id="family_csharp">
+<a href="#family_csharp" style="color: inherit; text-decoration: inherit;">Family</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Not used. Retained for future use.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -1606,6 +1615,15 @@ The hostname will be of format: &lt;hostNamePrefix&gt;.service.signalr.net.{{% /
     <dd>{{% md %}}The name of the SKU. Required.
 
 Allowed values: Standard_S1, Free_F1{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="size_csharp">
+<a href="#size_csharp" style="color: inherit; text-decoration: inherit;">Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Not used. Retained for future use.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="capacity_csharp">
@@ -1619,24 +1637,6 @@ Allowed values: Standard_S1, Free_F1{{% /md %}}</dd>
 If present, following values are allowed:
     Free: 1
     Standard: 1,2,5,10,20,50,100{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="family_csharp">
-<a href="#family_csharp" style="color: inherit; text-decoration: inherit;">Family</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Optional string. For future use.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="size_csharp">
-<a href="#size_csharp" style="color: inherit; text-decoration: inherit;">Size</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Optional string. For future use.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tier_csharp">
@@ -1656,6 +1656,15 @@ If present, following values are allowed:
 
     <dt class="property-required"
             title="Required">
+        <span id="family_go">
+<a href="#family_go" style="color: inherit; text-decoration: inherit;">Family</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Not used. Retained for future use.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
         <span id="name_go">
 <a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -1665,6 +1674,15 @@ If present, following values are allowed:
     <dd>{{% md %}}The name of the SKU. Required.
 
 Allowed values: Standard_S1, Free_F1{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="size_go">
+<a href="#size_go" style="color: inherit; text-decoration: inherit;">Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Not used. Retained for future use.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="capacity_go">
@@ -1678,24 +1696,6 @@ Allowed values: Standard_S1, Free_F1{{% /md %}}</dd>
 If present, following values are allowed:
     Free: 1
     Standard: 1,2,5,10,20,50,100{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="family_go">
-<a href="#family_go" style="color: inherit; text-decoration: inherit;">Family</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Optional string. For future use.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="size_go">
-<a href="#size_go" style="color: inherit; text-decoration: inherit;">Size</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Optional string. For future use.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tier_go">
@@ -1715,6 +1715,15 @@ If present, following values are allowed:
 
     <dt class="property-required"
             title="Required">
+        <span id="family_nodejs">
+<a href="#family_nodejs" style="color: inherit; text-decoration: inherit;">family</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Not used. Retained for future use.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -1724,6 +1733,15 @@ If present, following values are allowed:
     <dd>{{% md %}}The name of the SKU. Required.
 
 Allowed values: Standard_S1, Free_F1{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="size_nodejs">
+<a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Not used. Retained for future use.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="capacity_nodejs">
@@ -1737,24 +1755,6 @@ Allowed values: Standard_S1, Free_F1{{% /md %}}</dd>
 If present, following values are allowed:
     Free: 1
     Standard: 1,2,5,10,20,50,100{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="family_nodejs">
-<a href="#family_nodejs" style="color: inherit; text-decoration: inherit;">family</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Optional string. For future use.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="size_nodejs">
-<a href="#size_nodejs" style="color: inherit; text-decoration: inherit;">size</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}Optional string. For future use.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tier_nodejs">
@@ -1774,6 +1774,15 @@ If present, following values are allowed:
 
     <dt class="property-required"
             title="Required">
+        <span id="family_python">
+<a href="#family_python" style="color: inherit; text-decoration: inherit;">family</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Not used. Retained for future use.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
         <span id="name_python">
 <a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -1783,6 +1792,15 @@ If present, following values are allowed:
     <dd>{{% md %}}The name of the SKU. Required.
 
 Allowed values: Standard_S1, Free_F1{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="size_python">
+<a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Not used. Retained for future use.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="capacity_python">
@@ -1796,24 +1814,6 @@ Allowed values: Standard_S1, Free_F1{{% /md %}}</dd>
 If present, following values are allowed:
     Free: 1
     Standard: 1,2,5,10,20,50,100{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="family_python">
-<a href="#family_python" style="color: inherit; text-decoration: inherit;">family</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Optional string. For future use.{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="size_python">
-<a href="#size_python" style="color: inherit; text-decoration: inherit;">size</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}Optional string. For future use.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tier_python">

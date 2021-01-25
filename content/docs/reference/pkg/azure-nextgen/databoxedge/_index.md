@@ -11,9 +11,11 @@ Explore the resources and functions of the databoxedge module in the Azure NextG
 
 <h2 id="resources">Resources</h2>
 <ul class="api">
+    <li><a href="addon" title="Addon"><span class="symbol resource"></span>Addon</a></li>
     <li><a href="bandwidthschedule" title="BandwidthSchedule"><span class="symbol resource"></span>BandwidthSchedule</a></li>
     <li><a href="container" title="Container"><span class="symbol resource"></span>Container</a></li>
     <li><a href="device" title="Device"><span class="symbol resource"></span>Device</a></li>
+    <li><a href="monitoringconfig" title="MonitoringConfig"><span class="symbol resource"></span>MonitoringConfig</a></li>
     <li><a href="order" title="Order"><span class="symbol resource"></span>Order</a></li>
     <li><a href="role" title="Role"><span class="symbol resource"></span>Role</a></li>
     <li><a href="share" title="Share"><span class="symbol resource"></span>Share</a></li>
@@ -25,10 +27,12 @@ Explore the resources and functions of the databoxedge module in the Azure NextG
 
 <h2 id="functions">Functions</h2>
 <ul class="api">
+    <li><a href="getaddon" title="GetAddon"><span class="symbol function"></span>GetAddon</a></li>
     <li><a href="getbandwidthschedule" title="GetBandwidthSchedule"><span class="symbol function"></span>GetBandwidthSchedule</a></li>
     <li><a href="getcontainer" title="GetContainer"><span class="symbol function"></span>GetContainer</a></li>
     <li><a href="getdevice" title="GetDevice"><span class="symbol function"></span>GetDevice</a></li>
     <li><a href="getdeviceextendedinformation" title="GetDeviceExtendedInformation"><span class="symbol function"></span>GetDeviceExtendedInformation</a></li>
+    <li><a href="getmonitoringconfig" title="GetMonitoringConfig"><span class="symbol function"></span>GetMonitoringConfig</a></li>
     <li><a href="getorder" title="GetOrder"><span class="symbol function"></span>GetOrder</a></li>
     <li><a href="getrole" title="GetRole"><span class="symbol function"></span>GetRole</a></li>
     <li><a href="getshare" title="GetShare"><span class="symbol function"></span>GetShare</a></li>
@@ -36,6 +40,7 @@ Explore the resources and functions of the databoxedge module in the Azure NextG
     <li><a href="getstorageaccountcredential" title="GetStorageAccountCredential"><span class="symbol function"></span>GetStorageAccountCredential</a></li>
     <li><a href="gettrigger" title="GetTrigger"><span class="symbol function"></span>GetTrigger</a></li>
     <li><a href="getuser" title="GetUser"><span class="symbol function"></span>GetUser</a></li>
+    <li><a href="listorderdcaccesscode" title="ListOrderDCAccessCode"><span class="symbol function"></span>ListOrderDCAccessCode</a></li>
 </ul>
 
 <h2 id="package-details">Package Details</h2>
@@ -45,7 +50,7 @@ Explore the resources and functions of the databoxedge module in the Azure NextG
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Version</dt>
-	<dd>0.4.0</dd>
+	<dd>0.5.0</dd>
 </dl>
 
 

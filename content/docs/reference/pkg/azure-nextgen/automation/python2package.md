@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.automation.Python2Package resour
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Definition of the module type.
-Latest API Version: 2018-06-30.
+Latest API Version: 2019-06-01.
 
 {{% examples %}}
 ## Example Usage

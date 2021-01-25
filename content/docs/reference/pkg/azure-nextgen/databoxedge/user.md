@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.databoxedge.User resource with e
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Represents a user who has access to one or more shares on the Data Box Edge/Gateway device.
-Latest API Version: 2019-08-01.
+Latest API Version: 2020-09-01.
 
 {{% examples %}}
 ## Example Usage
@@ -38,7 +38,6 @@ class MyStack : Stack
             },
             Name = "user1",
             ResourceGroupName = "GroupForEdgeAutomation",
-            ShareAccessRights = {},
             UserType = "Share",
         });
     }
@@ -70,7 +69,6 @@ func main() {
 			},
 			Name:              pulumi.String("user1"),
 			ResourceGroupName: pulumi.String("GroupForEdgeAutomation"),
-			ShareAccessRights: databoxedge.ShareAccessRightArray{},
 			UserType:          pulumi.String("Share"),
 		})
 		if err != nil {
@@ -99,7 +97,6 @@ user = azure_nextgen.databoxedge.latest.User("user",
     ),
     name="user1",
     resource_group_name="GroupForEdgeAutomation",
-    share_access_rights=[],
     user_type="Share")
 
 ```
@@ -121,7 +118,6 @@ const user = new azure_nextgen.databoxedge.latest.User("user", {
     },
     name: "user1",
     resourceGroupName: "GroupForEdgeAutomation",
-    shareAccessRights: [],
     userType: "Share",
 });
 
@@ -141,7 +137,7 @@ const user = new azure_nextgen.databoxedge.latest.User("user", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">User</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">device_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">encrypted_password</span><span class="p">:</span> <span class="nx">Optional[AsymmetricEncryptedSecretArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">share_access_rights</span><span class="p">:</span> <span class="nx">Optional[Sequence[ShareAccessRightArgs]]</span> = None<span class="p">, </span><span class="nx">user_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, UserType]]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">User</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">device_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">encrypted_password</span><span class="p">:</span> <span class="nx">Optional[AsymmetricEncryptedSecretArgs]</span> = None<span class="p">, </span><span class="nx">name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">user_type</span><span class="p">:</span> <span class="nx">Optional[Union[str, UserType]]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -339,15 +335,6 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource group name.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="usertype_csharp">
-<a href="#usertype_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#usertype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>User<wbr>Type</a></span>
-    </dt>
-    <dd>{{% md %}}Type of the user.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="encryptedpassword_csharp">
@@ -359,13 +346,13 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
     <dd>{{% md %}}The password details.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="shareaccessrights_csharp">
-<a href="#shareaccessrights_csharp" style="color: inherit; text-decoration: inherit;">Share<wbr>Access<wbr>Rights</a>
+        <span id="usertype_csharp">
+<a href="#usertype_csharp" style="color: inherit; text-decoration: inherit;">User<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#shareaccessright">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Inputs.<wbr>Share<wbr>Access<wbr>Right<wbr>Args&gt;</a></span>
+        <span class="property-type">string | <a href="#usertype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>User<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}List of shares that the user has rights on. This field should not be specified during user creation.{{% /md %}}</dd>
+    <dd>{{% md %}}Type of the user.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -399,15 +386,6 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource group name.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="usertype_go">
-<a href="#usertype_go" style="color: inherit; text-decoration: inherit;">User<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#usertype">User<wbr>Type</a></span>
-    </dt>
-    <dd>{{% md %}}Type of the user.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="encryptedpassword_go">
@@ -419,13 +397,13 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
     <dd>{{% md %}}The password details.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="shareaccessrights_go">
-<a href="#shareaccessrights_go" style="color: inherit; text-decoration: inherit;">Share<wbr>Access<wbr>Rights</a>
+        <span id="usertype_go">
+<a href="#usertype_go" style="color: inherit; text-decoration: inherit;">User<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#shareaccessright">[]Share<wbr>Access<wbr>Right</a></span>
+        <span class="property-type">string | <a href="#usertype">User<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}List of shares that the user has rights on. This field should not be specified during user creation.{{% /md %}}</dd>
+    <dd>{{% md %}}Type of the user.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -459,15 +437,6 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The resource group name.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="usertype_nodejs">
-<a href="#usertype_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#usertype">User<wbr>Type</a></span>
-    </dt>
-    <dd>{{% md %}}Type of the user.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="encryptedpassword_nodejs">
@@ -479,13 +448,13 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
     <dd>{{% md %}}The password details.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="shareaccessrights_nodejs">
-<a href="#shareaccessrights_nodejs" style="color: inherit; text-decoration: inherit;">share<wbr>Access<wbr>Rights</a>
+        <span id="usertype_nodejs">
+<a href="#usertype_nodejs" style="color: inherit; text-decoration: inherit;">user<wbr>Type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#shareaccessright">Share<wbr>Access<wbr>Right[]</a></span>
+        <span class="property-type">string | <a href="#usertype">User<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}List of shares that the user has rights on. This field should not be specified during user creation.{{% /md %}}</dd>
+    <dd>{{% md %}}Type of the user.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -519,15 +488,6 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The resource group name.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="user_type_python">
-<a href="#user_type_python" style="color: inherit; text-decoration: inherit;">user_<wbr>type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#usertype">User<wbr>Type</a></span>
-    </dt>
-    <dd>{{% md %}}Type of the user.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="encrypted_password_python">
@@ -539,13 +499,13 @@ The User resource accepts the following [input]({{< relref "/docs/intro/concepts
     <dd>{{% md %}}The password details.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
-        <span id="share_access_rights_python">
-<a href="#share_access_rights_python" style="color: inherit; text-decoration: inherit;">share_<wbr>access_<wbr>rights</a>
+        <span id="user_type_python">
+<a href="#user_type_python" style="color: inherit; text-decoration: inherit;">user_<wbr>type</a>
 </span>
         <span class="property-indicator"></span>
-        <span class="property-type"><a href="#shareaccessright">Sequence[Share<wbr>Access<wbr>Right<wbr>Args]</a></span>
+        <span class="property-type">str | <a href="#usertype">User<wbr>Type</a></span>
     </dt>
-    <dd>{{% md %}}List of shares that the user has rights on. This field should not be specified during user creation.{{% /md %}}</dd>
+    <dd>{{% md %}}Type of the user.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -568,6 +528,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="shareaccessrights_csharp">
+<a href="#shareaccessrights_csharp" style="color: inherit; text-decoration: inherit;">Share<wbr>Access<wbr>Rights</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#shareaccessrightresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Outputs.<wbr>Share<wbr>Access<wbr>Right<wbr>Response&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of shares that the user has rights on. This field should not be specified during user creation.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="systemdata_csharp">
+<a href="#systemdata_csharp" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemdataresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Outputs.<wbr>System<wbr>Data<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}User in DataBoxEdge Resource{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="type_csharp">
@@ -594,6 +572,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="shareaccessrights_go">
+<a href="#shareaccessrights_go" style="color: inherit; text-decoration: inherit;">Share<wbr>Access<wbr>Rights</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#shareaccessrightresponse">[]Share<wbr>Access<wbr>Right<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}List of shares that the user has rights on. This field should not be specified during user creation.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="systemdata_go">
+<a href="#systemdata_go" style="color: inherit; text-decoration: inherit;">System<wbr>Data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}User in DataBoxEdge Resource{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="type_go">
 <a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
 </span>
@@ -618,6 +614,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="shareaccessrights_nodejs">
+<a href="#shareaccessrights_nodejs" style="color: inherit; text-decoration: inherit;">share<wbr>Access<wbr>Rights</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#shareaccessrightresponse">Share<wbr>Access<wbr>Right<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of shares that the user has rights on. This field should not be specified during user creation.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="systemdata_nodejs">
+<a href="#systemdata_nodejs" style="color: inherit; text-decoration: inherit;">system<wbr>Data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}User in DataBoxEdge Resource{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="type_nodejs">
 <a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
 </span>
@@ -640,6 +654,24 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="share_access_rights_python">
+<a href="#share_access_rights_python" style="color: inherit; text-decoration: inherit;">share_<wbr>access_<wbr>rights</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#shareaccessrightresponse">Sequence[Share<wbr>Access<wbr>Right<wbr>Response]</a></span>
+    </dt>
+    <dd>{{% md %}}List of shares that the user has rights on. This field should not be specified during user creation.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="system_data_python">
+<a href="#system_data_python" style="color: inherit; text-decoration: inherit;">system_<wbr>data</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#systemdataresponse">System<wbr>Data<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}User in DataBoxEdge Resource{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="type_python">
@@ -976,104 +1008,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 </dl>
 {{% /choosable %}}
 
-<h4 id="shareaccessright">Share<wbr>Access<wbr>Right</h4>
-
-{{% choosable language csharp %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="accesstype_csharp">
-<a href="#accesstype_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#shareaccesstype">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Box<wbr>Edge.<wbr>Share<wbr>Access<wbr>Type</a></span>
-    </dt>
-    <dd>{{% md %}}Type of access to be allowed on the share for this user.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="shareid_csharp">
-<a href="#shareid_csharp" style="color: inherit; text-decoration: inherit;">Share<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The share ID.{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language go %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="accesstype_go">
-<a href="#accesstype_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#shareaccesstype">Share<wbr>Access<wbr>Type</a></span>
-    </dt>
-    <dd>{{% md %}}Type of access to be allowed on the share for this user.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="shareid_go">
-<a href="#shareid_go" style="color: inherit; text-decoration: inherit;">Share<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The share ID.{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language nodejs %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="accesstype_nodejs">
-<a href="#accesstype_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string | <a href="#shareaccesstype">Share<wbr>Access<wbr>Type</a></span>
-    </dt>
-    <dd>{{% md %}}Type of access to be allowed on the share for this user.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="shareid_nodejs">
-<a href="#shareid_nodejs" style="color: inherit; text-decoration: inherit;">share<wbr>Id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">string</span>
-    </dt>
-    <dd>{{% md %}}The share ID.{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
-{{% choosable language python %}}
-<dl class="resources-properties">
-
-    <dt class="property-required"
-            title="Required">
-        <span id="access_type_python">
-<a href="#access_type_python" style="color: inherit; text-decoration: inherit;">access_<wbr>type</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str | <a href="#shareaccesstype">Share<wbr>Access<wbr>Type</a></span>
-    </dt>
-    <dd>{{% md %}}Type of access to be allowed on the share for this user.{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
-        <span id="share_id_python">
-<a href="#share_id_python" style="color: inherit; text-decoration: inherit;">share_<wbr>id</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">str</span>
-    </dt>
-    <dd>{{% md %}}The share ID.{{% /md %}}</dd>
-</dl>
-{{% /choosable %}}
-
 <h4 id="shareaccessrightresponse">Share<wbr>Access<wbr>Right<wbr>Response</h4>
 
 {{% choosable language csharp %}}
@@ -1172,49 +1106,245 @@ All [input](#inputs) properties are implicitly available as output properties. A
 </dl>
 {{% /choosable %}}
 
-<h4 id="shareaccesstype">Share<wbr>Access<wbr>Type</h4>
+<h4 id="systemdataresponse">System<wbr>Data<wbr>Response</h4>
 
 {{% choosable language csharp %}}
-<dl class="tabular">
-    <dt>Change</dt>
-    <dd>Change</dd>
-    <dt>Read</dt>
-    <dd>Read</dd>
-    <dt>Custom</dt>
-    <dd>Custom</dd>
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="createdat_csharp">
+<a href="#createdat_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="createdby_csharp">
+<a href="#createdby_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="createdbytype_csharp">
+<a href="#createdbytype_csharp" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedat_csharp">
+<a href="#lastmodifiedat_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>At</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedby_csharp">
+<a href="#lastmodifiedby_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedbytype_csharp">
+<a href="#lastmodifiedbytype_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
-<dl class="tabular">
-    <dt>Share<wbr>Access<wbr>Type<wbr>Change</dt>
-    <dd>Change</dd>
-    <dt>Share<wbr>Access<wbr>Type<wbr>Read</dt>
-    <dd>Read</dd>
-    <dt>Share<wbr>Access<wbr>Type<wbr>Custom</dt>
-    <dd>Custom</dd>
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="createdat_go">
+<a href="#createdat_go" style="color: inherit; text-decoration: inherit;">Created<wbr>At</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="createdby_go">
+<a href="#createdby_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="createdbytype_go">
+<a href="#createdbytype_go" style="color: inherit; text-decoration: inherit;">Created<wbr>By<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedat_go">
+<a href="#lastmodifiedat_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>At</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedby_go">
+<a href="#lastmodifiedby_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedbytype_go">
+<a href="#lastmodifiedbytype_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Modified<wbr>By<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
-<dl class="tabular">
-    <dt>Change</dt>
-    <dd>Change</dd>
-    <dt>Read</dt>
-    <dd>Read</dd>
-    <dt>Custom</dt>
-    <dd>Custom</dd>
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="createdat_nodejs">
+<a href="#createdat_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>At</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="createdby_nodejs">
+<a href="#createdby_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="createdbytype_nodejs">
+<a href="#createdbytype_nodejs" style="color: inherit; text-decoration: inherit;">created<wbr>By<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedat_nodejs">
+<a href="#lastmodifiedat_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>At</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedby_nodejs">
+<a href="#lastmodifiedby_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="lastmodifiedbytype_nodejs">
+<a href="#lastmodifiedbytype_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Modified<wbr>By<wbr>Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<dl class="tabular">
-    <dt>CHANGE</dt>
-    <dd>Change</dd>
-    <dt>READ</dt>
-    <dd>Read</dd>
-    <dt>CUSTOM</dt>
-    <dd>Custom</dd>
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="created_at_python">
+<a href="#created_at_python" style="color: inherit; text-decoration: inherit;">created_<wbr>at</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The timestamp of resource creation (UTC).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="created_by_python">
+<a href="#created_by_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The identity that created the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="created_by_type_python">
+<a href="#created_by_type_python" style="color: inherit; text-decoration: inherit;">created_<wbr>by_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that created the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="last_modified_at_python">
+<a href="#last_modified_at_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>at</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="last_modified_by_python">
+<a href="#last_modified_by_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The identity that last modified the resource.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="last_modified_by_type_python">
+<a href="#last_modified_by_type_python" style="color: inherit; text-decoration: inherit;">last_<wbr>modified_<wbr>by_<wbr>type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The type of identity that last modified the resource.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 

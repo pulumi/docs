@@ -11,7 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.network.LocalNetworkGateway reso
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A common class for general resource information.
-Latest API Version: 2020-07-01.
+Latest API Version: 2020-08-01.
 
 {{% examples %}}
 ## Example Usage

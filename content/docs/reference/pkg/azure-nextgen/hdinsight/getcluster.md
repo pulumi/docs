@@ -1320,6 +1320,15 @@ The following output properties are available:
     <dd>{{% md %}}The cluster definition.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="clusterhdpversion_csharp">
+<a href="#clusterhdpversion_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Hdp<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The hdp version of the cluster.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="clusterid_csharp">
 <a href="#clusterid_csharp" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Id</a>
 </span>
@@ -1410,6 +1419,15 @@ The following output properties are available:
     <dd>{{% md %}}The list of errors.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="excludedservicesconfig_csharp">
+<a href="#excludedservicesconfig_csharp" style="color: inherit; text-decoration: inherit;">Excluded<wbr>Services<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#excludedservicesconfigresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight.<wbr>Inputs.<wbr>Excluded<wbr>Services<wbr>Config<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The excluded services config.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="kafkarestproperties_csharp">
 <a href="#kafkarestproperties_csharp" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Rest<wbr>Properties</a>
 </span>
@@ -1473,6 +1491,15 @@ The following output properties are available:
     <dd>{{% md %}}The security profile.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="storageprofile_csharp">
+<a href="#storageprofile_csharp" style="color: inherit; text-decoration: inherit;">Storage<wbr>Profile</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#storageprofileresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight.<wbr>Inputs.<wbr>Storage<wbr>Profile<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The storage profile.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="tier_csharp">
 <a href="#tier_csharp" style="color: inherit; text-decoration: inherit;">Tier</a>
 </span>
@@ -1495,6 +1522,15 @@ The following output properties are available:
         <span class="property-type"><a href="#clusterdefinitionresponse">Cluster<wbr>Definition<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The cluster definition.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clusterhdpversion_go">
+<a href="#clusterhdpversion_go" style="color: inherit; text-decoration: inherit;">Cluster<wbr>Hdp<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The hdp version of the cluster.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="clusterid_go">
@@ -1587,6 +1623,15 @@ The following output properties are available:
     <dd>{{% md %}}The list of errors.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="excludedservicesconfig_go">
+<a href="#excludedservicesconfig_go" style="color: inherit; text-decoration: inherit;">Excluded<wbr>Services<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#excludedservicesconfigresponse">Excluded<wbr>Services<wbr>Config<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The excluded services config.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="kafkarestproperties_go">
 <a href="#kafkarestproperties_go" style="color: inherit; text-decoration: inherit;">Kafka<wbr>Rest<wbr>Properties</a>
 </span>
@@ -1650,6 +1695,15 @@ The following output properties are available:
     <dd>{{% md %}}The security profile.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="storageprofile_go">
+<a href="#storageprofile_go" style="color: inherit; text-decoration: inherit;">Storage<wbr>Profile</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#storageprofileresponse">Storage<wbr>Profile<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The storage profile.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="tier_go">
 <a href="#tier_go" style="color: inherit; text-decoration: inherit;">Tier</a>
 </span>
@@ -1672,6 +1726,15 @@ The following output properties are available:
         <span class="property-type"><a href="#clusterdefinitionresponse">Cluster<wbr>Definition<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The cluster definition.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="clusterhdpversion_nodejs">
+<a href="#clusterhdpversion_nodejs" style="color: inherit; text-decoration: inherit;">cluster<wbr>Hdp<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The hdp version of the cluster.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="clusterid_nodejs">
@@ -1764,6 +1827,15 @@ The following output properties are available:
     <dd>{{% md %}}The list of errors.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="excludedservicesconfig_nodejs">
+<a href="#excludedservicesconfig_nodejs" style="color: inherit; text-decoration: inherit;">excluded<wbr>Services<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#excludedservicesconfigresponse">Excluded<wbr>Services<wbr>Config<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The excluded services config.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="kafkarestproperties_nodejs">
 <a href="#kafkarestproperties_nodejs" style="color: inherit; text-decoration: inherit;">kafka<wbr>Rest<wbr>Properties</a>
 </span>
@@ -1827,6 +1899,15 @@ The following output properties are available:
     <dd>{{% md %}}The security profile.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="storageprofile_nodejs">
+<a href="#storageprofile_nodejs" style="color: inherit; text-decoration: inherit;">storage<wbr>Profile</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#storageprofileresponse">Storage<wbr>Profile<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The storage profile.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="tier_nodejs">
 <a href="#tier_nodejs" style="color: inherit; text-decoration: inherit;">tier</a>
 </span>
@@ -1849,6 +1930,15 @@ The following output properties are available:
         <span class="property-type"><a href="#clusterdefinitionresponse">Cluster<wbr>Definition<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The cluster definition.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="cluster_hdp_version_python">
+<a href="#cluster_hdp_version_python" style="color: inherit; text-decoration: inherit;">cluster_<wbr>hdp_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The hdp version of the cluster.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="cluster_id_python">
@@ -1941,6 +2031,15 @@ The following output properties are available:
     <dd>{{% md %}}The list of errors.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="excluded_services_config_python">
+<a href="#excluded_services_config_python" style="color: inherit; text-decoration: inherit;">excluded_<wbr>services_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#excludedservicesconfigresponse">Excluded<wbr>Services<wbr>Config<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The excluded services config.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="kafka_rest_properties_python">
 <a href="#kafka_rest_properties_python" style="color: inherit; text-decoration: inherit;">kafka_<wbr>rest_<wbr>properties</a>
 </span>
@@ -2002,6 +2101,15 @@ The following output properties are available:
         <span class="property-type"><a href="#securityprofileresponse">Security<wbr>Profile<wbr>Response<wbr>Args</a></span>
     </dt>
     <dd>{{% md %}}The security profile.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="storage_profile_python">
+<a href="#storage_profile_python" style="color: inherit; text-decoration: inherit;">storage_<wbr>profile</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#storageprofileresponse">Storage<wbr>Profile<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}The storage profile.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="tier_python">
@@ -2217,6 +2325,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tenantid_csharp">
+<a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The tenant id of user assigned identity.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -2241,6 +2358,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tenantid_go">
+<a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The tenant id of user assigned identity.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -2265,6 +2391,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tenantid_nodejs">
+<a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The tenant id of user assigned identity.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -2289,6 +2424,15 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The principal id of user assigned identity.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tenant_id_python">
+<a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The tenant id of user assigned identity.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
@@ -2501,6 +2645,15 @@ The following output properties are available:
     <dd>{{% md %}}The port to connect to.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="privateipaddress_csharp">
+<a href="#privateipaddress_csharp" style="color: inherit; text-decoration: inherit;">Private<wbr>IPAddress</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The private ip address of the endpoint.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="protocol_csharp">
 <a href="#protocol_csharp" style="color: inherit; text-decoration: inherit;">Protocol</a>
 </span>
@@ -2541,6 +2694,15 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port to connect to.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="privateipaddress_go">
+<a href="#privateipaddress_go" style="color: inherit; text-decoration: inherit;">Private<wbr>IPAddress</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The private ip address of the endpoint.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="protocol_go">
@@ -2585,6 +2747,15 @@ The following output properties are available:
     <dd>{{% md %}}The port to connect to.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="privateipaddress_nodejs">
+<a href="#privateipaddress_nodejs" style="color: inherit; text-decoration: inherit;">private<wbr>IPAddress</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The private ip address of the endpoint.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="protocol_nodejs">
 <a href="#protocol_nodejs" style="color: inherit; text-decoration: inherit;">protocol</a>
 </span>
@@ -2625,6 +2796,15 @@ The following output properties are available:
         <span class="property-type">int</span>
     </dt>
     <dd>{{% md %}}The port to connect to.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="private_ip_address_python">
+<a href="#private_ip_address_python" style="color: inherit; text-decoration: inherit;">private_<wbr>ip_<wbr>address</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The private ip address of the endpoint.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="protocol_python">
@@ -3193,6 +3373,109 @@ The following output properties are available:
 </dl>
 {{% /choosable %}}
 
+<h4 id="excludedservicesconfigresponse">Excluded<wbr>Services<wbr>Config<wbr>Response</h4>
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="excludedservicesconfigid_csharp">
+<a href="#excludedservicesconfigid_csharp" style="color: inherit; text-decoration: inherit;">Excluded<wbr>Services<wbr>Config<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The config id of excluded services.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="excludedserviceslist_csharp">
+<a href="#excludedserviceslist_csharp" style="color: inherit; text-decoration: inherit;">Excluded<wbr>Services<wbr>List</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The list of excluded services.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="excludedservicesconfigid_go">
+<a href="#excludedservicesconfigid_go" style="color: inherit; text-decoration: inherit;">Excluded<wbr>Services<wbr>Config<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The config id of excluded services.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="excludedserviceslist_go">
+<a href="#excludedserviceslist_go" style="color: inherit; text-decoration: inherit;">Excluded<wbr>Services<wbr>List</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The list of excluded services.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="excludedservicesconfigid_nodejs">
+<a href="#excludedservicesconfigid_nodejs" style="color: inherit; text-decoration: inherit;">excluded<wbr>Services<wbr>Config<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The config id of excluded services.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="excludedserviceslist_nodejs">
+<a href="#excludedserviceslist_nodejs" style="color: inherit; text-decoration: inherit;">excluded<wbr>Services<wbr>List</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The list of excluded services.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="excluded_services_config_id_python">
+<a href="#excluded_services_config_id_python" style="color: inherit; text-decoration: inherit;">excluded_<wbr>services_<wbr>config_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The config id of excluded services.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="excluded_services_list_python">
+<a href="#excluded_services_list_python" style="color: inherit; text-decoration: inherit;">excluded_<wbr>services_<wbr>list</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The list of excluded services.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
 <h4 id="hardwareprofileresponse">Hardware<wbr>Profile<wbr>Response</h4>
 
 
@@ -3733,6 +4016,15 @@ The following output properties are available:
     <dd>{{% md %}}The data disks groups for the role.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="encryptdatadisks_csharp">
+<a href="#encryptdatadisks_csharp" style="color: inherit; text-decoration: inherit;">Encrypt<wbr>Data<wbr>Disks</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether encrypt the data disks.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="hardwareprofile_csharp">
 <a href="#hardwareprofile_csharp" style="color: inherit; text-decoration: inherit;">Hardware<wbr>Profile</a>
 </span>
@@ -3818,6 +4110,15 @@ The following output properties are available:
         <span class="property-type"><a href="#datadisksgroupsresponse">[]Data<wbr>Disks<wbr>Groups<wbr>Response</a></span>
     </dt>
     <dd>{{% md %}}The data disks groups for the role.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="encryptdatadisks_go">
+<a href="#encryptdatadisks_go" style="color: inherit; text-decoration: inherit;">Encrypt<wbr>Data<wbr>Disks</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether encrypt the data disks.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="hardwareprofile_go">
@@ -3907,6 +4208,15 @@ The following output properties are available:
     <dd>{{% md %}}The data disks groups for the role.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="encryptdatadisks_nodejs">
+<a href="#encryptdatadisks_nodejs" style="color: inherit; text-decoration: inherit;">encrypt<wbr>Data<wbr>Disks</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether encrypt the data disks.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="hardwareprofile_nodejs">
 <a href="#hardwareprofile_nodejs" style="color: inherit; text-decoration: inherit;">hardware<wbr>Profile</a>
 </span>
@@ -3992,6 +4302,15 @@ The following output properties are available:
         <span class="property-type"><a href="#datadisksgroupsresponse">Sequence[Data<wbr>Disks<wbr>Groups<wbr>Response<wbr>Args]</a></span>
     </dt>
     <dd>{{% md %}}The data disks groups for the role.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="encrypt_data_disks_python">
+<a href="#encrypt_data_disks_python" style="color: inherit; text-decoration: inherit;">encrypt_<wbr>data_<wbr>disks</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether encrypt the data disks.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="hardware_profile_python">
@@ -4683,6 +5002,356 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The certificate for SSH.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="storageaccountresponse">Storage<wbr>Account<wbr>Response</h4>
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="container_csharp">
+<a href="#container_csharp" style="color: inherit; text-decoration: inherit;">Container</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The container in the storage account, only to be specified for WASB storage accounts.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="filesystem_csharp">
+<a href="#filesystem_csharp" style="color: inherit; text-decoration: inherit;">File<wbr>System</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The filesystem, only to be specified for Azure Data Lake Storage Gen 2.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="isdefault_csharp">
+<a href="#isdefault_csharp" style="color: inherit; text-decoration: inherit;">Is<wbr>Default</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether or not the storage account is the default storage account.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="key_csharp">
+<a href="#key_csharp" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The storage account access key.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="msiresourceid_csharp">
+<a href="#msiresourceid_csharp" style="color: inherit; text-decoration: inherit;">Msi<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The managed identity (MSI) that is allowed to access the storage account, only to be specified for Azure Data Lake Storage Gen 2.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the storage account.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourceid_csharp">
+<a href="#resourceid_csharp" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource ID of storage account, only to be specified for Azure Data Lake Storage Gen 2.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="container_go">
+<a href="#container_go" style="color: inherit; text-decoration: inherit;">Container</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The container in the storage account, only to be specified for WASB storage accounts.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="filesystem_go">
+<a href="#filesystem_go" style="color: inherit; text-decoration: inherit;">File<wbr>System</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The filesystem, only to be specified for Azure Data Lake Storage Gen 2.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="isdefault_go">
+<a href="#isdefault_go" style="color: inherit; text-decoration: inherit;">Is<wbr>Default</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether or not the storage account is the default storage account.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="key_go">
+<a href="#key_go" style="color: inherit; text-decoration: inherit;">Key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The storage account access key.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="msiresourceid_go">
+<a href="#msiresourceid_go" style="color: inherit; text-decoration: inherit;">Msi<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The managed identity (MSI) that is allowed to access the storage account, only to be specified for Azure Data Lake Storage Gen 2.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the storage account.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourceid_go">
+<a href="#resourceid_go" style="color: inherit; text-decoration: inherit;">Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource ID of storage account, only to be specified for Azure Data Lake Storage Gen 2.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="container_nodejs">
+<a href="#container_nodejs" style="color: inherit; text-decoration: inherit;">container</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The container in the storage account, only to be specified for WASB storage accounts.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="filesystem_nodejs">
+<a href="#filesystem_nodejs" style="color: inherit; text-decoration: inherit;">file<wbr>System</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The filesystem, only to be specified for Azure Data Lake Storage Gen 2.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="isdefault_nodejs">
+<a href="#isdefault_nodejs" style="color: inherit; text-decoration: inherit;">is<wbr>Default</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Whether or not the storage account is the default storage account.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="key_nodejs">
+<a href="#key_nodejs" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The storage account access key.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="msiresourceid_nodejs">
+<a href="#msiresourceid_nodejs" style="color: inherit; text-decoration: inherit;">msi<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The managed identity (MSI) that is allowed to access the storage account, only to be specified for Azure Data Lake Storage Gen 2.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The name of the storage account.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resourceid_nodejs">
+<a href="#resourceid_nodejs" style="color: inherit; text-decoration: inherit;">resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The resource ID of storage account, only to be specified for Azure Data Lake Storage Gen 2.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="container_python">
+<a href="#container_python" style="color: inherit; text-decoration: inherit;">container</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The container in the storage account, only to be specified for WASB storage accounts.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="file_system_python">
+<a href="#file_system_python" style="color: inherit; text-decoration: inherit;">file_<wbr>system</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The filesystem, only to be specified for Azure Data Lake Storage Gen 2.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="is_default_python">
+<a href="#is_default_python" style="color: inherit; text-decoration: inherit;">is_<wbr>default</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Whether or not the storage account is the default storage account.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="key_python">
+<a href="#key_python" style="color: inherit; text-decoration: inherit;">key</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The storage account access key.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="msi_resource_id_python">
+<a href="#msi_resource_id_python" style="color: inherit; text-decoration: inherit;">msi_<wbr>resource_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The managed identity (MSI) that is allowed to access the storage account, only to be specified for Azure Data Lake Storage Gen 2.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The name of the storage account.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="resource_id_python">
+<a href="#resource_id_python" style="color: inherit; text-decoration: inherit;">resource_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The resource ID of storage account, only to be specified for Azure Data Lake Storage Gen 2.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="storageprofileresponse">Storage<wbr>Profile<wbr>Response</h4>
+
+
+
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="storageaccounts_csharp">
+<a href="#storageaccounts_csharp" style="color: inherit; text-decoration: inherit;">Storageaccounts</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#storageaccountresponse">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>HDInsight.<wbr>Inputs.<wbr>Storage<wbr>Account<wbr>Response<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}The list of storage accounts in the cluster.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="storageaccounts_go">
+<a href="#storageaccounts_go" style="color: inherit; text-decoration: inherit;">Storageaccounts</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#storageaccountresponse">[]Storage<wbr>Account<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}The list of storage accounts in the cluster.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="storageaccounts_nodejs">
+<a href="#storageaccounts_nodejs" style="color: inherit; text-decoration: inherit;">storageaccounts</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#storageaccountresponse">Storage<wbr>Account<wbr>Response[]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of storage accounts in the cluster.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="storageaccounts_python">
+<a href="#storageaccounts_python" style="color: inherit; text-decoration: inherit;">storageaccounts</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#storageaccountresponse">Sequence[Storage<wbr>Account<wbr>Response<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}The list of storage accounts in the cluster.{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 

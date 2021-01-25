@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.synapse.BigDataPool resource wit
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 A Big Data pool
+Latest API Version: 2020-12-01.
 
 {{% examples %}}
 ## Example Usage
@@ -26,14 +27,14 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var bigDataPool = new AzureNextGen.Synapse.V20190601Preview.BigDataPool("bigDataPool", new AzureNextGen.Synapse.V20190601Preview.BigDataPoolArgs
+        var bigDataPool = new AzureNextGen.Synapse.Latest.BigDataPool("bigDataPool", new AzureNextGen.Synapse.Latest.BigDataPoolArgs
         {
-            AutoPause = new AzureNextGen.Synapse.V20190601Preview.Inputs.AutoPausePropertiesArgs
+            AutoPause = new AzureNextGen.Synapse.Latest.Inputs.AutoPausePropertiesArgs
             {
                 DelayInMinutes = 15,
                 Enabled = true,
             },
-            AutoScale = new AzureNextGen.Synapse.V20190601Preview.Inputs.AutoScalePropertiesArgs
+            AutoScale = new AzureNextGen.Synapse.Latest.Inputs.AutoScalePropertiesArgs
             {
                 Enabled = true,
                 MaxNodeCount = 50,
@@ -41,7 +42,7 @@ class MyStack : Stack
             },
             BigDataPoolName = "ExamplePool",
             DefaultSparkLogFolder = "/logs",
-            LibraryRequirements = new AzureNextGen.Synapse.V20190601Preview.Inputs.LibraryRequirementsArgs
+            LibraryRequirements = new AzureNextGen.Synapse.Latest.Inputs.LibraryRequirementsArgs
             {
                 Content = "",
                 Filename = "requirements.txt",
@@ -73,7 +74,7 @@ class MyStack : Stack
 package main
 
 import (
-	synapse "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/synapse/v20190601preview"
+	synapse "github.com/pulumi/pulumi-azure-nextgen/sdk/go/azure/synapse/latest"
 	"github.com/pulumi/pulumi/sdk/v2/go/pulumi"
 )
 
@@ -124,19 +125,19 @@ func main() {
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-big_data_pool = azure_nextgen.synapse.v20190601preview.BigDataPool("bigDataPool",
-    auto_pause=azure_nextgen.synapse.v20190601preview.AutoPausePropertiesArgs(
+big_data_pool = azure_nextgen.synapse.latest.BigDataPool("bigDataPool",
+    auto_pause=azure_nextgen.synapse.latest.AutoPausePropertiesArgs(
         delay_in_minutes=15,
         enabled=True,
     ),
-    auto_scale=azure_nextgen.synapse.v20190601preview.AutoScalePropertiesArgs(
+    auto_scale=azure_nextgen.synapse.latest.AutoScalePropertiesArgs(
         enabled=True,
         max_node_count=50,
         min_node_count=3,
     ),
     big_data_pool_name="ExamplePool",
     default_spark_log_folder="/logs",
-    library_requirements=azure_nextgen.synapse.v20190601preview.LibraryRequirementsArgs(
+    library_requirements=azure_nextgen.synapse.latest.LibraryRequirementsArgs(
         content="",
         filename="requirements.txt",
     ),
@@ -162,7 +163,7 @@ big_data_pool = azure_nextgen.synapse.v20190601preview.BigDataPool("bigDataPool"
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const bigDataPool = new azure_nextgen.synapse.v20190601preview.BigDataPool("bigDataPool", {
+const bigDataPool = new azure_nextgen.synapse.latest.BigDataPool("bigDataPool", {
     autoPause: {
         delayInMinutes: 15,
         enabled: true,
@@ -207,7 +208,7 @@ const bigDataPool = new azure_nextgen.synapse.v20190601preview.BigDataPool("bigD
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">BigDataPool</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_pause</span><span class="p">:</span> <span class="nx">Optional[AutoPausePropertiesArgs]</span> = None<span class="p">, </span><span class="nx">auto_scale</span><span class="p">:</span> <span class="nx">Optional[AutoScalePropertiesArgs]</span> = None<span class="p">, </span><span class="nx">big_data_pool_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">creation_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_spark_log_folder</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">force</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">have_library_requirements_changed</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">is_compute_isolation_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">library_requirements</span><span class="p">:</span> <span class="nx">Optional[LibraryRequirementsArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">node_size</span><span class="p">:</span> <span class="nx">Optional[Union[str, NodeSize]]</span> = None<span class="p">, </span><span class="nx">node_size_family</span><span class="p">:</span> <span class="nx">Optional[Union[str, NodeSizeFamily]]</span> = None<span class="p">, </span><span class="nx">provisioning_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">session_level_packages_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">spark_config_properties</span><span class="p">:</span> <span class="nx">Optional[LibraryRequirementsArgs]</span> = None<span class="p">, </span><span class="nx">spark_events_folder</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">spark_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx">BigDataPool</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">auto_pause</span><span class="p">:</span> <span class="nx">Optional[AutoPausePropertiesArgs]</span> = None<span class="p">, </span><span class="nx">auto_scale</span><span class="p">:</span> <span class="nx">Optional[AutoScalePropertiesArgs]</span> = None<span class="p">, </span><span class="nx">big_data_pool_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">cache_size</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">creation_date</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">custom_libraries</span><span class="p">:</span> <span class="nx">Optional[Sequence[LibraryInfoArgs]]</span> = None<span class="p">, </span><span class="nx">default_spark_log_folder</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">dynamic_executor_allocation</span><span class="p">:</span> <span class="nx">Optional[DynamicExecutorAllocationArgs]</span> = None<span class="p">, </span><span class="nx">force</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">is_compute_isolation_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">library_requirements</span><span class="p">:</span> <span class="nx">Optional[LibraryRequirementsArgs]</span> = None<span class="p">, </span><span class="nx">location</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">node_count</span><span class="p">:</span> <span class="nx">Optional[int]</span> = None<span class="p">, </span><span class="nx">node_size</span><span class="p">:</span> <span class="nx">Optional[Union[str, NodeSize]]</span> = None<span class="p">, </span><span class="nx">node_size_family</span><span class="p">:</span> <span class="nx">Optional[Union[str, NodeSizeFamily]]</span> = None<span class="p">, </span><span class="nx">provisioning_state</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">resource_group_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">session_level_packages_enabled</span><span class="p">:</span> <span class="nx">Optional[bool]</span> = None<span class="p">, </span><span class="nx">spark_config_properties</span><span class="p">:</span> <span class="nx">Optional[LibraryRequirementsArgs]</span> = None<span class="p">, </span><span class="nx">spark_events_folder</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">spark_version</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tags</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">workspace_name</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -434,6 +435,15 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
     <dd>{{% md %}}Auto-scaling properties{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="cachesize_csharp">
+<a href="#cachesize_csharp" style="color: inherit; text-decoration: inherit;">Cache<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The cache size{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="creationdate_csharp">
 <a href="#creationdate_csharp" style="color: inherit; text-decoration: inherit;">Creation<wbr>Date</a>
 </span>
@@ -441,6 +451,15 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time when the Big Data pool was created.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="customlibraries_csharp">
+<a href="#customlibraries_csharp" style="color: inherit; text-decoration: inherit;">Custom<wbr>Libraries</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#libraryinfo">List&lt;Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse.<wbr>Inputs.<wbr>Library<wbr>Info<wbr>Args&gt;</a></span>
+    </dt>
+    <dd>{{% md %}}List of custom libraries/packages associated with the spark pool.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="defaultsparklogfolder_csharp">
@@ -452,6 +471,15 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
     <dd>{{% md %}}The default folder where Spark logs will be written.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="dynamicexecutorallocation_csharp">
+<a href="#dynamicexecutorallocation_csharp" style="color: inherit; text-decoration: inherit;">Dynamic<wbr>Executor<wbr>Allocation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dynamicexecutorallocation">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Synapse.<wbr>Inputs.<wbr>Dynamic<wbr>Executor<wbr>Allocation<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Dynamic Executor Allocation{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="force_csharp">
 <a href="#force_csharp" style="color: inherit; text-decoration: inherit;">Force</a>
 </span>
@@ -459,15 +487,6 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to stop any running jobs in the Big Data pool{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="havelibraryrequirementschanged_csharp">
-<a href="#havelibraryrequirementschanged_csharp" style="color: inherit; text-decoration: inherit;">Have<wbr>Library<wbr>Requirements<wbr>Changed</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Whether library requirements changed.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="iscomputeisolationenabled_csharp">
@@ -629,6 +648,15 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
     <dd>{{% md %}}Auto-scaling properties{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="cachesize_go">
+<a href="#cachesize_go" style="color: inherit; text-decoration: inherit;">Cache<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The cache size{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="creationdate_go">
 <a href="#creationdate_go" style="color: inherit; text-decoration: inherit;">Creation<wbr>Date</a>
 </span>
@@ -636,6 +664,15 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time when the Big Data pool was created.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="customlibraries_go">
+<a href="#customlibraries_go" style="color: inherit; text-decoration: inherit;">Custom<wbr>Libraries</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#libraryinfo">[]Library<wbr>Info</a></span>
+    </dt>
+    <dd>{{% md %}}List of custom libraries/packages associated with the spark pool.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="defaultsparklogfolder_go">
@@ -647,6 +684,15 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
     <dd>{{% md %}}The default folder where Spark logs will be written.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="dynamicexecutorallocation_go">
+<a href="#dynamicexecutorallocation_go" style="color: inherit; text-decoration: inherit;">Dynamic<wbr>Executor<wbr>Allocation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dynamicexecutorallocation">Dynamic<wbr>Executor<wbr>Allocation</a></span>
+    </dt>
+    <dd>{{% md %}}Dynamic Executor Allocation{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="force_go">
 <a href="#force_go" style="color: inherit; text-decoration: inherit;">Force</a>
 </span>
@@ -654,15 +700,6 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to stop any running jobs in the Big Data pool{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="havelibraryrequirementschanged_go">
-<a href="#havelibraryrequirementschanged_go" style="color: inherit; text-decoration: inherit;">Have<wbr>Library<wbr>Requirements<wbr>Changed</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Whether library requirements changed.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="iscomputeisolationenabled_go">
@@ -824,6 +861,15 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
     <dd>{{% md %}}Auto-scaling properties{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="cachesize_nodejs">
+<a href="#cachesize_nodejs" style="color: inherit; text-decoration: inherit;">cache<wbr>Size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">number</span>
+    </dt>
+    <dd>{{% md %}}The cache size{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="creationdate_nodejs">
 <a href="#creationdate_nodejs" style="color: inherit; text-decoration: inherit;">creation<wbr>Date</a>
 </span>
@@ -831,6 +877,15 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The time when the Big Data pool was created.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="customlibraries_nodejs">
+<a href="#customlibraries_nodejs" style="color: inherit; text-decoration: inherit;">custom<wbr>Libraries</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#libraryinfo">Library<wbr>Info[]</a></span>
+    </dt>
+    <dd>{{% md %}}List of custom libraries/packages associated with the spark pool.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="defaultsparklogfolder_nodejs">
@@ -842,6 +897,15 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
     <dd>{{% md %}}The default folder where Spark logs will be written.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="dynamicexecutorallocation_nodejs">
+<a href="#dynamicexecutorallocation_nodejs" style="color: inherit; text-decoration: inherit;">dynamic<wbr>Executor<wbr>Allocation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dynamicexecutorallocation">Dynamic<wbr>Executor<wbr>Allocation</a></span>
+    </dt>
+    <dd>{{% md %}}Dynamic Executor Allocation{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="force_nodejs">
 <a href="#force_nodejs" style="color: inherit; text-decoration: inherit;">force</a>
 </span>
@@ -849,15 +913,6 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">boolean</span>
     </dt>
     <dd>{{% md %}}Whether to stop any running jobs in the Big Data pool{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="havelibraryrequirementschanged_nodejs">
-<a href="#havelibraryrequirementschanged_nodejs" style="color: inherit; text-decoration: inherit;">have<wbr>Library<wbr>Requirements<wbr>Changed</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">boolean</span>
-    </dt>
-    <dd>{{% md %}}Whether library requirements changed.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="iscomputeisolationenabled_nodejs">
@@ -1019,6 +1074,15 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
     <dd>{{% md %}}Auto-scaling properties{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="cache_size_python">
+<a href="#cache_size_python" style="color: inherit; text-decoration: inherit;">cache_<wbr>size</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">int</span>
+    </dt>
+    <dd>{{% md %}}The cache size{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="creation_date_python">
 <a href="#creation_date_python" style="color: inherit; text-decoration: inherit;">creation_<wbr>date</a>
 </span>
@@ -1026,6 +1090,15 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The time when the Big Data pool was created.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="custom_libraries_python">
+<a href="#custom_libraries_python" style="color: inherit; text-decoration: inherit;">custom_<wbr>libraries</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#libraryinfo">Sequence[Library<wbr>Info<wbr>Args]</a></span>
+    </dt>
+    <dd>{{% md %}}List of custom libraries/packages associated with the spark pool.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="default_spark_log_folder_python">
@@ -1037,6 +1110,15 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
     <dd>{{% md %}}The default folder where Spark logs will be written.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="dynamic_executor_allocation_python">
+<a href="#dynamic_executor_allocation_python" style="color: inherit; text-decoration: inherit;">dynamic_<wbr>executor_<wbr>allocation</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#dynamicexecutorallocation">Dynamic<wbr>Executor<wbr>Allocation<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Dynamic Executor Allocation{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="force_python">
 <a href="#force_python" style="color: inherit; text-decoration: inherit;">force</a>
 </span>
@@ -1044,15 +1126,6 @@ The BigDataPool resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">bool</span>
     </dt>
     <dd>{{% md %}}Whether to stop any running jobs in the Big Data pool{{% /md %}}</dd>
-    <dt class="property-optional"
-            title="Optional">
-        <span id="have_library_requirements_changed_python">
-<a href="#have_library_requirements_changed_python" style="color: inherit; text-decoration: inherit;">have_<wbr>library_<wbr>requirements_<wbr>changed</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type">bool</span>
-    </dt>
-    <dd>{{% md %}}Whether library requirements changed.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="is_compute_isolation_enabled_python">
@@ -1176,6 +1249,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="lastsucceededtimestamp_csharp">
+<a href="#lastsucceededtimestamp_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Succeeded<wbr>Timestamp</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The time when the Big Data pool was updated successfully.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="name_csharp">
 <a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
 </span>
@@ -1207,6 +1289,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="lastsucceededtimestamp_go">
+<a href="#lastsucceededtimestamp_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Succeeded<wbr>Timestamp</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The time when the Big Data pool was updated successfully.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="name_go">
@@ -1242,6 +1333,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
     <dt class="property-"
             title="">
+        <span id="lastsucceededtimestamp_nodejs">
+<a href="#lastsucceededtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Succeeded<wbr>Timestamp</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The time when the Big Data pool was updated successfully.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="name_nodejs">
 <a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
 </span>
@@ -1273,6 +1373,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The provider-assigned unique ID for this managed resource.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
+        <span id="last_succeeded_timestamp_python">
+<a href="#last_succeeded_timestamp_python" style="color: inherit; text-decoration: inherit;">last_<wbr>succeeded_<wbr>timestamp</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The time when the Big Data pool was updated successfully.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="name_python">
@@ -1768,6 +1877,578 @@ All [input](#inputs) properties are implicitly available as output properties. A
 </dl>
 {{% /choosable %}}
 
+<h4 id="dynamicexecutorallocation">Dynamic<wbr>Executor<wbr>Allocation</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether Dynamic Executor Allocation is enabled or not.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether Dynamic Executor Allocation is enabled or not.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether Dynamic Executor Allocation is enabled or not.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether Dynamic Executor Allocation is enabled or not.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="dynamicexecutorallocationresponse">Dynamic<wbr>Executor<wbr>Allocation<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enabled_csharp">
+<a href="#enabled_csharp" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether Dynamic Executor Allocation is enabled or not.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enabled_go">
+<a href="#enabled_go" style="color: inherit; text-decoration: inherit;">Enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether Dynamic Executor Allocation is enabled or not.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enabled_nodejs">
+<a href="#enabled_nodejs" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">boolean</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether Dynamic Executor Allocation is enabled or not.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="enabled_python">
+<a href="#enabled_python" style="color: inherit; text-decoration: inherit;">enabled</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">bool</span>
+    </dt>
+    <dd>{{% md %}}Indicates whether Dynamic Executor Allocation is enabled or not.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="libraryinfo">Library<wbr>Info</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="containername_csharp">
+<a href="#containername_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Storage blob container name.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the library.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="path_csharp">
+<a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Storage blob path of library.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of the library.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="containername_go">
+<a href="#containername_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Storage blob container name.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the library.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="path_go">
+<a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Storage blob path of library.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of the library.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="containername_nodejs">
+<a href="#containername_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Storage blob container name.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the library.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="path_nodejs">
+<a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Storage blob path of library.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of the library.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="container_name_python">
+<a href="#container_name_python" style="color: inherit; text-decoration: inherit;">container_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Storage blob container name.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Name of the library.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="path_python">
+<a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Storage blob path of library.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Type of the library.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="libraryinforesponse">Library<wbr>Info<wbr>Response</h4>
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="creatorid_csharp">
+<a href="#creatorid_csharp" style="color: inherit; text-decoration: inherit;">Creator<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Creator Id of the library/package.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="provisioningstatus_csharp">
+<a href="#provisioningstatus_csharp" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Provisioning status of the library/package.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="uploadedtimestamp_csharp">
+<a href="#uploadedtimestamp_csharp" style="color: inherit; text-decoration: inherit;">Uploaded<wbr>Timestamp</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The last update time of the library.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="containername_csharp">
+<a href="#containername_csharp" style="color: inherit; text-decoration: inherit;">Container<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Storage blob container name.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_csharp">
+<a href="#name_csharp" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the library.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="path_csharp">
+<a href="#path_csharp" style="color: inherit; text-decoration: inherit;">Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Storage blob path of library.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_csharp">
+<a href="#type_csharp" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of the library.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="creatorid_go">
+<a href="#creatorid_go" style="color: inherit; text-decoration: inherit;">Creator<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Creator Id of the library/package.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="provisioningstatus_go">
+<a href="#provisioningstatus_go" style="color: inherit; text-decoration: inherit;">Provisioning<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Provisioning status of the library/package.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="uploadedtimestamp_go">
+<a href="#uploadedtimestamp_go" style="color: inherit; text-decoration: inherit;">Uploaded<wbr>Timestamp</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The last update time of the library.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="containername_go">
+<a href="#containername_go" style="color: inherit; text-decoration: inherit;">Container<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Storage blob container name.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_go">
+<a href="#name_go" style="color: inherit; text-decoration: inherit;">Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the library.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="path_go">
+<a href="#path_go" style="color: inherit; text-decoration: inherit;">Path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Storage blob path of library.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_go">
+<a href="#type_go" style="color: inherit; text-decoration: inherit;">Type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of the library.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="creatorid_nodejs">
+<a href="#creatorid_nodejs" style="color: inherit; text-decoration: inherit;">creator<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Creator Id of the library/package.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="provisioningstatus_nodejs">
+<a href="#provisioningstatus_nodejs" style="color: inherit; text-decoration: inherit;">provisioning<wbr>Status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Provisioning status of the library/package.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="uploadedtimestamp_nodejs">
+<a href="#uploadedtimestamp_nodejs" style="color: inherit; text-decoration: inherit;">uploaded<wbr>Timestamp</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The last update time of the library.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="containername_nodejs">
+<a href="#containername_nodejs" style="color: inherit; text-decoration: inherit;">container<wbr>Name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Storage blob container name.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_nodejs">
+<a href="#name_nodejs" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Name of the library.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="path_nodejs">
+<a href="#path_nodejs" style="color: inherit; text-decoration: inherit;">path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Storage blob path of library.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_nodejs">
+<a href="#type_nodejs" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}Type of the library.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-required"
+            title="Required">
+        <span id="creator_id_python">
+<a href="#creator_id_python" style="color: inherit; text-decoration: inherit;">creator_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Creator Id of the library/package.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="provisioning_status_python">
+<a href="#provisioning_status_python" style="color: inherit; text-decoration: inherit;">provisioning_<wbr>status</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Provisioning status of the library/package.{{% /md %}}</dd>
+    <dt class="property-required"
+            title="Required">
+        <span id="uploaded_timestamp_python">
+<a href="#uploaded_timestamp_python" style="color: inherit; text-decoration: inherit;">uploaded_<wbr>timestamp</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The last update time of the library.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="container_name_python">
+<a href="#container_name_python" style="color: inherit; text-decoration: inherit;">container_<wbr>name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Storage blob container name.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="name_python">
+<a href="#name_python" style="color: inherit; text-decoration: inherit;">name</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Name of the library.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="path_python">
+<a href="#path_python" style="color: inherit; text-decoration: inherit;">path</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Storage blob path of library.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="type_python">
+<a href="#type_python" style="color: inherit; text-decoration: inherit;">type</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}Type of the library.{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
 <h4 id="libraryrequirements">Library<wbr>Requirements</h4>
 
 {{% choosable language csharp %}}
@@ -2121,7 +2802,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:synapse/v20190601preview:BigDataPool ExamplePool /subscriptions/01234567-89ab-4def-0123-456789abcdef/resourceGroups/ExampleResourceGroup/providers/Microsoft.Synapse/workspaces/ExampleWorkspace/bigDataPools/ExamplePool 
+$ pulumi import azure-nextgen:synapse/latest:BigDataPool ExamplePool /subscriptions/01234567-89ab-4def-0123-456789abcdef/resourceGroups/ExampleResourceGroup/providers/Microsoft.Synapse/workspaces/ExampleWorkspace/bigDataPools/ExamplePool 
 ```
 
 

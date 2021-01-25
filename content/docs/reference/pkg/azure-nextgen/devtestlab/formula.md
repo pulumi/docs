@@ -12,6 +12,13 @@ meta_desc: "Documentation for the azure-nextgen.devtestlab.Formula resource with
 
 A formula for creating a VM, specifying an image base and other parameters
 Latest API Version: 2018-09-15.
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:devtestlab/latest:Formula myresource1 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.DevTestLab/labs/{labName}/formulas/{name} 
+```
 
 
 

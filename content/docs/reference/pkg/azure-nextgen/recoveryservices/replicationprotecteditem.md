@@ -6706,6 +6706,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The OS type associated with vm.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="targetavailabilitysetid_csharp">
+<a href="#targetavailabilitysetid_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Availability<wbr>Set<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The availability set ARM Id.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="targetavailabilityzone_csharp">
 <a href="#targetavailabilityzone_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Availability<wbr>Zone</a>
 </span>
@@ -6854,6 +6863,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The OS type associated with vm.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="targetavailabilitysetid_go">
+<a href="#targetavailabilitysetid_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Availability<wbr>Set<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The availability set ARM Id.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="targetavailabilityzone_go">
@@ -7006,6 +7024,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The OS type associated with vm.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="targetavailabilitysetid_nodejs">
+<a href="#targetavailabilitysetid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Availability<wbr>Set<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The availability set ARM Id.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="targetavailabilityzone_nodejs">
 <a href="#targetavailabilityzone_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Availability<wbr>Zone</a>
 </span>
@@ -7154,6 +7181,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The OS type associated with vm.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="target_availability_set_id_python">
+<a href="#target_availability_set_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>availability_<wbr>set_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The availability set ARM Id.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="target_availability_zone_python">
@@ -9632,6 +9668,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The storage account name.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="targetavailabilitysetid_csharp">
+<a href="#targetavailabilitysetid_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Availability<wbr>Set<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The availability set ARM Id.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="targetavailabilityzone_csharp">
 <a href="#targetavailabilityzone_csharp" style="color: inherit; text-decoration: inherit;">Target<wbr>Availability<wbr>Zone</a>
 </span>
@@ -9798,6 +9843,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}The storage account name.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="targetavailabilitysetid_go">
+<a href="#targetavailabilitysetid_go" style="color: inherit; text-decoration: inherit;">Target<wbr>Availability<wbr>Set<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The availability set ARM Id.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="targetavailabilityzone_go">
@@ -9968,6 +10022,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
     <dd>{{% md %}}The storage account name.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="targetavailabilitysetid_nodejs">
+<a href="#targetavailabilitysetid_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Availability<wbr>Set<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The availability set ARM Id.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="targetavailabilityzone_nodejs">
 <a href="#targetavailabilityzone_nodejs" style="color: inherit; text-decoration: inherit;">target<wbr>Availability<wbr>Zone</a>
 </span>
@@ -10134,6 +10197,15 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}The storage account name.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="target_availability_set_id_python">
+<a href="#target_availability_set_id_python" style="color: inherit; text-decoration: inherit;">target_<wbr>availability_<wbr>set_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The availability set ARM Id.{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="target_availability_zone_python">

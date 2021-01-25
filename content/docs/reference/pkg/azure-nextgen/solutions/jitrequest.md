@@ -12,6 +12,13 @@ meta_desc: "Documentation for the azure-nextgen.solutions.JitRequest resource wi
 
 Information about JIT request definition.
 Latest API Version: 2019-07-01.
+## Import
+
+An existing resource can be imported using its type token, name, and identifier, e.g.
+
+```sh
+$ pulumi import azure-nextgen:solutions/latest:JitRequest myresource1 /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Solutions/jitRequests/{jitRequestName} 
+```
 
 
 

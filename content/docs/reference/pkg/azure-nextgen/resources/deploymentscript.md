@@ -1754,7 +1754,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:resources/v20191001preview:DeploymentScript myresource1 <Azure resource ID> 
+$ pulumi import azure-nextgen:resources/v20191001preview:DeploymentScript myresource1 /subscriptions/{subscriptionId}/resourcegroups/{resourceGroupName}/providers/Microsoft.Resources/deploymentScripts/{scriptName} 
 ```
 
 

@@ -4716,15 +4716,6 @@ The following output properties are available:
 
     <dt class="property-required"
             title="Required">
-        <span id="accesstoken_csharp">
-<a href="#accesstoken_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Token</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}Access token for databricks REST API. Refer to https://docs.azuredatabricks.net/api/latest/authentication.html. Type: string (or Expression with resultType string).{{% /md %}}</dd>
-    <dt class="property-required"
-            title="Required">
         <span id="domain_csharp">
 <a href="#domain_csharp" style="color: inherit; text-decoration: inherit;">Domain</a>
 </span>
@@ -4734,6 +4725,15 @@ The following output properties are available:
     <dd>{{% md %}}<REGION>.azuredatabricks.net, domain name of your Databricks deployment. Type: string (or Expression with resultType string).{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="accesstoken_csharp">
+<a href="#accesstoken_csharp" style="color: inherit; text-decoration: inherit;">Access<wbr>Token</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Access token for databricks REST API. Refer to https://docs.azuredatabricks.net/api/latest/authentication.html. Type: string (or Expression with resultType string).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="annotations_csharp">
 <a href="#annotations_csharp" style="color: inherit; text-decoration: inherit;">Annotations</a>
 </span>
@@ -4741,6 +4741,15 @@ The following output properties are available:
         <span class="property-type">List&lt;object&gt;</span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="authentication_csharp">
+<a href="#authentication_csharp" style="color: inherit; text-decoration: inherit;">Authentication</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}Required to specify MSI, if using Workspace resource id for databricks REST API. Type: string (or Expression with resultType string).{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="connectvia_csharp">
@@ -4885,21 +4894,21 @@ The following output properties are available:
         <span class="property-type">Dictionary&lt;string, Pulumi.<wbr>Azure<wbr>Next<wbr>Gen.<wbr>Data<wbr>Factory.<wbr>Inputs.<wbr>Parameter<wbr>Specification<wbr>Response<wbr>Args&gt;</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workspaceresourceid_csharp">
+<a href="#workspaceresourceid_csharp" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">object</span>
+    </dt>
+    <dd>{{% md %}}Workspace resource id for databricks REST API. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
 {{% choosable language go %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="accesstoken_go">
-<a href="#accesstoken_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Token</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Access token for databricks REST API. Refer to https://docs.azuredatabricks.net/api/latest/authentication.html. Type: string (or Expression with resultType string).{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="domain_go">
@@ -4911,6 +4920,15 @@ The following output properties are available:
     <dd>{{% md %}}<REGION>.azuredatabricks.net, domain name of your Databricks deployment. Type: string (or Expression with resultType string).{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="accesstoken_go">
+<a href="#accesstoken_go" style="color: inherit; text-decoration: inherit;">Access<wbr>Token</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Access token for databricks REST API. Refer to https://docs.azuredatabricks.net/api/latest/authentication.html. Type: string (or Expression with resultType string).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="annotations_go">
 <a href="#annotations_go" style="color: inherit; text-decoration: inherit;">Annotations</a>
 </span>
@@ -4918,6 +4936,15 @@ The following output properties are available:
         <span class="property-type">[]interface{}</span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="authentication_go">
+<a href="#authentication_go" style="color: inherit; text-decoration: inherit;">Authentication</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}Required to specify MSI, if using Workspace resource id for databricks REST API. Type: string (or Expression with resultType string).{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="connectvia_go">
@@ -5062,21 +5089,21 @@ The following output properties are available:
         <span class="property-type">map[string]Parameter<wbr>Specification<wbr>Response</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workspaceresourceid_go">
+<a href="#workspaceresourceid_go" style="color: inherit; text-decoration: inherit;">Workspace<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">interface{}</span>
+    </dt>
+    <dd>{{% md %}}Workspace resource id for databricks REST API. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
 {{% choosable language nodejs %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="accesstoken_nodejs">
-<a href="#accesstoken_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Token</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
-    </dt>
-    <dd>{{% md %}}Access token for databricks REST API. Refer to https://docs.azuredatabricks.net/api/latest/authentication.html. Type: string (or Expression with resultType string).{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="domain_nodejs">
@@ -5088,6 +5115,15 @@ The following output properties are available:
     <dd>{{% md %}}<REGION>.azuredatabricks.net, domain name of your Databricks deployment. Type: string (or Expression with resultType string).{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="accesstoken_nodejs">
+<a href="#accesstoken_nodejs" style="color: inherit; text-decoration: inherit;">access<wbr>Token</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response</a></span>
+    </dt>
+    <dd>{{% md %}}Access token for databricks REST API. Refer to https://docs.azuredatabricks.net/api/latest/authentication.html. Type: string (or Expression with resultType string).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="annotations_nodejs">
 <a href="#annotations_nodejs" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span>
@@ -5095,6 +5131,15 @@ The following output properties are available:
         <span class="property-type">any[]</span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="authentication_nodejs">
+<a href="#authentication_nodejs" style="color: inherit; text-decoration: inherit;">authentication</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}Required to specify MSI, if using Workspace resource id for databricks REST API. Type: string (or Expression with resultType string).{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="connectvia_nodejs">
@@ -5239,21 +5284,21 @@ The following output properties are available:
         <span class="property-type">{[key: string]: Parameter<wbr>Specification<wbr>Response}</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workspaceresourceid_nodejs">
+<a href="#workspaceresourceid_nodejs" style="color: inherit; text-decoration: inherit;">workspace<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">any</span>
+    </dt>
+    <dd>{{% md %}}Workspace resource id for databricks REST API. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 
 {{% choosable language python %}}
 <dl class="resources-properties">
 
-    <dt class="property-required"
-            title="Required">
-        <span id="access_token_python">
-<a href="#access_token_python" style="color: inherit; text-decoration: inherit;">access_<wbr>token</a>
-</span>
-        <span class="property-indicator"></span>
-        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
-    </dt>
-    <dd>{{% md %}}Access token for databricks REST API. Refer to https://docs.azuredatabricks.net/api/latest/authentication.html. Type: string (or Expression with resultType string).{{% /md %}}</dd>
     <dt class="property-required"
             title="Required">
         <span id="domain_python">
@@ -5265,6 +5310,15 @@ The following output properties are available:
     <dd>{{% md %}}<REGION>.azuredatabricks.net, domain name of your Databricks deployment. Type: string (or Expression with resultType string).{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="access_token_python">
+<a href="#access_token_python" style="color: inherit; text-decoration: inherit;">access_<wbr>token</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#azurekeyvaultsecretreferenceresponse">Azure<wbr>Key<wbr>Vault<wbr>Secret<wbr>Reference<wbr>Response<wbr>Args</a> | <a href="#securestringresponse">Secure<wbr>String<wbr>Response<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Access token for databricks REST API. Refer to https://docs.azuredatabricks.net/api/latest/authentication.html. Type: string (or Expression with resultType string).{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="annotations_python">
 <a href="#annotations_python" style="color: inherit; text-decoration: inherit;">annotations</a>
 </span>
@@ -5272,6 +5326,15 @@ The following output properties are available:
         <span class="property-type">Sequence[Any]</span>
     </dt>
     <dd>{{% md %}}List of tags that can be used for describing the linked service.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="authentication_python">
+<a href="#authentication_python" style="color: inherit; text-decoration: inherit;">authentication</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}Required to specify MSI, if using Workspace resource id for databricks REST API. Type: string (or Expression with resultType string).{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="connect_via_python">
@@ -5416,6 +5479,15 @@ The following output properties are available:
         <span class="property-type">Mapping[str, Parameter<wbr>Specification<wbr>Response<wbr>Args]</span>
     </dt>
     <dd>{{% md %}}Parameters for linked service.{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="workspace_resource_id_python">
+<a href="#workspace_resource_id_python" style="color: inherit; text-decoration: inherit;">workspace_<wbr>resource_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Any</span>
+    </dt>
+    <dd>{{% md %}}Workspace resource id for databricks REST API. Type: string (or Expression with resultType string).{{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
 

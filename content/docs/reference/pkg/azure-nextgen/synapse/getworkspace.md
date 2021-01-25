@@ -157,6 +157,15 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="adlaresourceid_csharp">
+<a href="#adlaresourceid_csharp" style="color: inherit; text-decoration: inherit;">Adla<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ADLA resource ID.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="extraproperties_csharp">
 <a href="#extraproperties_csharp" style="color: inherit; text-decoration: inherit;">Extra<wbr>Properties</a>
 </span>
@@ -350,6 +359,15 @@ The following output properties are available:
 {{% choosable language go %}}
 <dl class="resources-properties">
 
+    <dt class="property-"
+            title="">
+        <span id="adlaresourceid_go">
+<a href="#adlaresourceid_go" style="color: inherit; text-decoration: inherit;">Adla<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ADLA resource ID.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="extraproperties_go">
@@ -547,6 +565,15 @@ The following output properties are available:
 
     <dt class="property-"
             title="">
+        <span id="adlaresourceid_nodejs">
+<a href="#adlaresourceid_nodejs" style="color: inherit; text-decoration: inherit;">adla<wbr>Resource<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The ADLA resource ID.{{% /md %}}</dd>
+    <dt class="property-"
+            title="">
         <span id="extraproperties_nodejs">
 <a href="#extraproperties_nodejs" style="color: inherit; text-decoration: inherit;">extra<wbr>Properties</a>
 </span>
@@ -740,6 +767,15 @@ The following output properties are available:
 {{% choosable language python %}}
 <dl class="resources-properties">
 
+    <dt class="property-"
+            title="">
+        <span id="adla_resource_id_python">
+<a href="#adla_resource_id_python" style="color: inherit; text-decoration: inherit;">adla_<wbr>resource_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The ADLA resource ID.{{% /md %}}</dd>
     <dt class="property-"
             title="">
         <span id="extra_properties_python">
@@ -2254,6 +2290,15 @@ The following output properties are available:
     <dd>{{% md %}}GitHub Enterprise host name. For example: https://github.mydomain.com{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="lastcommitid_csharp">
+<a href="#lastcommitid_csharp" style="color: inherit; text-decoration: inherit;">Last<wbr>Commit<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The last commit ID{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="projectname_csharp">
 <a href="#projectname_csharp" style="color: inherit; text-decoration: inherit;">Project<wbr>Name</a>
 </span>
@@ -2279,6 +2324,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Root folder to use in the repository{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tenantid_csharp">
+<a href="#tenantid_csharp" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The VSTS tenant ID{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="type_csharp">
@@ -2323,6 +2377,15 @@ The following output properties are available:
     <dd>{{% md %}}GitHub Enterprise host name. For example: https://github.mydomain.com{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="lastcommitid_go">
+<a href="#lastcommitid_go" style="color: inherit; text-decoration: inherit;">Last<wbr>Commit<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The last commit ID{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="projectname_go">
 <a href="#projectname_go" style="color: inherit; text-decoration: inherit;">Project<wbr>Name</a>
 </span>
@@ -2348,6 +2411,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Root folder to use in the repository{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tenantid_go">
+<a href="#tenantid_go" style="color: inherit; text-decoration: inherit;">Tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The VSTS tenant ID{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="type_go">
@@ -2392,6 +2464,15 @@ The following output properties are available:
     <dd>{{% md %}}GitHub Enterprise host name. For example: https://github.mydomain.com{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="lastcommitid_nodejs">
+<a href="#lastcommitid_nodejs" style="color: inherit; text-decoration: inherit;">last<wbr>Commit<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The last commit ID{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="projectname_nodejs">
 <a href="#projectname_nodejs" style="color: inherit; text-decoration: inherit;">project<wbr>Name</a>
 </span>
@@ -2417,6 +2498,15 @@ The following output properties are available:
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Root folder to use in the repository{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tenantid_nodejs">
+<a href="#tenantid_nodejs" style="color: inherit; text-decoration: inherit;">tenant<wbr>Id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The VSTS tenant ID{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="type_nodejs">
@@ -2461,6 +2551,15 @@ The following output properties are available:
     <dd>{{% md %}}GitHub Enterprise host name. For example: https://github.mydomain.com{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="last_commit_id_python">
+<a href="#last_commit_id_python" style="color: inherit; text-decoration: inherit;">last_<wbr>commit_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The last commit ID{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="project_name_python">
 <a href="#project_name_python" style="color: inherit; text-decoration: inherit;">project_<wbr>name</a>
 </span>
@@ -2486,6 +2585,15 @@ The following output properties are available:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Root folder to use in the repository{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="tenant_id_python">
+<a href="#tenant_id_python" style="color: inherit; text-decoration: inherit;">tenant_<wbr>id</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The VSTS tenant ID{{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
         <span id="type_python">

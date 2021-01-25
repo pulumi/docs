@@ -11,6 +11,7 @@ meta_desc: "Documentation for the azure-nextgen.synapse.IntegrationRuntime resou
 <!-- Do not edit by hand unless you're certain you know what you are doing! -->
 
 Integration runtime resource type.
+Latest API Version: 2020-12-01.
 
 {{% examples %}}
 ## Example Usage
@@ -26,7 +27,7 @@ class MyStack : Stack
 {
     public MyStack()
     {
-        var integrationRuntime = new AzureNextGen.Synapse.V20190601Preview.IntegrationRuntime("integrationRuntime", new AzureNextGen.Synapse.V20190601Preview.IntegrationRuntimeArgs
+        var integrationRuntime = new AzureNextGen.Synapse.Latest.IntegrationRuntime("integrationRuntime", new AzureNextGen.Synapse.Latest.IntegrationRuntimeArgs
         {
             IntegrationRuntimeName = "exampleIntegrationRuntime",
             Properties = 
@@ -55,7 +56,7 @@ Coming soon!
 import pulumi
 import pulumi_azure_nextgen as azure_nextgen
 
-integration_runtime = azure_nextgen.synapse.v20190601preview.IntegrationRuntime("integrationRuntime",
+integration_runtime = azure_nextgen.synapse.latest.IntegrationRuntime("integrationRuntime",
     integration_runtime_name="exampleIntegrationRuntime",
     properties={
         "description": "A selfhosted integration runtime",
@@ -74,7 +75,7 @@ integration_runtime = azure_nextgen.synapse.v20190601preview.IntegrationRuntime(
 import * as pulumi from "@pulumi/pulumi";
 import * as azure_nextgen from "@pulumi/azure-nextgen";
 
-const integrationRuntime = new azure_nextgen.synapse.v20190601preview.IntegrationRuntime("integrationRuntime", {
+const integrationRuntime = new azure_nextgen.synapse.latest.IntegrationRuntime("integrationRuntime", {
     integrationRuntimeName: "exampleIntegrationRuntime",
     properties: {
         description: "A selfhosted integration runtime",
@@ -4876,7 +4877,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
 An existing resource can be imported using its type token, name, and identifier, e.g.
 
 ```sh
-$ pulumi import azure-nextgen:synapse/v20190601preview:IntegrationRuntime exampleIntegrationRuntime /subscriptions/12345678-1234-1234-1234-12345678abc/resourceGroups/exampleResourceGroup/providers/Microsoft.Synapse/workspaces/exampleWorkspaceName/integrationruntimes/exampleIntegrationRuntime 
+$ pulumi import azure-nextgen:synapse/latest:IntegrationRuntime exampleIntegrationRuntime /subscriptions/12345678-1234-1234-1234-12345678abc/resourceGroups/exampleResourceGroup/providers/Microsoft.Synapse/workspaces/exampleWorkspaceName/integrationruntimes/exampleIntegrationRuntime 
 ```
 
 
