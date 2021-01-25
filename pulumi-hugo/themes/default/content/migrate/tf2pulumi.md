@@ -2,6 +2,11 @@
 title: Convert Your Terraform to a Modern Language
 url: /tf2pulumi
 layout: tf2pulumi
+linktitle: tf2pulumi
+menu:
+  converters:
+    identifier: tf2pulumi
+    weight: 4
 meta_desc: See what your Terraform HCL would look like in a modern language thanks to Pulumi.
 
 examples:
