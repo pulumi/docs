@@ -4,6 +4,8 @@ import * as aws from "@pulumi/aws";
 import * as pulumi from "@pulumi/pulumi";
 import * as fs from "fs";
 
+import { getLambdaFunctionAssociations } from "./cloudfrontLambdaAssociations";
+
 const stackConfig = new pulumi.Config();
 
 const config = {
@@ -22,6 +24,10 @@ const config = {
     // pathToOriginBucketMetadata is the path to the file produced at the end of the
     // sync-and-test-bucket script (i.e., scripts/sync-and-test-bucket.sh).
     pathToOriginBucketMetadata: stackConfig.require("pathToOriginBucketMetadata"),
+
+    // addSecurityHeaders indicates if standard security headers should be added.
+    // Setting this true will add a Lambda@Edge function that adds the security headers.
+    addSecurityHeaders: stackConfig.getBoolean("addSecurityHeaders") || false,
 };
 
 // originBucketName is the name of the S3 bucket to use as the CloudFront origin for the
@@ -56,21 +62,22 @@ const originBucket = pulumi.output(aws.s3.getBucket({
 // users to prevent unintended disclosure of the bucket's contents.
 const originBucketPolicy = new aws.s3.BucketPolicy("origin-bucket-policy", {
     bucket: originBucket.bucket,
-    policy: originBucket.arn.apply(arn => JSON.stringify({
-        Version: "2008-10-17",
-        Statement: [
-            {
-                Effect: "Deny",
-                Principal: "*",
-                Action: "s3:ListBucket",
-                Resource: arn,
-                Condition: {
-                    StringNotEquals: {
-                        "aws:PrincipalAccount": aws.getCallerIdentity().accountId,
+    policy: pulumi.all([originBucket.arn, aws.getCallerIdentity()])
+        .apply(([arn, awsCallerIdentityResult]) => JSON.stringify({
+            Version: "2008-10-17",
+            Statement: [
+                {
+                    Effect: "Deny",
+                    Principal: "*",
+                    Action: "s3:ListBucket",
+                    Resource: arn,
+                    Condition: {
+                        StringNotEquals: {
+                            "aws:PrincipalAccount": awsCallerIdentityResult.accountId,
+                        },
                     },
                 },
-            },
-        ],
+            ],
     })),
 });
 
@@ -158,6 +165,7 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
 
     defaultCacheBehavior: {
         ...baseCacheBehavior,
+        lambdaFunctionAssociations: getLambdaFunctionAssociations(config.addSecurityHeaders),
     },
 
     orderedCacheBehaviors: [
