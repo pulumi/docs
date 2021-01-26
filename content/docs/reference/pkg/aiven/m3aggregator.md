@@ -39,7 +39,7 @@ class MyStack : Stack
             MaintenanceWindowTime = "10:00:00",
             M3aggregatorUserConfig = new Aiven.Inputs.M3AggregatorM3aggregatorUserConfigArgs
             {
-                M3Version = "0.15",
+                M3aggregatorVersion = "0.15",
             },
         });
     }
@@ -68,7 +68,7 @@ func main() {
 			MaintenanceWindowDow:  pulumi.String("monday"),
 			MaintenanceWindowTime: pulumi.String("10:00:00"),
 			M3aggregatorUserConfig: &aiven.M3AggregatorM3aggregatorUserConfigArgs{
-				M3Version: pulumi.String("0.15"),
+				M3aggregatorVersion: pulumi.String("0.15"),
 			},
 		})
 		if err != nil {
@@ -94,7 +94,7 @@ m3a = aiven.M3Aggregator("m3a",
     maintenance_window_dow="monday",
     maintenance_window_time="10:00:00",
     m3aggregator_user_config=aiven.M3AggregatorM3aggregatorUserConfigArgs(
-        m3_version="0.15",
+        m3aggregator_version="0.15",
     ))
 ```
 
@@ -114,7 +114,7 @@ const m3a = new aiven.M3Aggregator("m3a", {
     maintenanceWindowDow: "monday",
     maintenanceWindowTime: "10:00:00",
     m3aggregatorUserConfig: {
-        m3Version: 0.15,
+        m3aggregatorVersion: 0.15,
     },
 });
 ```
@@ -2635,6 +2635,15 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="m3aggregatorversion_csharp">
+<a href="#m3aggregatorversion_csharp" style="color: inherit; text-decoration: inherit;">M3aggregator<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
     <dd>{{% md %}}M3 major version
 {{% /md %}}</dd>
 </dl>
@@ -2667,6 +2676,15 @@ deletion is done.
             title="Optional">
         <span id="m3version_go">
 <a href="#m3version_go" style="color: inherit; text-decoration: inherit;">M3Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="m3aggregatorversion_go">
+<a href="#m3aggregatorversion_go" style="color: inherit; text-decoration: inherit;">M3aggregator<wbr>Version</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
@@ -2707,6 +2725,15 @@ deletion is done.
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="m3aggregatorversion_nodejs">
+<a href="#m3aggregatorversion_nodejs" style="color: inherit; text-decoration: inherit;">m3aggregator<wbr>Version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
     <dd>{{% md %}}M3 major version
 {{% /md %}}</dd>
 </dl>
@@ -2739,6 +2766,15 @@ deletion is done.
             title="Optional">
         <span id="m3_version_python">
 <a href="#m3_version_python" style="color: inherit; text-decoration: inherit;">m3_<wbr>version</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="m3aggregator_version_python">
+<a href="#m3aggregator_version_python" style="color: inherit; text-decoration: inherit;">m3aggregator_<wbr>version</a>
 </span>
         <span class="property-indicator"></span>
         <span class="property-type">str</span>

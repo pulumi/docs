@@ -2377,6 +2377,16 @@ be kept.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="indextemplate_csharp">
+<a href="#indextemplate_csharp" style="color: inherit; text-decoration: inherit;">Index<wbr>Template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getelasticsearchelasticsearchuserconfigindextemplate">Get<wbr>Elastic<wbr>Search<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Index<wbr>Template<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Template settings for all new indexe.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="ipfilters_csharp">
 <a href="#ipfilters_csharp" style="color: inherit; text-decoration: inherit;">Ip<wbr>Filters</a>
 </span>
@@ -2518,6 +2528,16 @@ virtual machine failure.
     </dt>
     <dd>{{% md %}}Glob pattern and number of indexes matching that pattern to 
 be kept.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="indextemplate_go">
+<a href="#indextemplate_go" style="color: inherit; text-decoration: inherit;">Index<wbr>Template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getelasticsearchelasticsearchuserconfigindextemplate">Get<wbr>Elastic<wbr>Search<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Index<wbr>Template</a></span>
+    </dt>
+    <dd>{{% md %}}Template settings for all new indexe.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -2665,6 +2685,16 @@ be kept.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="indextemplate_nodejs">
+<a href="#indextemplate_nodejs" style="color: inherit; text-decoration: inherit;">index<wbr>Template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getelasticsearchelasticsearchuserconfigindextemplate">Get<wbr>Elastic<wbr>Search<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Index<wbr>Template</a></span>
+    </dt>
+    <dd>{{% md %}}Template settings for all new indexe.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="ipfilters_nodejs">
 <a href="#ipfilters_nodejs" style="color: inherit; text-decoration: inherit;">ip<wbr>Filters</a>
 </span>
@@ -2806,6 +2836,16 @@ virtual machine failure.
     </dt>
     <dd>{{% md %}}Glob pattern and number of indexes matching that pattern to 
 be kept.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="index_template_python">
+<a href="#index_template_python" style="color: inherit; text-decoration: inherit;">index_<wbr>template</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type"><a href="#getelasticsearchelasticsearchuserconfigindextemplate">Get<wbr>Elastic<wbr>Search<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Index<wbr>Template<wbr>Args</a></span>
+    </dt>
+    <dd>{{% md %}}Template settings for all new indexe.
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -4193,6 +4233,172 @@ dots and glob characters (* and ?)
     </dt>
     <dd>{{% md %}}Must consist of alpha-numeric characters, dashes, underscores, 
 dots and glob characters (* and ?)
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+<h4 id="getelasticsearchelasticsearchuserconfigindextemplate">Get<wbr>Elastic<wbr>Search<wbr>Elasticsearch<wbr>User<wbr>Config<wbr>Index<wbr>Template</h4>
+{{% choosable language nodejs %}}
+> See the <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/input/#GetElasticSearchElasticsearchUserConfigIndexTemplate">input</a> and <a href="/docs/reference/pkg/nodejs/pulumi/aiven/types/output/#GetElasticSearchElasticsearchUserConfigIndexTemplate">output</a> API doc for this type.
+{{% /choosable %}}
+
+{{% choosable language go %}}
+> See the <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetElasticSearchElasticsearchUserConfigIndexTemplateArgs">input</a> and <a href="https://pkg.go.dev/github.com/pulumi/pulumi-aiven/sdk/v3/go/aiven/?tab=doc#GetElasticSearchElasticsearchUserConfigIndexTemplate">output</a> API doc for this type.
+{{% /choosable %}}
+{{% choosable language csharp %}}
+> See the <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Inputs.GetElasticSearchElasticsearchUserConfigIndexTemplateArgs.html">input</a> and <a href="/docs/reference/pkg/dotnet/Pulumi.Aiven/Pulumi.Aiven.Outputs.GetElasticSearchElasticsearchUserConfigIndexTemplate.html">output</a> API doc for this type.
+{{% /choosable %}}
+
+
+
+{{% choosable language csharp %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="mappingnestedobjectslimit_csharp">
+<a href="#mappingnestedobjectslimit_csharp" style="color: inherit; text-decoration: inherit;">Mapping<wbr>Nested<wbr>Objects<wbr>Limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of nested JSON objects that
+a single document can contain across all nested types. This limit helps to prevent out of
+memory errors when a document contains too many nested objects. Default is 10000.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="numberofreplicas_csharp">
+<a href="#numberofreplicas_csharp" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Replicas</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The number of replicas each primary shard has.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="numberofshards_csharp">
+<a href="#numberofshards_csharp" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Shards</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The number of primary shards that an index should have.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language go %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="mappingnestedobjectslimit_go">
+<a href="#mappingnestedobjectslimit_go" style="color: inherit; text-decoration: inherit;">Mapping<wbr>Nested<wbr>Objects<wbr>Limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of nested JSON objects that
+a single document can contain across all nested types. This limit helps to prevent out of
+memory errors when a document contains too many nested objects. Default is 10000.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="numberofreplicas_go">
+<a href="#numberofreplicas_go" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Replicas</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The number of replicas each primary shard has.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="numberofshards_go">
+<a href="#numberofshards_go" style="color: inherit; text-decoration: inherit;">Number<wbr>Of<wbr>Shards</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The number of primary shards that an index should have.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language nodejs %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="mappingnestedobjectslimit_nodejs">
+<a href="#mappingnestedobjectslimit_nodejs" style="color: inherit; text-decoration: inherit;">mapping<wbr>Nested<wbr>Objects<wbr>Limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of nested JSON objects that
+a single document can contain across all nested types. This limit helps to prevent out of
+memory errors when a document contains too many nested objects. Default is 10000.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="numberofreplicas_nodejs">
+<a href="#numberofreplicas_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Of<wbr>Replicas</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The number of replicas each primary shard has.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="numberofshards_nodejs">
+<a href="#numberofshards_nodejs" style="color: inherit; text-decoration: inherit;">number<wbr>Of<wbr>Shards</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">string</span>
+    </dt>
+    <dd>{{% md %}}The number of primary shards that an index should have.
+{{% /md %}}</dd>
+</dl>
+{{% /choosable %}}
+
+{{% choosable language python %}}
+<dl class="resources-properties">
+
+    <dt class="property-optional"
+            title="Optional">
+        <span id="mapping_nested_objects_limit_python">
+<a href="#mapping_nested_objects_limit_python" style="color: inherit; text-decoration: inherit;">mapping_<wbr>nested_<wbr>objects_<wbr>limit</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The maximum number of nested JSON objects that
+a single document can contain across all nested types. This limit helps to prevent out of
+memory errors when a document contains too many nested objects. Default is 10000.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="number_of_replicas_python">
+<a href="#number_of_replicas_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>replicas</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The number of replicas each primary shard has.
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="number_of_shards_python">
+<a href="#number_of_shards_python" style="color: inherit; text-decoration: inherit;">number_<wbr>of_<wbr>shards</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">str</span>
+    </dt>
+    <dd>{{% md %}}The number of primary shards that an index should have.
 {{% /md %}}</dd>
 </dl>
 {{% /choosable %}}
