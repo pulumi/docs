@@ -98,6 +98,8 @@ const oneHour = fiveMinutes * 12;
 const oneWeek = oneHour * 24 * 7;
 const oneYear = oneWeek * 52;
 
+const lambdaFunctionAssociations = getLambdaFunctionAssociations(config.addSecurityHeaders);
+
 const baseCacheBehavior = {
     targetOriginId: originBucket.arn,
     compress: true,
@@ -118,6 +120,8 @@ const baseCacheBehavior = {
     minTtl: 0,
     defaultTtl: fiveMinutes,
     maxTtl: fiveMinutes,
+
+    lambdaFunctionAssociations,
 };
 
 // domainAliases is a list of CNAMEs that accompany the CloudFront distribution. Any
@@ -165,7 +169,6 @@ const distributionArgs: aws.cloudfront.DistributionArgs = {
 
     defaultCacheBehavior: {
         ...baseCacheBehavior,
-        lambdaFunctionAssociations: getLambdaFunctionAssociations(config.addSecurityHeaders),
     },
 
     orderedCacheBehaviors: [
