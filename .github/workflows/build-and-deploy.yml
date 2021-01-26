@@ -32,6 +32,9 @@ jobs:
       - name: Install assume-role
         run: go get -u github.com/remind101/assume-role
 
+      - name: Install Pulumi CLI
+        uses: pulumi/action-install-pulumi-cli@v1.0.1
+
       - name: Build and deploy
         run: make ci_${GITHUB_EVENT_NAME}
         env:
