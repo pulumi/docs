@@ -3,7 +3,7 @@ title: "Module generic"
 title_tag: "Module generic | Package @pulumi/vault | Node.js SDK"
 linktitle: "generic"
 meta_desc: "Explore members of the generic module in the @pulumi/vault package."
-git_sha: "09ca03ecf17d3f2a37795741ba9309406227d766"
+git_sha: "ebbace55ace6f59a082f504fcae2277b394db92f"
 block_external_search_index: true
 ---
 
@@ -39,7 +39,7 @@ block_external_search_index: true
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Endpoint" data-link-title="Endpoint">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/generic/endpoint.ts#L12">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/generic/endpoint.ts#L12">
         Resource <strong>Endpoint</strong>
     </a>
 </h3>
@@ -51,7 +51,7 @@ block_external_search_index: true
 Import is not supported for this resource.
 
 <h4 class="pdoc-member-header" id="Endpoint-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/generic/endpoint.ts#L79"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/generic/endpoint.ts#L79"> <b>constructor</b></a>
 </h4>
 
 
@@ -65,7 +65,7 @@ Create a Endpoint resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Endpoint-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/generic/endpoint.ts#L22">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/generic/endpoint.ts#L22">method <b>get</b></a>
 </h4>
 
 
@@ -76,14 +76,14 @@ Get an existing Endpoint resource's state with the given name, ID, and optional 
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Endpoint-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/generic/endpoint.ts#L12">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/generic/endpoint.ts#L12">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Endpoint-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/generic/endpoint.ts#L33">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/generic/endpoint.ts#L33">method <b>isInstance</b></a>
 </h4>
 
 
@@ -94,7 +94,7 @@ Returns true if the given object is an instance of Endpoint.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Endpoint-dataJson">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/generic/endpoint.ts#L44">property <b>dataJson</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/generic/endpoint.ts#L44">property <b>dataJson</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dataJson: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -103,7 +103,7 @@ String containing a JSON-encoded object that will be
 written to the given path as the secret data.
 
 <h4 class="pdoc-member-header" id="Endpoint-disableDelete">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/generic/endpoint.ts#L48">property <b>disableDelete</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/generic/endpoint.ts#L48">property <b>disableDelete</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>disableDelete: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -111,7 +111,7 @@ written to the given path as the secret data.
 Don't attempt to delete the path from Vault if true
 
 <h4 class="pdoc-member-header" id="Endpoint-disableRead">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/generic/endpoint.ts#L56">property <b>disableRead</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/generic/endpoint.ts#L56">property <b>disableRead</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>disableRead: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -123,7 +123,7 @@ detection. You should set this to `true` for endpoints that are
 write-only. Defaults to false.
 
 <h4 class="pdoc-member-header" id="Endpoint-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/generic/endpoint.ts#L12">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/generic/endpoint.ts#L12">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -132,7 +132,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Endpoint-ignoreAbsentFields">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/generic/endpoint.ts#L60">property <b>ignoreAbsentFields</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/generic/endpoint.ts#L60">property <b>ignoreAbsentFields</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>ignoreAbsentFields: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -140,7 +140,7 @@ deployments and may be missing (undefined) during planning phases.
 When reading, disregard fields not present in data_json
 
 <h4 class="pdoc-member-header" id="Endpoint-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/generic/endpoint.ts#L67">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/generic/endpoint.ts#L67">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>path: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -151,7 +151,7 @@ support the `PUT` methods and to determine whether they also support
 `DELETE` and `GET`.
 
 <h4 class="pdoc-member-header" id="Endpoint-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/generic/endpoint.ts#L12">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/generic/endpoint.ts#L12">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -160,7 +160,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h4 class="pdoc-member-header" id="Endpoint-writeData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/generic/endpoint.ts#L71">property <b>writeData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/generic/endpoint.ts#L71">property <b>writeData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>writeData: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>}&gt;;</code></pre>
@@ -168,7 +168,7 @@ deployments.
 Map of strings returned by write operation
 
 <h4 class="pdoc-member-header" id="Endpoint-writeDataJson">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/generic/endpoint.ts#L75">property <b>writeDataJson</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/generic/endpoint.ts#L75">property <b>writeDataJson</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>writeDataJson: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -176,7 +176,7 @@ Map of strings returned by write operation
 JSON data returned by write operation
 
 <h4 class="pdoc-member-header" id="Endpoint-writeFields">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/generic/endpoint.ts#L79">property <b>writeFields</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/generic/endpoint.ts#L79">property <b>writeFields</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>writeFields: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[] | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -184,7 +184,7 @@ JSON data returned by write operation
 Top-level fields returned by write to persist in state
 
 <h3 class="pdoc-module-header" id="Secret" data-link-title="Secret">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/generic/secret.ts#L16">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/generic/secret.ts#L16">
         Resource <strong>Secret</strong>
     </a>
 </h3>
@@ -200,7 +200,7 @@ Generic secrets can be imported using the `path`, e.g.
 ```
 
 <h4 class="pdoc-member-header" id="Secret-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/generic/secret.ts#L69"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/generic/secret.ts#L69"> <b>constructor</b></a>
 </h4>
 
 
@@ -214,7 +214,7 @@ Create a Secret resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Secret-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/generic/secret.ts#L26">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/generic/secret.ts#L26">method <b>get</b></a>
 </h4>
 
 
@@ -225,14 +225,14 @@ Get an existing Secret resource's state with the given name, ID, and optional ex
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Secret-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/generic/secret.ts#L16">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/generic/secret.ts#L16">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Secret-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/generic/secret.ts#L37">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/generic/secret.ts#L37">method <b>isInstance</b></a>
 </h4>
 
 
@@ -243,7 +243,7 @@ Returns true if the given object is an instance of Secret.  This is designed to 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Secret-data">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/generic/secret.ts#L50">property <b>data</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/generic/secret.ts#L50">property <b>data</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>data: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -254,7 +254,7 @@ represent string data, so any non-string values returned from Vault are
 serialized as JSON.
 
 <h4 class="pdoc-member-header" id="Secret-dataJson">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/generic/secret.ts#L55">property <b>dataJson</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/generic/secret.ts#L55">property <b>dataJson</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>dataJson: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -263,7 +263,7 @@ String containing a JSON-encoded object that will be
 written as the secret data at the given path.
 
 <h4 class="pdoc-member-header" id="Secret-disableRead">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/generic/secret.ts#L61">property <b>disableRead</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/generic/secret.ts#L61">property <b>disableRead</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>disableRead: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
@@ -273,7 +273,7 @@ authentication is not able to read the data. Setting this to `true` will
 break drift detection. Defaults to false.
 
 <h4 class="pdoc-member-header" id="Secret-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/generic/secret.ts#L16">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/generic/secret.ts#L16">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -282,7 +282,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Secret-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/generic/secret.ts#L69">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/generic/secret.ts#L69">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>path: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -294,7 +294,7 @@ resource is possible; consult each backend's documentation to see which
 endpoints support the `PUT` and `DELETE` methods.
 
 <h4 class="pdoc-member-header" id="Secret-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/generic/secret.ts#L16">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/generic/secret.ts#L16">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -305,7 +305,7 @@ deployments.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getSecret" data-link-title="getSecret">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/generic/getSecret.ts#L8">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/generic/getSecret.ts#L8">
         Function <strong>getSecret</strong>
     </a>
 </h3>
@@ -316,7 +316,7 @@ deployments.
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="EndpointArgs" data-link-title="EndpointArgs">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/generic/endpoint.ts#L178">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/generic/endpoint.ts#L178">
         interface <strong>EndpointArgs</strong>
     </a>
 </h3>
@@ -326,7 +326,7 @@ deployments.
 The set of arguments for constructing a Endpoint resource.
 
 <h4 class="pdoc-member-header" id="EndpointArgs-dataJson">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/generic/endpoint.ts#L183">property <b>dataJson</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/generic/endpoint.ts#L183">property <b>dataJson</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataJson: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -335,7 +335,7 @@ String containing a JSON-encoded object that will be
 written to the given path as the secret data.
 
 <h4 class="pdoc-member-header" id="EndpointArgs-disableDelete">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/generic/endpoint.ts#L187">property <b>disableDelete</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/generic/endpoint.ts#L187">property <b>disableDelete</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>disableDelete?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -343,7 +343,7 @@ written to the given path as the secret data.
 Don't attempt to delete the path from Vault if true
 
 <h4 class="pdoc-member-header" id="EndpointArgs-disableRead">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/generic/endpoint.ts#L195">property <b>disableRead</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/generic/endpoint.ts#L195">property <b>disableRead</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>disableRead?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -355,7 +355,7 @@ detection. You should set this to `true` for endpoints that are
 write-only. Defaults to false.
 
 <h4 class="pdoc-member-header" id="EndpointArgs-ignoreAbsentFields">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/generic/endpoint.ts#L199">property <b>ignoreAbsentFields</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/generic/endpoint.ts#L199">property <b>ignoreAbsentFields</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ignoreAbsentFields?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -363,7 +363,7 @@ write-only. Defaults to false.
 When reading, disregard fields not present in data_json
 
 <h4 class="pdoc-member-header" id="EndpointArgs-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/generic/endpoint.ts#L206">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/generic/endpoint.ts#L206">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>path: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -374,7 +374,7 @@ support the `PUT` methods and to determine whether they also support
 `DELETE` and `GET`.
 
 <h4 class="pdoc-member-header" id="EndpointArgs-writeFields">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/generic/endpoint.ts#L210">property <b>writeFields</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/generic/endpoint.ts#L210">property <b>writeFields</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>writeFields?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -382,7 +382,7 @@ support the `PUT` methods and to determine whether they also support
 Top-level fields returned by write to persist in state
 
 <h3 class="pdoc-module-header" id="EndpointState" data-link-title="EndpointState">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/generic/endpoint.ts#L132">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/generic/endpoint.ts#L132">
         interface <strong>EndpointState</strong>
     </a>
 </h3>
@@ -392,7 +392,7 @@ Top-level fields returned by write to persist in state
 Input properties used for looking up and filtering Endpoint resources.
 
 <h4 class="pdoc-member-header" id="EndpointState-dataJson">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/generic/endpoint.ts#L137">property <b>dataJson</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/generic/endpoint.ts#L137">property <b>dataJson</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataJson?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -401,7 +401,7 @@ String containing a JSON-encoded object that will be
 written to the given path as the secret data.
 
 <h4 class="pdoc-member-header" id="EndpointState-disableDelete">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/generic/endpoint.ts#L141">property <b>disableDelete</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/generic/endpoint.ts#L141">property <b>disableDelete</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>disableDelete?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -409,7 +409,7 @@ written to the given path as the secret data.
 Don't attempt to delete the path from Vault if true
 
 <h4 class="pdoc-member-header" id="EndpointState-disableRead">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/generic/endpoint.ts#L149">property <b>disableRead</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/generic/endpoint.ts#L149">property <b>disableRead</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>disableRead?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -421,7 +421,7 @@ detection. You should set this to `true` for endpoints that are
 write-only. Defaults to false.
 
 <h4 class="pdoc-member-header" id="EndpointState-ignoreAbsentFields">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/generic/endpoint.ts#L153">property <b>ignoreAbsentFields</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/generic/endpoint.ts#L153">property <b>ignoreAbsentFields</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>ignoreAbsentFields?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -429,7 +429,7 @@ write-only. Defaults to false.
 When reading, disregard fields not present in data_json
 
 <h4 class="pdoc-member-header" id="EndpointState-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/generic/endpoint.ts#L160">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/generic/endpoint.ts#L160">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>path?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -440,7 +440,7 @@ support the `PUT` methods and to determine whether they also support
 `DELETE` and `GET`.
 
 <h4 class="pdoc-member-header" id="EndpointState-writeData">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/generic/endpoint.ts#L164">property <b>writeData</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/generic/endpoint.ts#L164">property <b>writeData</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>writeData?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;}&gt;;</code></pre>
@@ -448,7 +448,7 @@ support the `PUT` methods and to determine whether they also support
 Map of strings returned by write operation
 
 <h4 class="pdoc-member-header" id="EndpointState-writeDataJson">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/generic/endpoint.ts#L168">property <b>writeDataJson</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/generic/endpoint.ts#L168">property <b>writeDataJson</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>writeDataJson?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -456,7 +456,7 @@ Map of strings returned by write operation
 JSON data returned by write operation
 
 <h4 class="pdoc-member-header" id="EndpointState-writeFields">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/generic/endpoint.ts#L172">property <b>writeFields</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/generic/endpoint.ts#L172">property <b>writeFields</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>writeFields?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;[]&gt;;</code></pre>
@@ -464,7 +464,7 @@ JSON data returned by write operation
 Top-level fields returned by write to persist in state
 
 <h3 class="pdoc-module-header" id="GetSecretArgs" data-link-title="GetSecretArgs">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/generic/getSecret.ts#L25">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/generic/getSecret.ts#L25">
         interface <strong>GetSecretArgs</strong>
     </a>
 </h3>
@@ -474,7 +474,7 @@ Top-level fields returned by write to persist in state
 A collection of arguments for invoking getSecret.
 
 <h4 class="pdoc-member-header" id="GetSecretArgs-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/generic/getSecret.ts#L33">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/generic/getSecret.ts#L33">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>path: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -486,12 +486,12 @@ with this data source is possible; consult each backend's documentation
 to see which endpoints support the `GET` method.
 
 <h4 class="pdoc-member-header" id="GetSecretArgs-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/generic/getSecret.ts#L34">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/generic/getSecret.ts#L34">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="GetSecretResult" data-link-title="GetSecretResult">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/generic/getSecret.ts#L40">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/generic/getSecret.ts#L40">
         interface <strong>GetSecretResult</strong>
     </a>
 </h3>
@@ -501,7 +501,7 @@ to see which endpoints support the `GET` method.
 A collection of values returned by getSecret.
 
 <h4 class="pdoc-member-header" id="GetSecretResult-data">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/generic/getSecret.ts#L47">property <b>data</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/generic/getSecret.ts#L47">property <b>data</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>data: {[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>};</code></pre>
@@ -512,7 +512,7 @@ represent string data, so any non-string values returned from Vault are
 serialized as JSON.
 
 <h4 class="pdoc-member-header" id="GetSecretResult-dataJson">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/generic/getSecret.ts#L52">property <b>dataJson</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/generic/getSecret.ts#L52">property <b>dataJson</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataJson: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -521,7 +521,7 @@ A string containing the full data payload retrieved from
 Vault, serialized in JSON format.
 
 <h4 class="pdoc-member-header" id="GetSecretResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/generic/getSecret.ts#L56">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/generic/getSecret.ts#L56">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -529,7 +529,7 @@ Vault, serialized in JSON format.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetSecretResult-leaseDuration">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/generic/getSecret.ts#L62">property <b>leaseDuration</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/generic/getSecret.ts#L62">property <b>leaseDuration</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>leaseDuration: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
@@ -539,7 +539,7 @@ to the time the data was requested. Once this time has passed any plan
 generated with this data may fail to apply.
 
 <h4 class="pdoc-member-header" id="GetSecretResult-leaseId">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/generic/getSecret.ts#L66">property <b>leaseId</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/generic/getSecret.ts#L66">property <b>leaseId</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>leaseId: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -547,27 +547,27 @@ generated with this data may fail to apply.
 The lease identifier assigned by Vault, if any.
 
 <h4 class="pdoc-member-header" id="GetSecretResult-leaseRenewable">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/generic/getSecret.ts#L67">property <b>leaseRenewable</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/generic/getSecret.ts#L67">property <b>leaseRenewable</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>leaseRenewable: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetSecretResult-leaseStartTime">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/generic/getSecret.ts#L68">property <b>leaseStartTime</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/generic/getSecret.ts#L68">property <b>leaseStartTime</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>leaseStartTime: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetSecretResult-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/generic/getSecret.ts#L69">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/generic/getSecret.ts#L69">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>path: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetSecretResult-version">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/generic/getSecret.ts#L70">property <b>version</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/generic/getSecret.ts#L70">property <b>version</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>version?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span>;</code></pre>
 <h3 class="pdoc-module-header" id="SecretArgs" data-link-title="SecretArgs">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/generic/secret.ts#L146">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/generic/secret.ts#L146">
         interface <strong>SecretArgs</strong>
     </a>
 </h3>
@@ -577,7 +577,7 @@ The lease identifier assigned by Vault, if any.
 The set of arguments for constructing a Secret resource.
 
 <h4 class="pdoc-member-header" id="SecretArgs-dataJson">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/generic/secret.ts#L151">property <b>dataJson</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/generic/secret.ts#L151">property <b>dataJson</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataJson: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -586,7 +586,7 @@ String containing a JSON-encoded object that will be
 written as the secret data at the given path.
 
 <h4 class="pdoc-member-header" id="SecretArgs-disableRead">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/generic/secret.ts#L157">property <b>disableRead</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/generic/secret.ts#L157">property <b>disableRead</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>disableRead?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -596,7 +596,7 @@ authentication is not able to read the data. Setting this to `true` will
 break drift detection. Defaults to false.
 
 <h4 class="pdoc-member-header" id="SecretArgs-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/generic/secret.ts#L165">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/generic/secret.ts#L165">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>path: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -608,7 +608,7 @@ resource is possible; consult each backend's documentation to see which
 endpoints support the `PUT` and `DELETE` methods.
 
 <h3 class="pdoc-module-header" id="SecretState" data-link-title="SecretState">
-    <a href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/generic/secret.ts#L114">
+    <a href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/generic/secret.ts#L114">
         interface <strong>SecretState</strong>
     </a>
 </h3>
@@ -618,7 +618,7 @@ endpoints support the `PUT` and `DELETE` methods.
 Input properties used for looking up and filtering Secret resources.
 
 <h4 class="pdoc-member-header" id="SecretState-data">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/generic/secret.ts#L121">property <b>data</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/generic/secret.ts#L121">property <b>data</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>data?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;{[key: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>]: <span class='kd'><a href='https://www.typescriptlang.org/docs/handbook/basic-types.html#any'>any</a></span>}&gt;;</code></pre>
@@ -629,7 +629,7 @@ represent string data, so any non-string values returned from Vault are
 serialized as JSON.
 
 <h4 class="pdoc-member-header" id="SecretState-dataJson">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/generic/secret.ts#L126">property <b>dataJson</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/generic/secret.ts#L126">property <b>dataJson</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>dataJson?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -638,7 +638,7 @@ String containing a JSON-encoded object that will be
 written as the secret data at the given path.
 
 <h4 class="pdoc-member-header" id="SecretState-disableRead">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/generic/secret.ts#L132">property <b>disableRead</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/generic/secret.ts#L132">property <b>disableRead</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>disableRead?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
@@ -648,7 +648,7 @@ authentication is not able to read the data. Setting this to `true` will
 break drift detection. Defaults to false.
 
 <h4 class="pdoc-member-header" id="SecretState-path">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/09ca03ecf17d3f2a37795741ba9309406227d766/sdk/nodejs/generic/secret.ts#L140">property <b>path</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-vault/blob/ebbace55ace6f59a082f504fcae2277b394db92f/sdk/nodejs/generic/secret.ts#L140">property <b>path</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>path?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>

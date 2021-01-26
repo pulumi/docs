@@ -110,7 +110,7 @@ const example = new vault.jwt.AuthBackend("example", {
 {{% /choosable %}}
 
 {{% choosable language python %}}
-<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_vault/jwt/#pulumi_vault.jwt.AuthBackend">AuthBackend</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">bound_issuer</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">jwks_ca_pem</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">jwks_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">jwt_supported_algs</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">jwt_validation_pubkeys</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">oidc_client_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">oidc_client_secret</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">oidc_discovery_ca_pem</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">oidc_discovery_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tune</span><span class="p">:</span> <span class="nx">Optional[AuthBackendTuneArgs]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def </span><span class="nx"><a href="/docs/reference/pkg/python/pulumi_vault/jwt/#pulumi_vault.jwt.AuthBackend">AuthBackend</a></span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">bound_issuer</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">jwks_ca_pem</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">jwks_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">jwt_supported_algs</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">jwt_validation_pubkeys</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">oidc_client_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">oidc_client_secret</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">oidc_discovery_ca_pem</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">oidc_discovery_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">provider_config</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">tune</span><span class="p">:</span> <span class="nx">Optional[AuthBackendTuneArgs]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">)</span></code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -403,6 +403,16 @@ The AuthBackend resource accepts the following [input]({{< relref "/docs/intro/c
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="providerconfig_csharp">
+<a href="#providerconfig_csharp" style="color: inherit; text-decoration: inherit;">Provider<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Provider specific handling configuration
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="tune_csharp">
 <a href="#tune_csharp" style="color: inherit; text-decoration: inherit;">Tune</a>
 </span>
@@ -545,6 +555,16 @@ The AuthBackend resource accepts the following [input]({{< relref "/docs/intro/c
         <span class="property-type">string</span>
     </dt>
     <dd>{{% md %}}Path to mount the JWT/OIDC auth backend
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="providerconfig_go">
+<a href="#providerconfig_go" style="color: inherit; text-decoration: inherit;">Provider<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}Provider specific handling configuration
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -693,6 +713,16 @@ The AuthBackend resource accepts the following [input]({{< relref "/docs/intro/c
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="providerconfig_nodejs">
+<a href="#providerconfig_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}Provider specific handling configuration
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="tune_nodejs">
 <a href="#tune_nodejs" style="color: inherit; text-decoration: inherit;">tune</a>
 </span>
@@ -838,6 +868,16 @@ The AuthBackend resource accepts the following [input]({{< relref "/docs/intro/c
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="provider_config_python">
+<a href="#provider_config_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}Provider specific handling configuration
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="tune_python">
 <a href="#tune_python" style="color: inherit; text-decoration: inherit;">tune</a>
 </span>
@@ -876,7 +916,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The accessor of the JWT auth backend
+    <dd>{{% md %}}The accessor for this auth method
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -901,7 +941,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The accessor of the JWT auth backend
+    <dd>{{% md %}}The accessor for this auth method
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -926,7 +966,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The accessor of the JWT auth backend
+    <dd>{{% md %}}The accessor for this auth method
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -951,7 +991,7 @@ All [input](#inputs) properties are implicitly available as output properties. A
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The accessor of the JWT auth backend
+    <dd>{{% md %}}The accessor for this auth method
 {{% /md %}}</dd>
     <dt class="property-"
             title="">
@@ -978,7 +1018,7 @@ Get an existing AuthBackend resource's state with the given name, ID, and option
 
 {{% choosable language python %}}
 <div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class=nd>@staticmethod</span>
-<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">accessor</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bound_issuer</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">jwks_ca_pem</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">jwks_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">jwt_supported_algs</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">jwt_validation_pubkeys</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">oidc_client_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">oidc_client_secret</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">oidc_discovery_ca_pem</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">oidc_discovery_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">tune</span><span class="p">:</span> <span class="nx">Optional[AuthBackendTuneArgs]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> AuthBackend</code></pre></div>
+<span class="k">def </span><span class="nf">get</span><span class="p">(</span><span class="nx">resource_name</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">id</span><span class="p">:</span> <span class="nx">str</span><span class="p">, </span><span class="nx">opts</span><span class="p">:</span> <span class="nx"><a href="/docs/reference/pkg/python/pulumi/#pulumi.ResourceOptions">Optional[ResourceOptions]</a></span> = None<span class="p">, </span><span class="nx">accessor</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">bound_issuer</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">default_role</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">description</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">jwks_ca_pem</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">jwks_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">jwt_supported_algs</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">jwt_validation_pubkeys</span><span class="p">:</span> <span class="nx">Optional[Sequence[str]]</span> = None<span class="p">, </span><span class="nx">oidc_client_id</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">oidc_client_secret</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">oidc_discovery_ca_pem</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">oidc_discovery_url</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">path</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">, </span><span class="nx">provider_config</span><span class="p">:</span> <span class="nx">Optional[Mapping[str, str]]</span> = None<span class="p">, </span><span class="nx">tune</span><span class="p">:</span> <span class="nx">Optional[AuthBackendTuneArgs]</span> = None<span class="p">, </span><span class="nx">type</span><span class="p">:</span> <span class="nx">Optional[str]</span> = None<span class="p">) -&gt;</span> AuthBackend</code></pre></div>
 {{% /choosable %}}
 
 {{% choosable language go %}}
@@ -1099,7 +1139,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The accessor of the JWT auth backend
+    <dd>{{% md %}}The accessor for this auth method
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1223,6 +1263,16 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_providerconfig_csharp">
+<a href="#state_providerconfig_csharp" style="color: inherit; text-decoration: inherit;">Provider<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Dictionary&lt;string, string&gt;</span>
+    </dt>
+    <dd>{{% md %}}Provider specific handling configuration
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_tune_csharp">
 <a href="#state_tune_csharp" style="color: inherit; text-decoration: inherit;">Tune</a>
 </span>
@@ -1254,7 +1304,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The accessor of the JWT auth backend
+    <dd>{{% md %}}The accessor for this auth method
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1378,6 +1428,16 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_providerconfig_go">
+<a href="#state_providerconfig_go" style="color: inherit; text-decoration: inherit;">Provider<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">map[string]string</span>
+    </dt>
+    <dd>{{% md %}}Provider specific handling configuration
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_tune_go">
 <a href="#state_tune_go" style="color: inherit; text-decoration: inherit;">Tune</a>
 </span>
@@ -1409,7 +1469,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">string</span>
     </dt>
-    <dd>{{% md %}}The accessor of the JWT auth backend
+    <dd>{{% md %}}The accessor for this auth method
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1533,6 +1593,16 @@ The following state arguments are supported:
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
+        <span id="state_providerconfig_nodejs">
+<a href="#state_providerconfig_nodejs" style="color: inherit; text-decoration: inherit;">provider<wbr>Config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">{[key: string]: string}</span>
+    </dt>
+    <dd>{{% md %}}Provider specific handling configuration
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
         <span id="state_tune_nodejs">
 <a href="#state_tune_nodejs" style="color: inherit; text-decoration: inherit;">tune</a>
 </span>
@@ -1564,7 +1634,7 @@ The following state arguments are supported:
         <span class="property-indicator"></span>
         <span class="property-type">str</span>
     </dt>
-    <dd>{{% md %}}The accessor of the JWT auth backend
+    <dd>{{% md %}}The accessor for this auth method
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">
@@ -1685,6 +1755,16 @@ The following state arguments are supported:
         <span class="property-type">str</span>
     </dt>
     <dd>{{% md %}}Path to mount the JWT/OIDC auth backend
+{{% /md %}}</dd>
+    <dt class="property-optional"
+            title="Optional">
+        <span id="state_provider_config_python">
+<a href="#state_provider_config_python" style="color: inherit; text-decoration: inherit;">provider_<wbr>config</a>
+</span>
+        <span class="property-indicator"></span>
+        <span class="property-type">Mapping[str, str]</span>
+    </dt>
+    <dd>{{% md %}}Provider specific handling configuration
 {{% /md %}}</dd>
     <dt class="property-optional"
             title="Optional">

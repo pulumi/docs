@@ -48,6 +48,7 @@ A Pulumi package for creating and managing vault cloud resources.
     <li><a href="namespace" title="Namespace"><span class="symbol resource"></span>Namespace</a></li>
     <li><a href="nomadsecretbackend" title="NomadSecretBackend"><span class="symbol resource"></span>NomadSecretBackend</a></li>
     <li><a href="nomadsecretrole" title="NomadSecretRole"><span class="symbol resource"></span>NomadSecretRole</a></li>
+    <li><a href="passwordpolicy" title="PasswordPolicy"><span class="symbol resource"></span>PasswordPolicy</a></li>
     <li><a href="policy" title="Policy"><span class="symbol resource"></span>Policy</a></li>
     <li><a href="provider" title="Provider"><span class="symbol resource"></span>Provider</a></li>
     <li><a href="quotaratelimit" title="QuotaRateLimit"><span class="symbol resource"></span>QuotaRateLimit</a></li>
@@ -71,7 +72,7 @@ A Pulumi package for creating and managing vault cloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`vault` Terraform Provider](https://github.com/hashicorp/terraform-provider-vault).</dd>
 	<dt>Version</dt>
-	<dd>3.2.1</dd>
+	<dd>3.3.0</dd>
 </dl>
 
 
