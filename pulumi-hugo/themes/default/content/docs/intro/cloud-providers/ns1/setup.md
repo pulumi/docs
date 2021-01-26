@@ -24,7 +24,7 @@ Once obtained, there are two ways to communicate your authorization tokens to Pu
 2. Set them using configuration, if you prefer that they be stored alongside your Pulumi stack for easy multi-user access:
 
     ```bash
-    $ pulumi config set ns1:apiKey XXXXXXXXXXXXXX --secret
+    $ pulumi config set ns1:apikey XXXXXXXXXXXXXX --secret
     ```
 
 Remember to pass `--secret` when setting `ns1:apiKey` so that it is properly encrypted. A
