@@ -87,17 +87,8 @@ export class LambdaEdge extends pulumi.ComponentResource {
         }, { parent: this });
 
         // Grant permissions on the above Lambda function to the Lambda@Edge service.
-        this.createLambdaPermission("lambda:GetFunction");
-        // this.createLambdaPermission("lambda:EnableReplication*");
-    }
-
-    private createLambdaPermission(action: string) {
-        if (!this.lambdaEdgeFunc) {
-            throw new Error("Lambda edge function must be created before adding permissions for it.");
-        }
-
-        const getFuncPermission = new aws.lambda.Permission("getFuncPermission", {
-            action,
+        const perm = new aws.lambda.Permission("getFuncPermission", {
+            action: "lambda:GetFunction",
             principal: "edgelambda.amazonaws.com",
             function: this.lambdaEdgeFunc,
         // tslint:disable-next-line:align
