@@ -361,22 +361,13 @@ instance in it with the attributes of <code class="docutils literal notranslate"
 <code class="docutils literal notranslate"><span class="pre">opts2</span></code> can be <code class="docutils literal notranslate"><span class="pre">None</span></code>, in which case its attributes are ignored.</p>
 <p>Conceptually attributes merging follows these basic rules:</p>
 <ol class="arabic simple">
-<li><dl class="simple">
-<dt>if the attributes is a collection, the final value will be a collection containing the</dt><dd><p>values from each options object. Both original collections in each options object will
-be unchanged.</p>
-</dd>
-</dl>
-</li>
-<li><dl class="simple">
-<dt>Simple scalar values from <code class="docutils literal notranslate"><span class="pre">opts2</span></code> (i.e. strings, numbers, bools) will replace the values</dt><dd><p>from <code class="docutils literal notranslate"><span class="pre">opts1</span></code>.</p>
-</dd>
-</dl>
-</li>
-<li><dl class="simple">
-<dt>For the purposes of merging <code class="docutils literal notranslate"><span class="pre">depends_on</span></code>, <code class="docutils literal notranslate"><span class="pre">provider</span></code> and <code class="docutils literal notranslate"><span class="pre">providers</span></code> are always treated</dt><dd><p>as collections, even if only a single value was provided.</p>
-</dd>
-</dl>
-</li>
+<li><p>If the attributes is a collection, the final value will be a collection containing the
+values from each options object. Both original collections in each options object will
+be unchanged.</p></li>
+<li><p>Simple scalar values from <code class="docutils literal notranslate"><span class="pre">opts2</span></code> (i.e. strings, numbers, bools) will replace the values
+from <code class="docutils literal notranslate"><span class="pre">opts1</span></code>.</p></li>
+<li><p>For the purposes of merging <code class="docutils literal notranslate"><span class="pre">depends_on</span></code>, <code class="docutils literal notranslate"><span class="pre">provider</span></code> and <code class="docutils literal notranslate"><span class="pre">providers</span></code> are always treated
+as collections, even if only a single value was provided.</p></li>
 <li><p>Attributes with value ‘None’ will not be copied over.</p></li>
 </ol>
 <p>This method can be called either as static-method like <code class="docutils literal notranslate"><span class="pre">ResourceOptions.merge(opts1,</span> <span class="pre">opts2)</span></code>
