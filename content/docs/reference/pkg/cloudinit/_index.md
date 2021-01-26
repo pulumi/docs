@@ -32,7 +32,7 @@ A Pulumi package for creating and managing cloudinit cloud resources.
 	<dt>Notes</dt>
 	<dd>This Pulumi package is based on the [`cloudinit` Terraform Provider](https://github.com/hashicorp/terraform-provider-cloudinit).</dd>
 	<dt>Version</dt>
-	<dd>0.1.0</dd>
+	<dd>0.1.1</dd>
 </dl>
 
 

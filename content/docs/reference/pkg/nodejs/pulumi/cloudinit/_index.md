@@ -3,7 +3,7 @@ title: "Package @pulumi/cloudinit"
 title_tag: "Package @pulumi/cloudinit | Node.js SDK"
 linktitle: "@pulumi/cloudinit"
 meta_desc: "Explore members of the @pulumi/cloudinit package."
-git_sha: "33df9d2b1109eeb14fc0841969e406acefe3e567"
+git_sha: "3ae1816033ee520774010ee5e25f9c4a9ddab82c"
 block_external_search_index: true
 ---
 
@@ -70,14 +70,14 @@ import * as cloudinit from "@pulumi/cloudinit";
 
 <h2 id="resources">Resources</h2>
 <h3 class="pdoc-module-header" id="Config" data-link-title="Config">
-    <a href="https://github.com/pulumi/pulumi-cloudinit/blob/33df9d2b1109eeb14fc0841969e406acefe3e567/sdk/nodejs/config.ts#L8">
+    <a href="https://github.com/pulumi/pulumi-cloudinit/blob/3ae1816033ee520774010ee5e25f9c4a9ddab82c/sdk/nodejs/config.ts#L8">
         Resource <strong>Config</strong>
     </a>
 </h3>
 
 <pre class="highlight"><code><span class='kr'>class</span> <span class='nx'>Config</span> <span class='kr'>extends</span> <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#CustomResource'>CustomResource</a></code></pre>
 <h4 class="pdoc-member-header" id="Config-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudinit/blob/33df9d2b1109eeb14fc0841969e406acefe3e567/sdk/nodejs/config.ts#L43"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudinit/blob/3ae1816033ee520774010ee5e25f9c4a9ddab82c/sdk/nodejs/config.ts#L43"> <b>constructor</b></a>
 </h4>
 
 
@@ -91,7 +91,7 @@ Create a Config resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Config-get">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudinit/blob/33df9d2b1109eeb14fc0841969e406acefe3e567/sdk/nodejs/config.ts#L18">method <b>get</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudinit/blob/3ae1816033ee520774010ee5e25f9c4a9ddab82c/sdk/nodejs/config.ts#L18">method <b>get</b></a>
 </h4>
 
 
@@ -102,14 +102,14 @@ Get an existing Config resource's state with the given name, ID, and optional ex
 properties used to qualify the lookup.
 
 <h4 class="pdoc-member-header" id="Config-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudinit/blob/33df9d2b1109eeb14fc0841969e406acefe3e567/sdk/nodejs/config.ts#L8">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudinit/blob/3ae1816033ee520774010ee5e25f9c4a9ddab82c/sdk/nodejs/config.ts#L8">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Config-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudinit/blob/33df9d2b1109eeb14fc0841969e406acefe3e567/sdk/nodejs/config.ts#L29">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudinit/blob/3ae1816033ee520774010ee5e25f9c4a9ddab82c/sdk/nodejs/config.ts#L29">method <b>isInstance</b></a>
 </h4>
 
 
@@ -120,22 +120,22 @@ Returns true if the given object is an instance of Config.  This is designed to 
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Config-base64Encode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudinit/blob/33df9d2b1109eeb14fc0841969e406acefe3e567/sdk/nodejs/config.ts#L36">property <b>base64Encode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudinit/blob/3ae1816033ee520774010ee5e25f9c4a9ddab82c/sdk/nodejs/config.ts#L36">property <b>base64Encode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>base64Encode: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Config-boundary">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudinit/blob/33df9d2b1109eeb14fc0841969e406acefe3e567/sdk/nodejs/config.ts#L37">property <b>boundary</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudinit/blob/3ae1816033ee520774010ee5e25f9c4a9ddab82c/sdk/nodejs/config.ts#L37">property <b>boundary</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>boundary: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Config-gzip">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudinit/blob/33df9d2b1109eeb14fc0841969e406acefe3e567/sdk/nodejs/config.ts#L38">property <b>gzip</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudinit/blob/3ae1816033ee520774010ee5e25f9c4a9ddab82c/sdk/nodejs/config.ts#L38">property <b>gzip</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>gzip: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Config-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudinit/blob/33df9d2b1109eeb14fc0841969e406acefe3e567/sdk/nodejs/config.ts#L8">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudinit/blob/3ae1816033ee520774010ee5e25f9c4a9ddab82c/sdk/nodejs/config.ts#L8">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -144,12 +144,12 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Config-parts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudinit/blob/33df9d2b1109eeb14fc0841969e406acefe3e567/sdk/nodejs/config.ts#L39">property <b>parts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudinit/blob/3ae1816033ee520774010ee5e25f9c4a9ddab82c/sdk/nodejs/config.ts#L39">property <b>parts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>parts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/cloudinit/types/output/#ConfigPart'>ConfigPart</a>[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="Config-rendered">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudinit/blob/33df9d2b1109eeb14fc0841969e406acefe3e567/sdk/nodejs/config.ts#L43">property <b>rendered</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudinit/blob/3ae1816033ee520774010ee5e25f9c4a9ddab82c/sdk/nodejs/config.ts#L43">property <b>rendered</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'>public </span>rendered: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>pulumi.Output</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -157,7 +157,7 @@ deployments and may be missing (undefined) during planning phases.
 rendered cloudinit configuration
 
 <h4 class="pdoc-member-header" id="Config-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudinit/blob/33df9d2b1109eeb14fc0841969e406acefe3e567/sdk/nodejs/config.ts#L8">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudinit/blob/3ae1816033ee520774010ee5e25f9c4a9ddab82c/sdk/nodejs/config.ts#L8">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -166,7 +166,7 @@ urn is the stable logical URN used to distinctly address a resource, both before
 deployments.
 
 <h3 class="pdoc-module-header" id="Provider" data-link-title="Provider">
-    <a href="https://github.com/pulumi/pulumi-cloudinit/blob/33df9d2b1109eeb14fc0841969e406acefe3e567/sdk/nodejs/provider.ts#L13">
+    <a href="https://github.com/pulumi/pulumi-cloudinit/blob/3ae1816033ee520774010ee5e25f9c4a9ddab82c/sdk/nodejs/provider.ts#L13">
         Resource <strong>Provider</strong>
     </a>
 </h3>
@@ -179,7 +179,7 @@ construction to achieve fine-grained programmatic control over provider settings
 [documentation](https://www.pulumi.com/docs/reference/programming-model/#providers) for more information.
 
 <h4 class="pdoc-member-header" id="Provider-constructor">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudinit/blob/33df9d2b1109eeb14fc0841969e406acefe3e567/sdk/nodejs/provider.ts#L26"> <b>constructor</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudinit/blob/3ae1816033ee520774010ee5e25f9c4a9ddab82c/sdk/nodejs/provider.ts#L26"> <b>constructor</b></a>
 </h4>
 
 
@@ -193,14 +193,14 @@ Create a Provider resource with the given unique name, arguments, and options.
 * `opts` A bag of options that control this resource&#39;s behavior.
 
 <h4 class="pdoc-member-header" id="Provider-getProvider">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudinit/blob/33df9d2b1109eeb14fc0841969e406acefe3e567/sdk/nodejs/provider.ts#L13">method <b>getProvider</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudinit/blob/3ae1816033ee520774010ee5e25f9c4a9ddab82c/sdk/nodejs/provider.ts#L13">method <b>getProvider</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'></span>getProvider(moduleMember: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>): <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h4 class="pdoc-member-header" id="Provider-isInstance">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudinit/blob/33df9d2b1109eeb14fc0841969e406acefe3e567/sdk/nodejs/provider.ts#L21">method <b>isInstance</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudinit/blob/3ae1816033ee520774010ee5e25f9c4a9ddab82c/sdk/nodejs/provider.ts#L21">method <b>isInstance</b></a>
 </h4>
 
 
@@ -211,14 +211,14 @@ Returns true if the given object is an instance of Provider.  This is designed t
 when multiple copies of the Pulumi SDK have been loaded into the same process.
 
 <h4 class="pdoc-member-header" id="Provider-register">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudinit/blob/33df9d2b1109eeb14fc0841969e406acefe3e567/sdk/nodejs/provider.ts#L13">method <b>register</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudinit/blob/3ae1816033ee520774010ee5e25f9c4a9ddab82c/sdk/nodejs/provider.ts#L13">method <b>register</b></a>
 </h4>
 
 
 <pre class="highlight"><code><span class='kd'>static </span>register(provider: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ProviderResource'>ProviderResource</a> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>): <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise'>Promise</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span>&gt;</code></pre>
 
 <h4 class="pdoc-member-header" id="Provider-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudinit/blob/33df9d2b1109eeb14fc0841969e406acefe3e567/sdk/nodejs/provider.ts#L13">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudinit/blob/3ae1816033ee520774010ee5e25f9c4a9ddab82c/sdk/nodejs/provider.ts#L13">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#ID'>ID</a>&gt;;</code></pre>
@@ -227,7 +227,7 @@ id is the provider-assigned unique ID for this managed resource.  It is set duri
 deployments and may be missing (undefined) during planning phases.
 
 <h4 class="pdoc-member-header" id="Provider-urn">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudinit/blob/33df9d2b1109eeb14fc0841969e406acefe3e567/sdk/nodejs/provider.ts#L13">property <b>urn</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudinit/blob/3ae1816033ee520774010ee5e25f9c4a9ddab82c/sdk/nodejs/provider.ts#L13">property <b>urn</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>urn: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Output'>Output</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#URN'>URN</a>&gt;;</code></pre>
@@ -238,7 +238,7 @@ deployments.
 
 <h2 id="functions">Functions</h2>
 <h3 class="pdoc-module-header" id="getConfig" data-link-title="getConfig">
-    <a href="https://github.com/pulumi/pulumi-cloudinit/blob/33df9d2b1109eeb14fc0841969e406acefe3e567/sdk/nodejs/getConfig.ts#L39">
+    <a href="https://github.com/pulumi/pulumi-cloudinit/blob/3ae1816033ee520774010ee5e25f9c4a9ddab82c/sdk/nodejs/getConfig.ts#L39">
         Function <strong>getConfig</strong>
     </a>
 </h3>
@@ -280,7 +280,7 @@ const foo = pulumi.output(cloudinit.getConfig({
 
 <h2 id="apis">Others</h2>
 <h3 class="pdoc-module-header" id="ConfigArgs" data-link-title="ConfigArgs">
-    <a href="https://github.com/pulumi/pulumi-cloudinit/blob/33df9d2b1109eeb14fc0841969e406acefe3e567/sdk/nodejs/config.ts#L101">
+    <a href="https://github.com/pulumi/pulumi-cloudinit/blob/3ae1816033ee520774010ee5e25f9c4a9ddab82c/sdk/nodejs/config.ts#L101">
         interface <strong>ConfigArgs</strong>
     </a>
 </h3>
@@ -290,27 +290,27 @@ const foo = pulumi.output(cloudinit.getConfig({
 The set of arguments for constructing a Config resource.
 
 <h4 class="pdoc-member-header" id="ConfigArgs-base64Encode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudinit/blob/33df9d2b1109eeb14fc0841969e406acefe3e567/sdk/nodejs/config.ts#L102">property <b>base64Encode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudinit/blob/3ae1816033ee520774010ee5e25f9c4a9ddab82c/sdk/nodejs/config.ts#L102">property <b>base64Encode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>base64Encode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ConfigArgs-boundary">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudinit/blob/33df9d2b1109eeb14fc0841969e406acefe3e567/sdk/nodejs/config.ts#L103">property <b>boundary</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudinit/blob/3ae1816033ee520774010ee5e25f9c4a9ddab82c/sdk/nodejs/config.ts#L103">property <b>boundary</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>boundary?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ConfigArgs-gzip">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudinit/blob/33df9d2b1109eeb14fc0841969e406acefe3e567/sdk/nodejs/config.ts#L104">property <b>gzip</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudinit/blob/3ae1816033ee520774010ee5e25f9c4a9ddab82c/sdk/nodejs/config.ts#L104">property <b>gzip</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>gzip?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ConfigArgs-parts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudinit/blob/33df9d2b1109eeb14fc0841969e406acefe3e567/sdk/nodejs/config.ts#L105">property <b>parts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudinit/blob/3ae1816033ee520774010ee5e25f9c4a9ddab82c/sdk/nodejs/config.ts#L105">property <b>parts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parts: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/cloudinit/types/input/#ConfigPart'>ConfigPart</a>&gt;[]&gt;;</code></pre>
 <h3 class="pdoc-module-header" id="ConfigState" data-link-title="ConfigState">
-    <a href="https://github.com/pulumi/pulumi-cloudinit/blob/33df9d2b1109eeb14fc0841969e406acefe3e567/sdk/nodejs/config.ts#L87">
+    <a href="https://github.com/pulumi/pulumi-cloudinit/blob/3ae1816033ee520774010ee5e25f9c4a9ddab82c/sdk/nodejs/config.ts#L87">
         interface <strong>ConfigState</strong>
     </a>
 </h3>
@@ -320,27 +320,27 @@ The set of arguments for constructing a Config resource.
 Input properties used for looking up and filtering Config resources.
 
 <h4 class="pdoc-member-header" id="ConfigState-base64Encode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudinit/blob/33df9d2b1109eeb14fc0841969e406acefe3e567/sdk/nodejs/config.ts#L88">property <b>base64Encode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudinit/blob/3ae1816033ee520774010ee5e25f9c4a9ddab82c/sdk/nodejs/config.ts#L88">property <b>base64Encode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>base64Encode?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ConfigState-boundary">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudinit/blob/33df9d2b1109eeb14fc0841969e406acefe3e567/sdk/nodejs/config.ts#L89">property <b>boundary</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudinit/blob/3ae1816033ee520774010ee5e25f9c4a9ddab82c/sdk/nodejs/config.ts#L89">property <b>boundary</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>boundary?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ConfigState-gzip">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudinit/blob/33df9d2b1109eeb14fc0841969e406acefe3e567/sdk/nodejs/config.ts#L90">property <b>gzip</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudinit/blob/3ae1816033ee520774010ee5e25f9c4a9ddab82c/sdk/nodejs/config.ts#L90">property <b>gzip</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>gzip?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span>&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ConfigState-parts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudinit/blob/33df9d2b1109eeb14fc0841969e406acefe3e567/sdk/nodejs/config.ts#L91">property <b>parts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudinit/blob/3ae1816033ee520774010ee5e25f9c4a9ddab82c/sdk/nodejs/config.ts#L91">property <b>parts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parts?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<a href='/docs/reference/pkg/nodejs/pulumi/cloudinit/types/input/#ConfigPart'>ConfigPart</a>&gt;[]&gt;;</code></pre>
 <h4 class="pdoc-member-header" id="ConfigState-rendered">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudinit/blob/33df9d2b1109eeb14fc0841969e406acefe3e567/sdk/nodejs/config.ts#L95">property <b>rendered</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudinit/blob/3ae1816033ee520774010ee5e25f9c4a9ddab82c/sdk/nodejs/config.ts#L95">property <b>rendered</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rendered?: <a href='/docs/reference/pkg/nodejs/pulumi/pulumi/#Input'>pulumi.Input</a>&lt;<span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>&gt;;</code></pre>
@@ -348,7 +348,7 @@ Input properties used for looking up and filtering Config resources.
 rendered cloudinit configuration
 
 <h3 class="pdoc-module-header" id="GetConfigArgs" data-link-title="GetConfigArgs">
-    <a href="https://github.com/pulumi/pulumi-cloudinit/blob/33df9d2b1109eeb14fc0841969e406acefe3e567/sdk/nodejs/getConfig.ts#L58">
+    <a href="https://github.com/pulumi/pulumi-cloudinit/blob/3ae1816033ee520774010ee5e25f9c4a9ddab82c/sdk/nodejs/getConfig.ts#L58">
         interface <strong>GetConfigArgs</strong>
     </a>
 </h3>
@@ -358,7 +358,7 @@ rendered cloudinit configuration
 A collection of arguments for invoking getConfig.
 
 <h4 class="pdoc-member-header" id="GetConfigArgs-base64Encode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudinit/blob/33df9d2b1109eeb14fc0841969e406acefe3e567/sdk/nodejs/getConfig.ts#L63">property <b>base64Encode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudinit/blob/3ae1816033ee520774010ee5e25f9c4a9ddab82c/sdk/nodejs/getConfig.ts#L63">property <b>base64Encode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>base64Encode?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -367,7 +367,7 @@ Base64 encoding of the rendered output. Defaults to `true`,
 and cannot be disabled if `gzip` is `true`.
 
 <h4 class="pdoc-member-header" id="GetConfigArgs-boundary">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudinit/blob/33df9d2b1109eeb14fc0841969e406acefe3e567/sdk/nodejs/getConfig.ts#L67">property <b>boundary</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudinit/blob/3ae1816033ee520774010ee5e25f9c4a9ddab82c/sdk/nodejs/getConfig.ts#L67">property <b>boundary</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>boundary?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -375,7 +375,7 @@ and cannot be disabled if `gzip` is `true`.
 Define the Writer's default boundary separator. Defaults to `MIMEBOUNDARY`.
 
 <h4 class="pdoc-member-header" id="GetConfigArgs-gzip">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudinit/blob/33df9d2b1109eeb14fc0841969e406acefe3e567/sdk/nodejs/getConfig.ts#L71">property <b>gzip</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudinit/blob/3ae1816033ee520774010ee5e25f9c4a9ddab82c/sdk/nodejs/getConfig.ts#L71">property <b>gzip</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>gzip?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
@@ -383,7 +383,7 @@ Define the Writer's default boundary separator. Defaults to `MIMEBOUNDARY`.
 Specify whether or not to gzip the rendered output. Defaults to `true`.
 
 <h4 class="pdoc-member-header" id="GetConfigArgs-parts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudinit/blob/33df9d2b1109eeb14fc0841969e406acefe3e567/sdk/nodejs/getConfig.ts#L78">property <b>parts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudinit/blob/3ae1816033ee520774010ee5e25f9c4a9ddab82c/sdk/nodejs/getConfig.ts#L78">property <b>parts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parts: <a href='/docs/reference/pkg/nodejs/pulumi/cloudinit/types/input/#GetConfigPart'>GetConfigPart</a>[];</code></pre>
@@ -394,7 +394,7 @@ files, which will be included in order of declaration in the final MIME
 document.
 
 <h3 class="pdoc-module-header" id="GetConfigResult" data-link-title="GetConfigResult">
-    <a href="https://github.com/pulumi/pulumi-cloudinit/blob/33df9d2b1109eeb14fc0841969e406acefe3e567/sdk/nodejs/getConfig.ts#L84">
+    <a href="https://github.com/pulumi/pulumi-cloudinit/blob/3ae1816033ee520774010ee5e25f9c4a9ddab82c/sdk/nodejs/getConfig.ts#L84">
         interface <strong>GetConfigResult</strong>
     </a>
 </h3>
@@ -404,22 +404,22 @@ document.
 A collection of values returned by getConfig.
 
 <h4 class="pdoc-member-header" id="GetConfigResult-base64Encode">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudinit/blob/33df9d2b1109eeb14fc0841969e406acefe3e567/sdk/nodejs/getConfig.ts#L85">property <b>base64Encode</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudinit/blob/3ae1816033ee520774010ee5e25f9c4a9ddab82c/sdk/nodejs/getConfig.ts#L85">property <b>base64Encode</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>base64Encode?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetConfigResult-boundary">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudinit/blob/33df9d2b1109eeb14fc0841969e406acefe3e567/sdk/nodejs/getConfig.ts#L86">property <b>boundary</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudinit/blob/3ae1816033ee520774010ee5e25f9c4a9ddab82c/sdk/nodejs/getConfig.ts#L86">property <b>boundary</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>boundary?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetConfigResult-gzip">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudinit/blob/33df9d2b1109eeb14fc0841969e406acefe3e567/sdk/nodejs/getConfig.ts#L87">property <b>gzip</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudinit/blob/3ae1816033ee520774010ee5e25f9c4a9ddab82c/sdk/nodejs/getConfig.ts#L87">property <b>gzip</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>gzip?: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span> | <span class='kd'>false</span> | <span class='kd'>true</span>;</code></pre>
 <h4 class="pdoc-member-header" id="GetConfigResult-id">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudinit/blob/33df9d2b1109eeb14fc0841969e406acefe3e567/sdk/nodejs/getConfig.ts#L91">property <b>id</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudinit/blob/3ae1816033ee520774010ee5e25f9c4a9ddab82c/sdk/nodejs/getConfig.ts#L91">property <b>id</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>id: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -427,12 +427,12 @@ A collection of values returned by getConfig.
 The provider-assigned unique ID for this managed resource.
 
 <h4 class="pdoc-member-header" id="GetConfigResult-parts">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudinit/blob/33df9d2b1109eeb14fc0841969e406acefe3e567/sdk/nodejs/getConfig.ts#L92">property <b>parts</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudinit/blob/3ae1816033ee520774010ee5e25f9c4a9ddab82c/sdk/nodejs/getConfig.ts#L92">property <b>parts</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>parts: <a href='/docs/reference/pkg/nodejs/pulumi/cloudinit/types/output/#GetConfigPart'>GetConfigPart</a>[];</code></pre>
 <h4 class="pdoc-member-header" id="GetConfigResult-rendered">
-<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudinit/blob/33df9d2b1109eeb14fc0841969e406acefe3e567/sdk/nodejs/getConfig.ts#L96">property <b>rendered</b></a>
+<a class="pdoc-child-name" href="https://github.com/pulumi/pulumi-cloudinit/blob/3ae1816033ee520774010ee5e25f9c4a9ddab82c/sdk/nodejs/getConfig.ts#L96">property <b>rendered</b></a>
 </h4>
 
 <pre class="highlight"><code><span class='kd'></span>rendered: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>;</code></pre>
@@ -440,7 +440,7 @@ The provider-assigned unique ID for this managed resource.
 The final rendered multi-part cloud-init config.
 
 <h3 class="pdoc-module-header" id="getEnv" data-link-title="getEnv">
-    <a href="https://github.com/pulumi/pulumi-cloudinit/blob/33df9d2b1109eeb14fc0841969e406acefe3e567/sdk/nodejs/utilities.ts#L5">
+    <a href="https://github.com/pulumi/pulumi-cloudinit/blob/3ae1816033ee520774010ee5e25f9c4a9ddab82c/sdk/nodejs/utilities.ts#L5">
         function <strong>getEnv</strong>
     </a>
 </h3>
@@ -449,7 +449,7 @@ The final rendered multi-part cloud-init config.
 <pre class="highlight"><code><span class='kd'></span>getEnv(vars: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="getEnvBoolean" data-link-title="getEnvBoolean">
-    <a href="https://github.com/pulumi/pulumi-cloudinit/blob/33df9d2b1109eeb14fc0841969e406acefe3e567/sdk/nodejs/utilities.ts#L15">
+    <a href="https://github.com/pulumi/pulumi-cloudinit/blob/3ae1816033ee520774010ee5e25f9c4a9ddab82c/sdk/nodejs/utilities.ts#L15">
         function <strong>getEnvBoolean</strong>
     </a>
 </h3>
@@ -458,7 +458,7 @@ The final rendered multi-part cloud-init config.
 <pre class="highlight"><code><span class='kd'></span>getEnvBoolean(vars: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean'>boolean</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="getEnvNumber" data-link-title="getEnvNumber">
-    <a href="https://github.com/pulumi/pulumi-cloudinit/blob/33df9d2b1109eeb14fc0841969e406acefe3e567/sdk/nodejs/utilities.ts#L30">
+    <a href="https://github.com/pulumi/pulumi-cloudinit/blob/3ae1816033ee520774010ee5e25f9c4a9ddab82c/sdk/nodejs/utilities.ts#L30">
         function <strong>getEnvNumber</strong>
     </a>
 </h3>
@@ -467,7 +467,7 @@ The final rendered multi-part cloud-init config.
 <pre class="highlight"><code><span class='kd'></span>getEnvNumber(vars: <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span>[]): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'>number</a></span> | <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined'>undefined</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="getVersion" data-link-title="getVersion">
-    <a href="https://github.com/pulumi/pulumi-cloudinit/blob/33df9d2b1109eeb14fc0841969e406acefe3e567/sdk/nodejs/utilities.ts#L41">
+    <a href="https://github.com/pulumi/pulumi-cloudinit/blob/3ae1816033ee520774010ee5e25f9c4a9ddab82c/sdk/nodejs/utilities.ts#L41">
         function <strong>getVersion</strong>
     </a>
 </h3>
@@ -476,7 +476,7 @@ The final rendered multi-part cloud-init config.
 <pre class="highlight"><code><span class='kd'></span>getVersion(): <span class='kd'><a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String'>string</a></span></code></pre>
 
 <h3 class="pdoc-module-header" id="ProviderArgs" data-link-title="ProviderArgs">
-    <a href="https://github.com/pulumi/pulumi-cloudinit/blob/33df9d2b1109eeb14fc0841969e406acefe3e567/sdk/nodejs/provider.ts#L54">
+    <a href="https://github.com/pulumi/pulumi-cloudinit/blob/3ae1816033ee520774010ee5e25f9c4a9ddab82c/sdk/nodejs/provider.ts#L54">
         interface <strong>ProviderArgs</strong>
     </a>
 </h3>
