@@ -2,6 +2,7 @@
 
 import * as aws from "@pulumi/aws";
 import { LambdaEdge } from "./lambdaEdge";
+import {CloudFrontResponse, CloudFrontResponseEvent} from "aws-lambda";
 
 /**
  * Returns the lambda function associations for the cloudfront distribution.
@@ -38,7 +39,7 @@ export function getLambdaFunctionAssociations(addSecurityHeaders: boolean):
     }];
 }
 
-function getSecurityHeadersLambdaCallback(): aws.lambda.Callback<any, any> {
+function getSecurityHeadersLambdaCallback(): aws.lambda.Callback<CloudFrontResponseEvent, CloudFrontResponse> {
     // See the following link for an example:
     // https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/lambda-edge-how-it-works-tutorial.html
     return (event, context, callback) => {

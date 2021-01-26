@@ -4,6 +4,7 @@
         "lint": "tslint --project tsconfig.json"
     },
     "devDependencies": {
+        "@types/aws-lambda": "^8.10.71",
         "@types/node": "^12.7.2",
         "tslint": "^6.1.3"
     },
