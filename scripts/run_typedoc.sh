@@ -81,7 +81,6 @@ REPOS=(
     "eks,pulumi-eks/nodejs/eks"
     "kubernetesx,pulumi-kubernetesx/nodejs/kubernetesx"
     "policy,pulumi-policy,sdk/nodejs/policy"
-    "postgresql,pulumi-postgresql,sdk/nodejs"
     "pulumi,pulumi/sdk/nodejs"
     "rabbitmq,pulumi-rabbitmq,sdk/nodejs"
     "rancher2,pulumi-rancher2,sdk/nodejs"
